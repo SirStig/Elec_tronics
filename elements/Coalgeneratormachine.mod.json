@@ -125,9 +125,6 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
-    "onBlockAdded": {
-      "name": "CoalgeneratormachineBlockAdded"
-    },
     "onTickUpdate": {
       "name": "Coalgeneratorelectricitygeneration"
     },

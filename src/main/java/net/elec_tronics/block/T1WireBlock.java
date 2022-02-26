@@ -145,7 +145,7 @@ public class T1WireBlock extends Block
 		int y = pos.getY();
 		int z = pos.getZ();
 
-		T1WireBlockIsPlacedByProcedure.execute(world, x, y, z);
+		T1WireBlockIsPlacedByProcedure.execute();
 	}
 
 	@Override
