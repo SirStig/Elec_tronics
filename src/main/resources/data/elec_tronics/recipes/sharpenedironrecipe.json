@@ -1,0 +1,9 @@
+{
+  "group": "elec_tronics",
+  "type": "minecraft:stonecutting",
+  "count": 2,
+  "ingredient": {
+    "item": "minecraft:iron_ingot"
+  },
+  "result": "elec_tronics:sharpenediron"
+}

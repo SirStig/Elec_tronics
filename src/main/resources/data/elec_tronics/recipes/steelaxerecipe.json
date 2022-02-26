@@ -1,0 +1,30 @@
+{
+  "group": "elec_tronics",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "01",
+    "23",
+    " 5"
+  ],
+  "key": {
+    "0": {
+      "item": "elec_tronics:steelingot"
+    },
+    "1": {
+      "item": "elec_tronics:steelingot"
+    },
+    "2": {
+      "item": "elec_tronics:steelingot"
+    },
+    "3": {
+      "item": "minecraft:stick"
+    },
+    "5": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "elec_tronics:steelaxe",
+    "count": 1
+  }
+}

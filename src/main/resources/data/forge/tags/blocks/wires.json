@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "elec_tronics:t_1_wire",
+    "elec_tronics:cable_junction_t_1",
+    "elec_tronics:cable_tt_1",
+    "elec_tronics:cable_angle_t_1"
+  ]
+}

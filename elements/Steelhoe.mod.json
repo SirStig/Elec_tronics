@@ -1,0 +1,31 @@
+{
+  "_fv": 24,
+  "_type": "tool",
+  "definition": {
+    "renderType": 0,
+    "texture": "steelhoe",
+    "customModelName": "Normal",
+    "name": "Steel Hoe",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "CUSTOM:LovieeesTechyMod"
+    },
+    "toolType": "Hoe",
+    "harvestLevel": 0,
+    "efficiency": 7.0,
+    "attackSpeed": 1.0,
+    "enchantability": 14,
+    "damageVsEntity": 4.0,
+    "usageCount": 500,
+    "blocksAffected": [],
+    "hasGlow": false,
+    "repairItems": [
+      {
+        "value": "CUSTOM:Steelingot"
+      }
+    ],
+    "immuneToFire": false,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false
+  }
+}

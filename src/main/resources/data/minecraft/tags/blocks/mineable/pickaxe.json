@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "elec_tronics:uraniumore",
+    "elec_tronics:tungsten",
+    "elec_tronics:blastfurnancemachine",
+    "elec_tronics:waterturbinemachine",
+    "elec_tronics:coalgeneratormachine",
+    "elec_tronics:crushermachine"
+  ]
+}

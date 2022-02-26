@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "elec_tronics:blocks/coal_generator_sides",
+    "up": "elec_tronics:blocks/coal_generator_sides",
+    "north": "elec_tronics:blocks/coal_generator_front",
+    "east": "elec_tronics:blocks/coal_generator_sides",
+    "south": "elec_tronics:blocks/coal_generator_back",
+    "west": "elec_tronics:blocks/coal_generator_sides",
+    "particle": "elec_tronics:blocks/coal_generator_sides"
+  }
+}

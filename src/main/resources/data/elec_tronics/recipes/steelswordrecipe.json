@@ -1,0 +1,24 @@
+{
+  "group": "elec_tronics",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0",
+    "1",
+    "2"
+  ],
+  "key": {
+    "0": {
+      "item": "elec_tronics:steelingot"
+    },
+    "1": {
+      "item": "elec_tronics:steelingot"
+    },
+    "2": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "elec_tronics:steelsword",
+    "count": 1
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "elec_tronics:blocks/furnancetest",
+    "up": "elec_tronics:blocks/furnancetest",
+    "north": "elec_tronics:blocks/furnacefront",
+    "east": "elec_tronics:blocks/furnancetest",
+    "south": "elec_tronics:blocks/furnancetest",
+    "west": "elec_tronics:blocks/furnancetest",
+    "particle": "elec_tronics:blocks/furnancetest"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "elec_tronics:block/engineersworkbench"
+    },
+    "facing=east": {
+      "model": "elec_tronics:block/engineersworkbench",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "elec_tronics:block/engineersworkbench",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "elec_tronics:block/engineersworkbench",
+      "y": 270
+    }
+  }
+}

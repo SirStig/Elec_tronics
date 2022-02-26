@@ -1,0 +1,1851 @@
+{
+  "mod_elements": [
+    {
+      "name": "LovieeesTechyMod",
+      "type": "tab",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "elec_tronics_menu"
+    },
+    {
+      "name": "UraniumIngot",
+      "type": "item",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "uranium_ingot",
+      "path": "~/Ores-Ingots-Dusts"
+    },
+    {
+      "name": "Uraniumore",
+      "type": "block",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "uraniumore",
+      "path": "~/Ores-Ingots-Dusts"
+    },
+    {
+      "name": "UraniumDust",
+      "type": "item",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "uranium_dust",
+      "path": "~/Ores-Ingots-Dusts"
+    },
+    {
+      "name": "Tungsten",
+      "type": "block",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tungsten",
+      "path": "~/Ores-Ingots-Dusts"
+    },
+    {
+      "name": "TungstenOre",
+      "type": "item",
+      "sortid": 6,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tungsten_ore",
+      "path": "~/Ores-Ingots-Dusts"
+    },
+    {
+      "name": "TungstenIngot",
+      "type": "item",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tungsten_ingot",
+      "path": "~/Ores-Ingots-Dusts"
+    },
+    {
+      "name": "Reinforcedblastbrick",
+      "type": "block",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "reinforcedblastbrick",
+      "path": "~/BlastFurnace"
+    },
+    {
+      "name": "Insulation",
+      "type": "item",
+      "sortid": 10,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "insulation"
+    },
+    {
+      "name": "Blastfurnancemachine",
+      "type": "block",
+      "sortid": 11,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blastfurnancemachine",
+      "path": "~/BlastFurnace"
+    },
+    {
+      "name": "BlastFurnance",
+      "type": "recipe",
+      "sortid": 11,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blast_furnance",
+      "path": "~/BlastFurnace"
+    },
+    {
+      "name": "FibgerGlassDust",
+      "type": "item",
+      "sortid": 12,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fibger_glass_dust",
+      "path": "~/Ores-Ingots-Dusts"
+    },
+    {
+      "name": "Fibgerglassdustrecipe",
+      "type": "recipe",
+      "sortid": 13,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fibgerglassdustrecipe",
+      "path": "~/Item Recipes"
+    },
+    {
+      "name": "Fiberglassrecipe",
+      "type": "recipe",
+      "sortid": 14,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fiberglassrecipe"
+    },
+    {
+      "name": "Blastbrickrecipe",
+      "type": "recipe",
+      "sortid": 15,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blastbrickrecipe",
+      "path": "~/Machines Recipes"
+    },
+    {
+      "name": "Blastfurnace",
+      "type": "gui",
+      "sortid": 16,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blastfurnace",
+      "path": "~/BlastFurnace"
+    },
+    {
+      "name": "Blastfurnacedisplay",
+      "type": "procedure",
+      "sortid": 17,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blastfurnacetick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/BlastFurnace"
+    },
+    {
+      "name": "Blastdisplay",
+      "type": "procedure",
+      "sortid": 18,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blastdisplay",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/BlastFurnace"
+    },
+    {
+      "name": "Fuelburning",
+      "type": "procedure",
+      "sortid": 19,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fuelburning",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Fuelburningfunctions"
+    },
+    {
+      "name": "Fuelburning2",
+      "type": "procedure",
+      "sortid": 20,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fuelburning_2",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Fuelburningfunctions"
+    },
+    {
+      "name": "Fuelburning3",
+      "type": "procedure",
+      "sortid": 21,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fuelburning_3",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Fuelburningfunctions"
+    },
+    {
+      "name": "Fuelburning4",
+      "type": "procedure",
+      "sortid": 22,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fuelburning_4",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Fuelburningfunctions"
+    },
+    {
+      "name": "Fuelburning5",
+      "type": "procedure",
+      "sortid": 23,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fuelburning_5",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Fuelburningfunctions"
+    },
+    {
+      "name": "Fuelburning6",
+      "type": "procedure",
+      "sortid": 24,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fuelburning_6",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Fuelburningfunctions"
+    },
+    {
+      "name": "Fuelburning7",
+      "type": "procedure",
+      "sortid": 25,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fuelburning_7",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Fuelburningfunctions"
+    },
+    {
+      "name": "Fuelburning8",
+      "type": "procedure",
+      "sortid": 26,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fuelburning_8",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Fuelburningfunctions"
+    },
+    {
+      "name": "Fuelburning9",
+      "type": "procedure",
+      "sortid": 27,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fuelburning_9",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Fuelburningfunctions"
+    },
+    {
+      "name": "Fuelburning10",
+      "type": "procedure",
+      "sortid": 28,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fuelburning_10",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Fuelburningfunctions"
+    },
+    {
+      "name": "CraftingTime1",
+      "type": "procedure",
+      "sortid": 29,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crafting_time_1",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Craftingtimesfunctions"
+    },
+    {
+      "name": "Craftingtime2",
+      "type": "procedure",
+      "sortid": 30,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "craftingtime_2",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Craftingtimesfunctions"
+    },
+    {
+      "name": "Craftingtime3",
+      "type": "procedure",
+      "sortid": 31,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "craftingtime_3",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Craftingtimesfunctions"
+    },
+    {
+      "name": "Craftingtime4",
+      "type": "procedure",
+      "sortid": 32,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "craftingtime_4",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Craftingtimesfunctions"
+    },
+    {
+      "name": "Craftingtime5",
+      "type": "procedure",
+      "sortid": 33,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "craftingtime_5",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Craftingtimesfunctions"
+    },
+    {
+      "name": "Craftingtime6",
+      "type": "procedure",
+      "sortid": 34,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "craftingtime_6",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Craftingtimesfunctions"
+    },
+    {
+      "name": "Craftingtie7",
+      "type": "procedure",
+      "sortid": 35,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "craftingtie_7",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Craftingtimesfunctions"
+    },
+    {
+      "name": "Craftingtime8",
+      "type": "procedure",
+      "sortid": 36,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "craftingtime_8",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Craftingtimesfunctions"
+    },
+    {
+      "name": "Craftingtime9",
+      "type": "procedure",
+      "sortid": 37,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "craftingtime_9",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Craftingtimesfunctions"
+    },
+    {
+      "name": "Craftingtime10",
+      "type": "procedure",
+      "sortid": 38,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "craftingtime_10",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Craftingtimesfunctions"
+    },
+    {
+      "name": "CraftingTime0",
+      "type": "procedure",
+      "sortid": 39,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crafting_time_0",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Craftingtimesfunctions"
+    },
+    {
+      "name": "Steelingot",
+      "type": "item",
+      "sortid": 40,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "steelingot"
+    },
+    {
+      "name": "Workbenchgui",
+      "type": "gui",
+      "sortid": 41,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "workbenchgui",
+      "path": "~/Engineers Workbench"
+    },
+    {
+      "name": "Engineersworkbenchcode",
+      "type": "procedure",
+      "sortid": 42,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "engineersworkbenchcode",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Engineers Workbench"
+    },
+    {
+      "name": "Engineersworkbench",
+      "type": "block",
+      "sortid": 43,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "engineersworkbench",
+      "path": "~/Engineers Workbench"
+    },
+    {
+      "name": "Steelpickaxe",
+      "type": "tool",
+      "sortid": 44,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "steelpickaxe"
+    },
+    {
+      "name": "Steelsword",
+      "type": "tool",
+      "sortid": 45,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "steelsword"
+    },
+    {
+      "name": "Steelshovel",
+      "type": "tool",
+      "sortid": 46,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "steelshovel"
+    },
+    {
+      "name": "Steelaxe",
+      "type": "tool",
+      "sortid": 47,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "steelaxe"
+    },
+    {
+      "name": "Steelhoe",
+      "type": "tool",
+      "sortid": 48,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "steelhoe"
+    },
+    {
+      "name": "Steelpickrecipe",
+      "type": "recipe",
+      "sortid": 49,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "steelpickrecipe",
+      "path": "~/Item Recipes"
+    },
+    {
+      "name": "Steelswordrecipe",
+      "type": "recipe",
+      "sortid": 50,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "steelswordrecipe",
+      "path": "~/Item Recipes"
+    },
+    {
+      "name": "Steelshovelrecipe",
+      "type": "recipe",
+      "sortid": 51,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "steelshovelrecipe",
+      "path": "~/Item Recipes"
+    },
+    {
+      "name": "Steelhoerecipe",
+      "type": "recipe",
+      "sortid": 52,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "steelhoerecipe",
+      "path": "~/Item Recipes"
+    },
+    {
+      "name": "Steelaxerecipe",
+      "type": "recipe",
+      "sortid": 53,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "steelaxerecipe",
+      "path": "~/Item Recipes"
+    },
+    {
+      "name": "HandSaw",
+      "type": "tool",
+      "sortid": 54,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hand_saw"
+    },
+    {
+      "name": "Screwdriver",
+      "type": "item",
+      "sortid": 55,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "screwdriver"
+    },
+    {
+      "name": "Hammer",
+      "type": "tool",
+      "sortid": 56,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hammer"
+    },
+    {
+      "name": "Engineersworkbenchrecipe",
+      "type": "recipe",
+      "sortid": 57,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "engineersworkbenchrecipe",
+      "path": "~/Machines Recipes"
+    },
+    {
+      "name": "Screwdriverrecipe",
+      "type": "recipe",
+      "sortid": 58,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "screwdriverrecipe",
+      "path": "~/Item Recipes"
+    },
+    {
+      "name": "Handsawrecipe",
+      "type": "recipe",
+      "sortid": 59,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "handsawrecipe",
+      "path": "~/Item Recipes"
+    },
+    {
+      "name": "Hammerrecipe",
+      "type": "recipe",
+      "sortid": 60,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hammerrecipe",
+      "path": "~/Item Recipes"
+    },
+    {
+      "name": "Sharpenediron",
+      "type": "item",
+      "sortid": 61,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sharpenediron"
+    },
+    {
+      "name": "Sharpenedironrecipe",
+      "type": "recipe",
+      "sortid": 62,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sharpenedironrecipe"
+    },
+    {
+      "name": "Handsawcuttree",
+      "type": "procedure",
+      "sortid": 63,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "handsawcuttree",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Waterturbinemachine",
+      "type": "block",
+      "sortid": 64,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "waterturbinemachine"
+    },
+    {
+      "name": "Coalgeneratormachine",
+      "type": "block",
+      "sortid": 65,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "coalgeneratormachine",
+      "path": "~/Coal Generator"
+    },
+    {
+      "name": "CoalgeneratorGUI",
+      "type": "gui",
+      "sortid": 66,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "coalgenerator_gui",
+      "path": "~/Coal Generator"
+    },
+    {
+      "name": "Coalgeneratorelectricitygeneration",
+      "type": "procedure",
+      "sortid": 67,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "coalgeneratorelectricitygeneration",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Coal Generator"
+    },
+    {
+      "name": "Ash",
+      "type": "item",
+      "sortid": 68,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ash"
+    },
+    {
+      "name": "Crushermachine",
+      "type": "block",
+      "sortid": 69,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crushermachine",
+      "path": "~/CrusherT1-T4"
+    },
+    {
+      "name": "CrusherT1GUI",
+      "type": "gui",
+      "sortid": 70,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crusher_t_1_gui",
+      "path": "~/CrusherT1-T4"
+    },
+    {
+      "name": "Powercheckprocedure",
+      "type": "procedure",
+      "sortid": 71,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "powercheckprocedure",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Fuelburningfunctions"
+    },
+    {
+      "name": "Irondust",
+      "type": "item",
+      "sortid": 72,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "irondust",
+      "path": "~/Ores-Ingots-Dusts"
+    },
+    {
+      "name": "Irondusttoingot",
+      "type": "recipe",
+      "sortid": 73,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "irondusttoingot"
+    },
+    {
+      "name": "CrusherT1procedure",
+      "type": "procedure",
+      "sortid": 71,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crusher_t_1procedure",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/CrusherT1-T4"
+    },
+    {
+      "name": "T1Wire",
+      "type": "block",
+      "sortid": 74,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "t_1_wire",
+      "path": "~/Wires-Pipes"
+    },
+    {
+      "name": "T1WireUpdateTick",
+      "type": "procedure",
+      "sortid": 75,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "t_1_wire_update_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Wires-Pipes"
+    },
+    {
+      "name": "T1WireBlockAdded",
+      "type": "procedure",
+      "sortid": 76,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "t_1_wire_block_added",
+      "metadata": {
+        "dependencies": []
+      },
+      "path": "~/Wires-Pipes"
+    },
+    {
+      "name": "T1WireBlockIsPlacedBy",
+      "type": "procedure",
+      "sortid": 77,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "t_1_wire_block_is_placed_by",
+      "metadata": {
+        "dependencies": []
+      },
+      "path": "~/Wires-Pipes"
+    },
+    {
+      "name": "Variableenergyblocks",
+      "type": "tag",
+      "sortid": 78,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "variableenergyblocks"
+    },
+    {
+      "name": "CoalgeneratormachineBlockAdded",
+      "type": "procedure",
+      "sortid": 80,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "coalgeneratormachine_block_added",
+      "metadata": {
+        "dependencies": []
+      },
+      "path": "~/Coal Generator"
+    },
+    {
+      "name": "Powertick1",
+      "type": "procedure",
+      "sortid": 81,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "powertick_1",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Powerticks"
+    },
+    {
+      "name": "Powertick2",
+      "type": "procedure",
+      "sortid": 82,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "powertick_2",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Powerticks"
+    },
+    {
+      "name": "Powertick3",
+      "type": "procedure",
+      "sortid": 83,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "powertick_3",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Powerticks"
+    },
+    {
+      "name": "Powertick4",
+      "type": "procedure",
+      "sortid": 84,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "powertick_4",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Powerticks"
+    },
+    {
+      "name": "Powertick5",
+      "type": "procedure",
+      "sortid": 85,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "powertick_5",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Powerticks"
+    },
+    {
+      "name": "Powertick6",
+      "type": "procedure",
+      "sortid": 86,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "powertick_6",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Powerticks"
+    },
+    {
+      "name": "Powertick7",
+      "type": "procedure",
+      "sortid": 87,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "powertick_7",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Powerticks"
+    },
+    {
+      "name": "Powertick8",
+      "type": "procedure",
+      "sortid": 88,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "powertick_8",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Powerticks"
+    },
+    {
+      "name": "Powertick9",
+      "type": "procedure",
+      "sortid": 89,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "powertick_9",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Powerticks"
+    },
+    {
+      "name": "Powertick0",
+      "type": "procedure",
+      "sortid": 90,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "powertick_0",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Powerticks"
+    },
+    {
+      "name": "Fuels",
+      "type": "tag",
+      "sortid": 91,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fuels"
+    },
+    {
+      "name": "CableAngleT1",
+      "type": "block",
+      "sortid": 98,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cable_angle_t_1",
+      "path": "~/Wires-Pipes"
+    },
+    {
+      "name": "CableTT1",
+      "type": "block",
+      "sortid": 96,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cable_tt_1",
+      "path": "~/Wires-Pipes"
+    },
+    {
+      "name": "EngineersworkbenchBlockDestroyedByPlayer",
+      "type": "procedure",
+      "sortid": 102,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "engineersworkbench_block_destroyed_by_player",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Engineers Workbench"
+    },
+    {
+      "name": "EngineersworkbenchBlockAdded",
+      "type": "procedure",
+      "sortid": 99,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "engineersworkbench_block_added",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Engineers Workbench"
+    },
+    {
+      "name": "CableJunctionT1",
+      "type": "block",
+      "sortid": 97,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cable_junction_t_1",
+      "path": "~/Wires-Pipes"
+    },
+    {
+      "name": "EngineersWorkBenchTopSide",
+      "type": "block",
+      "sortid": 101,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "engineers_work_bench_top_side",
+      "path": "~/Engineers Workbench"
+    },
+    {
+      "name": "EngineersWorkBenchSide",
+      "type": "block",
+      "sortid": 99,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "engineers_work_bench_side",
+      "path": "~/Engineers Workbench"
+    },
+    {
+      "name": "EngineersWorkBenchTop",
+      "type": "block",
+      "sortid": 100,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "engineers_work_bench_top",
+      "path": "~/Engineers Workbench"
+    },
+    {
+      "name": "Wires",
+      "type": "tag",
+      "sortid": 103,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wires"
+    }
+  ],
+  "variable_elements": [],
+  "sound_elements": [],
+  "language_map": {
+    "en_us": {
+      "item.elec_tronics.insulation": "Insulation",
+      "item.elec_tronics.hand_saw": "Hand Saw",
+      "item.elec_tronics.steelpickaxe": "Steel Pickaxe",
+      "block.elec_tronics.reinforcedblastbrick": "Reinforced Blast Brick",
+      "item.elec_tronics.steelhoe": "Steel Hoe",
+      "item.elec_tronics.hammer": "Hammer",
+      "item.elec_tronics.sharpenediron": "Sharpened Iron",
+      "item.elec_tronics.steelsword": "Steel Sword",
+      "item.elec_tronics.ash": "Ash",
+      "block.elec_tronics.uraniumore": "Uranium Ore",
+      "item.elec_tronics.uranium_dust": "Uranium Dust",
+      "block.elec_tronics.cable_tt_1": "Cable T T1",
+      "block.elec_tronics.engineers_work_bench_top_side": "Engineers Workbench Top Side",
+      "item.elec_tronics.irondust": "Iron Dust",
+      "item.elec_tronics.tungsten_ore": "Tungsten Ore",
+      "item.elec_tronics.steelaxe": "Steel Axe",
+      "block.elec_tronics.engineers_work_bench_top": "Engineers Workbench Top",
+      "block.elec_tronics.cable_junction_t_1": "Cable Junction T1",
+      "block.elec_tronics.t_1_wire": "Cable T1",
+      "item.elec_tronics.fibger_glass_dust": "Fibger Glass Dust",
+      "block.elec_tronics.engineers_work_bench_side": "Engineers Workbench Side",
+      "item.elec_tronics.tungsten_ingot": "Tungsten Ingot",
+      "block.elec_tronics.tungsten": "Tungsten Ore Block",
+      "block.elec_tronics.waterturbinemachine": "Water Turbine",
+      "block.elec_tronics.coalgeneratormachine": "Coal Generator",
+      "itemGroup.tabelec_tronics_menu": "Elec Tronics",
+      "block.elec_tronics.engineersworkbench": "Engineers Workbench",
+      "block.elec_tronics.crushermachine": "Crusher T1",
+      "block.elec_tronics.blastfurnancemachine": "Blast Furnance",
+      "item.elec_tronics.uranium_ingot": "Uranium Ingot",
+      "block.elec_tronics.cable_angle_t_1": "Cable Angle T1",
+      "item.elec_tronics.steelingot": "Steel Ingot",
+      "item.elec_tronics.screwdriver": "Screwdriver",
+      "item.elec_tronics.steelshovel": "Steel Shovel"
+    }
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": [
+      {
+        "name": "Ores-Ingots-Dusts",
+        "children": []
+      },
+      {
+        "name": "CrusherT1-T4",
+        "children": []
+      },
+      {
+        "name": "Fuelburningfunctions",
+        "children": []
+      },
+      {
+        "name": "Wires-Pipes",
+        "children": []
+      },
+      {
+        "name": "Item Recipes",
+        "children": []
+      },
+      {
+        "name": "Machines Recipes",
+        "children": []
+      },
+      {
+        "name": "Powerticks",
+        "children": []
+      },
+      {
+        "name": "Craftingtimesfunctions",
+        "children": []
+      },
+      {
+        "name": "Coal Generator",
+        "children": []
+      },
+      {
+        "name": "Engineers Workbench",
+        "children": []
+      },
+      {
+        "name": "BlastFurnace",
+        "children": []
+      }
+    ]
+  },
+  "workspaceSettings": {
+    "modid": "elec_tronics",
+    "modName": "Elec Tronics",
+    "version": "0.0.01",
+    "author": "SirJStig",
+    "license": "Academic Free License v3.0",
+    "disableForgeVersionCheck": true,
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "forge-1.17.1",
+    "credits": "SirJStig",
+    "modElementsPackage": "net.elec_tronics",
+    "lockBaseModFiles": false
+  },
+  "mcreatorVersion": 202100354000
+}

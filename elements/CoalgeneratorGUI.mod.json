@@ -1,0 +1,369 @@
+{
+  "_fv": 24,
+  "_type": "gui",
+  "definition": {
+    "type": 1,
+    "width": 176,
+    "height": 176,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 5,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "text": "Inventory",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Inventory",
+          "x": 132,
+          "y": 113
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Coal Generator",
+          "color": {
+            "value": -13421773,
+            "falpha": 0.0
+          },
+          "name": "Coal Generator",
+          "x": 130,
+          "y": 36
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "id": 0,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": false,
+          "name": "Slot #0",
+          "x": 204,
+          "y": 80
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "images_1_1.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Fuelburning10"
+          },
+          "name": "images_1_1.png",
+          "x": 205,
+          "y": 60
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "fuel2.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Fuelburning9"
+          },
+          "name": "fuel2.png",
+          "x": 205,
+          "y": 60
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "fuel3.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Fuelburning8"
+          },
+          "name": "fuel3.png",
+          "x": 205,
+          "y": 60
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "fuel4.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Fuelburning7"
+          },
+          "name": "fuel4.png",
+          "x": 205,
+          "y": 60
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "fuel5.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Fuelburning6"
+          },
+          "name": "fuel5.png",
+          "x": 205,
+          "y": 60
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "fuel6.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Fuelburning5"
+          },
+          "name": "fuel6.png",
+          "x": 205,
+          "y": 60
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "fuel7.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Fuelburning4"
+          },
+          "name": "fuel7.png",
+          "x": 205,
+          "y": 60
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "fuel8.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Fuelburning3"
+          },
+          "name": "fuel8.png",
+          "x": 205,
+          "y": 60
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "fuel9.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Fuelburning2"
+          },
+          "name": "fuel9.png",
+          "x": 205,
+          "y": 60
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "burningfull.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Fuelburning"
+          },
+          "name": "burningfull.png",
+          "x": 205,
+          "y": 60
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 1,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": false,
+          "name": "Slot #1",
+          "x": 251,
+          "y": 80
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "furnace_gui_1.png",
+          "use1Xscale": true,
+          "name": "furnace_gui_1.png",
+          "x": 224,
+          "y": 80
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "RF",
+          "color": {
+            "value": -6750208,
+            "falpha": 0.0
+          },
+          "name": "RF",
+          "x": 133,
+          "y": 50
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "batterv1.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Powertick0"
+          },
+          "name": "batterv1.png",
+          "x": 133,
+          "y": 59
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "battery10.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Powertick2"
+          },
+          "name": "battery10.png",
+          "x": 133,
+          "y": 59
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "battery20.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Powertick3"
+          },
+          "name": "battery20.png",
+          "x": 133,
+          "y": 59
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "battery30.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Powertick4"
+          },
+          "name": "battery30.png",
+          "x": 133,
+          "y": 59
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "battery40.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Powertick5"
+          },
+          "name": "battery40.png",
+          "x": 133,
+          "y": 59
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "battery50.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Powertick6"
+          },
+          "name": "battery50.png",
+          "x": 133,
+          "y": 59
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "battery60.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Powertick7"
+          },
+          "name": "battery60.png",
+          "x": 133,
+          "y": 59
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "battery70.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Powertick8"
+          },
+          "name": "battery70.png",
+          "x": 133,
+          "y": 59
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "battery80.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Powertick8"
+          },
+          "name": "battery80.png",
+          "x": 133,
+          "y": 59
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "battery92full.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Powertick9"
+          },
+          "name": "battery92full.png",
+          "x": 133,
+          "y": 59
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "battery5.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Powertick1"
+          },
+          "name": "battery5.png",
+          "x": 133,
+          "y": 59
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

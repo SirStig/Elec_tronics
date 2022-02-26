@@ -1,0 +1,26 @@
+{
+  "_fv": 24,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:CableTT1"
+      },
+      {
+        "value": "CUSTOM:CableJunctionT1"
+      },
+      {
+        "value": "CUSTOM:T1Wire"
+      },
+      {
+        "value": "CUSTOM:CableAngleT1"
+      }
+    ],
+    "functions": [],
+    "entities": [],
+    "name": "wires",
+    "namespace": "forge"
+  }
+}

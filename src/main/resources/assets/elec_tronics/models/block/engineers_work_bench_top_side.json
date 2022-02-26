@@ -1,0 +1,11 @@
+{
+  "parent": "elec_tronics:custom/workbenchtopr",
+  "textures": {
+    "all": "elec_tronics:blocks/craftingtableblock_1",
+    "particle": "elec_tronics:blocks/craftingtableblock_1",
+    "0": "elec_tronics:blocks/screen_shot_2022-02-25_at_3.18.13_am",
+    "1": "elec_tronics:blocks/screen_shot_2022-02-25_at_3.43.46_pm",
+    "2": "elec_tronics:blocks/gray",
+    "3": "elec_tronics:blocks/saw"
+  }
+}

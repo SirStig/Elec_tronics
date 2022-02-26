@@ -1,0 +1,17 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "2": "texture",
+        "3": "screwdriver",
+        "4": "screen_shot_2022-02-25_at_3.13.31_am",
+        "5": "screen_shot_2022-02-25_at_3.18.13_am",
+        "6": "saw",
+        "7": "hammer1",
+        "missing": "",
+        "8": "wrench"
+      },
+      "name": "default"
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "_fv": 24,
+  "_type": "tool",
+  "definition": {
+    "renderType": 0,
+    "texture": "imgbin-minecraft-hand-saws-diamond-blade-minecraft-xqadwadfycy8dfv3yfych7zfy",
+    "customModelName": "Normal",
+    "name": "Hand Saw",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "CUSTOM:LovieeesTechyMod"
+    },
+    "toolType": "Axe",
+    "harvestLevel": 0,
+    "efficiency": 7.5,
+    "attackSpeed": 1.0,
+    "enchantability": 14,
+    "damageVsEntity": 1.0,
+    "usageCount": 250,
+    "blocksAffected": [],
+    "hasGlow": false,
+    "repairItems": [
+      {
+        "value": "Items.IRON_INGOT"
+      }
+    ],
+    "immuneToFire": false,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "onBlockDestroyedWithTool": {
+      "name": "Handsawcuttree"
+    }
+  }
+}

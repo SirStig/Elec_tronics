@@ -1,0 +1,11 @@
+{
+  "parent": "elec_tronics:custom/cableanglet1",
+  "textures": {
+    "all": "elec_tronics:blocks/cable_angle_end",
+    "particle": "elec_tronics:blocks/cable_angle_end",
+    "1": "elec_tronics:blocks/elec_tronicst1cable_end",
+    "3": "elec_tronics:blocks/cable_particles",
+    "4": "elec_tronics:blocks/elec_tronicst1cable_side",
+    "5": "elec_tronics:blocks/cable_angle_end"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:charcoal",
+    "minecraft:oak_log",
+    "minecraft:coal",
+    "minecraft:stripped_oak_log",
+    "minecraft:coal_block",
+    "minecraft:lava_bucket",
+    "minecraft:acacia_log"
+  ]
+}

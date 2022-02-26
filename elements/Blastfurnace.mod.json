@@ -1,0 +1,426 @@
+{
+  "_fv": 24,
+  "_type": "gui",
+  "definition": {
+    "type": 1,
+    "width": 176,
+    "height": 186,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 10,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "text": "Blast Furnace",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Blast Furnace",
+          "x": 133,
+          "y": 34
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "color": {
+            "value": -10066330,
+            "falpha": 0.0
+          },
+          "id": 0,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": false,
+          "name": "Slot #0",
+          "x": 204,
+          "y": 98
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "color": {
+            "value": -10066330,
+            "falpha": 0.0
+          },
+          "id": 1,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": false,
+          "name": "Slot #1",
+          "x": 186,
+          "y": 98
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "color": {
+            "value": -10066330,
+            "falpha": 0.0
+          },
+          "id": 2,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": false,
+          "name": "Slot #2",
+          "x": 168,
+          "y": 98
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "color": {
+            "value": -10066330,
+            "falpha": 0.0
+          },
+          "id": 3,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": false,
+          "name": "Slot #3",
+          "x": 176,
+          "y": 54
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "color": {
+            "value": -6710887,
+            "falpha": 0.0
+          },
+          "id": 4,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": false,
+          "name": "Slot #4",
+          "x": 258,
+          "y": 78
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "color": {
+            "value": -10066330,
+            "falpha": 0.0
+          },
+          "id": 5,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": false,
+          "name": "Slot #5",
+          "x": 195,
+          "y": 54
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "images_1_1.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Fuelburning10"
+          },
+          "name": "images_1_1.png",
+          "x": 187,
+          "y": 78
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "fuel2.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Fuelburning9"
+          },
+          "name": "fuel2.png",
+          "x": 187,
+          "y": 78
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "fuel3.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Fuelburning8"
+          },
+          "name": "fuel3.png",
+          "x": 187,
+          "y": 78
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "fuel4.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Fuelburning7"
+          },
+          "name": "fuel4.png",
+          "x": 187,
+          "y": 78
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "fuel5.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Fuelburning6"
+          },
+          "name": "fuel5.png",
+          "x": 187,
+          "y": 78
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "fuel6.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Fuelburning5"
+          },
+          "name": "fuel6.png",
+          "x": 187,
+          "y": 78
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "fuel7.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Fuelburning4"
+          },
+          "name": "fuel7.png",
+          "x": 187,
+          "y": 78
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "fuel8.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Fuelburning3"
+          },
+          "name": "fuel8.png",
+          "x": 187,
+          "y": 78
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "fuel9.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Fuelburning2"
+          },
+          "name": "fuel9.png",
+          "x": 187,
+          "y": 78
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "burningfull.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Fuelburning"
+          },
+          "name": "burningfull.png",
+          "x": 187,
+          "y": 78
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "furnace_gui_1.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "CraftingTime0"
+          },
+          "name": "furnace_gui_1.png",
+          "x": 228,
+          "y": 78
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "arrow9.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "CraftingTime1"
+          },
+          "name": "arrow9.png",
+          "x": 225,
+          "y": 79
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "arrow8.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Craftingtime2"
+          },
+          "name": "arrow8.png",
+          "x": 225,
+          "y": 79
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "arrow7.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Craftingtime3"
+          },
+          "name": "arrow7.png",
+          "x": 225,
+          "y": 79
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "arrow6.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Craftingtime4"
+          },
+          "name": "arrow6.png",
+          "x": 225,
+          "y": 79
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "arrow5.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Craftingtime5"
+          },
+          "name": "arrow5.png",
+          "x": 225,
+          "y": 79
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "arrow4.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Craftingtime6"
+          },
+          "name": "arrow4.png",
+          "x": 225,
+          "y": 79
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "arrow3.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Craftingtie7"
+          },
+          "name": "arrow3.png",
+          "x": 225,
+          "y": 79
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "arrow2.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Craftingtime8"
+          },
+          "name": "arrow2.png",
+          "x": 225,
+          "y": 79
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "arrow1.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Craftingtime9"
+          },
+          "name": "arrow1.png",
+          "x": 225,
+          "y": 79
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "2474b6354f6757ab86373259b87a2ad3_1.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Craftingtime10"
+          },
+          "name": "2474b6354f6757ab86373259b87a2ad3_1.png",
+          "x": 226,
+          "y": 77
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Inventory",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Inventory",
+          "x": 133,
+          "y": 118
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 10,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

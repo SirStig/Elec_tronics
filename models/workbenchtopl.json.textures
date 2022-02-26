@@ -1,0 +1,13 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "screen_shot_2022-02-25_at_3.18.13_am",
+        "1": "screen_shot_2022-02-25_at_3.43.46_pm",
+        "2": "gray",
+        "3": "hammer1"
+      },
+      "name": "default"
+    }
+  }
+}

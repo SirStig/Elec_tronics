@@ -1,0 +1,22 @@
+{
+  "group": "elec_tronic",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012"
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:sand"
+    },
+    "1": {
+      "item": "minecraft:sandstone"
+    },
+    "2": {
+      "item": "minecraft:glass"
+    }
+  },
+  "result": {
+    "item": "elec_tronics:fibger_glass_dust",
+    "count": 1
+  }
+}

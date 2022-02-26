@@ -1,0 +1,30 @@
+{
+  "group": "elec_tronics",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0 2",
+    " 4 ",
+    "6 8"
+  ],
+  "key": {
+    "0": {
+      "item": "elec_tronics:hand_saw"
+    },
+    "2": {
+      "item": "elec_tronics:screwdriver"
+    },
+    "4": {
+      "item": "minecraft:crafting_table"
+    },
+    "6": {
+      "item": "elec_tronics:hammer"
+    },
+    "8": {
+      "item": "minecraft:flint_and_steel"
+    }
+  },
+  "result": {
+    "item": "elec_tronics:engineersworkbench",
+    "count": 1
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "elec_tronics:block/waterturbinemachine"
+    },
+    "facing=east": {
+      "model": "elec_tronics:block/waterturbinemachine",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "elec_tronics:block/waterturbinemachine",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "elec_tronics:block/waterturbinemachine",
+      "y": 270
+    }
+  }
+}

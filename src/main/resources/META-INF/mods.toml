@@ -1,0 +1,22 @@
+modLoader="javafml"
+loaderVersion="[37,)"
+license="Academic Free License v3.0"
+
+[[mods]]
+modId="elec_tronics"
+version="0.0.01"
+displayName="Elec Tronics"
+credits="SirJStig"
+displayURL="https://mcreator.net"
+authors="SirJStig"
+
+[[dependencies.elec_tronics]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.17.1]"
+    ordering="NONE"
+    side="BOTH"
+
+
+
+

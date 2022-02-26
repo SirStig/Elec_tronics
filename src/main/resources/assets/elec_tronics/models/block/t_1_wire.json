@@ -1,0 +1,10 @@
+{
+  "parent": "elec_tronics:custom/wiret1",
+  "textures": {
+    "all": "elec_tronics:blocks/elec_tronicst1cable_side",
+    "particle": "elec_tronics:blocks/elec_tronicst1cable_side",
+    "1": "elec_tronics:blocks/elec_tronicst1cable_end",
+    "3": "elec_tronics:blocks/cable_particles",
+    "4": "elec_tronics:blocks/elec_tronicst1cable_side"
+  }
+}

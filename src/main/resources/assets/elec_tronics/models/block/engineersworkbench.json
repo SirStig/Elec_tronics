@@ -1,0 +1,15 @@
+{
+  "parent": "elec_tronics:custom/workbenchbottoml",
+  "textures": {
+    "all": "elec_tronics:blocks/craftingtableblock_1",
+    "particle": "elec_tronics:blocks/craftingtableblock_1",
+    "11": "elec_tronics:blocks/drawer_handle",
+    "0": "elec_tronics:blocks/color",
+    "4": "elec_tronics:blocks/screen_shot_2022-02-25_at_3.13.31_am",
+    "5": "elec_tronics:blocks/screen_shot_2022-02-25_at_3.18.13_am",
+    "missing": "elec_tronics:blocks/",
+    "8": "elec_tronics:blocks/wrench",
+    "9": "elec_tronics:blocks/screen_shot_2022-02-25_at_2.20.19_pm",
+    "10": "elec_tronics:blocks/shelf_drawer"
+  }
+}
