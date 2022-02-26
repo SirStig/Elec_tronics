@@ -13,7 +13,7 @@ public class Fuelburning10Procedure {
 					return blockEntity.getTileData().getDouble(tag);
 				return -1;
 			}
-		}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "fuelRemaining") <= 0) {
+		}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "fuelRemaining") == 0) {
 			return true;
 		}
 		return false;

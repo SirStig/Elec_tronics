@@ -1288,7 +1288,24 @@
       "locked_code": false,
       "registry_name": "t_1_wire_block_is_placed_by",
       "metadata": {
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
       },
       "path": "~/Wires-Pipes"
     },
@@ -1308,7 +1325,24 @@
       "locked_code": false,
       "registry_name": "coalgeneratormachine_block_added",
       "metadata": {
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
       },
       "path": "~/Coal Generator"
     },
@@ -1747,16 +1781,16 @@
     "en_us": {
       "item.elec_tronics.insulation": "Insulation",
       "item.elec_tronics.hand_saw": "Hand Saw",
-      "item.elec_tronics.steelpickaxe": "Steel Pickaxe",
       "block.elec_tronics.reinforcedblastbrick": "Reinforced Blast Brick",
+      "item.elec_tronics.steelpickaxe": "Steel Pickaxe",
       "item.elec_tronics.steelhoe": "Steel Hoe",
       "item.elec_tronics.hammer": "Hammer",
       "item.elec_tronics.sharpenediron": "Sharpened Iron",
       "item.elec_tronics.steelsword": "Steel Sword",
-      "item.elec_tronics.ash": "Ash",
-      "block.elec_tronics.uraniumore": "Uranium Ore",
-      "item.elec_tronics.uranium_dust": "Uranium Dust",
       "block.elec_tronics.cable_tt_1": "Cable T T1",
+      "item.elec_tronics.uranium_dust": "Uranium Dust",
+      "block.elec_tronics.uraniumore": "Uranium Ore",
+      "item.elec_tronics.ash": "Ash",
       "block.elec_tronics.engineers_work_bench_top_side": "Engineers Workbench Top Side",
       "item.elec_tronics.irondust": "Iron Dust",
       "item.elec_tronics.tungsten_ore": "Tungsten Ore",

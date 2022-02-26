@@ -41,6 +41,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.client.Minecraft;
 
 import net.elec_tronics.world.inventory.CoalgeneratorGUIMenu;
+import net.elec_tronics.procedures.CoalgeneratormachineBlockAddedProcedure;
 import net.elec_tronics.procedures.CoalgeneratorelectricitygenerationProcedure;
 import net.elec_tronics.procedures.BlastdisplayProcedure;
 import net.elec_tronics.block.entity.CoalgeneratormachineBlockEntity;
@@ -106,6 +107,7 @@ public class CoalgeneratormachineBlock extends Block
 	public void onPlace(BlockState blockstate, Level world, BlockPos pos, BlockState oldState, boolean moving) {
 		super.onPlace(blockstate, world, pos, oldState, moving);
 		world.getBlockTicks().scheduleTick(pos, this, 10);
+		CoalgeneratormachineBlockAddedProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
 	}
 
 	@Override

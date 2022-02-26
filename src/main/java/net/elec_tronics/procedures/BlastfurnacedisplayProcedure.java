@@ -854,21 +854,14 @@ public class BlastfurnacedisplayProcedure {
 			BlockEntity _blockEntity = world.getBlockEntity(_bp);
 			BlockState _bs = world.getBlockState(_bp);
 			if (_blockEntity != null)
-				_blockEntity.getTileData().putDouble("fuelRemaining", (((new Object() {
+				_blockEntity.getTileData().putDouble("fuelRemaining", Math.ceil((new Object() {
 					public double getValue(LevelAccessor world, BlockPos pos, String tag) {
 						BlockEntity blockEntity = world.getBlockEntity(pos);
 						if (blockEntity != null)
 							return blockEntity.getTileData().getDouble(tag);
 						return -1;
 					}
-				}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "fuel")) / (new Object() {
-					public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-						BlockEntity blockEntity = world.getBlockEntity(pos);
-						if (blockEntity != null)
-							return blockEntity.getTileData().getDouble(tag);
-						return -1;
-					}
-				}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "maxFuel"))) * 100));
+				}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "fuel")) / 10.1));
 			if (world instanceof Level _level)
 				_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 		}

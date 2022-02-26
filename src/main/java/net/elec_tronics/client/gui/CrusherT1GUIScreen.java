@@ -20,7 +20,6 @@ import net.elec_tronics.procedures.Powertick3Procedure;
 import net.elec_tronics.procedures.Powertick2Procedure;
 import net.elec_tronics.procedures.Powertick1Procedure;
 import net.elec_tronics.procedures.Powertick0Procedure;
-import net.elec_tronics.procedures.PowercheckprocedureProcedure;
 import net.elec_tronics.procedures.Fuelburning6Procedure;
 import net.elec_tronics.procedures.Craftingtime9Procedure;
 import net.elec_tronics.procedures.Craftingtime8Procedure;
@@ -177,8 +176,6 @@ public class CrusherT1GUIScreen extends AbstractContainerScreen<CrusherT1GUIMenu
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
 		this.font.draw(poseStack, "Inventory", 6, 72, -12829636);
 		this.font.draw(poseStack, "Crusher Tier 1", 3, 4, -16737895);
-		if (PowercheckprocedureProcedure.execute(world, x, y, z))
-			this.font.draw(poseStack, "No Power!", 63, 57, -6750208);
 	}
 
 	@Override

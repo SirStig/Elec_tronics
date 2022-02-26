@@ -205,22 +205,6 @@
         }
       },
       {
-        "type": "label",
-        "data": {
-          "text": "No Power!",
-          "color": {
-            "value": -6750208,
-            "falpha": 0.0
-          },
-          "displayCondition": {
-            "name": "Powercheckprocedure"
-          },
-          "name": "No Power!",
-          "x": 189,
-          "y": 94
-        }
-      },
-      {
         "type": "image",
         "data": {
           "image": "batterv1.png",

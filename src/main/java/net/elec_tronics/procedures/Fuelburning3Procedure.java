@@ -13,14 +13,7 @@ public class Fuelburning3Procedure {
 					return blockEntity.getTileData().getDouble(tag);
 				return -1;
 			}
-		}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "fuelRemaining") >= 71 && new Object() {
-			public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-				BlockEntity blockEntity = world.getBlockEntity(pos);
-				if (blockEntity != null)
-					return blockEntity.getTileData().getDouble(tag);
-				return -1;
-			}
-		}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "fuelRemaining") < 81) {
+		}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "fuelRemaining") == 8) {
 			return true;
 		}
 		return false;
