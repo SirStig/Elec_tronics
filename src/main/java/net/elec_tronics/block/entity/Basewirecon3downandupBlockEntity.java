@@ -1,9 +1,38 @@
 package net.elec_tronics.block.entity;
 
+import net.minecraftforge.items.wrapper.SidedInvWrapper;
+import net.minecraftforge.items.IItemHandler;
+import net.minecraftforge.items.CapabilityItemHandler;
+import net.minecraftforge.energy.EnergyStorage;
+import net.minecraftforge.energy.CapabilityEnergy;
+import net.minecraftforge.common.util.LazyOptional;
+import net.minecraftforge.common.capabilities.Capability;
+
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.entity.RandomizableContainerBlockEntity;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.inventory.ChestMenu;
+import net.minecraft.world.inventory.AbstractContainerMenu;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.WorldlyContainer;
+import net.minecraft.world.ContainerHelper;
+import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
+import net.minecraft.network.chat.TextComponent;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.Connection;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.core.NonNullList;
+import net.minecraft.core.Direction;
+import net.minecraft.core.BlockPos;
+
+import net.elec_tronics.init.ElecTronicsModBlockEntities;
+
+import javax.annotation.Nullable;
+
+import java.util.stream.IntStream;
+
 public class Basewirecon3downandupBlockEntity extends RandomizableContainerBlockEntity implements WorldlyContainer {
-
 	private NonNullList<ItemStack> stacks = NonNullList.<ItemStack>withSize(0, ItemStack.EMPTY);
-
 	private final LazyOptional<? extends IItemHandler>[] handlers = SidedInvWrapper.create(this, Direction.values());
 
 	public Basewirecon3downandupBlockEntity(BlockPos position, BlockState state) {
@@ -13,27 +42,20 @@ public class Basewirecon3downandupBlockEntity extends RandomizableContainerBlock
 	@Override
 	public void load(CompoundTag compound) {
 		super.load(compound);
-
 		if (!this.tryLoadLootTable(compound))
 			this.stacks = NonNullList.withSize(this.getContainerSize(), ItemStack.EMPTY);
-
 		ContainerHelper.loadAllItems(compound, this.stacks);
-
 		if (compound.get("energyStorage")instanceof CompoundTag compoundTag)
 			energyStorage.deserializeNBT(compoundTag);
-
 	}
 
 	@Override
 	public CompoundTag save(CompoundTag compound) {
 		super.save(compound);
-
 		if (!this.trySaveLootTable(compound)) {
 			ContainerHelper.saveAllItems(compound, this.stacks);
 		}
-
 		compound.put("energyStorage", energyStorage.serializeNBT());
-
 		return compound;
 	}
 
@@ -141,10 +163,8 @@ public class Basewirecon3downandupBlockEntity extends RandomizableContainerBlock
 	public <T> LazyOptional<T> getCapability(Capability<T> capability, @Nullable Direction facing) {
 		if (!this.remove && facing != null && capability == CapabilityItemHandler.ITEM_HANDLER_CAPABILITY)
 			return handlers[facing.ordinal()].cast();
-
 		if (!this.remove && capability == CapabilityEnergy.ENERGY)
 			return LazyOptional.of(() -> energyStorage).cast();
-
 		return super.getCapability(capability, facing);
 	}
 
@@ -154,5 +174,4 @@ public class Basewirecon3downandupBlockEntity extends RandomizableContainerBlock
 		for (LazyOptional<? extends IItemHandler> handler : handlers)
 			handler.invalidate();
 	}
-
 }

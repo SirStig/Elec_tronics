@@ -1,15 +1,15 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"1": "variable_energy_1_4_0:elec_tronicsT1Cable_end",
+		"1": "variable_energy_1_4_0:blocks/cable/cable_end",
 		"3": "variable_energy_1_4_0:blocks/cable/cable_particles",
-		"4": "variable_energy_1_4_0:elec_tronicsT1Cable_side",
+		"4": "variable_energy_1_4_0:blocks/cable/cable_side",
 		"particle": "variable_energy_1_4_0:blocks/cable/cable_back_input"
 	},
 	"elements": [
 		{
-			"from": [6, 5, 0],
-			"to": [10, 9, 16],
+			"from": [6, 6, 0],
+			"to": [10, 10, 16],
 			"faces": {
 				"north": {"uv": [0, 0, 16, 16], "texture": "#3"},
 				"east": {"uv": [0, 0, 16, 16], "texture": "#4"},
@@ -30,7 +30,7 @@
 			"scale": [1, 1, 0.3]
 		},
 		"gui": {
-			"rotation": [0, -40, 0],
+			"rotation": [38, -40, 0],
 			"translation": [0, 1.25, 0]
 		},
 		"fixed": {
