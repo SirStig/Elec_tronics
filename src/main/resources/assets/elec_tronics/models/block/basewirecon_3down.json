@@ -1,0 +1,12 @@
+{
+  "parent": "elec_tronics:custom/base_wire_con_3_down",
+  "textures": {
+    "all": "elec_tronics:blocks/basetemp",
+    "particle": "elec_tronics:blocks/basetemp",
+    "1": "elec_tronics:blocks/cable_particles",
+    "2": "elec_tronics:blocks/cable_end_t",
+    "4": "elec_tronics:blocks/elec_tronicst1cable_end",
+    "5": "elec_tronics:blocks/elec_tronicst1cable_side",
+    "missing": "elec_tronics:blocks/cable_particles"
+  }
+}

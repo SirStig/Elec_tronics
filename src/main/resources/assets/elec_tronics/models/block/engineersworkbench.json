@@ -1,8 +1,8 @@
 {
   "parent": "elec_tronics:custom/workbenchbottoml",
   "textures": {
-    "all": "elec_tronics:blocks/craftingtableblock_1",
-    "particle": "elec_tronics:blocks/craftingtableblock_1",
+    "all": "elec_tronics:blocks/workbenchfinal",
+    "particle": "elec_tronics:blocks/workbenchfinal",
     "11": "elec_tronics:blocks/drawer_handle",
     "0": "elec_tronics:blocks/color",
     "4": "elec_tronics:blocks/screen_shot_2022-02-25_at_3.13.31_am",

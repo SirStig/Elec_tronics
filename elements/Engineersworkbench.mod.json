@@ -2,7 +2,7 @@
   "_fv": 24,
   "_type": "block",
   "definition": {
-    "texture": "craftingtableblock_1",
+    "texture": "workbenchfinal",
     "textureTop": "craftingtableblock_2",
     "textureLeft": "craftingtableblock_1",
     "textureFront": "craftingtableblock_1",
@@ -13,7 +13,7 @@
     "rotationMode": 1,
     "emissiveRendering": false,
     "displayFluidOverlay": false,
-    "itemTexture": "",
+    "itemTexture": "workbenchfinal",
     "particleTexture": "",
     "tintType": "No tint",
     "isItemTinted": false,

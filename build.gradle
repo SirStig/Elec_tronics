@@ -7,6 +7,19 @@ buildscript {
         classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '5.1.+', changing: true
     }
 }
+
+repositories {
+             maven {
+    // location of the maven that hosts JEI files
+    name = "Progwml6 maven"
+    url = "https://dvs1.progwml6.com/files/maven/"
+  }
+  maven {
+    // location of a maven mirror for JEI files, as a fallback
+    name = "ModMaven"
+    url = "https://modmaven.dev"
+  }
+}
 apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'eclipse'
 
@@ -52,6 +65,8 @@ minecraft {
 
 dependencies {
     minecraft 'net.minecraftforge:forge:1.17.1-37.1.1'
+  compileOnly fg.deobf("mezz.jei:jei-1.17.1:8.3.1.62:api")
+  runtimeOnly fg.deobf("mezz.jei:jei-1.17.1:8.3.1.62")
 }
 
 apply from: 'mcreator.gradle'
