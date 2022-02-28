@@ -1,0 +1,11 @@
+{
+  "parent": "elec_tronics:custom/cablejunctionup&down",
+  "textures": {
+    "all": "elec_tronics:blocks/c4",
+    "particle": "elec_tronics:blocks/c4",
+    "1": "elec_tronics:blocks/elec_tronicst1cable_end",
+    "3": "elec_tronics:blocks/cable_particles",
+    "4": "elec_tronics:blocks/elec_tronicst1cable_side",
+    "5": "elec_tronics:blocks/cable_junction-end"
+  }
+}

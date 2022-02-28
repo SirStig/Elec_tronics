@@ -1,0 +1,10 @@
+{
+  "parent": "elec_tronics:custom/basecable",
+  "textures": {
+    "all": "elec_tronics:blocks/basecablegu",
+    "particle": "elec_tronics:blocks/basecablegu",
+    "0": "elec_tronics:blocks/elec_tronicst1cable_end",
+    "1": "elec_tronics:blocks/basecable",
+    "2": "elec_tronics:blocks/elec_tronicst1cable_side"
+  }
+}

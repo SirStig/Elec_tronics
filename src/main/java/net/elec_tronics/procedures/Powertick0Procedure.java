@@ -13,7 +13,15 @@ public class Powertick0Procedure {
 					return blockEntity.getTileData().getDouble(tag);
 				return -1;
 			}
-		}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "energyPercentage") == 0) {
+		}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "energyPercentage") <= 0
+				|| (new java.text.DecimalFormat("##.##").format(new Object() {
+					public double getValue(LevelAccessor world, BlockPos pos, String tag) {
+						BlockEntity blockEntity = world.getBlockEntity(pos);
+						if (blockEntity != null)
+							return blockEntity.getTileData().getDouble(tag);
+						return -1;
+					}
+				}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "energyPercentage"))).contains("NaN")) {
 			return true;
 		}
 		return false;

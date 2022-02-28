@@ -1,0 +1,13 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "1": "elec_tronicst1cable_end",
+        "3": "cable_particles",
+        "4": "elec_tronicst1cable_side",
+        "7": "cable_end_t"
+      },
+      "name": "default"
+    }
+  }
+}

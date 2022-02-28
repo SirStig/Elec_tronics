@@ -2,7 +2,7 @@
   "_fv": 24,
   "_type": "block",
   "definition": {
-    "texture": "cable_angle_end",
+    "texture": "c9",
     "textureTop": "cable_end",
     "textureLeft": "cable_side",
     "textureFront": "cable_front_output",
@@ -13,7 +13,7 @@
     "rotationMode": 2,
     "emissiveRendering": false,
     "displayFluidOverlay": false,
-    "itemTexture": "",
+    "itemTexture": "c9",
     "particleTexture": "",
     "tintType": "No tint",
     "isItemTinted": false,
@@ -121,6 +121,15 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
+    "onNeighbourBlockChanges": {
+      "name": "T1WireBlockIsPlacedBy"
+    },
+    "onTickUpdate": {
+      "name": "T1WireUpdateTick"
+    },
+    "onBlockPlayedBy": {
+      "name": "T1WireBlockIsPlacedBy"
+    },
     "spawnWorldTypes": [],
     "restrictionBiomes": [],
     "blocksToReplace": [

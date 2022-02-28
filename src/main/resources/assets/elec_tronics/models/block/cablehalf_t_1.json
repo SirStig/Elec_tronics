@@ -1,0 +1,11 @@
+{
+  "parent": "elec_tronics:custom/cablehalft1",
+  "textures": {
+    "all": "elec_tronics:blocks/halfcablet1",
+    "particle": "elec_tronics:blocks/halfcablet1",
+    "0": "elec_tronics:blocks/basecable",
+    "1": "elec_tronics:blocks/elec_tronicst1cable_end",
+    "2": "elec_tronics:blocks/elec_tronicst1cable_side",
+    "3": "elec_tronics:blocks/cable_particles"
+  }
+}

@@ -2,7 +2,7 @@
   "_fv": 24,
   "_type": "block",
   "definition": {
-    "texture": "elec_tronicst1cable_side",
+    "texture": "wiret1",
     "textureTop": "cable_end",
     "textureLeft": "cable_side",
     "textureFront": "cable_front_output",
@@ -10,7 +10,7 @@
     "textureBack": "cable_back_input",
     "renderType": 2,
     "customModelName": "wiret1:default",
-    "rotationMode": 2,
+    "rotationMode": 1,
     "emissiveRendering": false,
     "displayFluidOverlay": true,
     "itemTexture": "",
@@ -23,7 +23,7 @@
     "disableOffset": false,
     "boundingBoxes": [
       {
-        "mx": 5.0,
+        "mx": 6.0,
         "my": 5.0,
         "mz": 0.0,
         "Mx": 10.0,
@@ -121,10 +121,13 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
+    "onNeighbourBlockChanges": {
+      "name": "T1WireBlockIsPlacedBy"
+    },
     "onTickUpdate": {
       "name": "T1WireUpdateTick"
     },
-    "onRandomUpdateEvent": {
+    "onBlockPlayedBy": {
       "name": "T1WireBlockIsPlacedBy"
     },
     "spawnWorldTypes": [],
