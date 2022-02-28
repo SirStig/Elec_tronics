@@ -94,6 +94,7 @@ public class ElecTronicsModItems {
 	public static final Item BASEWIRECON_4UPANDDOWNSTRAIGHT = register(ElecTronicsModBlocks.BASEWIRECON_4UPANDDOWNSTRAIGHT, null);
 	public static final Item BASEWIRECON_5DOWN = register(ElecTronicsModBlocks.BASEWIRECON_5DOWN, null);
 	public static final Item BASEWIRECON_5MAIN = register(ElecTronicsModBlocks.BASEWIRECON_5MAIN, null);
+	public static final Item SOLAR_PANEL_T_1 = register(ElecTronicsModBlocks.SOLAR_PANEL_T_1, ElecTronicsModTabs.TAB_ELEC_TRONICS_MENU);
 
 	private static Item register(Item item) {
 		REGISTRY.add(item);
