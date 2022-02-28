@@ -4,10 +4,6 @@ package net.elec_tronics.block;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
-import net.minecraft.world.phys.shapes.VoxelShape;
-import net.minecraft.world.phys.shapes.Shapes;
-import net.minecraft.world.phys.shapes.CollisionContext;
-import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.level.storage.loot.LootContext;
 import net.minecraft.world.level.material.Material;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
@@ -18,41 +14,43 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.Rotation;
 import net.minecraft.world.level.block.Mirror;
+import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.minecraft.world.level.block.EntityBlock;
-import net.minecraft.world.level.block.DirectionalBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.item.context.BlockPlaceContext;
+import net.minecraft.world.item.TieredItem;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.inventory.AbstractContainerMenu;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.MenuProvider;
+import net.minecraft.world.Containers;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 
-import net.elec_tronics.procedures.T1WireUpdateTickProcedure;
-import net.elec_tronics.procedures.T1WireBlockIsPlacedByProcedure;
+import net.elec_tronics.procedures.SolarPanelT1UpdateTickProcedure;
 import net.elec_tronics.init.ElecTronicsModBlocks;
-import net.elec_tronics.block.entity.Basewirecon5mainBlockEntity;
+import net.elec_tronics.block.entity.SolarPanelT1BlockEntity;
 
 import java.util.Random;
 import java.util.List;
 import java.util.Collections;
 
-public class Basewirecon5mainBlock extends Block
+public class SolarPanelT1Block extends Block
 		implements
 
 			EntityBlock {
-	public static final DirectionProperty FACING = DirectionalBlock.FACING;
+	public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
 
-	public Basewirecon5mainBlock() {
-		super(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.BONE_BLOCK).strength(1f, 10f).noOcclusion()
+	public SolarPanelT1Block() {
+		super(BlockBehaviour.Properties.of(Material.GLASS).sound(SoundType.GLASS).strength(4f, 10f).requiresCorrectToolForDrops().noOcclusion()
 				.isRedstoneConductor((bs, br, bp) -> false));
 		this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH));
-		setRegistryName("basewirecon_5main");
+		setRegistryName("solar_panel_t_1");
 	}
 
 	@Override
@@ -63,32 +61,6 @@ public class Basewirecon5mainBlock extends Block
 	@Override
 	public int getLightBlock(BlockState state, BlockGetter worldIn, BlockPos pos) {
 		return 0;
-	}
-
-	@Override
-	public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
-		Vec3 offset = state.getOffset(world, pos);
-		switch ((Direction) state.getValue(FACING)) {
-			case SOUTH :
-			default :
-				return Shapes.or(box(6, 6, 10, 10, 10, 16), box(6, 6, 6, 10, 10, 10), box(6, 10, 6, 10, 16, 10), box(6, 6, 0, 10, 10, 6),
-						box(6, 0, 6, 10, 6, 10), box(10, 6, 6, 16, 10, 10)).move(offset.x, offset.y, offset.z);
-			case NORTH :
-				return Shapes.or(box(6, 6, 0, 10, 10, 6), box(6, 6, 6, 10, 10, 10), box(6, 10, 6, 10, 16, 10), box(6, 6, 10, 10, 10, 16),
-						box(6, 0, 6, 10, 6, 10), box(0, 6, 6, 6, 10, 10)).move(offset.x, offset.y, offset.z);
-			case EAST :
-				return Shapes.or(box(10, 6, 6, 16, 10, 10), box(6, 6, 6, 10, 10, 10), box(6, 10, 6, 10, 16, 10), box(0, 6, 6, 6, 10, 10),
-						box(6, 0, 6, 10, 6, 10), box(6, 6, 0, 10, 10, 6)).move(offset.x, offset.y, offset.z);
-			case WEST :
-				return Shapes.or(box(0, 6, 6, 6, 10, 10), box(6, 6, 6, 10, 10, 10), box(6, 10, 6, 10, 16, 10), box(10, 6, 6, 16, 10, 10),
-						box(6, 0, 6, 10, 6, 10), box(6, 6, 10, 10, 10, 16)).move(offset.x, offset.y, offset.z);
-			case UP :
-				return Shapes.or(box(6, 10, 6, 10, 16, 10), box(6, 6, 6, 10, 10, 10), box(6, 6, 10, 10, 10, 16), box(6, 0, 6, 10, 6, 10),
-						box(6, 6, 0, 10, 10, 6), box(0, 6, 6, 6, 10, 10)).move(offset.x, offset.y, offset.z);
-			case DOWN :
-				return Shapes.or(box(6, 0, 6, 10, 6, 10), box(6, 6, 6, 10, 10, 10), box(6, 6, 0, 10, 10, 6), box(6, 10, 6, 10, 16, 10),
-						box(6, 6, 10, 10, 10, 16), box(0, 6, 6, 6, 10, 10)).move(offset.x, offset.y, offset.z);
-		}
 	}
 
 	@Override
@@ -107,7 +79,14 @@ public class Basewirecon5mainBlock extends Block
 	@Override
 	public BlockState getStateForPlacement(BlockPlaceContext context) {
 		;
-		return this.defaultBlockState().setValue(FACING, context.getNearestLookingDirection().getOpposite());
+		return this.defaultBlockState().setValue(FACING, context.getHorizontalDirection().getOpposite());
+	}
+
+	@Override
+	public boolean canHarvestBlock(BlockState state, BlockGetter world, BlockPos pos, Player player) {
+		if (player.getInventory().getSelected().getItem()instanceof TieredItem tieredItem)
+			return tieredItem.getTier().getLevel() >= 2;
+		return false;
 	}
 
 	@Override
@@ -115,19 +94,13 @@ public class Basewirecon5mainBlock extends Block
 		List<ItemStack> dropsOriginal = super.getDrops(state, builder);
 		if (!dropsOriginal.isEmpty())
 			return dropsOriginal;
-		return Collections.singletonList(new ItemStack(ElecTronicsModBlocks.T_1_WIRE));
+		return Collections.singletonList(new ItemStack(this, 1));
 	}
 
 	@Override
 	public void onPlace(BlockState blockstate, Level world, BlockPos pos, BlockState oldState, boolean moving) {
 		super.onPlace(blockstate, world, pos, oldState, moving);
-		world.getBlockTicks().scheduleTick(pos, this, 5);
-	}
-
-	@Override
-	public void neighborChanged(BlockState blockstate, Level world, BlockPos pos, Block neighborBlock, BlockPos fromPos, boolean moving) {
-		super.neighborChanged(blockstate, world, pos, neighborBlock, fromPos, moving);
-		T1WireBlockIsPlacedByProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
+		world.getBlockTicks().scheduleTick(pos, this, 200);
 	}
 
 	@Override
@@ -137,14 +110,8 @@ public class Basewirecon5mainBlock extends Block
 		int y = pos.getY();
 		int z = pos.getZ();
 
-		T1WireUpdateTickProcedure.execute(world, x, y, z);
-		world.getBlockTicks().scheduleTick(pos, this, 5);
-	}
-
-	@Override
-	public void setPlacedBy(Level world, BlockPos pos, BlockState blockstate, LivingEntity entity, ItemStack itemstack) {
-		super.setPlacedBy(world, pos, blockstate, entity, itemstack);
-		T1WireBlockIsPlacedByProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
+		SolarPanelT1UpdateTickProcedure.execute(world, x, y, z);
+		world.getBlockTicks().scheduleTick(pos, this, 200);
 	}
 
 	@Override
@@ -155,7 +122,7 @@ public class Basewirecon5mainBlock extends Block
 
 	@Override
 	public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
-		return new Basewirecon5mainBlockEntity(pos, state);
+		return new SolarPanelT1BlockEntity(pos, state);
 	}
 
 	@Override
@@ -165,8 +132,34 @@ public class Basewirecon5mainBlock extends Block
 		return blockEntity == null ? false : blockEntity.triggerEvent(eventID, eventParam);
 	}
 
+	@Override
+	public void onRemove(BlockState state, Level world, BlockPos pos, BlockState newState, boolean isMoving) {
+		if (state.getBlock() != newState.getBlock()) {
+			BlockEntity blockEntity = world.getBlockEntity(pos);
+			if (blockEntity instanceof SolarPanelT1BlockEntity be) {
+				Containers.dropContents(world, pos, be);
+				world.updateNeighbourForOutputSignal(pos, this);
+			}
+			super.onRemove(state, world, pos, newState, isMoving);
+		}
+	}
+
+	@Override
+	public boolean hasAnalogOutputSignal(BlockState state) {
+		return true;
+	}
+
+	@Override
+	public int getAnalogOutputSignal(BlockState blockState, Level world, BlockPos pos) {
+		BlockEntity tileentity = world.getBlockEntity(pos);
+		if (tileentity instanceof SolarPanelT1BlockEntity be)
+			return AbstractContainerMenu.getRedstoneSignalFromContainer(be);
+		else
+			return 0;
+	}
+
 	@OnlyIn(Dist.CLIENT)
 	public static void registerRenderLayer() {
-		ItemBlockRenderTypes.setRenderLayer(ElecTronicsModBlocks.BASEWIRECON_5MAIN, renderType -> renderType == RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(ElecTronicsModBlocks.SOLAR_PANEL_T_1, renderType -> renderType == RenderType.cutout());
 	}
 }

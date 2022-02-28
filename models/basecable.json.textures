@@ -3,8 +3,8 @@
     "default": {
       "map": {
         "0": "elec_tronicst1cable_end",
-        "1": "basecable",
-        "2": "elec_tronicst1cable_side"
+        "1": "elec_tronicst1cable_side",
+        "2": "cable_junction-end"
       },
       "name": "default"
     }

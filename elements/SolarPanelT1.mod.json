@@ -2,18 +2,18 @@
   "_fv": 24,
   "_type": "block",
   "definition": {
-    "texture": "c4",
-    "textureTop": "cable_end",
-    "textureLeft": "cable_side",
-    "textureFront": "cable_front_output",
-    "textureRight": "cable_side",
-    "textureBack": "cable_back_input",
+    "texture": "solarpaneltexture",
+    "textureTop": "",
+    "textureLeft": "",
+    "textureFront": "",
+    "textureRight": "",
+    "textureBack": "",
     "renderType": 2,
-    "customModelName": "cablejunctionup&down:default",
-    "rotationMode": 2,
+    "customModelName": "solarpanelr:default",
+    "rotationMode": 1,
     "emissiveRendering": false,
     "displayFluidOverlay": false,
-    "itemTexture": "c4",
+    "itemTexture": "",
     "particleTexture": "",
     "tintType": "No tint",
     "isItemTinted": false,
@@ -23,81 +23,27 @@
     "disableOffset": false,
     "boundingBoxes": [
       {
-        "mx": 6.0,
-        "my": 10.0,
-        "mz": 6.0,
-        "Mx": 10.0,
-        "My": 16.0,
-        "Mz": 10.0,
-        "subtract": false
-      },
-      {
-        "mx": 6.0,
-        "my": 0.0,
-        "mz": 6.0,
-        "Mx": 10.0,
-        "My": 6.0,
-        "Mz": 10.0,
-        "subtract": false
-      },
-      {
-        "mx": 6.0,
-        "my": 6.0,
-        "mz": 10.0,
-        "Mx": 10.0,
-        "My": 10.0,
-        "Mz": 16.0,
-        "subtract": false
-      },
-      {
-        "mx": 6.0,
-        "my": 6.0,
-        "mz": 0.0,
-        "Mx": 10.0,
-        "My": 10.0,
-        "Mz": 6.0,
-        "subtract": false
-      },
-      {
-        "mx": 10.0,
-        "my": 6.0,
-        "mz": 6.0,
-        "Mx": 16.0,
-        "My": 10.0,
-        "Mz": 10.0,
-        "subtract": false
-      },
-      {
         "mx": 0.0,
-        "my": 6.0,
-        "mz": 6.0,
-        "Mx": 6.0,
-        "My": 10.0,
-        "Mz": 10.0,
-        "subtract": false
-      },
-      {
-        "mx": 6.0,
-        "my": 6.0,
-        "mz": 6.0,
-        "Mx": 10.0,
-        "My": 10.0,
-        "Mz": 10.0,
+        "my": 0.0,
+        "mz": 0.0,
+        "Mx": 16.0,
+        "My": 16.0,
+        "Mz": 16.0,
         "subtract": false
       }
     ],
-    "name": "Cable Junction T1",
+    "name": "Solar Panel T1",
     "specialInfo": [],
-    "hardness": 1.0,
+    "hardness": 4.0,
     "resistance": 10.0,
     "hasGravity": false,
     "isWaterloggable": false,
     "creativeTab": {
-      "value": "No creative tab entry"
+      "value": "CUSTOM:LovieeesTechyMod"
     },
-    "destroyTool": "Not specified",
+    "destroyTool": "pickaxe",
     "customDrop": {
-      "value": "CUSTOM:T1Wire"
+      "value": ""
     },
     "dropAmount": 1,
     "useLootTableForDrops": false,
@@ -106,9 +52,9 @@
     "canRedstoneConnect": false,
     "lightOpacity": 0,
     "material": {
-      "value": "ROCK"
+      "value": "GLASS"
     },
-    "tickRate": 5,
+    "tickRate": 200,
     "tickRandomly": false,
     "isReplaceable": false,
     "canProvidePower": false,
@@ -131,7 +77,7 @@
     "isNotColidable": false,
     "isCustomSoundType": false,
     "soundOnStep": {
-      "value": "BONE"
+      "value": "GLASS"
     },
     "breakSound": {
       "value": ""
@@ -150,7 +96,7 @@
     },
     "luminance": 0,
     "unbreakable": false,
-    "breakHarvestLevel": 0,
+    "breakHarvestLevel": 2,
     "spawnParticles": false,
     "particleToSpawn": {
       "value": "EXPLOSION_NORMAL"
@@ -161,28 +107,22 @@
     "hasInventory": true,
     "guiBoundTo": "<NONE>",
     "openGUIOnRightClick": false,
-    "inventorySize": 0,
+    "inventorySize": 9,
     "inventoryStackSize": 64,
-    "inventoryDropWhenDestroyed": false,
-    "inventoryComparatorPower": false,
+    "inventoryDropWhenDestroyed": true,
+    "inventoryComparatorPower": true,
     "inventoryOutSlotIDs": [],
     "inventoryInSlotIDs": [],
-    "hasEnergyStorage": true,
+    "hasEnergyStorage": false,
     "energyInitial": 0,
-    "energyCapacity": 10,
-    "energyMaxReceive": 10,
-    "energyMaxExtract": 10,
+    "energyCapacity": 400000,
+    "energyMaxReceive": 50,
+    "energyMaxExtract": 50,
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
-    "onNeighbourBlockChanges": {
-      "name": "T1WireBlockIsPlacedBy"
-    },
     "onTickUpdate": {
-      "name": "T1WireUpdateTick"
-    },
-    "onBlockPlayedBy": {
-      "name": "T1WireBlockIsPlacedBy"
+      "name": "SolarPanelT1UpdateTick"
     },
     "spawnWorldTypes": [],
     "restrictionBiomes": [],

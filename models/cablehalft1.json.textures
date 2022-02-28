@@ -2,7 +2,7 @@
   "mappings": {
     "default": {
       "map": {
-        "0": "basecable",
+        "0": "cable_junction-end",
         "1": "elec_tronicst1cable_end",
         "2": "elec_tronicst1cable_side",
         "3": "cable_particles"

@@ -77,13 +77,13 @@ public class T1WireBlock extends Block
 		switch ((Direction) state.getValue(FACING)) {
 			case SOUTH :
 			default :
-				return box(6, 5, 0, 10, 9, 16).move(offset.x, offset.y, offset.z);
+				return box(6, 6, 0, 10, 10, 16).move(offset.x, offset.y, offset.z);
 			case NORTH :
-				return box(6, 5, 0, 10, 9, 16).move(offset.x, offset.y, offset.z);
+				return box(6, 6, 0, 10, 10, 16).move(offset.x, offset.y, offset.z);
 			case EAST :
-				return box(0, 5, 6, 16, 9, 10).move(offset.x, offset.y, offset.z);
+				return box(0, 6, 6, 16, 10, 10).move(offset.x, offset.y, offset.z);
 			case WEST :
-				return box(0, 5, 6, 16, 9, 10).move(offset.x, offset.y, offset.z);
+				return box(0, 6, 6, 16, 10, 10).move(offset.x, offset.y, offset.z);
 		}
 	}
 

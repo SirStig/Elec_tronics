@@ -2,11 +2,10 @@
   "mappings": {
     "default": {
       "map": {
-        "0": "cable_angle_end",
         "1": "cable_particles",
+        "3": "cable_junction-end",
         "4": "elec_tronicst1cable_end",
-        "5": "elec_tronicst1cable_side",
-        "missing": "cable_particles"
+        "5": "elec_tronicst1cable_side"
       },
       "name": "default"
     }

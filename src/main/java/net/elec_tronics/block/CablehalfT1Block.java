@@ -70,17 +70,17 @@ public class CablehalfT1Block extends Block
 		switch ((Direction) state.getValue(FACING)) {
 			case SOUTH :
 			default :
-				return box(6, 5, 0, 11, 9, 16).move(offset.x, offset.y, offset.z);
+				return box(6, 6, 6, 10, 10, 16).move(offset.x, offset.y, offset.z);
 			case NORTH :
-				return box(5, 5, 0, 10, 9, 16).move(offset.x, offset.y, offset.z);
+				return box(6, 6, 0, 10, 10, 10).move(offset.x, offset.y, offset.z);
 			case EAST :
-				return box(0, 5, 5, 16, 9, 10).move(offset.x, offset.y, offset.z);
+				return box(6, 6, 6, 16, 10, 10).move(offset.x, offset.y, offset.z);
 			case WEST :
-				return box(0, 5, 6, 16, 9, 11).move(offset.x, offset.y, offset.z);
+				return box(0, 6, 6, 10, 10, 10).move(offset.x, offset.y, offset.z);
 			case UP :
-				return box(5, 0, 5, 10, 16, 9).move(offset.x, offset.y, offset.z);
+				return box(6, 6, 6, 10, 16, 10).move(offset.x, offset.y, offset.z);
 			case DOWN :
-				return box(5, 0, 7, 10, 16, 11).move(offset.x, offset.y, offset.z);
+				return box(6, 0, 6, 10, 10, 10).move(offset.x, offset.y, offset.z);
 		}
 	}
 
