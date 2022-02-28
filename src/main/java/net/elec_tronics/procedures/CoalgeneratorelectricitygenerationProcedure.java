@@ -292,6 +292,16 @@ public class CoalgeneratorelectricitygenerationProcedure {
 					}
 				}
 			}
+		} else {
+			if (!world.isClientSide()) {
+				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+				BlockEntity _blockEntity = world.getBlockEntity(_bp);
+				BlockState _bs = world.getBlockState(_bp);
+				if (_blockEntity != null)
+					_blockEntity.getTileData().putDouble("energyPercentage", 0);
+				if (world instanceof Level _level)
+					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+			}
 		}
 		if (new Object() {
 			public double getValue(LevelAccessor world, BlockPos pos, String tag) {
