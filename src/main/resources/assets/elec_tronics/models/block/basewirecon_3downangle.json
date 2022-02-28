@@ -3,11 +3,9 @@
   "textures": {
     "all": "elec_tronics:blocks/basetemp",
     "particle": "elec_tronics:blocks/basetemp",
-    "0": "elec_tronics:blocks/basecable",
-    "1": "elec_tronics:blocks/cable_angle_end",
-    "2": "elec_tronics:blocks/cable_end_t",
-    "3": "elec_tronics:blocks/elec_tronicst1cable_end",
-    "5": "elec_tronics:blocks/elec_tronicst1cable_side",
-    "6": "elec_tronics:blocks/cable_particles"
+    "1": "elec_tronics:blocks/cable_particles",
+    "3": "elec_tronics:blocks/cable_junction-end",
+    "4": "elec_tronics:blocks/elec_tronicst1cable_end",
+    "5": "elec_tronics:blocks/elec_tronicst1cable_side"
   }
 }
