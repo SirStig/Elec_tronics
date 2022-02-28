@@ -18,8 +18,8 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.Rotation;
 import net.minecraft.world.level.block.Mirror;
+import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.minecraft.world.level.block.EntityBlock;
-import net.minecraft.world.level.block.DirectionalBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.BlockGetter;
@@ -47,7 +47,7 @@ public class T1WireBlock extends Block
 		implements
 
 			EntityBlock {
-	public static final DirectionProperty FACING = DirectionalBlock.FACING;
+	public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
 
 	public T1WireBlock() {
 		super(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.BONE_BLOCK).strength(1f, 10f).noOcclusion()
@@ -77,17 +77,13 @@ public class T1WireBlock extends Block
 		switch ((Direction) state.getValue(FACING)) {
 			case SOUTH :
 			default :
-				return box(6, 5, 0, 11, 9, 16).move(offset.x, offset.y, offset.z);
+				return box(6, 5, 0, 10, 9, 16).move(offset.x, offset.y, offset.z);
 			case NORTH :
-				return box(5, 5, 0, 10, 9, 16).move(offset.x, offset.y, offset.z);
+				return box(6, 5, 0, 10, 9, 16).move(offset.x, offset.y, offset.z);
 			case EAST :
-				return box(0, 5, 5, 16, 9, 10).move(offset.x, offset.y, offset.z);
+				return box(0, 5, 6, 16, 9, 10).move(offset.x, offset.y, offset.z);
 			case WEST :
-				return box(0, 5, 6, 16, 9, 11).move(offset.x, offset.y, offset.z);
-			case UP :
-				return box(5, 0, 5, 10, 16, 9).move(offset.x, offset.y, offset.z);
-			case DOWN :
-				return box(5, 0, 7, 10, 16, 11).move(offset.x, offset.y, offset.z);
+				return box(0, 5, 6, 16, 9, 10).move(offset.x, offset.y, offset.z);
 		}
 	}
 
@@ -107,7 +103,7 @@ public class T1WireBlock extends Block
 	@Override
 	public BlockState getStateForPlacement(BlockPlaceContext context) {
 		;
-		return this.defaultBlockState().setValue(FACING, context.getNearestLookingDirection().getOpposite());
+		return this.defaultBlockState().setValue(FACING, context.getHorizontalDirection().getOpposite());
 	}
 
 	@Override

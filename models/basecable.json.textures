@@ -1,0 +1,12 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "elec_tronicst1cable_end",
+        "1": "basecable",
+        "2": "elec_tronicst1cable_side"
+      },
+      "name": "default"
+    }
+  }
+}

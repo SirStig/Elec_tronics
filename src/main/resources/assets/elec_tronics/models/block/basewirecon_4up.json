@@ -1,0 +1,12 @@
+{
+  "parent": "elec_tronics:custom/base_wire_con_4_up",
+  "textures": {
+    "all": "elec_tronics:blocks/basetemp",
+    "particle": "elec_tronics:blocks/basetemp",
+    "0": "elec_tronics:blocks/cable_particles",
+    "2": "elec_tronics:blocks/cable_particles",
+    "4": "elec_tronics:blocks/cable_junction-end",
+    "5": "elec_tronics:blocks/elec_tronicst1cable_end",
+    "6": "elec_tronics:blocks/elec_tronicst1cable_side"
+  }
+}

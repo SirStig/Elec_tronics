@@ -1,0 +1,27 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "elec_tronics:block/basewirecon_3upangle"
+    },
+    "facing=east": {
+      "model": "elec_tronics:block/basewirecon_3upangle",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "elec_tronics:block/basewirecon_3upangle",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "elec_tronics:block/basewirecon_3upangle",
+      "y": 270
+    },
+    "facing=up": {
+      "model": "elec_tronics:block/basewirecon_3upangle",
+      "x": 270
+    },
+    "facing=down": {
+      "model": "elec_tronics:block/basewirecon_3upangle",
+      "x": 90
+    }
+  }
+}

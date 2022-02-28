@@ -77,6 +77,23 @@ public class ElecTronicsModItems {
 	public static final Item CABLE_JUNCTION_UP_T_1 = register(ElecTronicsModBlocks.CABLE_JUNCTION_UP_T_1, null);
 	public static final Item CABLE_JUNCTION_DOWN_T_1 = register(ElecTronicsModBlocks.CABLE_JUNCTION_DOWN_T_1, null);
 	public static final Item CABLE_JUNCTION_UPAND_DOWN_T_1 = register(ElecTronicsModBlocks.CABLE_JUNCTION_UPAND_DOWN_T_1, null);
+	public static final Item BASECABLE_T_1 = register(ElecTronicsModBlocks.BASECABLE_T_1, null);
+	public static final Item CABLEHALF_T_1 = register(ElecTronicsModBlocks.CABLEHALF_T_1, null);
+	public static final Item BASEWIRECON_2ANGLE = register(ElecTronicsModBlocks.BASEWIRECON_2ANGLE, null);
+	public static final Item BASEWIRECON_2ANGLEDOWN = register(ElecTronicsModBlocks.BASEWIRECON_2ANGLEDOWN, null);
+	public static final Item BASEWIRECON_2ANGLEUP = register(ElecTronicsModBlocks.BASEWIRECON_2ANGLEUP, null);
+	public static final Item BASEWIRECON_3 = register(ElecTronicsModBlocks.BASEWIRECON_3, null);
+	public static final Item BASEWIRECON_3DOWN = register(ElecTronicsModBlocks.BASEWIRECON_3DOWN, null);
+	public static final Item BASEWIRECON_3DOWNANDUP = register(ElecTronicsModBlocks.BASEWIRECON_3DOWNANDUP, null);
+	public static final Item BASEWIRECON_3DOWNANGLE = register(ElecTronicsModBlocks.BASEWIRECON_3DOWNANGLE, null);
+	public static final Item BASEWIRECON_3UP = register(ElecTronicsModBlocks.BASEWIRECON_3UP, null);
+	public static final Item BASEWIRECON_3UPANGLE = register(ElecTronicsModBlocks.BASEWIRECON_3UPANGLE, null);
+	public static final Item BASEWIRECON_4DOWN = register(ElecTronicsModBlocks.BASEWIRECON_4DOWN, null);
+	public static final Item BASEWIRECON_4UP = register(ElecTronicsModBlocks.BASEWIRECON_4UP, null);
+	public static final Item BASEWIRECON_4UPANDDOWN = register(ElecTronicsModBlocks.BASEWIRECON_4UPANDDOWN, null);
+	public static final Item BASEWIRECON_4UPANDDOWNSTRAIGHT = register(ElecTronicsModBlocks.BASEWIRECON_4UPANDDOWNSTRAIGHT, null);
+	public static final Item BASEWIRECON_5DOWN = register(ElecTronicsModBlocks.BASEWIRECON_5DOWN, null);
+	public static final Item BASEWIRECON_5MAIN = register(ElecTronicsModBlocks.BASEWIRECON_5MAIN, null);
 
 	private static Item register(Item item) {
 		REGISTRY.add(item);

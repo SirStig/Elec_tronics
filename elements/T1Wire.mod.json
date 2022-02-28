@@ -10,10 +10,10 @@
     "textureBack": "cable_back_input",
     "renderType": 2,
     "customModelName": "wiret1:default",
-    "rotationMode": 2,
+    "rotationMode": 1,
     "emissiveRendering": false,
     "displayFluidOverlay": true,
-    "itemTexture": "wiret1",
+    "itemTexture": "",
     "particleTexture": "",
     "tintType": "No tint",
     "isItemTinted": false,
@@ -23,7 +23,7 @@
     "disableOffset": false,
     "boundingBoxes": [
       {
-        "mx": 5.0,
+        "mx": 6.0,
         "my": 5.0,
         "mz": 0.0,
         "Mx": 10.0,
