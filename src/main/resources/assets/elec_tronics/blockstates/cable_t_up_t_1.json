@@ -1,0 +1,27 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "elec_tronics:block/cable_t_up_t_1"
+    },
+    "facing=east": {
+      "model": "elec_tronics:block/cable_t_up_t_1",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "elec_tronics:block/cable_t_up_t_1",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "elec_tronics:block/cable_t_up_t_1",
+      "y": 270
+    },
+    "facing=up": {
+      "model": "elec_tronics:block/cable_t_up_t_1",
+      "x": 270
+    },
+    "facing=down": {
+      "model": "elec_tronics:block/cable_t_up_t_1",
+      "x": 90
+    }
+  }
+}

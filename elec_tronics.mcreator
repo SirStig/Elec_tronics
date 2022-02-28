@@ -1288,7 +1288,24 @@
       "locked_code": false,
       "registry_name": "t_1_wire_block_is_placed_by",
       "metadata": {
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
       },
       "path": "~/Wires-Pipes"
     },
@@ -1727,6 +1744,89 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "wires"
+    },
+    {
+      "name": "WireChange",
+      "type": "procedure",
+      "sortid": 104,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wire_change",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Wires-Pipes"
+    },
+    {
+      "name": "CableTUpT1",
+      "type": "block",
+      "sortid": 105,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cable_t_up_t_1",
+      "path": "~/Wires-Pipes"
+    },
+    {
+      "name": "CableTDownT1",
+      "type": "block",
+      "sortid": 106,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cable_t_down_t_1",
+      "path": "~/Wires-Pipes"
+    },
+    {
+      "name": "CableTUpandDownT1",
+      "type": "block",
+      "sortid": 107,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cable_t_upand_down_t_1",
+      "path": "~/Wires-Pipes"
+    },
+    {
+      "name": "CableJunctionUpT1",
+      "type": "block",
+      "sortid": 108,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cable_junction_up_t_1",
+      "path": "~/Wires-Pipes"
+    },
+    {
+      "name": "CableJunctionDownT1",
+      "type": "block",
+      "sortid": 109,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cable_junction_down_t_1",
+      "path": "~/Wires-Pipes"
+    },
+    {
+      "name": "CableJunctionUpandDownT1",
+      "type": "block",
+      "sortid": 110,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cable_junction_upand_down_t_1",
+      "path": "~/Wires-Pipes"
     }
   ],
   "variable_elements": [],
@@ -1739,12 +1839,13 @@
       "block.elec_tronics.reinforcedblastbrick": "Reinforced Blast Brick",
       "item.elec_tronics.steelhoe": "Steel Hoe",
       "item.elec_tronics.hammer": "Hammer",
+      "block.elec_tronics.cable_t_upand_down_t_1": "Cable Junction T1",
       "item.elec_tronics.sharpenediron": "Sharpened Iron",
       "item.elec_tronics.steelsword": "Steel Sword",
-      "item.elec_tronics.ash": "Ash",
-      "block.elec_tronics.uraniumore": "Uranium Ore",
-      "item.elec_tronics.uranium_dust": "Uranium Dust",
       "block.elec_tronics.cable_tt_1": "Cable T T1",
+      "item.elec_tronics.uranium_dust": "Uranium Dust",
+      "block.elec_tronics.uraniumore": "Uranium Ore",
+      "item.elec_tronics.ash": "Ash",
       "block.elec_tronics.engineers_work_bench_top_side": "Engineers Workbench Top Side",
       "item.elec_tronics.irondust": "Iron Dust",
       "item.elec_tronics.tungsten_ore": "Tungsten Ore",
@@ -1754,19 +1855,24 @@
       "block.elec_tronics.t_1_wire": "Cable T1",
       "item.elec_tronics.fibger_glass_dust": "Fibger Glass Dust",
       "block.elec_tronics.engineers_work_bench_side": "Engineers Workbench Side",
+      "block.elec_tronics.cable_junction_up_t_1": "Cable Junction T1",
       "item.elec_tronics.tungsten_ingot": "Tungsten Ingot",
       "block.elec_tronics.tungsten": "Tungsten Ore Block",
       "block.elec_tronics.waterturbinemachine": "Water Turbine",
       "block.elec_tronics.coalgeneratormachine": "Coal Generator",
       "itemGroup.tabelec_tronics_menu": "Elec Tronics",
+      "block.elec_tronics.cable_t_down_t_1": "Cable Junction T1",
       "block.elec_tronics.engineersworkbench": "Engineers Workbench",
+      "block.elec_tronics.cable_junction_upand_down_t_1": "Cable Junction T1",
       "block.elec_tronics.crushermachine": "Crusher T1",
       "block.elec_tronics.blastfurnancemachine": "Blast Furnance",
       "item.elec_tronics.uranium_ingot": "Uranium Ingot",
       "block.elec_tronics.cable_angle_t_1": "Cable Angle T1",
       "item.elec_tronics.steelingot": "Steel Ingot",
+      "block.elec_tronics.cable_t_up_t_1": "Cable Junction T1",
       "item.elec_tronics.screwdriver": "Screwdriver",
-      "item.elec_tronics.steelshovel": "Steel Shovel"
+      "item.elec_tronics.steelshovel": "Steel Shovel",
+      "block.elec_tronics.cable_junction_down_t_1": "Cable Junction T1"
     }
   },
   "foldersRoot": {

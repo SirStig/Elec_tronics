@@ -71,6 +71,12 @@ public class ElecTronicsModItems {
 	public static final Item ENGINEERS_WORK_BENCH_SIDE = register(ElecTronicsModBlocks.ENGINEERS_WORK_BENCH_SIDE, null);
 	public static final Item ENGINEERS_WORK_BENCH_TOP = register(ElecTronicsModBlocks.ENGINEERS_WORK_BENCH_TOP, null);
 	public static final Item ENGINEERS_WORK_BENCH_TOP_SIDE = register(ElecTronicsModBlocks.ENGINEERS_WORK_BENCH_TOP_SIDE, null);
+	public static final Item CABLE_T_UP_T_1 = register(ElecTronicsModBlocks.CABLE_T_UP_T_1, null);
+	public static final Item CABLE_T_DOWN_T_1 = register(ElecTronicsModBlocks.CABLE_T_DOWN_T_1, null);
+	public static final Item CABLE_T_UPAND_DOWN_T_1 = register(ElecTronicsModBlocks.CABLE_T_UPAND_DOWN_T_1, null);
+	public static final Item CABLE_JUNCTION_UP_T_1 = register(ElecTronicsModBlocks.CABLE_JUNCTION_UP_T_1, null);
+	public static final Item CABLE_JUNCTION_DOWN_T_1 = register(ElecTronicsModBlocks.CABLE_JUNCTION_DOWN_T_1, null);
+	public static final Item CABLE_JUNCTION_UPAND_DOWN_T_1 = register(ElecTronicsModBlocks.CABLE_JUNCTION_UPAND_DOWN_T_1, null);
 
 	private static Item register(Item item) {
 		REGISTRY.add(item);

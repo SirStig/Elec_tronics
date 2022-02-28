@@ -23,8 +23,14 @@ import net.elec_tronics.block.EngineersWorkBenchTopBlock;
 import net.elec_tronics.block.EngineersWorkBenchSideBlock;
 import net.elec_tronics.block.CrushermachineBlock;
 import net.elec_tronics.block.CoalgeneratormachineBlock;
+import net.elec_tronics.block.CableTUpandDownT1Block;
+import net.elec_tronics.block.CableTUpT1Block;
 import net.elec_tronics.block.CableTT1Block;
+import net.elec_tronics.block.CableTDownT1Block;
+import net.elec_tronics.block.CableJunctionUpandDownT1Block;
+import net.elec_tronics.block.CableJunctionUpT1Block;
 import net.elec_tronics.block.CableJunctionT1Block;
+import net.elec_tronics.block.CableJunctionDownT1Block;
 import net.elec_tronics.block.CableAngleT1Block;
 import net.elec_tronics.block.BlastfurnancemachineBlock;
 
@@ -49,6 +55,12 @@ public class ElecTronicsModBlocks {
 	public static final Block ENGINEERS_WORK_BENCH_SIDE = register(new EngineersWorkBenchSideBlock());
 	public static final Block ENGINEERS_WORK_BENCH_TOP = register(new EngineersWorkBenchTopBlock());
 	public static final Block ENGINEERS_WORK_BENCH_TOP_SIDE = register(new EngineersWorkBenchTopSideBlock());
+	public static final Block CABLE_T_UP_T_1 = register(new CableTUpT1Block());
+	public static final Block CABLE_T_DOWN_T_1 = register(new CableTDownT1Block());
+	public static final Block CABLE_T_UPAND_DOWN_T_1 = register(new CableTUpandDownT1Block());
+	public static final Block CABLE_JUNCTION_UP_T_1 = register(new CableJunctionUpT1Block());
+	public static final Block CABLE_JUNCTION_DOWN_T_1 = register(new CableJunctionDownT1Block());
+	public static final Block CABLE_JUNCTION_UPAND_DOWN_T_1 = register(new CableJunctionUpandDownT1Block());
 
 	private static Block register(Block block) {
 		REGISTRY.add(block);
@@ -72,6 +84,12 @@ public class ElecTronicsModBlocks {
 			EngineersWorkBenchSideBlock.registerRenderLayer();
 			EngineersWorkBenchTopBlock.registerRenderLayer();
 			EngineersWorkBenchTopSideBlock.registerRenderLayer();
+			CableTUpT1Block.registerRenderLayer();
+			CableTDownT1Block.registerRenderLayer();
+			CableTUpandDownT1Block.registerRenderLayer();
+			CableJunctionUpT1Block.registerRenderLayer();
+			CableJunctionDownT1Block.registerRenderLayer();
+			CableJunctionUpandDownT1Block.registerRenderLayer();
 		}
 	}
 }

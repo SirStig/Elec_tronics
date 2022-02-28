@@ -24,15 +24,20 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.MenuProvider;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 
+import net.elec_tronics.procedures.T1WireUpdateTickProcedure;
+import net.elec_tronics.procedures.T1WireBlockIsPlacedByProcedure;
 import net.elec_tronics.init.ElecTronicsModBlocks;
 import net.elec_tronics.block.entity.CableTT1BlockEntity;
 
+import java.util.Random;
 import java.util.List;
 import java.util.Collections;
 
@@ -104,6 +109,35 @@ public class CableTT1Block extends Block
 		if (!dropsOriginal.isEmpty())
 			return dropsOriginal;
 		return Collections.singletonList(new ItemStack(ElecTronicsModBlocks.T_1_WIRE));
+	}
+
+	@Override
+	public void onPlace(BlockState blockstate, Level world, BlockPos pos, BlockState oldState, boolean moving) {
+		super.onPlace(blockstate, world, pos, oldState, moving);
+		world.getBlockTicks().scheduleTick(pos, this, 5);
+	}
+
+	@Override
+	public void neighborChanged(BlockState blockstate, Level world, BlockPos pos, Block neighborBlock, BlockPos fromPos, boolean moving) {
+		super.neighborChanged(blockstate, world, pos, neighborBlock, fromPos, moving);
+		T1WireBlockIsPlacedByProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
+	}
+
+	@Override
+	public void tick(BlockState blockstate, ServerLevel world, BlockPos pos, Random random) {
+		super.tick(blockstate, world, pos, random);
+		int x = pos.getX();
+		int y = pos.getY();
+		int z = pos.getZ();
+
+		T1WireUpdateTickProcedure.execute(world, x, y, z);
+		world.getBlockTicks().scheduleTick(pos, this, 5);
+	}
+
+	@Override
+	public void setPlacedBy(Level world, BlockPos pos, BlockState blockstate, LivingEntity entity, ItemStack itemstack) {
+		super.setPlacedBy(world, pos, blockstate, entity, itemstack);
+		T1WireBlockIsPlacedByProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
 	}
 
 	@Override

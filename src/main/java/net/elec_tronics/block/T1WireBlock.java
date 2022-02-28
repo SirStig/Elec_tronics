@@ -26,14 +26,13 @@ import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.BlockAndTintGetter;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
-import net.minecraft.client.Minecraft;
 
 import net.elec_tronics.procedures.T1WireUpdateTickProcedure;
 import net.elec_tronics.procedures.T1WireBlockIsPlacedByProcedure;
@@ -126,6 +125,12 @@ public class T1WireBlock extends Block
 	}
 
 	@Override
+	public void neighborChanged(BlockState blockstate, Level world, BlockPos pos, Block neighborBlock, BlockPos fromPos, boolean moving) {
+		super.neighborChanged(blockstate, world, pos, neighborBlock, fromPos, moving);
+		T1WireBlockIsPlacedByProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
+	}
+
+	@Override
 	public void tick(BlockState blockstate, ServerLevel world, BlockPos pos, Random random) {
 		super.tick(blockstate, world, pos, random);
 		int x = pos.getX();
@@ -136,16 +141,10 @@ public class T1WireBlock extends Block
 		world.getBlockTicks().scheduleTick(pos, this, 5);
 	}
 
-	@OnlyIn(Dist.CLIENT)
 	@Override
-	public void animateTick(BlockState blockstate, Level world, BlockPos pos, Random random) {
-		super.animateTick(blockstate, world, pos, random);
-		Player entity = Minecraft.getInstance().player;
-		int x = pos.getX();
-		int y = pos.getY();
-		int z = pos.getZ();
-
-		T1WireBlockIsPlacedByProcedure.execute();
+	public void setPlacedBy(Level world, BlockPos pos, BlockState blockstate, LivingEntity entity, ItemStack itemstack) {
+		super.setPlacedBy(world, pos, blockstate, entity, itemstack);
+		T1WireBlockIsPlacedByProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
 	}
 
 	@Override
