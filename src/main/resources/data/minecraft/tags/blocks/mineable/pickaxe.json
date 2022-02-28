@@ -6,6 +6,7 @@
     "elec_tronics:blastfurnancemachine",
     "elec_tronics:waterturbinemachine",
     "elec_tronics:coalgeneratormachine",
-    "elec_tronics:crushermachine"
+    "elec_tronics:crushermachine",
+    "elec_tronics:solar_panel_t_1"
   ]
 }
