@@ -1951,6 +1951,44 @@
       "locked_code": false,
       "registry_name": "basewirecon_3downangle",
       "path": "~/Wires-Pipes"
+    },
+    {
+      "name": "SolarPanelT1",
+      "type": "block",
+      "sortid": 128,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "solar_panel_t_1",
+      "path": "~/Solar Panels"
+    },
+    {
+      "name": "SolarPanelT1UpdateTick",
+      "type": "procedure",
+      "sortid": 129,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "solar_panel_t_1_update_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Coal Generator"
     }
   ],
   "variable_elements": [],
@@ -1980,6 +2018,7 @@
       "block.elec_tronics.engineersworkbench": "Engineers Workbench",
       "block.elec_tronics.basewirecon_2angle": "Cable Angle T1",
       "block.elec_tronics.blastfurnancemachine": "Blast Furnance",
+      "block.elec_tronics.solar_panel_t_1": "Solar Panel T1",
       "item.elec_tronics.uranium_ingot": "Uranium Ingot",
       "block.elec_tronics.cable_angle_t_1": "Cable Angle T1",
       "block.elec_tronics.cable_t_up_t_1": "Cable Junction T1",
@@ -2065,6 +2104,10 @@
       },
       {
         "name": "BlastFurnace",
+        "children": []
+      },
+      {
+        "name": "Solar Panels",
         "children": []
       }
     ]

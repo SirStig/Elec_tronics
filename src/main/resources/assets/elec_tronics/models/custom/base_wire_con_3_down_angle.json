@@ -29,7 +29,7 @@
             16,
             16
           ],
-          "texture": "#2"
+          "texture": "#1"
         },
         "east": {
           "uv": [
@@ -38,16 +38,16 @@
             16,
             16
           ],
-          "texture": "#6"
+          "texture": "#5"
         },
         "south": {
           "uv": [
-            4,
             0,
-            8,
-            4
+            0,
+            16,
+            16
           ],
-          "texture": "#0"
+          "texture": "#1"
         },
         "west": {
           "uv": [
@@ -56,7 +56,7 @@
             16,
             16
           ],
-          "texture": "#6"
+          "texture": "#5"
         },
         "up": {
           "uv": [
@@ -65,7 +65,7 @@
             16,
             16
           ],
-          "texture": "#5"
+          "texture": "#4"
         },
         "down": {
           "uv": [
@@ -74,7 +74,7 @@
             16,
             16
           ],
-          "texture": "#5"
+          "texture": "#4"
         }
       }
     },
@@ -106,16 +106,16 @@
             16,
             16
           ],
-          "texture": "#2"
+          "texture": "#1"
         },
         "east": {
           "uv": [
             0,
-            4,
-            10,
-            8
+            0,
+            16,
+            16
           ],
-          "texture": "#0"
+          "texture": "#1"
         },
         "south": {
           "uv": [
@@ -145,16 +145,16 @@
             16
           ],
           "rotation": 180,
-          "texture": "#1"
+          "texture": "#3"
         },
         "down": {
           "uv": [
             0,
-            4,
-            10,
-            8
+            0,
+            16,
+            16
           ],
-          "texture": "#0"
+          "texture": "#1"
         }
       }
     },
@@ -187,7 +187,7 @@
             16
           ],
           "rotation": 270,
-          "texture": "#5"
+          "texture": "#4"
         },
         "east": {
           "uv": [
@@ -197,7 +197,7 @@
             16
           ],
           "rotation": 90,
-          "texture": "#2"
+          "texture": "#1"
         },
         "south": {
           "uv": [
@@ -207,17 +207,17 @@
             16
           ],
           "rotation": 270,
-          "texture": "#5"
+          "texture": "#4"
         },
         "west": {
           "uv": [
-            4,
             0,
-            8,
-            4
+            0,
+            16,
+            16
           ],
           "rotation": 270,
-          "texture": "#0"
+          "texture": "#1"
         },
         "up": {
           "uv": [
@@ -227,7 +227,7 @@
             16
           ],
           "rotation": 270,
-          "texture": "#5"
+          "texture": "#4"
         },
         "down": {
           "uv": [
@@ -237,7 +237,7 @@
             16
           ],
           "rotation": 270,
-          "texture": "#5"
+          "texture": "#4"
         }
       }
     },
@@ -270,7 +270,7 @@
             16
           ],
           "rotation": 270,
-          "texture": "#6"
+          "texture": "#5"
         },
         "east": {
           "uv": [
@@ -280,7 +280,7 @@
             16
           ],
           "rotation": 270,
-          "texture": "#6"
+          "texture": "#5"
         },
         "south": {
           "uv": [
@@ -290,7 +290,7 @@
             16
           ],
           "rotation": 270,
-          "texture": "#6"
+          "texture": "#5"
         },
         "west": {
           "uv": [
@@ -300,16 +300,16 @@
             16
           ],
           "rotation": 270,
-          "texture": "#6"
+          "texture": "#5"
         },
         "up": {
           "uv": [
-            4,
             0,
-            8,
-            4
+            0,
+            16,
+            16
           ],
-          "texture": "#0"
+          "texture": "#1"
         },
         "down": {
           "uv": [
@@ -319,7 +319,7 @@
             16
           ],
           "rotation": 180,
-          "texture": "#2"
+          "texture": "#1"
         }
       }
     }

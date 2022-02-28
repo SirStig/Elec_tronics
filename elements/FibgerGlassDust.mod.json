@@ -3,7 +3,7 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "fiberglassmix",
+    "texture": "fiberglassdust",
     "customModelName": "Normal",
     "name": "Fibger Glass Dust",
     "rarity": "COMMON",
