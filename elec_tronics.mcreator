@@ -2214,6 +2214,35 @@
         ]
       },
       "path": "~/Solar Panels"
+    },
+    {
+      "name": "T1CableProcedure",
+      "type": "procedure",
+      "sortid": 141,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "t_1_cable_procedure",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Wires-Pipes"
     }
   ],
   "variable_elements": [],

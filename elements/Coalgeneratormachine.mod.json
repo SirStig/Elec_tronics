@@ -117,7 +117,7 @@
     "inventoryInSlotIDs": [
       0
     ],
-    "hasEnergyStorage": false,
+    "hasEnergyStorage": true,
     "energyInitial": 0,
     "energyCapacity": 0,
     "energyMaxReceive": 200,

@@ -72,7 +72,7 @@
     "material": {
       "value": "ROCK"
     },
-    "tickRate": 5,
+    "tickRate": 1,
     "tickRandomly": false,
     "isReplaceable": false,
     "canProvidePower": false,

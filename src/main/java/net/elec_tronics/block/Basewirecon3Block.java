@@ -121,7 +121,7 @@ public class Basewirecon3Block extends Block
 	@Override
 	public void onPlace(BlockState blockstate, Level world, BlockPos pos, BlockState oldState, boolean moving) {
 		super.onPlace(blockstate, world, pos, oldState, moving);
-		world.getBlockTicks().scheduleTick(pos, this, 5);
+		world.getBlockTicks().scheduleTick(pos, this, 1);
 	}
 
 	@Override
@@ -138,7 +138,7 @@ public class Basewirecon3Block extends Block
 		int z = pos.getZ();
 
 		T1WireUpdateTickProcedure.execute(world, x, y, z);
-		world.getBlockTicks().scheduleTick(pos, this, 5);
+		world.getBlockTicks().scheduleTick(pos, this, 1);
 	}
 
 	@Override
