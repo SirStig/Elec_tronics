@@ -8,6 +8,7 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.level.storage.loot.LootContext;
 import net.minecraft.world.level.material.Material;
+import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.BlockState;
@@ -20,6 +21,7 @@ import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.minecraft.world.level.block.EntityBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.Explosion;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.item.TieredItem;
@@ -43,6 +45,7 @@ import net.minecraft.client.renderer.ItemBlockRenderTypes;
 
 import net.elec_tronics.world.inventory.WorkbenchguiMenu;
 import net.elec_tronics.procedures.EngineersworkbenchcodeProcedure;
+import net.elec_tronics.procedures.EngineersworkbenchBlockDestroyedByPlayerProcedure;
 import net.elec_tronics.procedures.EngineersworkbenchBlockAddedProcedure;
 import net.elec_tronics.init.ElecTronicsModBlocks;
 import net.elec_tronics.block.entity.EngineersworkbenchBlockEntity;
@@ -126,6 +129,19 @@ public class EngineersworkbenchBlock extends Block
 
 		EngineersworkbenchcodeProcedure.execute(world, x, y, z);
 		world.getBlockTicks().scheduleTick(pos, this, 1);
+	}
+
+	@Override
+	public boolean removedByPlayer(BlockState blockstate, Level world, BlockPos pos, Player entity, boolean willHarvest, FluidState fluid) {
+		boolean retval = super.removedByPlayer(blockstate, world, pos, entity, willHarvest, fluid);
+		EngineersworkbenchBlockDestroyedByPlayerProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
+		return retval;
+	}
+
+	@Override
+	public void wasExploded(Level world, BlockPos pos, Explosion e) {
+		super.wasExploded(world, pos, e);
+		EngineersworkbenchBlockDestroyedByPlayerProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
 	}
 
 	@Override

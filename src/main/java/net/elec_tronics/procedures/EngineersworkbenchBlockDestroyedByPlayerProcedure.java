@@ -1,56 +1,38 @@
 package net.elec_tronics.procedures;
 
 import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.level.Level;
 import net.minecraft.core.BlockPos;
 
 import net.elec_tronics.init.ElecTronicsModBlocks;
 
 public class EngineersworkbenchBlockDestroyedByPlayerProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
-		if ((world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) z))).getBlock() == ElecTronicsModBlocks.ENGINEERS_WORK_BENCH_SIDE) {
-			if ((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z))).getBlock() == ElecTronicsModBlocks.ENGINEERS_WORK_BENCH_TOP) {
-				if ((world.getBlockState(new BlockPos((int) (x - 1), (int) (y + 1), (int) z)))
-						.getBlock() == ElecTronicsModBlocks.ENGINEERS_WORK_BENCH_TOP_SIDE) {
-					world.setBlock(new BlockPos((int) (x - 1), (int) y, (int) z), Blocks.AIR.defaultBlockState(), 3);
-					world.setBlock(new BlockPos((int) (x - 1), (int) (y + 1), (int) z), Blocks.AIR.defaultBlockState(), 3);
-					world.setBlock(new BlockPos((int) x, (int) (y + 1), (int) z), Blocks.AIR.defaultBlockState(), 3);
-				}
-			}
-		} else if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z - 1))))
-				.getMaterial() == net.minecraft.world.level.material.Material.AIR) == true) {
-			if ((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z)))
-					.getMaterial() == net.minecraft.world.level.material.Material.AIR) {
-				if ((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) (z - 1))))
-						.getMaterial() == net.minecraft.world.level.material.Material.AIR) {
-					world.setBlock(new BlockPos((int) x, (int) y, (int) (z - 1)), ElecTronicsModBlocks.ENGINEERS_WORK_BENCH_SIDE.defaultBlockState(),
-							3);
-					world.setBlock(new BlockPos((int) x, (int) (y + 1), (int) (z - 1)),
-							ElecTronicsModBlocks.ENGINEERS_WORK_BENCH_TOP.defaultBlockState(), 3);
-					world.setBlock(new BlockPos((int) x, (int) (y + 1), (int) z),
-							ElecTronicsModBlocks.ENGINEERS_WORK_BENCH_TOP_SIDE.defaultBlockState(), 3);
-				} else {
-					if (world instanceof Level) {
-						Block.dropResources(world.getBlockState(new BlockPos((int) x, (int) y, (int) z)), (Level) world,
-								new BlockPos((int) x, (int) y, (int) z));
-						world.destroyBlock(new BlockPos((int) x, (int) y, (int) z), false);
+		boolean found = false;
+		double sx = 0;
+		double sy = 0;
+		double sz = 0;
+		sx = -2;
+		for (int index0 = 0; index0 < (int) (4); index0++) {
+			sy = -2;
+			for (int index1 = 0; index1 < (int) (4); index1++) {
+				sz = -2;
+				for (int index2 = 0; index2 < (int) (4); index2++) {
+					if ((world.getBlockState(new BlockPos((int) (x + sx), (int) (y + sy), (int) (z + sz))))
+							.getBlock() == ElecTronicsModBlocks.ENGINEERS_WORK_BENCH_TOP_SIDE
+							|| (world.getBlockState(new BlockPos((int) (x + sx), (int) (y + sy), (int) (z + sz))))
+									.getBlock() == ElecTronicsModBlocks.ENGINEERS_WORK_BENCH_SIDE
+							|| (world.getBlockState(new BlockPos((int) (x + sx), (int) (y + sy), (int) (z + sz))))
+									.getBlock() == ElecTronicsModBlocks.ENGINEERS_WORK_BENCH_TOP
+							|| (world.getBlockState(new BlockPos((int) (x + sx), (int) (y + sy), (int) (z + sz))))
+									.getBlock() == ElecTronicsModBlocks.ENGINEERSWORKBENCH) {
+						world.setBlock(new BlockPos((int) (x + sx), (int) (y + sy), (int) (z + sz)), Blocks.AIR.defaultBlockState(), 3);
 					}
+					sz = sz + 1;
 				}
-			} else {
-				if (world instanceof Level) {
-					Block.dropResources(world.getBlockState(new BlockPos((int) x, (int) y, (int) z)), (Level) world,
-							new BlockPos((int) x, (int) y, (int) z));
-					world.destroyBlock(new BlockPos((int) x, (int) y, (int) z), false);
-				}
+				sy = sy + 1;
 			}
-		} else {
-			if (world instanceof Level) {
-				Block.dropResources(world.getBlockState(new BlockPos((int) x, (int) y, (int) z)), (Level) world,
-						new BlockPos((int) x, (int) y, (int) z));
-				world.destroyBlock(new BlockPos((int) x, (int) y, (int) z), false);
-			}
+			sx = sx + 1;
 		}
 	}
 }

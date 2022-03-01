@@ -1,12 +1,12 @@
 {
   "parent": "block/cube",
   "textures": {
-    "down": "elec_tronics:blocks/furnancetest",
-    "up": "elec_tronics:blocks/furnancetest",
-    "north": "elec_tronics:blocks/furnacefront",
-    "east": "elec_tronics:blocks/furnancetest",
-    "south": "elec_tronics:blocks/furnancetest",
-    "west": "elec_tronics:blocks/furnancetest",
-    "particle": "elec_tronics:blocks/furnancetest"
+    "down": "elec_tronics:blocks/reinforcedbrick",
+    "up": "elec_tronics:blocks/reinforcedbrick",
+    "north": "elec_tronics:blocks/blastfurnance",
+    "east": "elec_tronics:blocks/reinforcedbrick",
+    "south": "elec_tronics:blocks/reinforcedbrick",
+    "west": "elec_tronics:blocks/reinforcedbrick",
+    "particle": "elec_tronics:blocks/reinforcedbrick"
   }
 }
