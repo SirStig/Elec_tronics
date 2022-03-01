@@ -1956,7 +1956,7 @@
       "name": "SolarPanelT1",
       "type": "block",
       "sortid": 128,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "solar_panel_t_1",
       "path": "~/Solar Panels"
