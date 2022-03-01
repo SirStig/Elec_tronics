@@ -230,6 +230,19 @@
       {
         "type": "image",
         "data": {
+          "image": "battery5.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Powertick1"
+          },
+          "name": "battery5.png",
+          "x": 133,
+          "y": 59
+        }
+      },
+      {
+        "type": "image",
+        "data": {
           "image": "battery10.png",
           "use1Xscale": true,
           "displayCondition": {
@@ -340,19 +353,6 @@
             "name": "Powertick9"
           },
           "name": "battery92full.png",
-          "x": 133,
-          "y": 59
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "battery5.png",
-          "use1Xscale": true,
-          "displayCondition": {
-            "name": "Powertick1"
-          },
-          "name": "battery5.png",
           "x": 133,
           "y": 59
         }

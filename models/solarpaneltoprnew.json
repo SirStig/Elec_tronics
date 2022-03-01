@@ -1,14 +1,14 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "Screen Shot 2022-02-26 at 3.03.29 AM",
-		"1": "solarpanel",
-		"particle": "Screen Shot 2022-02-26 at 3.03.29 AM"
+		"0": "McreatorWorkspaces:Screen Shot 2022-02-26 at 3.03.29 AM",
+		"1": "McreatorWorkspaces:solarpanel",
+		"particle": "McreatorWorkspaces:Screen Shot 2022-02-26 at 3.03.29 AM"
 	},
 	"elements": [
 		{
-			"from": [0, 2, 5.35],
-			"to": [16, 16.5, 6.85],
+			"from": [0, 1, 6.5],
+			"to": [16, 15.5, 8],
 			"rotation": {"angle": 22.5, "axis": "x", "origin": [0, 0, 0]},
 			"faces": {
 				"north": {"uv": [0, 0, 16, 16], "texture": "#1"},
@@ -20,8 +20,8 @@
 			}
 		},
 		{
-			"from": [0, -0.6, 5.35],
-			"to": [0.5, 14.4, 5.85],
+			"from": [0, -1.6, 6.5],
+			"to": [0.5, 13.4, 7],
 			"rotation": {"angle": 22.5, "axis": "x", "origin": [0, 0, 5]},
 			"faces": {
 				"north": {"uv": [0, 12, 8, 14.10714], "rotation": 270, "texture": "#0"},
@@ -33,8 +33,8 @@
 			}
 		},
 		{
-			"from": [0, 14, 5.35],
-			"to": [16, 14.5, 5.85],
+			"from": [0, 13, 6.5],
+			"to": [16, 13.5, 7],
 			"rotation": {"angle": 22.5, "axis": "x", "origin": [0, 0, 5]},
 			"faces": {
 				"north": {"uv": [0, 12.14286, 16, 16], "rotation": 180, "texture": "#0"},
@@ -46,8 +46,8 @@
 			}
 		},
 		{
-			"from": [15.5, -0.5, 5.35],
-			"to": [16, 14.5, 5.85],
+			"from": [15.5, -1.5, 6.5],
+			"to": [16, 13.5, 7],
 			"rotation": {"angle": 22.5, "axis": "x", "origin": [0, 0, 5]},
 			"faces": {
 				"north": {"uv": [0, 13.42857, 8, 11.10714], "rotation": 270, "texture": "#0"},

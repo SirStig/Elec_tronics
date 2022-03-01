@@ -1,10 +1,15 @@
 package net.elec_tronics.procedures;
 
+import net.minecraftforge.fmllegacy.server.ServerLifecycleHooks;
 import net.minecraftforge.energy.CapabilityEnergy;
 
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.server.MinecraftServer;
+import net.minecraft.network.chat.TextComponent;
+import net.minecraft.network.chat.ChatType;
 import net.minecraft.core.BlockPos;
+import net.minecraft.Util;
 
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicBoolean;
@@ -50,6 +55,14 @@ public class T1WireUpdateTickProcedure {
 		double xsend5 = 0;
 		double xsend4 = 0;
 		double xsend6 = 0;
+		amountOfRecievers = 0;
+		amountToSend = 0;
+		energy1 = 0;
+		energy2 = 0;
+		energy3 = 0;
+		energy4 = 0;
+		energy5 = 0;
+		energy6 = 0;
 		if ((new Object() {
 			public boolean canReceiveEnergy(LevelAccessor level, BlockPos pos) {
 				AtomicBoolean _retval = new AtomicBoolean(false);
@@ -58,7 +71,23 @@ public class T1WireUpdateTickProcedure {
 					_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> _retval.set(capability.canReceive()));
 				return _retval.get();
 			}
-		}.canReceiveEnergy(world, new BlockPos((int) x, (int) y, (int) (z - 1)))) == true) {
+		}.canReceiveEnergy(world, new BlockPos((int) x, (int) y, (int) (z - 1)))) == true && new Object() {
+			public int getEnergyStored(LevelAccessor level, BlockPos pos) {
+				AtomicInteger _retval = new AtomicInteger(0);
+				BlockEntity _ent = level.getBlockEntity(pos);
+				if (_ent != null)
+					_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> _retval.set(capability.getEnergyStored()));
+				return _retval.get();
+			}
+		}.getEnergyStored(world, new BlockPos((int) x, (int) y, (int) (z - 1))) != new Object() {
+			public int getMaxEnergyStored(LevelAccessor level, BlockPos pos) {
+				AtomicInteger _retval = new AtomicInteger(0);
+				BlockEntity _ent = level.getBlockEntity(pos);
+				if (_ent != null)
+					_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> _retval.set(capability.getMaxEnergyStored()));
+				return _retval.get();
+			}
+		}.getMaxEnergyStored(world, new BlockPos((int) x, (int) y, (int) (z - 1)))) {
 			energy1 = new Object() {
 				public int extractEnergySimulate(LevelAccessor level, BlockPos pos, int _amount) {
 					AtomicInteger _retval = new AtomicInteger(0);
@@ -68,7 +97,7 @@ public class T1WireUpdateTickProcedure {
 								.ifPresent(capability -> _retval.set(capability.extractEnergy(_amount, true)));
 					return _retval.get();
 				}
-			}.extractEnergySimulate(world, new BlockPos((int) x, (int) y, (int) z), 100000);
+			}.extractEnergySimulate(world, new BlockPos((int) x, (int) y, (int) z), 10000);
 			energy1 = new Object() {
 				public int receiveEnergySimulate(LevelAccessor level, BlockPos pos, int _amount) {
 					AtomicInteger _retval = new AtomicInteger(0);
@@ -95,7 +124,23 @@ public class T1WireUpdateTickProcedure {
 					_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> _retval.set(capability.canReceive()));
 				return _retval.get();
 			}
-		}.canReceiveEnergy(world, new BlockPos((int) x, (int) y, (int) (z + 1)))) == true) {
+		}.canReceiveEnergy(world, new BlockPos((int) x, (int) y, (int) (z + 1)))) == true && new Object() {
+			public int getEnergyStored(LevelAccessor level, BlockPos pos) {
+				AtomicInteger _retval = new AtomicInteger(0);
+				BlockEntity _ent = level.getBlockEntity(pos);
+				if (_ent != null)
+					_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> _retval.set(capability.getEnergyStored()));
+				return _retval.get();
+			}
+		}.getEnergyStored(world, new BlockPos((int) x, (int) y, (int) (z + 1))) != new Object() {
+			public int getMaxEnergyStored(LevelAccessor level, BlockPos pos) {
+				AtomicInteger _retval = new AtomicInteger(0);
+				BlockEntity _ent = level.getBlockEntity(pos);
+				if (_ent != null)
+					_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> _retval.set(capability.getMaxEnergyStored()));
+				return _retval.get();
+			}
+		}.getMaxEnergyStored(world, new BlockPos((int) x, (int) y, (int) (z + 1)))) {
 			energy2 = new Object() {
 				public int extractEnergySimulate(LevelAccessor level, BlockPos pos, int _amount) {
 					AtomicInteger _retval = new AtomicInteger(0);
@@ -105,7 +150,7 @@ public class T1WireUpdateTickProcedure {
 								.ifPresent(capability -> _retval.set(capability.extractEnergy(_amount, true)));
 					return _retval.get();
 				}
-			}.extractEnergySimulate(world, new BlockPos((int) x, (int) y, (int) z), 100000);
+			}.extractEnergySimulate(world, new BlockPos((int) x, (int) y, (int) z), 10000);
 			energy2 = new Object() {
 				public int receiveEnergySimulate(LevelAccessor level, BlockPos pos, int _amount) {
 					AtomicInteger _retval = new AtomicInteger(0);
@@ -132,7 +177,23 @@ public class T1WireUpdateTickProcedure {
 					_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> _retval.set(capability.canReceive()));
 				return _retval.get();
 			}
-		}.canReceiveEnergy(world, new BlockPos((int) x, (int) (y - 1), (int) z))) == true) {
+		}.canReceiveEnergy(world, new BlockPos((int) x, (int) (y - 1), (int) z))) == true && new Object() {
+			public int getEnergyStored(LevelAccessor level, BlockPos pos) {
+				AtomicInteger _retval = new AtomicInteger(0);
+				BlockEntity _ent = level.getBlockEntity(pos);
+				if (_ent != null)
+					_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> _retval.set(capability.getEnergyStored()));
+				return _retval.get();
+			}
+		}.getEnergyStored(world, new BlockPos((int) x, (int) (y - 1), (int) z)) != new Object() {
+			public int getMaxEnergyStored(LevelAccessor level, BlockPos pos) {
+				AtomicInteger _retval = new AtomicInteger(0);
+				BlockEntity _ent = level.getBlockEntity(pos);
+				if (_ent != null)
+					_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> _retval.set(capability.getMaxEnergyStored()));
+				return _retval.get();
+			}
+		}.getMaxEnergyStored(world, new BlockPos((int) x, (int) (y - 1), (int) z))) {
 			energy3 = new Object() {
 				public int extractEnergySimulate(LevelAccessor level, BlockPos pos, int _amount) {
 					AtomicInteger _retval = new AtomicInteger(0);
@@ -142,7 +203,7 @@ public class T1WireUpdateTickProcedure {
 								.ifPresent(capability -> _retval.set(capability.extractEnergy(_amount, true)));
 					return _retval.get();
 				}
-			}.extractEnergySimulate(world, new BlockPos((int) x, (int) y, (int) z), 100000);
+			}.extractEnergySimulate(world, new BlockPos((int) x, (int) y, (int) z), 10000);
 			energy3 = new Object() {
 				public int receiveEnergySimulate(LevelAccessor level, BlockPos pos, int _amount) {
 					AtomicInteger _retval = new AtomicInteger(0);
@@ -169,7 +230,23 @@ public class T1WireUpdateTickProcedure {
 					_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> _retval.set(capability.canReceive()));
 				return _retval.get();
 			}
-		}.canReceiveEnergy(world, new BlockPos((int) x, (int) (y + 1), (int) z))) == true) {
+		}.canReceiveEnergy(world, new BlockPos((int) x, (int) (y + 1), (int) z))) == true && new Object() {
+			public int getEnergyStored(LevelAccessor level, BlockPos pos) {
+				AtomicInteger _retval = new AtomicInteger(0);
+				BlockEntity _ent = level.getBlockEntity(pos);
+				if (_ent != null)
+					_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> _retval.set(capability.getEnergyStored()));
+				return _retval.get();
+			}
+		}.getEnergyStored(world, new BlockPos((int) x, (int) (y + 1), (int) z)) != new Object() {
+			public int getMaxEnergyStored(LevelAccessor level, BlockPos pos) {
+				AtomicInteger _retval = new AtomicInteger(0);
+				BlockEntity _ent = level.getBlockEntity(pos);
+				if (_ent != null)
+					_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> _retval.set(capability.getMaxEnergyStored()));
+				return _retval.get();
+			}
+		}.getMaxEnergyStored(world, new BlockPos((int) x, (int) (y + 1), (int) z))) {
 			energy4 = new Object() {
 				public int extractEnergySimulate(LevelAccessor level, BlockPos pos, int _amount) {
 					AtomicInteger _retval = new AtomicInteger(0);
@@ -179,7 +256,7 @@ public class T1WireUpdateTickProcedure {
 								.ifPresent(capability -> _retval.set(capability.extractEnergy(_amount, true)));
 					return _retval.get();
 				}
-			}.extractEnergySimulate(world, new BlockPos((int) x, (int) y, (int) z), 100000);
+			}.extractEnergySimulate(world, new BlockPos((int) x, (int) y, (int) z), 10000);
 			energy4 = new Object() {
 				public int receiveEnergySimulate(LevelAccessor level, BlockPos pos, int _amount) {
 					AtomicInteger _retval = new AtomicInteger(0);
@@ -206,7 +283,23 @@ public class T1WireUpdateTickProcedure {
 					_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> _retval.set(capability.canReceive()));
 				return _retval.get();
 			}
-		}.canReceiveEnergy(world, new BlockPos((int) (x - 1), (int) y, (int) z))) == true) {
+		}.canReceiveEnergy(world, new BlockPos((int) (x - 1), (int) y, (int) z))) == true && new Object() {
+			public int getEnergyStored(LevelAccessor level, BlockPos pos) {
+				AtomicInteger _retval = new AtomicInteger(0);
+				BlockEntity _ent = level.getBlockEntity(pos);
+				if (_ent != null)
+					_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> _retval.set(capability.getEnergyStored()));
+				return _retval.get();
+			}
+		}.getEnergyStored(world, new BlockPos((int) (x - 1), (int) y, (int) z)) != new Object() {
+			public int getMaxEnergyStored(LevelAccessor level, BlockPos pos) {
+				AtomicInteger _retval = new AtomicInteger(0);
+				BlockEntity _ent = level.getBlockEntity(pos);
+				if (_ent != null)
+					_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> _retval.set(capability.getMaxEnergyStored()));
+				return _retval.get();
+			}
+		}.getMaxEnergyStored(world, new BlockPos((int) (x - 1), (int) y, (int) z))) {
 			energy5 = new Object() {
 				public int extractEnergySimulate(LevelAccessor level, BlockPos pos, int _amount) {
 					AtomicInteger _retval = new AtomicInteger(0);
@@ -216,7 +309,7 @@ public class T1WireUpdateTickProcedure {
 								.ifPresent(capability -> _retval.set(capability.extractEnergy(_amount, true)));
 					return _retval.get();
 				}
-			}.extractEnergySimulate(world, new BlockPos((int) x, (int) y, (int) z), 100000);
+			}.extractEnergySimulate(world, new BlockPos((int) x, (int) y, (int) z), 10000);
 			energy5 = new Object() {
 				public int receiveEnergySimulate(LevelAccessor level, BlockPos pos, int _amount) {
 					AtomicInteger _retval = new AtomicInteger(0);
@@ -243,7 +336,23 @@ public class T1WireUpdateTickProcedure {
 					_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> _retval.set(capability.canReceive()));
 				return _retval.get();
 			}
-		}.canReceiveEnergy(world, new BlockPos((int) (x + 1), (int) y, (int) z))) == true) {
+		}.canReceiveEnergy(world, new BlockPos((int) (x + 1), (int) y, (int) z))) == true && new Object() {
+			public int getEnergyStored(LevelAccessor level, BlockPos pos) {
+				AtomicInteger _retval = new AtomicInteger(0);
+				BlockEntity _ent = level.getBlockEntity(pos);
+				if (_ent != null)
+					_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> _retval.set(capability.getEnergyStored()));
+				return _retval.get();
+			}
+		}.getEnergyStored(world, new BlockPos((int) (x + 1), (int) y, (int) z)) != new Object() {
+			public int getMaxEnergyStored(LevelAccessor level, BlockPos pos) {
+				AtomicInteger _retval = new AtomicInteger(0);
+				BlockEntity _ent = level.getBlockEntity(pos);
+				if (_ent != null)
+					_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> _retval.set(capability.getMaxEnergyStored()));
+				return _retval.get();
+			}
+		}.getMaxEnergyStored(world, new BlockPos((int) (x + 1), (int) y, (int) z))) {
 			energy6 = new Object() {
 				public int extractEnergySimulate(LevelAccessor level, BlockPos pos, int _amount) {
 					AtomicInteger _retval = new AtomicInteger(0);
@@ -253,7 +362,7 @@ public class T1WireUpdateTickProcedure {
 								.ifPresent(capability -> _retval.set(capability.extractEnergy(_amount, true)));
 					return _retval.get();
 				}
-			}.extractEnergySimulate(world, new BlockPos((int) x, (int) y, (int) z), 100000);
+			}.extractEnergySimulate(world, new BlockPos((int) x, (int) y, (int) z), 10000);
 			energy6 = new Object() {
 				public int receiveEnergySimulate(LevelAccessor level, BlockPos pos, int _amount) {
 					AtomicInteger _retval = new AtomicInteger(0);
@@ -273,88 +382,108 @@ public class T1WireUpdateTickProcedure {
 			send6 = false;
 		}
 		amountToSend = (energy1 + energy2 + energy3 + energy4 + energy5 + energy6) / amountOfRecievers;
-		if (send == true) {
-			{
-				BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) y, (int) z));
-				int _amount = (int) amountToSend;
-				if (_ent != null)
-					_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> capability.extractEnergy(_amount, false));
-			}
-			{
-				BlockEntity _ent = world.getBlockEntity(new BlockPos((int) xsend, (int) ysend, (int) zsend));
-				int _amount = (int) amountToSend;
-				if (_ent != null)
-					_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> capability.receiveEnergy(_amount, false));
-			}
+		if ((new java.text.DecimalFormat("##.##").format(amountToSend)).equals("NaN")) {
+			amountToSend = 0;
 		}
-		if (send2 == true) {
-			{
-				BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) y, (int) z));
-				int _amount = (int) amountToSend;
-				if (_ent != null)
-					_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> capability.extractEnergy(_amount, false));
-			}
-			{
-				BlockEntity _ent = world.getBlockEntity(new BlockPos((int) xsend2, (int) ysend2, (int) zsend2));
-				int _amount = (int) amountToSend;
-				if (_ent != null)
-					_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> capability.receiveEnergy(_amount, false));
-			}
+		if (!world.isClientSide()) {
+			MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
+			if (mcserv != null)
+				mcserv.getPlayerList().broadcastMessage(
+						new TextComponent(("Amount to send: " + new java.text.DecimalFormat("##.##").format(amountToSend))), ChatType.SYSTEM,
+						Util.NIL_UUID);
 		}
-		if (send3 == true) {
-			{
-				BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) y, (int) z));
-				int _amount = (int) amountToSend;
+		if (new Object() {
+			public int getEnergyStored(LevelAccessor level, BlockPos pos) {
+				AtomicInteger _retval = new AtomicInteger(0);
+				BlockEntity _ent = level.getBlockEntity(pos);
 				if (_ent != null)
-					_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> capability.extractEnergy(_amount, false));
+					_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> _retval.set(capability.getEnergyStored()));
+				return _retval.get();
 			}
-			{
-				BlockEntity _ent = world.getBlockEntity(new BlockPos((int) xsend3, (int) ysend3, (int) zsend3));
-				int _amount = (int) amountToSend;
-				if (_ent != null)
-					_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> capability.receiveEnergy(_amount, false));
+		}.getEnergyStored(world, new BlockPos((int) x, (int) y, (int) z)) >= amountToSend * amountOfRecievers) {
+			if (send == true) {
+				{
+					BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) y, (int) z));
+					int _amount = (int) amountToSend;
+					if (_ent != null)
+						_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> capability.extractEnergy(_amount, false));
+				}
+				{
+					BlockEntity _ent = world.getBlockEntity(new BlockPos((int) xsend, (int) ysend, (int) zsend));
+					int _amount = (int) amountToSend;
+					if (_ent != null)
+						_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> capability.receiveEnergy(_amount, false));
+				}
 			}
-		}
-		if (send4 == true) {
-			{
-				BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) y, (int) z));
-				int _amount = (int) amountToSend;
-				if (_ent != null)
-					_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> capability.extractEnergy(_amount, false));
+			if (send2 == true) {
+				{
+					BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) y, (int) z));
+					int _amount = (int) amountToSend;
+					if (_ent != null)
+						_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> capability.extractEnergy(_amount, false));
+				}
+				{
+					BlockEntity _ent = world.getBlockEntity(new BlockPos((int) xsend2, (int) ysend2, (int) zsend2));
+					int _amount = (int) amountToSend;
+					if (_ent != null)
+						_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> capability.receiveEnergy(_amount, false));
+				}
 			}
-			{
-				BlockEntity _ent = world.getBlockEntity(new BlockPos((int) xsend4, (int) ysend4, (int) zsend4));
-				int _amount = (int) amountToSend;
-				if (_ent != null)
-					_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> capability.receiveEnergy(_amount, false));
+			if (send3 == true) {
+				{
+					BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) y, (int) z));
+					int _amount = (int) amountToSend;
+					if (_ent != null)
+						_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> capability.extractEnergy(_amount, false));
+				}
+				{
+					BlockEntity _ent = world.getBlockEntity(new BlockPos((int) xsend3, (int) ysend3, (int) zsend3));
+					int _amount = (int) amountToSend;
+					if (_ent != null)
+						_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> capability.receiveEnergy(_amount, false));
+				}
 			}
-		}
-		if (send5 == true) {
-			{
-				BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) y, (int) z));
-				int _amount = (int) amountToSend;
-				if (_ent != null)
-					_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> capability.extractEnergy(_amount, false));
+			if (send4 == true) {
+				{
+					BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) y, (int) z));
+					int _amount = (int) amountToSend;
+					if (_ent != null)
+						_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> capability.extractEnergy(_amount, false));
+				}
+				{
+					BlockEntity _ent = world.getBlockEntity(new BlockPos((int) xsend4, (int) ysend4, (int) zsend4));
+					int _amount = (int) amountToSend;
+					if (_ent != null)
+						_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> capability.receiveEnergy(_amount, false));
+				}
 			}
-			{
-				BlockEntity _ent = world.getBlockEntity(new BlockPos((int) xsend5, (int) ysend5, (int) zsend5));
-				int _amount = (int) amountToSend;
-				if (_ent != null)
-					_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> capability.receiveEnergy(_amount, false));
+			if (send5 == true) {
+				{
+					BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) y, (int) z));
+					int _amount = (int) amountToSend;
+					if (_ent != null)
+						_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> capability.extractEnergy(_amount, false));
+				}
+				{
+					BlockEntity _ent = world.getBlockEntity(new BlockPos((int) xsend5, (int) ysend5, (int) zsend5));
+					int _amount = (int) amountToSend;
+					if (_ent != null)
+						_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> capability.receiveEnergy(_amount, false));
+				}
 			}
-		}
-		if (send6 == true) {
-			{
-				BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) y, (int) z));
-				int _amount = (int) amountToSend;
-				if (_ent != null)
-					_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> capability.extractEnergy(_amount, false));
-			}
-			{
-				BlockEntity _ent = world.getBlockEntity(new BlockPos((int) xsend6, (int) ysend6, (int) zsend6));
-				int _amount = (int) amountToSend;
-				if (_ent != null)
-					_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> capability.receiveEnergy(_amount, false));
+			if (send6 == true) {
+				{
+					BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) y, (int) z));
+					int _amount = (int) amountToSend;
+					if (_ent != null)
+						_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> capability.extractEnergy(_amount, false));
+				}
+				{
+					BlockEntity _ent = world.getBlockEntity(new BlockPos((int) xsend6, (int) ysend6, (int) zsend6));
+					int _amount = (int) amountToSend;
+					if (_ent != null)
+						_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> capability.receiveEnergy(_amount, false));
+				}
 			}
 		}
 	}

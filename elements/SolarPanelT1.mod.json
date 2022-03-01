@@ -2,22 +2,22 @@
   "_fv": 24,
   "_type": "block",
   "definition": {
-    "texture": "solarpaneltexture",
+    "texture": "solarpanelfinal",
     "textureTop": "",
     "textureLeft": "",
     "textureFront": "",
     "textureRight": "",
     "textureBack": "",
     "renderType": 2,
-    "customModelName": "solarpanelr:default",
+    "customModelName": "solarpanell:default",
     "rotationMode": 1,
     "emissiveRendering": false,
     "displayFluidOverlay": false,
-    "itemTexture": "",
+    "itemTexture": "solarpinalitem",
     "particleTexture": "",
     "tintType": "No tint",
     "isItemTinted": false,
-    "hasTransparency": true,
+    "hasTransparency": false,
     "connectedSides": false,
     "transparencyType": "SOLID",
     "disableOffset": false,
@@ -105,12 +105,12 @@
     "particleSpawningRadious": 0.5,
     "particleAmount": 4,
     "hasInventory": true,
-    "guiBoundTo": "<NONE>",
-    "openGUIOnRightClick": false,
+    "guiBoundTo": "SolarpanelGUI",
+    "openGUIOnRightClick": true,
     "inventorySize": 9,
     "inventoryStackSize": 64,
-    "inventoryDropWhenDestroyed": true,
-    "inventoryComparatorPower": true,
+    "inventoryDropWhenDestroyed": false,
+    "inventoryComparatorPower": false,
     "inventoryOutSlotIDs": [],
     "inventoryInSlotIDs": [],
     "hasEnergyStorage": false,
@@ -121,8 +121,17 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
+    "onBlockAdded": {
+      "name": "SolarPanelT1BlockAdded"
+    },
     "onTickUpdate": {
       "name": "SolarPanelT1UpdateTick"
+    },
+    "onDestroyedByPlayer": {
+      "name": "SolarPanelT1BlockDestroyedByPlayer"
+    },
+    "onDestroyedByExplosion": {
+      "name": "SolarPanelT1BlockDestroyedByPlayer"
     },
     "spawnWorldTypes": [],
     "restrictionBiomes": [],

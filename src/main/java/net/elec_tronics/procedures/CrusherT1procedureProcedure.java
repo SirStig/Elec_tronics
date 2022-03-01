@@ -2,6 +2,7 @@ package net.elec_tronics.procedures;
 
 import net.minecraftforge.items.IItemHandlerModifiable;
 import net.minecraftforge.items.CapabilityItemHandler;
+import net.minecraftforge.fmllegacy.server.ServerLifecycleHooks;
 import net.minecraftforge.energy.CapabilityEnergy;
 
 import net.minecraft.world.level.block.state.BlockState;
@@ -10,7 +11,11 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.server.MinecraftServer;
+import net.minecraft.network.chat.TextComponent;
+import net.minecraft.network.chat.ChatType;
 import net.minecraft.core.BlockPos;
+import net.minecraft.Util;
 
 import net.elec_tronics.init.ElecTronicsModItems;
 
@@ -22,53 +27,6 @@ public class CrusherT1procedureProcedure {
 		double fireHeight = 0;
 		double previousRecipe = 0;
 		double localEnergy = 0;
-		if (new Object() {
-			public int getEnergyStored(LevelAccessor level, BlockPos pos) {
-				AtomicInteger _retval = new AtomicInteger(0);
-				BlockEntity _ent = level.getBlockEntity(pos);
-				if (_ent != null)
-					_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> _retval.set(capability.getEnergyStored()));
-				return _retval.get();
-			}
-		}.getEnergyStored(world, new BlockPos((int) x, (int) y, (int) z)) != new Object() {
-			public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-				BlockEntity blockEntity = world.getBlockEntity(pos);
-				if (blockEntity != null)
-					return blockEntity.getTileData().getDouble(tag);
-				return -1;
-			}
-		}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "energyStored")) {
-			{
-				BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) y, (int) z));
-				int _amount = (int) (new Object() {
-					public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-						BlockEntity blockEntity = world.getBlockEntity(pos);
-						if (blockEntity != null)
-							return blockEntity.getTileData().getDouble(tag);
-						return -1;
-					}
-				}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "energyStored"));
-				if (_ent != null)
-					_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> capability.receiveEnergy(_amount, false));
-			}
-		}
-		if (!world.isClientSide()) {
-			BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-			BlockEntity _blockEntity = world.getBlockEntity(_bp);
-			BlockState _bs = world.getBlockState(_bp);
-			if (_blockEntity != null)
-				_blockEntity.getTileData().putDouble("energyStored", (new Object() {
-					public int getEnergyStored(LevelAccessor level, BlockPos pos) {
-						AtomicInteger _retval = new AtomicInteger(0);
-						BlockEntity _ent = level.getBlockEntity(pos);
-						if (_ent != null)
-							_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> _retval.set(capability.getEnergyStored()));
-						return _retval.get();
-					}
-				}.getEnergyStored(world, new BlockPos((int) x, (int) y, (int) z))));
-			if (world instanceof Level _level)
-				_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-		}
 		if (new Object() {
 			public int getEnergyStored(LevelAccessor level, BlockPos pos) {
 				AtomicInteger _retval = new AtomicInteger(0);
@@ -317,6 +275,27 @@ public class CrusherT1procedureProcedure {
 				}.getEnergyStored(world, new BlockPos((int) x, (int) y, (int) z)) / 500.1));
 			if (world instanceof Level _level)
 				_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+		}
+		if (!world.isClientSide()) {
+			MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
+			if (mcserv != null)
+				mcserv.getPlayerList().broadcastMessage(new TextComponent(("Energy: " + (new java.text.DecimalFormat("##.##").format(new Object() {
+					public int getEnergyStored(LevelAccessor level, BlockPos pos) {
+						AtomicInteger _retval = new AtomicInteger(0);
+						BlockEntity _ent = level.getBlockEntity(pos);
+						if (_ent != null)
+							_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> _retval.set(capability.getEnergyStored()));
+						return _retval.get();
+					}
+				}.getEnergyStored(world, new BlockPos((int) x, (int) y, (int) z))) + ""
+						+ ("Percentage" + new java.text.DecimalFormat("##.##").format(new Object() {
+							public double getValue(LevelAccessor world, BlockPos pos, String tag) {
+								BlockEntity blockEntity = world.getBlockEntity(pos);
+								if (blockEntity != null)
+									return blockEntity.getTileData().getDouble(tag);
+								return -1;
+							}
+						}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "energyPercentage")))))), ChatType.SYSTEM, Util.NIL_UUID);
 		}
 	}
 }

@@ -1988,7 +1988,7 @@
           }
         ]
       },
-      "path": "~/Coal Generator"
+      "path": "~/Solar Panels"
     },
     {
       "name": "EngineersWorkBenchOnBlockRightClicked",
@@ -2022,6 +2022,198 @@
         ]
       },
       "path": "~/Engineers Workbench"
+    },
+    {
+      "name": "SolarPanelT1BlockAdded",
+      "type": "procedure",
+      "sortid": 131,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "solar_panel_t_1_block_added",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Solar Panels"
+    },
+    {
+      "name": "SolarPanelr",
+      "type": "block",
+      "sortid": 132,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "solar_panelr",
+      "path": "~/Solar Panels"
+    },
+    {
+      "name": "Solarpaneltop",
+      "type": "block",
+      "sortid": 133,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "solarpaneltop",
+      "path": "~/Solar Panels"
+    },
+    {
+      "name": "Solarpaneltopr",
+      "type": "block",
+      "sortid": 134,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "solarpaneltopr",
+      "path": "~/Solar Panels"
+    },
+    {
+      "name": "SolarPanelT1BlockDestroyedByPlayer",
+      "type": "procedure",
+      "sortid": 135,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "solar_panel_t_1_block_destroyed_by_player",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Solar Panels"
+    },
+    {
+      "name": "SolarPanelNoneUpdateTick",
+      "type": "procedure",
+      "sortid": 136,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "solar_panel_none_update_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Solar Panels"
+    },
+    {
+      "name": "SolarpanelGUI",
+      "type": "gui",
+      "sortid": 137,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "solarpanel_gui",
+      "path": "~/Solar Panels"
+    },
+    {
+      "name": "Dayornight",
+      "type": "procedure",
+      "sortid": 138,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dayornight",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Solar Panels"
+    },
+    {
+      "name": "NightorDay",
+      "type": "procedure",
+      "sortid": 139,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nightor_day",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Solar Panels"
+    },
+    {
+      "name": "SolarPanelrOnBlockRightClicked",
+      "type": "procedure",
+      "sortid": 140,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "solar_panelr_on_block_right_clicked",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Solar Panels"
     }
   ],
   "variable_elements": [],
@@ -2040,6 +2232,7 @@
       "item.elec_tronics.irondust": "Iron Dust",
       "item.elec_tronics.tungsten_ore": "Tungsten Ore",
       "block.elec_tronics.basecable_t_1": "Cable Angle T1",
+      "block.elec_tronics.solarpaneltopr": "Solar Panel T1",
       "block.elec_tronics.basewirecon_3up": "Cable Angle T1",
       "item.elec_tronics.fibger_glass_dust": "Fibger Glass Dust",
       "block.elec_tronics.engineers_work_bench_side": "Engineers Workbench Side",
@@ -2055,7 +2248,9 @@
       "item.elec_tronics.uranium_ingot": "Uranium Ingot",
       "block.elec_tronics.cable_angle_t_1": "Cable Angle T1",
       "block.elec_tronics.cable_t_up_t_1": "Cable Junction T1",
+      "block.elec_tronics.solar_panelr": "Solar Panel T1",
       "item.elec_tronics.screwdriver": "Screwdriver",
+      "block.elec_tronics.solarpaneltop": "Solar Panel T1",
       "block.elec_tronics.reinforcedblastbrick": "Reinforced Blast Brick",
       "item.elec_tronics.steelsword": "Steel Sword",
       "block.elec_tronics.basewirecon_3downangle": "Cable Angle T1",

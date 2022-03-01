@@ -12,6 +12,9 @@ import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.Block;
 
 import net.elec_tronics.block.entity.T1WireBlockEntity;
+import net.elec_tronics.block.entity.SolarpaneltoprBlockEntity;
+import net.elec_tronics.block.entity.SolarpaneltopBlockEntity;
+import net.elec_tronics.block.entity.SolarPanelrBlockEntity;
 import net.elec_tronics.block.entity.SolarPanelT1BlockEntity;
 import net.elec_tronics.block.entity.EngineersworkbenchBlockEntity;
 import net.elec_tronics.block.entity.CrushermachineBlockEntity;
@@ -113,6 +116,12 @@ public class ElecTronicsModBlockEntities {
 			Basewirecon5mainBlockEntity::new);
 	public static final BlockEntityType<?> SOLAR_PANEL_T_1 = register("elec_tronics:solar_panel_t_1", ElecTronicsModBlocks.SOLAR_PANEL_T_1,
 			SolarPanelT1BlockEntity::new);
+	public static final BlockEntityType<?> SOLAR_PANELR = register("elec_tronics:solar_panelr", ElecTronicsModBlocks.SOLAR_PANELR,
+			SolarPanelrBlockEntity::new);
+	public static final BlockEntityType<?> SOLARPANELTOP = register("elec_tronics:solarpaneltop", ElecTronicsModBlocks.SOLARPANELTOP,
+			SolarpaneltopBlockEntity::new);
+	public static final BlockEntityType<?> SOLARPANELTOPR = register("elec_tronics:solarpaneltopr", ElecTronicsModBlocks.SOLARPANELTOPR,
+			SolarpaneltoprBlockEntity::new);
 
 	private static BlockEntityType<?> register(String registryname, Block block, BlockEntityType.BlockEntitySupplier<?> supplier) {
 		BlockEntityType<?> blockEntityType = BlockEntityType.Builder.of(supplier, block).build(null).setRegistryName(registryname);

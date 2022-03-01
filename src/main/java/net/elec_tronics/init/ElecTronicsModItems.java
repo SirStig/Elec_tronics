@@ -95,6 +95,9 @@ public class ElecTronicsModItems {
 	public static final Item BASEWIRECON_5DOWN = register(ElecTronicsModBlocks.BASEWIRECON_5DOWN, null);
 	public static final Item BASEWIRECON_5MAIN = register(ElecTronicsModBlocks.BASEWIRECON_5MAIN, null);
 	public static final Item SOLAR_PANEL_T_1 = register(ElecTronicsModBlocks.SOLAR_PANEL_T_1, ElecTronicsModTabs.TAB_ELEC_TRONICS_MENU);
+	public static final Item SOLAR_PANELR = register(ElecTronicsModBlocks.SOLAR_PANELR, null);
+	public static final Item SOLARPANELTOP = register(ElecTronicsModBlocks.SOLARPANELTOP, null);
+	public static final Item SOLARPANELTOPR = register(ElecTronicsModBlocks.SOLARPANELTOPR, null);
 
 	private static Item register(Item item) {
 		REGISTRY.add(item);

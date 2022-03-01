@@ -55,6 +55,14 @@ public class CoalgeneratorelectricitygenerationProcedure {
 		boolean send4 = false;
 		boolean send5 = false;
 		boolean send6 = false;
+		amountOfRecievers = 0;
+		amountToSend = 0;
+		energy1 = 0;
+		energy2 = 0;
+		energy3 = 0;
+		energy4 = 0;
+		energy5 = 0;
+		energy6 = 0;
 		if ((new Object() {
 			public boolean canReceiveEnergy(LevelAccessor level, BlockPos pos) {
 				AtomicBoolean _retval = new AtomicBoolean(false);

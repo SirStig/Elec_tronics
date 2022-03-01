@@ -3,8 +3,8 @@
   "textures": {
     "all": "elec_tronics:blocks/basecablegu",
     "particle": "elec_tronics:blocks/basecablegu",
-    "0": "elec_tronics:blocks/elec_tronicst1cable_end",
-    "1": "elec_tronics:blocks/basecable",
-    "2": "elec_tronics:blocks/elec_tronicst1cable_side"
+    "3": "elec_tronics:blocks/cable_junction-end",
+    "4": "elec_tronics:blocks/elec_tronicst1cable_end",
+    "5": "elec_tronics:blocks/elec_tronicst1cable_side"
   }
 }

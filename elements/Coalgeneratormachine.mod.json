@@ -7,7 +7,7 @@
     "textureLeft": "coal_generator_sides",
     "textureFront": "coal_generator_front",
     "textureRight": "coal_generator_sides",
-    "textureBack": "coal_generator_back",
+    "textureBack": "coal_generator_sides",
     "renderType": 10,
     "customModelName": "Normal",
     "rotationMode": 1,

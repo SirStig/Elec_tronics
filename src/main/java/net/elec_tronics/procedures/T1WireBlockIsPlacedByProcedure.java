@@ -570,7 +570,23 @@ public class T1WireBlockIsPlacedByProcedure {
 						_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> _retval.set(capability.canReceive()));
 					return _retval.get();
 				}
-			}.canReceiveEnergy(world, new BlockPos((int) x, (int) y, (int) (z + 1)))) {
+			}.canReceiveEnergy(world, new BlockPos((int) x, (int) y, (int) (z + 1))) || new Object() {
+				public boolean canExtractEnergy(LevelAccessor level, BlockPos pos) {
+					AtomicBoolean _retval = new AtomicBoolean(false);
+					BlockEntity _ent = level.getBlockEntity(pos);
+					if (_ent != null)
+						_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> _retval.set(capability.canExtract()));
+					return _retval.get();
+				}
+			}.canExtractEnergy(world, new BlockPos((int) x, (int) y, (int) (z - 1))) && new Object() {
+				public boolean canExtractEnergy(LevelAccessor level, BlockPos pos) {
+					AtomicBoolean _retval = new AtomicBoolean(false);
+					BlockEntity _ent = level.getBlockEntity(pos);
+					if (_ent != null)
+						_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> _retval.set(capability.canExtract()));
+					return _retval.get();
+				}
+			}.canExtractEnergy(world, new BlockPos((int) x, (int) y, (int) (z + 1)))) {
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 					BlockState _bs = ElecTronicsModBlocks.T_1_WIRE.defaultBlockState();
@@ -630,7 +646,23 @@ public class T1WireBlockIsPlacedByProcedure {
 						_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> _retval.set(capability.canReceive()));
 					return _retval.get();
 				}
-			}.canReceiveEnergy(world, new BlockPos((int) (x + 1), (int) y, (int) z))) {
+			}.canReceiveEnergy(world, new BlockPos((int) (x + 1), (int) y, (int) z)) || new Object() {
+				public boolean canExtractEnergy(LevelAccessor level, BlockPos pos) {
+					AtomicBoolean _retval = new AtomicBoolean(false);
+					BlockEntity _ent = level.getBlockEntity(pos);
+					if (_ent != null)
+						_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> _retval.set(capability.canExtract()));
+					return _retval.get();
+				}
+			}.canExtractEnergy(world, new BlockPos((int) (x - 1), (int) y, (int) z)) && new Object() {
+				public boolean canExtractEnergy(LevelAccessor level, BlockPos pos) {
+					AtomicBoolean _retval = new AtomicBoolean(false);
+					BlockEntity _ent = level.getBlockEntity(pos);
+					if (_ent != null)
+						_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> _retval.set(capability.canExtract()));
+					return _retval.get();
+				}
+			}.canExtractEnergy(world, new BlockPos((int) (x + 1), (int) y, (int) z))) {
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 					BlockState _bs = ElecTronicsModBlocks.T_1_WIRE.defaultBlockState();
@@ -690,7 +722,23 @@ public class T1WireBlockIsPlacedByProcedure {
 						_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> _retval.set(capability.canReceive()));
 					return _retval.get();
 				}
-			}.canReceiveEnergy(world, new BlockPos((int) x, (int) (y - 1), (int) z))) {
+			}.canReceiveEnergy(world, new BlockPos((int) x, (int) (y - 1), (int) z)) || new Object() {
+				public boolean canExtractEnergy(LevelAccessor level, BlockPos pos) {
+					AtomicBoolean _retval = new AtomicBoolean(false);
+					BlockEntity _ent = level.getBlockEntity(pos);
+					if (_ent != null)
+						_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> _retval.set(capability.canExtract()));
+					return _retval.get();
+				}
+			}.canExtractEnergy(world, new BlockPos((int) x, (int) (y + 1), (int) z)) && new Object() {
+				public boolean canExtractEnergy(LevelAccessor level, BlockPos pos) {
+					AtomicBoolean _retval = new AtomicBoolean(false);
+					BlockEntity _ent = level.getBlockEntity(pos);
+					if (_ent != null)
+						_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> _retval.set(capability.canExtract()));
+					return _retval.get();
+				}
+			}.canExtractEnergy(world, new BlockPos((int) y, (int) (y - 1), (int) z))) {
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 					BlockState _bs = ElecTronicsModBlocks.T_1_WIRE.defaultBlockState();

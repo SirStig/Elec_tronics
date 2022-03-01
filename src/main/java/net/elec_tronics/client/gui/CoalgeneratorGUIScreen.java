@@ -114,6 +114,10 @@ public class CoalgeneratorGUIScreen extends AbstractContainerScreen<Coalgenerato
 			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/batterv1.png"));
 			this.blit(ms, this.leftPos + 7, this.topPos + 27, 0, 0, 10, 50, 10, 50);
 		}
+		if (Powertick1Procedure.execute(world, x, y, z)) {
+			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/battery5.png"));
+			this.blit(ms, this.leftPos + 7, this.topPos + 27, 0, 0, 10, 50, 10, 50);
+		}
 		if (Powertick2Procedure.execute(world, x, y, z)) {
 			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/battery10.png"));
 			this.blit(ms, this.leftPos + 7, this.topPos + 27, 0, 0, 10, 50, 10, 50);
@@ -148,10 +152,6 @@ public class CoalgeneratorGUIScreen extends AbstractContainerScreen<Coalgenerato
 		}
 		if (Powertick9Procedure.execute(world, x, y, z)) {
 			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/battery92full.png"));
-			this.blit(ms, this.leftPos + 7, this.topPos + 27, 0, 0, 10, 50, 10, 50);
-		}
-		if (Powertick1Procedure.execute(world, x, y, z)) {
-			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/battery5.png"));
 			this.blit(ms, this.leftPos + 7, this.topPos + 27, 0, 0, 10, 50, 10, 50);
 		}
 		RenderSystem.disableBlend();

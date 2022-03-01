@@ -16,6 +16,9 @@ import net.elec_tronics.block.WaterturbinemachineBlock;
 import net.elec_tronics.block.UraniumoreBlock;
 import net.elec_tronics.block.TungstenBlock;
 import net.elec_tronics.block.T1WireBlock;
+import net.elec_tronics.block.SolarpaneltoprBlock;
+import net.elec_tronics.block.SolarpaneltopBlock;
+import net.elec_tronics.block.SolarPanelrBlock;
 import net.elec_tronics.block.SolarPanelT1Block;
 import net.elec_tronics.block.ReinforcedblastbrickBlock;
 import net.elec_tronics.block.EngineersworkbenchBlock;
@@ -97,6 +100,9 @@ public class ElecTronicsModBlocks {
 	public static final Block BASEWIRECON_5DOWN = register(new Basewirecon5downBlock());
 	public static final Block BASEWIRECON_5MAIN = register(new Basewirecon5mainBlock());
 	public static final Block SOLAR_PANEL_T_1 = register(new SolarPanelT1Block());
+	public static final Block SOLAR_PANELR = register(new SolarPanelrBlock());
+	public static final Block SOLARPANELTOP = register(new SolarpaneltopBlock());
+	public static final Block SOLARPANELTOPR = register(new SolarpaneltoprBlock());
 
 	private static Block register(Block block) {
 		REGISTRY.add(block);
@@ -143,7 +149,9 @@ public class ElecTronicsModBlocks {
 			Basewirecon4upanddownstraightBlock.registerRenderLayer();
 			Basewirecon5downBlock.registerRenderLayer();
 			Basewirecon5mainBlock.registerRenderLayer();
-			SolarPanelT1Block.registerRenderLayer();
+			SolarPanelrBlock.registerRenderLayer();
+			SolarpaneltopBlock.registerRenderLayer();
+			SolarpaneltoprBlock.registerRenderLayer();
 		}
 	}
 }

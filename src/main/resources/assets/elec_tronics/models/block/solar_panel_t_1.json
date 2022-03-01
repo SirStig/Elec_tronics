@@ -1,8 +1,8 @@
 {
-  "parent": "elec_tronics:custom/solarpanelr",
+  "parent": "elec_tronics:custom/solarpanell",
   "textures": {
-    "all": "elec_tronics:blocks/solarpaneltexture",
-    "particle": "elec_tronics:blocks/solarpaneltexture",
+    "all": "elec_tronics:blocks/solarpanelfinal",
+    "particle": "elec_tronics:blocks/solarpanelfinal",
     "0": "elec_tronics:blocks/screen_shot_2022-02-26_at_3.03.29_am",
     "1": "elec_tronics:blocks/solarpanel"
   }
