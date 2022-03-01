@@ -1,0 +1,11 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "screen_shot_2022-02-26_at_3.03.29_am",
+        "1": "solarpaneltexture"
+      },
+      "name": "default"
+    }
+  }
+}
