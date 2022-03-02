@@ -13,6 +13,96 @@
       },
       {
         "value": "CUSTOM:T1Wire"
+      },
+      {
+        "value": "CUSTOM:CableAngleT1"
+      },
+      {
+        "value": "CUSTOM:CableTT1"
+      },
+      {
+        "value": "CUSTOM:CableJunctionT1"
+      },
+      {
+        "value": "CUSTOM:CableTUpT1"
+      },
+      {
+        "value": "CUSTOM:CableTDownT1"
+      },
+      {
+        "value": "CUSTOM:CableTUpandDownT1"
+      },
+      {
+        "value": "CUSTOM:CableJunctionUpT1"
+      },
+      {
+        "value": "CUSTOM:CableJunctionDownT1"
+      },
+      {
+        "value": "CUSTOM:CableJunctionUpandDownT1"
+      },
+      {
+        "value": "CUSTOM:Basewirecon5main"
+      },
+      {
+        "value": "CUSTOM:Basewirecon4down"
+      },
+      {
+        "value": "CUSTOM:Basewirecon2angleup"
+      },
+      {
+        "value": "CUSTOM:Basewirecon3down"
+      },
+      {
+        "value": "CUSTOM:Basewirecon3up"
+      },
+      {
+        "value": "CUSTOM:Basewirecon4up"
+      },
+      {
+        "value": "CUSTOM:BasecableT1"
+      },
+      {
+        "value": "CUSTOM:Basewirecon2angledown"
+      },
+      {
+        "value": "CUSTOM:Basewirecon4upanddown"
+      },
+      {
+        "value": "CUSTOM:Basewirecon3upangle"
+      },
+      {
+        "value": "CUSTOM:Basewirecon3"
+      },
+      {
+        "value": "CUSTOM:Basewirecon5down"
+      },
+      {
+        "value": "CUSTOM:Basewirecon2angle"
+      },
+      {
+        "value": "CUSTOM:Basewirecon4upanddownstraight"
+      },
+      {
+        "value": "CUSTOM:CablehalfT1"
+      },
+      {
+        "value": "CUSTOM:Basewirecon3downandup"
+      },
+      {
+        "value": "CUSTOM:Basewirecon3downangle"
+      },
+      {
+        "value": "CUSTOM:SolarPanelT1"
+      },
+      {
+        "value": "CUSTOM:SolarPanelr"
+      },
+      {
+        "value": "CUSTOM:Solarpaneltop"
+      },
+      {
+        "value": "CUSTOM:Solarpaneltopr"
       }
     ],
     "functions": [],

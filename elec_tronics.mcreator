@@ -1988,7 +1988,355 @@
           }
         ]
       },
-      "path": "~/Coal Generator"
+      "path": "~/Solar Panels"
+    },
+    {
+      "name": "EngineersWorkBenchOnBlockRightClicked",
+      "type": "procedure",
+      "sortid": 130,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "engineers_work_bench_on_block_right_clicked",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Engineers Workbench"
+    },
+    {
+      "name": "SolarPanelT1BlockAdded",
+      "type": "procedure",
+      "sortid": 131,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "solar_panel_t_1_block_added",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Solar Panels"
+    },
+    {
+      "name": "SolarPanelr",
+      "type": "block",
+      "sortid": 132,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "solar_panelr",
+      "path": "~/Solar Panels"
+    },
+    {
+      "name": "Solarpaneltop",
+      "type": "block",
+      "sortid": 133,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "solarpaneltop",
+      "path": "~/Solar Panels"
+    },
+    {
+      "name": "Solarpaneltopr",
+      "type": "block",
+      "sortid": 134,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "solarpaneltopr",
+      "path": "~/Solar Panels"
+    },
+    {
+      "name": "SolarPanelT1BlockDestroyedByPlayer",
+      "type": "procedure",
+      "sortid": 135,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "solar_panel_t_1_block_destroyed_by_player",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Solar Panels"
+    },
+    {
+      "name": "SolarPanelNoneUpdateTick",
+      "type": "procedure",
+      "sortid": 136,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "solar_panel_none_update_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Solar Panels"
+    },
+    {
+      "name": "SolarpanelGUI",
+      "type": "gui",
+      "sortid": 137,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "solarpanel_gui",
+      "path": "~/Solar Panels"
+    },
+    {
+      "name": "Dayornight",
+      "type": "procedure",
+      "sortid": 138,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dayornight",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Solar Panels"
+    },
+    {
+      "name": "NightorDay",
+      "type": "procedure",
+      "sortid": 139,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nightor_day",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Solar Panels"
+    },
+    {
+      "name": "SolarPanelrOnBlockRightClicked",
+      "type": "procedure",
+      "sortid": 140,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "solar_panelr_on_block_right_clicked",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Solar Panels"
+    },
+    {
+      "name": "T1CableProcedure",
+      "type": "procedure",
+      "sortid": 141,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "t_1_cable_procedure",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Wires-Pipes"
+    },
+    {
+      "name": "TungstenDust",
+      "type": "item",
+      "sortid": 142,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tungsten_dust",
+      "path": "~/Ores-Ingots-Dusts"
+    },
+    {
+      "name": "DiamondDust",
+      "type": "item",
+      "sortid": 143,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "diamond_dust",
+      "path": "~/Ores-Ingots-Dusts"
+    },
+    {
+      "name": "GoldDust",
+      "type": "item",
+      "sortid": 144,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gold_dust",
+      "path": "~/Ores-Ingots-Dusts"
+    },
+    {
+      "name": "EmeraldDust",
+      "type": "item",
+      "sortid": 145,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "emerald_dust",
+      "path": "~/Ores-Ingots-Dusts"
+    },
+    {
+      "name": "CopperDust",
+      "type": "item",
+      "sortid": 146,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "copper_dust",
+      "path": "~/Ores-Ingots-Dusts"
+    },
+    {
+      "name": "QuartzDust",
+      "type": "item",
+      "sortid": 147,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "quartz_dust",
+      "path": "~/Ores-Ingots-Dusts"
+    },
+    {
+      "name": "Tungstendusttoingot",
+      "type": "recipe",
+      "sortid": 148,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tungstendusttoingot"
+    },
+    {
+      "name": "Golddusttoingot",
+      "type": "recipe",
+      "sortid": 149,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "golddusttoingot"
+    },
+    {
+      "name": "Copperdusttoingot",
+      "type": "recipe",
+      "sortid": 150,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "copperdusttoingot"
+    },
+    {
+      "name": "Diamonddusttoingot",
+      "type": "recipe",
+      "sortid": 151,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "diamonddusttoingot"
+    },
+    {
+      "name": "Emeralddusttoingot",
+      "type": "recipe",
+      "sortid": 152,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "emeralddusttoingot"
     }
   ],
   "variable_elements": [],
@@ -1998,16 +2346,19 @@
       "item.elec_tronics.insulation": "Insulation",
       "item.elec_tronics.hand_saw": "Hand Saw",
       "item.elec_tronics.steelpickaxe": "Steel Pickaxe",
-      "block.elec_tronics.cable_t_upand_down_t_1": "Cable Junction T1",
-      "item.elec_tronics.hammer": "Hammer",
       "item.elec_tronics.steelhoe": "Steel Hoe",
-      "item.elec_tronics.sharpenediron": "Sharpened Iron",
+      "item.elec_tronics.hammer": "Hammer",
+      "block.elec_tronics.cable_t_upand_down_t_1": "Cable Junction T1",
+      "item.elec_tronics.sharpenediron": "Iron Blade",
       "block.elec_tronics.basewirecon_2angleup": "Cable Angle T1",
       "item.elec_tronics.uranium_dust": "Uranium Dust",
-      "item.elec_tronics.tungsten_ore": "Tungsten Ore",
       "item.elec_tronics.irondust": "Iron Dust",
+      "item.elec_tronics.tungsten_ore": "Tungsten Ore",
       "block.elec_tronics.basecable_t_1": "Cable Angle T1",
+      "block.elec_tronics.solarpaneltopr": "Solar Panel T1",
       "block.elec_tronics.basewirecon_3up": "Cable Angle T1",
+      "item.elec_tronics.quartz_dust": "Quartz Dust",
+      "item.elec_tronics.tungsten_dust": "Uranium Dust",
       "item.elec_tronics.fibger_glass_dust": "Fibger Glass Dust",
       "block.elec_tronics.engineers_work_bench_side": "Engineers Workbench Side",
       "block.elec_tronics.cable_junction_up_t_1": "Cable Junction T1",
@@ -2021,18 +2372,23 @@
       "block.elec_tronics.solar_panel_t_1": "Solar Panel T1",
       "item.elec_tronics.uranium_ingot": "Uranium Ingot",
       "block.elec_tronics.cable_angle_t_1": "Cable Angle T1",
+      "item.elec_tronics.copper_dust": "Copper Dust",
       "block.elec_tronics.cable_t_up_t_1": "Cable Junction T1",
+      "block.elec_tronics.solar_panelr": "Solar Panel T1",
       "item.elec_tronics.screwdriver": "Screwdriver",
+      "block.elec_tronics.solarpaneltop": "Solar Panel T1",
       "block.elec_tronics.reinforcedblastbrick": "Reinforced Blast Brick",
       "item.elec_tronics.steelsword": "Steel Sword",
       "block.elec_tronics.basewirecon_3downangle": "Cable Angle T1",
       "block.elec_tronics.basewirecon_2angledown": "Cable Angle T1",
+      "item.elec_tronics.diamond_dust": "Diamond Dust",
       "block.elec_tronics.cable_tt_1": "Cable T T1",
       "block.elec_tronics.uraniumore": "Uranium Ore",
       "item.elec_tronics.ash": "Ash",
       "block.elec_tronics.engineers_work_bench_top_side": "Engineers Workbench Top Side",
       "block.elec_tronics.basewirecon_5down": "Cable Angle T1",
       "item.elec_tronics.steelaxe": "Steel Axe",
+      "item.elec_tronics.emerald_dust": "Emerald Dust",
       "block.elec_tronics.engineers_work_bench_top": "Engineers Workbench Top",
       "block.elec_tronics.basewirecon_4up": "Cable Angle T1",
       "block.elec_tronics.cable_junction_t_1": "Cable Junction T1",
@@ -2051,6 +2407,7 @@
       "block.elec_tronics.crushermachine": "Crusher T1",
       "item.elec_tronics.steelingot": "Steel Ingot",
       "block.elec_tronics.basewirecon_4upanddownstraight": "Cable Angle T1",
+      "item.elec_tronics.gold_dust": "Gold Dust",
       "item.elec_tronics.steelshovel": "Steel Shovel",
       "block.elec_tronics.cable_junction_down_t_1": "Cable Junction T1"
     }

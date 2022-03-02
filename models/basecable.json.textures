@@ -2,9 +2,9 @@
   "mappings": {
     "default": {
       "map": {
-        "0": "elec_tronicst1cable_end",
-        "1": "elec_tronicst1cable_side",
-        "2": "cable_junction-end"
+        "3": "cable_junction-end",
+        "4": "elec_tronicst1cable_end",
+        "5": "elec_tronicst1cable_side"
       },
       "name": "default"
     }

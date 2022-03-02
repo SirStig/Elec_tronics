@@ -3,13 +3,14 @@ package net.elec_tronics.block.entity;
 import net.minecraftforge.items.wrapper.SidedInvWrapper;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.CapabilityItemHandler;
+import net.minecraftforge.energy.EnergyStorage;
+import net.minecraftforge.energy.CapabilityEnergy;
 import net.minecraftforge.common.util.LazyOptional;
 import net.minecraftforge.common.capabilities.Capability;
 
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.entity.RandomizableContainerBlockEntity;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.inventory.ChestMenu;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.WorldlyContainer;
@@ -17,17 +18,21 @@ import net.minecraft.world.ContainerHelper;
 import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
 import net.minecraft.network.chat.TextComponent;
 import net.minecraft.network.chat.Component;
+import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.network.Connection;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.NonNullList;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
+import net.elec_tronics.world.inventory.SolarpanelGUIMenu;
 import net.elec_tronics.init.ElecTronicsModBlockEntities;
 
 import javax.annotation.Nullable;
 
 import java.util.stream.IntStream;
+
+import io.netty.buffer.Unpooled;
 
 public class SolarPanelT1BlockEntity extends RandomizableContainerBlockEntity implements WorldlyContainer {
 	private NonNullList<ItemStack> stacks = NonNullList.<ItemStack>withSize(9, ItemStack.EMPTY);
@@ -43,6 +48,8 @@ public class SolarPanelT1BlockEntity extends RandomizableContainerBlockEntity im
 		if (!this.tryLoadLootTable(compound))
 			this.stacks = NonNullList.withSize(this.getContainerSize(), ItemStack.EMPTY);
 		ContainerHelper.loadAllItems(compound, this.stacks);
+		if (compound.get("energyStorage")instanceof CompoundTag compoundTag)
+			energyStorage.deserializeNBT(compoundTag);
 	}
 
 	@Override
@@ -51,6 +58,7 @@ public class SolarPanelT1BlockEntity extends RandomizableContainerBlockEntity im
 		if (!this.trySaveLootTable(compound)) {
 			ContainerHelper.saveAllItems(compound, this.stacks);
 		}
+		compound.put("energyStorage", energyStorage.serializeNBT());
 		return compound;
 	}
 
@@ -94,7 +102,7 @@ public class SolarPanelT1BlockEntity extends RandomizableContainerBlockEntity im
 
 	@Override
 	public AbstractContainerMenu createMenu(int id, Inventory inventory) {
-		return ChestMenu.threeRows(id, inventory);
+		return new SolarpanelGUIMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(this.worldPosition));
 	}
 
 	@Override
@@ -132,10 +140,34 @@ public class SolarPanelT1BlockEntity extends RandomizableContainerBlockEntity im
 		return true;
 	}
 
+	private final EnergyStorage energyStorage = new EnergyStorage(0, 50, 50, 0) {
+		@Override
+		public int receiveEnergy(int maxReceive, boolean simulate) {
+			int retval = super.receiveEnergy(maxReceive, simulate);
+			if (!simulate) {
+				setChanged();
+				level.sendBlockUpdated(worldPosition, level.getBlockState(worldPosition), level.getBlockState(worldPosition), 2);
+			}
+			return retval;
+		}
+
+		@Override
+		public int extractEnergy(int maxExtract, boolean simulate) {
+			int retval = super.extractEnergy(maxExtract, simulate);
+			if (!simulate) {
+				setChanged();
+				level.sendBlockUpdated(worldPosition, level.getBlockState(worldPosition), level.getBlockState(worldPosition), 2);
+			}
+			return retval;
+		}
+	};
+
 	@Override
 	public <T> LazyOptional<T> getCapability(Capability<T> capability, @Nullable Direction facing) {
 		if (!this.remove && facing != null && capability == CapabilityItemHandler.ITEM_HANDLER_CAPABILITY)
 			return handlers[facing.ordinal()].cast();
+		if (!this.remove && capability == CapabilityEnergy.ENERGY)
+			return LazyOptional.of(() -> energyStorage).cast();
 		return super.getCapability(capability, facing);
 	}
 

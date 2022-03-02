@@ -1,10 +1,9 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "Elec_tronics-Models/elec_tronicsT1Cable_end",
-		"1": "Elec_tronics-Models/elec_tronicsT1Cable_side",
-		"2": "Elec_tronics-Models/basecable",
-		"particle": "Elec_tronics-Models/elec_tronicsT1Cable_end"
+		"3": "basecable",
+		"4": "elec_tronicsT1Cable_end",
+		"5": "elec_tronicsT1Cable_side"
 	},
 	"elements": [
 		{
@@ -12,12 +11,12 @@
 			"to": [10, 10, 10],
 			"rotation": {"angle": 0, "axis": "y", "origin": [15, 15, 15]},
 			"faces": {
-				"north": {"uv": [0, 0, 16, 16], "texture": "#2"},
-				"east": {"uv": [0, 0, 16, 16], "texture": "#1"},
-				"south": {"uv": [0, 0, 16, 16], "texture": "#2"},
-				"west": {"uv": [0, 0, 16, 16], "texture": "#1"},
-				"up": {"uv": [0, 0, 16, 16], "texture": "#0"},
-				"down": {"uv": [0, 0, 16, 16], "texture": "#0"}
+				"north": {"uv": [0, 0, 16, 16], "texture": "#3"},
+				"east": {"uv": [0, 0, 16, 16], "texture": "#5"},
+				"south": {"uv": [0, 0, 16, 16], "texture": "#3"},
+				"west": {"uv": [0, 0, 16, 16], "texture": "#5"},
+				"up": {"uv": [0, 0, 16, 16], "texture": "#4"},
+				"down": {"uv": [0, 0, 16, 16], "texture": "#4"}
 			}
 		}
 	],

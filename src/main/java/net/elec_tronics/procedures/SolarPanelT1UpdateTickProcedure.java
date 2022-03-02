@@ -208,16 +208,7 @@ public class SolarPanelT1UpdateTickProcedure {
 			send6 = false;
 		}
 		amountToSend = (energy1 + energy2 + energy3 + energy4 + energy5 + energy6) / amountOfRecievers;
-		if (!world.isClientSide()) {
-			BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-			BlockEntity _blockEntity = world.getBlockEntity(_bp);
-			BlockState _bs = world.getBlockState(_bp);
-			if (_blockEntity != null)
-				_blockEntity.getTileData().putDouble("energyPercentage", Math.ceil(amountToSend / 5.01));
-			if (world instanceof Level _level)
-				_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-		}
-		if (world.canSeeSkyFromBelowWater(new BlockPos((int) x, (int) y, (int) z)) && (world instanceof Level _lvl ? _lvl.isDay() : false)) {
+		if (world instanceof Level _lvl ? _lvl.isDay() : false) {
 			if (send == true) {
 				{
 					BlockEntity _ent = world.getBlockEntity(new BlockPos((int) xsend, (int) ysend, (int) zsend));
@@ -265,6 +256,25 @@ public class SolarPanelT1UpdateTickProcedure {
 					if (_ent != null)
 						_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> capability.receiveEnergy(_amount, false));
 				}
+			}
+			if (!world.isClientSide()) {
+				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+				BlockEntity _blockEntity = world.getBlockEntity(_bp);
+				BlockState _bs = world.getBlockState(_bp);
+				if (_blockEntity != null)
+					_blockEntity.getTileData().putDouble("energyPercentage", Math.ceil(amountToSend / 5.01));
+				if (world instanceof Level _level)
+					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+			}
+		} else {
+			if (!world.isClientSide()) {
+				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+				BlockEntity _blockEntity = world.getBlockEntity(_bp);
+				BlockState _bs = world.getBlockState(_bp);
+				if (_blockEntity != null)
+					_blockEntity.getTileData().putDouble("energyPercentage", 0);
+				if (world instanceof Level _level)
+					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}
 		}
 	}

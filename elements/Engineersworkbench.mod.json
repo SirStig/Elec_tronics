@@ -146,6 +146,12 @@
     "onTickUpdate": {
       "name": "Engineersworkbenchcode"
     },
+    "onDestroyedByPlayer": {
+      "name": "EngineersworkbenchBlockDestroyedByPlayer"
+    },
+    "onDestroyedByExplosion": {
+      "name": "EngineersworkbenchBlockDestroyedByPlayer"
+    },
     "spawnWorldTypes": [],
     "restrictionBiomes": [],
     "blocksToReplace": [
