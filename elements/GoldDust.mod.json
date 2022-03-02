@@ -3,10 +3,10 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "sharponediron",
+    "texture": "golddust",
     "customModelName": "Normal",
-    "name": "Iron Blade",
-    "rarity": "COMMON",
+    "name": "Gold Dust",
+    "rarity": "EPIC",
     "creativeTab": {
       "value": "CUSTOM:LovieeesTechyMod"
     },
@@ -19,7 +19,7 @@
       "value": ""
     },
     "destroyAnyBlock": false,
-    "immuneToFire": false,
+    "immuneToFire": true,
     "stayInGridWhenCrafting": false,
     "damageOnCrafting": false,
     "enableMeleeDamage": false,

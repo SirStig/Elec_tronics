@@ -3,10 +3,10 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "sharponediron",
+    "texture": "copperdust",
     "customModelName": "Normal",
-    "name": "Iron Blade",
-    "rarity": "COMMON",
+    "name": "Copper Dust",
+    "rarity": "EPIC",
     "creativeTab": {
       "value": "CUSTOM:LovieeesTechyMod"
     },

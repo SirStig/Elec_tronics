@@ -28,7 +28,7 @@ public class BlastfurnacedisplayProcedure {
 				return -1;
 			}
 		}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "recipe");
-		if ((new Object() {
+		if (((new Object() {
 			public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
 				AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 				BlockEntity _ent = world.getBlockEntity(pos);
@@ -39,7 +39,18 @@ public class BlastfurnacedisplayProcedure {
 				}
 				return _retval.get();
 			}
-		}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 3)).getItem() == ElecTronicsModItems.TUNGSTEN_ORE && ((new Object() {
+		}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 3)).getItem() == ElecTronicsModItems.TUNGSTEN_ORE || (new Object() {
+			public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
+				AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+				BlockEntity _ent = world.getBlockEntity(pos);
+				if (_ent != null) {
+					_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+						_retval.set(capability.getStackInSlot(sltid).copy());
+					});
+				}
+				return _retval.get();
+			}
+		}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 5)).getItem() == ElecTronicsModItems.TUNGSTEN_ORE) && ((new Object() {
 			public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
 				AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 				BlockEntity _ent = world.getBlockEntity(pos);
@@ -231,18 +242,46 @@ public class BlastfurnacedisplayProcedure {
 						return -1;
 					}
 				}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "recipe") == 0) {
-					{
-						BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) y, (int) z));
-						if (_ent != null) {
-							final int _sltid = 3;
-							final int _amount = 1;
-							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-								if (capability instanceof IItemHandlerModifiable) {
-									ItemStack _stk = capability.getStackInSlot(_sltid).copy();
-									_stk.shrink(_amount);
-									((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _stk);
-								}
-							});
+					if ((new Object() {
+						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
+							AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+							BlockEntity _ent = world.getBlockEntity(pos);
+							if (_ent != null) {
+								_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+									_retval.set(capability.getStackInSlot(sltid).copy());
+								});
+							}
+							return _retval.get();
+						}
+					}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 3)).getItem() == ElecTronicsModItems.TUNGSTEN_ORE) {
+						{
+							BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) y, (int) z));
+							if (_ent != null) {
+								final int _sltid = 3;
+								final int _amount = 1;
+								_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+									if (capability instanceof IItemHandlerModifiable) {
+										ItemStack _stk = capability.getStackInSlot(_sltid).copy();
+										_stk.shrink(_amount);
+										((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _stk);
+									}
+								});
+							}
+						}
+					} else {
+						{
+							BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) y, (int) z));
+							if (_ent != null) {
+								final int _sltid = 5;
+								final int _amount = 1;
+								_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+									if (capability instanceof IItemHandlerModifiable) {
+										ItemStack _stk = capability.getStackInSlot(_sltid).copy();
+										_stk.shrink(_amount);
+										((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _stk);
+									}
+								});
+							}
 						}
 					}
 					{

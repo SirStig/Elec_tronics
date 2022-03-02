@@ -149,6 +149,7 @@ public class ElecTronicsModBlocks {
 			Basewirecon4upanddownstraightBlock.registerRenderLayer();
 			Basewirecon5downBlock.registerRenderLayer();
 			Basewirecon5mainBlock.registerRenderLayer();
+			SolarPanelT1Block.registerRenderLayer();
 			SolarPanelrBlock.registerRenderLayer();
 			SolarpaneltopBlock.registerRenderLayer();
 			SolarpaneltoprBlock.registerRenderLayer();

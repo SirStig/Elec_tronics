@@ -3,6 +3,8 @@ package net.elec_tronics.block.entity;
 import net.minecraftforge.items.wrapper.SidedInvWrapper;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.CapabilityItemHandler;
+import net.minecraftforge.energy.EnergyStorage;
+import net.minecraftforge.energy.CapabilityEnergy;
 import net.minecraftforge.common.util.LazyOptional;
 import net.minecraftforge.common.capabilities.Capability;
 
@@ -46,6 +48,8 @@ public class SolarPanelT1BlockEntity extends RandomizableContainerBlockEntity im
 		if (!this.tryLoadLootTable(compound))
 			this.stacks = NonNullList.withSize(this.getContainerSize(), ItemStack.EMPTY);
 		ContainerHelper.loadAllItems(compound, this.stacks);
+		if (compound.get("energyStorage")instanceof CompoundTag compoundTag)
+			energyStorage.deserializeNBT(compoundTag);
 	}
 
 	@Override
@@ -54,6 +58,7 @@ public class SolarPanelT1BlockEntity extends RandomizableContainerBlockEntity im
 		if (!this.trySaveLootTable(compound)) {
 			ContainerHelper.saveAllItems(compound, this.stacks);
 		}
+		compound.put("energyStorage", energyStorage.serializeNBT());
 		return compound;
 	}
 
@@ -135,10 +140,34 @@ public class SolarPanelT1BlockEntity extends RandomizableContainerBlockEntity im
 		return true;
 	}
 
+	private final EnergyStorage energyStorage = new EnergyStorage(0, 50, 50, 0) {
+		@Override
+		public int receiveEnergy(int maxReceive, boolean simulate) {
+			int retval = super.receiveEnergy(maxReceive, simulate);
+			if (!simulate) {
+				setChanged();
+				level.sendBlockUpdated(worldPosition, level.getBlockState(worldPosition), level.getBlockState(worldPosition), 2);
+			}
+			return retval;
+		}
+
+		@Override
+		public int extractEnergy(int maxExtract, boolean simulate) {
+			int retval = super.extractEnergy(maxExtract, simulate);
+			if (!simulate) {
+				setChanged();
+				level.sendBlockUpdated(worldPosition, level.getBlockState(worldPosition), level.getBlockState(worldPosition), 2);
+			}
+			return retval;
+		}
+	};
+
 	@Override
 	public <T> LazyOptional<T> getCapability(Capability<T> capability, @Nullable Direction facing) {
 		if (!this.remove && facing != null && capability == CapabilityItemHandler.ITEM_HANDLER_CAPABILITY)
 			return handlers[facing.ordinal()].cast();
+		if (!this.remove && capability == CapabilityEnergy.ENERGY)
+			return LazyOptional.of(() -> energyStorage).cast();
 		return super.getCapability(capability, facing);
 	}
 

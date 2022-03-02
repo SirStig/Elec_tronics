@@ -17,6 +17,7 @@ import net.elec_tronics.item.UraniumIngotItem;
 import net.elec_tronics.item.UraniumDustItem;
 import net.elec_tronics.item.TungstenOreItem;
 import net.elec_tronics.item.TungstenIngotItem;
+import net.elec_tronics.item.TungstenDustItem;
 import net.elec_tronics.item.SteelswordItem;
 import net.elec_tronics.item.SteelshovelItem;
 import net.elec_tronics.item.SteelpickaxeItem;
@@ -25,11 +26,16 @@ import net.elec_tronics.item.SteelhoeItem;
 import net.elec_tronics.item.SteelaxeItem;
 import net.elec_tronics.item.SharpenedironItem;
 import net.elec_tronics.item.ScrewdriverItem;
+import net.elec_tronics.item.QuartzDustItem;
 import net.elec_tronics.item.IrondustItem;
 import net.elec_tronics.item.InsulationItem;
 import net.elec_tronics.item.HandSawItem;
 import net.elec_tronics.item.HammerItem;
+import net.elec_tronics.item.GoldDustItem;
 import net.elec_tronics.item.FibgerGlassDustItem;
+import net.elec_tronics.item.EmeraldDustItem;
+import net.elec_tronics.item.DiamondDustItem;
+import net.elec_tronics.item.CopperDustItem;
 import net.elec_tronics.item.AshItem;
 
 import java.util.List;
@@ -98,6 +104,12 @@ public class ElecTronicsModItems {
 	public static final Item SOLAR_PANELR = register(ElecTronicsModBlocks.SOLAR_PANELR, null);
 	public static final Item SOLARPANELTOP = register(ElecTronicsModBlocks.SOLARPANELTOP, null);
 	public static final Item SOLARPANELTOPR = register(ElecTronicsModBlocks.SOLARPANELTOPR, null);
+	public static final Item TUNGSTEN_DUST = register(new TungstenDustItem());
+	public static final Item DIAMOND_DUST = register(new DiamondDustItem());
+	public static final Item GOLD_DUST = register(new GoldDustItem());
+	public static final Item EMERALD_DUST = register(new EmeraldDustItem());
+	public static final Item COPPER_DUST = register(new CopperDustItem());
+	public static final Item QUARTZ_DUST = register(new QuartzDustItem());
 
 	private static Item register(Item item) {
 		REGISTRY.add(item);
