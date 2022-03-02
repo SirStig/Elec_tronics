@@ -104,7 +104,7 @@ public class BasecableT1BlockEntity extends RandomizableContainerBlockEntity imp
 
 	@Override
 	public Component getDisplayName() {
-		return new TextComponent("Cable Angle T1");
+		return new TextComponent("Cable T1");
 	}
 
 	@Override

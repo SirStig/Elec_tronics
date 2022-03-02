@@ -43,7 +43,7 @@
     },
     "destroyTool": "Not specified",
     "customDrop": {
-      "value": "CUSTOM:T1Wire"
+      "value": "CUSTOM:BasecableT1"
     },
     "dropAmount": 1,
     "useLootTableForDrops": false,

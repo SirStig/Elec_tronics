@@ -1,13 +1,13 @@
 modLoader="javafml"
 loaderVersion="[37,)"
-license="Academic Free License v3.0"
+license="MIT License"
 
 [[mods]]
 modId="elec_tronics"
-version="0.0.01"
+version="0.0.0.01"
 displayName="Elec Tronics"
-credits="SirJStig"
-displayURL="https://mcreator.net"
+credits="SirJStig, Mewbster9900"
+displayURL="https://github.com/SirStig/Elec_tronics"
 authors="SirJStig"
 
 [[dependencies.elec_tronics]]

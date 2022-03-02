@@ -15,6 +15,7 @@ import net.minecraft.world.item.BlockItem;
 
 import net.elec_tronics.item.UraniumIngotItem;
 import net.elec_tronics.item.UraniumDustItem;
+import net.elec_tronics.item.TurbineItem;
 import net.elec_tronics.item.TungstenOreItem;
 import net.elec_tronics.item.TungstenIngotItem;
 import net.elec_tronics.item.TungstenDustItem;
@@ -24,18 +25,25 @@ import net.elec_tronics.item.SteelpickaxeItem;
 import net.elec_tronics.item.SteelingotItem;
 import net.elec_tronics.item.SteelhoeItem;
 import net.elec_tronics.item.SteelaxeItem;
+import net.elec_tronics.item.SolarPanelItem;
 import net.elec_tronics.item.SharpenedironItem;
 import net.elec_tronics.item.ScrewdriverItem;
+import net.elec_tronics.item.RubbersleeveItem;
+import net.elec_tronics.item.RubberItem;
 import net.elec_tronics.item.QuartzDustItem;
 import net.elec_tronics.item.IrondustItem;
 import net.elec_tronics.item.InsulationItem;
 import net.elec_tronics.item.HandSawItem;
 import net.elec_tronics.item.HammerItem;
 import net.elec_tronics.item.GoldDustItem;
+import net.elec_tronics.item.GeneratorItem;
 import net.elec_tronics.item.FibgerGlassDustItem;
 import net.elec_tronics.item.EmeraldDustItem;
 import net.elec_tronics.item.DiamondDustItem;
+import net.elec_tronics.item.CopperwireItem;
 import net.elec_tronics.item.CopperDustItem;
+import net.elec_tronics.item.CoolingTowerItem;
+import net.elec_tronics.item.CondensorItem;
 import net.elec_tronics.item.AshItem;
 
 import java.util.List;
@@ -70,7 +78,7 @@ public class ElecTronicsModItems {
 	public static final Item ASH = register(new AshItem());
 	public static final Item CRUSHERMACHINE = register(ElecTronicsModBlocks.CRUSHERMACHINE, ElecTronicsModTabs.TAB_ELEC_TRONICS_MENU);
 	public static final Item IRONDUST = register(new IrondustItem());
-	public static final Item T_1_WIRE = register(ElecTronicsModBlocks.T_1_WIRE, ElecTronicsModTabs.TAB_ELEC_TRONICS_MENU);
+	public static final Item T_1_WIRE = register(ElecTronicsModBlocks.T_1_WIRE, null);
 	public static final Item CABLE_TT_1 = register(ElecTronicsModBlocks.CABLE_TT_1, null);
 	public static final Item CABLE_JUNCTION_T_1 = register(ElecTronicsModBlocks.CABLE_JUNCTION_T_1, null);
 	public static final Item CABLE_ANGLE_T_1 = register(ElecTronicsModBlocks.CABLE_ANGLE_T_1, null);
@@ -83,7 +91,7 @@ public class ElecTronicsModItems {
 	public static final Item CABLE_JUNCTION_UP_T_1 = register(ElecTronicsModBlocks.CABLE_JUNCTION_UP_T_1, null);
 	public static final Item CABLE_JUNCTION_DOWN_T_1 = register(ElecTronicsModBlocks.CABLE_JUNCTION_DOWN_T_1, null);
 	public static final Item CABLE_JUNCTION_UPAND_DOWN_T_1 = register(ElecTronicsModBlocks.CABLE_JUNCTION_UPAND_DOWN_T_1, null);
-	public static final Item BASECABLE_T_1 = register(ElecTronicsModBlocks.BASECABLE_T_1, null);
+	public static final Item BASECABLE_T_1 = register(ElecTronicsModBlocks.BASECABLE_T_1, ElecTronicsModTabs.TAB_ELEC_TRONICS_MENU);
 	public static final Item CABLEHALF_T_1 = register(ElecTronicsModBlocks.CABLEHALF_T_1, null);
 	public static final Item BASEWIRECON_2ANGLE = register(ElecTronicsModBlocks.BASEWIRECON_2ANGLE, null);
 	public static final Item BASEWIRECON_2ANGLEDOWN = register(ElecTronicsModBlocks.BASEWIRECON_2ANGLEDOWN, null);
@@ -110,6 +118,16 @@ public class ElecTronicsModItems {
 	public static final Item EMERALD_DUST = register(new EmeraldDustItem());
 	public static final Item COPPER_DUST = register(new CopperDustItem());
 	public static final Item QUARTZ_DUST = register(new QuartzDustItem());
+	public static final Item RUBBER = register(new RubberItem());
+	public static final Item COPPERWIRE = register(new CopperwireItem());
+	public static final Item EXTRUSION_MACHINE = register(ElecTronicsModBlocks.EXTRUSION_MACHINE, ElecTronicsModTabs.TAB_ELEC_TRONICS_MENU);
+	public static final Item RUBBERSLEEVE = register(new RubbersleeveItem());
+	public static final Item TURBINE = register(new TurbineItem());
+	public static final Item CONDENSOR = register(new CondensorItem());
+	public static final Item COOLING_TOWER = register(new CoolingTowerItem());
+	public static final Item GENERATOR = register(new GeneratorItem());
+	public static final Item SOLAR_PANEL = register(new SolarPanelItem());
+	public static final Item ENERGY_STORAGE_T_1 = register(ElecTronicsModBlocks.ENERGY_STORAGE_T_1, ElecTronicsModTabs.TAB_ELEC_TRONICS_MENU);
 
 	private static Item register(Item item) {
 		REGISTRY.add(item);

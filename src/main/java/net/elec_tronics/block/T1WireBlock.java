@@ -111,7 +111,7 @@ public class T1WireBlock extends Block
 		List<ItemStack> dropsOriginal = super.getDrops(state, builder);
 		if (!dropsOriginal.isEmpty())
 			return dropsOriginal;
-		return Collections.singletonList(new ItemStack(this, 1));
+		return Collections.singletonList(new ItemStack(ElecTronicsModBlocks.BASECABLE_T_1));
 	}
 
 	@Override

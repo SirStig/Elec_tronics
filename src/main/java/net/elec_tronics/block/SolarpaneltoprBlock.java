@@ -107,7 +107,7 @@ public class SolarpaneltoprBlock extends Block
 	@Override
 	public void onPlace(BlockState blockstate, Level world, BlockPos pos, BlockState oldState, boolean moving) {
 		super.onPlace(blockstate, world, pos, oldState, moving);
-		world.getBlockTicks().scheduleTick(pos, this, 200);
+		world.getBlockTicks().scheduleTick(pos, this, 1);
 	}
 
 	@Override
@@ -118,7 +118,7 @@ public class SolarpaneltoprBlock extends Block
 		int z = pos.getZ();
 
 		SolarPanelNoneUpdateTickProcedure.execute(world, x, y, z);
-		world.getBlockTicks().scheduleTick(pos, this, 200);
+		world.getBlockTicks().scheduleTick(pos, this, 1);
 	}
 
 	@Override

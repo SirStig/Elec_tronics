@@ -13,7 +13,7 @@
     "rotationMode": 2,
     "emissiveRendering": false,
     "displayFluidOverlay": false,
-    "itemTexture": "wiret1",
+    "itemTexture": "cablebase",
     "particleTexture": "",
     "tintType": "No tint",
     "isItemTinted": false,
@@ -32,18 +32,18 @@
         "subtract": false
       }
     ],
-    "name": "Cable Angle T1",
+    "name": "Cable T1",
     "specialInfo": [],
     "hardness": 1.0,
     "resistance": 10.0,
     "hasGravity": false,
     "isWaterloggable": false,
     "creativeTab": {
-      "value": "No creative tab entry"
+      "value": "CUSTOM:LovieeesTechyMod"
     },
     "destroyTool": "Not specified",
     "customDrop": {
-      "value": "CUSTOM:T1Wire"
+      "value": ""
     },
     "dropAmount": 1,
     "useLootTableForDrops": false,

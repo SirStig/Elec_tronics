@@ -1,0 +1,16 @@
+{
+  "group": "elec_tronics",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "elec_tronics:rubbersleeve"
+    },
+    {
+      "item": "elec_tronics:copperwire"
+    }
+  ],
+  "result": {
+    "item": "elec_tronics:basecable_t_1",
+    "count": 1
+  }
+}

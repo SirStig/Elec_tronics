@@ -2337,6 +2337,186 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "emeralddusttoingot"
+    },
+    {
+      "name": "Rubber",
+      "type": "item",
+      "sortid": 153,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rubber"
+    },
+    {
+      "name": "Copperwire",
+      "type": "item",
+      "sortid": 154,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "copperwire"
+    },
+    {
+      "name": "ExtrusionMachine",
+      "type": "block",
+      "sortid": 155,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "extrusion_machine",
+      "path": "~/ExtrusionMachine"
+    },
+    {
+      "name": "ExtrusinmachineGUI",
+      "type": "gui",
+      "sortid": 156,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "extrusinmachine_gui",
+      "path": "~/ExtrusionMachine"
+    },
+    {
+      "name": "ExtrusionMachineUpdateTick",
+      "type": "procedure",
+      "sortid": 157,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "extrusion_machine_update_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ExtrusionMachine"
+    },
+    {
+      "name": "Rubbersleeve",
+      "type": "item",
+      "sortid": 158,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rubbersleeve",
+      "path": "~/Wires-Pipes"
+    },
+    {
+      "name": "Rubbersleeverecipe",
+      "type": "recipe",
+      "sortid": 159,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rubbersleeverecipe",
+      "path": "~/Wires-Pipes"
+    },
+    {
+      "name": "CableT1Recipe",
+      "type": "recipe",
+      "sortid": 160,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cable_t_1_recipe",
+      "path": "~/Wires-Pipes"
+    },
+    {
+      "name": "Turbine",
+      "type": "item",
+      "sortid": 161,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "turbine",
+      "path": "~/Coal Generator"
+    },
+    {
+      "name": "Condensor",
+      "type": "item",
+      "sortid": 162,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "condensor",
+      "path": "~/Coal Generator"
+    },
+    {
+      "name": "CoolingTower",
+      "type": "item",
+      "sortid": 163,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cooling_tower",
+      "path": "~/Coal Generator"
+    },
+    {
+      "name": "Generator",
+      "type": "item",
+      "sortid": 164,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "generator",
+      "path": "~/Coal Generator"
+    },
+    {
+      "name": "Coalgeneratorrecipe",
+      "type": "recipe",
+      "sortid": 165,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "coalgeneratorrecipe",
+      "path": "~/Coal Generator"
+    },
+    {
+      "name": "Condensorrecipe",
+      "type": "recipe",
+      "sortid": 166,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "condensorrecipe",
+      "path": "~/Coal Generator"
+    },
+    {
+      "name": "Turbinerecipe",
+      "type": "recipe",
+      "sortid": 167,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "turbinerecipe",
+      "path": "~/Coal Generator"
+    },
+    {
+      "name": "Generatorrecipe",
+      "type": "recipe",
+      "sortid": 168,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "generatorrecipe",
+      "path": "~/Coal Generator"
+    },
+    {
+      "name": "SolarPanel",
+      "type": "item",
+      "sortid": 169,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "solar_panel",
+      "path": "~/Solar Panels"
+    },
+    {
+      "name": "EnergyStorageT1",
+      "type": "block",
+      "sortid": 170,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "energy_storage_t_1",
+      "path": "~/EnergyStorages"
     }
   ],
   "variable_elements": [],
@@ -2346,28 +2526,33 @@
       "item.elec_tronics.insulation": "Insulation",
       "item.elec_tronics.hand_saw": "Hand Saw",
       "item.elec_tronics.steelpickaxe": "Steel Pickaxe",
-      "item.elec_tronics.steelhoe": "Steel Hoe",
-      "item.elec_tronics.hammer": "Hammer",
       "block.elec_tronics.cable_t_upand_down_t_1": "Cable Junction T1",
+      "item.elec_tronics.hammer": "Hammer",
+      "item.elec_tronics.steelhoe": "Steel Hoe",
       "item.elec_tronics.sharpenediron": "Iron Blade",
+      "block.elec_tronics.extrusion_machine": "Extrusion Machine",
+      "item.elec_tronics.rubbersleeve": "Rubber Sleeve",
       "block.elec_tronics.basewirecon_2angleup": "Cable Angle T1",
       "item.elec_tronics.uranium_dust": "Uranium Dust",
-      "item.elec_tronics.irondust": "Iron Dust",
+      "item.elec_tronics.solar_panel": "Solar Panel",
       "item.elec_tronics.tungsten_ore": "Tungsten Ore",
-      "block.elec_tronics.basecable_t_1": "Cable Angle T1",
+      "item.elec_tronics.irondust": "Iron Dust",
+      "block.elec_tronics.basecable_t_1": "Cable T1",
       "block.elec_tronics.solarpaneltopr": "Solar Panel T1",
       "block.elec_tronics.basewirecon_3up": "Cable Angle T1",
       "item.elec_tronics.quartz_dust": "Quartz Dust",
-      "item.elec_tronics.tungsten_dust": "Uranium Dust",
+      "item.elec_tronics.tungsten_dust": "Tungsten Dust",
       "item.elec_tronics.fibger_glass_dust": "Fibger Glass Dust",
       "block.elec_tronics.engineers_work_bench_side": "Engineers Workbench Side",
       "block.elec_tronics.cable_junction_up_t_1": "Cable Junction T1",
       "block.elec_tronics.basewirecon_5main": "Cable Angle T1",
       "block.elec_tronics.tungsten": "Tungsten Ore Block",
+      "item.elec_tronics.condensor": "Condensor",
       "itemGroup.tabelec_tronics_menu": "Elec Tronics",
       "block.elec_tronics.basewirecon_3": "Cable Angle T1",
       "block.elec_tronics.engineersworkbench": "Engineers Workbench",
       "block.elec_tronics.basewirecon_2angle": "Cable Angle T1",
+      "item.elec_tronics.cooling_tower": "Cooling Tower",
       "block.elec_tronics.blastfurnancemachine": "Blast Furnance",
       "block.elec_tronics.solar_panel_t_1": "Solar Panel T1",
       "item.elec_tronics.uranium_ingot": "Uranium Ingot",
@@ -2388,11 +2573,13 @@
       "block.elec_tronics.engineers_work_bench_top_side": "Engineers Workbench Top Side",
       "block.elec_tronics.basewirecon_5down": "Cable Angle T1",
       "item.elec_tronics.steelaxe": "Steel Axe",
+      "block.elec_tronics.energy_storage_t_1": "Energy Storage T1",
       "item.elec_tronics.emerald_dust": "Emerald Dust",
       "block.elec_tronics.engineers_work_bench_top": "Engineers Workbench Top",
       "block.elec_tronics.basewirecon_4up": "Cable Angle T1",
       "block.elec_tronics.cable_junction_t_1": "Cable Junction T1",
       "block.elec_tronics.basewirecon_4down": "Cable Angle T1",
+      "item.elec_tronics.generator": "Generator",
       "block.elec_tronics.t_1_wire": "Cable T1",
       "block.elec_tronics.basewirecon_3downandup": "Cable Angle T1",
       "block.elec_tronics.basewirecon_3down": "Cable Angle T1",
@@ -2400,11 +2587,14 @@
       "block.elec_tronics.cablehalf_t_1": "Cable Angle T1",
       "item.elec_tronics.tungsten_ingot": "Tungsten Ingot",
       "block.elec_tronics.basewirecon_4upanddown": "Cable Angle T1",
+      "item.elec_tronics.copperwire": "Copperwire",
       "block.elec_tronics.waterturbinemachine": "Water Turbine",
       "block.elec_tronics.coalgeneratormachine": "Coal Generator",
       "block.elec_tronics.cable_t_down_t_1": "Cable Junction T1",
       "block.elec_tronics.cable_junction_upand_down_t_1": "Cable Junction T1",
       "block.elec_tronics.crushermachine": "Crusher T1",
+      "item.elec_tronics.turbine": "Turbine",
+      "item.elec_tronics.rubber": "Rubber",
       "item.elec_tronics.steelingot": "Steel Ingot",
       "block.elec_tronics.basewirecon_4upanddownstraight": "Cable Angle T1",
       "item.elec_tronics.gold_dust": "Gold Dust",
@@ -2466,15 +2656,24 @@
       {
         "name": "Solar Panels",
         "children": []
+      },
+      {
+        "name": "ExtrusionMachine",
+        "children": []
+      },
+      {
+        "name": "EnergyStorages",
+        "children": []
       }
     ]
   },
   "workspaceSettings": {
     "modid": "elec_tronics",
     "modName": "Elec Tronics",
-    "version": "0.0.01",
+    "version": "0.0.0.01",
     "author": "SirJStig",
-    "license": "Academic Free License v3.0",
+    "websiteURL": "https://github.com/SirStig/Elec_tronics",
+    "license": "MIT License",
     "disableForgeVersionCheck": true,
     "serverSideOnly": false,
     "requiredMods": [],
@@ -2482,7 +2681,7 @@
     "dependants": [],
     "mcreatorDependencies": [],
     "currentGenerator": "forge-1.17.1",
-    "credits": "SirJStig",
+    "credits": "SirJStig, Mewbster9900",
     "modElementsPackage": "net.elec_tronics",
     "lockBaseModFiles": false
   },

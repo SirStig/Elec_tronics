@@ -1,0 +1,25 @@
+{
+  "group": "elec_tronics",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "elec_tronics:turbine"
+    },
+    {
+      "item": "elec_tronics:cooling_tower"
+    },
+    {
+      "item": "minecraft:furnace"
+    },
+    {
+      "item": "elec_tronics:condensor"
+    },
+    {
+      "item": "elec_tronics:generator"
+    }
+  ],
+  "result": {
+    "item": "elec_tronics:coalgeneratormachine",
+    "count": 1
+  }
+}

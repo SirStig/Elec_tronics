@@ -43,6 +43,13 @@ public class SolarPanelNoneUpdateTickProcedure {
 		double xsend5 = 0;
 		double xsend4 = 0;
 		double xsend6 = 0;
+		amountOfRecievers = 0;
+		energy1 = 0;
+		energy2 = 0;
+		energy3 = 0;
+		energy4 = 0;
+		energy5 = 0;
+		energy6 = 0;
 		if ((new Object() {
 			public boolean canReceiveEnergy(LevelAccessor level, BlockPos pos) {
 				AtomicBoolean _retval = new AtomicBoolean(false);
@@ -61,7 +68,7 @@ public class SolarPanelNoneUpdateTickProcedure {
 								.ifPresent(capability -> _retval.set(capability.extractEnergy(_amount, true)));
 					return _retval.get();
 				}
-			}.extractEnergySimulate(world, new BlockPos((int) x, (int) y, (int) z), 100000);
+			}.extractEnergySimulate(world, new BlockPos((int) x, (int) y, (int) z), 10000);
 			energy1 = new Object() {
 				public int receiveEnergySimulate(LevelAccessor level, BlockPos pos, int _amount) {
 					AtomicInteger _retval = new AtomicInteger(0);
@@ -98,7 +105,7 @@ public class SolarPanelNoneUpdateTickProcedure {
 								.ifPresent(capability -> _retval.set(capability.extractEnergy(_amount, true)));
 					return _retval.get();
 				}
-			}.extractEnergySimulate(world, new BlockPos((int) x, (int) y, (int) z), 100000);
+			}.extractEnergySimulate(world, new BlockPos((int) x, (int) y, (int) z), 10000);
 			energy2 = new Object() {
 				public int receiveEnergySimulate(LevelAccessor level, BlockPos pos, int _amount) {
 					AtomicInteger _retval = new AtomicInteger(0);
@@ -135,7 +142,7 @@ public class SolarPanelNoneUpdateTickProcedure {
 								.ifPresent(capability -> _retval.set(capability.extractEnergy(_amount, true)));
 					return _retval.get();
 				}
-			}.extractEnergySimulate(world, new BlockPos((int) x, (int) y, (int) z), 100000);
+			}.extractEnergySimulate(world, new BlockPos((int) x, (int) y, (int) z), 10000);
 			energy3 = new Object() {
 				public int receiveEnergySimulate(LevelAccessor level, BlockPos pos, int _amount) {
 					AtomicInteger _retval = new AtomicInteger(0);
@@ -172,7 +179,7 @@ public class SolarPanelNoneUpdateTickProcedure {
 								.ifPresent(capability -> _retval.set(capability.extractEnergy(_amount, true)));
 					return _retval.get();
 				}
-			}.extractEnergySimulate(world, new BlockPos((int) x, (int) y, (int) z), 100000);
+			}.extractEnergySimulate(world, new BlockPos((int) x, (int) y, (int) z), 10000);
 			energy4 = new Object() {
 				public int receiveEnergySimulate(LevelAccessor level, BlockPos pos, int _amount) {
 					AtomicInteger _retval = new AtomicInteger(0);
@@ -209,7 +216,7 @@ public class SolarPanelNoneUpdateTickProcedure {
 								.ifPresent(capability -> _retval.set(capability.extractEnergy(_amount, true)));
 					return _retval.get();
 				}
-			}.extractEnergySimulate(world, new BlockPos((int) x, (int) y, (int) z), 100000);
+			}.extractEnergySimulate(world, new BlockPos((int) x, (int) y, (int) z), 10000);
 			energy5 = new Object() {
 				public int receiveEnergySimulate(LevelAccessor level, BlockPos pos, int _amount) {
 					AtomicInteger _retval = new AtomicInteger(0);
@@ -246,7 +253,7 @@ public class SolarPanelNoneUpdateTickProcedure {
 								.ifPresent(capability -> _retval.set(capability.extractEnergy(_amount, true)));
 					return _retval.get();
 				}
-			}.extractEnergySimulate(world, new BlockPos((int) x, (int) y, (int) z), 100000);
+			}.extractEnergySimulate(world, new BlockPos((int) x, (int) y, (int) z), 10000);
 			energy6 = new Object() {
 				public int receiveEnergySimulate(LevelAccessor level, BlockPos pos, int _amount) {
 					AtomicInteger _retval = new AtomicInteger(0);
@@ -265,53 +272,94 @@ public class SolarPanelNoneUpdateTickProcedure {
 		} else {
 			send6 = false;
 		}
-		amountToSend = (energy1 + energy2 + energy3 + energy4 + energy5 + energy6) / amountOfRecievers;
+		energy1 = energy1 / amountOfRecievers;
+		energy2 = energy2 / amountOfRecievers;
+		energy3 = energy3 / amountOfRecievers;
+		energy4 = energy4 / amountOfRecievers;
+		energy5 = energy5 / amountOfRecievers;
+		energy6 = energy6 / amountOfRecievers;
 		if (send == true) {
 			{
 				BlockEntity _ent = world.getBlockEntity(new BlockPos((int) xsend, (int) ysend, (int) zsend));
-				int _amount = (int) amountToSend;
+				int _amount = (int) energy1;
 				if (_ent != null)
 					_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> capability.receiveEnergy(_amount, false));
+			}
+			{
+				BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) y, (int) z));
+				int _amount = (int) energy1;
+				if (_ent != null)
+					_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> capability.extractEnergy(_amount, false));
 			}
 		}
 		if (send2 == true) {
 			{
 				BlockEntity _ent = world.getBlockEntity(new BlockPos((int) xsend2, (int) ysend2, (int) zsend2));
-				int _amount = (int) amountToSend;
+				int _amount = (int) energy2;
 				if (_ent != null)
 					_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> capability.receiveEnergy(_amount, false));
+			}
+			{
+				BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) y, (int) z));
+				int _amount = (int) energy2;
+				if (_ent != null)
+					_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> capability.extractEnergy(_amount, false));
 			}
 		}
 		if (send3 == true) {
 			{
 				BlockEntity _ent = world.getBlockEntity(new BlockPos((int) xsend3, (int) ysend3, (int) zsend3));
-				int _amount = (int) amountToSend;
+				int _amount = (int) energy3;
 				if (_ent != null)
 					_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> capability.receiveEnergy(_amount, false));
+			}
+			{
+				BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) y, (int) z));
+				int _amount = (int) energy3;
+				if (_ent != null)
+					_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> capability.extractEnergy(_amount, false));
 			}
 		}
 		if (send4 == true) {
 			{
 				BlockEntity _ent = world.getBlockEntity(new BlockPos((int) xsend4, (int) ysend4, (int) zsend4));
-				int _amount = (int) amountToSend;
+				int _amount = (int) energy4;
 				if (_ent != null)
 					_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> capability.receiveEnergy(_amount, false));
+			}
+			{
+				BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) y, (int) z));
+				int _amount = (int) energy4;
+				if (_ent != null)
+					_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> capability.extractEnergy(_amount, false));
 			}
 		}
 		if (send5 == true) {
 			{
 				BlockEntity _ent = world.getBlockEntity(new BlockPos((int) xsend5, (int) ysend5, (int) zsend5));
-				int _amount = (int) amountToSend;
+				int _amount = (int) energy5;
 				if (_ent != null)
 					_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> capability.receiveEnergy(_amount, false));
+			}
+			{
+				BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) y, (int) z));
+				int _amount = (int) energy5;
+				if (_ent != null)
+					_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> capability.extractEnergy(_amount, false));
 			}
 		}
 		if (send6 == true) {
 			{
 				BlockEntity _ent = world.getBlockEntity(new BlockPos((int) xsend6, (int) ysend6, (int) zsend6));
-				int _amount = (int) amountToSend;
+				int _amount = (int) energy6;
 				if (_ent != null)
 					_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> capability.receiveEnergy(_amount, false));
+			}
+			{
+				BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) y, (int) z));
+				int _amount = (int) energy6;
+				if (_ent != null)
+					_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> capability.extractEnergy(_amount, false));
 			}
 		}
 	}

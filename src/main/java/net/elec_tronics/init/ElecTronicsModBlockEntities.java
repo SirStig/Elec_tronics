@@ -16,7 +16,9 @@ import net.elec_tronics.block.entity.SolarpaneltoprBlockEntity;
 import net.elec_tronics.block.entity.SolarpaneltopBlockEntity;
 import net.elec_tronics.block.entity.SolarPanelrBlockEntity;
 import net.elec_tronics.block.entity.SolarPanelT1BlockEntity;
+import net.elec_tronics.block.entity.ExtrusionMachineBlockEntity;
 import net.elec_tronics.block.entity.EngineersworkbenchBlockEntity;
+import net.elec_tronics.block.entity.EnergyStorageT1BlockEntity;
 import net.elec_tronics.block.entity.CrushermachineBlockEntity;
 import net.elec_tronics.block.entity.CoalgeneratormachineBlockEntity;
 import net.elec_tronics.block.entity.CablehalfT1BlockEntity;
@@ -122,6 +124,10 @@ public class ElecTronicsModBlockEntities {
 			SolarpaneltopBlockEntity::new);
 	public static final BlockEntityType<?> SOLARPANELTOPR = register("elec_tronics:solarpaneltopr", ElecTronicsModBlocks.SOLARPANELTOPR,
 			SolarpaneltoprBlockEntity::new);
+	public static final BlockEntityType<?> EXTRUSION_MACHINE = register("elec_tronics:extrusion_machine", ElecTronicsModBlocks.EXTRUSION_MACHINE,
+			ExtrusionMachineBlockEntity::new);
+	public static final BlockEntityType<?> ENERGY_STORAGE_T_1 = register("elec_tronics:energy_storage_t_1", ElecTronicsModBlocks.ENERGY_STORAGE_T_1,
+			EnergyStorageT1BlockEntity::new);
 
 	private static BlockEntityType<?> register(String registryname, Block block, BlockEntityType.BlockEntitySupplier<?> supplier) {
 		BlockEntityType<?> blockEntityType = BlockEntityType.Builder.of(supplier, block).build(null).setRegistryName(registryname);

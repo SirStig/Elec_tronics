@@ -1,0 +1,46 @@
+{
+  "_fv": 24,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 1,
+    "group": "elec_tronics",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:Sharpenediron"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:Sharpenediron"
+      },
+      {
+        "value": "Items.IRON_INGOT"
+      },
+      {
+        "value": "CUSTOM:Sharpenediron"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:Sharpenediron"
+      },
+      {
+        "value": ""
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:Turbine"
+    },
+    "name": "turbinerecipe",
+    "namespace": "mod"
+  }
+}
