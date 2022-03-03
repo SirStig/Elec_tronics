@@ -10,37 +10,37 @@
     "recipeShapeless": false,
     "recipeSlots": [
       {
-        "value": ""
+        "value": "Items.IRON_INGOT"
       },
       {
         "value": "Items.IRON_INGOT"
       },
       {
-        "value": ""
+        "value": "Items.IRON_INGOT"
       },
       {
-        "value": "CUSTOM:Sharpenediron"
+        "value": "CUSTOM:Condensor"
       },
       {
-        "value": "CUSTOM:Irongear"
+        "value": "CUSTOM:Condensor"
       },
       {
-        "value": "CUSTOM:Sharpenediron"
-      },
-      {
-        "value": ""
+        "value": "CUSTOM:Condensor"
       },
       {
         "value": "Items.IRON_INGOT"
       },
       {
-        "value": ""
+        "value": "Items.WATER_BUCKET"
+      },
+      {
+        "value": "Items.IRON_INGOT"
       }
     ],
     "recipeReturnStack": {
-      "value": "CUSTOM:Turbine"
+      "value": "CUSTOM:CoolingTower"
     },
-    "name": "turbinerecipe",
+    "name": "coolingtowerrecipe",
     "namespace": "mod"
   }
 }

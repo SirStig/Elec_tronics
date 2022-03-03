@@ -19,13 +19,13 @@
         "value": ""
       },
       {
-        "value": "CUSTOM:Sharpenediron"
+        "value": "Items.IRON_INGOT"
       },
       {
-        "value": "CUSTOM:Irongear"
+        "value": "Items.STICK"
       },
       {
-        "value": "CUSTOM:Sharpenediron"
+        "value": "Items.IRON_INGOT"
       },
       {
         "value": ""
@@ -38,9 +38,9 @@
       }
     ],
     "recipeReturnStack": {
-      "value": "CUSTOM:Turbine"
+      "value": "CUSTOM:Irongear"
     },
-    "name": "turbinerecipe",
+    "name": "iron_gear_recipe",
     "namespace": "mod"
   }
 }

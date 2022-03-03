@@ -4,7 +4,7 @@
   "definition": {
     "name": "Elec Tronics",
     "icon": {
-      "value": "CUSTOM:UraniumIngot"
+      "value": "CUSTOM:Engineersworkbench"
     },
     "showSearch": true
   }

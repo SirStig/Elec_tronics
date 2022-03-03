@@ -3,9 +3,9 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "iron_bla",
+    "texture": "irongear",
     "customModelName": "Normal",
-    "name": "Iron Blade",
+    "name": "Iron Gear",
     "rarity": "COMMON",
     "creativeTab": {
       "value": "CUSTOM:LovieeesTechyMod"

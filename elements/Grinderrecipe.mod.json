@@ -13,7 +13,7 @@
         "value": ""
       },
       {
-        "value": "Items.IRON_INGOT"
+        "value": "CUSTOM:Sharpenediron"
       },
       {
         "value": ""
@@ -31,16 +31,16 @@
         "value": ""
       },
       {
-        "value": "Items.IRON_INGOT"
+        "value": "CUSTOM:Sharpenediron"
       },
       {
         "value": ""
       }
     ],
     "recipeReturnStack": {
-      "value": "CUSTOM:Turbine"
+      "value": "CUSTOM:Grinder"
     },
-    "name": "turbinerecipe",
+    "name": "grinderrecipe",
     "namespace": "mod"
   }
 }

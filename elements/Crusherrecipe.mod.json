@@ -10,37 +10,37 @@
     "recipeShapeless": false,
     "recipeSlots": [
       {
-        "value": ""
+        "value": "Items.IRON_INGOT"
+      },
+      {
+        "value": "CUSTOM:OreFunnel"
       },
       {
         "value": "Items.IRON_INGOT"
       },
       {
-        "value": ""
+        "value": "CUSTOM:Copperwire"
       },
       {
-        "value": "CUSTOM:Sharpenediron"
+        "value": "CUSTOM:Electricmotor"
       },
       {
-        "value": "CUSTOM:Irongear"
-      },
-      {
-        "value": "CUSTOM:Sharpenediron"
-      },
-      {
-        "value": ""
+        "value": "CUSTOM:Copperwire"
       },
       {
         "value": "Items.IRON_INGOT"
       },
       {
-        "value": ""
+        "value": "CUSTOM:Grinder"
+      },
+      {
+        "value": "Items.IRON_INGOT"
       }
     ],
     "recipeReturnStack": {
-      "value": "CUSTOM:Turbine"
+      "value": "CUSTOM:Crushermachine"
     },
-    "name": "turbinerecipe",
+    "name": "crusherrecipe",
     "namespace": "mod"
   }
 }

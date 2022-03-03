@@ -8,7 +8,7 @@
   ],
   "key": {
     "1": {
-      "item": "minecraft:iron_ingot"
+      "item": "elec_tronics:sharpenediron"
     },
     "3": {
       "item": "elec_tronics:sharpenediron"
@@ -20,11 +20,11 @@
       "item": "elec_tronics:sharpenediron"
     },
     "7": {
-      "item": "minecraft:iron_ingot"
+      "item": "elec_tronics:sharpenediron"
     }
   },
   "result": {
-    "item": "elec_tronics:turbine",
+    "item": "elec_tronics:grinder",
     "count": 1
   }
 }

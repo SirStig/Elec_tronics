@@ -10,22 +10,22 @@
     "recipeShapeless": false,
     "recipeSlots": [
       {
-        "value": ""
-      },
-      {
         "value": "Items.IRON_INGOT"
       },
       {
         "value": ""
       },
       {
-        "value": "CUSTOM:Sharpenediron"
+        "value": "Items.IRON_INGOT"
       },
       {
-        "value": "CUSTOM:Irongear"
+        "value": "Items.IRON_NUGGET"
       },
       {
-        "value": "CUSTOM:Sharpenediron"
+        "value": ""
+      },
+      {
+        "value": "Items.IRON_NUGGET"
       },
       {
         "value": ""
@@ -38,9 +38,9 @@
       }
     ],
     "recipeReturnStack": {
-      "value": "CUSTOM:Turbine"
+      "value": "CUSTOM:OreFunnel"
     },
-    "name": "turbinerecipe",
+    "name": "ore_funnel_recipe",
     "namespace": "mod"
   }
 }

@@ -10,37 +10,37 @@
     "recipeShapeless": false,
     "recipeSlots": [
       {
-        "value": ""
+        "value": "Items.IRON_INGOT"
+      },
+      {
+        "value": "Items.COPPER_INGOT"
       },
       {
         "value": "Items.IRON_INGOT"
       },
       {
-        "value": ""
-      },
-      {
-        "value": "CUSTOM:Sharpenediron"
+        "value": "Items.COPPER_INGOT"
       },
       {
         "value": "CUSTOM:Irongear"
       },
       {
-        "value": "CUSTOM:Sharpenediron"
-      },
-      {
-        "value": ""
+        "value": "Items.COPPER_INGOT"
       },
       {
         "value": "Items.IRON_INGOT"
       },
       {
-        "value": ""
+        "value": "Items.COPPER_INGOT"
+      },
+      {
+        "value": "Items.IRON_INGOT"
       }
     ],
     "recipeReturnStack": {
-      "value": "CUSTOM:Turbine"
+      "value": "CUSTOM:Electricmotor"
     },
-    "name": "turbinerecipe",
+    "name": "electric_motor_recipe",
     "namespace": "mod"
   }
 }

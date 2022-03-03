@@ -31,14 +31,18 @@ import net.elec_tronics.item.ScrewdriverItem;
 import net.elec_tronics.item.RubbersleeveItem;
 import net.elec_tronics.item.RubberItem;
 import net.elec_tronics.item.QuartzDustItem;
+import net.elec_tronics.item.OreFunnelItem;
+import net.elec_tronics.item.IrongearItem;
 import net.elec_tronics.item.IrondustItem;
 import net.elec_tronics.item.InsulationItem;
 import net.elec_tronics.item.HandSawItem;
 import net.elec_tronics.item.HammerItem;
+import net.elec_tronics.item.GrinderItem;
 import net.elec_tronics.item.GoldDustItem;
 import net.elec_tronics.item.GeneratorItem;
 import net.elec_tronics.item.FibgerGlassDustItem;
 import net.elec_tronics.item.EmeraldDustItem;
+import net.elec_tronics.item.ElectricmotorItem;
 import net.elec_tronics.item.DiamondDustItem;
 import net.elec_tronics.item.CopperwireItem;
 import net.elec_tronics.item.CopperDustItem;
@@ -128,6 +132,10 @@ public class ElecTronicsModItems {
 	public static final Item GENERATOR = register(new GeneratorItem());
 	public static final Item SOLAR_PANEL = register(new SolarPanelItem());
 	public static final Item ENERGY_STORAGE_T_1 = register(ElecTronicsModBlocks.ENERGY_STORAGE_T_1, ElecTronicsModTabs.TAB_ELEC_TRONICS_MENU);
+	public static final Item ELECTRICMOTOR = register(new ElectricmotorItem());
+	public static final Item ORE_FUNNEL = register(new OreFunnelItem());
+	public static final Item GRINDER = register(new GrinderItem());
+	public static final Item IRONGEAR = register(new IrongearItem());
 
 	private static Item register(Item item) {
 		REGISTRY.add(item);

@@ -2,29 +2,29 @@
   "group": "elec_tronics",
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    " 1 ",
-    "345",
+    "0 2",
+    "3 5",
     " 7 "
   ],
   "key": {
-    "1": {
+    "0": {
+      "item": "minecraft:iron_ingot"
+    },
+    "2": {
       "item": "minecraft:iron_ingot"
     },
     "3": {
-      "item": "elec_tronics:sharpenediron"
-    },
-    "4": {
-      "item": "elec_tronics:irongear"
+      "item": "minecraft:iron_nugget"
     },
     "5": {
-      "item": "elec_tronics:sharpenediron"
+      "item": "minecraft:iron_nugget"
     },
     "7": {
       "item": "minecraft:iron_ingot"
     }
   },
   "result": {
-    "item": "elec_tronics:turbine",
+    "item": "elec_tronics:ore_funnel",
     "count": 1
   }
 }
