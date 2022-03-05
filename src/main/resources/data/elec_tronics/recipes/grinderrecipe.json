@@ -14,7 +14,7 @@
       "item": "elec_tronics:sharpenediron"
     },
     "4": {
-      "item": "elec_tronics:deleted_mod_element"
+      "item": "elec_tronics:irongear"
     },
     "5": {
       "item": "elec_tronics:sharpenediron"
@@ -24,7 +24,7 @@
     }
   },
   "result": {
-    "item": "elec_tronics:deleted_mod_element",
+    "item": "elec_tronics:grinder",
     "count": 1
   }
 }

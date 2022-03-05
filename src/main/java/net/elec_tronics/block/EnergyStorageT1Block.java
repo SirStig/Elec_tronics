@@ -1,18 +1,36 @@
 
 package net.elec_tronics.block;
 
+import net.minecraft.world.level.storage.loot.LootContext;
 import net.minecraft.world.level.material.Material;
-import net.minecraft.sounds.SoundEvent;
-import net.minecraft.world.level.block.state.BlockBehaviour.Properties;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.EntityBlock;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.inventory.AbstractContainerMenu;
+import net.minecraft.world.MenuProvider;
+import net.minecraft.world.Containers;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.core.BlockPos;
+
+import net.elec_tronics.procedures.T1WireUpdateTickProcedure;
+import net.elec_tronics.block.entity.EnergyStorageT1BlockEntity;
+
+import java.util.Random;
+import java.util.List;
+import java.util.Collections;
 
 public class EnergyStorageT1Block extends Block
 		implements
 
 			EntityBlock {
-
 	public EnergyStorageT1Block() {
 		super(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.METAL).strength(4f, 10f));
-
 		setRegistryName("energy_storage_t_1");
 	}
 
@@ -23,7 +41,6 @@ public class EnergyStorageT1Block extends Block
 
 	@Override
 	public List<ItemStack> getDrops(BlockState state, LootContext.Builder builder) {
-
 		List<ItemStack> dropsOriginal = super.getDrops(state, builder);
 		if (!dropsOriginal.isEmpty())
 			return dropsOriginal;
@@ -44,7 +61,6 @@ public class EnergyStorageT1Block extends Block
 		int z = pos.getZ();
 
 		T1WireUpdateTickProcedure.execute(world, x, y, z);
-
 		world.getBlockTicks().scheduleTick(pos, this, 1);
 	}
 
@@ -74,7 +90,6 @@ public class EnergyStorageT1Block extends Block
 				Containers.dropContents(world, pos, be);
 				world.updateNeighbourForOutputSignal(pos, this);
 			}
-
 			super.onRemove(state, world, pos, newState, isMoving);
 		}
 	}
@@ -92,5 +107,4 @@ public class EnergyStorageT1Block extends Block
 		else
 			return 0;
 	}
-
 }
