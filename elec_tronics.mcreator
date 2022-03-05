@@ -2799,19 +2799,7 @@
     "name": "~",
     "children": [
       {
-        "name": "ModSupport",
-        "children": []
-      },
-      {
-        "name": "Ores-Ingots-Dusts",
-        "children": []
-      },
-      {
-        "name": "CrusherT1-T4",
-        "children": []
-      },
-      {
-        "name": "Fuelburningfunctions",
+        "name": "Solar Panels",
         "children": []
       },
       {
@@ -2823,7 +2811,7 @@
         "children": []
       },
       {
-        "name": "Machines Recipes",
+        "name": "integrations",
         "children": []
       },
       {
@@ -2843,11 +2831,27 @@
         "children": []
       },
       {
-        "name": "BlastFurnace",
+        "name": "ModSupport",
         "children": []
       },
       {
-        "name": "Solar Panels",
+        "name": "Ores-Ingots-Dusts",
+        "children": []
+      },
+      {
+        "name": "CrusherT1-T4",
+        "children": []
+      },
+      {
+        "name": "Fuelburningfunctions",
+        "children": []
+      },
+      {
+        "name": "Components",
+        "children": []
+      },
+      {
+        "name": "Machines Recipes",
         "children": []
       },
       {
@@ -2859,11 +2863,7 @@
         "children": []
       },
       {
-        "name": "Components",
-        "children": []
-      },
-      {
-        "name": "integrations",
+        "name": "BlastFurnace",
         "children": []
       }
     ]

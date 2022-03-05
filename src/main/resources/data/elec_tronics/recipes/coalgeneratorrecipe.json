@@ -6,16 +6,16 @@
       "item": "elec_tronics:turbine"
     },
     {
-      "item": "elec_tronics:cooling_tower"
+      "item": "elec_tronics:deleted_mod_element"
     },
     {
       "item": "minecraft:furnace"
     },
     {
-      "item": "elec_tronics:condensor"
+      "item": "elec_tronics:deleted_mod_element"
     },
     {
-      "item": "elec_tronics:generator"
+      "item": "elec_tronics:deleted_mod_element"
     }
   ],
   "result": {
