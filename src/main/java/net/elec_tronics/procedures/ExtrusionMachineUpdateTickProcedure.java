@@ -8,7 +8,6 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.core.BlockPos;
 
@@ -48,7 +47,7 @@ public class ExtrusionMachineUpdateTickProcedure {
 					}
 					return _retval.get();
 				}
-			}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 0)).getItem() == Items.COPPER_INGOT && ((new Object() {
+			}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 0)).getItem() == ElecTronicsModItems.COPPER_SHEET && ((new Object() {
 				public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
 					AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 					BlockEntity _ent = world.getBlockEntity(pos);

@@ -94,7 +94,7 @@
       "type": "recipe",
       "sortid": 11,
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "blast_furnance",
       "path": "~/BlastFurnace"
     },
@@ -1656,6 +1656,10 @@
       "metadata": {
         "dependencies": [
           {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
             "name": "x",
             "type": "number"
           },
@@ -2031,7 +2035,7 @@
       "type": "procedure",
       "sortid": 131,
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "solar_panel_t_1_block_added",
       "metadata": {
         "dependencies": [
@@ -2612,6 +2616,93 @@
       "locked_code": false,
       "registry_name": "iron_gear_recipe",
       "path": "~/Item Recipes"
+    },
+    {
+      "name": "CopperSheet",
+      "type": "item",
+      "sortid": 180,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "copper_sheet",
+      "path": "~/Components"
+    },
+    {
+      "name": "ExtrusionDie",
+      "type": "item",
+      "sortid": 181,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "extrusion_die",
+      "path": "~/Components"
+    },
+    {
+      "name": "Extrusiondie",
+      "type": "recipe",
+      "sortid": 181,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "extrusiondie",
+      "path": "~/Item Recipes"
+    },
+    {
+      "name": "WireRoller",
+      "type": "item",
+      "sortid": 182,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wire_roller",
+      "path": "~/Components"
+    },
+    {
+      "name": "ExtrusionMachineRecipe",
+      "type": "recipe",
+      "sortid": 183,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "extrusion_machine_recipe",
+      "path": "~/ExtrusionMachine"
+    },
+    {
+      "name": "EngineersworkbenchPlayerStartsToDestroy",
+      "type": "procedure",
+      "sortid": 184,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "engineersworkbench_player_starts_to_destroy",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Engineers Workbench"
+    },
+    {
+      "name": "JEIPlugin",
+      "type": "code",
+      "sortid": 185,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "jei_plugin",
+      "path": "~/integrations"
     }
   ],
   "variable_elements": [],
@@ -2624,9 +2715,9 @@
       "block.elec_tronics.cable_t_upand_down_t_1": "Cable Junction T1",
       "item.elec_tronics.hammer": "Hammer",
       "item.elec_tronics.steelhoe": "Steel Hoe",
-      "item.elec_tronics.sharpenediron": "Iron Blade",
-      "block.elec_tronics.extrusion_machine": "Extrusion Machine",
       "item.elec_tronics.rubbersleeve": "Rubber Sleeve",
+      "block.elec_tronics.extrusion_machine": "Extrusion Machine",
+      "item.elec_tronics.sharpenediron": "Iron Blade",
       "block.elec_tronics.basewirecon_2angleup": "Cable Angle T1",
       "item.elec_tronics.uranium_dust": "Uranium Dust",
       "item.elec_tronics.solar_panel": "Solar Panel",
@@ -2634,6 +2725,7 @@
       "item.elec_tronics.irondust": "Iron Dust",
       "block.elec_tronics.basecable_t_1": "Cable T1",
       "block.elec_tronics.solarpaneltopr": "Solar Panel T1",
+      "item.elec_tronics.wire_roller": "Wire Roller",
       "block.elec_tronics.basewirecon_3up": "Cable Angle T1",
       "item.elec_tronics.quartz_dust": "Quartz Dust",
       "item.elec_tronics.tungsten_dust": "Tungsten Dust",
@@ -2641,6 +2733,7 @@
       "block.elec_tronics.engineers_work_bench_side": "Engineers Workbench Side",
       "block.elec_tronics.cable_junction_up_t_1": "Cable Junction T1",
       "block.elec_tronics.basewirecon_5main": "Cable Angle T1",
+      "item.elec_tronics.copper_sheet": "Copper Sheet",
       "item.elec_tronics.ore_funnel": "Ore Funnel",
       "block.elec_tronics.tungsten": "Tungsten Ore Block",
       "item.elec_tronics.condensor": "Condensor",
@@ -2678,6 +2771,7 @@
       "block.elec_tronics.basewirecon_4up": "Cable Angle T1",
       "block.elec_tronics.cable_junction_t_1": "Cable Junction T1",
       "block.elec_tronics.basewirecon_4down": "Cable Angle T1",
+      "item.elec_tronics.extrusion_die": "Extrusion Die",
       "item.elec_tronics.generator": "Generator",
       "block.elec_tronics.t_1_wire": "Cable T1",
       "block.elec_tronics.basewirecon_3downandup": "Cable Angle T1",
@@ -2766,6 +2860,10 @@
       },
       {
         "name": "Components",
+        "children": []
+      },
+      {
+        "name": "integrations",
         "children": []
       }
     ]

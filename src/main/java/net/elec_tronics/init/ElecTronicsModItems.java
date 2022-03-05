@@ -13,6 +13,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.BlockItem;
 
+import net.elec_tronics.item.WireRollerItem;
 import net.elec_tronics.item.UraniumIngotItem;
 import net.elec_tronics.item.UraniumDustItem;
 import net.elec_tronics.item.TurbineItem;
@@ -45,6 +46,7 @@ import net.elec_tronics.item.EmeraldDustItem;
 import net.elec_tronics.item.ElectricmotorItem;
 import net.elec_tronics.item.DiamondDustItem;
 import net.elec_tronics.item.CopperwireItem;
+import net.elec_tronics.item.CopperSheetItem;
 import net.elec_tronics.item.CopperDustItem;
 import net.elec_tronics.item.CoolingTowerItem;
 import net.elec_tronics.item.CondensorItem;
@@ -136,6 +138,8 @@ public class ElecTronicsModItems {
 	public static final Item ORE_FUNNEL = register(new OreFunnelItem());
 	public static final Item GRINDER = register(new GrinderItem());
 	public static final Item IRONGEAR = register(new IrongearItem());
+	public static final Item COPPER_SHEET = register(new CopperSheetItem());
+	public static final Item WIRE_ROLLER = register(new WireRollerItem());
 
 	private static Item register(Item item) {
 		REGISTRY.add(item);

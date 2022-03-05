@@ -1,0 +1,30 @@
+{
+  "group": "elec_tronics",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0  ",
+    "345",
+    "6  "
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:iron_ingot"
+    },
+    "3": {
+      "item": "minecraft:iron_ingot"
+    },
+    "4": {
+      "item": "minecraft:iron_ingot"
+    },
+    "5": {
+      "item": "minecraft:iron_nugget"
+    },
+    "6": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "result": {
+    "item": "elec_tronics:extrusion_die",
+    "count": 1
+  }
+}

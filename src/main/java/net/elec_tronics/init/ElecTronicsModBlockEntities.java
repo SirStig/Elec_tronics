@@ -18,6 +18,9 @@ import net.elec_tronics.block.entity.SolarPanelrBlockEntity;
 import net.elec_tronics.block.entity.SolarPanelT1BlockEntity;
 import net.elec_tronics.block.entity.ExtrusionMachineBlockEntity;
 import net.elec_tronics.block.entity.EngineersworkbenchBlockEntity;
+import net.elec_tronics.block.entity.EngineersWorkBenchTopSideBlockEntity;
+import net.elec_tronics.block.entity.EngineersWorkBenchTopBlockEntity;
+import net.elec_tronics.block.entity.EngineersWorkBenchSideBlockEntity;
 import net.elec_tronics.block.entity.EnergyStorageT1BlockEntity;
 import net.elec_tronics.block.entity.CrushermachineBlockEntity;
 import net.elec_tronics.block.entity.CoalgeneratormachineBlockEntity;
@@ -70,6 +73,12 @@ public class ElecTronicsModBlockEntities {
 			CableJunctionT1BlockEntity::new);
 	public static final BlockEntityType<?> CABLE_ANGLE_T_1 = register("elec_tronics:cable_angle_t_1", ElecTronicsModBlocks.CABLE_ANGLE_T_1,
 			CableAngleT1BlockEntity::new);
+	public static final BlockEntityType<?> ENGINEERS_WORK_BENCH_SIDE = register("elec_tronics:engineers_work_bench_side",
+			ElecTronicsModBlocks.ENGINEERS_WORK_BENCH_SIDE, EngineersWorkBenchSideBlockEntity::new);
+	public static final BlockEntityType<?> ENGINEERS_WORK_BENCH_TOP = register("elec_tronics:engineers_work_bench_top",
+			ElecTronicsModBlocks.ENGINEERS_WORK_BENCH_TOP, EngineersWorkBenchTopBlockEntity::new);
+	public static final BlockEntityType<?> ENGINEERS_WORK_BENCH_TOP_SIDE = register("elec_tronics:engineers_work_bench_top_side",
+			ElecTronicsModBlocks.ENGINEERS_WORK_BENCH_TOP_SIDE, EngineersWorkBenchTopSideBlockEntity::new);
 	public static final BlockEntityType<?> CABLE_T_UP_T_1 = register("elec_tronics:cable_t_up_t_1", ElecTronicsModBlocks.CABLE_T_UP_T_1,
 			CableTUpT1BlockEntity::new);
 	public static final BlockEntityType<?> CABLE_T_DOWN_T_1 = register("elec_tronics:cable_t_down_t_1", ElecTronicsModBlocks.CABLE_T_DOWN_T_1,

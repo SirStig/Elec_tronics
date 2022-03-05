@@ -32,8 +32,8 @@
             "falpha": 0.0
           },
           "name": "Crusher Tier 1",
-          "x": 129,
-          "y": 41
+          "x": 221,
+          "y": 42
         }
       },
       {
@@ -46,8 +46,8 @@
           "disableStackInteraction": false,
           "dropItemsWhenNotBound": false,
           "name": "Slot #0",
-          "x": 176,
-          "y": 71
+          "x": 193,
+          "y": 58
         }
       },
       {
@@ -57,151 +57,8 @@
           "disableStackInteraction": false,
           "dropItemsWhenNotBound": true,
           "name": "Slot #1",
-          "x": 231,
-          "y": 71
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "furnace_gui_1.png",
-          "use1Xscale": true,
-          "displayCondition": {
-            "name": "CraftingTime0"
-          },
-          "name": "furnace_gui_1.png",
-          "x": 200,
-          "y": 71
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "arrow9.png",
-          "use1Xscale": true,
-          "displayCondition": {
-            "name": "CraftingTime1"
-          },
-          "name": "arrow9.png",
-          "x": 197,
-          "y": 72
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "arrow8.png",
-          "use1Xscale": true,
-          "displayCondition": {
-            "name": "Craftingtime2"
-          },
-          "name": "arrow8.png",
-          "x": 197,
-          "y": 72
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "arrow7.png",
-          "use1Xscale": true,
-          "displayCondition": {
-            "name": "Craftingtime3"
-          },
-          "name": "arrow7.png",
-          "x": 197,
-          "y": 72
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "arrow6.png",
-          "use1Xscale": true,
-          "displayCondition": {
-            "name": "Craftingtime4"
-          },
-          "name": "arrow6.png",
-          "x": 197,
-          "y": 72
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "arrow5.png",
-          "use1Xscale": true,
-          "displayCondition": {
-            "name": "Craftingtime5"
-          },
-          "name": "arrow5.png",
-          "x": 197,
-          "y": 72
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "arrow4.png",
-          "use1Xscale": true,
-          "displayCondition": {
-            "name": "Fuelburning6"
-          },
-          "name": "arrow4.png",
-          "x": 197,
-          "y": 72
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "arrow3.png",
-          "use1Xscale": true,
-          "displayCondition": {
-            "name": "Craftingtie7"
-          },
-          "name": "arrow3.png",
-          "x": 197,
-          "y": 72
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "arrow2.png",
-          "use1Xscale": true,
-          "displayCondition": {
-            "name": "Craftingtime8"
-          },
-          "name": "arrow2.png",
-          "x": 197,
-          "y": 72
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "arrow1.png",
-          "use1Xscale": true,
-          "displayCondition": {
-            "name": "Craftingtime9"
-          },
-          "name": "arrow1.png",
-          "x": 197,
-          "y": 72
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "2474b6354f6757ab86373259b87a2ad3_1.png",
-          "use1Xscale": true,
-          "displayCondition": {
-            "name": "Craftingtime10"
-          },
-          "name": "2474b6354f6757ab86373259b87a2ad3_1.png",
-          "x": 198,
-          "y": 70
+          "x": 222,
+          "y": 82
         }
       },
       {
