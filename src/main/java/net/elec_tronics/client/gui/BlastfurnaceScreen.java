@@ -151,6 +151,25 @@ public class BlastfurnaceScreen extends AbstractContainerScreen<BlastfurnaceMenu
 			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/2474b6354f6757ab86373259b87a2ad3_1.png"));
 			this.blit(ms, this.leftPos + 100, this.topPos + 50, 0, 0, 28, 18, 28, 18);
 		}
+
+		RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/input.png"));
+		this.blit(ms, this.leftPos + 38, this.topPos + 67, 0, 0, 25, 25, 25, 25);
+
+		RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/input.png"));
+		this.blit(ms, this.leftPos + 56, this.topPos + 67, 0, 0, 25, 25, 25, 25);
+
+		RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/input.png"));
+		this.blit(ms, this.leftPos + 74, this.topPos + 67, 0, 0, 25, 25, 25, 25);
+
+		RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/input.png"));
+		this.blit(ms, this.leftPos + 46, this.topPos + 23, 0, 0, 25, 25, 25, 25);
+
+		RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/input.png"));
+		this.blit(ms, this.leftPos + 65, this.topPos + 23, 0, 0, 25, 25, 25, 25);
+
+		RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/output.png"));
+		this.blit(ms, this.leftPos + 128, this.topPos + 47, 0, 0, 25, 25, 25, 25);
+
 		RenderSystem.disableBlend();
 	}
 

@@ -1,0 +1,46 @@
+{
+  "_fv": 24,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 1,
+    "group": "elec_tronics",
+    "recipeShapeless": true,
+    "recipeSlots": [
+      {
+        "value": "CUSTOM:Turbine"
+      },
+      {
+        "value": "CUSTOM:CoolingTower"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "Blocks.FURNACE"
+      },
+      {
+        "value": "CUSTOM:Condensor"
+      },
+      {
+        "value": "CUSTOM:Generator"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:Coalgeneratormachine"
+    },
+    "name": "coalgeneratorrecipe",
+    "namespace": "mod"
+  }
+}

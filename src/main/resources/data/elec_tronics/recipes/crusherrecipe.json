@@ -1,0 +1,42 @@
+{
+  "group": "elec_tronics",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:iron_ingot"
+    },
+    "1": {
+      "item": "elec_tronics:ore_funnel"
+    },
+    "2": {
+      "item": "minecraft:iron_ingot"
+    },
+    "3": {
+      "item": "elec_tronics:copperwire"
+    },
+    "4": {
+      "item": "elec_tronics:deleted_mod_element"
+    },
+    "5": {
+      "item": "elec_tronics:copperwire"
+    },
+    "6": {
+      "item": "minecraft:iron_ingot"
+    },
+    "7": {
+      "item": "elec_tronics:deleted_mod_element"
+    },
+    "8": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "result": {
+    "item": "elec_tronics:crushermachine",
+    "count": 1
+  }
+}

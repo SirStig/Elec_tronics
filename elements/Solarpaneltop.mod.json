@@ -54,7 +54,7 @@
     "material": {
       "value": "GLASS"
     },
-    "tickRate": 200,
+    "tickRate": 1,
     "tickRandomly": false,
     "isReplaceable": false,
     "canProvidePower": false,

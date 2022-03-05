@@ -1,0 +1,39 @@
+{
+  "group": "elec_tronics",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "3 5",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "elec_tronics:rubber"
+    },
+    "1": {
+      "item": "elec_tronics:rubber"
+    },
+    "2": {
+      "item": "elec_tronics:rubber"
+    },
+    "3": {
+      "item": "elec_tronics:rubber"
+    },
+    "5": {
+      "item": "elec_tronics:rubber"
+    },
+    "6": {
+      "item": "elec_tronics:rubber"
+    },
+    "7": {
+      "item": "elec_tronics:rubber"
+    },
+    "8": {
+      "item": "elec_tronics:rubber"
+    }
+  },
+  "result": {
+    "item": "elec_tronics:rubbersleeve",
+    "count": 8
+  }
+}

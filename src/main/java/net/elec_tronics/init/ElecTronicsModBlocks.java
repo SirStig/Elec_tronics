@@ -21,10 +21,12 @@ import net.elec_tronics.block.SolarpaneltopBlock;
 import net.elec_tronics.block.SolarPanelrBlock;
 import net.elec_tronics.block.SolarPanelT1Block;
 import net.elec_tronics.block.ReinforcedblastbrickBlock;
+import net.elec_tronics.block.ExtrusionMachineBlock;
 import net.elec_tronics.block.EngineersworkbenchBlock;
 import net.elec_tronics.block.EngineersWorkBenchTopSideBlock;
 import net.elec_tronics.block.EngineersWorkBenchTopBlock;
 import net.elec_tronics.block.EngineersWorkBenchSideBlock;
+import net.elec_tronics.block.EnergyStorageT1Block;
 import net.elec_tronics.block.CrushermachineBlock;
 import net.elec_tronics.block.CoalgeneratormachineBlock;
 import net.elec_tronics.block.CablehalfT1Block;
@@ -103,6 +105,8 @@ public class ElecTronicsModBlocks {
 	public static final Block SOLAR_PANELR = register(new SolarPanelrBlock());
 	public static final Block SOLARPANELTOP = register(new SolarpaneltopBlock());
 	public static final Block SOLARPANELTOPR = register(new SolarpaneltoprBlock());
+	public static final Block EXTRUSION_MACHINE = register(new ExtrusionMachineBlock());
+	public static final Block ENERGY_STORAGE_T_1 = register(new EnergyStorageT1Block());
 
 	private static Block register(Block block) {
 		REGISTRY.add(block);

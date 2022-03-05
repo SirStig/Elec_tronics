@@ -4,6 +4,10 @@
     "all": "elec_tronics:blocks/solarpanelfinal",
     "particle": "elec_tronics:blocks/solarpanelfinal",
     "0": "elec_tronics:blocks/screen_shot_2022-02-26_at_3.03.29_am",
-    "1": "elec_tronics:blocks/solarpanel"
+    "1": "elec_tronics:blocks/solarpanel",
+    "2": "elec_tronics:blocks/cable_junction-end",
+    "3": "elec_tronics:blocks/cable_particles",
+    "4": "elec_tronics:blocks/elec_tronicst1cable_end",
+    "5": "elec_tronics:blocks/elec_tronicst1cable_side"
   }
 }

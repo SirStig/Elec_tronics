@@ -5,8 +5,8 @@
     "renderType": 0,
     "texture": "tungstendust",
     "customModelName": "Normal",
-    "name": "Uranium Dust",
-    "rarity": "EPIC",
+    "name": "Tungsten Dust",
+    "rarity": "UNCOMMON",
     "creativeTab": {
       "value": "CUSTOM:LovieeesTechyMod"
     },
@@ -25,7 +25,7 @@
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
     "specialInfo": [],
-    "hasGlow": true,
+    "hasGlow": false,
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 64,

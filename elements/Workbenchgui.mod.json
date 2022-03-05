@@ -142,12 +142,26 @@
           "inputLimit": {
             "value": ""
           },
+          "id": 9,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #9",
+          "x": 141,
+          "y": 99
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
           "id": 10,
           "disableStackInteraction": false,
           "dropItemsWhenNotBound": true,
           "name": "Slot #10",
           "x": 141,
-          "y": 99
+          "y": 81
         }
       },
       {
@@ -161,7 +175,7 @@
           "dropItemsWhenNotBound": true,
           "name": "Slot #11",
           "x": 141,
-          "y": 81
+          "y": 63
         }
       },
       {
@@ -175,7 +189,7 @@
           "dropItemsWhenNotBound": true,
           "name": "Slot #12",
           "x": 141,
-          "y": 63
+          "y": 45
         }
       },
       {
@@ -188,7 +202,7 @@
           "disableStackInteraction": false,
           "dropItemsWhenNotBound": true,
           "name": "Slot #13",
-          "x": 141,
+          "x": 159,
           "y": 45
         }
       },
@@ -202,7 +216,7 @@
           "disableStackInteraction": false,
           "dropItemsWhenNotBound": true,
           "name": "Slot #14",
-          "x": 159,
+          "x": 177,
           "y": 45
         }
       },
@@ -216,20 +230,6 @@
           "disableStackInteraction": false,
           "dropItemsWhenNotBound": true,
           "name": "Slot #15",
-          "x": 177,
-          "y": 45
-        }
-      },
-      {
-        "type": "inputslot",
-        "data": {
-          "inputLimit": {
-            "value": ""
-          },
-          "id": 16,
-          "disableStackInteraction": false,
-          "dropItemsWhenNotBound": true,
-          "name": "Slot #16",
           "x": 195,
           "y": 45
         }
@@ -259,16 +259,6 @@
         }
       },
       {
-        "type": "image",
-        "data": {
-          "image": "furnace_gui_1.png",
-          "use1Xscale": true,
-          "name": "furnace_gui_1.png",
-          "x": 218,
-          "y": 73
-        }
-      },
-      {
         "type": "label",
         "data": {
           "text": "Engineer's Workbench",
@@ -279,6 +269,26 @@
           "name": "Engineer's Workbench",
           "x": 132,
           "y": 30
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "hammergui.png",
+          "use1Xscale": false,
+          "name": "hammergui.png",
+          "x": 224,
+          "y": 73
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "output.png",
+          "use1Xscale": false,
+          "name": "output.png",
+          "x": 248,
+          "y": 69
         }
       }
     ],

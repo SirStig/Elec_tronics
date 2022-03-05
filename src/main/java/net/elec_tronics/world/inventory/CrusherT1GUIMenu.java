@@ -75,9 +75,9 @@ public class CrusherT1GUIMenu extends AbstractContainerMenu implements Supplier<
 				}
 			}
 		}
-		this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 51, 35) {
+		this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 68, 22) {
 		}));
-		this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 106, 35) {
+		this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 97, 46) {
 			@Override
 			public boolean mayPlace(ItemStack stack) {
 				return false;

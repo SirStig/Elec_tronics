@@ -47,8 +47,11 @@ public class WorkbenchguiScreen extends AbstractContainerScreen<WorkbenchguiMenu
 		RenderSystem.setShaderTexture(0, texture);
 		this.blit(ms, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
 
-		RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/furnace_gui_1.png"));
-		this.blit(ms, this.leftPos + 92, this.topPos + 47, 0, 0, 25, 17, 25, 17);
+		RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/hammergui.png"));
+		this.blit(ms, this.leftPos + 98, this.topPos + 47, 0, 0, 16, 16, 16, 16);
+
+		RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/output.png"));
+		this.blit(ms, this.leftPos + 122, this.topPos + 43, 0, 0, 25, 25, 25, 25);
 
 		RenderSystem.disableBlend();
 	}

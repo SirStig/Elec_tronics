@@ -3,7 +3,7 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "sharponediron",
+    "texture": "iron_bla",
     "customModelName": "Normal",
     "name": "Iron Blade",
     "rarity": "COMMON",

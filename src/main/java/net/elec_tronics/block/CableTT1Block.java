@@ -108,7 +108,7 @@ public class CableTT1Block extends Block
 		List<ItemStack> dropsOriginal = super.getDrops(state, builder);
 		if (!dropsOriginal.isEmpty())
 			return dropsOriginal;
-		return Collections.singletonList(new ItemStack(ElecTronicsModBlocks.T_1_WIRE));
+		return Collections.singletonList(new ItemStack(ElecTronicsModBlocks.BASECABLE_T_1));
 	}
 
 	@Override

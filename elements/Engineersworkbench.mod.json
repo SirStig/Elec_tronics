@@ -149,8 +149,8 @@
     "onDestroyedByPlayer": {
       "name": "EngineersworkbenchBlockDestroyedByPlayer"
     },
-    "onDestroyedByExplosion": {
-      "name": "EngineersworkbenchBlockDestroyedByPlayer"
+    "onStartToDestroy": {
+      "name": "EngineersworkbenchPlayerStartsToDestroy"
     },
     "spawnWorldTypes": [],
     "restrictionBiomes": [],

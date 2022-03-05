@@ -14,6 +14,7 @@ import net.minecraft.world.inventory.AbstractContainerMenu;
 
 import net.elec_tronics.world.inventory.WorkbenchguiMenu;
 import net.elec_tronics.world.inventory.SolarpanelGUIMenu;
+import net.elec_tronics.world.inventory.ExtrusinmachineGUIMenu;
 import net.elec_tronics.world.inventory.CrusherT1GUIMenu;
 import net.elec_tronics.world.inventory.CoalgeneratorGUIMenu;
 import net.elec_tronics.world.inventory.BlastfurnaceMenu;
@@ -34,6 +35,8 @@ public class ElecTronicsModMenus {
 			(id, inv, extraData) -> new CrusherT1GUIMenu(id, inv, extraData));
 	public static final MenuType<SolarpanelGUIMenu> SOLARPANEL_GUI = register("solarpanel_gui",
 			(id, inv, extraData) -> new SolarpanelGUIMenu(id, inv, extraData));
+	public static final MenuType<ExtrusinmachineGUIMenu> EXTRUSINMACHINE_GUI = register("extrusinmachine_gui",
+			(id, inv, extraData) -> new ExtrusinmachineGUIMenu(id, inv, extraData));
 
 	private static <T extends AbstractContainerMenu> MenuType<T> register(String registryname, IContainerFactory<T> containerFactory) {
 		MenuType<T> menuType = new MenuType<T>(containerFactory);
