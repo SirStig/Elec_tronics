@@ -104,12 +104,12 @@
     "particleSpawningShape": "Spread",
     "particleSpawningRadious": 0.5,
     "particleAmount": 4,
-    "hasInventory": false,
-    "guiBoundTo": "Workbenchgui",
-    "openGUIOnRightClick": true,
+    "hasInventory": true,
+    "guiBoundTo": "<NONE>",
+    "openGUIOnRightClick": false,
     "inventorySize": 18,
     "inventoryStackSize": 64,
-    "inventoryDropWhenDestroyed": true,
+    "inventoryDropWhenDestroyed": false,
     "inventoryComparatorPower": false,
     "inventoryOutSlotIDs": [
       17
@@ -143,14 +143,11 @@
     "onRightClicked": {
       "name": "EngineersWorkBenchOnBlockRightClicked"
     },
-    "onTickUpdate": {
-      "name": "Engineersworkbenchcode"
-    },
     "onDestroyedByPlayer": {
       "name": "EngineersworkbenchBlockDestroyedByPlayer"
     },
-    "onDestroyedByExplosion": {
-      "name": "EngineersworkbenchBlockDestroyedByPlayer"
+    "onStartToDestroy": {
+      "name": "EngineersworkbenchPlayerStartsToDestroy"
     },
     "spawnWorldTypes": [],
     "restrictionBiomes": [],

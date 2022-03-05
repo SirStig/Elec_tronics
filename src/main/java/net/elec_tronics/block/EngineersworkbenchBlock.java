@@ -21,7 +21,6 @@ import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.minecraft.world.level.block.EntityBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.Explosion;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.item.TieredItem;
@@ -45,6 +44,7 @@ import net.minecraft.client.renderer.ItemBlockRenderTypes;
 
 import net.elec_tronics.world.inventory.WorkbenchguiMenu;
 import net.elec_tronics.procedures.EngineersworkbenchcodeProcedure;
+import net.elec_tronics.procedures.EngineersworkbenchPlayerStartsToDestroyProcedure;
 import net.elec_tronics.procedures.EngineersworkbenchBlockDestroyedByPlayerProcedure;
 import net.elec_tronics.procedures.EngineersworkbenchBlockAddedProcedure;
 import net.elec_tronics.init.ElecTronicsModBlocks;
@@ -134,14 +134,14 @@ public class EngineersworkbenchBlock extends Block
 	@Override
 	public boolean removedByPlayer(BlockState blockstate, Level world, BlockPos pos, Player entity, boolean willHarvest, FluidState fluid) {
 		boolean retval = super.removedByPlayer(blockstate, world, pos, entity, willHarvest, fluid);
-		EngineersworkbenchBlockDestroyedByPlayerProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
+		EngineersworkbenchBlockDestroyedByPlayerProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ(), entity);
 		return retval;
 	}
 
 	@Override
-	public void wasExploded(Level world, BlockPos pos, Explosion e) {
-		super.wasExploded(world, pos, e);
-		EngineersworkbenchBlockDestroyedByPlayerProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
+	public void attack(BlockState blockstate, Level world, BlockPos pos, Player entity) {
+		super.attack(blockstate, world, pos, entity);
+		EngineersworkbenchPlayerStartsToDestroyProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ(), entity);
 	}
 
 	@Override

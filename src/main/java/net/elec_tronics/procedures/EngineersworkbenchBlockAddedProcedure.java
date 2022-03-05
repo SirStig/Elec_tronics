@@ -4,6 +4,7 @@ import net.minecraft.world.level.block.state.properties.Property;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
@@ -14,6 +15,17 @@ import net.elec_tronics.init.ElecTronicsModBlocks;
 
 public class EngineersworkbenchBlockAddedProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
+		double random = 0;
+		random = Math.round(Math.random() * 100000.1);
+		if (!world.isClientSide()) {
+			BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+			BlockEntity _blockEntity = world.getBlockEntity(_bp);
+			BlockState _bs = world.getBlockState(_bp);
+			if (_blockEntity != null)
+				_blockEntity.getTileData().putDouble("generatorID", random);
+			if (world instanceof Level _level)
+				_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+		}
 		if ((new Object() {
 			public Direction getDirection(BlockPos pos) {
 				BlockState _bs = world.getBlockState(pos);
@@ -31,10 +43,37 @@ public class EngineersworkbenchBlockAddedProcedure {
 					if (world.getBlockState(new BlockPos((int) (x - 1), (int) (y + 1), (int) z)).canOcclude() == false) {
 						world.setBlock(new BlockPos((int) (x - 1), (int) y, (int) z),
 								ElecTronicsModBlocks.ENGINEERS_WORK_BENCH_SIDE.defaultBlockState(), 3);
+						if (!world.isClientSide()) {
+							BlockPos _bp = new BlockPos((int) (x - 1), (int) y, (int) z);
+							BlockEntity _blockEntity = world.getBlockEntity(_bp);
+							BlockState _bs = world.getBlockState(_bp);
+							if (_blockEntity != null)
+								_blockEntity.getTileData().putDouble("generatorID", random);
+							if (world instanceof Level _level)
+								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+						}
 						world.setBlock(new BlockPos((int) (x - 1), (int) (y + 1), (int) z),
 								ElecTronicsModBlocks.ENGINEERS_WORK_BENCH_TOP_SIDE.defaultBlockState(), 3);
+						if (!world.isClientSide()) {
+							BlockPos _bp = new BlockPos((int) (x - 1), (int) (y + 1), (int) z);
+							BlockEntity _blockEntity = world.getBlockEntity(_bp);
+							BlockState _bs = world.getBlockState(_bp);
+							if (_blockEntity != null)
+								_blockEntity.getTileData().putDouble("generatorID", random);
+							if (world instanceof Level _level)
+								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+						}
 						world.setBlock(new BlockPos((int) x, (int) (y + 1), (int) z),
 								ElecTronicsModBlocks.ENGINEERS_WORK_BENCH_TOP.defaultBlockState(), 3);
+						if (!world.isClientSide()) {
+							BlockPos _bp = new BlockPos((int) x, (int) (y + 1), (int) z);
+							BlockEntity _blockEntity = world.getBlockEntity(_bp);
+							BlockState _bs = world.getBlockState(_bp);
+							if (_blockEntity != null)
+								_blockEntity.getTileData().putDouble("generatorID", random);
+							if (world instanceof Level _level)
+								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+						}
 					} else {
 						if (world instanceof Level) {
 							Block.dropResources(world.getBlockState(new BlockPos((int) x, (int) y, (int) z)), (Level) world,
@@ -86,6 +125,15 @@ public class EngineersworkbenchBlockAddedProcedure {
 									world.setBlock(_pos, _bs.setValue(_ap, _dir.getAxis()), 3);
 							}
 						}
+						if (!world.isClientSide()) {
+							BlockPos _bp = new BlockPos((int) x, (int) y, (int) (z + 1));
+							BlockEntity _blockEntity = world.getBlockEntity(_bp);
+							BlockState _bs = world.getBlockState(_bp);
+							if (_blockEntity != null)
+								_blockEntity.getTileData().putDouble("generatorID", random);
+							if (world instanceof Level _level)
+								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+						}
 						world.setBlock(new BlockPos((int) x, (int) (y + 1), (int) (z + 1)),
 								ElecTronicsModBlocks.ENGINEERS_WORK_BENCH_TOP_SIDE.defaultBlockState(), 3);
 						{
@@ -101,6 +149,15 @@ public class EngineersworkbenchBlockAddedProcedure {
 									world.setBlock(_pos, _bs.setValue(_ap, _dir.getAxis()), 3);
 							}
 						}
+						if (!world.isClientSide()) {
+							BlockPos _bp = new BlockPos((int) x, (int) (y + 1), (int) (z + 1));
+							BlockEntity _blockEntity = world.getBlockEntity(_bp);
+							BlockState _bs = world.getBlockState(_bp);
+							if (_blockEntity != null)
+								_blockEntity.getTileData().putDouble("generatorID", random);
+							if (world instanceof Level _level)
+								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+						}
 						world.setBlock(new BlockPos((int) x, (int) (y + 1), (int) z),
 								ElecTronicsModBlocks.ENGINEERS_WORK_BENCH_TOP.defaultBlockState(), 3);
 						{
@@ -115,6 +172,15 @@ public class EngineersworkbenchBlockAddedProcedure {
 								if (_property instanceof EnumProperty _ap && _ap.getPossibleValues().contains(_dir.getAxis()))
 									world.setBlock(_pos, _bs.setValue(_ap, _dir.getAxis()), 3);
 							}
+						}
+						if (!world.isClientSide()) {
+							BlockPos _bp = new BlockPos((int) x, (int) (y + 1), (int) z);
+							BlockEntity _blockEntity = world.getBlockEntity(_bp);
+							BlockState _bs = world.getBlockState(_bp);
+							if (_blockEntity != null)
+								_blockEntity.getTileData().putDouble("generatorID", random);
+							if (world instanceof Level _level)
+								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
 					} else {
 						if (world instanceof Level) {
@@ -167,6 +233,15 @@ public class EngineersworkbenchBlockAddedProcedure {
 									world.setBlock(_pos, _bs.setValue(_ap, _dir.getAxis()), 3);
 							}
 						}
+						if (!world.isClientSide()) {
+							BlockPos _bp = new BlockPos((int) x, (int) y, (int) (z - 1));
+							BlockEntity _blockEntity = world.getBlockEntity(_bp);
+							BlockState _bs = world.getBlockState(_bp);
+							if (_blockEntity != null)
+								_blockEntity.getTileData().putDouble("generatorID", random);
+							if (world instanceof Level _level)
+								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+						}
 						world.setBlock(new BlockPos((int) x, (int) (y + 1), (int) (z - 1)),
 								ElecTronicsModBlocks.ENGINEERS_WORK_BENCH_TOP_SIDE.defaultBlockState(), 3);
 						{
@@ -182,6 +257,15 @@ public class EngineersworkbenchBlockAddedProcedure {
 									world.setBlock(_pos, _bs.setValue(_ap, _dir.getAxis()), 3);
 							}
 						}
+						if (!world.isClientSide()) {
+							BlockPos _bp = new BlockPos((int) x, (int) (y + 1), (int) (z - 1));
+							BlockEntity _blockEntity = world.getBlockEntity(_bp);
+							BlockState _bs = world.getBlockState(_bp);
+							if (_blockEntity != null)
+								_blockEntity.getTileData().putDouble("generatorID", random);
+							if (world instanceof Level _level)
+								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+						}
 						world.setBlock(new BlockPos((int) x, (int) (y + 1), (int) z),
 								ElecTronicsModBlocks.ENGINEERS_WORK_BENCH_TOP.defaultBlockState(), 3);
 						{
@@ -196,6 +280,15 @@ public class EngineersworkbenchBlockAddedProcedure {
 								if (_property instanceof EnumProperty _ap && _ap.getPossibleValues().contains(_dir.getAxis()))
 									world.setBlock(_pos, _bs.setValue(_ap, _dir.getAxis()), 3);
 							}
+						}
+						if (!world.isClientSide()) {
+							BlockPos _bp = new BlockPos((int) x, (int) (y + 1), (int) z);
+							BlockEntity _blockEntity = world.getBlockEntity(_bp);
+							BlockState _bs = world.getBlockState(_bp);
+							if (_blockEntity != null)
+								_blockEntity.getTileData().putDouble("generatorID", random);
+							if (world instanceof Level _level)
+								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
 					} else {
 						if (world instanceof Level) {
@@ -248,6 +341,15 @@ public class EngineersworkbenchBlockAddedProcedure {
 									world.setBlock(_pos, _bs.setValue(_ap, _dir.getAxis()), 3);
 							}
 						}
+						if (!world.isClientSide()) {
+							BlockPos _bp = new BlockPos((int) (x + 1), (int) y, (int) z);
+							BlockEntity _blockEntity = world.getBlockEntity(_bp);
+							BlockState _bs = world.getBlockState(_bp);
+							if (_blockEntity != null)
+								_blockEntity.getTileData().putDouble("generatorID", random);
+							if (world instanceof Level _level)
+								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+						}
 						world.setBlock(new BlockPos((int) (x + 1), (int) (y + 1), (int) z),
 								ElecTronicsModBlocks.ENGINEERS_WORK_BENCH_TOP_SIDE.defaultBlockState(), 3);
 						{
@@ -263,6 +365,15 @@ public class EngineersworkbenchBlockAddedProcedure {
 									world.setBlock(_pos, _bs.setValue(_ap, _dir.getAxis()), 3);
 							}
 						}
+						if (!world.isClientSide()) {
+							BlockPos _bp = new BlockPos((int) (x + 1), (int) (y + 1), (int) z);
+							BlockEntity _blockEntity = world.getBlockEntity(_bp);
+							BlockState _bs = world.getBlockState(_bp);
+							if (_blockEntity != null)
+								_blockEntity.getTileData().putDouble("generatorID", random);
+							if (world instanceof Level _level)
+								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+						}
 						world.setBlock(new BlockPos((int) x, (int) (y + 1), (int) z),
 								ElecTronicsModBlocks.ENGINEERS_WORK_BENCH_TOP.defaultBlockState(), 3);
 						{
@@ -277,6 +388,15 @@ public class EngineersworkbenchBlockAddedProcedure {
 								if (_property instanceof EnumProperty _ap && _ap.getPossibleValues().contains(_dir.getAxis()))
 									world.setBlock(_pos, _bs.setValue(_ap, _dir.getAxis()), 3);
 							}
+						}
+						if (!world.isClientSide()) {
+							BlockPos _bp = new BlockPos((int) x, (int) (y + 1), (int) z);
+							BlockEntity _blockEntity = world.getBlockEntity(_bp);
+							BlockState _bs = world.getBlockState(_bp);
+							if (_blockEntity != null)
+								_blockEntity.getTileData().putDouble("generatorID", random);
+							if (world instanceof Level _level)
+								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
 					} else {
 						if (world instanceof Level) {

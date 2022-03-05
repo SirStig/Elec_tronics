@@ -2214,6 +2214,488 @@
         ]
       },
       "path": "~/Solar Panels"
+    },
+    {
+      "name": "Rubbersleeve",
+      "type": "item",
+      "sortid": 158,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rubbersleeve",
+      "path": "~/Wires-Pipes"
+    },
+    {
+      "name": "IronGearRecipe",
+      "type": "recipe",
+      "sortid": 179,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "iron_gear_recipe",
+      "path": "~/Item Recipes"
+    },
+    {
+      "name": "Grinderrecipe",
+      "type": "recipe",
+      "sortid": 177,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "grinderrecipe",
+      "path": "~/Item Recipes"
+    },
+    {
+      "name": "EnergyStorageT1",
+      "type": "block",
+      "sortid": 170,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "energy_storage_t_1",
+      "path": "~/EnergyStorages"
+    },
+    {
+      "name": "Copperwire",
+      "type": "item",
+      "sortid": 154,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "copperwire",
+      "path": "~/Components"
+    },
+    {
+      "name": "Turbine",
+      "type": "item",
+      "sortid": 161,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "turbine",
+      "path": "~/Components"
+    },
+    {
+      "name": "OreFunnel",
+      "type": "item",
+      "sortid": 173,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ore_funnel",
+      "path": "~/Components"
+    },
+    {
+      "name": "Crusherrecipe",
+      "type": "recipe",
+      "sortid": 178,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crusherrecipe",
+      "path": "~/Machines Recipes"
+    },
+    {
+      "name": "Copperdusttoingot",
+      "type": "recipe",
+      "sortid": 150,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "copperdusttoingot"
+    },
+    {
+      "name": "Coalgeneratorrecipe",
+      "type": "recipe",
+      "sortid": 165,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "coalgeneratorrecipe",
+      "path": "~/Machines Recipes"
+    },
+    {
+      "name": "JEIPlugin",
+      "type": "code",
+      "sortid": 185,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "jei_plugin",
+      "path": "~/integrations"
+    },
+    {
+      "name": "EmeraldDust",
+      "type": "item",
+      "sortid": 145,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "emerald_dust",
+      "path": "~/Ores-Ingots-Dusts"
+    },
+    {
+      "name": "CoolingTower",
+      "type": "item",
+      "sortid": 163,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cooling_tower",
+      "path": "~/Components"
+    },
+    {
+      "name": "Extrusiondie",
+      "type": "recipe",
+      "sortid": 181,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "extrusiondie",
+      "path": "~/Item Recipes"
+    },
+    {
+      "name": "DiamondDust",
+      "type": "item",
+      "sortid": 143,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "diamond_dust",
+      "path": "~/Ores-Ingots-Dusts"
+    },
+    {
+      "name": "Coolingtowerrecipe",
+      "type": "recipe",
+      "sortid": 171,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "coolingtowerrecipe",
+      "path": "~/Item Recipes"
+    },
+    {
+      "name": "Irongear",
+      "type": "item",
+      "sortid": 175,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "irongear",
+      "path": "~/Components"
+    },
+    {
+      "name": "Diamonddusttoingot",
+      "type": "recipe",
+      "sortid": 151,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "diamonddusttoingot"
+    },
+    {
+      "name": "Generatorrecipe",
+      "type": "recipe",
+      "sortid": 168,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "generatorrecipe",
+      "path": "~/Item Recipes"
+    },
+    {
+      "name": "ElectricMotorRecipe",
+      "type": "recipe",
+      "sortid": 175,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "electric_motor_recipe",
+      "path": "~/Item Recipes"
+    },
+    {
+      "name": "OreFunnelRecipe",
+      "type": "recipe",
+      "sortid": 176,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ore_funnel_recipe",
+      "path": "~/Item Recipes"
+    },
+    {
+      "name": "Rubber",
+      "type": "item",
+      "sortid": 153,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rubber",
+      "path": "~/Components"
+    },
+    {
+      "name": "ExtrusinmachineGUI",
+      "type": "gui",
+      "sortid": 156,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "extrusinmachine_gui",
+      "path": "~/ExtrusionMachine"
+    },
+    {
+      "name": "EngineersworkbenchPlayerStartsToDestroy",
+      "type": "procedure",
+      "sortid": 184,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "engineersworkbench_player_starts_to_destroy",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Engineers Workbench"
+    },
+    {
+      "name": "TungstenDust",
+      "type": "item",
+      "sortid": 142,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tungsten_dust",
+      "path": "~/Ores-Ingots-Dusts"
+    },
+    {
+      "name": "CopperSheet",
+      "type": "item",
+      "sortid": 180,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "copper_sheet",
+      "path": "~/Components"
+    },
+    {
+      "name": "GoldDust",
+      "type": "item",
+      "sortid": 144,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gold_dust",
+      "path": "~/Ores-Ingots-Dusts"
+    },
+    {
+      "name": "Electricmotor",
+      "type": "item",
+      "sortid": 172,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "electricmotor",
+      "path": "~/Components"
+    },
+    {
+      "name": "ExtrusionMachineUpdateTick",
+      "type": "procedure",
+      "sortid": 157,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "extrusion_machine_update_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ExtrusionMachine"
+    },
+    {
+      "name": "Condensorrecipe",
+      "type": "recipe",
+      "sortid": 166,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "condensorrecipe",
+      "path": "~/Item Recipes"
+    },
+    {
+      "name": "QuartzDust",
+      "type": "item",
+      "sortid": 147,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "quartz_dust",
+      "path": "~/Ores-Ingots-Dusts"
+    },
+    {
+      "name": "ExtrusionMachine",
+      "type": "block",
+      "sortid": 155,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "extrusion_machine",
+      "path": "~/ExtrusionMachine"
+    },
+    {
+      "name": "CopperDust",
+      "type": "item",
+      "sortid": 146,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "copper_dust",
+      "path": "~/Ores-Ingots-Dusts"
+    },
+    {
+      "name": "CableT1Recipe",
+      "type": "recipe",
+      "sortid": 160,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cable_t_1_recipe",
+      "path": "~/Wires-Pipes"
+    },
+    {
+      "name": "Tungstendusttoingot",
+      "type": "recipe",
+      "sortid": 148,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tungstendusttoingot"
+    },
+    {
+      "name": "Condensor",
+      "type": "item",
+      "sortid": 162,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "condensor",
+      "path": "~/Components"
+    },
+    {
+      "name": "Golddusttoingot",
+      "type": "recipe",
+      "sortid": 149,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "golddusttoingot"
+    },
+    {
+      "name": "Turbinerecipe",
+      "type": "recipe",
+      "sortid": 167,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "turbinerecipe",
+      "path": "~/Item Recipes"
+    },
+    {
+      "name": "ExtrusionDie",
+      "type": "item",
+      "sortid": 181,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "extrusion_die",
+      "path": "~/Components"
+    },
+    {
+      "name": "WireRoller",
+      "type": "item",
+      "sortid": 182,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wire_roller",
+      "path": "~/Components"
+    },
+    {
+      "name": "Rubbersleeverecipe",
+      "type": "recipe",
+      "sortid": 159,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rubbersleeverecipe",
+      "path": "~/Wires-Pipes"
+    },
+    {
+      "name": "Emeralddusttoingot",
+      "type": "recipe",
+      "sortid": 152,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "emeralddusttoingot"
+    },
+    {
+      "name": "SolarPanel",
+      "type": "item",
+      "sortid": 169,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "solar_panel",
+      "path": "~/Solar Panels"
+    },
+    {
+      "name": "ExtrusionMachineRecipe",
+      "type": "recipe",
+      "sortid": 183,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "extrusion_machine_recipe",
+      "path": "~/ExtrusionMachine"
+    },
+    {
+      "name": "T1CableProcedure",
+      "type": "procedure",
+      "sortid": 141,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "t_1_cable_procedure",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Wires-Pipes"
+    },
+    {
+      "name": "Generator",
+      "type": "item",
+      "sortid": 164,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "generator",
+      "path": "~/Components"
+    },
+    {
+      "name": "Grinder",
+      "type": "item",
+      "sortid": 174,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "grinder",
+      "path": "~/Components"
     }
   ],
   "variable_elements": [],
@@ -2265,6 +2747,7 @@
       "block.elec_tronics.basewirecon_4up": "Cable Angle T1",
       "block.elec_tronics.cable_junction_t_1": "Cable Junction T1",
       "block.elec_tronics.basewirecon_4down": "Cable Angle T1",
+      "item.elec_tronics.extrusion_die": "Extrusion Die",
       "block.elec_tronics.t_1_wire": "Cable T1",
       "block.elec_tronics.basewirecon_3downandup": "Cable Angle T1",
       "block.elec_tronics.basewirecon_3down": "Cable Angle T1",
@@ -2287,19 +2770,7 @@
     "name": "~",
     "children": [
       {
-        "name": "ModSupport",
-        "children": []
-      },
-      {
-        "name": "Ores-Ingots-Dusts",
-        "children": []
-      },
-      {
-        "name": "CrusherT1-T4",
-        "children": []
-      },
-      {
-        "name": "Fuelburningfunctions",
+        "name": "Solar Panels",
         "children": []
       },
       {
@@ -2311,7 +2782,7 @@
         "children": []
       },
       {
-        "name": "Machines Recipes",
+        "name": "integrations",
         "children": []
       },
       {
@@ -2331,11 +2802,39 @@
         "children": []
       },
       {
-        "name": "BlastFurnace",
+        "name": "ModSupport",
         "children": []
       },
       {
-        "name": "Solar Panels",
+        "name": "Ores-Ingots-Dusts",
+        "children": []
+      },
+      {
+        "name": "CrusherT1-T4",
+        "children": []
+      },
+      {
+        "name": "Fuelburningfunctions",
+        "children": []
+      },
+      {
+        "name": "Components",
+        "children": []
+      },
+      {
+        "name": "Machines Recipes",
+        "children": []
+      },
+      {
+        "name": "ExtrusionMachine",
+        "children": []
+      },
+      {
+        "name": "EnergyStorages",
+        "children": []
+      },
+      {
+        "name": "BlastFurnace",
         "children": []
       }
     ]

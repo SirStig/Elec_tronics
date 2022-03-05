@@ -1,0 +1,389 @@
+{
+  "_fv": 24,
+  "_type": "gui",
+  "definition": {
+    "type": 1,
+    "width": 176,
+    "height": 177,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 7,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "text": "Extrusion Machine",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Extrusion Machine",
+          "x": 131,
+          "y": 36
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Inventory",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Inventory",
+          "x": 131,
+          "y": 115
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "id": 0,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": false,
+          "name": "Slot #0",
+          "x": 177,
+          "y": 74
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 1,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": false,
+          "name": "Slot #1",
+          "x": 231,
+          "y": 74
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "batterv1.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Powertick0"
+          },
+          "name": "batterv1.png",
+          "x": 134,
+          "y": 54
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "battery5.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Powertick1"
+          },
+          "name": "battery5.png",
+          "x": 134,
+          "y": 54
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "battery10.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Powertick2"
+          },
+          "name": "battery10.png",
+          "x": 134,
+          "y": 54
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "battery20.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Powertick3"
+          },
+          "name": "battery20.png",
+          "x": 134,
+          "y": 54
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "battery30.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Powertick4"
+          },
+          "name": "battery30.png",
+          "x": 134,
+          "y": 54
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "battery40.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Powertick5"
+          },
+          "name": "battery40.png",
+          "x": 134,
+          "y": 54
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "battery50.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Powertick6"
+          },
+          "name": "battery50.png",
+          "x": 134,
+          "y": 54
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "battery60.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Powertick7"
+          },
+          "name": "battery60.png",
+          "x": 134,
+          "y": 54
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "battery70.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Powertick8"
+          },
+          "name": "battery70.png",
+          "x": 134,
+          "y": 54
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "battery80.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Powertick8"
+          },
+          "name": "battery80.png",
+          "x": 134,
+          "y": 54
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "battery92full.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Powertick9"
+          },
+          "name": "battery92full.png",
+          "x": 134,
+          "y": 54
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "furnace_gui_1.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "CraftingTime0"
+          },
+          "name": "furnace_gui_1.png",
+          "x": 199,
+          "y": 75
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "arrow9.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "CraftingTime1"
+          },
+          "name": "arrow9.png",
+          "x": 196,
+          "y": 76
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "arrow8.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Craftingtime2"
+          },
+          "name": "arrow8.png",
+          "x": 196,
+          "y": 76
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "arrow7.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Craftingtime3"
+          },
+          "name": "arrow7.png",
+          "x": 196,
+          "y": 76
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "arrow6.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Craftingtime4"
+          },
+          "name": "arrow6.png",
+          "x": 196,
+          "y": 76
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "arrow5.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Craftingtime5"
+          },
+          "name": "arrow5.png",
+          "x": 196,
+          "y": 76
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "arrow4.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Craftingtime6"
+          },
+          "name": "arrow4.png",
+          "x": 196,
+          "y": 76
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "arrow3.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Craftingtie7"
+          },
+          "name": "arrow3.png",
+          "x": 196,
+          "y": 76
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "arrow2.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Craftingtime8"
+          },
+          "name": "arrow2.png",
+          "x": 196,
+          "y": 76
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "arrow1.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Craftingtime9"
+          },
+          "name": "arrow1.png",
+          "x": 196,
+          "y": 76
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "2474b6354f6757ab86373259b87a2ad3_1.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Craftingtime10"
+          },
+          "name": "2474b6354f6757ab86373259b87a2ad3_1.png",
+          "x": 197,
+          "y": 74
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "input.png",
+          "use1Xscale": false,
+          "name": "input.png",
+          "x": 173,
+          "y": 70
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "output.png",
+          "use1Xscale": false,
+          "name": "output.png",
+          "x": 227,
+          "y": 70
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "ingotgui.png",
+          "use1Xscale": false,
+          "name": "ingotgui.png",
+          "x": 177,
+          "y": 54
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

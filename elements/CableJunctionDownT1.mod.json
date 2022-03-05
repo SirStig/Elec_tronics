@@ -43,7 +43,7 @@
     },
     "destroyTool": "Not specified",
     "customDrop": {
-      "value": "CUSTOM:T1Wire"
+      "value": "CUSTOM:BasecableT1"
     },
     "dropAmount": 1,
     "useLootTableForDrops": false,
@@ -54,7 +54,7 @@
     "material": {
       "value": "ROCK"
     },
-    "tickRate": 5,
+    "tickRate": 1,
     "tickRandomly": false,
     "isReplaceable": false,
     "canProvidePower": false,

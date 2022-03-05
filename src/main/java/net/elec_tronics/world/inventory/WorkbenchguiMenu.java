@@ -93,19 +93,19 @@ public class WorkbenchguiMenu extends AbstractContainerMenu implements Supplier<
 		}));
 		this.customSlots.put(8, this.addSlot(new SlotItemHandler(internal, 8, 70, 38) {
 		}));
-		this.customSlots.put(10, this.addSlot(new SlotItemHandler(internal, 10, 16, 74) {
+		this.customSlots.put(9, this.addSlot(new SlotItemHandler(internal, 9, 16, 74) {
 		}));
-		this.customSlots.put(11, this.addSlot(new SlotItemHandler(internal, 11, 16, 56) {
+		this.customSlots.put(10, this.addSlot(new SlotItemHandler(internal, 10, 16, 56) {
 		}));
-		this.customSlots.put(12, this.addSlot(new SlotItemHandler(internal, 12, 16, 38) {
+		this.customSlots.put(11, this.addSlot(new SlotItemHandler(internal, 11, 16, 38) {
 		}));
-		this.customSlots.put(13, this.addSlot(new SlotItemHandler(internal, 13, 16, 20) {
+		this.customSlots.put(12, this.addSlot(new SlotItemHandler(internal, 12, 16, 20) {
 		}));
-		this.customSlots.put(14, this.addSlot(new SlotItemHandler(internal, 14, 34, 20) {
+		this.customSlots.put(13, this.addSlot(new SlotItemHandler(internal, 13, 34, 20) {
 		}));
-		this.customSlots.put(15, this.addSlot(new SlotItemHandler(internal, 15, 52, 20) {
+		this.customSlots.put(14, this.addSlot(new SlotItemHandler(internal, 14, 52, 20) {
 		}));
-		this.customSlots.put(16, this.addSlot(new SlotItemHandler(internal, 16, 70, 20) {
+		this.customSlots.put(15, this.addSlot(new SlotItemHandler(internal, 15, 70, 20) {
 		}));
 		this.customSlots.put(17, this.addSlot(new SlotItemHandler(internal, 17, 127, 48) {
 			@Override

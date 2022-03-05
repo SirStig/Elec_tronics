@@ -1,0 +1,28 @@
+{
+  "group": "elec_tronics",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "elec_tronics:wire_roller"
+    },
+    {
+      "item": "minecraft:piston"
+    },
+    {
+      "item": "elec_tronics:extrusion_die"
+    },
+    {
+      "item": "elec_tronics:wire_roller"
+    },
+    {
+      "item": "minecraft:furnace"
+    },
+    {
+      "item": "elec_tronics:electricmotor"
+    }
+  ],
+  "result": {
+    "item": "elec_tronics:extrusion_machine",
+    "count": 1
+  }
+}

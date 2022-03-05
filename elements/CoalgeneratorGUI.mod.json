@@ -356,6 +356,46 @@
           "x": 133,
           "y": 59
         }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "input.png",
+          "use1Xscale": false,
+          "name": "input.png",
+          "x": 200,
+          "y": 76
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "output.png",
+          "use1Xscale": false,
+          "name": "output.png",
+          "x": 247,
+          "y": 76
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "fuelgui.png",
+          "use1Xscale": false,
+          "name": "fuelgui.png",
+          "x": 184,
+          "y": 81
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "dustgui.png",
+          "use1Xscale": false,
+          "name": "dustgui.png",
+          "x": 252,
+          "y": 60
+        }
       }
     ],
     "gridSettings": {

@@ -1,0 +1,25 @@
+{
+  "group": "elec_tronics",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "elec_tronics:turbine"
+    },
+    {
+      "item": "elec_tronics:deleted_mod_element"
+    },
+    {
+      "item": "minecraft:furnace"
+    },
+    {
+      "item": "elec_tronics:deleted_mod_element"
+    },
+    {
+      "item": "elec_tronics:deleted_mod_element"
+    }
+  ],
+  "result": {
+    "item": "elec_tronics:coalgeneratormachine",
+    "count": 1
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "elec_tronics:block/energy_storage_t_1"
+    }
+  }
+}

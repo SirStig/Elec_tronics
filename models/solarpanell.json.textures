@@ -3,7 +3,11 @@
     "default": {
       "map": {
         "0": "screen_shot_2022-02-26_at_3.03.29_am",
-        "1": "solarpanel"
+        "1": "solarpanel",
+        "5": "cable_junction-end",
+        "6": "cable_particles",
+        "7": "elec_tronicst1cable_end",
+        "8": "elec_tronicst1cable_side"
       },
       "name": "default"
     }

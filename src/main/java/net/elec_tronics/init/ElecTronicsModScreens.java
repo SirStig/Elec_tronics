@@ -13,6 +13,7 @@ import net.minecraft.client.gui.screens.MenuScreens;
 
 import net.elec_tronics.client.gui.WorkbenchguiScreen;
 import net.elec_tronics.client.gui.SolarpanelGUIScreen;
+import net.elec_tronics.client.gui.ExtrusinmachineGUIScreen;
 import net.elec_tronics.client.gui.CrusherT1GUIScreen;
 import net.elec_tronics.client.gui.CoalgeneratorGUIScreen;
 import net.elec_tronics.client.gui.BlastfurnaceScreen;
@@ -27,6 +28,7 @@ public class ElecTronicsModScreens {
 			MenuScreens.register(ElecTronicsModMenus.COALGENERATOR_GUI, CoalgeneratorGUIScreen::new);
 			MenuScreens.register(ElecTronicsModMenus.CRUSHER_T_1_GUI, CrusherT1GUIScreen::new);
 			MenuScreens.register(ElecTronicsModMenus.SOLARPANEL_GUI, SolarpanelGUIScreen::new);
+			MenuScreens.register(ElecTronicsModMenus.EXTRUSINMACHINE_GUI, ExtrusinmachineGUIScreen::new);
 		});
 	}
 }
