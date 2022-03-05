@@ -1,7 +1,12 @@
 {
-  "parent": "block/cube_all",
+  "parent": "block/cube",
   "textures": {
-    "all": "elec_tronics:blocks/bottomengineering",
-    "particle": "elec_tronics:blocks/bottomengineering"
+    "down": "elec_tronics:blocks/crusher",
+    "up": "elec_tronics:blocks/crusher",
+    "north": "elec_tronics:blocks/crusher",
+    "east": "elec_tronics:blocks/crusher",
+    "south": "elec_tronics:blocks/crusher",
+    "west": "elec_tronics:blocks/crusher",
+    "particle": "elec_tronics:blocks/crusher"
   }
 }
