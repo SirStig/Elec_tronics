@@ -2,9 +2,6 @@
   "homepage": "https://github.com/SirStig/Elec_tronics",
   "promos": {
     "1.17.1-latest": "0.0.0.1",
-    // Declare the latest "bleeding-edge" version of your mod for the given Minecraft version
     "1.17.1-recommended": "0.0.0.1",
-    // Declare the latest "stable" version of your mod for the given Minecraft version
-    ...
   }
 }
