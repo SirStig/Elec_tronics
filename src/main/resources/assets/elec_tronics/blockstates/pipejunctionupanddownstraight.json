@@ -1,0 +1,27 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "elec_tronics:block/pipejunctionupanddownstraight"
+    },
+    "facing=east": {
+      "model": "elec_tronics:block/pipejunctionupanddownstraight",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "elec_tronics:block/pipejunctionupanddownstraight",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "elec_tronics:block/pipejunctionupanddownstraight",
+      "y": 270
+    },
+    "facing=up": {
+      "model": "elec_tronics:block/pipejunctionupanddownstraight",
+      "x": 270
+    },
+    "facing=down": {
+      "model": "elec_tronics:block/pipejunctionupanddownstraight",
+      "x": 90
+    }
+  }
+}

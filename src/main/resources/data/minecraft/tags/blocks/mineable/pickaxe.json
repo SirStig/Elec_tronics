@@ -12,6 +12,26 @@
     "elec_tronics:solarpaneltop",
     "elec_tronics:solarpaneltopr",
     "elec_tronics:extrusion_machine",
-    "elec_tronics:basepipe"
+    "elec_tronics:basepipe",
+    "elec_tronics:pipeangle",
+    "elec_tronics:pipeangledown",
+    "elec_tronics:pipeanlgeup",
+    "elec_tronics:pipedownangle",
+    "elec_tronics:pipehalf",
+    "elec_tronics:pipejunction",
+    "elec_tronics:pipejunctiondown",
+    "elec_tronics:pipejunctiondown_2",
+    "elec_tronics:pipejunctionmain",
+    "elec_tronics:pipejunctionup",
+    "elec_tronics:pipejunctionup_2",
+    "elec_tronics:pipejunctionupanddown",
+    "elec_tronics:pipejunctionupanddown_2",
+    "elec_tronics:pipejunctionupanddownstraight",
+    "elec_tronics:pipestraight",
+    "elec_tronics:pipet",
+    "elec_tronics:pipetdown",
+    "elec_tronics:pipetdownandup",
+    "elec_tronics:pipeup",
+    "elec_tronics:pipeupangle"
   ]
 }

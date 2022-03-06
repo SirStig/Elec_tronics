@@ -1,0 +1,27 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "elec_tronics:block/pipet"
+    },
+    "facing=east": {
+      "model": "elec_tronics:block/pipet",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "elec_tronics:block/pipet",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "elec_tronics:block/pipet",
+      "y": 270
+    },
+    "facing=up": {
+      "model": "elec_tronics:block/pipet",
+      "x": 270
+    },
+    "facing=down": {
+      "model": "elec_tronics:block/pipet",
+      "x": 90
+    }
+  }
+}

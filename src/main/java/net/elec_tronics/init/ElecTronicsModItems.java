@@ -141,6 +141,26 @@ public class ElecTronicsModItems {
 	public static final Item COPPER_SHEET = register(new CopperSheetItem());
 	public static final Item WIRE_ROLLER = register(new WireRollerItem());
 	public static final Item BASEPIPE = register(ElecTronicsModBlocks.BASEPIPE, ElecTronicsModTabs.TAB_ELEC_TRONICS_MENU);
+	public static final Item PIPEANGLE = register(ElecTronicsModBlocks.PIPEANGLE, null);
+	public static final Item PIPEANGLEDOWN = register(ElecTronicsModBlocks.PIPEANGLEDOWN, null);
+	public static final Item PIPEANLGEUP = register(ElecTronicsModBlocks.PIPEANLGEUP, null);
+	public static final Item PIPEDOWNANGLE = register(ElecTronicsModBlocks.PIPEDOWNANGLE, null);
+	public static final Item PIPEHALF = register(ElecTronicsModBlocks.PIPEHALF, null);
+	public static final Item PIPEJUNCTION = register(ElecTronicsModBlocks.PIPEJUNCTION, null);
+	public static final Item PIPEJUNCTIONDOWN = register(ElecTronicsModBlocks.PIPEJUNCTIONDOWN, null);
+	public static final Item PIPEJUNCTIONDOWN_2 = register(ElecTronicsModBlocks.PIPEJUNCTIONDOWN_2, null);
+	public static final Item PIPEJUNCTIONMAIN = register(ElecTronicsModBlocks.PIPEJUNCTIONMAIN, null);
+	public static final Item PIPEJUNCTIONUP = register(ElecTronicsModBlocks.PIPEJUNCTIONUP, null);
+	public static final Item PIPEJUNCTIONUP_2 = register(ElecTronicsModBlocks.PIPEJUNCTIONUP_2, null);
+	public static final Item PIPEJUNCTIONUPANDDOWN = register(ElecTronicsModBlocks.PIPEJUNCTIONUPANDDOWN, null);
+	public static final Item PIPEJUNCTIONUPANDDOWN_2 = register(ElecTronicsModBlocks.PIPEJUNCTIONUPANDDOWN_2, null);
+	public static final Item PIPEJUNCTIONUPANDDOWNSTRAIGHT = register(ElecTronicsModBlocks.PIPEJUNCTIONUPANDDOWNSTRAIGHT, null);
+	public static final Item PIPESTRAIGHT = register(ElecTronicsModBlocks.PIPESTRAIGHT, null);
+	public static final Item PIPET = register(ElecTronicsModBlocks.PIPET, null);
+	public static final Item PIPETDOWN = register(ElecTronicsModBlocks.PIPETDOWN, null);
+	public static final Item PIPETDOWNANDUP = register(ElecTronicsModBlocks.PIPETDOWNANDUP, null);
+	public static final Item PIPEUP = register(ElecTronicsModBlocks.PIPEUP, null);
+	public static final Item PIPEUPANGLE = register(ElecTronicsModBlocks.PIPEUPANGLE, null);
 
 	private static Item register(Item item) {
 		REGISTRY.add(item);

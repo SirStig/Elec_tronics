@@ -16,6 +16,26 @@ import net.elec_tronics.block.entity.SolarpaneltoprBlockEntity;
 import net.elec_tronics.block.entity.SolarpaneltopBlockEntity;
 import net.elec_tronics.block.entity.SolarPanelrBlockEntity;
 import net.elec_tronics.block.entity.SolarPanelT1BlockEntity;
+import net.elec_tronics.block.entity.PipeupangleBlockEntity;
+import net.elec_tronics.block.entity.PipeupBlockEntity;
+import net.elec_tronics.block.entity.PipetdownandupBlockEntity;
+import net.elec_tronics.block.entity.PipetdownBlockEntity;
+import net.elec_tronics.block.entity.PipetBlockEntity;
+import net.elec_tronics.block.entity.PipestraightBlockEntity;
+import net.elec_tronics.block.entity.PipejunctionupanddownstraightBlockEntity;
+import net.elec_tronics.block.entity.PipejunctionupanddownBlockEntity;
+import net.elec_tronics.block.entity.Pipejunctionupanddown2BlockEntity;
+import net.elec_tronics.block.entity.PipejunctionupBlockEntity;
+import net.elec_tronics.block.entity.Pipejunctionup2BlockEntity;
+import net.elec_tronics.block.entity.PipejunctionmainBlockEntity;
+import net.elec_tronics.block.entity.PipejunctiondownBlockEntity;
+import net.elec_tronics.block.entity.Pipejunctiondown2BlockEntity;
+import net.elec_tronics.block.entity.PipejunctionBlockEntity;
+import net.elec_tronics.block.entity.PipehalfBlockEntity;
+import net.elec_tronics.block.entity.PipedownangleBlockEntity;
+import net.elec_tronics.block.entity.PipeanlgeupBlockEntity;
+import net.elec_tronics.block.entity.PipeangledownBlockEntity;
+import net.elec_tronics.block.entity.PipeangleBlockEntity;
 import net.elec_tronics.block.entity.ExtrusionMachineBlockEntity;
 import net.elec_tronics.block.entity.EngineersworkbenchBlockEntity;
 import net.elec_tronics.block.entity.EngineersWorkBenchTopSideBlockEntity;
@@ -139,6 +159,41 @@ public class ElecTronicsModBlockEntities {
 	public static final BlockEntityType<?> ENERGY_STORAGE_T_1 = register("elec_tronics:energy_storage_t_1", ElecTronicsModBlocks.ENERGY_STORAGE_T_1,
 			EnergyStorageT1BlockEntity::new);
 	public static final BlockEntityType<?> BASEPIPE = register("elec_tronics:basepipe", ElecTronicsModBlocks.BASEPIPE, BasepipeBlockEntity::new);
+	public static final BlockEntityType<?> PIPEANGLE = register("elec_tronics:pipeangle", ElecTronicsModBlocks.PIPEANGLE, PipeangleBlockEntity::new);
+	public static final BlockEntityType<?> PIPEANGLEDOWN = register("elec_tronics:pipeangledown", ElecTronicsModBlocks.PIPEANGLEDOWN,
+			PipeangledownBlockEntity::new);
+	public static final BlockEntityType<?> PIPEANLGEUP = register("elec_tronics:pipeanlgeup", ElecTronicsModBlocks.PIPEANLGEUP,
+			PipeanlgeupBlockEntity::new);
+	public static final BlockEntityType<?> PIPEDOWNANGLE = register("elec_tronics:pipedownangle", ElecTronicsModBlocks.PIPEDOWNANGLE,
+			PipedownangleBlockEntity::new);
+	public static final BlockEntityType<?> PIPEHALF = register("elec_tronics:pipehalf", ElecTronicsModBlocks.PIPEHALF, PipehalfBlockEntity::new);
+	public static final BlockEntityType<?> PIPEJUNCTION = register("elec_tronics:pipejunction", ElecTronicsModBlocks.PIPEJUNCTION,
+			PipejunctionBlockEntity::new);
+	public static final BlockEntityType<?> PIPEJUNCTIONDOWN = register("elec_tronics:pipejunctiondown", ElecTronicsModBlocks.PIPEJUNCTIONDOWN,
+			PipejunctiondownBlockEntity::new);
+	public static final BlockEntityType<?> PIPEJUNCTIONDOWN_2 = register("elec_tronics:pipejunctiondown_2", ElecTronicsModBlocks.PIPEJUNCTIONDOWN_2,
+			Pipejunctiondown2BlockEntity::new);
+	public static final BlockEntityType<?> PIPEJUNCTIONMAIN = register("elec_tronics:pipejunctionmain", ElecTronicsModBlocks.PIPEJUNCTIONMAIN,
+			PipejunctionmainBlockEntity::new);
+	public static final BlockEntityType<?> PIPEJUNCTIONUP = register("elec_tronics:pipejunctionup", ElecTronicsModBlocks.PIPEJUNCTIONUP,
+			PipejunctionupBlockEntity::new);
+	public static final BlockEntityType<?> PIPEJUNCTIONUP_2 = register("elec_tronics:pipejunctionup_2", ElecTronicsModBlocks.PIPEJUNCTIONUP_2,
+			Pipejunctionup2BlockEntity::new);
+	public static final BlockEntityType<?> PIPEJUNCTIONUPANDDOWN = register("elec_tronics:pipejunctionupanddown",
+			ElecTronicsModBlocks.PIPEJUNCTIONUPANDDOWN, PipejunctionupanddownBlockEntity::new);
+	public static final BlockEntityType<?> PIPEJUNCTIONUPANDDOWN_2 = register("elec_tronics:pipejunctionupanddown_2",
+			ElecTronicsModBlocks.PIPEJUNCTIONUPANDDOWN_2, Pipejunctionupanddown2BlockEntity::new);
+	public static final BlockEntityType<?> PIPEJUNCTIONUPANDDOWNSTRAIGHT = register("elec_tronics:pipejunctionupanddownstraight",
+			ElecTronicsModBlocks.PIPEJUNCTIONUPANDDOWNSTRAIGHT, PipejunctionupanddownstraightBlockEntity::new);
+	public static final BlockEntityType<?> PIPESTRAIGHT = register("elec_tronics:pipestraight", ElecTronicsModBlocks.PIPESTRAIGHT,
+			PipestraightBlockEntity::new);
+	public static final BlockEntityType<?> PIPET = register("elec_tronics:pipet", ElecTronicsModBlocks.PIPET, PipetBlockEntity::new);
+	public static final BlockEntityType<?> PIPETDOWN = register("elec_tronics:pipetdown", ElecTronicsModBlocks.PIPETDOWN, PipetdownBlockEntity::new);
+	public static final BlockEntityType<?> PIPETDOWNANDUP = register("elec_tronics:pipetdownandup", ElecTronicsModBlocks.PIPETDOWNANDUP,
+			PipetdownandupBlockEntity::new);
+	public static final BlockEntityType<?> PIPEUP = register("elec_tronics:pipeup", ElecTronicsModBlocks.PIPEUP, PipeupBlockEntity::new);
+	public static final BlockEntityType<?> PIPEUPANGLE = register("elec_tronics:pipeupangle", ElecTronicsModBlocks.PIPEUPANGLE,
+			PipeupangleBlockEntity::new);
 
 	private static BlockEntityType<?> register(String registryname, Block block, BlockEntityType.BlockEntitySupplier<?> supplier) {
 		BlockEntityType<?> blockEntityType = BlockEntityType.Builder.of(supplier, block).build(null).setRegistryName(registryname);
