@@ -2,6 +2,8 @@
 package net.elec_tronics.block;
 
 import net.minecraftforge.fmllegacy.network.NetworkHooks;
+import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.level.storage.loot.LootContext;
@@ -36,9 +38,12 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
+import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
 
 import net.elec_tronics.world.inventory.CrusherT1GUIMenu;
 import net.elec_tronics.procedures.CrusherT1procedureProcedure;
+import net.elec_tronics.init.ElecTronicsModBlocks;
 import net.elec_tronics.block.entity.CrushermachineBlockEntity;
 
 import java.util.Random;
@@ -54,14 +59,20 @@ public class CrushermachineBlock extends Block
 	public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
 
 	public CrushermachineBlock() {
-		super(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.METAL).strength(4f, 10f).requiresCorrectToolForDrops());
+		super(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.METAL).strength(4f, 10f).requiresCorrectToolForDrops().noOcclusion()
+				.isRedstoneConductor((bs, br, bp) -> false));
 		this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH));
 		setRegistryName("crushermachine");
 	}
 
 	@Override
+	public boolean propagatesSkylightDown(BlockState state, BlockGetter reader, BlockPos pos) {
+		return true;
+	}
+
+	@Override
 	public int getLightBlock(BlockState state, BlockGetter worldIn, BlockPos pos) {
-		return 15;
+		return 0;
 	}
 
 	@Override
@@ -176,5 +187,10 @@ public class CrushermachineBlock extends Block
 			return AbstractContainerMenu.getRedstoneSignalFromContainer(be);
 		else
 			return 0;
+	}
+
+	@OnlyIn(Dist.CLIENT)
+	public static void registerRenderLayer() {
+		ItemBlockRenderTypes.setRenderLayer(ElecTronicsModBlocks.CRUSHERMACHINE, renderType -> renderType == RenderType.cutout());
 	}
 }

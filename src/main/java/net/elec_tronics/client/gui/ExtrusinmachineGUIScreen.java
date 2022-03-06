@@ -1,8 +1,41 @@
 
 package net.elec_tronics.client.gui;
 
-public class ExtrusinmachineGUIScreen extends AbstractContainerScreen<ExtrusinmachineGUIMenu> {
+import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.network.chat.Component;
+import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
+import net.minecraft.client.Minecraft;
 
+import net.elec_tronics.world.inventory.ExtrusinmachineGUIMenu;
+import net.elec_tronics.procedures.Powertick9Procedure;
+import net.elec_tronics.procedures.Powertick8Procedure;
+import net.elec_tronics.procedures.Powertick7Procedure;
+import net.elec_tronics.procedures.Powertick6Procedure;
+import net.elec_tronics.procedures.Powertick5Procedure;
+import net.elec_tronics.procedures.Powertick4Procedure;
+import net.elec_tronics.procedures.Powertick3Procedure;
+import net.elec_tronics.procedures.Powertick2Procedure;
+import net.elec_tronics.procedures.Powertick1Procedure;
+import net.elec_tronics.procedures.Powertick0Procedure;
+import net.elec_tronics.procedures.Craftingtime9Procedure;
+import net.elec_tronics.procedures.Craftingtime8Procedure;
+import net.elec_tronics.procedures.Craftingtime6Procedure;
+import net.elec_tronics.procedures.Craftingtime5Procedure;
+import net.elec_tronics.procedures.Craftingtime4Procedure;
+import net.elec_tronics.procedures.Craftingtime3Procedure;
+import net.elec_tronics.procedures.Craftingtime2Procedure;
+import net.elec_tronics.procedures.Craftingtime10Procedure;
+import net.elec_tronics.procedures.Craftingtie7Procedure;
+import net.elec_tronics.procedures.CraftingTime1Procedure;
+import net.elec_tronics.procedures.CraftingTime0Procedure;
+
+import com.mojang.blaze3d.vertex.PoseStack;
+import com.mojang.blaze3d.systems.RenderSystem;
+
+public class ExtrusinmachineGUIScreen extends AbstractContainerScreen<ExtrusinmachineGUIMenu> {
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
@@ -25,7 +58,6 @@ public class ExtrusinmachineGUIScreen extends AbstractContainerScreen<Extrusinma
 		this.renderBackground(ms);
 		super.render(ms, mouseX, mouseY, partialTicks);
 		this.renderTooltip(ms, mouseX, mouseY);
-
 	}
 
 	@Override
@@ -33,139 +65,93 @@ public class ExtrusinmachineGUIScreen extends AbstractContainerScreen<Extrusinma
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
-
 		RenderSystem.setShaderTexture(0, texture);
 		this.blit(ms, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
-
-		if (
-
-		Powertick0Procedure.execute(world, x, y, z)) {
+		if (Powertick0Procedure.execute(world, x, y, z)) {
 			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/batterv1.png"));
 			this.blit(ms, this.leftPos + 8, this.topPos + 22, 0, 0, 10, 50, 10, 50);
 		}
-		if (
-
-		Powertick1Procedure.execute(world, x, y, z)) {
+		if (Powertick1Procedure.execute(world, x, y, z)) {
 			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/battery5.png"));
 			this.blit(ms, this.leftPos + 8, this.topPos + 22, 0, 0, 10, 50, 10, 50);
 		}
-		if (
-
-		Powertick2Procedure.execute(world, x, y, z)) {
+		if (Powertick2Procedure.execute(world, x, y, z)) {
 			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/battery10.png"));
 			this.blit(ms, this.leftPos + 8, this.topPos + 22, 0, 0, 10, 50, 10, 50);
 		}
-		if (
-
-		Powertick3Procedure.execute(world, x, y, z)) {
+		if (Powertick3Procedure.execute(world, x, y, z)) {
 			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/battery20.png"));
 			this.blit(ms, this.leftPos + 8, this.topPos + 22, 0, 0, 10, 50, 10, 50);
 		}
-		if (
-
-		Powertick4Procedure.execute(world, x, y, z)) {
+		if (Powertick4Procedure.execute(world, x, y, z)) {
 			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/battery30.png"));
 			this.blit(ms, this.leftPos + 8, this.topPos + 22, 0, 0, 10, 50, 10, 50);
 		}
-		if (
-
-		Powertick5Procedure.execute(world, x, y, z)) {
+		if (Powertick5Procedure.execute(world, x, y, z)) {
 			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/battery40.png"));
 			this.blit(ms, this.leftPos + 8, this.topPos + 22, 0, 0, 10, 50, 10, 50);
 		}
-		if (
-
-		Powertick6Procedure.execute(world, x, y, z)) {
+		if (Powertick6Procedure.execute(world, x, y, z)) {
 			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/battery50.png"));
 			this.blit(ms, this.leftPos + 8, this.topPos + 22, 0, 0, 10, 50, 10, 50);
 		}
-		if (
-
-		Powertick7Procedure.execute(world, x, y, z)) {
+		if (Powertick7Procedure.execute(world, x, y, z)) {
 			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/battery60.png"));
 			this.blit(ms, this.leftPos + 8, this.topPos + 22, 0, 0, 10, 50, 10, 50);
 		}
-		if (
-
-		Powertick8Procedure.execute(world, x, y, z)) {
+		if (Powertick8Procedure.execute(world, x, y, z)) {
 			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/battery70.png"));
 			this.blit(ms, this.leftPos + 8, this.topPos + 22, 0, 0, 10, 50, 10, 50);
 		}
-		if (
-
-		Powertick8Procedure.execute(world, x, y, z)) {
+		if (Powertick8Procedure.execute(world, x, y, z)) {
 			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/battery80.png"));
 			this.blit(ms, this.leftPos + 8, this.topPos + 22, 0, 0, 10, 50, 10, 50);
 		}
-		if (
-
-		Powertick9Procedure.execute(world, x, y, z)) {
+		if (Powertick9Procedure.execute(world, x, y, z)) {
 			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/battery92full.png"));
 			this.blit(ms, this.leftPos + 8, this.topPos + 22, 0, 0, 10, 50, 10, 50);
 		}
-		if (
-
-		CraftingTime0Procedure.execute(world, x, y, z)) {
+		if (CraftingTime0Procedure.execute(world, x, y, z)) {
 			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/furnace_gui_1.png"));
 			this.blit(ms, this.leftPos + 73, this.topPos + 43, 0, 0, 25, 17, 25, 17);
 		}
-		if (
-
-		CraftingTime1Procedure.execute(world, x, y, z)) {
+		if (CraftingTime1Procedure.execute(world, x, y, z)) {
 			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/arrow9.png"));
 			this.blit(ms, this.leftPos + 70, this.topPos + 44, 0, 0, 32, 16, 32, 16);
 		}
-		if (
-
-		Craftingtime2Procedure.execute(world, x, y, z)) {
+		if (Craftingtime2Procedure.execute(world, x, y, z)) {
 			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/arrow8.png"));
 			this.blit(ms, this.leftPos + 70, this.topPos + 44, 0, 0, 32, 16, 32, 16);
 		}
-		if (
-
-		Craftingtime3Procedure.execute(world, x, y, z)) {
+		if (Craftingtime3Procedure.execute(world, x, y, z)) {
 			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/arrow7.png"));
 			this.blit(ms, this.leftPos + 70, this.topPos + 44, 0, 0, 32, 16, 32, 16);
 		}
-		if (
-
-		Craftingtime4Procedure.execute(world, x, y, z)) {
+		if (Craftingtime4Procedure.execute(world, x, y, z)) {
 			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/arrow6.png"));
 			this.blit(ms, this.leftPos + 70, this.topPos + 44, 0, 0, 32, 16, 32, 16);
 		}
-		if (
-
-		Craftingtime5Procedure.execute(world, x, y, z)) {
+		if (Craftingtime5Procedure.execute(world, x, y, z)) {
 			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/arrow5.png"));
 			this.blit(ms, this.leftPos + 70, this.topPos + 44, 0, 0, 32, 16, 32, 16);
 		}
-		if (
-
-		Craftingtime6Procedure.execute(world, x, y, z)) {
+		if (Craftingtime6Procedure.execute(world, x, y, z)) {
 			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/arrow4.png"));
 			this.blit(ms, this.leftPos + 70, this.topPos + 44, 0, 0, 32, 16, 32, 16);
 		}
-		if (
-
-		Craftingtie7Procedure.execute(world, x, y, z)) {
+		if (Craftingtie7Procedure.execute(world, x, y, z)) {
 			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/arrow3.png"));
 			this.blit(ms, this.leftPos + 70, this.topPos + 44, 0, 0, 32, 16, 32, 16);
 		}
-		if (
-
-		Craftingtime8Procedure.execute(world, x, y, z)) {
+		if (Craftingtime8Procedure.execute(world, x, y, z)) {
 			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/arrow2.png"));
 			this.blit(ms, this.leftPos + 70, this.topPos + 44, 0, 0, 32, 16, 32, 16);
 		}
-		if (
-
-		Craftingtime9Procedure.execute(world, x, y, z)) {
+		if (Craftingtime9Procedure.execute(world, x, y, z)) {
 			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/arrow1.png"));
 			this.blit(ms, this.leftPos + 70, this.topPos + 44, 0, 0, 32, 16, 32, 16);
 		}
-		if (
-
-		Craftingtime10Procedure.execute(world, x, y, z)) {
+		if (Craftingtime10Procedure.execute(world, x, y, z)) {
 			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/2474b6354f6757ab86373259b87a2ad3_1.png"));
 			this.blit(ms, this.leftPos + 71, this.topPos + 42, 0, 0, 28, 18, 28, 18);
 		}
@@ -188,7 +174,6 @@ public class ExtrusinmachineGUIScreen extends AbstractContainerScreen<Extrusinma
 			this.minecraft.player.closeContainer();
 			return true;
 		}
-
 		return super.keyPressed(key, b, c);
 	}
 
@@ -212,9 +197,6 @@ public class ExtrusinmachineGUIScreen extends AbstractContainerScreen<Extrusinma
 	@Override
 	public void init() {
 		super.init();
-
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
-
 	}
-
 }

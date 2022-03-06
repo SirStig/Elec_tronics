@@ -123,6 +123,7 @@ public class ElecTronicsModBlocks {
 		@SubscribeEvent
 		public static void clientSetup(FMLClientSetupEvent event) {
 			EngineersworkbenchBlock.registerRenderLayer();
+			CrushermachineBlock.registerRenderLayer();
 			T1WireBlock.registerRenderLayer();
 			CableTT1Block.registerRenderLayer();
 			CableJunctionT1Block.registerRenderLayer();
