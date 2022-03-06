@@ -2,4 +2,4 @@
 
 ## Elec Tronics Prototype for MC. 1.17.1
 
-Elec Tronics is a independant mod for Minecraft featuring 
+Elec Tronics is a independant mod for Minecraft featuring machines, blocks, items, and more that all take advantage of and use Forge's FE/RF
