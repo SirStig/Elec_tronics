@@ -50,6 +50,7 @@ import net.elec_tronics.block.entity.Basewirecon3BlockEntity;
 import net.elec_tronics.block.entity.Basewirecon2angleupBlockEntity;
 import net.elec_tronics.block.entity.Basewirecon2angledownBlockEntity;
 import net.elec_tronics.block.entity.Basewirecon2angleBlockEntity;
+import net.elec_tronics.block.entity.BasepipeBlockEntity;
 import net.elec_tronics.block.entity.BasecableT1BlockEntity;
 
 import java.util.List;
@@ -137,6 +138,7 @@ public class ElecTronicsModBlockEntities {
 			ExtrusionMachineBlockEntity::new);
 	public static final BlockEntityType<?> ENERGY_STORAGE_T_1 = register("elec_tronics:energy_storage_t_1", ElecTronicsModBlocks.ENERGY_STORAGE_T_1,
 			EnergyStorageT1BlockEntity::new);
+	public static final BlockEntityType<?> BASEPIPE = register("elec_tronics:basepipe", ElecTronicsModBlocks.BASEPIPE, BasepipeBlockEntity::new);
 
 	private static BlockEntityType<?> register(String registryname, Block block, BlockEntityType.BlockEntitySupplier<?> supplier) {
 		BlockEntityType<?> blockEntityType = BlockEntityType.Builder.of(supplier, block).build(null).setRegistryName(registryname);

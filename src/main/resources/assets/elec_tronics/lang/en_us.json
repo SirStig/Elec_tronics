@@ -75,6 +75,7 @@
   "block.elec_tronics.coalgeneratormachine": "Coal Generator",
   "block.elec_tronics.cable_t_down_t_1": "Cable Junction T1",
   "block.elec_tronics.cable_junction_upand_down_t_1": "Cable Junction T1",
+  "block.elec_tronics.basepipe": "Pipe",
   "block.elec_tronics.crushermachine": "Crusher T1",
   "item.elec_tronics.turbine": "Turbine",
   "item.elec_tronics.rubber": "Rubber",

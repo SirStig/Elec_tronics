@@ -11,6 +11,7 @@
     "elec_tronics:solar_panelr",
     "elec_tronics:solarpaneltop",
     "elec_tronics:solarpaneltopr",
-    "elec_tronics:extrusion_machine"
+    "elec_tronics:extrusion_machine",
+    "elec_tronics:basepipe"
   ]
 }

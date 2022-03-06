@@ -140,6 +140,7 @@ public class ElecTronicsModItems {
 	public static final Item IRONGEAR = register(new IrongearItem());
 	public static final Item COPPER_SHEET = register(new CopperSheetItem());
 	public static final Item WIRE_ROLLER = register(new WireRollerItem());
+	public static final Item BASEPIPE = register(ElecTronicsModBlocks.BASEPIPE, ElecTronicsModTabs.TAB_ELEC_TRONICS_MENU);
 
 	private static Item register(Item item) {
 		REGISTRY.add(item);

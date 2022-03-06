@@ -55,6 +55,7 @@ import net.elec_tronics.block.Basewirecon3Block;
 import net.elec_tronics.block.Basewirecon2angleupBlock;
 import net.elec_tronics.block.Basewirecon2angledownBlock;
 import net.elec_tronics.block.Basewirecon2angleBlock;
+import net.elec_tronics.block.BasepipeBlock;
 import net.elec_tronics.block.BasecableT1Block;
 
 import java.util.List;
@@ -107,6 +108,7 @@ public class ElecTronicsModBlocks {
 	public static final Block SOLARPANELTOPR = register(new SolarpaneltoprBlock());
 	public static final Block EXTRUSION_MACHINE = register(new ExtrusionMachineBlock());
 	public static final Block ENERGY_STORAGE_T_1 = register(new EnergyStorageT1Block());
+	public static final Block BASEPIPE = register(new BasepipeBlock());
 
 	private static Block register(Block block) {
 		REGISTRY.add(block);
@@ -158,6 +160,7 @@ public class ElecTronicsModBlocks {
 			SolarPanelrBlock.registerRenderLayer();
 			SolarpaneltopBlock.registerRenderLayer();
 			SolarpaneltoprBlock.registerRenderLayer();
+			BasepipeBlock.registerRenderLayer();
 		}
 	}
 }
