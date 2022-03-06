@@ -4,12 +4,11 @@ license="MIT License"
 
 [[mods]]
 modId="elec_tronics"
-version="0.0.0.1"
+version="0.0.0.4"
 displayName="Elec Tronics"
 credits="SirJStig, Mewbster9900"
 displayURL="https://github.com/SirStig/Elec_tronics"
 updateJSONURL="https://raw.githubusercontent.com/SirStig/Elec_tronics/1.17.x(Prototype)/update.json"
-logoFile="logo.png"
 authors="SirJStig"
 description='''
 Elec Tronics is a mod based around your favorite mods with a bit of a touch of realism
