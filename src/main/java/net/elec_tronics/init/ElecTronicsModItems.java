@@ -59,12 +59,12 @@ import java.util.ArrayList;
 public class ElecTronicsModItems {
 	private static final List<Item> REGISTRY = new ArrayList<>();
 	public static final Item URANIUM_INGOT = register(new UraniumIngotItem());
-	public static final Item URANIUMORE = register(ElecTronicsModBlocks.URANIUMORE, ElecTronicsModTabs.TAB_ELEC_TRONICS_MENU);
+	public static final Item URANIUMORE = register(ElecTronicsModBlocks.URANIUMORE, ElecTronicsModTabs.TAB_ELECTRONICSMACHINES);
 	public static final Item URANIUM_DUST = register(new UraniumDustItem());
-	public static final Item TUNGSTEN = register(ElecTronicsModBlocks.TUNGSTEN, ElecTronicsModTabs.TAB_ELEC_TRONICS_MENU);
+	public static final Item TUNGSTEN = register(ElecTronicsModBlocks.TUNGSTEN, ElecTronicsModTabs.TAB_ELECTRONICSMACHINES);
 	public static final Item TUNGSTEN_ORE = register(new TungstenOreItem());
 	public static final Item TUNGSTEN_INGOT = register(new TungstenIngotItem());
-	public static final Item REINFORCEDBLASTBRICK = register(ElecTronicsModBlocks.REINFORCEDBLASTBRICK, ElecTronicsModTabs.TAB_ELEC_TRONICS_MENU);
+	public static final Item REINFORCEDBLASTBRICK = register(ElecTronicsModBlocks.REINFORCEDBLASTBRICK, ElecTronicsModTabs.TAB_ELECTRONICSMACHINES);
 	public static final Item INSULATION = register(new InsulationItem());
 	public static final Item BLASTFURNANCEMACHINE = register(ElecTronicsModBlocks.BLASTFURNANCEMACHINE, ElecTronicsModTabs.TAB_ELECTRONICSMACHINES);
 	public static final Item FIBGER_GLASS_DUST = register(new FibgerGlassDustItem());
@@ -79,7 +79,7 @@ public class ElecTronicsModItems {
 	public static final Item SCREWDRIVER = register(new ScrewdriverItem());
 	public static final Item HAMMER = register(new HammerItem());
 	public static final Item SHARPENEDIRON = register(new SharpenedironItem());
-	public static final Item WATERTURBINEMACHINE = register(ElecTronicsModBlocks.WATERTURBINEMACHINE, ElecTronicsModTabs.TAB_ELEC_TRONICS_MENU);
+	public static final Item WATERTURBINEMACHINE = register(ElecTronicsModBlocks.WATERTURBINEMACHINE, ElecTronicsModTabs.TAB_ELECTRONICSMACHINES);
 	public static final Item COALGENERATORMACHINE = register(ElecTronicsModBlocks.COALGENERATORMACHINE, ElecTronicsModTabs.TAB_ELECTRONICSMACHINES);
 	public static final Item ASH = register(new AshItem());
 	public static final Item CRUSHERMACHINE = register(ElecTronicsModBlocks.CRUSHERMACHINE, ElecTronicsModTabs.TAB_ELECTRONICSMACHINES);

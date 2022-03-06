@@ -117,7 +117,7 @@ public class PipejunctionmainBlock extends Block
 		int y = pos.getY();
 		int z = pos.getZ();
 
-		BasepipeUpdateTickProcedure.execute();
+		BasepipeUpdateTickProcedure.execute(world, x, y, z);
 		world.getBlockTicks().scheduleTick(pos, this, 1);
 	}
 
