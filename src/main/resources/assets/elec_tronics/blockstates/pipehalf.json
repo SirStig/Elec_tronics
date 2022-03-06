@@ -1,0 +1,27 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "elec_tronics:block/pipehalf"
+    },
+    "facing=east": {
+      "model": "elec_tronics:block/pipehalf",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "elec_tronics:block/pipehalf",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "elec_tronics:block/pipehalf",
+      "y": 270
+    },
+    "facing=up": {
+      "model": "elec_tronics:block/pipehalf",
+      "x": 270
+    },
+    "facing=down": {
+      "model": "elec_tronics:block/pipehalf",
+      "x": 90
+    }
+  }
+}

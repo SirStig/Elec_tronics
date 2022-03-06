@@ -2,9 +2,9 @@
   "_fv": 24,
   "_type": "tab",
   "definition": {
-    "name": "Elec Tronics",
+    "name": "Elec Tronics Items",
     "icon": {
-      "value": "CUSTOM:Engineersworkbench"
+      "value": "CUSTOM:UraniumDust"
     },
     "showSearch": true
   }
