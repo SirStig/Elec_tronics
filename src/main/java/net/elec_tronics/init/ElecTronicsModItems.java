@@ -66,10 +66,10 @@ public class ElecTronicsModItems {
 	public static final Item TUNGSTEN_INGOT = register(new TungstenIngotItem());
 	public static final Item REINFORCEDBLASTBRICK = register(ElecTronicsModBlocks.REINFORCEDBLASTBRICK, ElecTronicsModTabs.TAB_ELEC_TRONICS_MENU);
 	public static final Item INSULATION = register(new InsulationItem());
-	public static final Item BLASTFURNANCEMACHINE = register(ElecTronicsModBlocks.BLASTFURNANCEMACHINE, ElecTronicsModTabs.TAB_ELEC_TRONICS_MENU);
+	public static final Item BLASTFURNANCEMACHINE = register(ElecTronicsModBlocks.BLASTFURNANCEMACHINE, ElecTronicsModTabs.TAB_ELECTRONICSMACHINES);
 	public static final Item FIBGER_GLASS_DUST = register(new FibgerGlassDustItem());
 	public static final Item STEELINGOT = register(new SteelingotItem());
-	public static final Item ENGINEERSWORKBENCH = register(ElecTronicsModBlocks.ENGINEERSWORKBENCH, ElecTronicsModTabs.TAB_ELEC_TRONICS_MENU);
+	public static final Item ENGINEERSWORKBENCH = register(ElecTronicsModBlocks.ENGINEERSWORKBENCH, ElecTronicsModTabs.TAB_ELECTRONICSMACHINES);
 	public static final Item STEELPICKAXE = register(new SteelpickaxeItem());
 	public static final Item STEELSWORD = register(new SteelswordItem());
 	public static final Item STEELSHOVEL = register(new SteelshovelItem());
@@ -80,9 +80,9 @@ public class ElecTronicsModItems {
 	public static final Item HAMMER = register(new HammerItem());
 	public static final Item SHARPENEDIRON = register(new SharpenedironItem());
 	public static final Item WATERTURBINEMACHINE = register(ElecTronicsModBlocks.WATERTURBINEMACHINE, ElecTronicsModTabs.TAB_ELEC_TRONICS_MENU);
-	public static final Item COALGENERATORMACHINE = register(ElecTronicsModBlocks.COALGENERATORMACHINE, ElecTronicsModTabs.TAB_ELEC_TRONICS_MENU);
+	public static final Item COALGENERATORMACHINE = register(ElecTronicsModBlocks.COALGENERATORMACHINE, ElecTronicsModTabs.TAB_ELECTRONICSMACHINES);
 	public static final Item ASH = register(new AshItem());
-	public static final Item CRUSHERMACHINE = register(ElecTronicsModBlocks.CRUSHERMACHINE, ElecTronicsModTabs.TAB_ELEC_TRONICS_MENU);
+	public static final Item CRUSHERMACHINE = register(ElecTronicsModBlocks.CRUSHERMACHINE, ElecTronicsModTabs.TAB_ELECTRONICSMACHINES);
 	public static final Item IRONDUST = register(new IrondustItem());
 	public static final Item T_1_WIRE = register(ElecTronicsModBlocks.T_1_WIRE, null);
 	public static final Item CABLE_TT_1 = register(ElecTronicsModBlocks.CABLE_TT_1, null);
@@ -114,7 +114,7 @@ public class ElecTronicsModItems {
 	public static final Item BASEWIRECON_4UPANDDOWNSTRAIGHT = register(ElecTronicsModBlocks.BASEWIRECON_4UPANDDOWNSTRAIGHT, null);
 	public static final Item BASEWIRECON_5DOWN = register(ElecTronicsModBlocks.BASEWIRECON_5DOWN, null);
 	public static final Item BASEWIRECON_5MAIN = register(ElecTronicsModBlocks.BASEWIRECON_5MAIN, null);
-	public static final Item SOLAR_PANEL_T_1 = register(ElecTronicsModBlocks.SOLAR_PANEL_T_1, ElecTronicsModTabs.TAB_ELEC_TRONICS_MENU);
+	public static final Item SOLAR_PANEL_T_1 = register(ElecTronicsModBlocks.SOLAR_PANEL_T_1, ElecTronicsModTabs.TAB_ELECTRONICSMACHINES);
 	public static final Item SOLAR_PANELR = register(ElecTronicsModBlocks.SOLAR_PANELR, null);
 	public static final Item SOLARPANELTOP = register(ElecTronicsModBlocks.SOLARPANELTOP, null);
 	public static final Item SOLARPANELTOPR = register(ElecTronicsModBlocks.SOLARPANELTOPR, null);
@@ -133,7 +133,7 @@ public class ElecTronicsModItems {
 	public static final Item COOLING_TOWER = register(new CoolingTowerItem());
 	public static final Item GENERATOR = register(new GeneratorItem());
 	public static final Item SOLAR_PANEL = register(new SolarPanelItem());
-	public static final Item ENERGY_STORAGE_T_1 = register(ElecTronicsModBlocks.ENERGY_STORAGE_T_1, ElecTronicsModTabs.TAB_ELEC_TRONICS_MENU);
+	public static final Item ENERGY_STORAGE_T_1 = register(ElecTronicsModBlocks.ENERGY_STORAGE_T_1, ElecTronicsModTabs.TAB_ELECTRONICSMACHINES);
 	public static final Item ELECTRICMOTOR = register(new ElectricmotorItem());
 	public static final Item ORE_FUNNEL = register(new OreFunnelItem());
 	public static final Item GRINDER = register(new GrinderItem());
