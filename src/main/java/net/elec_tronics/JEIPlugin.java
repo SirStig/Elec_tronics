@@ -111,8 +111,6 @@ public class JEIPlugin implements IModPlugin {
 			this.background = guiHelper.createDrawable(new ResourceLocation("elec_tronics", "textures/jeiengineersworkbench256.png"), 0, 0, 129, 72);
 		}
 
-// now you can send `textComponent` to something, such as a client
-
 		@Override
 		public ResourceLocation getUid() {
 			return Uid;
@@ -154,22 +152,22 @@ public class JEIPlugin implements IModPlugin {
 		@Override
 		public void setRecipe(IRecipeLayout iRecipeLayout, EngineersWorkbenchRecipeWrapper recipeWrapper, IIngredients iIngredients) {
 			IGuiItemStackGroup stacks = iRecipeLayout.getItemStacks();
-			stacks.init(input1, true, 19, 54);
-			stacks.init(input2, true, 19, 36);
-			stacks.init(input3, true, 19, 18);
-			stacks.init(input4, true, 38, 54);
-			stacks.init(input5, true, 38, 36);
-			stacks.init(input6, true, 38, 18);
-			stacks.init(input7, true, 56, 54);
-			stacks.init(input8, true, 56, 36);
-			stacks.init(input9, true, 56, 18);
+			stacks.init(input1, true, 18, 54);
+			stacks.init(input2, true, 18, 36);
+			stacks.init(input3, true, 18, 18);
+			stacks.init(input4, true, 36, 54);
+			stacks.init(input5, true, 36, 36);
+			stacks.init(input6, true, 36, 18);
+			stacks.init(input7, true, 54, 54);
+			stacks.init(input8, true, 54, 36);
+			stacks.init(input9, true, 54, 18);
 			stacks.init(input10, true, 0, 54);
 			stacks.init(input11, true, 0, 36);
 			stacks.init(input12, true, 0, 18);
 			stacks.init(input13, true, 0, 0);
-			stacks.init(input14, true, 19, 0);
-			stacks.init(input15, true, 38, 0);
-			stacks.init(input16, true, 65, 0);
+			stacks.init(input14, true, 18, 0);
+			stacks.init(input15, true, 36, 0);
+			stacks.init(input16, true, 54, 0);
 			stacks.set(input1, iIngredients.getInputs(VanillaTypes.ITEM).get(0));
 			stacks.set(input2, iIngredients.getInputs(VanillaTypes.ITEM).get(1));
 			stacks.set(input3, iIngredients.getInputs(VanillaTypes.ITEM).get(1));
@@ -188,7 +186,7 @@ public class JEIPlugin implements IModPlugin {
 			stacks.set(input16, iIngredients.getInputs(VanillaTypes.ITEM).get(0));
 			// ,,,
 			
-			stacks.init(output1, false, 107, 28);
+			stacks.init(output1, false, 111, 28);
 			stacks.set(output1, iIngredients.getOutputs(VanillaTypes.ITEM).get(0));
 			// ...
 		}

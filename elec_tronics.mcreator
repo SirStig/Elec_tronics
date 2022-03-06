@@ -2799,10 +2799,6 @@
     "name": "~",
     "children": [
       {
-        "name": "ModSupport",
-        "children": []
-      },
-      {
         "name": "Ores-Ingots-Dusts",
         "children": []
       },
@@ -2871,12 +2867,15 @@
   "workspaceSettings": {
     "modid": "elec_tronics",
     "modName": "Elec Tronics",
-    "version": "0.0.0.01",
+    "version": "0.0.0.1",
+    "description": "Elec Tronics is a mod based around your favorite mods with a bit of a touch of realism",
     "author": "SirJStig",
     "websiteURL": "https://github.com/SirStig/Elec_tronics",
     "license": "MIT License",
     "disableForgeVersionCheck": true,
     "serverSideOnly": false,
+    "updateURL": "https://raw.githubusercontent.com/SirStig/Elec_tronics/1.17.x(Prototype)/update.json",
+    "modPicture": "modlogo",
     "requiredMods": [],
     "dependencies": [],
     "dependants": [],
