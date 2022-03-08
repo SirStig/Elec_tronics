@@ -4,6 +4,10 @@ package net.elec_tronics.block;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
+import net.minecraft.world.phys.shapes.VoxelShape;
+import net.minecraft.world.phys.shapes.Shapes;
+import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.level.storage.loot.LootContext;
 import net.minecraft.world.level.material.Material;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
@@ -62,6 +66,38 @@ public class BasepipeBlock extends Block
 	@Override
 	public int getLightBlock(BlockState state, BlockGetter worldIn, BlockPos pos) {
 		return 0;
+	}
+
+	@Override
+	public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
+		Vec3 offset = state.getOffset(world, pos);
+		switch ((Direction) state.getValue(FACING)) {
+			case SOUTH :
+			default :
+				return Shapes.or(box(6, 10, 10, 11, 11, 11), box(5, 5, 10, 10, 6, 11), box(5, 6, 10, 6, 11, 11), box(10, 5, 10, 11, 10, 11),
+						box(6, 10, 5, 11, 11, 6), box(5, 5, 5, 10, 6, 6), box(5, 6, 5, 6, 11, 6), box(10, 5, 5, 11, 10, 6), box(6, 6, 6, 10, 7, 10),
+						box(6, 9, 6, 10, 10, 10), box(6, 7, 6, 7, 9, 10)).move(offset.x, offset.y, offset.z);
+			case NORTH :
+				return Shapes.or(box(5, 10, 5, 10, 11, 6), box(6, 5, 5, 11, 6, 6), box(10, 6, 5, 11, 11, 6), box(5, 5, 5, 6, 10, 6),
+						box(5, 10, 10, 10, 11, 11), box(6, 5, 10, 11, 6, 11), box(10, 6, 10, 11, 11, 11), box(5, 5, 10, 6, 10, 11),
+						box(6, 6, 6, 10, 7, 10), box(6, 9, 6, 10, 10, 10), box(9, 7, 6, 10, 9, 10)).move(offset.x, offset.y, offset.z);
+			case EAST :
+				return Shapes.or(box(10, 10, 5, 11, 11, 10), box(10, 5, 6, 11, 6, 11), box(10, 6, 10, 11, 11, 11), box(10, 5, 5, 11, 10, 6),
+						box(5, 10, 5, 6, 11, 10), box(5, 5, 6, 6, 6, 11), box(5, 6, 10, 6, 11, 11), box(5, 5, 5, 6, 10, 6), box(6, 6, 6, 10, 7, 10),
+						box(6, 9, 6, 10, 10, 10), box(6, 7, 9, 10, 9, 10)).move(offset.x, offset.y, offset.z);
+			case WEST :
+				return Shapes.or(box(5, 10, 6, 6, 11, 11), box(5, 5, 5, 6, 6, 10), box(5, 6, 5, 6, 11, 6), box(5, 5, 10, 6, 10, 11),
+						box(10, 10, 6, 11, 11, 11), box(10, 5, 5, 11, 6, 10), box(10, 6, 5, 11, 11, 6), box(10, 5, 10, 11, 10, 11),
+						box(6, 6, 6, 10, 7, 10), box(6, 9, 6, 10, 10, 10), box(6, 7, 6, 10, 9, 7)).move(offset.x, offset.y, offset.z);
+			case UP :
+				return Shapes.or(box(5, 10, 10, 10, 11, 11), box(6, 10, 5, 11, 11, 6), box(10, 10, 6, 11, 11, 11), box(5, 10, 5, 6, 11, 10),
+						box(5, 5, 10, 10, 6, 11), box(6, 5, 5, 11, 6, 6), box(10, 5, 6, 11, 6, 11), box(5, 5, 5, 6, 6, 10), box(6, 6, 6, 10, 10, 7),
+						box(6, 6, 9, 10, 10, 10), box(9, 6, 7, 10, 10, 9)).move(offset.x, offset.y, offset.z);
+			case DOWN :
+				return Shapes.or(box(5, 5, 5, 10, 6, 6), box(6, 5, 10, 11, 6, 11), box(10, 5, 5, 11, 6, 10), box(5, 5, 6, 6, 6, 11),
+						box(5, 10, 5, 10, 11, 6), box(6, 10, 10, 11, 11, 11), box(10, 10, 5, 11, 11, 10), box(5, 10, 6, 6, 11, 11),
+						box(6, 6, 9, 10, 10, 10), box(6, 6, 6, 10, 10, 7), box(9, 6, 7, 10, 10, 9)).move(offset.x, offset.y, offset.z);
+		}
 	}
 
 	@Override

@@ -2,145 +2,46 @@
   "_fv": 24,
   "_type": "block",
   "definition": {
-    "texture": "basepipe",
+    "texture": "tank",
     "textureTop": "",
     "textureLeft": "",
     "textureFront": "",
     "textureRight": "",
     "textureBack": "",
     "renderType": 2,
-    "customModelName": "basepipe:default",
-    "rotationMode": 2,
+    "customModelName": "tank_0.5_full:default",
+    "rotationMode": 0,
     "emissiveRendering": false,
     "displayFluidOverlay": false,
-    "itemTexture": "basepipe",
+    "itemTexture": "",
     "particleTexture": "",
     "tintType": "No tint",
     "isItemTinted": false,
     "hasTransparency": true,
     "connectedSides": false,
-    "transparencyType": "SOLID",
+    "transparencyType": "CUTOUT",
     "disableOffset": false,
     "boundingBoxes": [
       {
-        "mx": 5.0,
-        "my": 10.0,
-        "mz": 5.0,
-        "Mx": 10.0,
-        "My": 11.0,
-        "Mz": 6.0,
-        "subtract": false
-      },
-      {
-        "mx": 6.0,
-        "my": 5.0,
-        "mz": 5.0,
-        "Mx": 11.0,
-        "My": 6.0,
-        "Mz": 6.0,
-        "subtract": false
-      },
-      {
-        "mx": 10.0,
-        "my": 6.0,
-        "mz": 5.0,
-        "Mx": 11.0,
-        "My": 11.0,
-        "Mz": 6.0,
-        "subtract": false
-      },
-      {
-        "mx": 5.0,
-        "my": 5.0,
-        "mz": 5.0,
-        "Mx": 6.0,
-        "My": 10.0,
-        "Mz": 6.0,
-        "subtract": false
-      },
-      {
-        "mx": 5.0,
-        "my": 10.0,
-        "mz": 10.0,
-        "Mx": 10.0,
-        "My": 11.0,
-        "Mz": 11.0,
-        "subtract": false
-      },
-      {
-        "mx": 6.0,
-        "my": 5.0,
-        "mz": 10.0,
-        "Mx": 11.0,
-        "My": 6.0,
-        "Mz": 11.0,
-        "subtract": false
-      },
-      {
-        "mx": 10.0,
-        "my": 6.0,
-        "mz": 10.0,
-        "Mx": 11.0,
-        "My": 11.0,
-        "Mz": 11.0,
-        "subtract": false
-      },
-      {
-        "mx": 5.0,
-        "my": 5.0,
-        "mz": 10.0,
-        "Mx": 6.0,
-        "My": 10.0,
-        "Mz": 11.0,
-        "subtract": false
-      },
-      {
-        "mx": 6.0,
-        "my": 6.0,
-        "mz": 6.0,
-        "Mx": 10.0,
-        "My": 7.0,
-        "Mz": 10.0,
-        "subtract": false
-      },
-      {
-        "mx": 6.0,
-        "my": 9.0,
-        "mz": 6.0,
-        "Mx": 10.0,
-        "My": 10.0,
-        "Mz": 10.0,
-        "subtract": false
-      },
-      {
-        "mx": 9.0,
-        "my": 7.0,
-        "mz": 6.0,
-        "Mx": 10.0,
-        "My": 9.0,
-        "Mz": 10.0,
-        "subtract": false
-      },
-      {
-        "mx": 7.0,
-        "my": 9.0,
-        "mz": 10.0,
-        "Mx": 7.0,
-        "My": 9.0,
+        "mx": 0.0,
+        "my": 0.0,
+        "mz": 0.0,
+        "Mx": 16.0,
+        "My": 16.0,
         "Mz": 16.0,
         "subtract": false
       }
     ],
-    "name": "Pipe",
+    "name": "Tank 1",
     "specialInfo": [],
-    "hardness": 4.0,
+    "hardness": 1.0,
     "resistance": 10.0,
     "hasGravity": false,
     "isWaterloggable": false,
     "creativeTab": {
-      "value": "CUSTOM:LovieeesTechyMod"
+      "value": "No creative tab entry"
     },
-    "destroyTool": "pickaxe",
+    "destroyTool": "Not specified",
     "customDrop": {
       "value": ""
     },
@@ -176,7 +77,7 @@
     "isNotColidable": false,
     "isCustomSoundType": false,
     "soundOnStep": {
-      "value": "METAL"
+      "value": "GLASS"
     },
     "breakSound": {
       "value": ""
@@ -195,7 +96,7 @@
     },
     "luminance": 0,
     "unbreakable": false,
-    "breakHarvestLevel": 2,
+    "breakHarvestLevel": 1,
     "spawnParticles": false,
     "particleToSpawn": {
       "value": "EXPLOSION_NORMAL"
@@ -208,26 +109,23 @@
     "openGUIOnRightClick": false,
     "inventorySize": 9,
     "inventoryStackSize": 64,
-    "inventoryDropWhenDestroyed": true,
+    "inventoryDropWhenDestroyed": false,
     "inventoryComparatorPower": false,
     "inventoryOutSlotIDs": [],
     "inventoryInSlotIDs": [],
     "hasEnergyStorage": true,
     "energyInitial": 0,
-    "energyCapacity": 0,
+    "energyCapacity": 1,
     "energyMaxReceive": 1,
-    "energyMaxExtract": 0,
+    "energyMaxExtract": 1,
     "isFluidTank": true,
-    "fluidCapacity": 50,
+    "fluidCapacity": 4000,
     "fluidRestrictions": [],
-    "onNeighbourBlockChanges": {
-      "name": "BasepipeBlockIsPlacedBy"
+    "onRightClicked": {
+      "name": "TankOnBlockRightClicked"
     },
     "onTickUpdate": {
-      "name": "BasepipeUpdateTick"
-    },
-    "onBlockPlayedBy": {
-      "name": "BasepipeBlockIsPlacedBy"
+      "name": "TankUpdateTick"
     },
     "spawnWorldTypes": [],
     "restrictionBiomes": [],

@@ -15,6 +15,7 @@ import net.minecraft.world.level.block.Block;
 import net.elec_tronics.block.WaterturbinemachineBlock;
 import net.elec_tronics.block.UraniumoreBlock;
 import net.elec_tronics.block.TungstenBlock;
+import net.elec_tronics.block.Tankfullhalf1Block;
 import net.elec_tronics.block.Tankfull9Block;
 import net.elec_tronics.block.Tankfull8Block;
 import net.elec_tronics.block.Tankfull7Block;
@@ -191,6 +192,7 @@ public class ElecTronicsModBlocks {
 	public static final Block MANUAL_FLUID_PUMP_3 = register(new ManualFluidPump3Block());
 	public static final Block MANUAL_FLUID_PUMP_4 = register(new ManualFluidPump4Block());
 	public static final Block MANUAL_FLUID_PUMP_5 = register(new ManualFluidPump5Block());
+	public static final Block TANKFULLHALF_1 = register(new Tankfullhalf1Block());
 
 	private static Block register(Block block) {
 		REGISTRY.add(block);
@@ -283,6 +285,7 @@ public class ElecTronicsModBlocks {
 			ManualFluidPump3Block.registerRenderLayer();
 			ManualFluidPump4Block.registerRenderLayer();
 			ManualFluidPump5Block.registerRenderLayer();
+			Tankfullhalf1Block.registerRenderLayer();
 		}
 	}
 }

@@ -11,6 +11,7 @@ import net.minecraftforge.event.RegistryEvent;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.Block;
 
+import net.elec_tronics.block.entity.Tankfullhalf1BlockEntity;
 import net.elec_tronics.block.entity.Tankfull9BlockEntity;
 import net.elec_tronics.block.entity.Tankfull8BlockEntity;
 import net.elec_tronics.block.entity.Tankfull7BlockEntity;
@@ -253,6 +254,8 @@ public class ElecTronicsModBlockEntities {
 			ElecTronicsModBlocks.MANUAL_FLUID_PUMP_4, ManualFluidPump4BlockEntity::new);
 	public static final BlockEntityType<?> MANUAL_FLUID_PUMP_5 = register("elec_tronics:manual_fluid_pump_5",
 			ElecTronicsModBlocks.MANUAL_FLUID_PUMP_5, ManualFluidPump5BlockEntity::new);
+	public static final BlockEntityType<?> TANKFULLHALF_1 = register("elec_tronics:tankfullhalf_1", ElecTronicsModBlocks.TANKFULLHALF_1,
+			Tankfullhalf1BlockEntity::new);
 
 	private static BlockEntityType<?> register(String registryname, Block block, BlockEntityType.BlockEntitySupplier<?> supplier) {
 		BlockEntityType<?> blockEntityType = BlockEntityType.Builder.of(supplier, block).build(null).setRegistryName(registryname);

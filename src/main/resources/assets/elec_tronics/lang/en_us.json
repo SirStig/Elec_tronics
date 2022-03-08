@@ -21,6 +21,7 @@
   "item.elec_tronics.copper_sheet": "Copper Sheet",
   "item.elec_tronics.ore_funnel": "Ore Funnel",
   "item.elec_tronics.condensor": "Condensor",
+  "block.elec_tronics.tankfullhalf_1": "Tank 1",
   "block.elec_tronics.pipejunctiondown_2": "Pipe",
   "block.elec_tronics.pipeup": "Pipe",
   "itemGroup.tabelec_tronics_menu": "Elec Tronics Items",

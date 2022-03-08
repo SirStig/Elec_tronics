@@ -36,19 +36,59 @@ public class TankUpdateTickProcedure {
 							.ifPresent(capability -> _retval.set(capability.getFluidInTank(tank).getAmount()));
 				return _retval.get();
 			}
-		}.getFluidTankLevel(world, new BlockPos((int) x, (int) y, (int) z), 1) >= 1 && new Object() {
-			public int getFluidTankLevel(LevelAccessor level, BlockPos pos, int tank) {
-				AtomicInteger _retval = new AtomicInteger(0);
-				BlockEntity _ent = level.getBlockEntity(pos);
-				if (_ent != null)
-					_ent.getCapability(CapabilityFluidHandler.FLUID_HANDLER_CAPABILITY, null)
-							.ifPresent(capability -> _retval.set(capability.getFluidInTank(tank).getAmount()));
-				return _retval.get();
-			}
-		}.getFluidTankLevel(world, new BlockPos((int) x, (int) y, (int) z), 1) <= 285.71) {
+		}.getFluidTankLevel(world, new BlockPos((int) x, (int) y, (int) z), 1) == 0) {
 			{
 				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 				BlockState _bs = ElecTronicsModBlocks.TANK.defaultBlockState();
+				BlockState _bso = world.getBlockState(_bp);
+				for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
+					Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
+					if (_property != null && _bs.getValue(_property) != null)
+						try {
+							_bs = _bs.setValue(_property, (Comparable) entry.getValue());
+						} catch (Exception e) {
+						}
+				}
+				BlockEntity _be = world.getBlockEntity(_bp);
+				CompoundTag _bnbt = null;
+				if (_be != null) {
+					_bnbt = _be.save(new CompoundTag());
+					_be.setRemoved();
+				}
+				world.setBlock(_bp, _bs, 3);
+				if (_bnbt != null) {
+					_be = world.getBlockEntity(_bp);
+					if (_be != null) {
+						try {
+							_be.load(_bnbt);
+						} catch (Exception ignored) {
+						}
+					}
+				}
+			}
+		} else if (!((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == ElecTronicsModBlocks.TANKFULLHALF_1)
+				&& new Object() {
+					public int getFluidTankLevel(LevelAccessor level, BlockPos pos, int tank) {
+						AtomicInteger _retval = new AtomicInteger(0);
+						BlockEntity _ent = level.getBlockEntity(pos);
+						if (_ent != null)
+							_ent.getCapability(CapabilityFluidHandler.FLUID_HANDLER_CAPABILITY, null)
+									.ifPresent(capability -> _retval.set(capability.getFluidInTank(tank).getAmount()));
+						return _retval.get();
+					}
+				}.getFluidTankLevel(world, new BlockPos((int) x, (int) y, (int) z), 1) >= 0.01 && new Object() {
+					public int getFluidTankLevel(LevelAccessor level, BlockPos pos, int tank) {
+						AtomicInteger _retval = new AtomicInteger(0);
+						BlockEntity _ent = level.getBlockEntity(pos);
+						if (_ent != null)
+							_ent.getCapability(CapabilityFluidHandler.FLUID_HANDLER_CAPABILITY, null)
+									.ifPresent(capability -> _retval.set(capability.getFluidInTank(tank).getAmount()));
+						return _retval.get();
+					}
+				}.getFluidTankLevel(world, new BlockPos((int) x, (int) y, (int) z), 1) <= 285.71) {
+			{
+				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+				BlockState _bs = ElecTronicsModBlocks.TANKFULLHALF_1.defaultBlockState();
 				BlockState _bso = world.getBlockState(_bp);
 				for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 					Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());

@@ -185,6 +185,7 @@ public class ElecTronicsModItems {
 	public static final Item MANUAL_FLUID_PUMP_3 = register(ElecTronicsModBlocks.MANUAL_FLUID_PUMP_3, null);
 	public static final Item MANUAL_FLUID_PUMP_4 = register(ElecTronicsModBlocks.MANUAL_FLUID_PUMP_4, null);
 	public static final Item MANUAL_FLUID_PUMP_5 = register(ElecTronicsModBlocks.MANUAL_FLUID_PUMP_5, null);
+	public static final Item TANKFULLHALF_1 = register(ElecTronicsModBlocks.TANKFULLHALF_1, null);
 
 	private static Item register(Item item) {
 		REGISTRY.add(item);
