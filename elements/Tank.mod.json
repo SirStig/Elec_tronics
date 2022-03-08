@@ -52,7 +52,7 @@
     "canRedstoneConnect": false,
     "lightOpacity": 0,
     "material": {
-      "value": "GLASS"
+      "value": "IRON"
     },
     "tickRate": 1,
     "tickRandomly": false,
@@ -113,11 +113,11 @@
     "inventoryComparatorPower": false,
     "inventoryOutSlotIDs": [],
     "inventoryInSlotIDs": [],
-    "hasEnergyStorage": false,
+    "hasEnergyStorage": true,
     "energyInitial": 0,
-    "energyCapacity": 400000,
-    "energyMaxReceive": 200,
-    "energyMaxExtract": 200,
+    "energyCapacity": 1,
+    "energyMaxReceive": 1,
+    "energyMaxExtract": 1,
     "isFluidTank": true,
     "fluidCapacity": 4000,
     "fluidRestrictions": [],

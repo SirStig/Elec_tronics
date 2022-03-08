@@ -40,7 +40,7 @@ public class TankBlock extends Block
 
 			EntityBlock {
 	public TankBlock() {
-		super(BlockBehaviour.Properties.of(Material.GLASS).sound(SoundType.GLASS).strength(1f, 10f).noOcclusion()
+		super(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.GLASS).strength(1f, 10f).noOcclusion()
 				.isRedstoneConductor((bs, br, bp) -> false));
 		setRegistryName("tank");
 	}

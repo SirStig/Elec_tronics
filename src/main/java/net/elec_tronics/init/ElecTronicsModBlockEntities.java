@@ -51,6 +51,11 @@ import net.elec_tronics.block.entity.PipedownangleBlockEntity;
 import net.elec_tronics.block.entity.PipeanlgeupBlockEntity;
 import net.elec_tronics.block.entity.PipeangledownBlockEntity;
 import net.elec_tronics.block.entity.PipeangleBlockEntity;
+import net.elec_tronics.block.entity.ManualFluidPumpdown2BlockEntity;
+import net.elec_tronics.block.entity.ManualFluidPumpBlockEntity;
+import net.elec_tronics.block.entity.ManualFluidPump5BlockEntity;
+import net.elec_tronics.block.entity.ManualFluidPump4BlockEntity;
+import net.elec_tronics.block.entity.ManualFluidPump3BlockEntity;
 import net.elec_tronics.block.entity.ExtrusionMachineBlockEntity;
 import net.elec_tronics.block.entity.EngineersworkbenchBlockEntity;
 import net.elec_tronics.block.entity.EngineersWorkBenchTopSideBlockEntity;
@@ -238,6 +243,16 @@ public class ElecTronicsModBlockEntities {
 			Tankfull13BlockEntity::new);
 	public static final BlockEntityType<?> TANKFULL_14 = register("elec_tronics:tankfull_14", ElecTronicsModBlocks.TANKFULL_14,
 			Tankfull14BlockEntity::new);
+	public static final BlockEntityType<?> MANUAL_FLUID_PUMP = register("elec_tronics:manual_fluid_pump", ElecTronicsModBlocks.MANUAL_FLUID_PUMP,
+			ManualFluidPumpBlockEntity::new);
+	public static final BlockEntityType<?> MANUAL_FLUID_PUMPDOWN_2 = register("elec_tronics:manual_fluid_pumpdown_2",
+			ElecTronicsModBlocks.MANUAL_FLUID_PUMPDOWN_2, ManualFluidPumpdown2BlockEntity::new);
+	public static final BlockEntityType<?> MANUAL_FLUID_PUMP_3 = register("elec_tronics:manual_fluid_pump_3",
+			ElecTronicsModBlocks.MANUAL_FLUID_PUMP_3, ManualFluidPump3BlockEntity::new);
+	public static final BlockEntityType<?> MANUAL_FLUID_PUMP_4 = register("elec_tronics:manual_fluid_pump_4",
+			ElecTronicsModBlocks.MANUAL_FLUID_PUMP_4, ManualFluidPump4BlockEntity::new);
+	public static final BlockEntityType<?> MANUAL_FLUID_PUMP_5 = register("elec_tronics:manual_fluid_pump_5",
+			ElecTronicsModBlocks.MANUAL_FLUID_PUMP_5, ManualFluidPump5BlockEntity::new);
 
 	private static BlockEntityType<?> register(String registryname, Block block, BlockEntityType.BlockEntitySupplier<?> supplier) {
 		BlockEntityType<?> blockEntityType = BlockEntityType.Builder.of(supplier, block).build(null).setRegistryName(registryname);

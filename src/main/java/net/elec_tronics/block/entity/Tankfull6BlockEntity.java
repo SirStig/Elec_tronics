@@ -5,6 +5,8 @@ import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.fluids.capability.templates.FluidTank;
 import net.minecraftforge.fluids.capability.CapabilityFluidHandler;
+import net.minecraftforge.energy.EnergyStorage;
+import net.minecraftforge.energy.CapabilityEnergy;
 import net.minecraftforge.common.util.LazyOptional;
 import net.minecraftforge.common.capabilities.Capability;
 
@@ -45,6 +47,8 @@ public class Tankfull6BlockEntity extends RandomizableContainerBlockEntity imple
 		if (!this.tryLoadLootTable(compound))
 			this.stacks = NonNullList.withSize(this.getContainerSize(), ItemStack.EMPTY);
 		ContainerHelper.loadAllItems(compound, this.stacks);
+		if (compound.get("energyStorage")instanceof CompoundTag compoundTag)
+			energyStorage.deserializeNBT(compoundTag);
 		if (compound.get("fluidTank")instanceof CompoundTag compoundTag)
 			fluidTank.readFromNBT(compoundTag);
 	}
@@ -55,6 +59,7 @@ public class Tankfull6BlockEntity extends RandomizableContainerBlockEntity imple
 		if (!this.trySaveLootTable(compound)) {
 			ContainerHelper.saveAllItems(compound, this.stacks);
 		}
+		compound.put("energyStorage", energyStorage.serializeNBT());
 		compound.put("fluidTank", fluidTank.writeToNBT(new CompoundTag()));
 		return compound;
 	}
@@ -137,6 +142,27 @@ public class Tankfull6BlockEntity extends RandomizableContainerBlockEntity imple
 		return true;
 	}
 
+	private final EnergyStorage energyStorage = new EnergyStorage(1, 1, 1, 0) {
+		@Override
+		public int receiveEnergy(int maxReceive, boolean simulate) {
+			int retval = super.receiveEnergy(maxReceive, simulate);
+			if (!simulate) {
+				setChanged();
+				level.sendBlockUpdated(worldPosition, level.getBlockState(worldPosition), level.getBlockState(worldPosition), 2);
+			}
+			return retval;
+		}
+
+		@Override
+		public int extractEnergy(int maxExtract, boolean simulate) {
+			int retval = super.extractEnergy(maxExtract, simulate);
+			if (!simulate) {
+				setChanged();
+				level.sendBlockUpdated(worldPosition, level.getBlockState(worldPosition), level.getBlockState(worldPosition), 2);
+			}
+			return retval;
+		}
+	};
 	private final FluidTank fluidTank = new FluidTank(4000) {
 		@Override
 		protected void onContentsChanged() {
@@ -150,6 +176,8 @@ public class Tankfull6BlockEntity extends RandomizableContainerBlockEntity imple
 	public <T> LazyOptional<T> getCapability(Capability<T> capability, @Nullable Direction facing) {
 		if (!this.remove && facing != null && capability == CapabilityItemHandler.ITEM_HANDLER_CAPABILITY)
 			return handlers[facing.ordinal()].cast();
+		if (!this.remove && capability == CapabilityEnergy.ENERGY)
+			return LazyOptional.of(() -> energyStorage).cast();
 		if (!this.remove && capability == CapabilityFluidHandler.FLUID_HANDLER_CAPABILITY)
 			return LazyOptional.of(() -> fluidTank).cast();
 		return super.getCapability(capability, facing);

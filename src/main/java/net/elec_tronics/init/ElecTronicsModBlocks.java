@@ -56,6 +56,11 @@ import net.elec_tronics.block.PipedownangleBlock;
 import net.elec_tronics.block.PipeanlgeupBlock;
 import net.elec_tronics.block.PipeangledownBlock;
 import net.elec_tronics.block.PipeangleBlock;
+import net.elec_tronics.block.ManualFluidPumpdown2Block;
+import net.elec_tronics.block.ManualFluidPumpBlock;
+import net.elec_tronics.block.ManualFluidPump5Block;
+import net.elec_tronics.block.ManualFluidPump4Block;
+import net.elec_tronics.block.ManualFluidPump3Block;
 import net.elec_tronics.block.ExtrusionMachineBlock;
 import net.elec_tronics.block.EngineersworkbenchBlock;
 import net.elec_tronics.block.EngineersWorkBenchTopSideBlock;
@@ -181,6 +186,11 @@ public class ElecTronicsModBlocks {
 	public static final Block TANKFULL_13 = register(new Tankfull13Block());
 	public static final Block TANKFULL_14 = register(new Tankfull14Block());
 	public static final Block ELECTRONICSOIL = register(new ElectronicsoilBlock());
+	public static final Block MANUAL_FLUID_PUMP = register(new ManualFluidPumpBlock());
+	public static final Block MANUAL_FLUID_PUMPDOWN_2 = register(new ManualFluidPumpdown2Block());
+	public static final Block MANUAL_FLUID_PUMP_3 = register(new ManualFluidPump3Block());
+	public static final Block MANUAL_FLUID_PUMP_4 = register(new ManualFluidPump4Block());
+	public static final Block MANUAL_FLUID_PUMP_5 = register(new ManualFluidPump5Block());
 
 	private static Block register(Block block) {
 		REGISTRY.add(block);
@@ -268,6 +278,11 @@ public class ElecTronicsModBlocks {
 			Tankfull12Block.registerRenderLayer();
 			Tankfull13Block.registerRenderLayer();
 			Tankfull14Block.registerRenderLayer();
+			ManualFluidPumpBlock.registerRenderLayer();
+			ManualFluidPumpdown2Block.registerRenderLayer();
+			ManualFluidPump3Block.registerRenderLayer();
+			ManualFluidPump4Block.registerRenderLayer();
+			ManualFluidPump5Block.registerRenderLayer();
 		}
 	}
 }

@@ -4,6 +4,10 @@ package net.elec_tronics.block;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
+import net.minecraft.world.phys.shapes.VoxelShape;
+import net.minecraft.world.phys.shapes.Shapes;
+import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.level.storage.loot.LootContext;
 import net.minecraft.world.level.material.Material;
@@ -15,6 +19,7 @@ import net.minecraft.world.level.block.EntityBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.item.TieredItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.MenuProvider;
@@ -40,7 +45,7 @@ public class Tankfull14Block extends Block
 
 			EntityBlock {
 	public Tankfull14Block() {
-		super(BlockBehaviour.Properties.of(Material.GLASS).sound(SoundType.GLASS).strength(1f, 10f).noOcclusion()
+		super(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.GLASS).strength(1f, 10f).requiresCorrectToolForDrops().noOcclusion()
 				.isRedstoneConductor((bs, br, bp) -> false));
 		setRegistryName("tankfull_14");
 	}
@@ -56,11 +61,30 @@ public class Tankfull14Block extends Block
 	}
 
 	@Override
+	public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
+		Vec3 offset = state.getOffset(world, pos);
+		return Shapes.or(box(0, 1, 0, 1, 15, 1), box(0, 1, 15, 1, 15, 16), box(15, 1, 0, 16, 15, 1), box(15, 1, 15, 16, 15, 16),
+				box(0, 0, 0, 1, 1, 16), box(0, 15, 0, 1, 16, 15), box(15, 0, 0, 16, 1, 15), box(15, 15, 1, 16, 16, 16), box(0, 0, 0, 15, 1, 1),
+				box(1, 15, 0, 16, 16, 1), box(1, 0, 15, 16, 1, 16), box(0, 15, 15, 15, 16, 16), box(2, 1, 14, 14, 2, 15), box(14, 1, 1, 15, 2, 15),
+				box(2, 1, 1, 14, 2, 2), box(1, 1, 1, 2, 2, 15), box(14, 2, 14, 15, 14, 15), box(14, 2, 1, 15, 14, 2), box(14, 14, 1, 15, 15, 15),
+				box(1, 2, 14, 2, 14, 15), box(1, 2, 1, 2, 14, 2), box(1, 14, 1, 2, 15, 15), box(2, 14, 14, 14, 15, 15), box(2, 14, 1, 14, 15, 2),
+				box(1, 1, 0, 15, 15, 1), box(1, 1, 15, 15, 15, 16), box(15, 1, 1, 16, 15, 15), box(0, 1, 1, 1, 15, 15), box(1, 0, 1, 15, 1, 15),
+				box(1, 15, 1, 15, 16, 15), box(2, 1.1, 1.1, 14.8, 15.2, 14.9)).move(offset.x, offset.y, offset.z);
+	}
+
+	@Override
+	public boolean canHarvestBlock(BlockState state, BlockGetter world, BlockPos pos, Player player) {
+		if (player.getInventory().getSelected().getItem()instanceof TieredItem tieredItem)
+			return tieredItem.getTier().getLevel() >= 1;
+		return false;
+	}
+
+	@Override
 	public List<ItemStack> getDrops(BlockState state, LootContext.Builder builder) {
 		List<ItemStack> dropsOriginal = super.getDrops(state, builder);
 		if (!dropsOriginal.isEmpty())
 			return dropsOriginal;
-		return Collections.singletonList(new ItemStack(this, 1));
+		return Collections.singletonList(new ItemStack(ElecTronicsModBlocks.TANK));
 	}
 
 	@Override
@@ -115,7 +139,7 @@ public class Tankfull14Block extends Block
 
 	@OnlyIn(Dist.CLIENT)
 	public static void registerRenderLayer() {
-		ItemBlockRenderTypes.setRenderLayer(ElecTronicsModBlocks.TANKFULL_14, renderType -> renderType == RenderType.translucent());
+		ItemBlockRenderTypes.setRenderLayer(ElecTronicsModBlocks.TANKFULL_14, renderType -> renderType == RenderType.cutout());
 	}
 
 }

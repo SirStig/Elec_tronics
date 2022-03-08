@@ -3163,9 +3163,152 @@
         ]
       },
       "path": "~/Fluid_Tanks"
+    },
+    {
+      "name": "ManualFluidPumpOnBlockRightClicked",
+      "type": "procedure",
+      "sortid": 230,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "manual_fluid_pump_on_block_right_clicked",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Fluid_Pumps"
+    },
+    {
+      "name": "ManualFluidPump",
+      "type": "block",
+      "sortid": 230,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "manual_fluid_pump",
+      "path": "~/Fluid_Pumps"
+    },
+    {
+      "name": "ManualFluidPumpdown2",
+      "type": "block",
+      "sortid": 231,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "manual_fluid_pumpdown_2",
+      "path": "~/Fluid_Pumps"
+    },
+    {
+      "name": "ManualFluidPump3",
+      "type": "block",
+      "sortid": 232,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "manual_fluid_pump_3",
+      "path": "~/Fluid_Pumps"
+    },
+    {
+      "name": "ManualFluidPump4",
+      "type": "block",
+      "sortid": 233,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "manual_fluid_pump_4",
+      "path": "~/Fluid_Pumps"
+    },
+    {
+      "name": "ManualFluidPump5",
+      "type": "block",
+      "sortid": 234,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "manual_fluid_pump_5",
+      "path": "~/Fluid_Pumps"
+    },
+    {
+      "name": "ManualFluidPumpUpdateTick",
+      "type": "procedure",
+      "sortid": 236,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "manual_fluid_pump_update_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Fluid_Pumps"
+    },
+    {
+      "name": "ManualFluidPumpSendWater",
+      "type": "procedure",
+      "sortid": 237,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "manual_fluid_pump_send_water",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Fluid_Pumps"
     }
   ],
-  "variable_elements": [],
+  "variable_elements": [
+    {
+      "name": "fluidpumpblockstate",
+      "type": "string",
+      "scope": "map",
+      "value": ""
+    }
+  ],
   "sound_elements": [],
   "language_map": {
     "en_us": {
@@ -3183,6 +3326,8 @@
       "block.elec_tronics.basecable_t_1": "Cable T1",
       "item.elec_tronics.wire_roller": "Wire Roller",
       "block.elec_tronics.pipetdown": "Pipe",
+      "block.elec_tronics.manual_fluid_pump_4": "Manual Fluid Pump",
+      "block.elec_tronics.manual_fluid_pump_5": "Manual Fluid Pump",
       "item.elec_tronics.tungsten_dust": "Tungsten Dust",
       "block.elec_tronics.engineers_work_bench_side": "Engineers Workbench Side",
       "block.elec_tronics.basewirecon_5main": "Cable Angle T1",
@@ -3205,6 +3350,7 @@
       "item.elec_tronics.screwdriver": "Screwdriver",
       "item.elec_tronics.electronicsoil_bucket": "Oil Bucket",
       "item.elec_tronics.steelsword": "Steel Sword",
+      "block.elec_tronics.manual_fluid_pump": "Manual Fluid Pump",
       "item.elec_tronics.ash": "Ash",
       "block.elec_tronics.engineers_work_bench_top_side": "Engineers Workbench Top Side",
       "block.elec_tronics.basewirecon_5down": "Cable Angle T1",
@@ -3227,6 +3373,7 @@
       "block.elec_tronics.tankfull_5": "Tank",
       "block.elec_tronics.basewirecon_3down": "Cable Angle T1",
       "block.elec_tronics.tank": "Tank",
+      "block.elec_tronics.manual_fluid_pump_3": "Manual Fluid Pump",
       "block.elec_tronics.basewirecon_3upangle": "Cable Angle T1",
       "block.elec_tronics.waterturbinemachine": "Water Turbine",
       "block.elec_tronics.coalgeneratormachine": "Coal Generator",
@@ -3263,6 +3410,7 @@
       "block.elec_tronics.basewirecon_2angle": "Cable Angle T1",
       "item.elec_tronics.uranium_ingot": "Uranium Ingot",
       "block.elec_tronics.cable_t_up_t_1": "Cable Junction T1",
+      "block.elec_tronics.manual_fluid_pumpdown_2": "Manual Fluid Pump",
       "block.elec_tronics.solarpaneltop": "Solar Panel T1",
       "block.elec_tronics.pipetdownandup": "Pipe",
       "item.elec_tronics.electricmotor": "Electric Motor",
@@ -3365,6 +3513,10 @@
       },
       {
         "name": "Fluid_Tanks",
+        "children": []
+      },
+      {
+        "name": "Fluid_Pumps",
         "children": []
       }
     ]

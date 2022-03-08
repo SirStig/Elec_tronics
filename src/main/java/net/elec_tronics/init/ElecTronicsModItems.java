@@ -180,6 +180,11 @@ public class ElecTronicsModItems {
 	public static final Item TANKFULL_14 = register(ElecTronicsModBlocks.TANKFULL_14, null);
 	public static final Item ELECTRONICSOIL_BUCKET = register(new ElectronicsoilItem());
 	public static final Item CREATIVEFLUIDDROPPER = register(new CreativefluiddropperItem());
+	public static final Item MANUAL_FLUID_PUMP = register(ElecTronicsModBlocks.MANUAL_FLUID_PUMP, ElecTronicsModTabs.TAB_ELECTRONICSMACHINES);
+	public static final Item MANUAL_FLUID_PUMPDOWN_2 = register(ElecTronicsModBlocks.MANUAL_FLUID_PUMPDOWN_2, null);
+	public static final Item MANUAL_FLUID_PUMP_3 = register(ElecTronicsModBlocks.MANUAL_FLUID_PUMP_3, null);
+	public static final Item MANUAL_FLUID_PUMP_4 = register(ElecTronicsModBlocks.MANUAL_FLUID_PUMP_4, null);
+	public static final Item MANUAL_FLUID_PUMP_5 = register(ElecTronicsModBlocks.MANUAL_FLUID_PUMP_5, null);
 
 	private static Item register(Item item) {
 		REGISTRY.add(item);

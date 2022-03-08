@@ -32,6 +32,12 @@
     "elec_tronics:pipetdown",
     "elec_tronics:pipetdownandup",
     "elec_tronics:pipeup",
-    "elec_tronics:pipeupangle"
+    "elec_tronics:pipeupangle",
+    "elec_tronics:tankfull_14",
+    "elec_tronics:manual_fluid_pump",
+    "elec_tronics:manual_fluid_pumpdown_2",
+    "elec_tronics:manual_fluid_pump_3",
+    "elec_tronics:manual_fluid_pump_4",
+    "elec_tronics:manual_fluid_pump_5"
   ]
 }

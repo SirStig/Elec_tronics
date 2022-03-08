@@ -40,7 +40,7 @@ public class Tankfull4Block extends Block
 
 			EntityBlock {
 	public Tankfull4Block() {
-		super(BlockBehaviour.Properties.of(Material.GLASS).sound(SoundType.GLASS).strength(1f, 10f).noOcclusion()
+		super(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.GLASS).strength(1f, 10f).noOcclusion()
 				.isRedstoneConductor((bs, br, bp) -> false));
 		setRegistryName("tankfull_4");
 	}
@@ -115,7 +115,7 @@ public class Tankfull4Block extends Block
 
 	@OnlyIn(Dist.CLIENT)
 	public static void registerRenderLayer() {
-		ItemBlockRenderTypes.setRenderLayer(ElecTronicsModBlocks.TANKFULL_4, renderType -> renderType == RenderType.translucent());
+		ItemBlockRenderTypes.setRenderLayer(ElecTronicsModBlocks.TANKFULL_4, renderType -> renderType == RenderType.cutout());
 	}
 
 }
