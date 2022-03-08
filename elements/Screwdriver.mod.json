@@ -4,7 +4,7 @@
   "definition": {
     "renderType": 0,
     "texture": "screwdriver",
-    "customModelName": "Normal",
+    "customModelName": "Tool",
     "name": "Screwdriver",
     "rarity": "COMMON",
     "creativeTab": {

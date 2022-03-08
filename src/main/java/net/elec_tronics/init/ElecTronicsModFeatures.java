@@ -18,6 +18,7 @@ import net.minecraft.core.Registry;
 
 import net.elec_tronics.world.features.ores.UraniumoreFeature;
 import net.elec_tronics.world.features.ores.TungstenFeature;
+import net.elec_tronics.world.features.lakes.ElectronicsoilFeature;
 
 import java.util.Set;
 import java.util.Map;
@@ -31,6 +32,8 @@ public class ElecTronicsModFeatures {
 				UraniumoreFeature.CONFIGURED_FEATURE));
 		REGISTRY.put(TungstenFeature.FEATURE, new FeatureRegistration(GenerationStep.Decoration.UNDERGROUND_ORES, TungstenFeature.GENERATE_BIOMES,
 				TungstenFeature.CONFIGURED_FEATURE));
+		REGISTRY.put(ElectronicsoilFeature.FEATURE, new FeatureRegistration(GenerationStep.Decoration.LAKES, ElectronicsoilFeature.GENERATE_BIOMES,
+				ElectronicsoilFeature.CONFIGURED_FEATURE));
 	}
 
 	@SubscribeEvent

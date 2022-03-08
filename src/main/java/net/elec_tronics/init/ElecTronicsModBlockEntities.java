@@ -11,6 +11,22 @@ import net.minecraftforge.event.RegistryEvent;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.Block;
 
+import net.elec_tronics.block.entity.Tankfullhalf1BlockEntity;
+import net.elec_tronics.block.entity.Tankfull9BlockEntity;
+import net.elec_tronics.block.entity.Tankfull8BlockEntity;
+import net.elec_tronics.block.entity.Tankfull7BlockEntity;
+import net.elec_tronics.block.entity.Tankfull6BlockEntity;
+import net.elec_tronics.block.entity.Tankfull5BlockEntity;
+import net.elec_tronics.block.entity.Tankfull4BlockEntity;
+import net.elec_tronics.block.entity.Tankfull3BlockEntity;
+import net.elec_tronics.block.entity.Tankfull2BlockEntity;
+import net.elec_tronics.block.entity.Tankfull1BlockEntity;
+import net.elec_tronics.block.entity.Tankfull14BlockEntity;
+import net.elec_tronics.block.entity.Tankfull13BlockEntity;
+import net.elec_tronics.block.entity.Tankfull12BlockEntity;
+import net.elec_tronics.block.entity.Tankfull11BlockEntity;
+import net.elec_tronics.block.entity.Tankfull10BlockEntity;
+import net.elec_tronics.block.entity.TankBlockEntity;
 import net.elec_tronics.block.entity.T1WireBlockEntity;
 import net.elec_tronics.block.entity.SolarpaneltoprBlockEntity;
 import net.elec_tronics.block.entity.SolarpaneltopBlockEntity;
@@ -36,6 +52,11 @@ import net.elec_tronics.block.entity.PipedownangleBlockEntity;
 import net.elec_tronics.block.entity.PipeanlgeupBlockEntity;
 import net.elec_tronics.block.entity.PipeangledownBlockEntity;
 import net.elec_tronics.block.entity.PipeangleBlockEntity;
+import net.elec_tronics.block.entity.ManualFluidPumpdown2BlockEntity;
+import net.elec_tronics.block.entity.ManualFluidPumpBlockEntity;
+import net.elec_tronics.block.entity.ManualFluidPump5BlockEntity;
+import net.elec_tronics.block.entity.ManualFluidPump4BlockEntity;
+import net.elec_tronics.block.entity.ManualFluidPump3BlockEntity;
 import net.elec_tronics.block.entity.ExtrusionMachineBlockEntity;
 import net.elec_tronics.block.entity.EngineersworkbenchBlockEntity;
 import net.elec_tronics.block.entity.EngineersWorkBenchTopSideBlockEntity;
@@ -194,6 +215,47 @@ public class ElecTronicsModBlockEntities {
 	public static final BlockEntityType<?> PIPEUP = register("elec_tronics:pipeup", ElecTronicsModBlocks.PIPEUP, PipeupBlockEntity::new);
 	public static final BlockEntityType<?> PIPEUPANGLE = register("elec_tronics:pipeupangle", ElecTronicsModBlocks.PIPEUPANGLE,
 			PipeupangleBlockEntity::new);
+	public static final BlockEntityType<?> TANK = register("elec_tronics:tank", ElecTronicsModBlocks.TANK, TankBlockEntity::new);
+	public static final BlockEntityType<?> TANKFULL_1 = register("elec_tronics:tankfull_1", ElecTronicsModBlocks.TANKFULL_1,
+			Tankfull1BlockEntity::new);
+	public static final BlockEntityType<?> TANKFULL_2 = register("elec_tronics:tankfull_2", ElecTronicsModBlocks.TANKFULL_2,
+			Tankfull2BlockEntity::new);
+	public static final BlockEntityType<?> TANKFULL_3 = register("elec_tronics:tankfull_3", ElecTronicsModBlocks.TANKFULL_3,
+			Tankfull3BlockEntity::new);
+	public static final BlockEntityType<?> TANKFULL_4 = register("elec_tronics:tankfull_4", ElecTronicsModBlocks.TANKFULL_4,
+			Tankfull4BlockEntity::new);
+	public static final BlockEntityType<?> TANKFULL_5 = register("elec_tronics:tankfull_5", ElecTronicsModBlocks.TANKFULL_5,
+			Tankfull5BlockEntity::new);
+	public static final BlockEntityType<?> TANKFULL_6 = register("elec_tronics:tankfull_6", ElecTronicsModBlocks.TANKFULL_6,
+			Tankfull6BlockEntity::new);
+	public static final BlockEntityType<?> TANKFULL_7 = register("elec_tronics:tankfull_7", ElecTronicsModBlocks.TANKFULL_7,
+			Tankfull7BlockEntity::new);
+	public static final BlockEntityType<?> TANKFULL_8 = register("elec_tronics:tankfull_8", ElecTronicsModBlocks.TANKFULL_8,
+			Tankfull8BlockEntity::new);
+	public static final BlockEntityType<?> TANKFULL_9 = register("elec_tronics:tankfull_9", ElecTronicsModBlocks.TANKFULL_9,
+			Tankfull9BlockEntity::new);
+	public static final BlockEntityType<?> TANKFULL_10 = register("elec_tronics:tankfull_10", ElecTronicsModBlocks.TANKFULL_10,
+			Tankfull10BlockEntity::new);
+	public static final BlockEntityType<?> TANKFULL_11 = register("elec_tronics:tankfull_11", ElecTronicsModBlocks.TANKFULL_11,
+			Tankfull11BlockEntity::new);
+	public static final BlockEntityType<?> TANKFULL_12 = register("elec_tronics:tankfull_12", ElecTronicsModBlocks.TANKFULL_12,
+			Tankfull12BlockEntity::new);
+	public static final BlockEntityType<?> TANKFULL_13 = register("elec_tronics:tankfull_13", ElecTronicsModBlocks.TANKFULL_13,
+			Tankfull13BlockEntity::new);
+	public static final BlockEntityType<?> TANKFULL_14 = register("elec_tronics:tankfull_14", ElecTronicsModBlocks.TANKFULL_14,
+			Tankfull14BlockEntity::new);
+	public static final BlockEntityType<?> MANUAL_FLUID_PUMP = register("elec_tronics:manual_fluid_pump", ElecTronicsModBlocks.MANUAL_FLUID_PUMP,
+			ManualFluidPumpBlockEntity::new);
+	public static final BlockEntityType<?> MANUAL_FLUID_PUMPDOWN_2 = register("elec_tronics:manual_fluid_pumpdown_2",
+			ElecTronicsModBlocks.MANUAL_FLUID_PUMPDOWN_2, ManualFluidPumpdown2BlockEntity::new);
+	public static final BlockEntityType<?> MANUAL_FLUID_PUMP_3 = register("elec_tronics:manual_fluid_pump_3",
+			ElecTronicsModBlocks.MANUAL_FLUID_PUMP_3, ManualFluidPump3BlockEntity::new);
+	public static final BlockEntityType<?> MANUAL_FLUID_PUMP_4 = register("elec_tronics:manual_fluid_pump_4",
+			ElecTronicsModBlocks.MANUAL_FLUID_PUMP_4, ManualFluidPump4BlockEntity::new);
+	public static final BlockEntityType<?> MANUAL_FLUID_PUMP_5 = register("elec_tronics:manual_fluid_pump_5",
+			ElecTronicsModBlocks.MANUAL_FLUID_PUMP_5, ManualFluidPump5BlockEntity::new);
+	public static final BlockEntityType<?> TANKFULLHALF_1 = register("elec_tronics:tankfullhalf_1", ElecTronicsModBlocks.TANKFULLHALF_1,
+			Tankfullhalf1BlockEntity::new);
 
 	private static BlockEntityType<?> register(String registryname, Block block, BlockEntityType.BlockEntitySupplier<?> supplier) {
 		BlockEntityType<?> blockEntityType = BlockEntityType.Builder.of(supplier, block).build(null).setRegistryName(registryname);

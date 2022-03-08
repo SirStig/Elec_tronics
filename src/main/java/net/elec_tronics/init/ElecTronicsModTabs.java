@@ -18,7 +18,7 @@ public class ElecTronicsModTabs {
 		TAB_ELEC_TRONICS_MENU = new CreativeModeTab("tabelec_tronics_menu") {
 			@Override
 			public ItemStack makeIcon() {
-				return new ItemStack(ElecTronicsModItems.URANIUM_DUST);
+				return new ItemStack(ElecTronicsModItems.URANIUM_INGOT);
 			}
 
 			@OnlyIn(Dist.CLIENT)

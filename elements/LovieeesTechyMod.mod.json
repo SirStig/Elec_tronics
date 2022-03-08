@@ -4,7 +4,7 @@
   "definition": {
     "name": "Elec Tronics Items",
     "icon": {
-      "value": "CUSTOM:UraniumDust"
+      "value": "CUSTOM:UraniumIngot"
     },
     "showSearch": true
   }
