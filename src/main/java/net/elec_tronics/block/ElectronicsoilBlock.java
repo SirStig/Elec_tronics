@@ -31,7 +31,7 @@ public class ElectronicsoilBlock extends LiquidBlock {
 	}
 
 	@Override
-	public boolean propagatesSkylightDown(BlockState state, BlockGetter reader, BlockPos pos) {
-		return true;
+	public int getLightBlock(BlockState state, BlockGetter worldIn, BlockPos pos) {
+		return 15;
 	}
 }

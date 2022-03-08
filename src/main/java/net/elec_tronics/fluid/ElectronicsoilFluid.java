@@ -22,7 +22,7 @@ import net.elec_tronics.init.ElecTronicsModBlocks;
 public abstract class ElectronicsoilFluid extends ForgeFlowingFluid {
 	public static final ForgeFlowingFluid.Properties PROPERTIES = new ForgeFlowingFluid.Properties(() -> ElecTronicsModFluids.ELECTRONICSOIL,
 			() -> ElecTronicsModFluids.FLOWING_ELECTRONICSOIL,
-			FluidAttributes.builder(new ResourceLocation("elec_tronics:blocks/oil_still"), new ResourceLocation("elec_tronics:blocks/oil_flowing"))
+			FluidAttributes.builder(new ResourceLocation("elec_tronics:blocks/oil_still"), new ResourceLocation("elec_tronics:blocks/oil_flow"))
 
 					.rarity(Rarity.UNCOMMON).sound(ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.bucket.empty_lava"))))
 							.explosionResistance(5f)

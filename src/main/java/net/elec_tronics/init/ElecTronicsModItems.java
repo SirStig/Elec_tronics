@@ -164,9 +164,9 @@ public class ElecTronicsModItems {
 	public static final Item PIPEUP = register(ElecTronicsModBlocks.PIPEUP, null);
 	public static final Item PIPEUPANGLE = register(ElecTronicsModBlocks.PIPEUPANGLE, null);
 	public static final Item TANK = register(ElecTronicsModBlocks.TANK, ElecTronicsModTabs.TAB_ELECTRONICSMACHINES);
-	public static final Item TANKFULL_1 = register(ElecTronicsModBlocks.TANKFULL_1, ElecTronicsModTabs.TAB_ELECTRONICSMACHINES);
-	public static final Item TANKFULL_2 = register(ElecTronicsModBlocks.TANKFULL_2, ElecTronicsModTabs.TAB_ELECTRONICSMACHINES);
-	public static final Item TANKFULL_3 = register(ElecTronicsModBlocks.TANKFULL_3, ElecTronicsModTabs.TAB_ELECTRONICSMACHINES);
+	public static final Item TANKFULL_1 = register(ElecTronicsModBlocks.TANKFULL_1, null);
+	public static final Item TANKFULL_2 = register(ElecTronicsModBlocks.TANKFULL_2, null);
+	public static final Item TANKFULL_3 = register(ElecTronicsModBlocks.TANKFULL_3, null);
 	public static final Item TANKFULL_4 = register(ElecTronicsModBlocks.TANKFULL_4, null);
 	public static final Item TANKFULL_5 = register(ElecTronicsModBlocks.TANKFULL_5, null);
 	public static final Item TANKFULL_6 = register(ElecTronicsModBlocks.TANKFULL_6, null);

@@ -76,7 +76,7 @@ public class Tankfull5Block extends Block
 		int y = pos.getY();
 		int z = pos.getZ();
 
-		TankUpdateTickProcedure.execute();
+		TankUpdateTickProcedure.execute(world, x, y, z);
 		world.getBlockTicks().scheduleTick(pos, this, 1);
 	}
 
