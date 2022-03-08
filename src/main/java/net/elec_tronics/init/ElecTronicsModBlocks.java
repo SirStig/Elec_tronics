@@ -15,6 +15,21 @@ import net.minecraft.world.level.block.Block;
 import net.elec_tronics.block.WaterturbinemachineBlock;
 import net.elec_tronics.block.UraniumoreBlock;
 import net.elec_tronics.block.TungstenBlock;
+import net.elec_tronics.block.Tankfull9Block;
+import net.elec_tronics.block.Tankfull8Block;
+import net.elec_tronics.block.Tankfull7Block;
+import net.elec_tronics.block.Tankfull6Block;
+import net.elec_tronics.block.Tankfull5Block;
+import net.elec_tronics.block.Tankfull4Block;
+import net.elec_tronics.block.Tankfull3Block;
+import net.elec_tronics.block.Tankfull2Block;
+import net.elec_tronics.block.Tankfull1Block;
+import net.elec_tronics.block.Tankfull14Block;
+import net.elec_tronics.block.Tankfull13Block;
+import net.elec_tronics.block.Tankfull12Block;
+import net.elec_tronics.block.Tankfull11Block;
+import net.elec_tronics.block.Tankfull10Block;
+import net.elec_tronics.block.TankBlock;
 import net.elec_tronics.block.T1WireBlock;
 import net.elec_tronics.block.SolarpaneltoprBlock;
 import net.elec_tronics.block.SolarpaneltopBlock;
@@ -47,6 +62,7 @@ import net.elec_tronics.block.EngineersWorkBenchTopSideBlock;
 import net.elec_tronics.block.EngineersWorkBenchTopBlock;
 import net.elec_tronics.block.EngineersWorkBenchSideBlock;
 import net.elec_tronics.block.EnergyStorageT1Block;
+import net.elec_tronics.block.ElectronicsoilBlock;
 import net.elec_tronics.block.CrushermachineBlock;
 import net.elec_tronics.block.CoalgeneratormachineBlock;
 import net.elec_tronics.block.CablehalfT1Block;
@@ -149,6 +165,22 @@ public class ElecTronicsModBlocks {
 	public static final Block PIPETDOWNANDUP = register(new PipetdownandupBlock());
 	public static final Block PIPEUP = register(new PipeupBlock());
 	public static final Block PIPEUPANGLE = register(new PipeupangleBlock());
+	public static final Block TANK = register(new TankBlock());
+	public static final Block TANKFULL_1 = register(new Tankfull1Block());
+	public static final Block TANKFULL_2 = register(new Tankfull2Block());
+	public static final Block TANKFULL_3 = register(new Tankfull3Block());
+	public static final Block TANKFULL_4 = register(new Tankfull4Block());
+	public static final Block TANKFULL_5 = register(new Tankfull5Block());
+	public static final Block TANKFULL_6 = register(new Tankfull6Block());
+	public static final Block TANKFULL_7 = register(new Tankfull7Block());
+	public static final Block TANKFULL_8 = register(new Tankfull8Block());
+	public static final Block TANKFULL_9 = register(new Tankfull9Block());
+	public static final Block TANKFULL_10 = register(new Tankfull10Block());
+	public static final Block TANKFULL_11 = register(new Tankfull11Block());
+	public static final Block TANKFULL_12 = register(new Tankfull12Block());
+	public static final Block TANKFULL_13 = register(new Tankfull13Block());
+	public static final Block TANKFULL_14 = register(new Tankfull14Block());
+	public static final Block ELECTRONICSOIL = register(new ElectronicsoilBlock());
 
 	private static Block register(Block block) {
 		REGISTRY.add(block);
@@ -221,6 +253,21 @@ public class ElecTronicsModBlocks {
 			PipetdownandupBlock.registerRenderLayer();
 			PipeupBlock.registerRenderLayer();
 			PipeupangleBlock.registerRenderLayer();
+			TankBlock.registerRenderLayer();
+			Tankfull1Block.registerRenderLayer();
+			Tankfull2Block.registerRenderLayer();
+			Tankfull3Block.registerRenderLayer();
+			Tankfull4Block.registerRenderLayer();
+			Tankfull5Block.registerRenderLayer();
+			Tankfull6Block.registerRenderLayer();
+			Tankfull7Block.registerRenderLayer();
+			Tankfull8Block.registerRenderLayer();
+			Tankfull9Block.registerRenderLayer();
+			Tankfull10Block.registerRenderLayer();
+			Tankfull11Block.registerRenderLayer();
+			Tankfull12Block.registerRenderLayer();
+			Tankfull13Block.registerRenderLayer();
+			Tankfull14Block.registerRenderLayer();
 		}
 	}
 }

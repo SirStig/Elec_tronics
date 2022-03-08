@@ -1,0 +1,11 @@
+{
+  "parent": "elec_tronics:custom/tank",
+  "textures": {
+    "all": "elec_tronics:blocks/tank",
+    "particle": "elec_tronics:blocks/tank",
+    "0": "elec_tronics:blocks/pipe_texture",
+    "1": "elec_tronics:blocks/13158264-minecraftglass_l",
+    "2": "elec_tronics:blocks/tankside",
+    "3": "elec_tronics:blocks/pipe_plug"
+  }
+}

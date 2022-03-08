@@ -1,0 +1,13 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "pipe_texture",
+        "1": "13158264-minecraftglass_l",
+        "2": "tankside",
+        "3": "pipe_plug"
+      },
+      "name": "default"
+    }
+  }
+}
