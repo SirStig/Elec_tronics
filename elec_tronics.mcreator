@@ -90,15 +90,6 @@
       "path": "~/BlastFurnace"
     },
     {
-      "name": "BlastFurnance",
-      "type": "recipe",
-      "sortid": 11,
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "blast_furnance",
-      "path": "~/BlastFurnace"
-    },
-    {
       "name": "FibgerGlassDust",
       "type": "item",
       "sortid": 12,
