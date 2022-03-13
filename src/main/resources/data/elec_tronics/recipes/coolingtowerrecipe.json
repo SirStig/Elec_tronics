@@ -2,37 +2,19 @@
   "group": "elec_tronics",
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "012",
-    "345",
-    "678"
+    "III",
+    "CCC",
+    "IWI"
   ],
   "key": {
-    "0": {
+    "I": {
       "item": "minecraft:iron_ingot"
     },
-    "1": {
-      "item": "minecraft:iron_ingot"
-    },
-    "2": {
-      "item": "minecraft:iron_ingot"
-    },
-    "3": {
+    "C": {
       "item": "elec_tronics:condensor"
     },
-    "4": {
-      "item": "elec_tronics:condensor"
-    },
-    "5": {
-      "item": "elec_tronics:condensor"
-    },
-    "6": {
-      "item": "minecraft:iron_ingot"
-    },
-    "7": {
+    "W": {
       "item": "minecraft:water_bucket"
-    },
-    "8": {
-      "item": "minecraft:iron_ingot"
     }
   },
   "result": {

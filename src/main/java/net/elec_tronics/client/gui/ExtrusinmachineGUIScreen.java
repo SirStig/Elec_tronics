@@ -111,7 +111,7 @@ public class ExtrusinmachineGUIScreen extends AbstractContainerScreen<Extrusinma
 		this.blit(ms, this.leftPos + 51, this.topPos + 22, 0, 0, 16, 16, 16, 16);
 
 		RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/extrusion0.png"));
-		this.blit(ms, this.leftPos + 72, this.topPos + 43, 0, 0, 28, 15, 28, 15);
+		this.blit(ms, this.leftPos + 72, this.topPos + 43, 0, 0, 0, 0, 0, 0);
 
 		RenderSystem.disableBlend();
 	}

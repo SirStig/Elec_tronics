@@ -1,0 +1,77 @@
+{
+  "_fv": 24,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:Basepipe"
+      },
+      {
+        "value": "CUSTOM:Pipeangle"
+      },
+      {
+        "value": "CUSTOM:Pipeangledown"
+      },
+      {
+        "value": "CUSTOM:Pipeanlgeup"
+      },
+      {
+        "value": "CUSTOM:Pipedownangle"
+      },
+      {
+        "value": "CUSTOM:Pipehalf"
+      },
+      {
+        "value": "CUSTOM:Pipejunction"
+      },
+      {
+        "value": "CUSTOM:Pipejunctiondown"
+      },
+      {
+        "value": "CUSTOM:Pipejunctiondown2"
+      },
+      {
+        "value": "CUSTOM:Pipejunctionmain"
+      },
+      {
+        "value": "CUSTOM:Pipejunctionup"
+      },
+      {
+        "value": "CUSTOM:Pipejunctionup2"
+      },
+      {
+        "value": "CUSTOM:Pipejunctionupanddown"
+      },
+      {
+        "value": "CUSTOM:Pipejunctionupanddown2"
+      },
+      {
+        "value": "CUSTOM:Pipejunctionupanddownstraight"
+      },
+      {
+        "value": "CUSTOM:Pipestraight"
+      },
+      {
+        "value": "CUSTOM:Pipet"
+      },
+      {
+        "value": "CUSTOM:Pipetdown"
+      },
+      {
+        "value": "CUSTOM:Pipetdownandup"
+      },
+      {
+        "value": "CUSTOM:Pipeup"
+      },
+      {
+        "value": "CUSTOM:Pipeupangle"
+      }
+    ],
+    "functions": [],
+    "entities": [],
+    "name": "pipes",
+    "namespace": "forge"
+  }
+}

@@ -37,6 +37,7 @@ import net.elec_tronics.item.QuartzDustItem;
 import net.elec_tronics.item.OreFunnelItem;
 import net.elec_tronics.item.IrongearItem;
 import net.elec_tronics.item.IrondustItem;
+import net.elec_tronics.item.IronWrenchItem;
 import net.elec_tronics.item.InsulationItem;
 import net.elec_tronics.item.HandSawItem;
 import net.elec_tronics.item.HammerItem;
@@ -200,6 +201,7 @@ public class ElecTronicsModItems {
 	public static final Item BRINE_BUCKET = register(new BrineItem());
 	public static final Item ROCK_SALT = register(ElecTronicsModBlocks.ROCK_SALT, ElecTronicsModTabs.TAB_ELECTRONICSMACHINES);
 	public static final Item ROCKSALTDUST = register(new RocksaltdustItem());
+	public static final Item IRON_WRENCH = register(new IronWrenchItem());
 
 	private static Item register(Item item) {
 		REGISTRY.add(item);

@@ -2,25 +2,19 @@
   "group": "elec_tronics",
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    " 1 ",
-    "345",
-    " 7 "
+    " I ",
+    "SRS",
+    " I "
   ],
   "key": {
-    "1": {
+    "I": {
       "item": "minecraft:iron_ingot"
     },
-    "3": {
+    "S": {
       "item": "elec_tronics:sharpenediron"
     },
-    "4": {
+    "R": {
       "item": "elec_tronics:irongear"
-    },
-    "5": {
-      "item": "elec_tronics:sharpenediron"
-    },
-    "7": {
-      "item": "minecraft:iron_ingot"
     }
   },
   "result": {

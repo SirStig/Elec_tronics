@@ -63,6 +63,7 @@ import net.elec_tronics.block.ManualFluidPumpBlock;
 import net.elec_tronics.block.ManualFluidPump5Block;
 import net.elec_tronics.block.ManualFluidPump4Block;
 import net.elec_tronics.block.ManualFluidPump3Block;
+import net.elec_tronics.block.HydrogenGasBlock;
 import net.elec_tronics.block.ExtrusionMachineBlock;
 import net.elec_tronics.block.EngineersworkbenchBlock;
 import net.elec_tronics.block.EngineersWorkBenchTopSideBlock;
@@ -72,6 +73,7 @@ import net.elec_tronics.block.EnergyStorageT1Block;
 import net.elec_tronics.block.ElectronicsoilBlock;
 import net.elec_tronics.block.CrushermachineBlock;
 import net.elec_tronics.block.CoalgeneratormachineBlock;
+import net.elec_tronics.block.ChlorineGasBlock;
 import net.elec_tronics.block.CablehalfT1Block;
 import net.elec_tronics.block.CableTUpandDownT1Block;
 import net.elec_tronics.block.CableTUpT1Block;
@@ -201,6 +203,8 @@ public class ElecTronicsModBlocks {
 	public static final Block BAUXITE_BLOCK = register(new BauxiteBlockBlock());
 	public static final Block BRINE = register(new BrineBlock());
 	public static final Block ROCK_SALT = register(new RockSaltBlock());
+	public static final Block CHLORINE_GAS = register(new ChlorineGasBlock());
+	public static final Block HYDROGEN_GAS = register(new HydrogenGasBlock());
 
 	private static Block register(Block block) {
 		REGISTRY.add(block);
