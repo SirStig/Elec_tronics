@@ -11,6 +11,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.resources.ResourceKey;
 
+import net.elec_tronics.procedures.ElectronicsoilAdditionalGenerationConditionProcedure;
 import net.elec_tronics.init.ElecTronicsModBlocks;
 
 import java.util.Set;
@@ -34,6 +35,11 @@ public class ElectronicsoilFeature extends LakeFeature {
 		if (dimensionType == Level.OVERWORLD)
 			dimensionCriteria = true;
 		if (!dimensionCriteria)
+			return false;
+		int x = context.origin().getX();
+		int y = context.origin().getY();
+		int z = context.origin().getZ();
+		if (!ElectronicsoilAdditionalGenerationConditionProcedure.execute(y))
 			return false;
 		return super.place(context);
 	}

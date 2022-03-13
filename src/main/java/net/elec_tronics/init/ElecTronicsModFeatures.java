@@ -18,7 +18,10 @@ import net.minecraft.core.Registry;
 
 import net.elec_tronics.world.features.ores.UraniumoreFeature;
 import net.elec_tronics.world.features.ores.TungstenFeature;
+import net.elec_tronics.world.features.ores.RockSaltFeature;
+import net.elec_tronics.world.features.ores.BauxiteOreFeature;
 import net.elec_tronics.world.features.lakes.ElectronicsoilFeature;
+import net.elec_tronics.world.features.lakes.BrineFeature;
 
 import java.util.Set;
 import java.util.Map;
@@ -34,6 +37,12 @@ public class ElecTronicsModFeatures {
 				TungstenFeature.CONFIGURED_FEATURE));
 		REGISTRY.put(ElectronicsoilFeature.FEATURE, new FeatureRegistration(GenerationStep.Decoration.LAKES, ElectronicsoilFeature.GENERATE_BIOMES,
 				ElectronicsoilFeature.CONFIGURED_FEATURE));
+		REGISTRY.put(BauxiteOreFeature.FEATURE, new FeatureRegistration(GenerationStep.Decoration.UNDERGROUND_ORES, BauxiteOreFeature.GENERATE_BIOMES,
+				BauxiteOreFeature.CONFIGURED_FEATURE));
+		REGISTRY.put(BrineFeature.FEATURE,
+				new FeatureRegistration(GenerationStep.Decoration.LAKES, BrineFeature.GENERATE_BIOMES, BrineFeature.CONFIGURED_FEATURE));
+		REGISTRY.put(RockSaltFeature.FEATURE, new FeatureRegistration(GenerationStep.Decoration.UNDERGROUND_ORES, RockSaltFeature.GENERATE_BIOMES,
+				RockSaltFeature.CONFIGURED_FEATURE));
 	}
 
 	@SubscribeEvent

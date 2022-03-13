@@ -36,6 +36,7 @@ import net.elec_tronics.block.SolarpaneltoprBlock;
 import net.elec_tronics.block.SolarpaneltopBlock;
 import net.elec_tronics.block.SolarPanelrBlock;
 import net.elec_tronics.block.SolarPanelT1Block;
+import net.elec_tronics.block.RockSaltBlock;
 import net.elec_tronics.block.ReinforcedblastbrickBlock;
 import net.elec_tronics.block.PipeupangleBlock;
 import net.elec_tronics.block.PipeupBlock;
@@ -81,7 +82,10 @@ import net.elec_tronics.block.CableJunctionUpT1Block;
 import net.elec_tronics.block.CableJunctionT1Block;
 import net.elec_tronics.block.CableJunctionDownT1Block;
 import net.elec_tronics.block.CableAngleT1Block;
+import net.elec_tronics.block.BrineBlock;
 import net.elec_tronics.block.BlastfurnancemachineBlock;
+import net.elec_tronics.block.BauxiteOreBlock;
+import net.elec_tronics.block.BauxiteBlockBlock;
 import net.elec_tronics.block.Basewirecon5mainBlock;
 import net.elec_tronics.block.Basewirecon5downBlock;
 import net.elec_tronics.block.Basewirecon4upanddownstraightBlock;
@@ -193,6 +197,10 @@ public class ElecTronicsModBlocks {
 	public static final Block MANUAL_FLUID_PUMP_4 = register(new ManualFluidPump4Block());
 	public static final Block MANUAL_FLUID_PUMP_5 = register(new ManualFluidPump5Block());
 	public static final Block TANKFULLHALF_1 = register(new Tankfullhalf1Block());
+	public static final Block BAUXITE_ORE = register(new BauxiteOreBlock());
+	public static final Block BAUXITE_BLOCK = register(new BauxiteBlockBlock());
+	public static final Block BRINE = register(new BrineBlock());
+	public static final Block ROCK_SALT = register(new RockSaltBlock());
 
 	private static Block register(Block block) {
 		REGISTRY.add(block);

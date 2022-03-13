@@ -26,11 +26,13 @@ import net.elec_tronics.item.SteelpickaxeItem;
 import net.elec_tronics.item.SteelingotItem;
 import net.elec_tronics.item.SteelhoeItem;
 import net.elec_tronics.item.SteelaxeItem;
+import net.elec_tronics.item.SteelArmorItem;
 import net.elec_tronics.item.SolarPanelItem;
 import net.elec_tronics.item.SharpenedironItem;
 import net.elec_tronics.item.ScrewdriverItem;
 import net.elec_tronics.item.RubbersleeveItem;
 import net.elec_tronics.item.RubberItem;
+import net.elec_tronics.item.RocksaltdustItem;
 import net.elec_tronics.item.QuartzDustItem;
 import net.elec_tronics.item.OreFunnelItem;
 import net.elec_tronics.item.IrongearItem;
@@ -52,6 +54,8 @@ import net.elec_tronics.item.CopperSheetItem;
 import net.elec_tronics.item.CopperDustItem;
 import net.elec_tronics.item.CoolingTowerItem;
 import net.elec_tronics.item.CondensorItem;
+import net.elec_tronics.item.BrineItem;
+import net.elec_tronics.item.BauxiteIngotItem;
 import net.elec_tronics.item.AshItem;
 
 import java.util.List;
@@ -186,6 +190,16 @@ public class ElecTronicsModItems {
 	public static final Item MANUAL_FLUID_PUMP_4 = register(ElecTronicsModBlocks.MANUAL_FLUID_PUMP_4, null);
 	public static final Item MANUAL_FLUID_PUMP_5 = register(ElecTronicsModBlocks.MANUAL_FLUID_PUMP_5, null);
 	public static final Item TANKFULLHALF_1 = register(ElecTronicsModBlocks.TANKFULLHALF_1, null);
+	public static final Item BAUXITE_INGOT = register(new BauxiteIngotItem());
+	public static final Item BAUXITE_ORE = register(ElecTronicsModBlocks.BAUXITE_ORE, ElecTronicsModTabs.TAB_ELECTRONICSMACHINES);
+	public static final Item BAUXITE_BLOCK = register(ElecTronicsModBlocks.BAUXITE_BLOCK, ElecTronicsModTabs.TAB_ELECTRONICSMACHINES);
+	public static final Item STEEL_ARMOR_HELMET = register(new SteelArmorItem.Helmet());
+	public static final Item STEEL_ARMOR_CHESTPLATE = register(new SteelArmorItem.Chestplate());
+	public static final Item STEEL_ARMOR_LEGGINGS = register(new SteelArmorItem.Leggings());
+	public static final Item STEEL_ARMOR_BOOTS = register(new SteelArmorItem.Boots());
+	public static final Item BRINE_BUCKET = register(new BrineItem());
+	public static final Item ROCK_SALT = register(ElecTronicsModBlocks.ROCK_SALT, ElecTronicsModTabs.TAB_ELECTRONICSMACHINES);
+	public static final Item ROCKSALTDUST = register(new RocksaltdustItem());
 
 	private static Item register(Item item) {
 		REGISTRY.add(item);
