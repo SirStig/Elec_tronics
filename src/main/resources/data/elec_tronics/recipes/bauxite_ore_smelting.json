@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "experience": 0.7,
+  "cookingtime": 200,
+  "ingredient": {
+    "item": "elec_tronics:bauxite_ore"
+  },
+  "result": {
+    "item": "elec_tronics:bauxite_ingot"
+  }
+}

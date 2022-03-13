@@ -2,25 +2,16 @@
   "group": "elec_tronics",
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    " 1 ",
-    "345",
-    " 7 "
+    " S ",
+    "SIS",
+    " S "
   ],
   "key": {
-    "1": {
+    "S": {
       "item": "elec_tronics:sharpenediron"
     },
-    "3": {
-      "item": "elec_tronics:sharpenediron"
-    },
-    "4": {
+    "I": {
       "item": "elec_tronics:irongear"
-    },
-    "5": {
-      "item": "elec_tronics:sharpenediron"
-    },
-    "7": {
-      "item": "elec_tronics:sharpenediron"
     }
   },
   "result": {

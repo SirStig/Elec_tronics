@@ -6,6 +6,9 @@
     "items": [],
     "blocks": [
       {
+        "value": "CUSTOM:Waterturbinemachine"
+      },
+      {
         "value": "CUSTOM:Coalgeneratormachine"
       },
       {
@@ -103,6 +106,12 @@
       },
       {
         "value": "CUSTOM:Solarpaneltopr"
+      },
+      {
+        "value": "CUSTOM:ExtrusionMachine"
+      },
+      {
+        "value": "CUSTOM:EnergyStorageT1"
       }
     ],
     "functions": [],

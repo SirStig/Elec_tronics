@@ -2,25 +2,16 @@
   "group": "elec_tronics",
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "0  ",
-    "345",
-    "6  "
+    "I  ",
+    "IIR",
+    "I  "
   ],
   "key": {
-    "0": {
+    "I": {
       "item": "minecraft:iron_ingot"
     },
-    "3": {
-      "item": "minecraft:iron_ingot"
-    },
-    "4": {
-      "item": "minecraft:iron_ingot"
-    },
-    "5": {
+    "R": {
       "item": "minecraft:iron_nugget"
-    },
-    "6": {
-      "item": "minecraft:iron_ingot"
     }
   },
   "result": {

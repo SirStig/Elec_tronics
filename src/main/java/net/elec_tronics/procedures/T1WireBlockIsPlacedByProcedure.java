@@ -8,10 +8,12 @@ import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.Level;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
+import net.elec_tronics.network.ElecTronicsModVariables;
 import net.elec_tronics.init.ElecTronicsModBlocks;
 
 import java.util.concurrent.atomic.AtomicBoolean;
@@ -45,6 +47,7 @@ public class T1WireBlockIsPlacedByProcedure {
 		double zcable5 = 0;
 		double zcable6 = 0;
 		double number_of_con = 0;
+		double block = 0;
 		number_of_con = 0;
 		if (new Object() {
 			public boolean canReceiveEnergy(LevelAccessor level, BlockPos pos) {
@@ -5297,6 +5300,31 @@ public class T1WireBlockIsPlacedByProcedure {
 					}
 				}
 			}
+		}
+		if (!world.isClientSide()) {
+			BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+			BlockEntity _blockEntity = world.getBlockEntity(_bp);
+			BlockState _bs = world.getBlockState(_bp);
+			if (_blockEntity != null)
+				_blockEntity.getTileData().putBoolean("blockStateChanged", (false));
+			if (world instanceof Level _level)
+				_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+		}
+		block = 0;
+		for (int index0 = 0; index0 < (int) (21); index0++) {
+			if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == ElecTronicsModVariables.list_pipes.get((int) block)) {
+				if (!world.isClientSide()) {
+					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+					BlockEntity _blockEntity = world.getBlockEntity(_bp);
+					BlockState _bs = world.getBlockState(_bp);
+					if (_blockEntity != null)
+						_blockEntity.getTileData().putDouble("blockState", block);
+					if (world instanceof Level _level)
+						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+				}
+				break;
+			}
+			block = block + 1;
 		}
 	}
 }

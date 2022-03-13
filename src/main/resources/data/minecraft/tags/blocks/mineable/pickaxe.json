@@ -38,6 +38,9 @@
     "elec_tronics:manual_fluid_pumpdown_2",
     "elec_tronics:manual_fluid_pump_3",
     "elec_tronics:manual_fluid_pump_4",
-    "elec_tronics:manual_fluid_pump_5"
+    "elec_tronics:manual_fluid_pump_5",
+    "elec_tronics:bauxite_ore",
+    "elec_tronics:bauxite_block",
+    "elec_tronics:rock_salt"
   ]
 }

@@ -2,24 +2,24 @@
   "group": "elec_tronics",
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "0 2",
-    " 4 ",
-    "6 8"
+    "H S",
+    " C ",
+    "A F"
   ],
   "key": {
-    "0": {
+    "H": {
       "item": "elec_tronics:hand_saw"
     },
-    "2": {
+    "S": {
       "item": "elec_tronics:screwdriver"
     },
-    "4": {
+    "C": {
       "item": "minecraft:crafting_table"
     },
-    "6": {
+    "A": {
       "item": "elec_tronics:hammer"
     },
-    "8": {
+    "F": {
       "item": "minecraft:flint_and_steel"
     }
   },

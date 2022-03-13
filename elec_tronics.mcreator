@@ -90,15 +90,6 @@
       "path": "~/BlastFurnace"
     },
     {
-      "name": "BlastFurnance",
-      "type": "recipe",
-      "sortid": 11,
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "blast_furnance",
-      "path": "~/BlastFurnace"
-    },
-    {
       "name": "FibgerGlassDust",
       "type": "item",
       "sortid": 12,
@@ -122,7 +113,8 @@
       "sortid": 14,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "fiberglassrecipe"
+      "registry_name": "fiberglassrecipe",
+      "path": "~/Item Recipes"
     },
     {
       "name": "Blastbrickrecipe",
@@ -836,7 +828,8 @@
       "sortid": 40,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "steelingot"
+      "registry_name": "steelingot",
+      "path": "~/Ores-Ingots-Dusts"
     },
     {
       "name": "Workbenchgui",
@@ -891,7 +884,8 @@
       "sortid": 44,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "steelpickaxe"
+      "registry_name": "steelpickaxe",
+      "path": "~/Tools-Armor"
     },
     {
       "name": "Steelsword",
@@ -899,7 +893,8 @@
       "sortid": 45,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "steelsword"
+      "registry_name": "steelsword",
+      "path": "~/Tools-Armor"
     },
     {
       "name": "Steelshovel",
@@ -907,7 +902,8 @@
       "sortid": 46,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "steelshovel"
+      "registry_name": "steelshovel",
+      "path": "~/Tools-Armor"
     },
     {
       "name": "Steelaxe",
@@ -915,7 +911,8 @@
       "sortid": 47,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "steelaxe"
+      "registry_name": "steelaxe",
+      "path": "~/Tools-Armor"
     },
     {
       "name": "Steelhoe",
@@ -923,7 +920,8 @@
       "sortid": 48,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "steelhoe"
+      "registry_name": "steelhoe",
+      "path": "~/Tools-Armor"
     },
     {
       "name": "Steelpickrecipe",
@@ -976,7 +974,8 @@
       "sortid": 54,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "hand_saw"
+      "registry_name": "hand_saw",
+      "path": "~/Tools-Armor"
     },
     {
       "name": "Screwdriver",
@@ -984,7 +983,8 @@
       "sortid": 55,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "screwdriver"
+      "registry_name": "screwdriver",
+      "path": "~/Tools-Armor"
     },
     {
       "name": "Hammer",
@@ -992,7 +992,8 @@
       "sortid": 56,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "hammer"
+      "registry_name": "hammer",
+      "path": "~/Tools-Armor"
     },
     {
       "name": "Engineersworkbenchrecipe",
@@ -1058,6 +1059,10 @@
       "metadata": {
         "dependencies": [
           {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
             "name": "x",
             "type": "number"
           },
@@ -1074,7 +1079,8 @@
             "type": "world"
           }
         ]
-      }
+      },
+      "path": "~/Tools-Armor"
     },
     {
       "name": "Waterturbinemachine",
@@ -1082,7 +1088,8 @@
       "sortid": 64,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "waterturbinemachine"
+      "registry_name": "waterturbinemachine",
+      "path": "~/WaterTurbine"
     },
     {
       "name": "Coalgeneratormachine",
@@ -1137,7 +1144,8 @@
       "sortid": 68,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "ash"
+      "registry_name": "ash",
+      "path": "~/Ores-Ingots-Dusts"
     },
     {
       "name": "Crushermachine",
@@ -1202,7 +1210,8 @@
       "sortid": 73,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "irondusttoingot"
+      "registry_name": "irondusttoingot",
+      "path": "~/Item Recipes"
     },
     {
       "name": "CrusherT1procedure",
@@ -1306,7 +1315,8 @@
       "sortid": 78,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "variableenergyblocks"
+      "registry_name": "variableenergyblocks",
+      "path": "~/Tags"
     },
     {
       "name": "Powertick1",
@@ -1609,14 +1619,6 @@
       "path": "~/Powerticks"
     },
     {
-      "name": "Fuels",
-      "type": "tag",
-      "sortid": 91,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "fuels"
-    },
-    {
       "name": "CableAngleT1",
       "type": "block",
       "sortid": 98,
@@ -1738,7 +1740,8 @@
       "sortid": 103,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "wires"
+      "registry_name": "wires",
+      "path": "~/Tags"
     },
     {
       "name": "CableTUpT1",
@@ -2299,7 +2302,8 @@
       "sortid": 148,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "tungstendusttoingot"
+      "registry_name": "tungstendusttoingot",
+      "path": "~/Item Recipes"
     },
     {
       "name": "Golddusttoingot",
@@ -2307,7 +2311,8 @@
       "sortid": 149,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "golddusttoingot"
+      "registry_name": "golddusttoingot",
+      "path": "~/Item Recipes"
     },
     {
       "name": "Copperdusttoingot",
@@ -2315,7 +2320,8 @@
       "sortid": 150,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "copperdusttoingot"
+      "registry_name": "copperdusttoingot",
+      "path": "~/Item Recipes"
     },
     {
       "name": "Diamonddusttoingot",
@@ -2323,7 +2329,8 @@
       "sortid": 151,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "diamonddusttoingot"
+      "registry_name": "diamonddusttoingot",
+      "path": "~/Item Recipes"
     },
     {
       "name": "Emeralddusttoingot",
@@ -2331,7 +2338,8 @@
       "sortid": 152,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "emeralddusttoingot"
+      "registry_name": "emeralddusttoingot",
+      "path": "~/Item Recipes"
     },
     {
       "name": "Rubber",
@@ -3120,7 +3128,8 @@
       "registry_name": "electronicsoil",
       "metadata": {
         "gb": true
-      }
+      },
+      "path": "~/Fluids-Gases"
     },
     {
       "name": "Creativefluiddropper",
@@ -3308,14 +3317,298 @@
       "locked_code": false,
       "registry_name": "tankfullhalf_1",
       "path": "~/Fluid_Tanks"
+    },
+    {
+      "name": "BauxiteIngot",
+      "type": "item",
+      "sortid": 239,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bauxite_ingot",
+      "path": "~/Ores-Ingots-Dusts"
+    },
+    {
+      "name": "BauxiteOre",
+      "type": "block",
+      "sortid": 240,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bauxite_ore",
+      "path": "~/Ores-Ingots-Dusts"
+    },
+    {
+      "name": "BauxiteBlock",
+      "type": "block",
+      "sortid": 241,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bauxite_block",
+      "path": "~/Ores-Ingots-Dusts"
+    },
+    {
+      "name": "BauxiteOreBlockRecipe",
+      "type": "recipe",
+      "sortid": 242,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bauxite_ore_block_recipe",
+      "path": "~/Item Recipes"
+    },
+    {
+      "name": "BauxiteBlockOreRecipe",
+      "type": "recipe",
+      "sortid": 243,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bauxite_block_ore_recipe",
+      "path": "~/Item Recipes"
+    },
+    {
+      "name": "BauxiteOreSmelting",
+      "type": "recipe",
+      "sortid": 244,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bauxite_ore_smelting",
+      "path": "~/Item Recipes"
+    },
+    {
+      "name": "SteelArmor",
+      "type": "armor",
+      "sortid": 245,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "steel_armor",
+      "metadata": {
+        "eh": true,
+        "el": true,
+        "eb": true,
+        "ec": true
+      },
+      "path": "~/Tools-Armor"
+    },
+    {
+      "name": "SteelArmorHelmetRecipe",
+      "type": "recipe",
+      "sortid": 246,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "steel_armor_helmet_recipe",
+      "path": "~/Tools-Armor"
+    },
+    {
+      "name": "SteelArmorBodyRecipe",
+      "type": "recipe",
+      "sortid": 247,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "steel_armor_body_recipe",
+      "path": "~/Tools-Armor"
+    },
+    {
+      "name": "SteelArmorLeggingsRecipe",
+      "type": "recipe",
+      "sortid": 248,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "steel_armor_leggings_recipe",
+      "path": "~/Tools-Armor"
+    },
+    {
+      "name": "SteelArmorBootsRecipe",
+      "type": "recipe",
+      "sortid": 249,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "steel_armor_boots_recipe",
+      "path": "~/Tools-Armor"
+    },
+    {
+      "name": "Brine",
+      "type": "fluid",
+      "sortid": 250,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "brine",
+      "metadata": {
+        "gb": true
+      },
+      "path": "~/Fluids-Gases"
+    },
+    {
+      "name": "BrineAdditionalGenerationCondition",
+      "type": "procedure",
+      "sortid": 251,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "brine_additional_generation_condition",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "y",
+            "type": "number"
+          }
+        ]
+      },
+      "path": "~/Fluids-Gases"
+    },
+    {
+      "name": "RockSalt",
+      "type": "block",
+      "sortid": 252,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rock_salt",
+      "path": "~/Ores-Ingots-Dusts"
+    },
+    {
+      "name": "RockSaltAdditionalGenerationCondition",
+      "type": "procedure",
+      "sortid": 253,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rock_salt_additional_generation_condition",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Ores-Ingots-Dusts"
+    },
+    {
+      "name": "ElectronicsoilAdditionalGenerationCondition",
+      "type": "procedure",
+      "sortid": 254,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "electronicsoil_additional_generation_condition",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "y",
+            "type": "number"
+          }
+        ]
+      },
+      "path": "~/Fluids-Gases"
+    },
+    {
+      "name": "Rocksaltdust",
+      "type": "item",
+      "sortid": 255,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rocksaltdust",
+      "path": "~/Ores-Ingots-Dusts"
+    },
+    {
+      "name": "ChlorineGas",
+      "type": "fluid",
+      "sortid": 256,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "chlorine_gas",
+      "metadata": {
+        "gb": false
+      },
+      "path": "~/Fluids-Gases"
+    },
+    {
+      "name": "HydrogenGas",
+      "type": "fluid",
+      "sortid": 257,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hydrogen_gas",
+      "metadata": {
+        "gb": false
+      },
+      "path": "~/Fluids-Gases"
+    },
+    {
+      "name": "IronWrench",
+      "type": "item",
+      "sortid": 258,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "iron_wrench",
+      "path": "~/Tools-Armor"
+    },
+    {
+      "name": "IronWrenchRightClickedOnBlock",
+      "type": "procedure",
+      "sortid": 259,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "iron_wrench_right_clicked_on_block",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Tools-Armor"
+    },
+    {
+      "name": "Pipes",
+      "type": "tag",
+      "sortid": 260,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pipes",
+      "path": "~/Tags"
+    },
+    {
+      "name": "Worldini",
+      "type": "procedure",
+      "sortid": 263,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "worldini",
+      "metadata": {
+        "dependencies": []
+      },
+      "path": "~/ModInit"
     }
   ],
   "variable_elements": [
     {
-      "name": "fluidpumpblockstate",
-      "type": "string",
-      "scope": "map",
-      "value": ""
+      "name": "list_pipes",
+      "type": "blockarraylist",
+      "scope": "global",
+      "value": "new ArrayList\u003cBlock\u003e()"
     }
   ],
   "sound_elements": [],
@@ -3323,18 +3616,20 @@
     "en_us": {
       "item.elec_tronics.insulation": "Insulation",
       "item.elec_tronics.hand_saw": "Hand Saw",
-      "item.elec_tronics.steelhoe": "Steel Hoe",
       "item.elec_tronics.hammer": "Hammer",
+      "item.elec_tronics.steelhoe": "Steel Hoe",
       "block.elec_tronics.pipejunctionupanddownstraight": "Pipe",
+      "fluid.elec_tronics.hydrogen_gas": "Hydrogen Gas",
       "block.elec_tronics.basewirecon_2angleup": "Cable Angle T1",
       "item.elec_tronics.uranium_dust": "Uranium Dust",
       "block.elec_tronics.pipet": "Pipe",
       "block.elec_tronics.pipeangledown": "Pipe",
       "item.elec_tronics.irondust": "Iron Dust",
       "item.elec_tronics.tungsten_ore": "Tungsten Ore",
-      "block.elec_tronics.basecable_t_1": "Cable T1",
       "item.elec_tronics.wire_roller": "Wire Roller",
+      "block.elec_tronics.basecable_t_1": "Cable T1",
       "block.elec_tronics.pipetdown": "Pipe",
+      "item.elec_tronics.bauxite_ingot": "Bauxite",
       "block.elec_tronics.manual_fluid_pump_4": "Manual Fluid Pump",
       "block.elec_tronics.manual_fluid_pump_5": "Manual Fluid Pump",
       "item.elec_tronics.tungsten_dust": "Tungsten Dust",
@@ -3346,25 +3641,32 @@
       "block.elec_tronics.tankfullhalf_1": "Tank 1",
       "block.elec_tronics.pipejunctiondown_2": "Pipe",
       "block.elec_tronics.pipeup": "Pipe",
+      "fluid.elec_tronics.brine": "Brine",
       "itemGroup.tabelec_tronics_menu": "Elec Tronics Items",
+      "block.elec_tronics.brine": "Brine",
       "block.elec_tronics.engineersworkbench": "Engineers Workbench",
       "block.elec_tronics.pipejunctionupanddown": "Pipe",
       "block.elec_tronics.pipehalf": "Pipe",
       "item.elec_tronics.irongear": "Iron Gear",
       "item.elec_tronics.cooling_tower": "Cooling Tower",
       "block.elec_tronics.blastfurnancemachine": "Blast Furnance",
+      "item.elec_tronics.steel_armor_chestplate": "Steel Chestplate",
       "block.elec_tronics.solar_panel_t_1": "Solar Panel T1",
       "item.elec_tronics.copper_dust": "Copper Dust",
       "block.elec_tronics.cable_angle_t_1": "Cable Angle T1",
       "block.elec_tronics.solar_panelr": "Solar Panel T1",
       "item.elec_tronics.screwdriver": "Screwdriver",
+      "item.elec_tronics.steel_armor_leggings": "Steel Leggings",
       "item.elec_tronics.electronicsoil_bucket": "Oil Bucket",
       "item.elec_tronics.steelsword": "Steel Sword",
       "block.elec_tronics.manual_fluid_pump": "Manual Fluid Pump",
       "item.elec_tronics.ash": "Ash",
+      "item.elec_tronics.brine_bucket": "Brine Bucket",
       "block.elec_tronics.engineers_work_bench_top_side": "Engineers Workbench Top Side",
       "block.elec_tronics.basewirecon_5down": "Cable Angle T1",
       "block.elec_tronics.pipedownangle": "Pipe",
+      "fluid.elec_tronics.chlorine_gas": "Chlorine Gas",
+      "block.elec_tronics.hydrogen_gas": "Hydrogen Gas",
       "block.elec_tronics.pipejunctionup_2": "Pipe",
       "block.elec_tronics.tankfull_2": "Tank 2",
       "block.elec_tronics.energy_storage_t_1": "Energy Storage T1",
@@ -3385,6 +3687,7 @@
       "block.elec_tronics.tank": "Tank",
       "block.elec_tronics.manual_fluid_pump_3": "Manual Fluid Pump",
       "block.elec_tronics.basewirecon_3upangle": "Cable Angle T1",
+      "item.elec_tronics.steel_armor_helmet": "Steel Helmet",
       "block.elec_tronics.waterturbinemachine": "Water Turbine",
       "block.elec_tronics.coalgeneratormachine": "Coal Generator",
       "block.elec_tronics.pipeupangle": "Pipe",
@@ -3393,6 +3696,8 @@
       "block.elec_tronics.basepipe": "Pipe",
       "block.elec_tronics.crushermachine": "Crusher T1",
       "item.elec_tronics.turbine": "Turbine",
+      "item.elec_tronics.rocksaltdust": "Salt Dust",
+      "item.elec_tronics.hydrogen_gas_bucket": "Chlorine Gas Bucket",
       "block.elec_tronics.tankfull_11": "Tank",
       "block.elec_tronics.tankfull_10": "Tank",
       "item.elec_tronics.steelpickaxe": "Steel Pickaxe",
@@ -3406,13 +3711,16 @@
       "block.elec_tronics.tankfull_14": "Tank",
       "block.elec_tronics.tankfull_13": "Tank",
       "block.elec_tronics.tankfull_12": "Tank",
+      "item.elec_tronics.chlorine_gas_bucket": "Chlorine Gas Bucket",
       "block.elec_tronics.pipestraight": "Pipe",
+      "block.elec_tronics.chlorine_gas": "Chlorine Gas",
       "item.elec_tronics.solar_panel": "Solar Panel",
       "block.elec_tronics.solarpaneltopr": "Solar Panel T1",
       "block.elec_tronics.basewirecon_3up": "Cable Angle T1",
       "item.elec_tronics.quartz_dust": "Quartz Dust",
       "item.elec_tronics.fibger_glass_dust": "Fibger Glass Dust",
       "block.elec_tronics.cable_junction_up_t_1": "Cable Junction T1",
+      "block.elec_tronics.rock_salt": "Rock Salt",
       "block.elec_tronics.tungsten": "Tungsten Ore Block",
       "item.elec_tronics.creativefluiddropper": "Creative Fluid Dropper",
       "block.elec_tronics.pipejunctiondown": "Pipe",
@@ -3421,9 +3729,11 @@
       "item.elec_tronics.uranium_ingot": "Uranium Ingot",
       "block.elec_tronics.cable_t_up_t_1": "Cable Junction T1",
       "block.elec_tronics.manual_fluid_pumpdown_2": "Manual Fluid Pump",
+      "block.elec_tronics.bauxite_ore": "Bauxite Ore",
       "block.elec_tronics.solarpaneltop": "Solar Panel T1",
       "block.elec_tronics.pipetdownandup": "Pipe",
       "item.elec_tronics.electricmotor": "Electric Motor",
+      "item.elec_tronics.steel_armor_boots": "Steel Boots",
       "block.elec_tronics.reinforcedblastbrick": "Reinforced Blast Brick",
       "block.elec_tronics.basewirecon_3downangle": "Cable Angle T1",
       "block.elec_tronics.basewirecon_2angledown": "Cable Angle T1",
@@ -3433,7 +3743,9 @@
       "block.elec_tronics.cable_tt_1": "Cable T T1",
       "item.elec_tronics.grinder": "Grinder",
       "block.elec_tronics.pipejunctionup": "Pipe",
+      "item.elec_tronics.iron_wrench": "Iron Wrench",
       "item.elec_tronics.steelaxe": "Steel Axe",
+      "block.elec_tronics.bauxite_block": "Block of Bauxite",
       "item.elec_tronics.emerald_dust": "Emerald Dust",
       "block.elec_tronics.basewirecon_4up": "Cable Angle T1",
       "block.elec_tronics.pipeangle": "Pipe",
@@ -3527,6 +3839,34 @@
       },
       {
         "name": "Fluid_Pumps",
+        "children": []
+      },
+      {
+        "name": "Tools-Armor",
+        "children": []
+      },
+      {
+        "name": "WaterTurbine",
+        "children": []
+      },
+      {
+        "name": "Tags",
+        "children": []
+      },
+      {
+        "name": "Fluids-Gases",
+        "children": []
+      },
+      {
+        "name": "Biomes",
+        "children": []
+      },
+      {
+        "name": "ModInit",
+        "children": []
+      },
+      {
+        "name": "Commands",
         "children": []
       }
     ]

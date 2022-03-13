@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "# #"
+  ],
+  "key": {
+    "#": {
+      "item": "elec_tronics:steelingot"
+    }
+  },
+  "result": {
+    "item": "elec_tronics:steel_armor_helmet",
+    "count": 1
+  }
+}
