@@ -13,7 +13,7 @@
     "rotationMode": 2,
     "emissiveRendering": false,
     "displayFluidOverlay": false,
-    "itemTexture": "cablebase",
+    "itemTexture": "",
     "particleTexture": "",
     "tintType": "No tint",
     "isItemTinted": false,

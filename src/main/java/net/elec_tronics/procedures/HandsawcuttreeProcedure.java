@@ -1,61 +1,60 @@
 package net.elec_tronics.procedures;
 
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.BlockPos;
 
+import java.util.Random;
+
 public class HandsawcuttreeProcedure {
-	public static void execute(LevelAccessor world, double x, double y, double z) {
-		if ((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z))).getBlock() == Blocks.OAK_LOG
-				|| (world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) z))).getBlock() == Blocks.OAK_LOG) {
-			if (!world.isClientSide()) {
-				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-				BlockEntity _blockEntity = world.getBlockEntity(_bp);
-				BlockState _bs = world.getBlockState(_bp);
-				if (_blockEntity != null)
-					_blockEntity.getTileData().putBoolean("allLogsTagged", (false));
-				if (world instanceof Level _level)
-					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-			}
-			if (!world.isClientSide()) {
-				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-				BlockEntity _blockEntity = world.getBlockEntity(_bp);
-				BlockState _bs = world.getBlockState(_bp);
-				if (_blockEntity != null)
-					_blockEntity.getTileData().putDouble("x", x);
-				if (world instanceof Level _level)
-					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-			}
-			if (!world.isClientSide()) {
-				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-				BlockEntity _blockEntity = world.getBlockEntity(_bp);
-				BlockState _bs = world.getBlockState(_bp);
-				if (_blockEntity != null)
-					_blockEntity.getTileData().putDouble("y", (y + 1));
-				if (world instanceof Level _level)
-					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-			}
-			if (!world.isClientSide()) {
-				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-				BlockEntity _blockEntity = world.getBlockEntity(_bp);
-				BlockState _bs = world.getBlockState(_bp);
-				if (_blockEntity != null)
-					_blockEntity.getTileData().putDouble("z", z);
-				if (world instanceof Level _level)
-					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-			}
-			while ((new Object() {
-				public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
-					BlockEntity blockEntity = world.getBlockEntity(pos);
-					if (blockEntity != null)
-						return blockEntity.getTileData().getBoolean(tag);
-					return false;
+	public static void execute(LevelAccessor world, double x, double y, double z, ItemStack itemstack) {
+		double sx = 0;
+		double sy = 0;
+		double sz = 0;
+		sx = -3;
+		for (int index0 = 0; index0 < (int) (6); index0++) {
+			sz = -3;
+			for (int index1 = 0; index1 < (int) (6); index1++) {
+				sy = -12;
+				for (int index2 = 0; index2 < (int) (24); index2++) {
+					if (BlockTags.getAllTags().getTagOrEmpty(new ResourceLocation("logs"))
+							.contains((world.getBlockState(new BlockPos((int) (x + sx), (int) (y + sy), (int) (z + sz)))).getBlock())) {
+						if ((itemstack).getDamageValue() > 1) {
+							{
+								ItemStack _ist = itemstack;
+								if (_ist.hurt(1, new Random(), null)) {
+									_ist.shrink(1);
+									_ist.setDamageValue(0);
+								}
+							}
+							if (world instanceof Level) {
+								Block.dropResources(world.getBlockState(new BlockPos((int) (x + sx), (int) (y + sy), (int) (z + sz))), (Level) world,
+										new BlockPos((int) x, (int) y, (int) z));
+								world.destroyBlock(new BlockPos((int) (x + sx), (int) (y + sy), (int) (z + sz)), false);
+							}
+						}
+					} else if (BlockTags.getAllTags().getTagOrEmpty(new ResourceLocation("leaves"))
+							.contains((world.getBlockState(new BlockPos((int) (x + sx), (int) (y + sy), (int) (z + sz)))).getBlock())) {
+						if ((itemstack).getDamageValue() > 1) {
+							{
+								ItemStack _ist = itemstack;
+								if (_ist.hurt((int) 0.25, new Random(), null)) {
+									_ist.shrink(1);
+									_ist.setDamageValue(0);
+								}
+							}
+							world.destroyBlock(new BlockPos((int) (x + sx), (int) (y + sy), (int) (z + sz)), false);
+						}
+					}
+					sy = sy + 1;
 				}
-			}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "allLogsTagged")) == false) {
+				sz = sz + 1;
 			}
+			sx = sx + 1;
 		}
 	}
 }

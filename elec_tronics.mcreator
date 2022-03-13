@@ -90,15 +90,6 @@
       "path": "~/BlastFurnace"
     },
     {
-      "name": "BlastFurnance",
-      "type": "recipe",
-      "sortid": 11,
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "blast_furnance",
-      "path": "~/BlastFurnace"
-    },
-    {
       "name": "FibgerGlassDust",
       "type": "item",
       "sortid": 12,
@@ -1272,18 +1263,6 @@
       "path": "~/Wires-Pipes"
     },
     {
-      "name": "T1WireBlockAdded",
-      "type": "procedure",
-      "sortid": 76,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "t_1_wire_block_added",
-      "metadata": {
-        "dependencies": []
-      },
-      "path": "~/Wires-Pipes"
-    },
-    {
       "name": "T1WireBlockIsPlacedBy",
       "type": "procedure",
       "sortid": 77,
@@ -1619,14 +1598,6 @@
         ]
       },
       "path": "~/Powerticks"
-    },
-    {
-      "name": "Fuels",
-      "type": "tag",
-      "sortid": 91,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "fuels"
     },
     {
       "name": "CableAngleT1",
@@ -2703,6 +2674,908 @@
       "locked_code": true,
       "registry_name": "jei_plugin",
       "path": "~/integrations"
+    },
+    {
+      "name": "BauxiteOreSmelting",
+      "type": "recipe",
+      "sortid": 244,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bauxite_ore_smelting",
+      "path": "~/Item Recipes"
+    },
+    {
+      "name": "Pipejunctionupanddownstraight",
+      "type": "block",
+      "sortid": 201,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pipejunctionupanddownstraight",
+      "path": "~/Wires-Pipes"
+    },
+    {
+      "name": "RockSaltAdditionalGenerationCondition",
+      "type": "procedure",
+      "sortid": 253,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rock_salt_additional_generation_condition",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Ores-Ingots-Dusts"
+    },
+    {
+      "name": "SteelArmorLeggingsRecipe",
+      "type": "recipe",
+      "sortid": 248,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "steel_armor_leggings_recipe",
+      "path": "~/Tools-Armor"
+    },
+    {
+      "name": "ManualFluidPumpUpdateTick",
+      "type": "procedure",
+      "sortid": 236,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "manual_fluid_pump_update_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Fluid_Pumps"
+    },
+    {
+      "name": "Pipejunctionup2",
+      "type": "block",
+      "sortid": 198,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pipejunctionup_2",
+      "path": "~/Wires-Pipes"
+    },
+    {
+      "name": "RockSalt",
+      "type": "block",
+      "sortid": 252,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rock_salt",
+      "path": "~/Ores-Ingots-Dusts"
+    },
+    {
+      "name": "Pipeup",
+      "type": "block",
+      "sortid": 206,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pipeup",
+      "path": "~/Wires-Pipes"
+    },
+    {
+      "name": "Pipedownangle",
+      "type": "block",
+      "sortid": 191,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pipedownangle",
+      "path": "~/Wires-Pipes"
+    },
+    {
+      "name": "Pipeangle",
+      "type": "block",
+      "sortid": 188,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pipeangle",
+      "path": "~/Wires-Pipes"
+    },
+    {
+      "name": "Tankfull7",
+      "type": "block",
+      "sortid": 219,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tankfull_7",
+      "path": "~/Fluid_Tanks"
+    },
+    {
+      "name": "Electronicsoil",
+      "type": "fluid",
+      "sortid": 227,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "electronicsoil",
+      "metadata": {
+        "gb": true
+      },
+      "path": "~/Fluids-Gases"
+    },
+    {
+      "name": "BauxiteBlock",
+      "type": "block",
+      "sortid": 241,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bauxite_block",
+      "path": "~/Ores-Ingots-Dusts"
+    },
+    {
+      "name": "Tankfull8",
+      "type": "block",
+      "sortid": 220,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tankfull_8",
+      "path": "~/Fluid_Tanks"
+    },
+    {
+      "name": "ManualFluidPumpSendWater",
+      "type": "procedure",
+      "sortid": 237,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "manual_fluid_pump_send_water",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Fluid_Pumps"
+    },
+    {
+      "name": "BauxiteOreBlockRecipe",
+      "type": "recipe",
+      "sortid": 242,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bauxite_ore_block_recipe",
+      "path": "~/Item Recipes"
+    },
+    {
+      "name": "ChlorineGas",
+      "type": "fluid",
+      "sortid": 256,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "chlorine_gas",
+      "metadata": {
+        "gb": false
+      },
+      "path": "~/Fluids-Gases"
+    },
+    {
+      "name": "Tankfull5",
+      "type": "block",
+      "sortid": 217,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tankfull_5",
+      "path": "~/Fluid_Tanks"
+    },
+    {
+      "name": "TankOnBlockRightClicked",
+      "type": "procedure",
+      "sortid": 229,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tank_on_block_right_clicked",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Fluid_Tanks"
+    },
+    {
+      "name": "ManualFluidPump5",
+      "type": "block",
+      "sortid": 234,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "manual_fluid_pump_5",
+      "path": "~/Fluid_Pumps"
+    },
+    {
+      "name": "Tankfull6",
+      "type": "block",
+      "sortid": 218,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tankfull_6",
+      "path": "~/Fluid_Tanks"
+    },
+    {
+      "name": "ManualFluidPump4",
+      "type": "block",
+      "sortid": 233,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "manual_fluid_pump_4",
+      "path": "~/Fluid_Pumps"
+    },
+    {
+      "name": "Tankfullhalf1",
+      "type": "block",
+      "sortid": 238,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tankfullhalf_1",
+      "path": "~/Fluid_Tanks"
+    },
+    {
+      "name": "Tankfull3",
+      "type": "block",
+      "sortid": 215,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tankfull_3",
+      "path": "~/Fluid_Tanks"
+    },
+    {
+      "name": "Tankfull4",
+      "type": "block",
+      "sortid": 216,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tankfull_4",
+      "path": "~/Fluid_Tanks"
+    },
+    {
+      "name": "Tankfull1",
+      "type": "block",
+      "sortid": 213,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tankfull_1",
+      "path": "~/Fluid_Tanks"
+    },
+    {
+      "name": "Tankfull2",
+      "type": "block",
+      "sortid": 214,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tankfull_2",
+      "path": "~/Fluid_Tanks"
+    },
+    {
+      "name": "Brine",
+      "type": "fluid",
+      "sortid": 250,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "brine",
+      "metadata": {
+        "gb": true
+      },
+      "path": "~/Fluids-Gases"
+    },
+    {
+      "name": "Pipehalf",
+      "type": "block",
+      "sortid": 192,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pipehalf",
+      "path": "~/Wires-Pipes"
+    },
+    {
+      "name": "SteelArmorBootsRecipe",
+      "type": "recipe",
+      "sortid": 249,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "steel_armor_boots_recipe",
+      "path": "~/Tools-Armor"
+    },
+    {
+      "name": "ManualFluidPump3",
+      "type": "block",
+      "sortid": 232,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "manual_fluid_pump_3",
+      "path": "~/Fluid_Pumps"
+    },
+    {
+      "name": "Tank",
+      "type": "block",
+      "sortid": 210,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tank",
+      "path": "~/Fluid_Tanks"
+    },
+    {
+      "name": "IronWrenchRightClickedOnBlock",
+      "type": "procedure",
+      "sortid": 259,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "iron_wrench_right_clicked_on_block",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Tools-Armor"
+    },
+    {
+      "name": "Pipejunctionupanddown",
+      "type": "block",
+      "sortid": 199,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pipejunctionupanddown",
+      "path": "~/Wires-Pipes"
+    },
+    {
+      "name": "Worldini",
+      "type": "procedure",
+      "sortid": 263,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "worldini",
+      "metadata": {
+        "dependencies": []
+      },
+      "path": "~/ModInit"
+    },
+    {
+      "name": "Pipestraight",
+      "type": "block",
+      "sortid": 202,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pipestraight",
+      "path": "~/Wires-Pipes"
+    },
+    {
+      "name": "TankUpdateTick",
+      "type": "procedure",
+      "sortid": 212,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tank_update_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Fluid_Tanks"
+    },
+    {
+      "name": "Pipeanlgeup",
+      "type": "block",
+      "sortid": 190,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pipeanlgeup",
+      "path": "~/Wires-Pipes"
+    },
+    {
+      "name": "SteelArmorHelmetRecipe",
+      "type": "recipe",
+      "sortid": 246,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "steel_armor_helmet_recipe",
+      "path": "~/Tools-Armor"
+    },
+    {
+      "name": "SteelArmorBodyRecipe",
+      "type": "recipe",
+      "sortid": 247,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "steel_armor_body_recipe",
+      "path": "~/Tools-Armor"
+    },
+    {
+      "name": "Electronicsmachines",
+      "type": "tab",
+      "sortid": 209,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "electronicsmachines"
+    },
+    {
+      "name": "Pipejunctiondown",
+      "type": "block",
+      "sortid": 194,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pipejunctiondown",
+      "path": "~/Wires-Pipes"
+    },
+    {
+      "name": "ManualFluidPumpOnBlockRightClicked",
+      "type": "procedure",
+      "sortid": 230,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "manual_fluid_pump_on_block_right_clicked",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Fluid_Pumps"
+    },
+    {
+      "name": "Pipetdownandup",
+      "type": "block",
+      "sortid": 205,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pipetdownandup",
+      "path": "~/Wires-Pipes"
+    },
+    {
+      "name": "SteelArmor",
+      "type": "armor",
+      "sortid": 245,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "steel_armor",
+      "metadata": {
+        "eh": true,
+        "el": true,
+        "eb": true,
+        "ec": true
+      },
+      "path": "~/Tools-Armor"
+    },
+    {
+      "name": "Tankfull14",
+      "type": "block",
+      "sortid": 226,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tankfull_14",
+      "path": "~/Fluid_Tanks"
+    },
+    {
+      "name": "Pipeupangle",
+      "type": "block",
+      "sortid": 207,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pipeupangle",
+      "path": "~/Wires-Pipes"
+    },
+    {
+      "name": "Tankfull10",
+      "type": "block",
+      "sortid": 222,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tankfull_10",
+      "path": "~/Fluid_Tanks"
+    },
+    {
+      "name": "Tankfull11",
+      "type": "block",
+      "sortid": 223,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tankfull_11",
+      "path": "~/Fluid_Tanks"
+    },
+    {
+      "name": "Tankfull12",
+      "type": "block",
+      "sortid": 224,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tankfull_12",
+      "path": "~/Fluid_Tanks"
+    },
+    {
+      "name": "Pipejunctiondown2",
+      "type": "block",
+      "sortid": 195,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pipejunctiondown_2",
+      "path": "~/Wires-Pipes"
+    },
+    {
+      "name": "Tankfull13",
+      "type": "block",
+      "sortid": 225,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tankfull_13",
+      "path": "~/Fluid_Tanks"
+    },
+    {
+      "name": "Pipejunctionmain",
+      "type": "block",
+      "sortid": 196,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pipejunctionmain",
+      "path": "~/Wires-Pipes"
+    },
+    {
+      "name": "Basepipe",
+      "type": "block",
+      "sortid": 186,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "basepipe",
+      "path": "~/Wires-Pipes"
+    },
+    {
+      "name": "Pipejunctionupanddown2",
+      "type": "block",
+      "sortid": 200,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pipejunctionupanddown_2",
+      "path": "~/Wires-Pipes"
+    },
+    {
+      "name": "Pipeangledown",
+      "type": "block",
+      "sortid": 189,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pipeangledown",
+      "path": "~/Wires-Pipes"
+    },
+    {
+      "name": "BauxiteIngot",
+      "type": "item",
+      "sortid": 239,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bauxite_ingot",
+      "path": "~/Ores-Ingots-Dusts"
+    },
+    {
+      "name": "IronWrench",
+      "type": "item",
+      "sortid": 258,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "iron_wrench",
+      "path": "~/Tools-Armor"
+    },
+    {
+      "name": "BasepipeBlockIsPlacedBy",
+      "type": "procedure",
+      "sortid": 208,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "basepipe_block_is_placed_by",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Wires-Pipes"
+    },
+    {
+      "name": "ElectronicsoilAdditionalGenerationCondition",
+      "type": "procedure",
+      "sortid": 254,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "electronicsoil_additional_generation_condition",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "y",
+            "type": "number"
+          }
+        ]
+      },
+      "path": "~/Fluids-Gases"
+    },
+    {
+      "name": "Pipejunctionup",
+      "type": "block",
+      "sortid": 197,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pipejunctionup",
+      "path": "~/Wires-Pipes"
+    },
+    {
+      "name": "HydrogenGas",
+      "type": "fluid",
+      "sortid": 257,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hydrogen_gas",
+      "metadata": {
+        "gb": false
+      },
+      "path": "~/Fluids-Gases"
+    },
+    {
+      "name": "BauxiteOre",
+      "type": "block",
+      "sortid": 240,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bauxite_ore",
+      "path": "~/Ores-Ingots-Dusts"
+    },
+    {
+      "name": "Tankfull9",
+      "type": "block",
+      "sortid": 221,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tankfull_9",
+      "path": "~/Fluid_Tanks"
+    },
+    {
+      "name": "Creativefluiddropper",
+      "type": "item",
+      "sortid": 228,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "creativefluiddropper",
+      "path": "~/Fluid_Tanks"
+    },
+    {
+      "name": "Rocksaltdust",
+      "type": "item",
+      "sortid": 255,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rocksaltdust",
+      "path": "~/Ores-Ingots-Dusts"
+    },
+    {
+      "name": "BauxiteBlockOreRecipe",
+      "type": "recipe",
+      "sortid": 243,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bauxite_block_ore_recipe",
+      "path": "~/Item Recipes"
+    },
+    {
+      "name": "ManualFluidPumpdown2",
+      "type": "block",
+      "sortid": 231,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "manual_fluid_pumpdown_2",
+      "path": "~/Fluid_Pumps"
+    },
+    {
+      "name": "Pipejunction",
+      "type": "block",
+      "sortid": 193,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pipejunction",
+      "path": "~/Wires-Pipes"
+    },
+    {
+      "name": "ManualFluidPump",
+      "type": "block",
+      "sortid": 230,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "manual_fluid_pump",
+      "path": "~/Fluid_Pumps"
+    },
+    {
+      "name": "Pipetdown",
+      "type": "block",
+      "sortid": 204,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pipetdown",
+      "path": "~/Wires-Pipes"
+    },
+    {
+      "name": "BrineAdditionalGenerationCondition",
+      "type": "procedure",
+      "sortid": 251,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "brine_additional_generation_condition",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "y",
+            "type": "number"
+          }
+        ]
+      },
+      "path": "~/Fluids-Gases"
+    },
+    {
+      "name": "BasepipeUpdateTick",
+      "type": "procedure",
+      "sortid": 187,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "basepipe_update_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Wires-Pipes"
+    },
+    {
+      "name": "Pipes",
+      "type": "tag",
+      "sortid": 260,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pipes",
+      "path": "~/Tags"
+    },
+    {
+      "name": "Pipet",
+      "type": "block",
+      "sortid": 203,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pipet",
+      "path": "~/Wires-Pipes"
     }
   ],
   "variable_elements": [],
@@ -2711,87 +3584,123 @@
     "en_us": {
       "item.elec_tronics.insulation": "Insulation",
       "item.elec_tronics.hand_saw": "Hand Saw",
-      "item.elec_tronics.steelpickaxe": "Steel Pickaxe",
-      "block.elec_tronics.cable_t_upand_down_t_1": "Cable Junction T1",
       "item.elec_tronics.hammer": "Hammer",
       "item.elec_tronics.steelhoe": "Steel Hoe",
-      "item.elec_tronics.sharpenediron": "Iron Blade",
-      "block.elec_tronics.extrusion_machine": "Extrusion Machine",
-      "item.elec_tronics.rubbersleeve": "Rubber Sleeve",
+      "block.elec_tronics.pipejunctionupanddownstraight": "Pipe",
       "block.elec_tronics.basewirecon_2angleup": "Cable Angle T1",
       "item.elec_tronics.uranium_dust": "Uranium Dust",
-      "item.elec_tronics.solar_panel": "Solar Panel",
+      "block.elec_tronics.pipeangledown": "Pipe",
       "item.elec_tronics.tungsten_ore": "Tungsten Ore",
       "item.elec_tronics.irondust": "Iron Dust",
       "block.elec_tronics.basecable_t_1": "Cable T1",
-      "block.elec_tronics.solarpaneltopr": "Solar Panel T1",
       "item.elec_tronics.wire_roller": "Wire Roller",
-      "block.elec_tronics.basewirecon_3up": "Cable Angle T1",
-      "item.elec_tronics.quartz_dust": "Quartz Dust",
+      "block.elec_tronics.pipetdown": "Pipe",
       "item.elec_tronics.tungsten_dust": "Tungsten Dust",
-      "item.elec_tronics.fibger_glass_dust": "Fibger Glass Dust",
       "block.elec_tronics.engineers_work_bench_side": "Engineers Workbench Side",
-      "block.elec_tronics.cable_junction_up_t_1": "Cable Junction T1",
-      "block.elec_tronics.basewirecon_5main": "Cable Angle T1",
       "item.elec_tronics.copper_sheet": "Copper Sheet",
+      "block.elec_tronics.basewirecon_5main": "Cable Angle T1",
       "item.elec_tronics.ore_funnel": "Ore Funnel",
-      "block.elec_tronics.tungsten": "Tungsten Ore Block",
       "item.elec_tronics.condensor": "Condensor",
+      "block.elec_tronics.tankfullhalf_1": "Tank 1",
+      "block.elec_tronics.pipejunctiondown_2": "Pipe",
+      "block.elec_tronics.pipeup": "Pipe",
+      "fluid.elec_tronics.brine": "Brine",
       "itemGroup.tabelec_tronics_menu": "Elec Tronics",
-      "block.elec_tronics.basewirecon_3": "Cable Angle T1",
+      "block.elec_tronics.brine": "Brine",
       "block.elec_tronics.engineersworkbench": "Engineers Workbench",
+      "block.elec_tronics.pipejunctionupanddown": "Pipe",
+      "block.elec_tronics.pipehalf": "Pipe",
       "item.elec_tronics.irongear": "Iron Gear",
-      "block.elec_tronics.basewirecon_2angle": "Cable Angle T1",
       "item.elec_tronics.cooling_tower": "Cooling Tower",
       "block.elec_tronics.blastfurnancemachine": "Blast Furnance",
       "block.elec_tronics.solar_panel_t_1": "Solar Panel T1",
-      "item.elec_tronics.uranium_ingot": "Uranium Ingot",
       "block.elec_tronics.cable_angle_t_1": "Cable Angle T1",
       "item.elec_tronics.copper_dust": "Copper Dust",
-      "block.elec_tronics.cable_t_up_t_1": "Cable Junction T1",
       "block.elec_tronics.solar_panelr": "Solar Panel T1",
       "item.elec_tronics.screwdriver": "Screwdriver",
+      "item.elec_tronics.electronicsoil_bucket": "Oil Bucket",
+      "item.elec_tronics.steelsword": "Steel Sword",
+      "item.elec_tronics.ash": "Ash",
+      "item.elec_tronics.brine_bucket": "Brine Bucket",
+      "block.elec_tronics.engineers_work_bench_top_side": "Engineers Workbench Top Side",
+      "block.elec_tronics.basewirecon_5down": "Cable Angle T1",
+      "block.elec_tronics.pipedownangle": "Pipe",
+      "block.elec_tronics.pipejunctionup_2": "Pipe",
+      "block.elec_tronics.tankfull_2": "Tank 2",
+      "block.elec_tronics.energy_storage_t_1": "Energy Storage T1",
+      "block.elec_tronics.tankfull_1": "Tank 1",
+      "block.elec_tronics.engineers_work_bench_top": "Engineers Workbench Top",
+      "block.elec_tronics.tankfull_8": "Tank",
+      "block.elec_tronics.tankfull_7": "Tank",
+      "block.elec_tronics.cable_junction_t_1": "Cable Junction T1",
+      "item.elec_tronics.extrusion_die": "Extrusion Die",
+      "block.elec_tronics.tankfull_4": "Tank",
+      "block.elec_tronics.tankfull_3": "Tank 3",
+      "item.elec_tronics.generator": "Generator",
+      "block.elec_tronics.tankfull_6": "Tank",
+      "block.elec_tronics.t_1_wire": "Cable T1",
+      "block.elec_tronics.tankfull_5": "Tank",
+      "block.elec_tronics.basewirecon_3down": "Cable Angle T1",
+      "block.elec_tronics.tank": "Tank",
+      "block.elec_tronics.basewirecon_3upangle": "Cable Angle T1",
+      "block.elec_tronics.waterturbinemachine": "Water Turbine",
+      "block.elec_tronics.coalgeneratormachine": "Coal Generator",
+      "block.elec_tronics.pipeupangle": "Pipe",
+      "fluid.elec_tronics.electronicsoil": "Oil",
+      "block.elec_tronics.cable_t_down_t_1": "Cable Junction T1",
+      "block.elec_tronics.basepipe": "Pipe",
+      "block.elec_tronics.crushermachine": "Crusher T1",
+      "item.elec_tronics.turbine": "Turbine",
+      "item.elec_tronics.steelpickaxe": "Steel Pickaxe",
+      "block.elec_tronics.cable_t_upand_down_t_1": "Cable Junction T1",
+      "block.elec_tronics.pipejunctionmain": "Pipe",
+      "block.elec_tronics.pipejunction": "Pipe",
+      "item.elec_tronics.sharpenediron": "Iron Blade",
+      "block.elec_tronics.extrusion_machine": "Extrusion Machine",
+      "item.elec_tronics.rubbersleeve": "Rubber Sleeve",
+      "block.elec_tronics.pipestraight": "Pipe",
+      "item.elec_tronics.solar_panel": "Solar Panel",
+      "block.elec_tronics.solarpaneltopr": "Solar Panel T1",
+      "block.elec_tronics.basewirecon_3up": "Cable Angle T1",
+      "item.elec_tronics.quartz_dust": "Quartz Dust",
+      "item.elec_tronics.fibger_glass_dust": "Fibger Glass Dust",
+      "block.elec_tronics.cable_junction_up_t_1": "Cable Junction T1",
+      "block.elec_tronics.tungsten": "Tungsten Ore Block",
+      "block.elec_tronics.pipejunctiondown": "Pipe",
+      "block.elec_tronics.basewirecon_3": "Cable Angle T1",
+      "block.elec_tronics.basewirecon_2angle": "Cable Angle T1",
+      "item.elec_tronics.uranium_ingot": "Uranium Ingot",
+      "block.elec_tronics.cable_t_up_t_1": "Cable Junction T1",
       "block.elec_tronics.solarpaneltop": "Solar Panel T1",
+      "block.elec_tronics.pipetdownandup": "Pipe",
       "item.elec_tronics.electricmotor": "Electric Motor",
       "block.elec_tronics.reinforcedblastbrick": "Reinforced Blast Brick",
-      "item.elec_tronics.steelsword": "Steel Sword",
       "block.elec_tronics.basewirecon_3downangle": "Cable Angle T1",
       "block.elec_tronics.basewirecon_2angledown": "Cable Angle T1",
       "item.elec_tronics.diamond_dust": "Diamond Dust",
-      "block.elec_tronics.cable_tt_1": "Cable T T1",
+      "block.elec_tronics.pipejunctionupanddown_2": "Pipe",
       "block.elec_tronics.uraniumore": "Uranium Ore",
-      "item.elec_tronics.ash": "Ash",
-      "block.elec_tronics.engineers_work_bench_top_side": "Engineers Workbench Top Side",
-      "block.elec_tronics.basewirecon_5down": "Cable Angle T1",
+      "block.elec_tronics.cable_tt_1": "Cable T T1",
       "item.elec_tronics.grinder": "Grinder",
+      "block.elec_tronics.pipejunctionup": "Pipe",
       "item.elec_tronics.steelaxe": "Steel Axe",
-      "block.elec_tronics.energy_storage_t_1": "Energy Storage T1",
       "item.elec_tronics.emerald_dust": "Emerald Dust",
-      "block.elec_tronics.engineers_work_bench_top": "Engineers Workbench Top",
       "block.elec_tronics.basewirecon_4up": "Cable Angle T1",
-      "block.elec_tronics.cable_junction_t_1": "Cable Junction T1",
+      "block.elec_tronics.pipeangle": "Pipe",
       "block.elec_tronics.basewirecon_4down": "Cable Angle T1",
-      "item.elec_tronics.extrusion_die": "Extrusion Die",
-      "item.elec_tronics.generator": "Generator",
-      "block.elec_tronics.t_1_wire": "Cable T1",
       "block.elec_tronics.basewirecon_3downandup": "Cable Angle T1",
-      "block.elec_tronics.basewirecon_3down": "Cable Angle T1",
-      "block.elec_tronics.basewirecon_3upangle": "Cable Angle T1",
       "block.elec_tronics.cablehalf_t_1": "Cable Angle T1",
       "item.elec_tronics.tungsten_ingot": "Tungsten Ingot",
       "block.elec_tronics.basewirecon_4upanddown": "Cable Angle T1",
       "item.elec_tronics.copperwire": "Copperwire",
-      "block.elec_tronics.waterturbinemachine": "Water Turbine",
-      "block.elec_tronics.coalgeneratormachine": "Coal Generator",
-      "block.elec_tronics.cable_t_down_t_1": "Cable Junction T1",
       "block.elec_tronics.cable_junction_upand_down_t_1": "Cable Junction T1",
-      "block.elec_tronics.crushermachine": "Crusher T1",
-      "item.elec_tronics.turbine": "Turbine",
       "item.elec_tronics.rubber": "Rubber",
       "item.elec_tronics.steelingot": "Steel Ingot",
       "block.elec_tronics.basewirecon_4upanddownstraight": "Cable Angle T1",
+      "block.elec_tronics.electronicsoil": "Oil",
       "item.elec_tronics.gold_dust": "Gold Dust",
       "item.elec_tronics.steelshovel": "Steel Shovel",
+      "block.elec_tronics.pipeanlgeup": "Pipe",
       "block.elec_tronics.cable_junction_down_t_1": "Cable Junction T1"
     }
   },
@@ -2799,27 +3708,11 @@
     "name": "~",
     "children": [
       {
-        "name": "Ores-Ingots-Dusts",
-        "children": []
-      },
-      {
-        "name": "CrusherT1-T4",
-        "children": []
-      },
-      {
-        "name": "Fuelburningfunctions",
-        "children": []
-      },
-      {
-        "name": "Wires-Pipes",
-        "children": []
-      },
-      {
         "name": "Item Recipes",
         "children": []
       },
       {
-        "name": "Machines Recipes",
+        "name": "integrations",
         "children": []
       },
       {
@@ -2835,15 +3728,27 @@
         "children": []
       },
       {
-        "name": "Engineers Workbench",
+        "name": "Biomes",
         "children": []
       },
       {
-        "name": "BlastFurnace",
+        "name": "Ores-Ingots-Dusts",
         "children": []
       },
       {
-        "name": "Solar Panels",
+        "name": "ModInit",
+        "children": []
+      },
+      {
+        "name": "CrusherT1-T4",
+        "children": []
+      },
+      {
+        "name": "Tools-Armor",
+        "children": []
+      },
+      {
+        "name": "Fluid_Tanks",
         "children": []
       },
       {
@@ -2851,7 +3756,27 @@
         "children": []
       },
       {
-        "name": "EnergyStorages",
+        "name": "Solar Panels",
+        "children": []
+      },
+      {
+        "name": "Wires-Pipes",
+        "children": []
+      },
+      {
+        "name": "Tags",
+        "children": []
+      },
+      {
+        "name": "Engineers Workbench",
+        "children": []
+      },
+      {
+        "name": "Fluid_Pumps",
+        "children": []
+      },
+      {
+        "name": "Fuelburningfunctions",
         "children": []
       },
       {
@@ -2859,7 +3784,27 @@
         "children": []
       },
       {
-        "name": "integrations",
+        "name": "Machines Recipes",
+        "children": []
+      },
+      {
+        "name": "WaterTurbine",
+        "children": []
+      },
+      {
+        "name": "EnergyStorages",
+        "children": []
+      },
+      {
+        "name": "Fluids-Gases",
+        "children": []
+      },
+      {
+        "name": "BlastFurnace",
+        "children": []
+      },
+      {
+        "name": "Commands",
         "children": []
       }
     ]

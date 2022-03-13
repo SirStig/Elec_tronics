@@ -2,18 +2,15 @@
   "group": "elec_tronics",
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "0",
-    "1",
-    "2"
+    "S",
+    "T",
+    "T"
   ],
   "key": {
-    "0": {
+    "S": {
       "item": "elec_tronics:steelingot"
     },
-    "1": {
-      "item": "minecraft:stick"
-    },
-    "2": {
+    "T": {
       "item": "minecraft:stick"
     }
   },

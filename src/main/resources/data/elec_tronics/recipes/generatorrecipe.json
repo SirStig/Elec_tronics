@@ -2,37 +2,19 @@
   "group": "elec_tronics",
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "012",
-    "345",
-    "678"
+    "ICI",
+    "CRC",
+    "ICI"
   ],
   "key": {
-    "0": {
+    "I": {
       "item": "minecraft:iron_nugget"
     },
-    "1": {
+    "C": {
       "item": "minecraft:copper_ingot"
     },
-    "2": {
-      "item": "minecraft:iron_nugget"
-    },
-    "3": {
-      "item": "minecraft:copper_ingot"
-    },
-    "4": {
+    "R": {
       "item": "minecraft:iron_ingot"
-    },
-    "5": {
-      "item": "minecraft:copper_ingot"
-    },
-    "6": {
-      "item": "minecraft:iron_nugget"
-    },
-    "7": {
-      "item": "minecraft:copper_ingot"
-    },
-    "8": {
-      "item": "minecraft:iron_nugget"
     }
   },
   "result": {

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "elec_tronics:bauxite_block"
+    }
+  ],
+  "result": {
+    "item": "elec_tronics:bauxite_ingot",
+    "count": 9
+  }
+}

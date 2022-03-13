@@ -4,7 +4,7 @@
   "definition": {
     "renderType": 0,
     "texture": "screwdriver",
-    "customModelName": "Normal",
+    "customModelName": "Tool",
     "name": "Screwdriver",
     "rarity": "COMMON",
     "creativeTab": {
@@ -12,7 +12,7 @@
     },
     "stackSize": 1,
     "enchantability": 0,
-    "useDuration": 0,
+    "useDuration": 100,
     "toolType": 1.0,
     "damageCount": 0,
     "recipeRemainder": {

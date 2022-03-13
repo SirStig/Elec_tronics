@@ -1,0 +1,11 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "pump_iron",
+        "1": "pump_handle"
+      },
+      "name": "default"
+    }
+  }
+}

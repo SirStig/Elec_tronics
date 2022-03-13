@@ -2,25 +2,16 @@
   "group": "elec_tronics",
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    " 12",
-    "34 ",
-    "6  "
+    " SH",
+    "SH ",
+    "S  "
   ],
   "key": {
-    "1": {
+    "S": {
       "item": "minecraft:stick"
     },
-    "2": {
+    "H": {
       "item": "elec_tronics:sharpenediron"
-    },
-    "3": {
-      "item": "minecraft:stick"
-    },
-    "4": {
-      "item": "elec_tronics:sharpenediron"
-    },
-    "6": {
-      "item": "minecraft:stick"
     }
   },
   "result": {

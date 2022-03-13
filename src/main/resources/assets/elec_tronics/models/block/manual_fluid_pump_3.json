@@ -1,0 +1,9 @@
+{
+  "parent": "elec_tronics:custom/electricwaterpump_up2",
+  "textures": {
+    "all": "elec_tronics:blocks/electricwaterpump",
+    "particle": "elec_tronics:blocks/electricwaterpump",
+    "0": "elec_tronics:blocks/pump_iron",
+    "1": "elec_tronics:blocks/pump_handle"
+  }
+}

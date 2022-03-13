@@ -1,0 +1,8 @@
+{
+  "parent": "elec_tronics:custom/pipe_straight",
+  "textures": {
+    "all": "elec_tronics:blocks/basepipe",
+    "particle": "elec_tronics:blocks/basepipe",
+    "0": "elec_tronics:blocks/pipe_texture"
+  }
+}

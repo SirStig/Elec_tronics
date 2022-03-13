@@ -1,0 +1,8 @@
+{
+  "parent": "elec_tronics:custom/pipe_junction_up_and_down_2",
+  "textures": {
+    "all": "elec_tronics:blocks/basepipe",
+    "particle": "elec_tronics:blocks/basepipe",
+    "0": "elec_tronics:blocks/pipe_texture"
+  }
+}

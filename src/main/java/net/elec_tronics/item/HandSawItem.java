@@ -52,7 +52,7 @@ public class HandSawItem extends AxeItem {
 		int y = pos.getY();
 		int z = pos.getZ();
 
-		HandsawcuttreeProcedure.execute(world, x, y, z);
+		HandsawcuttreeProcedure.execute(world, x, y, z, itemstack);
 		return retval;
 	}
 }

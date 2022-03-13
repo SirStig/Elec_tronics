@@ -2,16 +2,16 @@
   "group": "elec_tronic",
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "012"
+    "SAG"
   ],
   "key": {
-    "0": {
+    "S": {
       "item": "minecraft:sand"
     },
-    "1": {
+    "A": {
       "item": "minecraft:sandstone"
     },
-    "2": {
+    "G": {
       "item": "minecraft:glass"
     }
   },
