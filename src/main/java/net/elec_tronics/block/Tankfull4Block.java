@@ -42,7 +42,6 @@ public class Tankfull4Block extends Block
 	public Tankfull4Block() {
 		super(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.GLASS).strength(1f, 10f).noOcclusion()
 				.isRedstoneConductor((bs, br, bp) -> false));
-		setRegistryName("tankfull_4");
 	}
 
 	@Override
@@ -66,7 +65,7 @@ public class Tankfull4Block extends Block
 	@Override
 	public void onPlace(BlockState blockstate, Level world, BlockPos pos, BlockState oldState, boolean moving) {
 		super.onPlace(blockstate, world, pos, oldState, moving);
-		world.getBlockTicks().scheduleTick(pos, this, 1);
+		world.scheduleTick(pos, this, 1);
 	}
 
 	@Override
@@ -77,7 +76,7 @@ public class Tankfull4Block extends Block
 		int z = pos.getZ();
 
 		TankUpdateTickProcedure.execute(world, x, y, z);
-		world.getBlockTicks().scheduleTick(pos, this, 1);
+		world.scheduleTick(pos, this, 1);
 	}
 
 	@Override
@@ -115,7 +114,7 @@ public class Tankfull4Block extends Block
 
 	@OnlyIn(Dist.CLIENT)
 	public static void registerRenderLayer() {
-		ItemBlockRenderTypes.setRenderLayer(ElecTronicsModBlocks.TANKFULL_4, renderType -> renderType == RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(ElecTronicsModBlocks.TANKFULL_4.get(), renderType -> renderType == RenderType.cutout());
 	}
 
 }

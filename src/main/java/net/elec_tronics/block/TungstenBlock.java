@@ -21,7 +21,6 @@ import java.util.Collections;
 public class TungstenBlock extends Block {
 	public TungstenBlock() {
 		super(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.METAL).strength(-1, 3600000).requiresCorrectToolForDrops());
-		setRegistryName("tungsten");
 	}
 
 	@Override
@@ -41,6 +40,6 @@ public class TungstenBlock extends Block {
 		List<ItemStack> dropsOriginal = super.getDrops(state, builder);
 		if (!dropsOriginal.isEmpty())
 			return dropsOriginal;
-		return Collections.singletonList(new ItemStack(ElecTronicsModItems.TUNGSTEN_ORE));
+		return Collections.singletonList(new ItemStack(ElecTronicsModItems.TUNGSTEN_ORE.get()));
 	}
 }

@@ -1,7 +1,7 @@
 
 package net.elec_tronics.block;
 
-import net.minecraftforge.fmllegacy.network.NetworkHooks;
+import net.minecraftforge.network.NetworkHooks;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
@@ -61,7 +61,6 @@ public class BlastfurnancemachineBlock extends Block
 	public BlastfurnancemachineBlock() {
 		super(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.METAL).strength(5f, 10f).requiresCorrectToolForDrops());
 		this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH));
-		setRegistryName("blastfurnancemachine");
 	}
 
 	@Override
@@ -111,7 +110,7 @@ public class BlastfurnancemachineBlock extends Block
 	@Override
 	public void onPlace(BlockState blockstate, Level world, BlockPos pos, BlockState oldState, boolean moving) {
 		super.onPlace(blockstate, world, pos, oldState, moving);
-		world.getBlockTicks().scheduleTick(pos, this, 30);
+		world.scheduleTick(pos, this, 30);
 	}
 
 	@Override
@@ -122,7 +121,7 @@ public class BlastfurnancemachineBlock extends Block
 		int z = pos.getZ();
 
 		BlastfurnacedisplayProcedure.execute(world, x, y, z);
-		world.getBlockTicks().scheduleTick(pos, this, 30);
+		world.scheduleTick(pos, this, 30);
 	}
 
 	@OnlyIn(Dist.CLIENT)

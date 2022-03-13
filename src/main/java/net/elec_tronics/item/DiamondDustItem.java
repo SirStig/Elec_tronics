@@ -10,7 +10,6 @@ import net.elec_tronics.init.ElecTronicsModTabs;
 public class DiamondDustItem extends Item {
 	public DiamondDustItem() {
 		super(new Item.Properties().tab(ElecTronicsModTabs.TAB_ELEC_TRONICS_MENU).stacksTo(64).fireResistant().rarity(Rarity.EPIC));
-		setRegistryName("diamond_dust");
 	}
 
 	@Override

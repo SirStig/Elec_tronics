@@ -1,7 +1,7 @@
 
 package net.elec_tronics.block;
 
-import net.minecraftforge.fmllegacy.network.NetworkHooks;
+import net.minecraftforge.network.NetworkHooks;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
@@ -60,7 +60,6 @@ public class CoalgeneratormachineBlock extends Block
 	public CoalgeneratormachineBlock() {
 		super(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.METAL).strength(4f, 10f).requiresCorrectToolForDrops());
 		this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH));
-		setRegistryName("coalgeneratormachine");
 	}
 
 	@Override
@@ -105,7 +104,7 @@ public class CoalgeneratormachineBlock extends Block
 	@Override
 	public void onPlace(BlockState blockstate, Level world, BlockPos pos, BlockState oldState, boolean moving) {
 		super.onPlace(blockstate, world, pos, oldState, moving);
-		world.getBlockTicks().scheduleTick(pos, this, 10);
+		world.scheduleTick(pos, this, 10);
 	}
 
 	@Override
@@ -116,7 +115,7 @@ public class CoalgeneratormachineBlock extends Block
 		int z = pos.getZ();
 
 		CoalgeneratorelectricitygenerationProcedure.execute(world, x, y, z);
-		world.getBlockTicks().scheduleTick(pos, this, 10);
+		world.scheduleTick(pos, this, 10);
 	}
 
 	@OnlyIn(Dist.CLIENT)

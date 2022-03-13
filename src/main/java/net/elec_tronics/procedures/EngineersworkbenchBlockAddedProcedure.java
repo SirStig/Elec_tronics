@@ -42,7 +42,7 @@ public class EngineersworkbenchBlockAddedProcedure {
 				if (world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z)).canOcclude() == false) {
 					if (world.getBlockState(new BlockPos((int) (x - 1), (int) (y + 1), (int) z)).canOcclude() == false) {
 						world.setBlock(new BlockPos((int) (x - 1), (int) y, (int) z),
-								ElecTronicsModBlocks.ENGINEERS_WORK_BENCH_SIDE.defaultBlockState(), 3);
+								ElecTronicsModBlocks.ENGINEERS_WORK_BENCH_SIDE.get().defaultBlockState(), 3);
 						if (!world.isClientSide()) {
 							BlockPos _bp = new BlockPos((int) (x - 1), (int) y, (int) z);
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -53,7 +53,7 @@ public class EngineersworkbenchBlockAddedProcedure {
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
 						world.setBlock(new BlockPos((int) (x - 1), (int) (y + 1), (int) z),
-								ElecTronicsModBlocks.ENGINEERS_WORK_BENCH_TOP_SIDE.defaultBlockState(), 3);
+								ElecTronicsModBlocks.ENGINEERS_WORK_BENCH_TOP_SIDE.get().defaultBlockState(), 3);
 						if (!world.isClientSide()) {
 							BlockPos _bp = new BlockPos((int) (x - 1), (int) (y + 1), (int) z);
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -64,7 +64,7 @@ public class EngineersworkbenchBlockAddedProcedure {
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
 						world.setBlock(new BlockPos((int) x, (int) (y + 1), (int) z),
-								ElecTronicsModBlocks.ENGINEERS_WORK_BENCH_TOP.defaultBlockState(), 3);
+								ElecTronicsModBlocks.ENGINEERS_WORK_BENCH_TOP.get().defaultBlockState(), 3);
 						if (!world.isClientSide()) {
 							BlockPos _bp = new BlockPos((int) x, (int) (y + 1), (int) z);
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -111,7 +111,7 @@ public class EngineersworkbenchBlockAddedProcedure {
 				if (world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z)).canOcclude() == false) {
 					if (world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) (z + 1))).canOcclude() == false) {
 						world.setBlock(new BlockPos((int) x, (int) y, (int) (z + 1)),
-								ElecTronicsModBlocks.ENGINEERS_WORK_BENCH_SIDE.defaultBlockState(), 3);
+								ElecTronicsModBlocks.ENGINEERS_WORK_BENCH_SIDE.get().defaultBlockState(), 3);
 						{
 							Direction _dir = Direction.WEST;
 							BlockPos _pos = new BlockPos((int) x, (int) y, (int) (z + 1));
@@ -135,7 +135,7 @@ public class EngineersworkbenchBlockAddedProcedure {
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
 						world.setBlock(new BlockPos((int) x, (int) (y + 1), (int) (z + 1)),
-								ElecTronicsModBlocks.ENGINEERS_WORK_BENCH_TOP_SIDE.defaultBlockState(), 3);
+								ElecTronicsModBlocks.ENGINEERS_WORK_BENCH_TOP_SIDE.get().defaultBlockState(), 3);
 						{
 							Direction _dir = Direction.WEST;
 							BlockPos _pos = new BlockPos((int) x, (int) (y + 1), (int) (z + 1));
@@ -159,7 +159,7 @@ public class EngineersworkbenchBlockAddedProcedure {
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
 						world.setBlock(new BlockPos((int) x, (int) (y + 1), (int) z),
-								ElecTronicsModBlocks.ENGINEERS_WORK_BENCH_TOP.defaultBlockState(), 3);
+								ElecTronicsModBlocks.ENGINEERS_WORK_BENCH_TOP.get().defaultBlockState(), 3);
 						{
 							Direction _dir = Direction.WEST;
 							BlockPos _pos = new BlockPos((int) x, (int) (y + 1), (int) z);
@@ -219,7 +219,7 @@ public class EngineersworkbenchBlockAddedProcedure {
 				if (world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z)).canOcclude() == false) {
 					if (world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) (z - 1))).canOcclude() == false) {
 						world.setBlock(new BlockPos((int) x, (int) y, (int) (z - 1)),
-								ElecTronicsModBlocks.ENGINEERS_WORK_BENCH_SIDE.defaultBlockState(), 3);
+								ElecTronicsModBlocks.ENGINEERS_WORK_BENCH_SIDE.get().defaultBlockState(), 3);
 						{
 							Direction _dir = Direction.EAST;
 							BlockPos _pos = new BlockPos((int) x, (int) y, (int) (z - 1));
@@ -243,7 +243,7 @@ public class EngineersworkbenchBlockAddedProcedure {
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
 						world.setBlock(new BlockPos((int) x, (int) (y + 1), (int) (z - 1)),
-								ElecTronicsModBlocks.ENGINEERS_WORK_BENCH_TOP_SIDE.defaultBlockState(), 3);
+								ElecTronicsModBlocks.ENGINEERS_WORK_BENCH_TOP_SIDE.get().defaultBlockState(), 3);
 						{
 							Direction _dir = Direction.EAST;
 							BlockPos _pos = new BlockPos((int) x, (int) (y + 1), (int) (z - 1));
@@ -267,7 +267,7 @@ public class EngineersworkbenchBlockAddedProcedure {
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
 						world.setBlock(new BlockPos((int) x, (int) (y + 1), (int) z),
-								ElecTronicsModBlocks.ENGINEERS_WORK_BENCH_TOP.defaultBlockState(), 3);
+								ElecTronicsModBlocks.ENGINEERS_WORK_BENCH_TOP.get().defaultBlockState(), 3);
 						{
 							Direction _dir = Direction.EAST;
 							BlockPos _pos = new BlockPos((int) x, (int) (y + 1), (int) z);
@@ -327,7 +327,7 @@ public class EngineersworkbenchBlockAddedProcedure {
 				if (world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z)).canOcclude() == false) {
 					if (world.getBlockState(new BlockPos((int) (x + 1), (int) (y + 1), (int) z)).canOcclude() == false) {
 						world.setBlock(new BlockPos((int) (x + 1), (int) y, (int) z),
-								ElecTronicsModBlocks.ENGINEERS_WORK_BENCH_SIDE.defaultBlockState(), 3);
+								ElecTronicsModBlocks.ENGINEERS_WORK_BENCH_SIDE.get().defaultBlockState(), 3);
 						{
 							Direction _dir = Direction.SOUTH;
 							BlockPos _pos = new BlockPos((int) (x + 1), (int) y, (int) z);
@@ -351,7 +351,7 @@ public class EngineersworkbenchBlockAddedProcedure {
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
 						world.setBlock(new BlockPos((int) (x + 1), (int) (y + 1), (int) z),
-								ElecTronicsModBlocks.ENGINEERS_WORK_BENCH_TOP_SIDE.defaultBlockState(), 3);
+								ElecTronicsModBlocks.ENGINEERS_WORK_BENCH_TOP_SIDE.get().defaultBlockState(), 3);
 						{
 							Direction _dir = Direction.SOUTH;
 							BlockPos _pos = new BlockPos((int) (x + 1), (int) (y + 1), (int) z);
@@ -375,7 +375,7 @@ public class EngineersworkbenchBlockAddedProcedure {
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
 						world.setBlock(new BlockPos((int) x, (int) (y + 1), (int) z),
-								ElecTronicsModBlocks.ENGINEERS_WORK_BENCH_TOP.defaultBlockState(), 3);
+								ElecTronicsModBlocks.ENGINEERS_WORK_BENCH_TOP.get().defaultBlockState(), 3);
 						{
 							Direction _dir = Direction.SOUTH;
 							BlockPos _pos = new BlockPos((int) x, (int) (y + 1), (int) z);

@@ -6,7 +6,5 @@
   "ingredient": {
     "item": "elec_tronics:diamond_dust"
   },
-  "result": {
-    "item": "minecraft:diamond"
-  }
+  "result": "minecraft:diamond"
 }

@@ -166,7 +166,7 @@ public class T1WireBlockIsPlacedByProcedure {
 		if (number_of_con == 0) {
 			{
 				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-				BlockState _bs = ElecTronicsModBlocks.BASECABLE_T_1.defaultBlockState();
+				BlockState _bs = ElecTronicsModBlocks.BASECABLE_T_1.get().defaultBlockState();
 				BlockState _bso = world.getBlockState(_bp);
 				for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 					Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
@@ -179,7 +179,7 @@ public class T1WireBlockIsPlacedByProcedure {
 				BlockEntity _be = world.getBlockEntity(_bp);
 				CompoundTag _bnbt = null;
 				if (_be != null) {
-					_bnbt = _be.save(new CompoundTag());
+					_bnbt = _be.saveWithFullMetadata();
 					_be.setRemoved();
 				}
 				world.setBlock(_bp, _bs, 3);
@@ -214,7 +214,7 @@ public class T1WireBlockIsPlacedByProcedure {
 			}.canExtractEnergy(world, new BlockPos((int) x, (int) y, (int) (z - 1)))) {
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					BlockState _bs = ElecTronicsModBlocks.CABLEHALF_T_1.defaultBlockState();
+					BlockState _bs = ElecTronicsModBlocks.CABLEHALF_T_1.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 						Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
@@ -227,7 +227,7 @@ public class T1WireBlockIsPlacedByProcedure {
 					BlockEntity _be = world.getBlockEntity(_bp);
 					CompoundTag _bnbt = null;
 					if (_be != null) {
-						_bnbt = _be.save(new CompoundTag());
+						_bnbt = _be.saveWithFullMetadata();
 						_be.setRemoved();
 					}
 					world.setBlock(_bp, _bs, 3);
@@ -274,7 +274,7 @@ public class T1WireBlockIsPlacedByProcedure {
 			}.canExtractEnergy(world, new BlockPos((int) x, (int) y, (int) (z + 1)))) {
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					BlockState _bs = ElecTronicsModBlocks.CABLEHALF_T_1.defaultBlockState();
+					BlockState _bs = ElecTronicsModBlocks.CABLEHALF_T_1.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 						Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
@@ -287,7 +287,7 @@ public class T1WireBlockIsPlacedByProcedure {
 					BlockEntity _be = world.getBlockEntity(_bp);
 					CompoundTag _bnbt = null;
 					if (_be != null) {
-						_bnbt = _be.save(new CompoundTag());
+						_bnbt = _be.saveWithFullMetadata();
 						_be.setRemoved();
 					}
 					world.setBlock(_bp, _bs, 3);
@@ -334,7 +334,7 @@ public class T1WireBlockIsPlacedByProcedure {
 			}.canExtractEnergy(world, new BlockPos((int) (x - 1), (int) y, (int) z))) {
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					BlockState _bs = ElecTronicsModBlocks.CABLEHALF_T_1.defaultBlockState();
+					BlockState _bs = ElecTronicsModBlocks.CABLEHALF_T_1.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 						Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
@@ -347,7 +347,7 @@ public class T1WireBlockIsPlacedByProcedure {
 					BlockEntity _be = world.getBlockEntity(_bp);
 					CompoundTag _bnbt = null;
 					if (_be != null) {
-						_bnbt = _be.save(new CompoundTag());
+						_bnbt = _be.saveWithFullMetadata();
 						_be.setRemoved();
 					}
 					world.setBlock(_bp, _bs, 3);
@@ -394,7 +394,7 @@ public class T1WireBlockIsPlacedByProcedure {
 			}.canExtractEnergy(world, new BlockPos((int) (x + 1), (int) y, (int) z))) {
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					BlockState _bs = ElecTronicsModBlocks.CABLEHALF_T_1.defaultBlockState();
+					BlockState _bs = ElecTronicsModBlocks.CABLEHALF_T_1.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 						Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
@@ -407,7 +407,7 @@ public class T1WireBlockIsPlacedByProcedure {
 					BlockEntity _be = world.getBlockEntity(_bp);
 					CompoundTag _bnbt = null;
 					if (_be != null) {
-						_bnbt = _be.save(new CompoundTag());
+						_bnbt = _be.saveWithFullMetadata();
 						_be.setRemoved();
 					}
 					world.setBlock(_bp, _bs, 3);
@@ -454,7 +454,7 @@ public class T1WireBlockIsPlacedByProcedure {
 			}.canExtractEnergy(world, new BlockPos((int) x, (int) (y + 1), (int) z))) {
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					BlockState _bs = ElecTronicsModBlocks.CABLEHALF_T_1.defaultBlockState();
+					BlockState _bs = ElecTronicsModBlocks.CABLEHALF_T_1.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 						Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
@@ -467,7 +467,7 @@ public class T1WireBlockIsPlacedByProcedure {
 					BlockEntity _be = world.getBlockEntity(_bp);
 					CompoundTag _bnbt = null;
 					if (_be != null) {
-						_bnbt = _be.save(new CompoundTag());
+						_bnbt = _be.saveWithFullMetadata();
 						_be.setRemoved();
 					}
 					world.setBlock(_bp, _bs, 3);
@@ -514,7 +514,7 @@ public class T1WireBlockIsPlacedByProcedure {
 			}.canExtractEnergy(world, new BlockPos((int) x, (int) (y - 1), (int) z))) {
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					BlockState _bs = ElecTronicsModBlocks.CABLEHALF_T_1.defaultBlockState();
+					BlockState _bs = ElecTronicsModBlocks.CABLEHALF_T_1.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 						Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
@@ -527,7 +527,7 @@ public class T1WireBlockIsPlacedByProcedure {
 					BlockEntity _be = world.getBlockEntity(_bp);
 					CompoundTag _bnbt = null;
 					if (_be != null) {
-						_bnbt = _be.save(new CompoundTag());
+						_bnbt = _be.saveWithFullMetadata();
 						_be.setRemoved();
 					}
 					world.setBlock(_bp, _bs, 3);
@@ -592,7 +592,7 @@ public class T1WireBlockIsPlacedByProcedure {
 			}.canExtractEnergy(world, new BlockPos((int) x, (int) y, (int) (z + 1)))) {
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					BlockState _bs = ElecTronicsModBlocks.T_1_WIRE.defaultBlockState();
+					BlockState _bs = ElecTronicsModBlocks.T_1_WIRE.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 						Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
@@ -605,7 +605,7 @@ public class T1WireBlockIsPlacedByProcedure {
 					BlockEntity _be = world.getBlockEntity(_bp);
 					CompoundTag _bnbt = null;
 					if (_be != null) {
-						_bnbt = _be.save(new CompoundTag());
+						_bnbt = _be.saveWithFullMetadata();
 						_be.setRemoved();
 					}
 					world.setBlock(_bp, _bs, 3);
@@ -668,7 +668,7 @@ public class T1WireBlockIsPlacedByProcedure {
 			}.canExtractEnergy(world, new BlockPos((int) (x + 1), (int) y, (int) z))) {
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					BlockState _bs = ElecTronicsModBlocks.T_1_WIRE.defaultBlockState();
+					BlockState _bs = ElecTronicsModBlocks.T_1_WIRE.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 						Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
@@ -681,7 +681,7 @@ public class T1WireBlockIsPlacedByProcedure {
 					BlockEntity _be = world.getBlockEntity(_bp);
 					CompoundTag _bnbt = null;
 					if (_be != null) {
-						_bnbt = _be.save(new CompoundTag());
+						_bnbt = _be.saveWithFullMetadata();
 						_be.setRemoved();
 					}
 					world.setBlock(_bp, _bs, 3);
@@ -744,7 +744,7 @@ public class T1WireBlockIsPlacedByProcedure {
 			}.canExtractEnergy(world, new BlockPos((int) y, (int) (y - 1), (int) z))) {
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					BlockState _bs = ElecTronicsModBlocks.T_1_WIRE.defaultBlockState();
+					BlockState _bs = ElecTronicsModBlocks.T_1_WIRE.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 						Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
@@ -757,7 +757,7 @@ public class T1WireBlockIsPlacedByProcedure {
 					BlockEntity _be = world.getBlockEntity(_bp);
 					CompoundTag _bnbt = null;
 					if (_be != null) {
-						_bnbt = _be.save(new CompoundTag());
+						_bnbt = _be.saveWithFullMetadata();
 						_be.setRemoved();
 					}
 					world.setBlock(_bp, _bs, 3);
@@ -804,7 +804,7 @@ public class T1WireBlockIsPlacedByProcedure {
 			}.canReceiveEnergy(world, new BlockPos((int) (x - 1), (int) y, (int) z))) {
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_2ANGLE.defaultBlockState();
+					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_2ANGLE.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 						Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
@@ -817,7 +817,7 @@ public class T1WireBlockIsPlacedByProcedure {
 					BlockEntity _be = world.getBlockEntity(_bp);
 					CompoundTag _bnbt = null;
 					if (_be != null) {
-						_bnbt = _be.save(new CompoundTag());
+						_bnbt = _be.saveWithFullMetadata();
 						_be.setRemoved();
 					}
 					world.setBlock(_bp, _bs, 3);
@@ -864,7 +864,7 @@ public class T1WireBlockIsPlacedByProcedure {
 			}.canReceiveEnergy(world, new BlockPos((int) (x + 1), (int) y, (int) z))) {
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_2ANGLE.defaultBlockState();
+					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_2ANGLE.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 						Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
@@ -877,7 +877,7 @@ public class T1WireBlockIsPlacedByProcedure {
 					BlockEntity _be = world.getBlockEntity(_bp);
 					CompoundTag _bnbt = null;
 					if (_be != null) {
-						_bnbt = _be.save(new CompoundTag());
+						_bnbt = _be.saveWithFullMetadata();
 						_be.setRemoved();
 					}
 					world.setBlock(_bp, _bs, 3);
@@ -924,7 +924,7 @@ public class T1WireBlockIsPlacedByProcedure {
 			}.canReceiveEnergy(world, new BlockPos((int) (x - 1), (int) y, (int) z))) {
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_2ANGLE.defaultBlockState();
+					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_2ANGLE.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 						Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
@@ -937,7 +937,7 @@ public class T1WireBlockIsPlacedByProcedure {
 					BlockEntity _be = world.getBlockEntity(_bp);
 					CompoundTag _bnbt = null;
 					if (_be != null) {
-						_bnbt = _be.save(new CompoundTag());
+						_bnbt = _be.saveWithFullMetadata();
 						_be.setRemoved();
 					}
 					world.setBlock(_bp, _bs, 3);
@@ -984,7 +984,7 @@ public class T1WireBlockIsPlacedByProcedure {
 			}.canReceiveEnergy(world, new BlockPos((int) (x + 1), (int) y, (int) z))) {
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_2ANGLE.defaultBlockState();
+					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_2ANGLE.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 						Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
@@ -997,7 +997,7 @@ public class T1WireBlockIsPlacedByProcedure {
 					BlockEntity _be = world.getBlockEntity(_bp);
 					CompoundTag _bnbt = null;
 					if (_be != null) {
-						_bnbt = _be.save(new CompoundTag());
+						_bnbt = _be.saveWithFullMetadata();
 						_be.setRemoved();
 					}
 					world.setBlock(_bp, _bs, 3);
@@ -1044,7 +1044,7 @@ public class T1WireBlockIsPlacedByProcedure {
 			}.canReceiveEnergy(world, new BlockPos((int) (x + 1), (int) y, (int) z))) {
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_2ANGLEDOWN.defaultBlockState();
+					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_2ANGLEDOWN.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 						Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
@@ -1057,7 +1057,7 @@ public class T1WireBlockIsPlacedByProcedure {
 					BlockEntity _be = world.getBlockEntity(_bp);
 					CompoundTag _bnbt = null;
 					if (_be != null) {
-						_bnbt = _be.save(new CompoundTag());
+						_bnbt = _be.saveWithFullMetadata();
 						_be.setRemoved();
 					}
 					world.setBlock(_bp, _bs, 3);
@@ -1104,7 +1104,7 @@ public class T1WireBlockIsPlacedByProcedure {
 			}.canReceiveEnergy(world, new BlockPos((int) (x - 1), (int) y, (int) z))) {
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_2ANGLEDOWN.defaultBlockState();
+					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_2ANGLEDOWN.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 						Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
@@ -1117,7 +1117,7 @@ public class T1WireBlockIsPlacedByProcedure {
 					BlockEntity _be = world.getBlockEntity(_bp);
 					CompoundTag _bnbt = null;
 					if (_be != null) {
-						_bnbt = _be.save(new CompoundTag());
+						_bnbt = _be.saveWithFullMetadata();
 						_be.setRemoved();
 					}
 					world.setBlock(_bp, _bs, 3);
@@ -1164,7 +1164,7 @@ public class T1WireBlockIsPlacedByProcedure {
 			}.canReceiveEnergy(world, new BlockPos((int) x, (int) y, (int) (z + 1)))) {
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_2ANGLEDOWN.defaultBlockState();
+					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_2ANGLEDOWN.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 						Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
@@ -1177,7 +1177,7 @@ public class T1WireBlockIsPlacedByProcedure {
 					BlockEntity _be = world.getBlockEntity(_bp);
 					CompoundTag _bnbt = null;
 					if (_be != null) {
-						_bnbt = _be.save(new CompoundTag());
+						_bnbt = _be.saveWithFullMetadata();
 						_be.setRemoved();
 					}
 					world.setBlock(_bp, _bs, 3);
@@ -1224,7 +1224,7 @@ public class T1WireBlockIsPlacedByProcedure {
 			}.canReceiveEnergy(world, new BlockPos((int) x, (int) y, (int) (z - 1)))) {
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_2ANGLEDOWN.defaultBlockState();
+					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_2ANGLEDOWN.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 						Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
@@ -1237,7 +1237,7 @@ public class T1WireBlockIsPlacedByProcedure {
 					BlockEntity _be = world.getBlockEntity(_bp);
 					CompoundTag _bnbt = null;
 					if (_be != null) {
-						_bnbt = _be.save(new CompoundTag());
+						_bnbt = _be.saveWithFullMetadata();
 						_be.setRemoved();
 					}
 					world.setBlock(_bp, _bs, 3);
@@ -1284,7 +1284,7 @@ public class T1WireBlockIsPlacedByProcedure {
 			}.canReceiveEnergy(world, new BlockPos((int) (x + 1), (int) y, (int) z))) {
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_2ANGLEUP.defaultBlockState();
+					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_2ANGLEUP.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 						Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
@@ -1297,7 +1297,7 @@ public class T1WireBlockIsPlacedByProcedure {
 					BlockEntity _be = world.getBlockEntity(_bp);
 					CompoundTag _bnbt = null;
 					if (_be != null) {
-						_bnbt = _be.save(new CompoundTag());
+						_bnbt = _be.saveWithFullMetadata();
 						_be.setRemoved();
 					}
 					world.setBlock(_bp, _bs, 3);
@@ -1344,7 +1344,7 @@ public class T1WireBlockIsPlacedByProcedure {
 			}.canReceiveEnergy(world, new BlockPos((int) (x - 1), (int) y, (int) z))) {
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_2ANGLEUP.defaultBlockState();
+					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_2ANGLEUP.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 						Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
@@ -1357,7 +1357,7 @@ public class T1WireBlockIsPlacedByProcedure {
 					BlockEntity _be = world.getBlockEntity(_bp);
 					CompoundTag _bnbt = null;
 					if (_be != null) {
-						_bnbt = _be.save(new CompoundTag());
+						_bnbt = _be.saveWithFullMetadata();
 						_be.setRemoved();
 					}
 					world.setBlock(_bp, _bs, 3);
@@ -1404,7 +1404,7 @@ public class T1WireBlockIsPlacedByProcedure {
 			}.canReceiveEnergy(world, new BlockPos((int) x, (int) y, (int) (z + 1)))) {
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_2ANGLEUP.defaultBlockState();
+					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_2ANGLEUP.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 						Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
@@ -1417,7 +1417,7 @@ public class T1WireBlockIsPlacedByProcedure {
 					BlockEntity _be = world.getBlockEntity(_bp);
 					CompoundTag _bnbt = null;
 					if (_be != null) {
-						_bnbt = _be.save(new CompoundTag());
+						_bnbt = _be.saveWithFullMetadata();
 						_be.setRemoved();
 					}
 					world.setBlock(_bp, _bs, 3);
@@ -1464,7 +1464,7 @@ public class T1WireBlockIsPlacedByProcedure {
 			}.canReceiveEnergy(world, new BlockPos((int) x, (int) y, (int) (z - 1)))) {
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_2ANGLEUP.defaultBlockState();
+					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_2ANGLEUP.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 						Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
@@ -1477,7 +1477,7 @@ public class T1WireBlockIsPlacedByProcedure {
 					BlockEntity _be = world.getBlockEntity(_bp);
 					CompoundTag _bnbt = null;
 					if (_be != null) {
-						_bnbt = _be.save(new CompoundTag());
+						_bnbt = _be.saveWithFullMetadata();
 						_be.setRemoved();
 					}
 					world.setBlock(_bp, _bs, 3);
@@ -1534,7 +1534,7 @@ public class T1WireBlockIsPlacedByProcedure {
 			}.canReceiveEnergy(world, new BlockPos((int) (x + 1), (int) y, (int) z))) {
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_3.defaultBlockState();
+					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_3.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 						Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
@@ -1547,7 +1547,7 @@ public class T1WireBlockIsPlacedByProcedure {
 					BlockEntity _be = world.getBlockEntity(_bp);
 					CompoundTag _bnbt = null;
 					if (_be != null) {
-						_bnbt = _be.save(new CompoundTag());
+						_bnbt = _be.saveWithFullMetadata();
 						_be.setRemoved();
 					}
 					world.setBlock(_bp, _bs, 3);
@@ -1602,7 +1602,7 @@ public class T1WireBlockIsPlacedByProcedure {
 			}.canReceiveEnergy(world, new BlockPos((int) (x - 1), (int) y, (int) z))) {
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_3.defaultBlockState();
+					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_3.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 						Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
@@ -1615,7 +1615,7 @@ public class T1WireBlockIsPlacedByProcedure {
 					BlockEntity _be = world.getBlockEntity(_bp);
 					CompoundTag _bnbt = null;
 					if (_be != null) {
-						_bnbt = _be.save(new CompoundTag());
+						_bnbt = _be.saveWithFullMetadata();
 						_be.setRemoved();
 					}
 					world.setBlock(_bp, _bs, 3);
@@ -1670,7 +1670,7 @@ public class T1WireBlockIsPlacedByProcedure {
 			}.canReceiveEnergy(world, new BlockPos((int) x, (int) y, (int) (z + 1)))) {
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_3.defaultBlockState();
+					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_3.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 						Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
@@ -1683,7 +1683,7 @@ public class T1WireBlockIsPlacedByProcedure {
 					BlockEntity _be = world.getBlockEntity(_bp);
 					CompoundTag _bnbt = null;
 					if (_be != null) {
-						_bnbt = _be.save(new CompoundTag());
+						_bnbt = _be.saveWithFullMetadata();
 						_be.setRemoved();
 					}
 					world.setBlock(_bp, _bs, 3);
@@ -1738,7 +1738,7 @@ public class T1WireBlockIsPlacedByProcedure {
 			}.canReceiveEnergy(world, new BlockPos((int) x, (int) y, (int) (z - 1)))) {
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_3.defaultBlockState();
+					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_3.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 						Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
@@ -1751,7 +1751,7 @@ public class T1WireBlockIsPlacedByProcedure {
 					BlockEntity _be = world.getBlockEntity(_bp);
 					CompoundTag _bnbt = null;
 					if (_be != null) {
-						_bnbt = _be.save(new CompoundTag());
+						_bnbt = _be.saveWithFullMetadata();
 						_be.setRemoved();
 					}
 					world.setBlock(_bp, _bs, 3);
@@ -1806,7 +1806,7 @@ public class T1WireBlockIsPlacedByProcedure {
 			}.canReceiveEnergy(world, new BlockPos((int) x, (int) y, (int) (z + 1)))) {
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_3.defaultBlockState();
+					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_3.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 						Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
@@ -1819,7 +1819,7 @@ public class T1WireBlockIsPlacedByProcedure {
 					BlockEntity _be = world.getBlockEntity(_bp);
 					CompoundTag _bnbt = null;
 					if (_be != null) {
-						_bnbt = _be.save(new CompoundTag());
+						_bnbt = _be.saveWithFullMetadata();
 						_be.setRemoved();
 					}
 					world.setBlock(_bp, _bs, 3);
@@ -1874,7 +1874,7 @@ public class T1WireBlockIsPlacedByProcedure {
 			}.canReceiveEnergy(world, new BlockPos((int) x, (int) (y - 1), (int) z))) {
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_3DOWN.defaultBlockState();
+					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_3DOWN.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 						Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
@@ -1887,7 +1887,7 @@ public class T1WireBlockIsPlacedByProcedure {
 					BlockEntity _be = world.getBlockEntity(_bp);
 					CompoundTag _bnbt = null;
 					if (_be != null) {
-						_bnbt = _be.save(new CompoundTag());
+						_bnbt = _be.saveWithFullMetadata();
 						_be.setRemoved();
 					}
 					world.setBlock(_bp, _bs, 3);
@@ -1942,7 +1942,7 @@ public class T1WireBlockIsPlacedByProcedure {
 			}.canReceiveEnergy(world, new BlockPos((int) x, (int) (y - 1), (int) z))) {
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_3DOWN.defaultBlockState();
+					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_3DOWN.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 						Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
@@ -1955,7 +1955,7 @@ public class T1WireBlockIsPlacedByProcedure {
 					BlockEntity _be = world.getBlockEntity(_bp);
 					CompoundTag _bnbt = null;
 					if (_be != null) {
-						_bnbt = _be.save(new CompoundTag());
+						_bnbt = _be.saveWithFullMetadata();
 						_be.setRemoved();
 					}
 					world.setBlock(_bp, _bs, 3);
@@ -2010,7 +2010,7 @@ public class T1WireBlockIsPlacedByProcedure {
 			}.canReceiveEnergy(world, new BlockPos((int) x, (int) (y - 1), (int) z))) {
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_3DOWNANGLE.defaultBlockState();
+					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_3DOWNANGLE.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 						Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
@@ -2023,7 +2023,7 @@ public class T1WireBlockIsPlacedByProcedure {
 					BlockEntity _be = world.getBlockEntity(_bp);
 					CompoundTag _bnbt = null;
 					if (_be != null) {
-						_bnbt = _be.save(new CompoundTag());
+						_bnbt = _be.saveWithFullMetadata();
 						_be.setRemoved();
 					}
 					world.setBlock(_bp, _bs, 3);
@@ -2078,7 +2078,7 @@ public class T1WireBlockIsPlacedByProcedure {
 			}.canReceiveEnergy(world, new BlockPos((int) x, (int) (y - 1), (int) z))) {
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_3DOWNANGLE.defaultBlockState();
+					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_3DOWNANGLE.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 						Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
@@ -2091,7 +2091,7 @@ public class T1WireBlockIsPlacedByProcedure {
 					BlockEntity _be = world.getBlockEntity(_bp);
 					CompoundTag _bnbt = null;
 					if (_be != null) {
-						_bnbt = _be.save(new CompoundTag());
+						_bnbt = _be.saveWithFullMetadata();
 						_be.setRemoved();
 					}
 					world.setBlock(_bp, _bs, 3);
@@ -2146,7 +2146,7 @@ public class T1WireBlockIsPlacedByProcedure {
 			}.canReceiveEnergy(world, new BlockPos((int) x, (int) (y - 1), (int) z))) {
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_3DOWNANGLE.defaultBlockState();
+					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_3DOWNANGLE.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 						Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
@@ -2159,7 +2159,7 @@ public class T1WireBlockIsPlacedByProcedure {
 					BlockEntity _be = world.getBlockEntity(_bp);
 					CompoundTag _bnbt = null;
 					if (_be != null) {
-						_bnbt = _be.save(new CompoundTag());
+						_bnbt = _be.saveWithFullMetadata();
 						_be.setRemoved();
 					}
 					world.setBlock(_bp, _bs, 3);
@@ -2214,7 +2214,7 @@ public class T1WireBlockIsPlacedByProcedure {
 			}.canReceiveEnergy(world, new BlockPos((int) x, (int) (y - 1), (int) z))) {
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_3DOWNANGLE.defaultBlockState();
+					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_3DOWNANGLE.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 						Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
@@ -2227,7 +2227,7 @@ public class T1WireBlockIsPlacedByProcedure {
 					BlockEntity _be = world.getBlockEntity(_bp);
 					CompoundTag _bnbt = null;
 					if (_be != null) {
-						_bnbt = _be.save(new CompoundTag());
+						_bnbt = _be.saveWithFullMetadata();
 						_be.setRemoved();
 					}
 					world.setBlock(_bp, _bs, 3);
@@ -2282,7 +2282,7 @@ public class T1WireBlockIsPlacedByProcedure {
 			}.canReceiveEnergy(world, new BlockPos((int) x, (int) (y + 1), (int) z))) {
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_3UPANGLE.defaultBlockState();
+					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_3UPANGLE.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 						Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
@@ -2295,7 +2295,7 @@ public class T1WireBlockIsPlacedByProcedure {
 					BlockEntity _be = world.getBlockEntity(_bp);
 					CompoundTag _bnbt = null;
 					if (_be != null) {
-						_bnbt = _be.save(new CompoundTag());
+						_bnbt = _be.saveWithFullMetadata();
 						_be.setRemoved();
 					}
 					world.setBlock(_bp, _bs, 3);
@@ -2350,7 +2350,7 @@ public class T1WireBlockIsPlacedByProcedure {
 			}.canReceiveEnergy(world, new BlockPos((int) x, (int) (y + 1), (int) z))) {
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_3UPANGLE.defaultBlockState();
+					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_3UPANGLE.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 						Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
@@ -2363,7 +2363,7 @@ public class T1WireBlockIsPlacedByProcedure {
 					BlockEntity _be = world.getBlockEntity(_bp);
 					CompoundTag _bnbt = null;
 					if (_be != null) {
-						_bnbt = _be.save(new CompoundTag());
+						_bnbt = _be.saveWithFullMetadata();
 						_be.setRemoved();
 					}
 					world.setBlock(_bp, _bs, 3);
@@ -2418,7 +2418,7 @@ public class T1WireBlockIsPlacedByProcedure {
 			}.canReceiveEnergy(world, new BlockPos((int) x, (int) (y + 1), (int) z))) {
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_3UPANGLE.defaultBlockState();
+					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_3UPANGLE.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 						Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
@@ -2431,7 +2431,7 @@ public class T1WireBlockIsPlacedByProcedure {
 					BlockEntity _be = world.getBlockEntity(_bp);
 					CompoundTag _bnbt = null;
 					if (_be != null) {
-						_bnbt = _be.save(new CompoundTag());
+						_bnbt = _be.saveWithFullMetadata();
 						_be.setRemoved();
 					}
 					world.setBlock(_bp, _bs, 3);
@@ -2486,7 +2486,7 @@ public class T1WireBlockIsPlacedByProcedure {
 			}.canReceiveEnergy(world, new BlockPos((int) x, (int) (y + 1), (int) z))) {
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_3UPANGLE.defaultBlockState();
+					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_3UPANGLE.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 						Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
@@ -2499,7 +2499,7 @@ public class T1WireBlockIsPlacedByProcedure {
 					BlockEntity _be = world.getBlockEntity(_bp);
 					CompoundTag _bnbt = null;
 					if (_be != null) {
-						_bnbt = _be.save(new CompoundTag());
+						_bnbt = _be.saveWithFullMetadata();
 						_be.setRemoved();
 					}
 					world.setBlock(_bp, _bs, 3);
@@ -2554,7 +2554,7 @@ public class T1WireBlockIsPlacedByProcedure {
 			}.canReceiveEnergy(world, new BlockPos((int) x, (int) (y + 1), (int) z))) {
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_3UP.defaultBlockState();
+					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_3UP.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 						Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
@@ -2567,7 +2567,7 @@ public class T1WireBlockIsPlacedByProcedure {
 					BlockEntity _be = world.getBlockEntity(_bp);
 					CompoundTag _bnbt = null;
 					if (_be != null) {
-						_bnbt = _be.save(new CompoundTag());
+						_bnbt = _be.saveWithFullMetadata();
 						_be.setRemoved();
 					}
 					world.setBlock(_bp, _bs, 3);
@@ -2622,7 +2622,7 @@ public class T1WireBlockIsPlacedByProcedure {
 			}.canReceiveEnergy(world, new BlockPos((int) x, (int) (y + 1), (int) z))) {
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_3UP.defaultBlockState();
+					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_3UP.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 						Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
@@ -2635,7 +2635,7 @@ public class T1WireBlockIsPlacedByProcedure {
 					BlockEntity _be = world.getBlockEntity(_bp);
 					CompoundTag _bnbt = null;
 					if (_be != null) {
-						_bnbt = _be.save(new CompoundTag());
+						_bnbt = _be.saveWithFullMetadata();
 						_be.setRemoved();
 					}
 					world.setBlock(_bp, _bs, 3);
@@ -2690,7 +2690,7 @@ public class T1WireBlockIsPlacedByProcedure {
 			}.canReceiveEnergy(world, new BlockPos((int) x, (int) (y - 1), (int) z))) {
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_3DOWNANDUP.defaultBlockState();
+					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_3DOWNANDUP.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 						Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
@@ -2703,7 +2703,7 @@ public class T1WireBlockIsPlacedByProcedure {
 					BlockEntity _be = world.getBlockEntity(_bp);
 					CompoundTag _bnbt = null;
 					if (_be != null) {
-						_bnbt = _be.save(new CompoundTag());
+						_bnbt = _be.saveWithFullMetadata();
 						_be.setRemoved();
 					}
 					world.setBlock(_bp, _bs, 3);
@@ -2758,7 +2758,7 @@ public class T1WireBlockIsPlacedByProcedure {
 			}.canReceiveEnergy(world, new BlockPos((int) x, (int) (y - 1), (int) z))) {
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_3DOWNANDUP.defaultBlockState();
+					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_3DOWNANDUP.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 						Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
@@ -2771,7 +2771,7 @@ public class T1WireBlockIsPlacedByProcedure {
 					BlockEntity _be = world.getBlockEntity(_bp);
 					CompoundTag _bnbt = null;
 					if (_be != null) {
-						_bnbt = _be.save(new CompoundTag());
+						_bnbt = _be.saveWithFullMetadata();
 						_be.setRemoved();
 					}
 					world.setBlock(_bp, _bs, 3);
@@ -2826,7 +2826,7 @@ public class T1WireBlockIsPlacedByProcedure {
 			}.canReceiveEnergy(world, new BlockPos((int) x, (int) (y - 1), (int) z))) {
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_3DOWNANDUP.defaultBlockState();
+					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_3DOWNANDUP.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 						Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
@@ -2839,7 +2839,7 @@ public class T1WireBlockIsPlacedByProcedure {
 					BlockEntity _be = world.getBlockEntity(_bp);
 					CompoundTag _bnbt = null;
 					if (_be != null) {
-						_bnbt = _be.save(new CompoundTag());
+						_bnbt = _be.saveWithFullMetadata();
 						_be.setRemoved();
 					}
 					world.setBlock(_bp, _bs, 3);
@@ -2894,7 +2894,7 @@ public class T1WireBlockIsPlacedByProcedure {
 			}.canReceiveEnergy(world, new BlockPos((int) x, (int) (y - 1), (int) z))) {
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_3DOWNANDUP.defaultBlockState();
+					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_3DOWNANDUP.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 						Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
@@ -2907,7 +2907,7 @@ public class T1WireBlockIsPlacedByProcedure {
 					BlockEntity _be = world.getBlockEntity(_bp);
 					CompoundTag _bnbt = null;
 					if (_be != null) {
-						_bnbt = _be.save(new CompoundTag());
+						_bnbt = _be.saveWithFullMetadata();
 						_be.setRemoved();
 					}
 					world.setBlock(_bp, _bs, 3);
@@ -2972,7 +2972,7 @@ public class T1WireBlockIsPlacedByProcedure {
 			}.canReceiveEnergy(world, new BlockPos((int) (x + 1), (int) y, (int) z))) {
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					BlockState _bs = ElecTronicsModBlocks.CABLE_JUNCTION_T_1.defaultBlockState();
+					BlockState _bs = ElecTronicsModBlocks.CABLE_JUNCTION_T_1.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 						Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
@@ -2985,7 +2985,7 @@ public class T1WireBlockIsPlacedByProcedure {
 					BlockEntity _be = world.getBlockEntity(_bp);
 					CompoundTag _bnbt = null;
 					if (_be != null) {
-						_bnbt = _be.save(new CompoundTag());
+						_bnbt = _be.saveWithFullMetadata();
 						_be.setRemoved();
 					}
 					world.setBlock(_bp, _bs, 3);
@@ -3048,7 +3048,7 @@ public class T1WireBlockIsPlacedByProcedure {
 			}.canReceiveEnergy(world, new BlockPos((int) x, (int) (y - 1), (int) z))) {
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_4DOWN.defaultBlockState();
+					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_4DOWN.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 						Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
@@ -3061,7 +3061,7 @@ public class T1WireBlockIsPlacedByProcedure {
 					BlockEntity _be = world.getBlockEntity(_bp);
 					CompoundTag _bnbt = null;
 					if (_be != null) {
-						_bnbt = _be.save(new CompoundTag());
+						_bnbt = _be.saveWithFullMetadata();
 						_be.setRemoved();
 					}
 					world.setBlock(_bp, _bs, 3);
@@ -3124,7 +3124,7 @@ public class T1WireBlockIsPlacedByProcedure {
 			}.canReceiveEnergy(world, new BlockPos((int) x, (int) (y - 1), (int) z))) {
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_4DOWN.defaultBlockState();
+					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_4DOWN.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 						Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
@@ -3137,7 +3137,7 @@ public class T1WireBlockIsPlacedByProcedure {
 					BlockEntity _be = world.getBlockEntity(_bp);
 					CompoundTag _bnbt = null;
 					if (_be != null) {
-						_bnbt = _be.save(new CompoundTag());
+						_bnbt = _be.saveWithFullMetadata();
 						_be.setRemoved();
 					}
 					world.setBlock(_bp, _bs, 3);
@@ -3200,7 +3200,7 @@ public class T1WireBlockIsPlacedByProcedure {
 			}.canReceiveEnergy(world, new BlockPos((int) x, (int) (y - 1), (int) z))) {
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_4DOWN.defaultBlockState();
+					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_4DOWN.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 						Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
@@ -3213,7 +3213,7 @@ public class T1WireBlockIsPlacedByProcedure {
 					BlockEntity _be = world.getBlockEntity(_bp);
 					CompoundTag _bnbt = null;
 					if (_be != null) {
-						_bnbt = _be.save(new CompoundTag());
+						_bnbt = _be.saveWithFullMetadata();
 						_be.setRemoved();
 					}
 					world.setBlock(_bp, _bs, 3);
@@ -3276,7 +3276,7 @@ public class T1WireBlockIsPlacedByProcedure {
 			}.canReceiveEnergy(world, new BlockPos((int) x, (int) (y - 1), (int) z))) {
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_4DOWN.defaultBlockState();
+					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_4DOWN.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 						Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
@@ -3289,7 +3289,7 @@ public class T1WireBlockIsPlacedByProcedure {
 					BlockEntity _be = world.getBlockEntity(_bp);
 					CompoundTag _bnbt = null;
 					if (_be != null) {
-						_bnbt = _be.save(new CompoundTag());
+						_bnbt = _be.saveWithFullMetadata();
 						_be.setRemoved();
 					}
 					world.setBlock(_bp, _bs, 3);
@@ -3352,7 +3352,7 @@ public class T1WireBlockIsPlacedByProcedure {
 			}.canReceiveEnergy(world, new BlockPos((int) x, (int) (y + 1), (int) z))) {
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_4UP.defaultBlockState();
+					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_4UP.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 						Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
@@ -3365,7 +3365,7 @@ public class T1WireBlockIsPlacedByProcedure {
 					BlockEntity _be = world.getBlockEntity(_bp);
 					CompoundTag _bnbt = null;
 					if (_be != null) {
-						_bnbt = _be.save(new CompoundTag());
+						_bnbt = _be.saveWithFullMetadata();
 						_be.setRemoved();
 					}
 					world.setBlock(_bp, _bs, 3);
@@ -3428,7 +3428,7 @@ public class T1WireBlockIsPlacedByProcedure {
 			}.canReceiveEnergy(world, new BlockPos((int) x, (int) (y + 1), (int) z))) {
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_4UP.defaultBlockState();
+					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_4UP.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 						Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
@@ -3441,7 +3441,7 @@ public class T1WireBlockIsPlacedByProcedure {
 					BlockEntity _be = world.getBlockEntity(_bp);
 					CompoundTag _bnbt = null;
 					if (_be != null) {
-						_bnbt = _be.save(new CompoundTag());
+						_bnbt = _be.saveWithFullMetadata();
 						_be.setRemoved();
 					}
 					world.setBlock(_bp, _bs, 3);
@@ -3504,7 +3504,7 @@ public class T1WireBlockIsPlacedByProcedure {
 			}.canReceiveEnergy(world, new BlockPos((int) x, (int) (y + 1), (int) z))) {
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_4UP.defaultBlockState();
+					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_4UP.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 						Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
@@ -3517,7 +3517,7 @@ public class T1WireBlockIsPlacedByProcedure {
 					BlockEntity _be = world.getBlockEntity(_bp);
 					CompoundTag _bnbt = null;
 					if (_be != null) {
-						_bnbt = _be.save(new CompoundTag());
+						_bnbt = _be.saveWithFullMetadata();
 						_be.setRemoved();
 					}
 					world.setBlock(_bp, _bs, 3);
@@ -3580,7 +3580,7 @@ public class T1WireBlockIsPlacedByProcedure {
 			}.canReceiveEnergy(world, new BlockPos((int) x, (int) (y + 1), (int) z))) {
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_4UP.defaultBlockState();
+					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_4UP.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 						Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
@@ -3593,7 +3593,7 @@ public class T1WireBlockIsPlacedByProcedure {
 					BlockEntity _be = world.getBlockEntity(_bp);
 					CompoundTag _bnbt = null;
 					if (_be != null) {
-						_bnbt = _be.save(new CompoundTag());
+						_bnbt = _be.saveWithFullMetadata();
 						_be.setRemoved();
 					}
 					world.setBlock(_bp, _bs, 3);
@@ -3658,7 +3658,7 @@ public class T1WireBlockIsPlacedByProcedure {
 			}.canReceiveEnergy(world, new BlockPos((int) (x + 1), (int) y, (int) z))) {
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					BlockState _bs = ElecTronicsModBlocks.CABLE_JUNCTION_T_1.defaultBlockState();
+					BlockState _bs = ElecTronicsModBlocks.CABLE_JUNCTION_T_1.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 						Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
@@ -3671,7 +3671,7 @@ public class T1WireBlockIsPlacedByProcedure {
 					BlockEntity _be = world.getBlockEntity(_bp);
 					CompoundTag _bnbt = null;
 					if (_be != null) {
-						_bnbt = _be.save(new CompoundTag());
+						_bnbt = _be.saveWithFullMetadata();
 						_be.setRemoved();
 					}
 					world.setBlock(_bp, _bs, 3);
@@ -3734,7 +3734,7 @@ public class T1WireBlockIsPlacedByProcedure {
 			}.canReceiveEnergy(world, new BlockPos((int) x, (int) (y - 1), (int) z))) {
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_4DOWN.defaultBlockState();
+					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_4DOWN.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 						Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
@@ -3747,7 +3747,7 @@ public class T1WireBlockIsPlacedByProcedure {
 					BlockEntity _be = world.getBlockEntity(_bp);
 					CompoundTag _bnbt = null;
 					if (_be != null) {
-						_bnbt = _be.save(new CompoundTag());
+						_bnbt = _be.saveWithFullMetadata();
 						_be.setRemoved();
 					}
 					world.setBlock(_bp, _bs, 3);
@@ -3810,7 +3810,7 @@ public class T1WireBlockIsPlacedByProcedure {
 			}.canReceiveEnergy(world, new BlockPos((int) x, (int) (y - 1), (int) z))) {
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_4DOWN.defaultBlockState();
+					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_4DOWN.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 						Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
@@ -3823,7 +3823,7 @@ public class T1WireBlockIsPlacedByProcedure {
 					BlockEntity _be = world.getBlockEntity(_bp);
 					CompoundTag _bnbt = null;
 					if (_be != null) {
-						_bnbt = _be.save(new CompoundTag());
+						_bnbt = _be.saveWithFullMetadata();
 						_be.setRemoved();
 					}
 					world.setBlock(_bp, _bs, 3);
@@ -3886,7 +3886,7 @@ public class T1WireBlockIsPlacedByProcedure {
 			}.canReceiveEnergy(world, new BlockPos((int) x, (int) (y - 1), (int) z))) {
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_4DOWN.defaultBlockState();
+					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_4DOWN.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 						Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
@@ -3899,7 +3899,7 @@ public class T1WireBlockIsPlacedByProcedure {
 					BlockEntity _be = world.getBlockEntity(_bp);
 					CompoundTag _bnbt = null;
 					if (_be != null) {
-						_bnbt = _be.save(new CompoundTag());
+						_bnbt = _be.saveWithFullMetadata();
 						_be.setRemoved();
 					}
 					world.setBlock(_bp, _bs, 3);
@@ -3962,7 +3962,7 @@ public class T1WireBlockIsPlacedByProcedure {
 			}.canReceiveEnergy(world, new BlockPos((int) x, (int) (y - 1), (int) z))) {
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_4DOWN.defaultBlockState();
+					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_4DOWN.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 						Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
@@ -3975,7 +3975,7 @@ public class T1WireBlockIsPlacedByProcedure {
 					BlockEntity _be = world.getBlockEntity(_bp);
 					CompoundTag _bnbt = null;
 					if (_be != null) {
-						_bnbt = _be.save(new CompoundTag());
+						_bnbt = _be.saveWithFullMetadata();
 						_be.setRemoved();
 					}
 					world.setBlock(_bp, _bs, 3);
@@ -4038,7 +4038,7 @@ public class T1WireBlockIsPlacedByProcedure {
 			}.canReceiveEnergy(world, new BlockPos((int) x, (int) (y + 1), (int) z))) {
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_4UP.defaultBlockState();
+					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_4UP.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 						Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
@@ -4051,7 +4051,7 @@ public class T1WireBlockIsPlacedByProcedure {
 					BlockEntity _be = world.getBlockEntity(_bp);
 					CompoundTag _bnbt = null;
 					if (_be != null) {
-						_bnbt = _be.save(new CompoundTag());
+						_bnbt = _be.saveWithFullMetadata();
 						_be.setRemoved();
 					}
 					world.setBlock(_bp, _bs, 3);
@@ -4114,7 +4114,7 @@ public class T1WireBlockIsPlacedByProcedure {
 			}.canReceiveEnergy(world, new BlockPos((int) x, (int) (y + 1), (int) z))) {
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_4UP.defaultBlockState();
+					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_4UP.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 						Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
@@ -4127,7 +4127,7 @@ public class T1WireBlockIsPlacedByProcedure {
 					BlockEntity _be = world.getBlockEntity(_bp);
 					CompoundTag _bnbt = null;
 					if (_be != null) {
-						_bnbt = _be.save(new CompoundTag());
+						_bnbt = _be.saveWithFullMetadata();
 						_be.setRemoved();
 					}
 					world.setBlock(_bp, _bs, 3);
@@ -4190,7 +4190,7 @@ public class T1WireBlockIsPlacedByProcedure {
 			}.canReceiveEnergy(world, new BlockPos((int) x, (int) (y + 1), (int) z))) {
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_4UP.defaultBlockState();
+					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_4UP.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 						Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
@@ -4203,7 +4203,7 @@ public class T1WireBlockIsPlacedByProcedure {
 					BlockEntity _be = world.getBlockEntity(_bp);
 					CompoundTag _bnbt = null;
 					if (_be != null) {
-						_bnbt = _be.save(new CompoundTag());
+						_bnbt = _be.saveWithFullMetadata();
 						_be.setRemoved();
 					}
 					world.setBlock(_bp, _bs, 3);
@@ -4266,7 +4266,7 @@ public class T1WireBlockIsPlacedByProcedure {
 			}.canReceiveEnergy(world, new BlockPos((int) x, (int) (y + 1), (int) z))) {
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_4UP.defaultBlockState();
+					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_4UP.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 						Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
@@ -4279,7 +4279,7 @@ public class T1WireBlockIsPlacedByProcedure {
 					BlockEntity _be = world.getBlockEntity(_bp);
 					CompoundTag _bnbt = null;
 					if (_be != null) {
-						_bnbt = _be.save(new CompoundTag());
+						_bnbt = _be.saveWithFullMetadata();
 						_be.setRemoved();
 					}
 					world.setBlock(_bp, _bs, 3);
@@ -4342,7 +4342,7 @@ public class T1WireBlockIsPlacedByProcedure {
 			}.canReceiveEnergy(world, new BlockPos((int) x, (int) (y + 1), (int) z))) {
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_4UPANDDOWN.defaultBlockState();
+					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_4UPANDDOWN.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 						Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
@@ -4355,7 +4355,7 @@ public class T1WireBlockIsPlacedByProcedure {
 					BlockEntity _be = world.getBlockEntity(_bp);
 					CompoundTag _bnbt = null;
 					if (_be != null) {
-						_bnbt = _be.save(new CompoundTag());
+						_bnbt = _be.saveWithFullMetadata();
 						_be.setRemoved();
 					}
 					world.setBlock(_bp, _bs, 3);
@@ -4418,7 +4418,7 @@ public class T1WireBlockIsPlacedByProcedure {
 			}.canReceiveEnergy(world, new BlockPos((int) x, (int) (y + 1), (int) z))) {
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_4UPANDDOWN.defaultBlockState();
+					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_4UPANDDOWN.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 						Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
@@ -4431,7 +4431,7 @@ public class T1WireBlockIsPlacedByProcedure {
 					BlockEntity _be = world.getBlockEntity(_bp);
 					CompoundTag _bnbt = null;
 					if (_be != null) {
-						_bnbt = _be.save(new CompoundTag());
+						_bnbt = _be.saveWithFullMetadata();
 						_be.setRemoved();
 					}
 					world.setBlock(_bp, _bs, 3);
@@ -4494,7 +4494,7 @@ public class T1WireBlockIsPlacedByProcedure {
 			}.canReceiveEnergy(world, new BlockPos((int) x, (int) (y + 1), (int) z))) {
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_4UPANDDOWN.defaultBlockState();
+					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_4UPANDDOWN.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 						Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
@@ -4507,7 +4507,7 @@ public class T1WireBlockIsPlacedByProcedure {
 					BlockEntity _be = world.getBlockEntity(_bp);
 					CompoundTag _bnbt = null;
 					if (_be != null) {
-						_bnbt = _be.save(new CompoundTag());
+						_bnbt = _be.saveWithFullMetadata();
 						_be.setRemoved();
 					}
 					world.setBlock(_bp, _bs, 3);
@@ -4570,7 +4570,7 @@ public class T1WireBlockIsPlacedByProcedure {
 			}.canReceiveEnergy(world, new BlockPos((int) x, (int) (y + 1), (int) z))) {
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_4UPANDDOWN.defaultBlockState();
+					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_4UPANDDOWN.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 						Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
@@ -4583,7 +4583,7 @@ public class T1WireBlockIsPlacedByProcedure {
 					BlockEntity _be = world.getBlockEntity(_bp);
 					CompoundTag _bnbt = null;
 					if (_be != null) {
-						_bnbt = _be.save(new CompoundTag());
+						_bnbt = _be.saveWithFullMetadata();
 						_be.setRemoved();
 					}
 					world.setBlock(_bp, _bs, 3);
@@ -4646,7 +4646,7 @@ public class T1WireBlockIsPlacedByProcedure {
 			}.canReceiveEnergy(world, new BlockPos((int) x, (int) (y + 1), (int) z))) {
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_4UPANDDOWNSTRAIGHT.defaultBlockState();
+					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_4UPANDDOWNSTRAIGHT.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 						Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
@@ -4659,7 +4659,7 @@ public class T1WireBlockIsPlacedByProcedure {
 					BlockEntity _be = world.getBlockEntity(_bp);
 					CompoundTag _bnbt = null;
 					if (_be != null) {
-						_bnbt = _be.save(new CompoundTag());
+						_bnbt = _be.saveWithFullMetadata();
 						_be.setRemoved();
 					}
 					world.setBlock(_bp, _bs, 3);
@@ -4722,7 +4722,7 @@ public class T1WireBlockIsPlacedByProcedure {
 			}.canReceiveEnergy(world, new BlockPos((int) x, (int) (y + 1), (int) z))) {
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_4UPANDDOWNSTRAIGHT.defaultBlockState();
+					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_4UPANDDOWNSTRAIGHT.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 						Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
@@ -4735,7 +4735,7 @@ public class T1WireBlockIsPlacedByProcedure {
 					BlockEntity _be = world.getBlockEntity(_bp);
 					CompoundTag _bnbt = null;
 					if (_be != null) {
-						_bnbt = _be.save(new CompoundTag());
+						_bnbt = _be.saveWithFullMetadata();
 						_be.setRemoved();
 					}
 					world.setBlock(_bp, _bs, 3);
@@ -4808,7 +4808,7 @@ public class T1WireBlockIsPlacedByProcedure {
 			}.canReceiveEnergy(world, new BlockPos((int) (x + 1), (int) y, (int) z))) {
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_5DOWN.defaultBlockState();
+					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_5DOWN.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 						Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
@@ -4821,7 +4821,7 @@ public class T1WireBlockIsPlacedByProcedure {
 					BlockEntity _be = world.getBlockEntity(_bp);
 					CompoundTag _bnbt = null;
 					if (_be != null) {
-						_bnbt = _be.save(new CompoundTag());
+						_bnbt = _be.saveWithFullMetadata();
 						_be.setRemoved();
 					}
 					world.setBlock(_bp, _bs, 3);
@@ -4892,7 +4892,7 @@ public class T1WireBlockIsPlacedByProcedure {
 			}.canReceiveEnergy(world, new BlockPos((int) (x + 1), (int) y, (int) z))) {
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					BlockState _bs = ElecTronicsModBlocks.CABLE_JUNCTION_UP_T_1.defaultBlockState();
+					BlockState _bs = ElecTronicsModBlocks.CABLE_JUNCTION_UP_T_1.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 						Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
@@ -4905,7 +4905,7 @@ public class T1WireBlockIsPlacedByProcedure {
 					BlockEntity _be = world.getBlockEntity(_bp);
 					CompoundTag _bnbt = null;
 					if (_be != null) {
-						_bnbt = _be.save(new CompoundTag());
+						_bnbt = _be.saveWithFullMetadata();
 						_be.setRemoved();
 					}
 					world.setBlock(_bp, _bs, 3);
@@ -4976,7 +4976,7 @@ public class T1WireBlockIsPlacedByProcedure {
 			}.canReceiveEnergy(world, new BlockPos((int) (x + 1), (int) y, (int) z))) {
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_5MAIN.defaultBlockState();
+					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_5MAIN.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 						Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
@@ -4989,7 +4989,7 @@ public class T1WireBlockIsPlacedByProcedure {
 					BlockEntity _be = world.getBlockEntity(_bp);
 					CompoundTag _bnbt = null;
 					if (_be != null) {
-						_bnbt = _be.save(new CompoundTag());
+						_bnbt = _be.saveWithFullMetadata();
 						_be.setRemoved();
 					}
 					world.setBlock(_bp, _bs, 3);
@@ -5060,7 +5060,7 @@ public class T1WireBlockIsPlacedByProcedure {
 			}.canReceiveEnergy(world, new BlockPos((int) (x + 1), (int) y, (int) z))) {
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_5MAIN.defaultBlockState();
+					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_5MAIN.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 						Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
@@ -5073,7 +5073,7 @@ public class T1WireBlockIsPlacedByProcedure {
 					BlockEntity _be = world.getBlockEntity(_bp);
 					CompoundTag _bnbt = null;
 					if (_be != null) {
-						_bnbt = _be.save(new CompoundTag());
+						_bnbt = _be.saveWithFullMetadata();
 						_be.setRemoved();
 					}
 					world.setBlock(_bp, _bs, 3);
@@ -5144,7 +5144,7 @@ public class T1WireBlockIsPlacedByProcedure {
 			}.canReceiveEnergy(world, new BlockPos((int) x, (int) y, (int) (z + 1)))) {
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_5MAIN.defaultBlockState();
+					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_5MAIN.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 						Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
@@ -5157,7 +5157,7 @@ public class T1WireBlockIsPlacedByProcedure {
 					BlockEntity _be = world.getBlockEntity(_bp);
 					CompoundTag _bnbt = null;
 					if (_be != null) {
-						_bnbt = _be.save(new CompoundTag());
+						_bnbt = _be.saveWithFullMetadata();
 						_be.setRemoved();
 					}
 					world.setBlock(_bp, _bs, 3);
@@ -5228,7 +5228,7 @@ public class T1WireBlockIsPlacedByProcedure {
 			}.canReceiveEnergy(world, new BlockPos((int) x, (int) y, (int) (z + 1)))) {
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_5MAIN.defaultBlockState();
+					BlockState _bs = ElecTronicsModBlocks.BASEWIRECON_5MAIN.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 						Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
@@ -5241,7 +5241,7 @@ public class T1WireBlockIsPlacedByProcedure {
 					BlockEntity _be = world.getBlockEntity(_bp);
 					CompoundTag _bnbt = null;
 					if (_be != null) {
-						_bnbt = _be.save(new CompoundTag());
+						_bnbt = _be.saveWithFullMetadata();
 						_be.setRemoved();
 					}
 					world.setBlock(_bp, _bs, 3);
@@ -5273,7 +5273,7 @@ public class T1WireBlockIsPlacedByProcedure {
 		if (number_of_con == 6) {
 			{
 				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-				BlockState _bs = ElecTronicsModBlocks.CABLE_JUNCTION_UPAND_DOWN_T_1.defaultBlockState();
+				BlockState _bs = ElecTronicsModBlocks.CABLE_JUNCTION_UPAND_DOWN_T_1.get().defaultBlockState();
 				BlockState _bso = world.getBlockState(_bp);
 				for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 					Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
@@ -5286,7 +5286,7 @@ public class T1WireBlockIsPlacedByProcedure {
 				BlockEntity _be = world.getBlockEntity(_bp);
 				CompoundTag _bnbt = null;
 				if (_be != null) {
-					_bnbt = _be.save(new CompoundTag());
+					_bnbt = _be.saveWithFullMetadata();
 					_be.setRemoved();
 				}
 				world.setBlock(_bp, _bs, 3);
@@ -5312,7 +5312,8 @@ public class T1WireBlockIsPlacedByProcedure {
 		}
 		block = 0;
 		for (int index0 = 0; index0 < (int) (21); index0++) {
-			if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == ElecTronicsModVariables.list_pipes.get((int) block)) {
+			if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == ElecTronicsModVariables.blockStates_wires
+					.get((int) block)) {
 				if (!world.isClientSide()) {
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 					BlockEntity _blockEntity = world.getBlockEntity(_bp);

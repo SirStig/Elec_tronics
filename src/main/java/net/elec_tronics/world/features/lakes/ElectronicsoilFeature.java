@@ -1,40 +1,62 @@
 
 package net.elec_tronics.world.features.lakes;
 
-import net.minecraft.world.level.levelgen.feature.configurations.BlockStateConfiguration;
+import net.minecraft.world.level.levelgen.placement.RarityFilter;
+import net.minecraft.world.level.levelgen.placement.PlacedFeature;
+import net.minecraft.world.level.levelgen.placement.InSquarePlacement;
+import net.minecraft.world.level.levelgen.placement.EnvironmentScanPlacement;
+import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
 import net.minecraft.world.level.levelgen.feature.LakeFeature;
 import net.minecraft.world.level.levelgen.feature.FeaturePlaceContext;
+import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
-import net.minecraft.world.level.levelgen.VerticalAnchor;
+import net.minecraft.world.level.levelgen.blockpredicates.BlockPredicate;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.WorldGenLevel;
 import net.minecraft.world.level.Level;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.data.worldgen.placement.PlacementUtils;
+import net.minecraft.data.worldgen.features.FeatureUtils;
+import net.minecraft.core.Holder;
+import net.minecraft.core.Direction;
 
 import net.elec_tronics.procedures.ElectronicsoilAdditionalGenerationConditionProcedure;
 import net.elec_tronics.init.ElecTronicsModBlocks;
 
 import java.util.Set;
+import java.util.List;
 
 public class ElectronicsoilFeature extends LakeFeature {
-	public static final ElectronicsoilFeature FEATURE = (ElectronicsoilFeature) new ElectronicsoilFeature()
-			.setRegistryName("elec_tronics:electronicsoil");
-	public static final ConfiguredFeature<?, ?> CONFIGURED_FEATURE = FEATURE
-			.configured(new BlockStateConfiguration(ElecTronicsModBlocks.ELECTRONICSOIL.defaultBlockState()))
-			.rangeUniform(VerticalAnchor.aboveBottom(0), VerticalAnchor.belowTop(0)).squared().rarity(9);
-	public static final Set<ResourceLocation> GENERATE_BIOMES = null;
+	public static ElectronicsoilFeature FEATURE = null;
+	public static Holder<ConfiguredFeature<LakeFeature.Configuration, ?>> CONFIGURED_FEATURE = null;
+	public static Holder<PlacedFeature> PLACED_FEATURE = null;
 
-	public ElectronicsoilFeature() {
-		super(BlockStateConfiguration.CODEC);
+	public static Feature<?> feature() {
+		FEATURE = new ElectronicsoilFeature();
+		CONFIGURED_FEATURE = FeatureUtils.register("elec_tronics:electronicsoil", FEATURE, new LakeFeature.Configuration(
+				BlockStateProvider.simple(ElecTronicsModBlocks.ELECTRONICSOIL.get()), BlockStateProvider.simple(Blocks.AIR)));
+		PLACED_FEATURE = PlacementUtils.register("elec_tronics:electronicsoil", CONFIGURED_FEATURE,
+				List.of(RarityFilter.onAverageOnceEvery(9), InSquarePlacement.spread(), PlacementUtils.RANGE_BOTTOM_TO_MAX_TERRAIN_HEIGHT,
+						EnvironmentScanPlacement.scanningFor(Direction.DOWN, BlockPredicate.not(BlockPredicate.ONLY_IN_AIR_PREDICATE), 32)));
+		return FEATURE;
 	}
 
-	public boolean place(FeaturePlaceContext<BlockStateConfiguration> context) {
+	public static Holder<PlacedFeature> placedFeature() {
+		return PLACED_FEATURE;
+	}
+
+	public static final Set<ResourceLocation> GENERATE_BIOMES = null;
+	private final Set<ResourceKey<Level>> generate_dimensions = Set.of(Level.OVERWORLD);
+
+	public ElectronicsoilFeature() {
+		super(LakeFeature.Configuration.CODEC);
+	}
+
+	@Override
+	public boolean place(FeaturePlaceContext<LakeFeature.Configuration> context) {
 		WorldGenLevel world = context.level();
-		ResourceKey<Level> dimensionType = world.getLevel().dimension();
-		boolean dimensionCriteria = false;
-		if (dimensionType == Level.OVERWORLD)
-			dimensionCriteria = true;
-		if (!dimensionCriteria)
+		if (!generate_dimensions.contains(world.getLevel().dimension()))
 			return false;
 		int x = context.origin().getX();
 		int y = context.origin().getY();

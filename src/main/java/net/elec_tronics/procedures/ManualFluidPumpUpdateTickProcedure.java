@@ -1,6 +1,16 @@
 package net.elec_tronics.procedures;
 
-import net.minecraftforge.eventbus.api.Event;
+import net.minecraft.world.level.block.state.properties.Property;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.Level;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.core.BlockPos;
+
+import net.elec_tronics.init.ElecTronicsModBlocks;
+
+import java.util.Map;
 
 public class ManualFluidPumpUpdateTickProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
@@ -14,7 +24,7 @@ public class ManualFluidPumpUpdateTickProcedure {
 		}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "blockstate") == 1) {
 			{
 				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-				BlockState _bs = ElecTronicsModBlocks.MANUAL_FLUID_PUMP_3.defaultBlockState();
+				BlockState _bs = ElecTronicsModBlocks.MANUAL_FLUID_PUMP_3.get().defaultBlockState();
 				BlockState _bso = world.getBlockState(_bp);
 				for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 					Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
@@ -27,7 +37,7 @@ public class ManualFluidPumpUpdateTickProcedure {
 				BlockEntity _be = world.getBlockEntity(_bp);
 				CompoundTag _bnbt = null;
 				if (_be != null) {
-					_bnbt = _be.save(new CompoundTag());
+					_bnbt = _be.saveWithFullMetadata();
 					_be.setRemoved();
 				}
 				world.setBlock(_bp, _bs, 3);
@@ -60,7 +70,7 @@ public class ManualFluidPumpUpdateTickProcedure {
 		}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "blockstate") == 2) {
 			{
 				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-				BlockState _bs = ElecTronicsModBlocks.MANUAL_FLUID_PUMP_4.defaultBlockState();
+				BlockState _bs = ElecTronicsModBlocks.MANUAL_FLUID_PUMP_4.get().defaultBlockState();
 				BlockState _bso = world.getBlockState(_bp);
 				for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 					Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
@@ -73,7 +83,7 @@ public class ManualFluidPumpUpdateTickProcedure {
 				BlockEntity _be = world.getBlockEntity(_bp);
 				CompoundTag _bnbt = null;
 				if (_be != null) {
-					_bnbt = _be.save(new CompoundTag());
+					_bnbt = _be.saveWithFullMetadata();
 					_be.setRemoved();
 				}
 				world.setBlock(_bp, _bs, 3);
@@ -106,7 +116,7 @@ public class ManualFluidPumpUpdateTickProcedure {
 		}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "blockstate") == 3) {
 			{
 				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-				BlockState _bs = ElecTronicsModBlocks.MANUAL_FLUID_PUMP_5.defaultBlockState();
+				BlockState _bs = ElecTronicsModBlocks.MANUAL_FLUID_PUMP_5.get().defaultBlockState();
 				BlockState _bso = world.getBlockState(_bp);
 				for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 					Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
@@ -119,7 +129,7 @@ public class ManualFluidPumpUpdateTickProcedure {
 				BlockEntity _be = world.getBlockEntity(_bp);
 				CompoundTag _bnbt = null;
 				if (_be != null) {
-					_bnbt = _be.save(new CompoundTag());
+					_bnbt = _be.saveWithFullMetadata();
 					_be.setRemoved();
 				}
 				world.setBlock(_bp, _bs, 3);
@@ -152,7 +162,7 @@ public class ManualFluidPumpUpdateTickProcedure {
 		}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "blockstate") == 4) {
 			{
 				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-				BlockState _bs = ElecTronicsModBlocks.MANUAL_FLUID_PUMP.defaultBlockState();
+				BlockState _bs = ElecTronicsModBlocks.MANUAL_FLUID_PUMP.get().defaultBlockState();
 				BlockState _bso = world.getBlockState(_bp);
 				for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 					Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
@@ -165,7 +175,7 @@ public class ManualFluidPumpUpdateTickProcedure {
 				BlockEntity _be = world.getBlockEntity(_bp);
 				CompoundTag _bnbt = null;
 				if (_be != null) {
-					_bnbt = _be.save(new CompoundTag());
+					_bnbt = _be.saveWithFullMetadata();
 					_be.setRemoved();
 				}
 				world.setBlock(_bp, _bs, 3);

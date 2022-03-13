@@ -28,7 +28,6 @@ import java.util.Collections;
 public class UraniumoreBlock extends Block {
 	public UraniumoreBlock() {
 		super(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.STONE).strength(5.5f, 10f).requiresCorrectToolForDrops());
-		setRegistryName("uraniumore");
 	}
 
 	@Override
@@ -48,7 +47,7 @@ public class UraniumoreBlock extends Block {
 		List<ItemStack> dropsOriginal = super.getDrops(state, builder);
 		if (!dropsOriginal.isEmpty())
 			return dropsOriginal;
-		return Collections.singletonList(new ItemStack(ElecTronicsModItems.URANIUM_DUST, (int) (3)));
+		return Collections.singletonList(new ItemStack(ElecTronicsModItems.URANIUM_DUST.get(), (int) (3)));
 	}
 
 	@OnlyIn(Dist.CLIENT)

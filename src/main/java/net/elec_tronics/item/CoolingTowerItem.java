@@ -10,7 +10,6 @@ import net.elec_tronics.init.ElecTronicsModTabs;
 public class CoolingTowerItem extends Item {
 	public CoolingTowerItem() {
 		super(new Item.Properties().tab(ElecTronicsModTabs.TAB_ELEC_TRONICS_MENU).stacksTo(64).rarity(Rarity.COMMON));
-		setRegistryName("cooling_tower");
 	}
 
 	@Override

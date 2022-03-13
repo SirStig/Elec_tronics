@@ -1,6 +1,9 @@
 
 package net.elec_tronics.item;
 
+import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.api.distmarker.Dist;
+
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
@@ -10,7 +13,6 @@ import net.elec_tronics.init.ElecTronicsModTabs;
 public class UraniumDustItem extends Item {
 	public UraniumDustItem() {
 		super(new Item.Properties().tab(ElecTronicsModTabs.TAB_ELEC_TRONICS_MENU).stacksTo(64).fireResistant().rarity(Rarity.EPIC));
-		setRegistryName("uranium_dust");
 	}
 
 	@Override
@@ -19,6 +21,7 @@ public class UraniumDustItem extends Item {
 	}
 
 	@Override
+	@OnlyIn(Dist.CLIENT)
 	public boolean isFoil(ItemStack itemstack) {
 		return true;
 	}

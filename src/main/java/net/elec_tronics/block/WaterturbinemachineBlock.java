@@ -36,7 +36,6 @@ public class WaterturbinemachineBlock extends Block {
 	public WaterturbinemachineBlock() {
 		super(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.METAL).strength(4f, 10f).requiresCorrectToolForDrops());
 		this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH));
-		setRegistryName("waterturbinemachine");
 	}
 
 	@Override

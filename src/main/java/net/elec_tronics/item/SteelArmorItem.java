@@ -1,10 +1,22 @@
 
 package net.elec_tronics.item;
 
+import net.minecraftforge.registries.ForgeRegistries;
+
+import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ArmorMaterial;
+import net.minecraft.world.item.ArmorItem;
+import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.sounds.SoundEvent;
+import net.minecraft.resources.ResourceLocation;
+
+import net.elec_tronics.init.ElecTronicsModTabs;
+import net.elec_tronics.init.ElecTronicsModItems;
 
 public abstract class SteelArmorItem extends ArmorItem {
-
 	public SteelArmorItem(EquipmentSlot slot, Item.Properties properties) {
 		super(new ArmorMaterial() {
 			@Override
@@ -29,7 +41,7 @@ public abstract class SteelArmorItem extends ArmorItem {
 
 			@Override
 			public Ingredient getRepairIngredient() {
-				return Ingredient.of(new ItemStack(ElecTronicsModItems.STEELINGOT));
+				return Ingredient.of(new ItemStack(ElecTronicsModItems.STEELINGOT.get()));
 			}
 
 			@Override
@@ -50,63 +62,46 @@ public abstract class SteelArmorItem extends ArmorItem {
 	}
 
 	public static class Helmet extends SteelArmorItem {
-
 		public Helmet() {
 			super(EquipmentSlot.HEAD, new Item.Properties().tab(ElecTronicsModTabs.TAB_ELEC_TRONICS_MENU));
-
-			setRegistryName("steel_armor_helmet");
 		}
 
 		@Override
 		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
 			return "elec_tronics:textures/models/armor/steel_layer_1.png";
 		}
-
 	}
 
 	public static class Chestplate extends SteelArmorItem {
-
 		public Chestplate() {
 			super(EquipmentSlot.CHEST, new Item.Properties().tab(ElecTronicsModTabs.TAB_ELEC_TRONICS_MENU));
-
-			setRegistryName("steel_armor_chestplate");
 		}
 
 		@Override
 		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
 			return "elec_tronics:textures/models/armor/steel_layer_1.png";
 		}
-
 	}
 
 	public static class Leggings extends SteelArmorItem {
-
 		public Leggings() {
 			super(EquipmentSlot.LEGS, new Item.Properties().tab(ElecTronicsModTabs.TAB_ELEC_TRONICS_MENU));
-
-			setRegistryName("steel_armor_leggings");
 		}
 
 		@Override
 		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
 			return "elec_tronics:textures/models/armor/steel_layer_2.png";
 		}
-
 	}
 
 	public static class Boots extends SteelArmorItem {
-
 		public Boots() {
 			super(EquipmentSlot.FEET, new Item.Properties().tab(ElecTronicsModTabs.TAB_ELEC_TRONICS_MENU));
-
-			setRegistryName("steel_armor_boots");
 		}
 
 		@Override
 		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
 			return "elec_tronics:textures/models/armor/steel_layer_1.png";
 		}
-
 	}
-
 }

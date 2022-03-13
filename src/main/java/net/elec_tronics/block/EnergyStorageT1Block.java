@@ -31,7 +31,6 @@ public class EnergyStorageT1Block extends Block
 			EntityBlock {
 	public EnergyStorageT1Block() {
 		super(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.METAL).strength(4f, 10f));
-		setRegistryName("energy_storage_t_1");
 	}
 
 	@Override
@@ -50,7 +49,7 @@ public class EnergyStorageT1Block extends Block
 	@Override
 	public void onPlace(BlockState blockstate, Level world, BlockPos pos, BlockState oldState, boolean moving) {
 		super.onPlace(blockstate, world, pos, oldState, moving);
-		world.getBlockTicks().scheduleTick(pos, this, 1);
+		world.scheduleTick(pos, this, 1);
 	}
 
 	@Override
@@ -61,7 +60,7 @@ public class EnergyStorageT1Block extends Block
 		int z = pos.getZ();
 
 		T1WireUpdateTickProcedure.execute(world, x, y, z);
-		world.getBlockTicks().scheduleTick(pos, this, 1);
+		world.scheduleTick(pos, this, 1);
 	}
 
 	@Override

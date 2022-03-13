@@ -1,14 +1,18 @@
 package net.elec_tronics.procedures;
 
-import net.minecraftforge.eventbus.api.Event;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.Level;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.core.BlockPos;
 
 public class IronWrenchRightClickedOnBlockProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
 		double state = 0;
-		if (BlockTags.getAllTags().getTagOrEmpty(new ResourceLocation("forge:wires"))
-				.contains((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock()) == true
-				|| BlockTags.getAllTags().getTagOrEmpty(new ResourceLocation("forge:pipes"))
-						.contains((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock()) == true) {
+		if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).is(BlockTags.create(new ResourceLocation("forge:wires"))) == true
+				|| (world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).is(BlockTags.create(new ResourceLocation("forge:pipes"))) == true) {
 			if (new Object() {
 				public double getValue(LevelAccessor world, BlockPos pos, String tag) {
 					BlockEntity blockEntity = world.getBlockEntity(pos);

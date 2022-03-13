@@ -39,7 +39,7 @@ public class CrushermachineBlockEntity extends RandomizableContainerBlockEntity 
 	private final LazyOptional<? extends IItemHandler>[] handlers = SidedInvWrapper.create(this, Direction.values());
 
 	public CrushermachineBlockEntity(BlockPos position, BlockState state) {
-		super(ElecTronicsModBlockEntities.CRUSHERMACHINE, position, state);
+		super(ElecTronicsModBlockEntities.CRUSHERMACHINE.get(), position, state);
 	}
 
 	@Override
@@ -53,23 +53,22 @@ public class CrushermachineBlockEntity extends RandomizableContainerBlockEntity 
 	}
 
 	@Override
-	public CompoundTag save(CompoundTag compound) {
-		super.save(compound);
+	public void saveAdditional(CompoundTag compound) {
+		super.saveAdditional(compound);
 		if (!this.trySaveLootTable(compound)) {
 			ContainerHelper.saveAllItems(compound, this.stacks);
 		}
 		compound.put("energyStorage", energyStorage.serializeNBT());
-		return compound;
 	}
 
 	@Override
 	public ClientboundBlockEntityDataPacket getUpdatePacket() {
-		return new ClientboundBlockEntityDataPacket(this.worldPosition, 0, this.getUpdateTag());
+		return ClientboundBlockEntityDataPacket.create(this);
 	}
 
 	@Override
 	public CompoundTag getUpdateTag() {
-		return this.save(new CompoundTag());
+		return this.saveWithFullMetadata();
 	}
 
 	@Override

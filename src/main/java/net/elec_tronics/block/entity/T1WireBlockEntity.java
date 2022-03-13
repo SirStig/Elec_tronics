@@ -36,7 +36,7 @@ public class T1WireBlockEntity extends RandomizableContainerBlockEntity implemen
 	private final LazyOptional<? extends IItemHandler>[] handlers = SidedInvWrapper.create(this, Direction.values());
 
 	public T1WireBlockEntity(BlockPos position, BlockState state) {
-		super(ElecTronicsModBlockEntities.T_1_WIRE, position, state);
+		super(ElecTronicsModBlockEntities.T_1_WIRE.get(), position, state);
 	}
 
 	@Override
@@ -50,23 +50,22 @@ public class T1WireBlockEntity extends RandomizableContainerBlockEntity implemen
 	}
 
 	@Override
-	public CompoundTag save(CompoundTag compound) {
-		super.save(compound);
+	public void saveAdditional(CompoundTag compound) {
+		super.saveAdditional(compound);
 		if (!this.trySaveLootTable(compound)) {
 			ContainerHelper.saveAllItems(compound, this.stacks);
 		}
 		compound.put("energyStorage", energyStorage.serializeNBT());
-		return compound;
 	}
 
 	@Override
 	public ClientboundBlockEntityDataPacket getUpdatePacket() {
-		return new ClientboundBlockEntityDataPacket(this.worldPosition, 0, this.getUpdateTag());
+		return ClientboundBlockEntityDataPacket.create(this);
 	}
 
 	@Override
 	public CompoundTag getUpdateTag() {
-		return this.save(new CompoundTag());
+		return this.saveWithFullMetadata();
 	}
 
 	@Override

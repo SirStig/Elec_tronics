@@ -1,13 +1,18 @@
 
 package net.elec_tronics.item;
 
-import net.minecraft.world.entity.ai.attributes.Attributes;
+import net.minecraft.world.item.context.UseOnContext;
+import net.minecraft.world.item.Rarity;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.InteractionResult;
+
+import net.elec_tronics.procedures.IronWrenchRightClickedOnBlockProcedure;
+import net.elec_tronics.init.ElecTronicsModTabs;
 
 public class IronWrenchItem extends Item {
-
 	public IronWrenchItem() {
-		super(new Item.Properties().tab(ElecTronicsModTabs.TAB_ELEC_TRONICS_MENU).stacksTo(1).rarity(Rarity.COMMON));
-		setRegistryName("iron_wrench");
+		super(new Item.Properties().tab(ElecTronicsModTabs.TAB_ELEC_TRONICS_MENU).durability(100).rarity(Rarity.COMMON));
 	}
 
 	@Override
@@ -22,5 +27,4 @@ public class IronWrenchItem extends Item {
 				context.getClickedPos().getZ());
 		return retval;
 	}
-
 }

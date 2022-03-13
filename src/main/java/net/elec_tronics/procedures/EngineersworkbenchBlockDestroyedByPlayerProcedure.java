@@ -31,13 +31,13 @@ public class EngineersworkbenchBlockDestroyedByPlayerProcedure {
 						}
 					}.getValue(world, new BlockPos((int) (x + sx), (int) (y + sy), (int) (z + sz)), "generatorID")
 							&& ((world.getBlockState(new BlockPos((int) (x + sx), (int) (y + sy), (int) (z + sz))))
-									.getBlock() == ElecTronicsModBlocks.ENGINEERSWORKBENCH
+									.getBlock() == ElecTronicsModBlocks.ENGINEERSWORKBENCH.get()
 									|| (world.getBlockState(new BlockPos((int) (x + sx), (int) (y + sy), (int) (z + sz))))
-											.getBlock() == ElecTronicsModBlocks.ENGINEERS_WORK_BENCH_TOP_SIDE
+											.getBlock() == ElecTronicsModBlocks.ENGINEERS_WORK_BENCH_TOP_SIDE.get()
 									|| (world.getBlockState(new BlockPos((int) (x + sx), (int) (y + sy), (int) (z + sz))))
-											.getBlock() == ElecTronicsModBlocks.ENGINEERS_WORK_BENCH_SIDE
+											.getBlock() == ElecTronicsModBlocks.ENGINEERS_WORK_BENCH_SIDE.get()
 									|| (world.getBlockState(new BlockPos((int) (x + sx), (int) (y + sy), (int) (z + sz))))
-											.getBlock() == ElecTronicsModBlocks.ENGINEERS_WORK_BENCH_TOP)) {
+											.getBlock() == ElecTronicsModBlocks.ENGINEERS_WORK_BENCH_TOP.get())) {
 						world.setBlock(new BlockPos((int) (x + sx), (int) (y + sy), (int) (z + sz)), Blocks.AIR.defaultBlockState(), 3);
 					}
 					sz = sz + 1;

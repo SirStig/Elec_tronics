@@ -3,6 +3,7 @@ package net.elec_tronics.block;
 
 import net.minecraft.world.level.material.MaterialColor;
 import net.minecraft.world.level.material.Material;
+import net.minecraft.world.level.material.FlowingFluid;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.LiquidBlock;
@@ -14,10 +15,10 @@ import net.elec_tronics.init.ElecTronicsModFluids;
 
 public class ElectronicsoilBlock extends LiquidBlock {
 	public ElectronicsoilBlock() {
-		super(ElecTronicsModFluids.ELECTRONICSOIL, BlockBehaviour.Properties.of(Material.WATER, MaterialColor.COLOR_BLACK).strength(5f)
+		super(() -> (FlowingFluid) ElecTronicsModFluids.ELECTRONICSOIL.get(),
+				BlockBehaviour.Properties.of(Material.WATER, MaterialColor.COLOR_BLACK).strength(5f)
 
 		);
-		setRegistryName("electronicsoil");
 	}
 
 	@Override

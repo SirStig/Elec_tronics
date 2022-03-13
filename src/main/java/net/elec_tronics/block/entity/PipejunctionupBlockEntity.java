@@ -38,7 +38,7 @@ public class PipejunctionupBlockEntity extends RandomizableContainerBlockEntity 
 	private final LazyOptional<? extends IItemHandler>[] handlers = SidedInvWrapper.create(this, Direction.values());
 
 	public PipejunctionupBlockEntity(BlockPos position, BlockState state) {
-		super(ElecTronicsModBlockEntities.PIPEJUNCTIONUP, position, state);
+		super(ElecTronicsModBlockEntities.PIPEJUNCTIONUP.get(), position, state);
 	}
 
 	@Override
@@ -54,24 +54,23 @@ public class PipejunctionupBlockEntity extends RandomizableContainerBlockEntity 
 	}
 
 	@Override
-	public CompoundTag save(CompoundTag compound) {
-		super.save(compound);
+	public void saveAdditional(CompoundTag compound) {
+		super.saveAdditional(compound);
 		if (!this.trySaveLootTable(compound)) {
 			ContainerHelper.saveAllItems(compound, this.stacks);
 		}
 		compound.put("energyStorage", energyStorage.serializeNBT());
 		compound.put("fluidTank", fluidTank.writeToNBT(new CompoundTag()));
-		return compound;
 	}
 
 	@Override
 	public ClientboundBlockEntityDataPacket getUpdatePacket() {
-		return new ClientboundBlockEntityDataPacket(this.worldPosition, 0, this.getUpdateTag());
+		return ClientboundBlockEntityDataPacket.create(this);
 	}
 
 	@Override
 	public CompoundTag getUpdateTag() {
-		return this.save(new CompoundTag());
+		return this.saveWithFullMetadata();
 	}
 
 	@Override

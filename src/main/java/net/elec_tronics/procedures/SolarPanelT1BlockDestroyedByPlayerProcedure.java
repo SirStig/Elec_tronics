@@ -34,13 +34,13 @@ public class SolarPanelT1BlockDestroyedByPlayerProcedure {
 						}
 					}.getValue(world, new BlockPos((int) (x + sx), (int) (y + sy), (int) (z + sz)), "generatorID")
 							&& ((world.getBlockState(new BlockPos((int) (x + sx), (int) (y + sy), (int) (z + sz))))
-									.getBlock() == ElecTronicsModBlocks.SOLAR_PANEL_T_1
+									.getBlock() == ElecTronicsModBlocks.SOLAR_PANEL_T_1.get()
 									|| (world.getBlockState(new BlockPos((int) (x + sx), (int) (y + sy), (int) (z + sz))))
-											.getBlock() == ElecTronicsModBlocks.SOLAR_PANELR
+											.getBlock() == ElecTronicsModBlocks.SOLAR_PANELR.get()
 									|| (world.getBlockState(new BlockPos((int) (x + sx), (int) (y + sy), (int) (z + sz))))
-											.getBlock() == ElecTronicsModBlocks.SOLARPANELTOP
+											.getBlock() == ElecTronicsModBlocks.SOLARPANELTOP.get()
 									|| (world.getBlockState(new BlockPos((int) (x + sx), (int) (y + sy), (int) (z + sz))))
-											.getBlock() == ElecTronicsModBlocks.SOLARPANELTOPR)) {
+											.getBlock() == ElecTronicsModBlocks.SOLARPANELTOPR.get())) {
 						world.setBlock(new BlockPos((int) (x + sx), (int) (y + sy), (int) (z + sz)), Blocks.AIR.defaultBlockState(), 3);
 					}
 					sz = sz + 1;

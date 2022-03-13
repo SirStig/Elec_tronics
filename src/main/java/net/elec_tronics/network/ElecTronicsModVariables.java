@@ -11,7 +11,8 @@ import java.util.ArrayList;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class ElecTronicsModVariables {
-	public static List<Block> list_pipes = new ArrayList<Block>();
+	public static List<Block> blockStates_pipes = new ArrayList<Block>();
+	public static List<Block> blockStates_wires = new ArrayList<Block>();
 
 	@SubscribeEvent
 	public static void init(FMLCommonSetupEvent event) {

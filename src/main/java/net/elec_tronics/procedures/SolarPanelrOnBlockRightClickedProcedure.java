@@ -26,7 +26,7 @@ public class SolarPanelrOnBlockRightClickedProcedure {
 				sz = -2;
 				for (int index2 = 0; index2 < (int) (4); index2++) {
 					if ((world.getBlockState(new BlockPos((int) (x + sx), (int) (y + sy), (int) (z + sz))))
-							.getBlock() == ElecTronicsModBlocks.SOLAR_PANEL_T_1) {
+							.getBlock() == ElecTronicsModBlocks.SOLAR_PANEL_T_1.get()) {
 						if (entity instanceof Player _player) {
 							BlockPos _bp = new BlockPos((int) (x + sx), (int) (y + sy), (int) (z + sz));
 							_player.level.getBlockState(_bp).use(_player.level, _player, InteractionHand.MAIN_HAND,

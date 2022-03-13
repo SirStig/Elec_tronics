@@ -57,7 +57,6 @@ public class SolarpaneltopBlock extends Block
 		super(BlockBehaviour.Properties.of(Material.GLASS).sound(SoundType.GLASS).strength(4f, 10f).requiresCorrectToolForDrops().noOcclusion()
 				.isRedstoneConductor((bs, br, bp) -> false));
 		this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH));
-		setRegistryName("solarpaneltop");
 	}
 
 	@Override
@@ -101,13 +100,13 @@ public class SolarpaneltopBlock extends Block
 		List<ItemStack> dropsOriginal = super.getDrops(state, builder);
 		if (!dropsOriginal.isEmpty())
 			return dropsOriginal;
-		return Collections.singletonList(new ItemStack(ElecTronicsModBlocks.SOLAR_PANEL_T_1));
+		return Collections.singletonList(new ItemStack(ElecTronicsModBlocks.SOLAR_PANEL_T_1.get()));
 	}
 
 	@Override
 	public void onPlace(BlockState blockstate, Level world, BlockPos pos, BlockState oldState, boolean moving) {
 		super.onPlace(blockstate, world, pos, oldState, moving);
-		world.getBlockTicks().scheduleTick(pos, this, 1);
+		world.scheduleTick(pos, this, 1);
 	}
 
 	@Override
@@ -118,12 +117,12 @@ public class SolarpaneltopBlock extends Block
 		int z = pos.getZ();
 
 		SolarPanelNoneUpdateTickProcedure.execute(world, x, y, z);
-		world.getBlockTicks().scheduleTick(pos, this, 1);
+		world.scheduleTick(pos, this, 1);
 	}
 
 	@Override
-	public boolean removedByPlayer(BlockState blockstate, Level world, BlockPos pos, Player entity, boolean willHarvest, FluidState fluid) {
-		boolean retval = super.removedByPlayer(blockstate, world, pos, entity, willHarvest, fluid);
+	public boolean onDestroyedByPlayer(BlockState blockstate, Level world, BlockPos pos, Player entity, boolean willHarvest, FluidState fluid) {
+		boolean retval = super.onDestroyedByPlayer(blockstate, world, pos, entity, willHarvest, fluid);
 		SolarPanelT1BlockDestroyedByPlayerProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
 		return retval;
 	}
@@ -195,6 +194,6 @@ public class SolarpaneltopBlock extends Block
 
 	@OnlyIn(Dist.CLIENT)
 	public static void registerRenderLayer() {
-		ItemBlockRenderTypes.setRenderLayer(ElecTronicsModBlocks.SOLARPANELTOP, renderType -> renderType == RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(ElecTronicsModBlocks.SOLARPANELTOP.get(), renderType -> renderType == RenderType.cutout());
 	}
 }

@@ -391,7 +391,7 @@ public class T1WireUpdateTickProcedure {
 		}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "blockStateChanged")) == true) {
 			{
 				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-				BlockState _bs = ElecTronicsModVariables.list_pipes.get((int) (new Object() {
+				BlockState _bs = ElecTronicsModVariables.blockStates_wires.get((int) (new Object() {
 					public double getValue(LevelAccessor world, BlockPos pos, String tag) {
 						BlockEntity blockEntity = world.getBlockEntity(pos);
 						if (blockEntity != null)
@@ -411,7 +411,7 @@ public class T1WireUpdateTickProcedure {
 				BlockEntity _be = world.getBlockEntity(_bp);
 				CompoundTag _bnbt = null;
 				if (_be != null) {
-					_bnbt = _be.save(new CompoundTag());
+					_bnbt = _be.saveWithFullMetadata();
 					_be.setRemoved();
 				}
 				world.setBlock(_bp, _bs, 3);

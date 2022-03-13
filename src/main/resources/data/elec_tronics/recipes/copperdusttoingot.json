@@ -6,7 +6,5 @@
   "ingredient": {
     "item": "elec_tronics:copper_dust"
   },
-  "result": {
-    "item": "minecraft:copper_ingot"
-  }
+  "result": "minecraft:copper_ingot"
 }

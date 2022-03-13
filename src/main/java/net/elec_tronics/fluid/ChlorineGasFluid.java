@@ -1,10 +1,21 @@
 
 package net.elec_tronics.fluid;
 
-public abstract class ChlorineGasFluid extends ForgeFlowingFluid {
+import net.minecraftforge.fluids.ForgeFlowingFluid;
+import net.minecraftforge.fluids.FluidAttributes;
 
-	public static final ForgeFlowingFluid.Properties PROPERTIES = new ForgeFlowingFluid.Properties(() -> ElecTronicsModFluids.CHLORINE_GAS,
-			() -> ElecTronicsModFluids.FLOWING_CHLORINE_GAS,
+import net.minecraft.world.level.material.FluidState;
+import net.minecraft.world.level.material.Fluid;
+import net.minecraft.world.level.block.state.StateDefinition;
+import net.minecraft.world.level.block.LiquidBlock;
+import net.minecraft.resources.ResourceLocation;
+
+import net.elec_tronics.init.ElecTronicsModFluids;
+import net.elec_tronics.init.ElecTronicsModBlocks;
+
+public abstract class ChlorineGasFluid extends ForgeFlowingFluid {
+	public static final ForgeFlowingFluid.Properties PROPERTIES = new ForgeFlowingFluid.Properties(ElecTronicsModFluids.CHLORINE_GAS,
+			ElecTronicsModFluids.FLOWING_CHLORINE_GAS,
 			FluidAttributes
 					.builder(new ResourceLocation("elec_tronics:blocks/chlorinegascl2"), new ResourceLocation("elec_tronics:blocks/chlorinegascl2"))
 
@@ -14,7 +25,7 @@ public abstract class ChlorineGasFluid extends ForgeFlowingFluid {
 
 			.tickRate(2)
 
-			.block(() -> (LiquidBlock) ElecTronicsModBlocks.CHLORINE_GAS);
+			.block(() -> (LiquidBlock) ElecTronicsModBlocks.CHLORINE_GAS.get());
 
 	private ChlorineGasFluid() {
 		super(PROPERTIES);
@@ -23,7 +34,6 @@ public abstract class ChlorineGasFluid extends ForgeFlowingFluid {
 	public static class Source extends ChlorineGasFluid {
 		public Source() {
 			super();
-			setRegistryName("chlorine_gas");
 		}
 
 		public int getAmount(FluidState state) {
@@ -38,7 +48,6 @@ public abstract class ChlorineGasFluid extends ForgeFlowingFluid {
 	public static class Flowing extends ChlorineGasFluid {
 		public Flowing() {
 			super();
-			setRegistryName("flowing_chlorine_gas");
 		}
 
 		protected void createFluidStateDefinition(StateDefinition.Builder<Fluid, FluidState> builder) {
@@ -54,5 +63,4 @@ public abstract class ChlorineGasFluid extends ForgeFlowingFluid {
 			return false;
 		}
 	}
-
 }

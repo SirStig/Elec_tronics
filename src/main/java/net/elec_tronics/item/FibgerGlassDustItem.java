@@ -10,7 +10,6 @@ import net.elec_tronics.init.ElecTronicsModTabs;
 public class FibgerGlassDustItem extends Item {
 	public FibgerGlassDustItem() {
 		super(new Item.Properties().tab(ElecTronicsModTabs.TAB_ELEC_TRONICS_MENU).stacksTo(64).rarity(Rarity.COMMON));
-		setRegistryName("fibger_glass_dust");
 	}
 
 	@Override

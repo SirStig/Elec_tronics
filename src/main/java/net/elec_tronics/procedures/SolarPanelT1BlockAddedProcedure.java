@@ -1,6 +1,6 @@
 package net.elec_tronics.procedures;
 
-import net.minecraftforge.fmllegacy.server.ServerLifecycleHooks;
+import net.minecraftforge.server.ServerLifecycleHooks;
 
 import net.minecraft.world.level.block.state.properties.Property;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
@@ -44,7 +44,7 @@ property = _bs.getBlock().getStateDefinition().getProperty("axis");
 if (property != null && _bs.getValue(property) instanceof Direction.Axis _axis)
 return Direction.fromAxisAndDirection(_axis, Direction.AxisDirection.POSITIVE);
 return Direction.NORTH;
-}}.getDirection(new BlockPos((int)x,(int)y,(int)z))) == Direction.NORTH) {if (world.getBlockState(new BlockPos((int)(x-1),(int)y,(int)z)).canOcclude()==false) {if (world.getBlockState(new BlockPos((int)x,(int)(y+1),(int)z)).canOcclude()==false) {if (world.getBlockState(new BlockPos((int)(x-1),(int)(y+1),(int)z)).canOcclude()==false) {world.setBlock(new BlockPos((int)(x-1),(int)y,(int)z), ElecTronicsModBlocks.SOLAR_PANELR.defaultBlockState(),3);if(!world.isClientSide()) {
+}}.getDirection(new BlockPos((int)x,(int)y,(int)z))) == Direction.NORTH) {if (world.getBlockState(new BlockPos((int)(x-1),(int)y,(int)z)).canOcclude()==false) {if (world.getBlockState(new BlockPos((int)x,(int)(y+1),(int)z)).canOcclude()==false) {if (world.getBlockState(new BlockPos((int)(x-1),(int)(y+1),(int)z)).canOcclude()==false) {world.setBlock(new BlockPos((int)(x-1),(int)y,(int)z), ElecTronicsModBlocks.SOLAR_PANELR.get().defaultBlockState(),3);if(!world.isClientSide()) {
 BlockPos _bp = new BlockPos((int)(x-1),(int)y,(int)z);
 BlockEntity _blockEntity = world.getBlockEntity(_bp);
 BlockState _bs = world.getBlockState(_bp);
@@ -59,7 +59,7 @@ return -1;
 );
 if(world instanceof Level _level)
 _level.sendBlockUpdated(_bp, _bs, _bs, 3);
-}world.setBlock(new BlockPos((int)(x-1),(int)(y+1),(int)z), ElecTronicsModBlocks.SOLARPANELTOPR.defaultBlockState(),3);if(!world.isClientSide()) {
+}world.setBlock(new BlockPos((int)(x-1),(int)(y+1),(int)z), ElecTronicsModBlocks.SOLARPANELTOPR.get().defaultBlockState(),3);if(!world.isClientSide()) {
 BlockPos _bp = new BlockPos((int)(x-1),(int)(y+1),(int)z);
 BlockEntity _blockEntity = world.getBlockEntity(_bp);
 BlockState _bs = world.getBlockState(_bp);
@@ -74,7 +74,7 @@ return -1;
 );
 if(world instanceof Level _level)
 _level.sendBlockUpdated(_bp, _bs, _bs, 3);
-}world.setBlock(new BlockPos((int)x,(int)(y+1),(int)z), ElecTronicsModBlocks.SOLARPANELTOP.defaultBlockState(),3);if(!world.isClientSide()) {
+}world.setBlock(new BlockPos((int)x,(int)(y+1),(int)z), ElecTronicsModBlocks.SOLARPANELTOP.get().defaultBlockState(),3);if(!world.isClientSide()) {
 BlockPos _bp = new BlockPos((int)x,(int)(y+1),(int)z);
 BlockEntity _blockEntity = world.getBlockEntity(_bp);
 BlockState _bs = world.getBlockState(_bp);
@@ -111,7 +111,7 @@ property = _bs.getBlock().getStateDefinition().getProperty("axis");
 if (property != null && _bs.getValue(property) instanceof Direction.Axis _axis)
 return Direction.fromAxisAndDirection(_axis, Direction.AxisDirection.POSITIVE);
 return Direction.NORTH;
-}}.getDirection(new BlockPos((int)x,(int)y,(int)z))) == Direction.WEST) {if (world.getBlockState(new BlockPos((int)x,(int)y,(int)(z+1))).canOcclude()==false) {if (world.getBlockState(new BlockPos((int)x,(int)(y+1),(int)z)).canOcclude()==false) {if (world.getBlockState(new BlockPos((int)x,(int)(y+1),(int)(z+1))).canOcclude()==false) {world.setBlock(new BlockPos((int)x,(int)y,(int)(z+1)), ElecTronicsModBlocks.SOLAR_PANELR.defaultBlockState(),3);{
+}}.getDirection(new BlockPos((int)x,(int)y,(int)z))) == Direction.WEST) {if (world.getBlockState(new BlockPos((int)x,(int)y,(int)(z+1))).canOcclude()==false) {if (world.getBlockState(new BlockPos((int)x,(int)(y+1),(int)z)).canOcclude()==false) {if (world.getBlockState(new BlockPos((int)x,(int)(y+1),(int)(z+1))).canOcclude()==false) {world.setBlock(new BlockPos((int)x,(int)y,(int)(z+1)), ElecTronicsModBlocks.SOLAR_PANELR.get().defaultBlockState(),3);{
 Direction _dir = Direction.WEST;
 BlockPos _pos = new BlockPos((int)x,(int)y,(int)(z+1));
 BlockState _bs = world.getBlockState(_pos);
@@ -138,7 +138,7 @@ return -1;
 );
 if(world instanceof Level _level)
 _level.sendBlockUpdated(_bp, _bs, _bs, 3);
-}world.setBlock(new BlockPos((int)x,(int)(y+1),(int)(z+1)), ElecTronicsModBlocks.SOLARPANELTOPR.defaultBlockState(),3);{
+}world.setBlock(new BlockPos((int)x,(int)(y+1),(int)(z+1)), ElecTronicsModBlocks.SOLARPANELTOPR.get().defaultBlockState(),3);{
 Direction _dir = Direction.WEST;
 BlockPos _pos = new BlockPos((int)x,(int)(y+1),(int)(z+1));
 BlockState _bs = world.getBlockState(_pos);
@@ -165,7 +165,7 @@ return -1;
 );
 if(world instanceof Level _level)
 _level.sendBlockUpdated(_bp, _bs, _bs, 3);
-}world.setBlock(new BlockPos((int)x,(int)(y+1),(int)z), ElecTronicsModBlocks.SOLARPANELTOP.defaultBlockState(),3);{
+}world.setBlock(new BlockPos((int)x,(int)(y+1),(int)z), ElecTronicsModBlocks.SOLARPANELTOP.get().defaultBlockState(),3);{
 Direction _dir = Direction.WEST;
 BlockPos _pos = new BlockPos((int)x,(int)(y+1),(int)z);
 BlockState _bs = world.getBlockState(_pos);
@@ -214,7 +214,7 @@ property = _bs.getBlock().getStateDefinition().getProperty("axis");
 if (property != null && _bs.getValue(property) instanceof Direction.Axis _axis)
 return Direction.fromAxisAndDirection(_axis, Direction.AxisDirection.POSITIVE);
 return Direction.NORTH;
-}}.getDirection(new BlockPos((int)x,(int)y,(int)z))) == Direction.EAST) {if (world.getBlockState(new BlockPos((int)x,(int)y,(int)(z-1))).canOcclude()==false) {if (world.getBlockState(new BlockPos((int)x,(int)(y+1),(int)z)).canOcclude()==false) {if (world.getBlockState(new BlockPos((int)x,(int)(y+1),(int)(z-1))).canOcclude()==false) {world.setBlock(new BlockPos((int)x,(int)y,(int)(z-1)), ElecTronicsModBlocks.SOLAR_PANELR.defaultBlockState(),3);{
+}}.getDirection(new BlockPos((int)x,(int)y,(int)z))) == Direction.EAST) {if (world.getBlockState(new BlockPos((int)x,(int)y,(int)(z-1))).canOcclude()==false) {if (world.getBlockState(new BlockPos((int)x,(int)(y+1),(int)z)).canOcclude()==false) {if (world.getBlockState(new BlockPos((int)x,(int)(y+1),(int)(z-1))).canOcclude()==false) {world.setBlock(new BlockPos((int)x,(int)y,(int)(z-1)), ElecTronicsModBlocks.SOLAR_PANELR.get().defaultBlockState(),3);{
 Direction _dir = Direction.EAST;
 BlockPos _pos = new BlockPos((int)x,(int)y,(int)(z-1));
 BlockState _bs = world.getBlockState(_pos);
@@ -241,7 +241,7 @@ return -1;
 );
 if(world instanceof Level _level)
 _level.sendBlockUpdated(_bp, _bs, _bs, 3);
-}world.setBlock(new BlockPos((int)x,(int)(y+1),(int)(z-1)), ElecTronicsModBlocks.SOLARPANELTOPR.defaultBlockState(),3);{
+}world.setBlock(new BlockPos((int)x,(int)(y+1),(int)(z-1)), ElecTronicsModBlocks.SOLARPANELTOPR.get().defaultBlockState(),3);{
 Direction _dir = Direction.EAST;
 BlockPos _pos = new BlockPos((int)x,(int)(y+1),(int)(z-1));
 BlockState _bs = world.getBlockState(_pos);
@@ -268,7 +268,7 @@ return -1;
 );
 if(world instanceof Level _level)
 _level.sendBlockUpdated(_bp, _bs, _bs, 3);
-}world.setBlock(new BlockPos((int)x,(int)(y+1),(int)z), ElecTronicsModBlocks.SOLARPANELTOP.defaultBlockState(),3);{
+}world.setBlock(new BlockPos((int)x,(int)(y+1),(int)z), ElecTronicsModBlocks.SOLARPANELTOP.get().defaultBlockState(),3);{
 Direction _dir = Direction.EAST;
 BlockPos _pos = new BlockPos((int)x,(int)(y+1),(int)z);
 BlockState _bs = world.getBlockState(_pos);
@@ -317,7 +317,7 @@ property = _bs.getBlock().getStateDefinition().getProperty("axis");
 if (property != null && _bs.getValue(property) instanceof Direction.Axis _axis)
 return Direction.fromAxisAndDirection(_axis, Direction.AxisDirection.POSITIVE);
 return Direction.NORTH;
-}}.getDirection(new BlockPos((int)x,(int)y,(int)z))) == Direction.SOUTH) {if (world.getBlockState(new BlockPos((int)(x+1),(int)y,(int)z)).canOcclude()==false) {if (world.getBlockState(new BlockPos((int)x,(int)(y+1),(int)z)).canOcclude()==false) {if (world.getBlockState(new BlockPos((int)(x+1),(int)(y+1),(int)z)).canOcclude()==false) {world.setBlock(new BlockPos((int)(x+1),(int)y,(int)z), ElecTronicsModBlocks.SOLAR_PANELR.defaultBlockState(),3);{
+}}.getDirection(new BlockPos((int)x,(int)y,(int)z))) == Direction.SOUTH) {if (world.getBlockState(new BlockPos((int)(x+1),(int)y,(int)z)).canOcclude()==false) {if (world.getBlockState(new BlockPos((int)x,(int)(y+1),(int)z)).canOcclude()==false) {if (world.getBlockState(new BlockPos((int)(x+1),(int)(y+1),(int)z)).canOcclude()==false) {world.setBlock(new BlockPos((int)(x+1),(int)y,(int)z), ElecTronicsModBlocks.SOLAR_PANELR.get().defaultBlockState(),3);{
 Direction _dir = Direction.SOUTH;
 BlockPos _pos = new BlockPos((int)(x+1),(int)y,(int)z);
 BlockState _bs = world.getBlockState(_pos);
@@ -344,7 +344,7 @@ return -1;
 );
 if(world instanceof Level _level)
 _level.sendBlockUpdated(_bp, _bs, _bs, 3);
-}world.setBlock(new BlockPos((int)(x+1),(int)(y+1),(int)z), ElecTronicsModBlocks.SOLARPANELTOPR.defaultBlockState(),3);{
+}world.setBlock(new BlockPos((int)(x+1),(int)(y+1),(int)z), ElecTronicsModBlocks.SOLARPANELTOPR.get().defaultBlockState(),3);{
 Direction _dir = Direction.SOUTH;
 BlockPos _pos = new BlockPos((int)(x+1),(int)(y+1),(int)z);
 BlockState _bs = world.getBlockState(_pos);
@@ -371,7 +371,7 @@ return -1;
 );
 if(world instanceof Level _level)
 _level.sendBlockUpdated(_bp, _bs, _bs, 3);
-}world.setBlock(new BlockPos((int)x,(int)(y+1),(int)z), ElecTronicsModBlocks.SOLARPANELTOP.defaultBlockState(),3);{
+}world.setBlock(new BlockPos((int)x,(int)(y+1),(int)z), ElecTronicsModBlocks.SOLARPANELTOP.get().defaultBlockState(),3);{
 Direction _dir = Direction.SOUTH;
 BlockPos _pos = new BlockPos((int)x,(int)(y+1),(int)z);
 BlockState _bs = world.getBlockState(_pos);

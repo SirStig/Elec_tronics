@@ -37,47 +37,39 @@ public class ExtrusionMachineUpdateTickProcedure {
 				}
 			}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "recipe");
 			if ((new Object() {
-				public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
+				public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 					AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 					BlockEntity _ent = world.getBlockEntity(pos);
-					if (_ent != null) {
-						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-							_retval.set(capability.getStackInSlot(sltid).copy());
-						});
-					}
+					if (_ent != null)
+						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null)
+								.ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 					return _retval.get();
 				}
-			}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 0)).getItem() == ElecTronicsModItems.COPPER_SHEET && ((new Object() {
-				public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
+			}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 0)).getItem() == ElecTronicsModItems.COPPER_SHEET.get() && ((new Object() {
+				public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 					AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 					BlockEntity _ent = world.getBlockEntity(pos);
-					if (_ent != null) {
-						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-							_retval.set(capability.getStackInSlot(sltid).copy());
-						});
-					}
+					if (_ent != null)
+						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null)
+								.ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 					return _retval.get();
 				}
-			}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 1)).getItem() == ElecTronicsModItems.COPPERWIRE && new Object() {
-				public int getAmount(LevelAccessor world, BlockPos pos, int sltid) {
+			}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 1)).getItem() == ElecTronicsModItems.COPPERWIRE.get() && new Object() {
+				public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 					AtomicInteger _retval = new AtomicInteger(0);
 					BlockEntity _ent = world.getBlockEntity(pos);
-					if (_ent != null) {
-						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-							_retval.set(capability.getStackInSlot(sltid).getCount());
-						});
-					}
+					if (_ent != null)
+						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null)
+								.ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).getCount()));
 					return _retval.get();
 				}
 			}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), 1) <= 64 || new Object() {
-				public int getAmount(LevelAccessor world, BlockPos pos, int sltid) {
+				public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 					AtomicInteger _retval = new AtomicInteger(0);
 					BlockEntity _ent = world.getBlockEntity(pos);
-					if (_ent != null) {
-						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-							_retval.set(capability.getStackInSlot(sltid).getCount());
-						});
-					}
+					if (_ent != null)
+						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null)
+								.ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).getCount()));
 					return _retval.get();
 				}
 			}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), 1) == 0)) {
@@ -146,13 +138,13 @@ public class ExtrusionMachineUpdateTickProcedure {
 						{
 							BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) y, (int) z));
 							if (_ent != null) {
-								final int _sltid = 0;
+								final int _slotid = 0;
 								final int _amount = 1;
 								_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 									if (capability instanceof IItemHandlerModifiable) {
-										ItemStack _stk = capability.getStackInSlot(_sltid).copy();
+										ItemStack _stk = capability.getStackInSlot(_slotid).copy();
 										_stk.shrink(_amount);
-										((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _stk);
+										((IItemHandlerModifiable) capability).setStackInSlot(_slotid, _stk);
 									}
 								});
 							}
@@ -160,24 +152,21 @@ public class ExtrusionMachineUpdateTickProcedure {
 						{
 							BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) y, (int) z));
 							if (_ent != null) {
-								final int _sltid = 1;
-								final ItemStack _setstack = new ItemStack(ElecTronicsModItems.COPPERWIRE);
+								final int _slotid = 1;
+								final ItemStack _setstack = new ItemStack(ElecTronicsModItems.COPPERWIRE.get());
 								_setstack.setCount((int) (new Object() {
-									public int getAmount(LevelAccessor world, BlockPos pos, int sltid) {
+									public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 										AtomicInteger _retval = new AtomicInteger(0);
 										BlockEntity _ent = world.getBlockEntity(pos);
-										if (_ent != null) {
-											_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-												_retval.set(capability.getStackInSlot(sltid).getCount());
-											});
-										}
+										if (_ent != null)
+											_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null)
+													.ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).getCount()));
 										return _retval.get();
 									}
 								}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), 1) + 8));
 								_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-									if (capability instanceof IItemHandlerModifiable) {
-										((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
-									}
+									if (capability instanceof IItemHandlerModifiable)
+										((IItemHandlerModifiable) capability).setStackInSlot(_slotid, _setstack);
 								});
 							}
 						}

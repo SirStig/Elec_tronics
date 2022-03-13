@@ -10,7 +10,6 @@ import net.elec_tronics.init.ElecTronicsModTabs;
 public class TungstenIngotItem extends Item {
 	public TungstenIngotItem() {
 		super(new Item.Properties().tab(ElecTronicsModTabs.TAB_ELEC_TRONICS_MENU).stacksTo(64).fireResistant().rarity(Rarity.RARE));
-		setRegistryName("tungsten_ingot");
 	}
 
 	@Override

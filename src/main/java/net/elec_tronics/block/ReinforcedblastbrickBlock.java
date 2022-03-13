@@ -17,7 +17,6 @@ import java.util.Collections;
 public class ReinforcedblastbrickBlock extends Block {
 	public ReinforcedblastbrickBlock() {
 		super(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.STONE).strength(5f, 10f));
-		setRegistryName("reinforcedblastbrick");
 	}
 
 	@Override

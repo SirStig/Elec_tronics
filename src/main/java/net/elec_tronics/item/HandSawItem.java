@@ -42,17 +42,12 @@ public class HandSawItem extends AxeItem {
 				return Ingredient.of(new ItemStack(Items.IRON_INGOT));
 			}
 		}, 1, -3f, new Item.Properties().tab(ElecTronicsModTabs.TAB_ELEC_TRONICS_MENU));
-		setRegistryName("hand_saw");
 	}
 
 	@Override
 	public boolean mineBlock(ItemStack itemstack, Level world, BlockState blockstate, BlockPos pos, LivingEntity entity) {
 		boolean retval = super.mineBlock(itemstack, world, blockstate, pos, entity);
-		int x = pos.getX();
-		int y = pos.getY();
-		int z = pos.getZ();
-
-		HandsawcuttreeProcedure.execute(world, x, y, z, itemstack);
+		HandsawcuttreeProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ(), itemstack);
 		return retval;
 	}
 }

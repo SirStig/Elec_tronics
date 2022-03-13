@@ -20,8 +20,8 @@ import net.elec_tronics.init.ElecTronicsModFluids;
 import net.elec_tronics.init.ElecTronicsModBlocks;
 
 public abstract class ElectronicsoilFluid extends ForgeFlowingFluid {
-	public static final ForgeFlowingFluid.Properties PROPERTIES = new ForgeFlowingFluid.Properties(() -> ElecTronicsModFluids.ELECTRONICSOIL,
-			() -> ElecTronicsModFluids.FLOWING_ELECTRONICSOIL,
+	public static final ForgeFlowingFluid.Properties PROPERTIES = new ForgeFlowingFluid.Properties(ElecTronicsModFluids.ELECTRONICSOIL,
+			ElecTronicsModFluids.FLOWING_ELECTRONICSOIL,
 			FluidAttributes.builder(new ResourceLocation("elec_tronics:blocks/oil_still"), new ResourceLocation("elec_tronics:blocks/oil_flow"))
 
 					.rarity(Rarity.UNCOMMON).sound(ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.bucket.empty_lava"))))
@@ -29,7 +29,7 @@ public abstract class ElectronicsoilFluid extends ForgeFlowingFluid {
 
 							.tickRate(10).levelDecreasePerBlock(2)
 
-							.bucket(() -> ElecTronicsModItems.ELECTRONICSOIL_BUCKET).block(() -> (LiquidBlock) ElecTronicsModBlocks.ELECTRONICSOIL);
+							.bucket(ElecTronicsModItems.ELECTRONICSOIL_BUCKET).block(() -> (LiquidBlock) ElecTronicsModBlocks.ELECTRONICSOIL.get());
 
 	private ElectronicsoilFluid() {
 		super(PROPERTIES);
@@ -43,7 +43,6 @@ public abstract class ElectronicsoilFluid extends ForgeFlowingFluid {
 	public static class Source extends ElectronicsoilFluid {
 		public Source() {
 			super();
-			setRegistryName("electronicsoil");
 		}
 
 		public int getAmount(FluidState state) {
@@ -58,7 +57,6 @@ public abstract class ElectronicsoilFluid extends ForgeFlowingFluid {
 	public static class Flowing extends ElectronicsoilFluid {
 		public Flowing() {
 			super();
-			setRegistryName("flowing_electronicsoil");
 		}
 
 		protected void createFluidStateDefinition(StateDefinition.Builder<Fluid, FluidState> builder) {

@@ -6,7 +6,5 @@
   "ingredient": {
     "item": "elec_tronics:tungsten_dust"
   },
-  "result": {
-    "item": "elec_tronics:tungsten_ingot"
-  }
+  "result": "elec_tronics:tungsten_ingot"
 }

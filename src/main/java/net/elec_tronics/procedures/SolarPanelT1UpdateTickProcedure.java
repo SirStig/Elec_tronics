@@ -208,7 +208,7 @@ public class SolarPanelT1UpdateTickProcedure {
 			send6 = false;
 		}
 		amountToSend = (energy1 + energy2 + energy3 + energy4 + energy5 + energy6) / amountOfRecievers;
-		if (world instanceof Level _lvl ? _lvl.isDay() : false) {
+		if (world instanceof Level _lvl && _lvl.isDay()) {
 			if (send == true) {
 				{
 					BlockEntity _ent = world.getBlockEntity(new BlockPos((int) xsend, (int) ysend, (int) zsend));

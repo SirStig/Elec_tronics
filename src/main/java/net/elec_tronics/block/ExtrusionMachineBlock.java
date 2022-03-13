@@ -1,7 +1,7 @@
 
 package net.elec_tronics.block;
 
-import net.minecraftforge.fmllegacy.network.NetworkHooks;
+import net.minecraftforge.network.NetworkHooks;
 
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.level.storage.loot.LootContext;
@@ -46,7 +46,6 @@ public class ExtrusionMachineBlock extends Block
 			EntityBlock {
 	public ExtrusionMachineBlock() {
 		super(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.METAL).strength(4f, 10f).requiresCorrectToolForDrops());
-		setRegistryName("extrusion_machine");
 	}
 
 	@Override
@@ -72,7 +71,7 @@ public class ExtrusionMachineBlock extends Block
 	@Override
 	public void onPlace(BlockState blockstate, Level world, BlockPos pos, BlockState oldState, boolean moving) {
 		super.onPlace(blockstate, world, pos, oldState, moving);
-		world.getBlockTicks().scheduleTick(pos, this, 10);
+		world.scheduleTick(pos, this, 10);
 	}
 
 	@Override
@@ -83,7 +82,7 @@ public class ExtrusionMachineBlock extends Block
 		int z = pos.getZ();
 
 		ExtrusionMachineUpdateTickProcedure.execute(world, x, y, z);
-		world.getBlockTicks().scheduleTick(pos, this, 10);
+		world.scheduleTick(pos, this, 10);
 	}
 
 	@Override

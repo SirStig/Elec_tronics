@@ -6,7 +6,5 @@
   "ingredient": {
     "item": "elec_tronics:irondust"
   },
-  "result": {
-    "item": "minecraft:iron_ingot"
-  }
+  "result": "minecraft:iron_ingot"
 }

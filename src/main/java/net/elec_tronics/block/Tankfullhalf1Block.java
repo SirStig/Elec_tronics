@@ -42,7 +42,6 @@ public class Tankfullhalf1Block extends Block
 	public Tankfullhalf1Block() {
 		super(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.GLASS).strength(1f, 10f).noOcclusion()
 				.isRedstoneConductor((bs, br, bp) -> false));
-		setRegistryName("tankfullhalf_1");
 	}
 
 	@Override
@@ -66,7 +65,7 @@ public class Tankfullhalf1Block extends Block
 	@Override
 	public void onPlace(BlockState blockstate, Level world, BlockPos pos, BlockState oldState, boolean moving) {
 		super.onPlace(blockstate, world, pos, oldState, moving);
-		world.getBlockTicks().scheduleTick(pos, this, 1);
+		world.scheduleTick(pos, this, 1);
 	}
 
 	@Override
@@ -77,7 +76,7 @@ public class Tankfullhalf1Block extends Block
 		int z = pos.getZ();
 
 		TankUpdateTickProcedure.execute(world, x, y, z);
-		world.getBlockTicks().scheduleTick(pos, this, 1);
+		world.scheduleTick(pos, this, 1);
 	}
 
 	@Override
@@ -115,7 +114,7 @@ public class Tankfullhalf1Block extends Block
 
 	@OnlyIn(Dist.CLIENT)
 	public static void registerRenderLayer() {
-		ItemBlockRenderTypes.setRenderLayer(ElecTronicsModBlocks.TANKFULLHALF_1, renderType -> renderType == RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(ElecTronicsModBlocks.TANKFULLHALF_1.get(), renderType -> renderType == RenderType.cutout());
 	}
 
 }

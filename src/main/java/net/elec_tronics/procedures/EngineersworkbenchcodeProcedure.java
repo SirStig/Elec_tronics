@@ -23,193 +23,176 @@ public class EngineersworkbenchcodeProcedure {
 		double emptyslots = 0;
 		double occupiedslots = 0;
 		if ((new Object() {
-			public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
+			public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 				AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 				BlockEntity _ent = world.getBlockEntity(pos);
-				if (_ent != null) {
-					_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-						_retval.set(capability.getStackInSlot(sltid).copy());
-					});
-				}
+				if (_ent != null)
+					_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null)
+							.ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 				return _retval.get();
 			}
-		}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 0)).getItem() == ElecTronicsModBlocks.REINFORCEDBLASTBRICK.asItem()
+		}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 0)).getItem() == ElecTronicsModBlocks.REINFORCEDBLASTBRICK.get().asItem()
 				&& (new Object() {
-					public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
+					public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 						BlockEntity _ent = world.getBlockEntity(pos);
-						if (_ent != null) {
-							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-								_retval.set(capability.getStackInSlot(sltid).copy());
-							});
-						}
+						if (_ent != null)
+							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null)
+									.ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 						return _retval.get();
 					}
-				}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 1)).getItem() == ElecTronicsModItems.INSULATION && (new Object() {
-					public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
-						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-						BlockEntity _ent = world.getBlockEntity(pos);
-						if (_ent != null) {
-							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-								_retval.set(capability.getStackInSlot(sltid).copy());
-							});
-						}
-						return _retval.get();
-					}
-				}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 2)).getItem() == ElecTronicsModItems.INSULATION && (new Object() {
-					public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
-						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-						BlockEntity _ent = world.getBlockEntity(pos);
-						if (_ent != null) {
-							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-								_retval.set(capability.getStackInSlot(sltid).copy());
-							});
-						}
-						return _retval.get();
-					}
-				}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 3)).getItem() == ElecTronicsModBlocks.REINFORCEDBLASTBRICK.asItem()
+				}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 1)).getItem() == ElecTronicsModItems.INSULATION.get()
 				&& (new Object() {
-					public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
+					public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 						BlockEntity _ent = world.getBlockEntity(pos);
-						if (_ent != null) {
-							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-								_retval.set(capability.getStackInSlot(sltid).copy());
-							});
-						}
+						if (_ent != null)
+							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null)
+									.ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 						return _retval.get();
 					}
-				}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 4)).getItem() == ElecTronicsModItems.INSULATION && (new Object() {
-					public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
-						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-						BlockEntity _ent = world.getBlockEntity(pos);
-						if (_ent != null) {
-							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-								_retval.set(capability.getStackInSlot(sltid).copy());
-							});
-						}
-						return _retval.get();
-					}
-				}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 5)).getItem() == ElecTronicsModItems.INSULATION && (new Object() {
-					public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
-						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-						BlockEntity _ent = world.getBlockEntity(pos);
-						if (_ent != null) {
-							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-								_retval.set(capability.getStackInSlot(sltid).copy());
-							});
-						}
-						return _retval.get();
-					}
-				}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 6)).getItem() == ElecTronicsModBlocks.REINFORCEDBLASTBRICK.asItem()
+				}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 2)).getItem() == ElecTronicsModItems.INSULATION.get()
 				&& (new Object() {
-					public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
+					public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 						BlockEntity _ent = world.getBlockEntity(pos);
-						if (_ent != null) {
-							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-								_retval.set(capability.getStackInSlot(sltid).copy());
-							});
-						}
+						if (_ent != null)
+							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null)
+									.ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 						return _retval.get();
 					}
-				}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 7)).getItem() == ElecTronicsModBlocks.REINFORCEDBLASTBRICK.asItem()
+				}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 3)).getItem() == ElecTronicsModBlocks.REINFORCEDBLASTBRICK.get()
+						.asItem()
 				&& (new Object() {
-					public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
+					public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 						BlockEntity _ent = world.getBlockEntity(pos);
-						if (_ent != null) {
-							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-								_retval.set(capability.getStackInSlot(sltid).copy());
-							});
-						}
+						if (_ent != null)
+							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null)
+									.ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 						return _retval.get();
 					}
-				}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 8)).getItem() == ElecTronicsModBlocks.REINFORCEDBLASTBRICK.asItem()
+				}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 4)).getItem() == ElecTronicsModItems.INSULATION.get()
 				&& (new Object() {
-					public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
+					public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 						BlockEntity _ent = world.getBlockEntity(pos);
-						if (_ent != null) {
-							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-								_retval.set(capability.getStackInSlot(sltid).copy());
-							});
-						}
+						if (_ent != null)
+							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null)
+									.ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 						return _retval.get();
 					}
-				}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 9)).getItem() == ElecTronicsModBlocks.REINFORCEDBLASTBRICK.asItem()
+				}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 5)).getItem() == ElecTronicsModItems.INSULATION.get()
 				&& (new Object() {
-					public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
+					public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 						BlockEntity _ent = world.getBlockEntity(pos);
-						if (_ent != null) {
-							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-								_retval.set(capability.getStackInSlot(sltid).copy());
-							});
-						}
+						if (_ent != null)
+							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null)
+									.ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 						return _retval.get();
 					}
-				}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 10)).getItem() == ElecTronicsModBlocks.REINFORCEDBLASTBRICK.asItem()
+				}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 6)).getItem() == ElecTronicsModBlocks.REINFORCEDBLASTBRICK.get()
+						.asItem()
 				&& (new Object() {
-					public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
+					public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 						BlockEntity _ent = world.getBlockEntity(pos);
-						if (_ent != null) {
-							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-								_retval.set(capability.getStackInSlot(sltid).copy());
-							});
-						}
+						if (_ent != null)
+							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null)
+									.ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 						return _retval.get();
 					}
-				}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 11)).getItem() == ElecTronicsModBlocks.REINFORCEDBLASTBRICK.asItem()
+				}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 7)).getItem() == ElecTronicsModBlocks.REINFORCEDBLASTBRICK.get()
+						.asItem()
 				&& (new Object() {
-					public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
+					public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 						BlockEntity _ent = world.getBlockEntity(pos);
-						if (_ent != null) {
-							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-								_retval.set(capability.getStackInSlot(sltid).copy());
-							});
-						}
+						if (_ent != null)
+							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null)
+									.ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 						return _retval.get();
 					}
-				}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 12)).getItem() == ElecTronicsModBlocks.REINFORCEDBLASTBRICK.asItem()
+				}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 8)).getItem() == ElecTronicsModBlocks.REINFORCEDBLASTBRICK.get()
+						.asItem()
 				&& (new Object() {
-					public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
+					public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 						BlockEntity _ent = world.getBlockEntity(pos);
-						if (_ent != null) {
-							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-								_retval.set(capability.getStackInSlot(sltid).copy());
-							});
-						}
+						if (_ent != null)
+							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null)
+									.ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 						return _retval.get();
 					}
-				}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 13)).getItem() == ElecTronicsModBlocks.REINFORCEDBLASTBRICK.asItem()
+				}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 9)).getItem() == ElecTronicsModBlocks.REINFORCEDBLASTBRICK.get()
+						.asItem()
 				&& (new Object() {
-					public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
+					public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 						BlockEntity _ent = world.getBlockEntity(pos);
-						if (_ent != null) {
-							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-								_retval.set(capability.getStackInSlot(sltid).copy());
-							});
-						}
+						if (_ent != null)
+							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null)
+									.ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 						return _retval.get();
 					}
-				}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 14)).getItem() == ElecTronicsModBlocks.REINFORCEDBLASTBRICK.asItem()
+				}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 10)).getItem() == ElecTronicsModBlocks.REINFORCEDBLASTBRICK.get()
+						.asItem()
 				&& (new Object() {
-					public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
+					public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 						BlockEntity _ent = world.getBlockEntity(pos);
-						if (_ent != null) {
-							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-								_retval.set(capability.getStackInSlot(sltid).copy());
-							});
-						}
+						if (_ent != null)
+							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null)
+									.ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 						return _retval.get();
 					}
-				}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 15)).getItem() == ElecTronicsModBlocks.REINFORCEDBLASTBRICK.asItem()) {
+				}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 11)).getItem() == ElecTronicsModBlocks.REINFORCEDBLASTBRICK.get()
+						.asItem()
+				&& (new Object() {
+					public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
+						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+						BlockEntity _ent = world.getBlockEntity(pos);
+						if (_ent != null)
+							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null)
+									.ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
+						return _retval.get();
+					}
+				}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 12)).getItem() == ElecTronicsModBlocks.REINFORCEDBLASTBRICK.get()
+						.asItem()
+				&& (new Object() {
+					public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
+						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+						BlockEntity _ent = world.getBlockEntity(pos);
+						if (_ent != null)
+							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null)
+									.ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
+						return _retval.get();
+					}
+				}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 13)).getItem() == ElecTronicsModBlocks.REINFORCEDBLASTBRICK.get()
+						.asItem()
+				&& (new Object() {
+					public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
+						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+						BlockEntity _ent = world.getBlockEntity(pos);
+						if (_ent != null)
+							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null)
+									.ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
+						return _retval.get();
+					}
+				}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 14)).getItem() == ElecTronicsModBlocks.REINFORCEDBLASTBRICK.get()
+						.asItem()
+				&& (new Object() {
+					public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
+						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+						BlockEntity _ent = world.getBlockEntity(pos);
+						if (_ent != null)
+							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null)
+									.ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
+						return _retval.get();
+					}
+				}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 15)).getItem() == ElecTronicsModBlocks.REINFORCEDBLASTBRICK.get()
+						.asItem()) {
 			if ((new Object() {
 				public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
 					BlockEntity blockEntity = world.getBlockEntity(pos);
@@ -221,13 +204,12 @@ public class EngineersworkbenchcodeProcedure {
 				{
 					BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) y, (int) z));
 					if (_ent != null) {
-						final int _sltid = 17;
-						final ItemStack _setstack = new ItemStack(ElecTronicsModBlocks.BLASTFURNANCEMACHINE);
+						final int _slotid = 17;
+						final ItemStack _setstack = new ItemStack(ElecTronicsModBlocks.BLASTFURNANCEMACHINE.get());
 						_setstack.setCount(1);
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-							if (capability instanceof IItemHandlerModifiable) {
-								((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
-							}
+							if (capability instanceof IItemHandlerModifiable)
+								((IItemHandlerModifiable) capability).setStackInSlot(_slotid, _setstack);
 						});
 					}
 				}
@@ -242,14 +224,12 @@ public class EngineersworkbenchcodeProcedure {
 				}
 			}
 			if (new Object() {
-				public int getAmount(LevelAccessor world, BlockPos pos, int sltid) {
+				public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 					AtomicInteger _retval = new AtomicInteger(0);
 					BlockEntity _ent = world.getBlockEntity(pos);
-					if (_ent != null) {
-						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-							_retval.set(capability.getStackInSlot(sltid).getCount());
-						});
-					}
+					if (_ent != null)
+						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null)
+								.ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).getCount()));
 					return _retval.get();
 				}
 			}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), 17) == 0 && (new Object() {
@@ -263,13 +243,13 @@ public class EngineersworkbenchcodeProcedure {
 				{
 					BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) y, (int) z));
 					if (_ent != null) {
-						final int _sltid = 0;
+						final int _slotid = 0;
 						final int _amount = 1;
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable) {
-								ItemStack _stk = capability.getStackInSlot(_sltid).copy();
+								ItemStack _stk = capability.getStackInSlot(_slotid).copy();
 								_stk.shrink(_amount);
-								((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _stk);
+								((IItemHandlerModifiable) capability).setStackInSlot(_slotid, _stk);
 							}
 						});
 					}
@@ -277,13 +257,13 @@ public class EngineersworkbenchcodeProcedure {
 				{
 					BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) y, (int) z));
 					if (_ent != null) {
-						final int _sltid = 1;
+						final int _slotid = 1;
 						final int _amount = 1;
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable) {
-								ItemStack _stk = capability.getStackInSlot(_sltid).copy();
+								ItemStack _stk = capability.getStackInSlot(_slotid).copy();
 								_stk.shrink(_amount);
-								((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _stk);
+								((IItemHandlerModifiable) capability).setStackInSlot(_slotid, _stk);
 							}
 						});
 					}
@@ -291,13 +271,13 @@ public class EngineersworkbenchcodeProcedure {
 				{
 					BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) y, (int) z));
 					if (_ent != null) {
-						final int _sltid = 2;
+						final int _slotid = 2;
 						final int _amount = 1;
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable) {
-								ItemStack _stk = capability.getStackInSlot(_sltid).copy();
+								ItemStack _stk = capability.getStackInSlot(_slotid).copy();
 								_stk.shrink(_amount);
-								((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _stk);
+								((IItemHandlerModifiable) capability).setStackInSlot(_slotid, _stk);
 							}
 						});
 					}
@@ -305,13 +285,13 @@ public class EngineersworkbenchcodeProcedure {
 				{
 					BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) y, (int) z));
 					if (_ent != null) {
-						final int _sltid = 3;
+						final int _slotid = 3;
 						final int _amount = 1;
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable) {
-								ItemStack _stk = capability.getStackInSlot(_sltid).copy();
+								ItemStack _stk = capability.getStackInSlot(_slotid).copy();
 								_stk.shrink(_amount);
-								((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _stk);
+								((IItemHandlerModifiable) capability).setStackInSlot(_slotid, _stk);
 							}
 						});
 					}
@@ -319,13 +299,13 @@ public class EngineersworkbenchcodeProcedure {
 				{
 					BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) y, (int) z));
 					if (_ent != null) {
-						final int _sltid = 4;
+						final int _slotid = 4;
 						final int _amount = 1;
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable) {
-								ItemStack _stk = capability.getStackInSlot(_sltid).copy();
+								ItemStack _stk = capability.getStackInSlot(_slotid).copy();
 								_stk.shrink(_amount);
-								((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _stk);
+								((IItemHandlerModifiable) capability).setStackInSlot(_slotid, _stk);
 							}
 						});
 					}
@@ -333,13 +313,13 @@ public class EngineersworkbenchcodeProcedure {
 				{
 					BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) y, (int) z));
 					if (_ent != null) {
-						final int _sltid = 5;
+						final int _slotid = 5;
 						final int _amount = 1;
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable) {
-								ItemStack _stk = capability.getStackInSlot(_sltid).copy();
+								ItemStack _stk = capability.getStackInSlot(_slotid).copy();
 								_stk.shrink(_amount);
-								((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _stk);
+								((IItemHandlerModifiable) capability).setStackInSlot(_slotid, _stk);
 							}
 						});
 					}
@@ -347,13 +327,13 @@ public class EngineersworkbenchcodeProcedure {
 				{
 					BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) y, (int) z));
 					if (_ent != null) {
-						final int _sltid = 6;
+						final int _slotid = 6;
 						final int _amount = 1;
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable) {
-								ItemStack _stk = capability.getStackInSlot(_sltid).copy();
+								ItemStack _stk = capability.getStackInSlot(_slotid).copy();
 								_stk.shrink(_amount);
-								((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _stk);
+								((IItemHandlerModifiable) capability).setStackInSlot(_slotid, _stk);
 							}
 						});
 					}
@@ -361,13 +341,13 @@ public class EngineersworkbenchcodeProcedure {
 				{
 					BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) y, (int) z));
 					if (_ent != null) {
-						final int _sltid = 7;
+						final int _slotid = 7;
 						final int _amount = 1;
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable) {
-								ItemStack _stk = capability.getStackInSlot(_sltid).copy();
+								ItemStack _stk = capability.getStackInSlot(_slotid).copy();
 								_stk.shrink(_amount);
-								((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _stk);
+								((IItemHandlerModifiable) capability).setStackInSlot(_slotid, _stk);
 							}
 						});
 					}
@@ -375,13 +355,13 @@ public class EngineersworkbenchcodeProcedure {
 				{
 					BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) y, (int) z));
 					if (_ent != null) {
-						final int _sltid = 8;
+						final int _slotid = 8;
 						final int _amount = 1;
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable) {
-								ItemStack _stk = capability.getStackInSlot(_sltid).copy();
+								ItemStack _stk = capability.getStackInSlot(_slotid).copy();
 								_stk.shrink(_amount);
-								((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _stk);
+								((IItemHandlerModifiable) capability).setStackInSlot(_slotid, _stk);
 							}
 						});
 					}
@@ -389,13 +369,13 @@ public class EngineersworkbenchcodeProcedure {
 				{
 					BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) y, (int) z));
 					if (_ent != null) {
-						final int _sltid = 9;
+						final int _slotid = 9;
 						final int _amount = 1;
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable) {
-								ItemStack _stk = capability.getStackInSlot(_sltid).copy();
+								ItemStack _stk = capability.getStackInSlot(_slotid).copy();
 								_stk.shrink(_amount);
-								((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _stk);
+								((IItemHandlerModifiable) capability).setStackInSlot(_slotid, _stk);
 							}
 						});
 					}
@@ -403,13 +383,13 @@ public class EngineersworkbenchcodeProcedure {
 				{
 					BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) y, (int) z));
 					if (_ent != null) {
-						final int _sltid = 10;
+						final int _slotid = 10;
 						final int _amount = 1;
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable) {
-								ItemStack _stk = capability.getStackInSlot(_sltid).copy();
+								ItemStack _stk = capability.getStackInSlot(_slotid).copy();
 								_stk.shrink(_amount);
-								((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _stk);
+								((IItemHandlerModifiable) capability).setStackInSlot(_slotid, _stk);
 							}
 						});
 					}
@@ -417,13 +397,13 @@ public class EngineersworkbenchcodeProcedure {
 				{
 					BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) y, (int) z));
 					if (_ent != null) {
-						final int _sltid = 11;
+						final int _slotid = 11;
 						final int _amount = 1;
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable) {
-								ItemStack _stk = capability.getStackInSlot(_sltid).copy();
+								ItemStack _stk = capability.getStackInSlot(_slotid).copy();
 								_stk.shrink(_amount);
-								((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _stk);
+								((IItemHandlerModifiable) capability).setStackInSlot(_slotid, _stk);
 							}
 						});
 					}
@@ -431,13 +411,13 @@ public class EngineersworkbenchcodeProcedure {
 				{
 					BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) y, (int) z));
 					if (_ent != null) {
-						final int _sltid = 12;
+						final int _slotid = 12;
 						final int _amount = 1;
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable) {
-								ItemStack _stk = capability.getStackInSlot(_sltid).copy();
+								ItemStack _stk = capability.getStackInSlot(_slotid).copy();
 								_stk.shrink(_amount);
-								((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _stk);
+								((IItemHandlerModifiable) capability).setStackInSlot(_slotid, _stk);
 							}
 						});
 					}
@@ -445,13 +425,13 @@ public class EngineersworkbenchcodeProcedure {
 				{
 					BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) y, (int) z));
 					if (_ent != null) {
-						final int _sltid = 13;
+						final int _slotid = 13;
 						final int _amount = 1;
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable) {
-								ItemStack _stk = capability.getStackInSlot(_sltid).copy();
+								ItemStack _stk = capability.getStackInSlot(_slotid).copy();
 								_stk.shrink(_amount);
-								((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _stk);
+								((IItemHandlerModifiable) capability).setStackInSlot(_slotid, _stk);
 							}
 						});
 					}
@@ -459,13 +439,13 @@ public class EngineersworkbenchcodeProcedure {
 				{
 					BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) y, (int) z));
 					if (_ent != null) {
-						final int _sltid = 14;
+						final int _slotid = 14;
 						final int _amount = 1;
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable) {
-								ItemStack _stk = capability.getStackInSlot(_sltid).copy();
+								ItemStack _stk = capability.getStackInSlot(_slotid).copy();
 								_stk.shrink(_amount);
-								((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _stk);
+								((IItemHandlerModifiable) capability).setStackInSlot(_slotid, _stk);
 							}
 						});
 					}
@@ -473,13 +453,13 @@ public class EngineersworkbenchcodeProcedure {
 				{
 					BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) y, (int) z));
 					if (_ent != null) {
-						final int _sltid = 15;
+						final int _slotid = 15;
 						final int _amount = 1;
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable) {
-								ItemStack _stk = capability.getStackInSlot(_sltid).copy();
+								ItemStack _stk = capability.getStackInSlot(_slotid).copy();
 								_stk.shrink(_amount);
-								((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _stk);
+								((IItemHandlerModifiable) capability).setStackInSlot(_slotid, _stk);
 							}
 						});
 					}
@@ -487,11 +467,10 @@ public class EngineersworkbenchcodeProcedure {
 				{
 					BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) y, (int) z));
 					if (_ent != null) {
-						final int _sltid = 17;
+						final int _slotid = 17;
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-							if (capability instanceof IItemHandlerModifiable) {
-								((IItemHandlerModifiable) capability).setStackInSlot(_sltid, ItemStack.EMPTY);
-							}
+							if (capability instanceof IItemHandlerModifiable)
+								((IItemHandlerModifiable) capability).setStackInSlot(_slotid, ItemStack.EMPTY);
 						});
 					}
 				}
@@ -516,11 +495,10 @@ public class EngineersworkbenchcodeProcedure {
 			{
 				BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) y, (int) z));
 				if (_ent != null) {
-					final int _sltid = 17;
+					final int _slotid = 17;
 					_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-						if (capability instanceof IItemHandlerModifiable) {
-							((IItemHandlerModifiable) capability).setStackInSlot(_sltid, ItemStack.EMPTY);
-						}
+						if (capability instanceof IItemHandlerModifiable)
+							((IItemHandlerModifiable) capability).setStackInSlot(_slotid, ItemStack.EMPTY);
 					});
 				}
 			}
@@ -537,27 +515,23 @@ public class EngineersworkbenchcodeProcedure {
 		slot = 0;
 		for (int index0 = 0; index0 < (int) (16); index0++) {
 			if (new Object() {
-				public int getAmount(LevelAccessor world, BlockPos pos, int sltid) {
+				public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 					AtomicInteger _retval = new AtomicInteger(0);
 					BlockEntity _ent = world.getBlockEntity(pos);
-					if (_ent != null) {
-						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-							_retval.set(capability.getStackInSlot(sltid).getCount());
-						});
-					}
+					if (_ent != null)
+						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null)
+								.ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).getCount()));
 					return _retval.get();
 				}
 			}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) slot) == 0) {
 				emptyslots = emptyslots + 1;
 			} else if ((new Object() {
-				public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
+				public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 					AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 					BlockEntity _ent = world.getBlockEntity(pos);
-					if (_ent != null) {
-						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-							_retval.set(capability.getStackInSlot(sltid).copy());
-						});
-					}
+					if (_ent != null)
+						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null)
+								.ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 					return _retval.get();
 				}
 			}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), (int) slot)).getItem() == Items.COPPER_INGOT) {
@@ -566,14 +540,12 @@ public class EngineersworkbenchcodeProcedure {
 			slot = slot + 1;
 		}
 		if (emptyslots == 15 && (new Object() {
-			public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
+			public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 				AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 				BlockEntity _ent = world.getBlockEntity(pos);
-				if (_ent != null) {
-					_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-						_retval.set(capability.getStackInSlot(sltid).copy());
-					});
-				}
+				if (_ent != null)
+					_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null)
+							.ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 				return _retval.get();
 			}
 		}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), (int) occupiedslots)).getItem() == Items.COPPER_INGOT) {
@@ -588,13 +560,12 @@ public class EngineersworkbenchcodeProcedure {
 				{
 					BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) y, (int) z));
 					if (_ent != null) {
-						final int _sltid = 17;
-						final ItemStack _setstack = new ItemStack(ElecTronicsModItems.COPPER_SHEET);
+						final int _slotid = 17;
+						final ItemStack _setstack = new ItemStack(ElecTronicsModItems.COPPER_SHEET.get());
 						_setstack.setCount(4);
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-							if (capability instanceof IItemHandlerModifiable) {
-								((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
-							}
+							if (capability instanceof IItemHandlerModifiable)
+								((IItemHandlerModifiable) capability).setStackInSlot(_slotid, _setstack);
 						});
 					}
 				}
@@ -609,14 +580,12 @@ public class EngineersworkbenchcodeProcedure {
 				}
 			}
 			if (new Object() {
-				public int getAmount(LevelAccessor world, BlockPos pos, int sltid) {
+				public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 					AtomicInteger _retval = new AtomicInteger(0);
 					BlockEntity _ent = world.getBlockEntity(pos);
-					if (_ent != null) {
-						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-							_retval.set(capability.getStackInSlot(sltid).getCount());
-						});
-					}
+					if (_ent != null)
+						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null)
+								.ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).getCount()));
 					return _retval.get();
 				}
 			}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), 17) == 0 && (new Object() {
@@ -630,13 +599,13 @@ public class EngineersworkbenchcodeProcedure {
 				{
 					BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) y, (int) z));
 					if (_ent != null) {
-						final int _sltid = (int) occupiedslots;
+						final int _slotid = (int) occupiedslots;
 						final int _amount = 1;
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable) {
-								ItemStack _stk = capability.getStackInSlot(_sltid).copy();
+								ItemStack _stk = capability.getStackInSlot(_slotid).copy();
 								_stk.shrink(_amount);
-								((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _stk);
+								((IItemHandlerModifiable) capability).setStackInSlot(_slotid, _stk);
 							}
 						});
 					}
@@ -644,11 +613,10 @@ public class EngineersworkbenchcodeProcedure {
 				{
 					BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) y, (int) z));
 					if (_ent != null) {
-						final int _sltid = 17;
+						final int _slotid = 17;
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-							if (capability instanceof IItemHandlerModifiable) {
-								((IItemHandlerModifiable) capability).setStackInSlot(_sltid, ItemStack.EMPTY);
-							}
+							if (capability instanceof IItemHandlerModifiable)
+								((IItemHandlerModifiable) capability).setStackInSlot(_slotid, ItemStack.EMPTY);
 						});
 					}
 				}
@@ -673,11 +641,10 @@ public class EngineersworkbenchcodeProcedure {
 			{
 				BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) y, (int) z));
 				if (_ent != null) {
-					final int _sltid = 17;
+					final int _slotid = 17;
 					_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-						if (capability instanceof IItemHandlerModifiable) {
-							((IItemHandlerModifiable) capability).setStackInSlot(_sltid, ItemStack.EMPTY);
-						}
+						if (capability instanceof IItemHandlerModifiable)
+							((IItemHandlerModifiable) capability).setStackInSlot(_slotid, ItemStack.EMPTY);
 					});
 				}
 			}

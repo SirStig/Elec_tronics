@@ -21,8 +21,8 @@ public class HandsawcuttreeProcedure {
 			for (int index1 = 0; index1 < (int) (6); index1++) {
 				sy = -12;
 				for (int index2 = 0; index2 < (int) (24); index2++) {
-					if (BlockTags.getAllTags().getTagOrEmpty(new ResourceLocation("logs"))
-							.contains((world.getBlockState(new BlockPos((int) (x + sx), (int) (y + sy), (int) (z + sz)))).getBlock())) {
+					if ((world.getBlockState(new BlockPos((int) (x + sx), (int) (y + sy), (int) (z + sz))))
+							.is(BlockTags.create(new ResourceLocation("logs")))) {
 						if ((itemstack).getDamageValue() > 1) {
 							{
 								ItemStack _ist = itemstack;
@@ -37,8 +37,8 @@ public class HandsawcuttreeProcedure {
 								world.destroyBlock(new BlockPos((int) (x + sx), (int) (y + sy), (int) (z + sz)), false);
 							}
 						}
-					} else if (BlockTags.getAllTags().getTagOrEmpty(new ResourceLocation("leaves"))
-							.contains((world.getBlockState(new BlockPos((int) (x + sx), (int) (y + sy), (int) (z + sz)))).getBlock())) {
+					} else if ((world.getBlockState(new BlockPos((int) (x + sx), (int) (y + sy), (int) (z + sz))))
+							.is(BlockTags.create(new ResourceLocation("leaves")))) {
 						if ((itemstack).getDamageValue() > 1) {
 							{
 								ItemStack _ist = itemstack;

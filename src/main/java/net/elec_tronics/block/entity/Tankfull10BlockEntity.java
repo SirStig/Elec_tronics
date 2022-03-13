@@ -1,54 +1,76 @@
 package net.elec_tronics.block.entity;
 
+import net.minecraftforge.items.wrapper.SidedInvWrapper;
+import net.minecraftforge.items.IItemHandler;
+import net.minecraftforge.items.CapabilityItemHandler;
+import net.minecraftforge.fluids.capability.templates.FluidTank;
+import net.minecraftforge.fluids.capability.CapabilityFluidHandler;
+import net.minecraftforge.energy.EnergyStorage;
+import net.minecraftforge.energy.CapabilityEnergy;
+import net.minecraftforge.common.util.LazyOptional;
+import net.minecraftforge.common.capabilities.Capability;
+
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.entity.RandomizableContainerBlockEntity;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.inventory.ChestMenu;
+import net.minecraft.world.inventory.AbstractContainerMenu;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.WorldlyContainer;
+import net.minecraft.world.ContainerHelper;
+import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
+import net.minecraft.network.chat.TextComponent;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.Connection;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.core.NonNullList;
+import net.minecraft.core.Direction;
+import net.minecraft.core.BlockPos;
+
+import net.elec_tronics.init.ElecTronicsModBlockEntities;
+
+import javax.annotation.Nullable;
+
+import java.util.stream.IntStream;
+
 public class Tankfull10BlockEntity extends RandomizableContainerBlockEntity implements WorldlyContainer {
-
 	private NonNullList<ItemStack> stacks = NonNullList.<ItemStack>withSize(9, ItemStack.EMPTY);
-
 	private final LazyOptional<? extends IItemHandler>[] handlers = SidedInvWrapper.create(this, Direction.values());
 
 	public Tankfull10BlockEntity(BlockPos position, BlockState state) {
-		super(ElecTronicsModBlockEntities.TANKFULL_10, position, state);
+		super(ElecTronicsModBlockEntities.TANKFULL_10.get(), position, state);
 	}
 
 	@Override
 	public void load(CompoundTag compound) {
 		super.load(compound);
-
 		if (!this.tryLoadLootTable(compound))
 			this.stacks = NonNullList.withSize(this.getContainerSize(), ItemStack.EMPTY);
-
 		ContainerHelper.loadAllItems(compound, this.stacks);
-
 		if (compound.get("energyStorage")instanceof CompoundTag compoundTag)
 			energyStorage.deserializeNBT(compoundTag);
-
 		if (compound.get("fluidTank")instanceof CompoundTag compoundTag)
 			fluidTank.readFromNBT(compoundTag);
 	}
 
 	@Override
-	public CompoundTag save(CompoundTag compound) {
-		super.save(compound);
-
+	public void saveAdditional(CompoundTag compound) {
+		super.saveAdditional(compound);
 		if (!this.trySaveLootTable(compound)) {
 			ContainerHelper.saveAllItems(compound, this.stacks);
 		}
-
 		compound.put("energyStorage", energyStorage.serializeNBT());
-
 		compound.put("fluidTank", fluidTank.writeToNBT(new CompoundTag()));
-
-		return compound;
 	}
 
 	@Override
 	public ClientboundBlockEntityDataPacket getUpdatePacket() {
-		return new ClientboundBlockEntityDataPacket(this.worldPosition, 0, this.getUpdateTag());
+		return ClientboundBlockEntityDataPacket.create(this);
 	}
 
 	@Override
 	public CompoundTag getUpdateTag() {
-		return this.save(new CompoundTag());
+		return this.saveWithFullMetadata();
 	}
 
 	@Override
@@ -140,7 +162,6 @@ public class Tankfull10BlockEntity extends RandomizableContainerBlockEntity impl
 			return retval;
 		}
 	};
-
 	private final FluidTank fluidTank = new FluidTank(4000) {
 		@Override
 		protected void onContentsChanged() {
@@ -154,13 +175,10 @@ public class Tankfull10BlockEntity extends RandomizableContainerBlockEntity impl
 	public <T> LazyOptional<T> getCapability(Capability<T> capability, @Nullable Direction facing) {
 		if (!this.remove && facing != null && capability == CapabilityItemHandler.ITEM_HANDLER_CAPABILITY)
 			return handlers[facing.ordinal()].cast();
-
 		if (!this.remove && capability == CapabilityEnergy.ENERGY)
 			return LazyOptional.of(() -> energyStorage).cast();
-
 		if (!this.remove && capability == CapabilityFluidHandler.FLUID_HANDLER_CAPABILITY)
 			return LazyOptional.of(() -> fluidTank).cast();
-
 		return super.getCapability(capability, facing);
 	}
 
@@ -170,5 +188,4 @@ public class Tankfull10BlockEntity extends RandomizableContainerBlockEntity impl
 		for (LazyOptional<? extends IItemHandler> handler : handlers)
 			handler.invalidate();
 	}
-
 }

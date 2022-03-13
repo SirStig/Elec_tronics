@@ -27,7 +27,7 @@ public class EngineersWorkBenchOnBlockRightClickedProcedure {
 				sz = -1;
 				for (int index2 = 0; index2 < (int) (2); index2++) {
 					if ((world.getBlockState(new BlockPos((int) (x + sx), (int) (y + sy), (int) (z + sz))))
-							.getBlock() == ElecTronicsModBlocks.ENGINEERSWORKBENCH) {
+							.getBlock() == ElecTronicsModBlocks.ENGINEERSWORKBENCH.get()) {
 						if (entity instanceof Player _player) {
 							BlockPos _bp = new BlockPos((int) (x + sx), (int) (y + sy), (int) (z + sz));
 							_player.level.getBlockState(_bp).use(_player.level, _player, InteractionHand.MAIN_HAND,

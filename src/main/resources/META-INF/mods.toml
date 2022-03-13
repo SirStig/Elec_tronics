@@ -1,10 +1,10 @@
 modLoader="javafml"
-loaderVersion="[37,)"
+loaderVersion="[40,)"
 license="MIT License"
 
 [[mods]]
 modId="elec_tronics"
-version="0.0.0.1"
+version="0.0.0.8"
 displayName="Elec Tronics"
 credits="SirJStig, Mewbster9900"
 displayURL="https://github.com/SirStig/Elec_tronics"
@@ -18,10 +18,16 @@ Elec Tronics is a mod based around your favorite mods with a bit of a touch of r
 [[dependencies.elec_tronics]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.17.1]"
+    versionRange="[1.18.2]"
     ordering="NONE"
     side="BOTH"
 
 
 
+[[dependencies.elec_tronics]]
+    modId="just_enough_items"
+    mandatory=false
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
 

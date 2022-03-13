@@ -10,7 +10,6 @@ import net.elec_tronics.init.ElecTronicsModTabs;
 public class CopperDustItem extends Item {
 	public CopperDustItem() {
 		super(new Item.Properties().tab(ElecTronicsModTabs.TAB_ELEC_TRONICS_MENU).stacksTo(64).rarity(Rarity.EPIC));
-		setRegistryName("copper_dust");
 	}
 
 	@Override

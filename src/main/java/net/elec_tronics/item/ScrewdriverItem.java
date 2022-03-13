@@ -10,7 +10,6 @@ import net.elec_tronics.init.ElecTronicsModTabs;
 public class ScrewdriverItem extends Item {
 	public ScrewdriverItem() {
 		super(new Item.Properties().tab(ElecTronicsModTabs.TAB_ELEC_TRONICS_MENU).stacksTo(1).rarity(Rarity.COMMON));
-		setRegistryName("screwdriver");
 	}
 
 	@Override

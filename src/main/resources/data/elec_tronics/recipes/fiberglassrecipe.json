@@ -6,7 +6,5 @@
   "ingredient": {
     "item": "elec_tronics:fibger_glass_dust"
   },
-  "result": {
-    "item": "elec_tronics:insulation"
-  }
+  "result": "elec_tronics:insulation"
 }

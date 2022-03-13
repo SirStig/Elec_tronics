@@ -16,15 +16,22 @@ package net.elec_tronics;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
 
-import net.minecraftforge.fmllegacy.network.simple.SimpleChannel;
-import net.minecraftforge.fmllegacy.network.NetworkRegistry;
-import net.minecraftforge.fmllegacy.network.NetworkEvent;
+import net.minecraftforge.network.simple.SimpleChannel;
+import net.minecraftforge.network.NetworkRegistry;
+import net.minecraftforge.network.NetworkEvent;
+import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.eventbus.api.IEventBus;
 
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.FriendlyByteBuf;
 
 import net.elec_tronics.init.ElecTronicsModTabs;
+import net.elec_tronics.init.ElecTronicsModItems;
+import net.elec_tronics.init.ElecTronicsModFluids;
+import net.elec_tronics.init.ElecTronicsModFeatures;
+import net.elec_tronics.init.ElecTronicsModBlocks;
+import net.elec_tronics.init.ElecTronicsModBlockEntities;
 
 import java.util.function.Supplier;
 import java.util.function.Function;
@@ -41,6 +48,14 @@ public class ElecTronicsMod {
 
 	public ElecTronicsMod() {
 		ElecTronicsModTabs.load();
+		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
+		ElecTronicsModBlocks.REGISTRY.register(bus);
+		ElecTronicsModItems.REGISTRY.register(bus);
+
+		ElecTronicsModBlockEntities.REGISTRY.register(bus);
+		ElecTronicsModFeatures.REGISTRY.register(bus);
+		ElecTronicsModFluids.REGISTRY.register(bus);
+
 	}
 
 	public static <T> void addNetworkMessage(Class<T> messageType, BiConsumer<T, FriendlyByteBuf> encoder, Function<FriendlyByteBuf, T> decoder,
