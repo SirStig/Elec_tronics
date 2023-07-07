@@ -1626,70 +1626,6 @@
       "path": "~/Wires-Pipes"
     },
     {
-      "name": "T1WireUpdateTick",
-      "type": "procedure",
-      "sortid": 75,
-      "compiles": false,
-      "locked_code": false,
-      "registry_name": "t_1_wire_update_tick",
-      "metadata": {
-        "files": [
-          "src/main/java/net/elec_tronics/procedures/T1WireUpdateTickProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Wires-Pipes"
-    },
-    {
-      "name": "T1WireBlockIsPlacedBy",
-      "type": "procedure",
-      "sortid": 77,
-      "compiles": false,
-      "locked_code": false,
-      "registry_name": "t_1_wire_block_is_placed_by",
-      "metadata": {
-        "files": [
-          "src/main/java/net/elec_tronics/procedures/T1WireBlockIsPlacedByProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Wires-Pipes"
-    },
-    {
       "name": "Variableenergyblocks",
       "type": "tag",
       "sortid": 78,
@@ -2728,9 +2664,12 @@
       "type": "procedure",
       "sortid": 131,
       "compiles": true,
-      "locked_code": true,
+      "locked_code": false,
       "registry_name": "solar_panel_t_1_block_added",
       "metadata": {
+        "files": [
+          "src/main/java/net/elec_tronics/procedures/SolarPanelT1BlockAddedProcedure.java"
+        ],
         "dependencies": [
           {
             "name": "x",
@@ -3690,15 +3629,6 @@
       "path": "~/Engineers Workbench"
     },
     {
-      "name": "JEIPlugin",
-      "type": "code",
-      "sortid": 185,
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "jei_plugin",
-      "path": "~/integrations"
-    },
-    {
       "name": "Basepipe",
       "type": "block",
       "sortid": 186,
@@ -3712,38 +3642,6 @@
           "src/main/resources/assets/elec_tronics/models/item/basepipe.json",
           "src/main/java/net/elec_tronics/block/entity/BasepipeBlockEntity.java",
           "src/main/java/net/elec_tronics/block/BasepipeBlock.java"
-        ]
-      },
-      "path": "~/Wires-Pipes"
-    },
-    {
-      "name": "BasepipeUpdateTick",
-      "type": "procedure",
-      "sortid": 187,
-      "compiles": false,
-      "locked_code": false,
-      "registry_name": "basepipe_update_tick",
-      "metadata": {
-        "files": [
-          "src/main/java/net/elec_tronics/procedures/BasepipeUpdateTickProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
         ]
       },
       "path": "~/Wires-Pipes"
@@ -4104,38 +4002,6 @@
           "src/main/java/net/elec_tronics/block/entity/PipeupangleBlockEntity.java",
           "src/main/resources/assets/elec_tronics/models/block/pipeupangle.json",
           "src/main/java/net/elec_tronics/block/PipeupangleBlock.java"
-        ]
-      },
-      "path": "~/Wires-Pipes"
-    },
-    {
-      "name": "BasepipeBlockIsPlacedBy",
-      "type": "procedure",
-      "sortid": 208,
-      "compiles": false,
-      "locked_code": false,
-      "registry_name": "basepipe_block_is_placed_by",
-      "metadata": {
-        "files": [
-          "src/main/java/net/elec_tronics/procedures/BasepipeBlockIsPlacedByProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
         ]
       },
       "path": "~/Wires-Pipes"
@@ -5187,6 +5053,130 @@
         ]
       },
       "path": "~/Fluids-Gases"
+    },
+    {
+      "name": "T1WireUpdateTick",
+      "type": "procedure",
+      "sortid": 266,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "t_1_wire_update_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/elec_tronics/procedures/T1WireUpdateTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "T1WireBlockIsPlacedBy",
+      "type": "procedure",
+      "sortid": 267,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "t_1_wire_block_is_placed_by",
+      "metadata": {
+        "files": [
+          "src/main/java/net/elec_tronics/procedures/T1WireBlockIsPlacedByProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BasepipeUpdateTick",
+      "type": "procedure",
+      "sortid": 268,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "basepipe_update_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/elec_tronics/procedures/BasepipeUpdateTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BasepipeBlockIsPlacedBy",
+      "type": "procedure",
+      "sortid": 269,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "basepipe_block_is_placed_by",
+      "metadata": {
+        "files": [
+          "src/main/java/net/elec_tronics/procedures/BasepipeBlockIsPlacedByProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
