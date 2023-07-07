@@ -19,6 +19,15 @@ import net.elec_tronics.procedures.Powertick3Procedure;
 import net.elec_tronics.procedures.Powertick2Procedure;
 import net.elec_tronics.procedures.Powertick1Procedure;
 import net.elec_tronics.procedures.Powertick0Procedure;
+import net.elec_tronics.procedures.GearAnim8Procedure;
+import net.elec_tronics.procedures.GearAnim7Procedure;
+import net.elec_tronics.procedures.GearAnim6Procedure;
+import net.elec_tronics.procedures.GearAnim5Procedure;
+import net.elec_tronics.procedures.GearAnim4Procedure;
+import net.elec_tronics.procedures.GearAnim3Procedure;
+import net.elec_tronics.procedures.GearAnim2Procedure;
+import net.elec_tronics.procedures.GearAnim1Procedure;
+import net.elec_tronics.procedures.GearAnim0Procedure;
 
 import java.util.HashMap;
 
@@ -113,6 +122,42 @@ public class CrusherT1GUIScreen extends AbstractContainerScreen<CrusherT1GUIMenu
 		RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/screens/oregui.png"));
 		this.blit(ms, this.leftPos + 47, this.topPos + 22, 0, 0, 16, 16, 16, 16);
 
+		if (GearAnim0Procedure.execute(world, x, y, z)) {
+			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/screens/crushergeargui.png"));
+			this.blit(ms, this.leftPos + 64, this.topPos + 42, 0, 0, 24, 24, 24, 24);
+		}
+		if (GearAnim1Procedure.execute(world, x, y, z)) {
+			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/screens/crushergeargui2.png"));
+			this.blit(ms, this.leftPos + 64, this.topPos + 42, 0, 0, 24, 24, 24, 24);
+		}
+		if (GearAnim2Procedure.execute(world, x, y, z)) {
+			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/screens/crushergeargui3.png"));
+			this.blit(ms, this.leftPos + 64, this.topPos + 42, 0, 0, 24, 24, 24, 24);
+		}
+		if (GearAnim3Procedure.execute(world, x, y, z)) {
+			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/screens/crushergeargui4.png"));
+			this.blit(ms, this.leftPos + 64, this.topPos + 42, 0, 0, 24, 24, 24, 24);
+		}
+		if (GearAnim4Procedure.execute(world, x, y, z)) {
+			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/screens/crushergeargui5.png"));
+			this.blit(ms, this.leftPos + 64, this.topPos + 42, 0, 0, 24, 24, 24, 24);
+		}
+		if (GearAnim5Procedure.execute(world, x, y, z)) {
+			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/screens/crushergeargui6.png"));
+			this.blit(ms, this.leftPos + 64, this.topPos + 42, 0, 0, 24, 24, 24, 24);
+		}
+		if (GearAnim6Procedure.execute(world, x, y, z)) {
+			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/screens/crushergeargui7.png"));
+			this.blit(ms, this.leftPos + 64, this.topPos + 42, 0, 0, 24, 24, 24, 24);
+		}
+		if (GearAnim7Procedure.execute(world, x, y, z)) {
+			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/screens/crushergeargui8.png"));
+			this.blit(ms, this.leftPos + 64, this.topPos + 42, 0, 0, 24, 24, 24, 24);
+		}
+		if (GearAnim8Procedure.execute(world, x, y, z)) {
+			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/screens/crushergeargui9.png"));
+			this.blit(ms, this.leftPos + 64, this.topPos + 42, 0, 0, 24, 24, 24, 24);
+		}
 		RenderSystem.disableBlend();
 	}
 

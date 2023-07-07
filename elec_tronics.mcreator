@@ -5232,6 +5232,336 @@
         ]
       },
       "path": "~/CrusherT1-T4"
+    },
+    {
+      "name": "GearAnim1",
+      "type": "procedure",
+      "sortid": 272,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gear_anim_1",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/elec_tronics/procedures/GearAnim1Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Powerticks"
+    },
+    {
+      "name": "GearAnim2",
+      "type": "procedure",
+      "sortid": 273,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gear_anim_2",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/elec_tronics/procedures/GearAnim2Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Powerticks"
+    },
+    {
+      "name": "GearAnim3",
+      "type": "procedure",
+      "sortid": 274,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gear_anim_3",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/elec_tronics/procedures/GearAnim3Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Powerticks"
+    },
+    {
+      "name": "GearAnim4",
+      "type": "procedure",
+      "sortid": 275,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gear_anim_4",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/elec_tronics/procedures/GearAnim4Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Powerticks"
+    },
+    {
+      "name": "GearAnim0",
+      "type": "procedure",
+      "sortid": 276,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gear_anim_0",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/elec_tronics/procedures/GearAnim0Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Powerticks"
+    },
+    {
+      "name": "GearAnim5",
+      "type": "procedure",
+      "sortid": 277,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gear_anim_5",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/elec_tronics/procedures/GearAnim5Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Powerticks"
+    },
+    {
+      "name": "GearAnim6",
+      "type": "procedure",
+      "sortid": 278,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gear_anim_6",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/elec_tronics/procedures/GearAnim6Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Powerticks"
+    },
+    {
+      "name": "GearAnim7",
+      "type": "procedure",
+      "sortid": 279,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gear_anim_7",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/elec_tronics/procedures/GearAnim7Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Powerticks"
+    },
+    {
+      "name": "GearAnim8",
+      "type": "procedure",
+      "sortid": 280,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gear_anim_8",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/elec_tronics/procedures/GearAnim8Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Powerticks"
+    },
+    {
+      "name": "GearAnim9",
+      "type": "procedure",
+      "sortid": 281,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gear_anim_9",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/elec_tronics/procedures/GearAnim9Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Powerticks"
     }
   ],
   "variable_elements": [
@@ -5247,8 +5577,8 @@
     "en_us": {
       "item.elec_tronics.insulation": "Insulation",
       "item.elec_tronics.hand_saw": "Hand Saw",
-      "item.elec_tronics.hammer": "Hammer",
       "item.elec_tronics.steelhoe": "Steel Hoe",
+      "item.elec_tronics.hammer": "Hammer",
       "block.elec_tronics.pipejunctionupanddownstraight": "Pipe",
       "gui.elec_tronics.workbenchgui.label_inventory": "Inventory",
       "fluid.elec_tronics.hydrogen_gas": "Hydrogen Gas",
@@ -5513,13 +5843,17 @@
       {
         "name": "Commands",
         "children": []
+      },
+      {
+        "name": "GearAnimation",
+        "children": []
       }
     ]
   },
   "workspaceSettings": {
     "modid": "elec_tronics",
     "modName": "Elec Tronics",
-    "version": "0.0.0.9",
+    "version": "0.0.0.8",
     "description": "Elec Tronics is a mod based around your favorite mods with a bit of a touch of realism",
     "author": "SirJStig",
     "websiteURL": "https://github.com/SirStig/Elec_tronics",

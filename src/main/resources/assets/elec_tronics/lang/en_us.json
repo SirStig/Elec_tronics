@@ -1,8 +1,8 @@
 {
   "item.elec_tronics.insulation": "Insulation",
   "item.elec_tronics.hand_saw": "Hand Saw",
-  "item.elec_tronics.hammer": "Hammer",
   "item.elec_tronics.steelhoe": "Steel Hoe",
+  "item.elec_tronics.hammer": "Hammer",
   "block.elec_tronics.pipejunctionupanddownstraight": "Pipe",
   "gui.elec_tronics.workbenchgui.label_inventory": "Inventory",
   "fluid.elec_tronics.hydrogen_gas": "Hydrogen Gas",
