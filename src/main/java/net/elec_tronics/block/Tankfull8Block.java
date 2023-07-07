@@ -1,6 +1,8 @@
 
 package net.elec_tronics.block;
 
+import net.minecraftforge.network.NetworkHooks;
+
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.CollisionContext;
@@ -16,21 +18,29 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.util.RandomSource;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
+import net.elec_tronics.world.inventory.TankT1GuiMenu;
 import net.elec_tronics.procedures.TankUpdateTickProcedure;
 import net.elec_tronics.procedures.TankOnBlockRightClickedProcedure;
 import net.elec_tronics.block.entity.Tankfull8BlockEntity;
 
 import java.util.List;
 import java.util.Collections;
+
+import io.netty.buffer.Unpooled;
 
 public class Tankfull8Block extends Block implements EntityBlock {
 	public Tankfull8Block() {
@@ -79,6 +89,19 @@ public class Tankfull8Block extends Block implements EntityBlock {
 	@Override
 	public InteractionResult use(BlockState blockstate, Level world, BlockPos pos, Player entity, InteractionHand hand, BlockHitResult hit) {
 		super.use(blockstate, world, pos, entity, hand, hit);
+		if (entity instanceof ServerPlayer player) {
+			NetworkHooks.openScreen(player, new MenuProvider() {
+				@Override
+				public Component getDisplayName() {
+					return Component.literal("Tank");
+				}
+
+				@Override
+				public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
+					return new TankT1GuiMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(pos));
+				}
+			}, pos);
+		}
 		int x = pos.getX();
 		int y = pos.getY();
 		int z = pos.getZ();

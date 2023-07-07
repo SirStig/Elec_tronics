@@ -6,6 +6,7 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
+import net.minecraft.client.gui.components.ImageButton;
 
 import net.elec_tronics.world.inventory.CrusherT1GUIMenu;
 import net.elec_tronics.procedures.Powertick9Procedure;
@@ -29,6 +30,7 @@ public class CrusherT1GUIScreen extends AbstractContainerScreen<CrusherT1GUIMenu
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
+	ImageButton imagebutton_output;
 
 	public CrusherT1GUIScreen(CrusherT1GUIMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -101,6 +103,16 @@ public class CrusherT1GUIScreen extends AbstractContainerScreen<CrusherT1GUIMenu
 			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/screens/battery92full.png"));
 			this.blit(ms, this.leftPos + 6, this.topPos + 19, 0, 0, 10, 50, 10, 50);
 		}
+
+		RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/screens/dustgui.png"));
+		this.blit(ms, this.leftPos + 115, this.topPos + 46, 0, 0, 16, 16, 16, 16);
+
+		RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/screens/input.png"));
+		this.blit(ms, this.leftPos + 63, this.topPos + 17, 0, 0, 25, 25, 25, 25);
+
+		RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/screens/oregui.png"));
+		this.blit(ms, this.leftPos + 47, this.topPos + 22, 0, 0, 16, 16, 16, 16);
+
 		RenderSystem.disableBlend();
 	}
 
@@ -132,5 +144,9 @@ public class CrusherT1GUIScreen extends AbstractContainerScreen<CrusherT1GUIMenu
 	@Override
 	public void init() {
 		super.init();
+		imagebutton_output = new ImageButton(this.leftPos + 92, this.topPos + 41, 25, 25, 0, 0, 25, new ResourceLocation("elec_tronics:textures/screens/atlas/imagebutton_output.png"), 25, 50, e -> {
+		});
+		guistate.put("button:imagebutton_output", imagebutton_output);
+		this.addRenderableWidget(imagebutton_output);
 	}
 }

@@ -12,6 +12,7 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraft.client.gui.screens.MenuScreens;
 
 import net.elec_tronics.client.gui.WorkbenchguiScreen;
+import net.elec_tronics.client.gui.TankT1GuiScreen;
 import net.elec_tronics.client.gui.SolarpanelGUIScreen;
 import net.elec_tronics.client.gui.ExtrusinmachineGUIScreen;
 import net.elec_tronics.client.gui.CrusherT1GUIScreen;
@@ -29,6 +30,7 @@ public class ElecTronicsModScreens {
 			MenuScreens.register(ElecTronicsModMenus.CRUSHER_T_1_GUI.get(), CrusherT1GUIScreen::new);
 			MenuScreens.register(ElecTronicsModMenus.SOLARPANEL_GUI.get(), SolarpanelGUIScreen::new);
 			MenuScreens.register(ElecTronicsModMenus.EXTRUSINMACHINE_GUI.get(), ExtrusinmachineGUIScreen::new);
+			MenuScreens.register(ElecTronicsModMenus.TANK_T_1_GUI.get(), TankT1GuiScreen::new);
 		});
 	}
 }

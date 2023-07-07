@@ -22,7 +22,6 @@ import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.minecraft.world.level.block.EntityBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.Explosion;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.item.PickaxeItem;
@@ -43,6 +42,7 @@ import net.minecraft.core.BlockPos;
 
 import net.elec_tronics.world.inventory.SolarpanelGUIMenu;
 import net.elec_tronics.procedures.SolarPanelT1UpdateTickProcedure;
+import net.elec_tronics.procedures.SolarPanelT1PlayerStartsToDestroyProcedure;
 import net.elec_tronics.procedures.SolarPanelT1BlockDestroyedByPlayerProcedure;
 import net.elec_tronics.procedures.SolarPanelT1BlockAddedProcedure;
 import net.elec_tronics.block.entity.SolarPanelT1BlockEntity;
@@ -128,14 +128,14 @@ public class SolarPanelT1Block extends Block implements EntityBlock {
 	@Override
 	public boolean onDestroyedByPlayer(BlockState blockstate, Level world, BlockPos pos, Player entity, boolean willHarvest, FluidState fluid) {
 		boolean retval = super.onDestroyedByPlayer(blockstate, world, pos, entity, willHarvest, fluid);
-		SolarPanelT1BlockDestroyedByPlayerProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
+		SolarPanelT1BlockDestroyedByPlayerProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ(), entity);
 		return retval;
 	}
 
 	@Override
-	public void wasExploded(Level world, BlockPos pos, Explosion e) {
-		super.wasExploded(world, pos, e);
-		SolarPanelT1BlockDestroyedByPlayerProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
+	public void attack(BlockState blockstate, Level world, BlockPos pos, Player entity) {
+		super.attack(blockstate, world, pos, entity);
+		SolarPanelT1PlayerStartsToDestroyProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ(), entity);
 	}
 
 	@Override

@@ -1,8 +1,8 @@
 {
   "item.elec_tronics.insulation": "Insulation",
   "item.elec_tronics.hand_saw": "Hand Saw",
-  "item.elec_tronics.steelhoe": "Steel Hoe",
   "item.elec_tronics.hammer": "Hammer",
+  "item.elec_tronics.steelhoe": "Steel Hoe",
   "block.elec_tronics.pipejunctionupanddownstraight": "Pipe",
   "gui.elec_tronics.workbenchgui.label_inventory": "Inventory",
   "fluid.elec_tronics.hydrogen_gas": "Hydrogen Gas",
@@ -119,6 +119,7 @@
   "block.elec_tronics.pipejunctiondown": "Pipe",
   "block.elec_tronics.basewirecon_3": "Cable Angle T1",
   "gui.elec_tronics.crusher_t_1_gui.label_crusher_tier_1": "Crusher Tier 1",
+  "gui.elec_tronics.tank_t_1_gui.label_tank_tier_1": "Tank Tier 1",
   "gui.elec_tronics.blastfurnace.label_inventory": "Inventory",
   "block.elec_tronics.basewirecon_2angle": "Cable Angle T1",
   "item.elec_tronics.uranium_ingot": "Uranium Ingot",

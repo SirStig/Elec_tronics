@@ -130,7 +130,7 @@ public class SolarpanelGUIScreen extends AbstractContainerScreen<SolarpanelGUIMe
 
 	@Override
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
-		this.font.draw(poseStack, Component.translatable("gui.elec_tronics.solarpanel_gui.label_solar_panel_t1"), 11, 4, -12829636);
+		this.font.draw(poseStack, Component.translatable("gui.elec_tronics.solarpanel_gui.label_solar_panel_t1"), 11, 4, -16737895);
 		this.font.draw(poseStack, Component.translatable("gui.elec_tronics.solarpanel_gui.label_time"), 60, 24, -12829636);
 	}
 
