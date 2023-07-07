@@ -18,13 +18,13 @@ public class ManualFluidPumpUpdateTickProcedure {
 			public double getValue(LevelAccessor world, BlockPos pos, String tag) {
 				BlockEntity blockEntity = world.getBlockEntity(pos);
 				if (blockEntity != null)
-					return blockEntity.getTileData().getDouble(tag);
+					return blockEntity.getPersistentData().getDouble(tag);
 				return -1;
 			}
-		}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "blockstate") == 1) {
+		}.getValue(world, BlockPos.containing(x, y, z), "blockstate") == 1) {
 			{
-				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-				BlockState _bs = ElecTronicsModBlocks.MANUAL_FLUID_PUMP_3.defaultBlockState();
+				BlockPos _bp = BlockPos.containing(x, y, z);
+				BlockState _bs = ElecTronicsModBlocks.MANUAL_FLUID_PUMP_3.get().defaultBlockState();
 				BlockState _bso = world.getBlockState(_bp);
 				for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 					Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
@@ -37,7 +37,7 @@ public class ManualFluidPumpUpdateTickProcedure {
 				BlockEntity _be = world.getBlockEntity(_bp);
 				CompoundTag _bnbt = null;
 				if (_be != null) {
-					_bnbt = _be.save(new CompoundTag());
+					_bnbt = _be.saveWithFullMetadata();
 					_be.setRemoved();
 				}
 				world.setBlock(_bp, _bs, 3);
@@ -52,11 +52,11 @@ public class ManualFluidPumpUpdateTickProcedure {
 				}
 			}
 			if (!world.isClientSide()) {
-				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+				BlockPos _bp = BlockPos.containing(x, y, z);
 				BlockEntity _blockEntity = world.getBlockEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_blockEntity != null)
-					_blockEntity.getTileData().putDouble("blockstate", 2);
+					_blockEntity.getPersistentData().putDouble("blockstate", 2);
 				if (world instanceof Level _level)
 					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}
@@ -64,13 +64,13 @@ public class ManualFluidPumpUpdateTickProcedure {
 			public double getValue(LevelAccessor world, BlockPos pos, String tag) {
 				BlockEntity blockEntity = world.getBlockEntity(pos);
 				if (blockEntity != null)
-					return blockEntity.getTileData().getDouble(tag);
+					return blockEntity.getPersistentData().getDouble(tag);
 				return -1;
 			}
-		}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "blockstate") == 2) {
+		}.getValue(world, BlockPos.containing(x, y, z), "blockstate") == 2) {
 			{
-				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-				BlockState _bs = ElecTronicsModBlocks.MANUAL_FLUID_PUMP_4.defaultBlockState();
+				BlockPos _bp = BlockPos.containing(x, y, z);
+				BlockState _bs = ElecTronicsModBlocks.MANUAL_FLUID_PUMP_4.get().defaultBlockState();
 				BlockState _bso = world.getBlockState(_bp);
 				for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 					Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
@@ -83,7 +83,7 @@ public class ManualFluidPumpUpdateTickProcedure {
 				BlockEntity _be = world.getBlockEntity(_bp);
 				CompoundTag _bnbt = null;
 				if (_be != null) {
-					_bnbt = _be.save(new CompoundTag());
+					_bnbt = _be.saveWithFullMetadata();
 					_be.setRemoved();
 				}
 				world.setBlock(_bp, _bs, 3);
@@ -98,11 +98,11 @@ public class ManualFluidPumpUpdateTickProcedure {
 				}
 			}
 			if (!world.isClientSide()) {
-				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+				BlockPos _bp = BlockPos.containing(x, y, z);
 				BlockEntity _blockEntity = world.getBlockEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_blockEntity != null)
-					_blockEntity.getTileData().putDouble("blockstate", 3);
+					_blockEntity.getPersistentData().putDouble("blockstate", 3);
 				if (world instanceof Level _level)
 					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}
@@ -110,13 +110,13 @@ public class ManualFluidPumpUpdateTickProcedure {
 			public double getValue(LevelAccessor world, BlockPos pos, String tag) {
 				BlockEntity blockEntity = world.getBlockEntity(pos);
 				if (blockEntity != null)
-					return blockEntity.getTileData().getDouble(tag);
+					return blockEntity.getPersistentData().getDouble(tag);
 				return -1;
 			}
-		}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "blockstate") == 3) {
+		}.getValue(world, BlockPos.containing(x, y, z), "blockstate") == 3) {
 			{
-				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-				BlockState _bs = ElecTronicsModBlocks.MANUAL_FLUID_PUMP_5.defaultBlockState();
+				BlockPos _bp = BlockPos.containing(x, y, z);
+				BlockState _bs = ElecTronicsModBlocks.MANUAL_FLUID_PUMP_5.get().defaultBlockState();
 				BlockState _bso = world.getBlockState(_bp);
 				for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 					Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
@@ -129,7 +129,7 @@ public class ManualFluidPumpUpdateTickProcedure {
 				BlockEntity _be = world.getBlockEntity(_bp);
 				CompoundTag _bnbt = null;
 				if (_be != null) {
-					_bnbt = _be.save(new CompoundTag());
+					_bnbt = _be.saveWithFullMetadata();
 					_be.setRemoved();
 				}
 				world.setBlock(_bp, _bs, 3);
@@ -144,11 +144,11 @@ public class ManualFluidPumpUpdateTickProcedure {
 				}
 			}
 			if (!world.isClientSide()) {
-				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+				BlockPos _bp = BlockPos.containing(x, y, z);
 				BlockEntity _blockEntity = world.getBlockEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_blockEntity != null)
-					_blockEntity.getTileData().putDouble("blockstate", 4);
+					_blockEntity.getPersistentData().putDouble("blockstate", 4);
 				if (world instanceof Level _level)
 					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}
@@ -156,13 +156,13 @@ public class ManualFluidPumpUpdateTickProcedure {
 			public double getValue(LevelAccessor world, BlockPos pos, String tag) {
 				BlockEntity blockEntity = world.getBlockEntity(pos);
 				if (blockEntity != null)
-					return blockEntity.getTileData().getDouble(tag);
+					return blockEntity.getPersistentData().getDouble(tag);
 				return -1;
 			}
-		}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "blockstate") == 4) {
+		}.getValue(world, BlockPos.containing(x, y, z), "blockstate") == 4) {
 			{
-				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-				BlockState _bs = ElecTronicsModBlocks.MANUAL_FLUID_PUMP.defaultBlockState();
+				BlockPos _bp = BlockPos.containing(x, y, z);
+				BlockState _bs = ElecTronicsModBlocks.MANUAL_FLUID_PUMP.get().defaultBlockState();
 				BlockState _bso = world.getBlockState(_bp);
 				for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 					Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
@@ -175,7 +175,7 @@ public class ManualFluidPumpUpdateTickProcedure {
 				BlockEntity _be = world.getBlockEntity(_bp);
 				CompoundTag _bnbt = null;
 				if (_be != null) {
-					_bnbt = _be.save(new CompoundTag());
+					_bnbt = _be.saveWithFullMetadata();
 					_be.setRemoved();
 				}
 				world.setBlock(_bp, _bs, 3);
@@ -190,11 +190,11 @@ public class ManualFluidPumpUpdateTickProcedure {
 				}
 			}
 			if (!world.isClientSide()) {
-				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+				BlockPos _bp = BlockPos.containing(x, y, z);
 				BlockEntity _blockEntity = world.getBlockEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_blockEntity != null)
-					_blockEntity.getTileData().putDouble("blockstate", 0);
+					_blockEntity.getPersistentData().putDouble("blockstate", 0);
 				if (world instanceof Level _level)
 					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}

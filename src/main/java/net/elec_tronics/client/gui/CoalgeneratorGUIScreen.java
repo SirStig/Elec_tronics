@@ -1,4 +1,3 @@
-
 package net.elec_tronics.client.gui;
 
 import net.minecraft.world.level.Level;
@@ -7,7 +6,6 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
-import net.minecraft.client.Minecraft;
 
 import net.elec_tronics.world.inventory.CoalgeneratorGUIMenu;
 import net.elec_tronics.procedures.Powertick9Procedure;
@@ -31,10 +29,13 @@ import net.elec_tronics.procedures.Fuelburning3Procedure;
 import net.elec_tronics.procedures.Fuelburning2Procedure;
 import net.elec_tronics.procedures.Fuelburning10Procedure;
 
+import java.util.HashMap;
+
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.systems.RenderSystem;
 
 public class CoalgeneratorGUIScreen extends AbstractContainerScreen<CoalgeneratorGUIMenu> {
+	private final static HashMap<String, Object> guistate = CoalgeneratorGUIMenu.guistate;
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
@@ -50,7 +51,7 @@ public class CoalgeneratorGUIScreen extends AbstractContainerScreen<Coalgenerato
 		this.imageHeight = 176;
 	}
 
-	private static final ResourceLocation texture = new ResourceLocation("elec_tronics:textures/coalgenerator_gui.png");
+	private static final ResourceLocation texture = new ResourceLocation("elec_tronics:textures/screens/coalgenerator_gui.png");
 
 	@Override
 	public void render(PoseStack ms, int mouseX, int mouseY, float partialTicks) {
@@ -67,104 +68,104 @@ public class CoalgeneratorGUIScreen extends AbstractContainerScreen<Coalgenerato
 		RenderSystem.setShaderTexture(0, texture);
 		this.blit(ms, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
 		if (Fuelburning10Procedure.execute(world, x, y, z)) {
-			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/images_1_1.png"));
+			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/screens/images_1_1.png"));
 			this.blit(ms, this.leftPos + 79, this.topPos + 28, 0, 0, 16, 16, 16, 16);
 		}
 		if (Fuelburning9Procedure.execute(world, x, y, z)) {
-			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/fuel2.png"));
+			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/screens/fuel2.png"));
 			this.blit(ms, this.leftPos + 79, this.topPos + 28, 0, 0, 16, 16, 16, 16);
 		}
 		if (Fuelburning8Procedure.execute(world, x, y, z)) {
-			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/fuel3.png"));
+			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/screens/fuel3.png"));
 			this.blit(ms, this.leftPos + 79, this.topPos + 28, 0, 0, 16, 16, 16, 16);
 		}
 		if (Fuelburning7Procedure.execute(world, x, y, z)) {
-			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/fuel4.png"));
+			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/screens/fuel4.png"));
 			this.blit(ms, this.leftPos + 79, this.topPos + 28, 0, 0, 16, 16, 16, 16);
 		}
 		if (Fuelburning6Procedure.execute(world, x, y, z)) {
-			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/fuel5.png"));
+			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/screens/fuel5.png"));
 			this.blit(ms, this.leftPos + 79, this.topPos + 28, 0, 0, 16, 16, 16, 16);
 		}
 		if (Fuelburning5Procedure.execute(world, x, y, z)) {
-			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/fuel6.png"));
+			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/screens/fuel6.png"));
 			this.blit(ms, this.leftPos + 79, this.topPos + 28, 0, 0, 16, 16, 16, 16);
 		}
 		if (Fuelburning4Procedure.execute(world, x, y, z)) {
-			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/fuel7.png"));
+			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/screens/fuel7.png"));
 			this.blit(ms, this.leftPos + 79, this.topPos + 28, 0, 0, 16, 16, 16, 16);
 		}
 		if (Fuelburning3Procedure.execute(world, x, y, z)) {
-			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/fuel8.png"));
+			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/screens/fuel8.png"));
 			this.blit(ms, this.leftPos + 79, this.topPos + 28, 0, 0, 16, 16, 16, 16);
 		}
 		if (Fuelburning2Procedure.execute(world, x, y, z)) {
-			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/fuel9.png"));
+			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/screens/fuel9.png"));
 			this.blit(ms, this.leftPos + 79, this.topPos + 28, 0, 0, 16, 16, 16, 16);
 		}
 		if (FuelburningProcedure.execute(world, x, y, z)) {
-			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/burningfull.png"));
+			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/screens/burningfull.png"));
 			this.blit(ms, this.leftPos + 79, this.topPos + 28, 0, 0, 16, 16, 16, 16);
 		}
 
-		RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/furnace_gui_1.png"));
+		RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/screens/furnace_gui_1.png"));
 		this.blit(ms, this.leftPos + 98, this.topPos + 48, 0, 0, 25, 17, 25, 17);
 
 		if (Powertick0Procedure.execute(world, x, y, z)) {
-			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/batterv1.png"));
+			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/screens/batterv1.png"));
 			this.blit(ms, this.leftPos + 7, this.topPos + 27, 0, 0, 10, 50, 10, 50);
 		}
 		if (Powertick1Procedure.execute(world, x, y, z)) {
-			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/battery5.png"));
+			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/screens/battery5.png"));
 			this.blit(ms, this.leftPos + 7, this.topPos + 27, 0, 0, 10, 50, 10, 50);
 		}
 		if (Powertick2Procedure.execute(world, x, y, z)) {
-			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/battery10.png"));
+			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/screens/battery10.png"));
 			this.blit(ms, this.leftPos + 7, this.topPos + 27, 0, 0, 10, 50, 10, 50);
 		}
 		if (Powertick3Procedure.execute(world, x, y, z)) {
-			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/battery20.png"));
+			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/screens/battery20.png"));
 			this.blit(ms, this.leftPos + 7, this.topPos + 27, 0, 0, 10, 50, 10, 50);
 		}
 		if (Powertick4Procedure.execute(world, x, y, z)) {
-			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/battery30.png"));
+			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/screens/battery30.png"));
 			this.blit(ms, this.leftPos + 7, this.topPos + 27, 0, 0, 10, 50, 10, 50);
 		}
 		if (Powertick5Procedure.execute(world, x, y, z)) {
-			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/battery40.png"));
+			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/screens/battery40.png"));
 			this.blit(ms, this.leftPos + 7, this.topPos + 27, 0, 0, 10, 50, 10, 50);
 		}
 		if (Powertick6Procedure.execute(world, x, y, z)) {
-			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/battery50.png"));
+			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/screens/battery50.png"));
 			this.blit(ms, this.leftPos + 7, this.topPos + 27, 0, 0, 10, 50, 10, 50);
 		}
 		if (Powertick7Procedure.execute(world, x, y, z)) {
-			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/battery60.png"));
+			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/screens/battery60.png"));
 			this.blit(ms, this.leftPos + 7, this.topPos + 27, 0, 0, 10, 50, 10, 50);
 		}
 		if (Powertick8Procedure.execute(world, x, y, z)) {
-			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/battery70.png"));
+			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/screens/battery70.png"));
 			this.blit(ms, this.leftPos + 7, this.topPos + 27, 0, 0, 10, 50, 10, 50);
 		}
 		if (Powertick8Procedure.execute(world, x, y, z)) {
-			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/battery80.png"));
+			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/screens/battery80.png"));
 			this.blit(ms, this.leftPos + 7, this.topPos + 27, 0, 0, 10, 50, 10, 50);
 		}
 		if (Powertick9Procedure.execute(world, x, y, z)) {
-			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/battery92full.png"));
+			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/screens/battery92full.png"));
 			this.blit(ms, this.leftPos + 7, this.topPos + 27, 0, 0, 10, 50, 10, 50);
 		}
 
-		RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/input.png"));
+		RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/screens/input.png"));
 		this.blit(ms, this.leftPos + 74, this.topPos + 44, 0, 0, 25, 25, 25, 25);
 
-		RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/output.png"));
+		RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/screens/output.png"));
 		this.blit(ms, this.leftPos + 121, this.topPos + 44, 0, 0, 25, 25, 25, 25);
 
-		RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/fuelgui.png"));
+		RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/screens/fuelgui.png"));
 		this.blit(ms, this.leftPos + 58, this.topPos + 49, 0, 0, 16, 16, 16, 16);
 
-		RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/dustgui.png"));
+		RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/screens/dustgui.png"));
 		this.blit(ms, this.leftPos + 126, this.topPos + 28, 0, 0, 16, 16, 16, 16);
 
 		RenderSystem.disableBlend();
@@ -186,20 +187,18 @@ public class CoalgeneratorGUIScreen extends AbstractContainerScreen<Coalgenerato
 
 	@Override
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
-		this.font.draw(poseStack, "Inventory", 6, 81, -12829636);
-		this.font.draw(poseStack, "Coal Generator", 4, 4, -13421773);
-		this.font.draw(poseStack, "RF", 7, 18, -6750208);
+		this.font.draw(poseStack, Component.translatable("gui.elec_tronics.coalgenerator_gui.label_inventory"), 6, 81, -12829636);
+		this.font.draw(poseStack, Component.translatable("gui.elec_tronics.coalgenerator_gui.label_coal_generator"), 4, 4, -13421773);
+		this.font.draw(poseStack, Component.translatable("gui.elec_tronics.coalgenerator_gui.label_rf"), 7, 18, -6750208);
 	}
 
 	@Override
 	public void onClose() {
 		super.onClose();
-		Minecraft.getInstance().keyboardHandler.setSendRepeatsToGui(false);
 	}
 
 	@Override
 	public void init() {
 		super.init();
-		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
 	}
 }

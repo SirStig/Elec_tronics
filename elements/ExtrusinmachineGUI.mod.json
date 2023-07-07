@@ -1,5 +1,5 @@
 {
-  "_fv": 24,
+  "_fv": 43,
   "_type": "gui",
   "definition": {
     "type": 1,
@@ -13,12 +13,14 @@
       {
         "type": "label",
         "data": {
-          "text": "Extrusion Machine",
+          "name": "label_extrusion_machine",
+          "text": {
+            "fixedValue": "Extrusion Machine"
+          },
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "Extrusion Machine",
           "x": 131,
           "y": 36
         }
@@ -26,12 +28,14 @@
       {
         "type": "label",
         "data": {
-          "text": "Inventory",
+          "name": "label_inventory",
+          "text": {
+            "fixedValue": "Inventory"
+          },
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "Inventory",
           "x": 131,
           "y": 115
         }
@@ -42,10 +46,14 @@
           "inputLimit": {
             "value": ""
           },
+          "disablePlacement": {
+            "fixedValue": false
+          },
           "id": 0,
-          "disableStackInteraction": false,
+          "disablePickup": {
+            "fixedValue": false
+          },
           "dropItemsWhenNotBound": false,
-          "name": "Slot #0",
           "x": 177,
           "y": 74
         }
@@ -54,9 +62,10 @@
         "type": "outputslot",
         "data": {
           "id": 1,
-          "disableStackInteraction": false,
+          "disablePickup": {
+            "fixedValue": false
+          },
           "dropItemsWhenNotBound": false,
-          "name": "Slot #1",
           "x": 231,
           "y": 74
         }
@@ -69,7 +78,6 @@
           "displayCondition": {
             "name": "Powertick0"
           },
-          "name": "batterv1.png",
           "x": 134,
           "y": 54
         }
@@ -82,7 +90,6 @@
           "displayCondition": {
             "name": "Powertick1"
           },
-          "name": "battery5.png",
           "x": 134,
           "y": 54
         }
@@ -95,7 +102,6 @@
           "displayCondition": {
             "name": "Powertick2"
           },
-          "name": "battery10.png",
           "x": 134,
           "y": 54
         }
@@ -108,7 +114,6 @@
           "displayCondition": {
             "name": "Powertick3"
           },
-          "name": "battery20.png",
           "x": 134,
           "y": 54
         }
@@ -121,7 +126,6 @@
           "displayCondition": {
             "name": "Powertick4"
           },
-          "name": "battery30.png",
           "x": 134,
           "y": 54
         }
@@ -134,7 +138,6 @@
           "displayCondition": {
             "name": "Powertick5"
           },
-          "name": "battery40.png",
           "x": 134,
           "y": 54
         }
@@ -147,7 +150,6 @@
           "displayCondition": {
             "name": "Powertick6"
           },
-          "name": "battery50.png",
           "x": 134,
           "y": 54
         }
@@ -160,7 +162,6 @@
           "displayCondition": {
             "name": "Powertick7"
           },
-          "name": "battery60.png",
           "x": 134,
           "y": 54
         }
@@ -173,7 +174,6 @@
           "displayCondition": {
             "name": "Powertick8"
           },
-          "name": "battery70.png",
           "x": 134,
           "y": 54
         }
@@ -186,7 +186,6 @@
           "displayCondition": {
             "name": "Powertick8"
           },
-          "name": "battery80.png",
           "x": 134,
           "y": 54
         }
@@ -199,7 +198,6 @@
           "displayCondition": {
             "name": "Powertick9"
           },
-          "name": "battery92full.png",
           "x": 134,
           "y": 54
         }
@@ -209,7 +207,6 @@
         "data": {
           "image": "input.png",
           "use1Xscale": false,
-          "name": "input.png",
           "x": 173,
           "y": 70
         }
@@ -219,7 +216,6 @@
         "data": {
           "image": "output.png",
           "use1Xscale": false,
-          "name": "output.png",
           "x": 227,
           "y": 70
         }
@@ -229,7 +225,6 @@
         "data": {
           "image": "ingotgui.png",
           "use1Xscale": false,
-          "name": "ingotgui.png",
           "x": 177,
           "y": 54
         }
@@ -239,7 +234,6 @@
         "data": {
           "image": "extrusion0.png",
           "use1Xscale": true,
-          "name": "extrusion0.png",
           "x": 198,
           "y": 75
         }

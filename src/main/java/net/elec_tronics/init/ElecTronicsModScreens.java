@@ -1,6 +1,6 @@
 
 /*
- *    MCreator note: This file will be REGENERATED on each build.
+ *	MCreator note: This file will be REGENERATED on each build.
  */
 package net.elec_tronics.init;
 
@@ -23,12 +23,12 @@ public class ElecTronicsModScreens {
 	@SubscribeEvent
 	public static void clientLoad(FMLClientSetupEvent event) {
 		event.enqueueWork(() -> {
-			MenuScreens.register(ElecTronicsModMenus.BLASTFURNACE, BlastfurnaceScreen::new);
-			MenuScreens.register(ElecTronicsModMenus.WORKBENCHGUI, WorkbenchguiScreen::new);
-			MenuScreens.register(ElecTronicsModMenus.COALGENERATOR_GUI, CoalgeneratorGUIScreen::new);
-			MenuScreens.register(ElecTronicsModMenus.CRUSHER_T_1_GUI, CrusherT1GUIScreen::new);
-			MenuScreens.register(ElecTronicsModMenus.SOLARPANEL_GUI, SolarpanelGUIScreen::new);
-			MenuScreens.register(ElecTronicsModMenus.EXTRUSINMACHINE_GUI, ExtrusinmachineGUIScreen::new);
+			MenuScreens.register(ElecTronicsModMenus.BLASTFURNACE.get(), BlastfurnaceScreen::new);
+			MenuScreens.register(ElecTronicsModMenus.WORKBENCHGUI.get(), WorkbenchguiScreen::new);
+			MenuScreens.register(ElecTronicsModMenus.COALGENERATOR_GUI.get(), CoalgeneratorGUIScreen::new);
+			MenuScreens.register(ElecTronicsModMenus.CRUSHER_T_1_GUI.get(), CrusherT1GUIScreen::new);
+			MenuScreens.register(ElecTronicsModMenus.SOLARPANEL_GUI.get(), SolarpanelGUIScreen::new);
+			MenuScreens.register(ElecTronicsModMenus.EXTRUSINMACHINE_GUI.get(), ExtrusinmachineGUIScreen::new);
 		});
 	}
 }

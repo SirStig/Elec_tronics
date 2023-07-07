@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "elec_tronics:items/steel_head"
+    "layer0": "elec_tronics:item/steel_head"
   }
 }

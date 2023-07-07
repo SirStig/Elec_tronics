@@ -12,10 +12,7 @@ import net.elec_tronics.init.ElecTronicsModFluids;
 
 public class BrineBlock extends LiquidBlock {
 	public BrineBlock() {
-		super(ElecTronicsModFluids.BRINE, BlockBehaviour.Properties.of(Material.WATER).strength(100f)
-
-		);
-		setRegistryName("brine");
+		super(() -> ElecTronicsModFluids.BRINE.get(), BlockBehaviour.Properties.of(Material.WATER).strength(100f).noCollission().noLootTable());
 	}
 
 	@Override

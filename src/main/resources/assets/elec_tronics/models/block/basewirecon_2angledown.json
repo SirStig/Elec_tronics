@@ -1,12 +1,13 @@
 {
   "parent": "elec_tronics:custom/base_wire_con_2_angle_down",
   "textures": {
-    "all": "elec_tronics:blocks/basetemp",
-    "particle": "elec_tronics:blocks/basetemp",
-    "0": "elec_tronics:blocks/cable_angle_end",
-    "1": "elec_tronics:blocks/cable_particles",
-    "4": "elec_tronics:blocks/elec_tronicst1cable_end",
-    "5": "elec_tronics:blocks/elec_tronicst1cable_side",
-    "missing": "elec_tronics:blocks/cable_particles"
-  }
+    "all": "elec_tronics:block/basetemp",
+    "particle": "elec_tronics:block/basetemp",
+    "0": "elec_tronics:block/cable_angle_end",
+    "1": "elec_tronics:block/cable_particles",
+    "4": "elec_tronics:block/elec_tronicst1cable_end",
+    "5": "elec_tronics:block/elec_tronicst1cable_side",
+    "missing": "elec_tronics:block/cable_particles"
+  },
+  "render_type": "solid"
 }

@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "elec_tronics:items/grinder"
+    "layer0": "elec_tronics:item/grinder"
   }
 }

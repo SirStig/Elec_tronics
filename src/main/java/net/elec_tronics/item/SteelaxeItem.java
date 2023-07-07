@@ -7,7 +7,6 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.AxeItem;
 
-import net.elec_tronics.init.ElecTronicsModTabs;
 import net.elec_tronics.init.ElecTronicsModItems;
 
 public class SteelaxeItem extends AxeItem {
@@ -34,9 +33,8 @@ public class SteelaxeItem extends AxeItem {
 			}
 
 			public Ingredient getRepairIngredient() {
-				return Ingredient.of(new ItemStack(ElecTronicsModItems.STEELINGOT));
+				return Ingredient.of(new ItemStack(ElecTronicsModItems.STEELINGOT.get()));
 			}
-		}, 1, -3f, new Item.Properties().tab(ElecTronicsModTabs.TAB_ELEC_TRONICS_MENU));
-		setRegistryName("steelaxe");
+		}, 1, -3f, new Item.Properties());
 	}
 }

@@ -20,8 +20,6 @@ import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.core.BlockPos;
 
-import net.elec_tronics.init.ElecTronicsModTabs;
-
 import com.google.common.collect.Multimap;
 import com.google.common.collect.ImmutableMultimap;
 
@@ -51,8 +49,7 @@ public class HammerItem extends TieredItem {
 			public Ingredient getRepairIngredient() {
 				return Ingredient.of(new ItemStack(Items.IRON_INGOT));
 			}
-		}, new Item.Properties().tab(ElecTronicsModTabs.TAB_ELEC_TRONICS_MENU));
-		setRegistryName("hammer");
+		}, new Item.Properties());
 	}
 
 	@Override
@@ -65,15 +62,13 @@ public class HammerItem extends TieredItem {
 		} else {
 			return tier < 1 && blockstate.is(BlockTags.NEEDS_STONE_TOOL)
 					? false
-					: (blockstate.is(BlockTags.MINEABLE_WITH_AXE) || blockstate.is(BlockTags.MINEABLE_WITH_HOE)
-							|| blockstate.is(BlockTags.MINEABLE_WITH_PICKAXE) || blockstate.is(BlockTags.MINEABLE_WITH_SHOVEL));
+					: (blockstate.is(BlockTags.MINEABLE_WITH_AXE) || blockstate.is(BlockTags.MINEABLE_WITH_HOE) || blockstate.is(BlockTags.MINEABLE_WITH_PICKAXE) || blockstate.is(BlockTags.MINEABLE_WITH_SHOVEL));
 		}
 	}
 
 	@Override
 	public boolean canPerformAction(ItemStack stack, ToolAction toolAction) {
-		return ToolActions.DEFAULT_AXE_ACTIONS.contains(toolAction) || ToolActions.DEFAULT_HOE_ACTIONS.contains(toolAction)
-				|| ToolActions.DEFAULT_SHOVEL_ACTIONS.contains(toolAction) || ToolActions.DEFAULT_PICKAXE_ACTIONS.contains(toolAction)
+		return ToolActions.DEFAULT_AXE_ACTIONS.contains(toolAction) || ToolActions.DEFAULT_HOE_ACTIONS.contains(toolAction) || ToolActions.DEFAULT_SHOVEL_ACTIONS.contains(toolAction) || ToolActions.DEFAULT_PICKAXE_ACTIONS.contains(toolAction)
 				|| ToolActions.DEFAULT_SWORD_ACTIONS.contains(toolAction);
 	}
 
@@ -87,24 +82,22 @@ public class HammerItem extends TieredItem {
 		if (equipmentSlot == EquipmentSlot.MAINHAND) {
 			ImmutableMultimap.Builder<Attribute, AttributeModifier> builder = ImmutableMultimap.builder();
 			builder.putAll(super.getDefaultAttributeModifiers(equipmentSlot));
-			builder.put(Attributes.ATTACK_DAMAGE,
-					new AttributeModifier(BASE_ATTACK_DAMAGE_UUID, "Tool modifier", 8f, AttributeModifier.Operation.ADDITION));
-			builder.put(Attributes.ATTACK_SPEED,
-					new AttributeModifier(BASE_ATTACK_SPEED_UUID, "Tool modifier", -3.7, AttributeModifier.Operation.ADDITION));
+			builder.put(Attributes.ATTACK_DAMAGE, new AttributeModifier(BASE_ATTACK_DAMAGE_UUID, "Tool modifier", 8f, AttributeModifier.Operation.ADDITION));
+			builder.put(Attributes.ATTACK_SPEED, new AttributeModifier(BASE_ATTACK_SPEED_UUID, "Tool modifier", -3.7, AttributeModifier.Operation.ADDITION));
 			return builder.build();
 		}
 		return super.getDefaultAttributeModifiers(equipmentSlot);
 	}
 
 	@Override
-	public boolean hurtEnemy(ItemStack stack, LivingEntity entity, LivingEntity sourceentity) {
-		stack.hurtAndBreak(2, sourceentity, i -> i.broadcastBreakEvent(EquipmentSlot.MAINHAND));
+	public boolean mineBlock(ItemStack itemstack, Level world, BlockState blockstate, BlockPos pos, LivingEntity entity) {
+		itemstack.hurtAndBreak(1, entity, i -> i.broadcastBreakEvent(EquipmentSlot.MAINHAND));
 		return true;
 	}
 
 	@Override
-	public boolean mineBlock(ItemStack stack, Level world, BlockState state, BlockPos pos, LivingEntity entity) {
-		stack.hurtAndBreak(1, entity, i -> i.broadcastBreakEvent(EquipmentSlot.MAINHAND));
+	public boolean hurtEnemy(ItemStack itemstack, LivingEntity entity, LivingEntity sourceentity) {
+		itemstack.hurtAndBreak(2, entity, i -> i.broadcastBreakEvent(EquipmentSlot.MAINHAND));
 		return true;
 	}
 }

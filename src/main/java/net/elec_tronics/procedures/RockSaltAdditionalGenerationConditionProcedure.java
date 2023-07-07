@@ -12,13 +12,12 @@ public class RockSaltAdditionalGenerationConditionProcedure {
 		double sz = 0;
 		sx = -1;
 		found = false;
-		for (int index0 = 0; index0 < (int) (2); index0++) {
+		for (int index0 = 0; index0 < 2; index0++) {
 			sy = -1;
-			for (int index1 = 0; index1 < (int) (2); index1++) {
+			for (int index1 = 0; index1 < 2; index1++) {
 				sz = -1;
-				for (int index2 = 0; index2 < (int) (2); index2++) {
-					if ((world.getBlockState(new BlockPos((int) (x + sx), (int) (y + sy), (int) (z + sz))))
-							.getBlock() instanceof LiquidBlock == true) {
+				for (int index2 = 0; index2 < 2; index2++) {
+					if ((world.getBlockState(BlockPos.containing(x + sx, y + sy, z + sz))).getBlock() instanceof LiquidBlock == true) {
 						return true;
 					}
 					sz = sz + 1;

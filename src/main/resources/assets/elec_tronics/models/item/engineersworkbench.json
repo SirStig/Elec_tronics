@@ -1,6 +1,7 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "elec_tronics:items/workbenchfinal"
-  }
+    "layer0": "elec_tronics:item/workbenchfinal"
+  },
+  "render_type": "translucent"
 }

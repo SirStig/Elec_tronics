@@ -3,6 +3,7 @@ package net.elec_tronics.procedures;
 import net.minecraft.world.level.block.state.properties.Property;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.Block;
@@ -18,11 +19,11 @@ public class EngineersworkbenchBlockAddedProcedure {
 		double random = 0;
 		random = Math.round(Math.random() * 100000.1);
 		if (!world.isClientSide()) {
-			BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+			BlockPos _bp = BlockPos.containing(x, y, z);
 			BlockEntity _blockEntity = world.getBlockEntity(_bp);
 			BlockState _bs = world.getBlockState(_bp);
 			if (_blockEntity != null)
-				_blockEntity.getTileData().putDouble("generatorID", random);
+				_blockEntity.getPersistentData().putDouble("generatorID", random);
 			if (world instanceof Level _level)
 				_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 		}
@@ -30,91 +31,89 @@ public class EngineersworkbenchBlockAddedProcedure {
 			public Direction getDirection(BlockPos pos) {
 				BlockState _bs = world.getBlockState(pos);
 				Property<?> property = _bs.getBlock().getStateDefinition().getProperty("facing");
-				if (property != null && _bs.getValue(property)instanceof Direction _dir)
+				if (property != null && _bs.getValue(property) instanceof Direction _dir)
 					return _dir;
-				property = _bs.getBlock().getStateDefinition().getProperty("axis");
-				if (property != null && _bs.getValue(property)instanceof Direction.Axis _axis)
-					return Direction.fromAxisAndDirection(_axis, Direction.AxisDirection.POSITIVE);
+				else if (_bs.hasProperty(BlockStateProperties.AXIS))
+					return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.AXIS), Direction.AxisDirection.POSITIVE);
+				else if (_bs.hasProperty(BlockStateProperties.HORIZONTAL_AXIS))
+					return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.HORIZONTAL_AXIS), Direction.AxisDirection.POSITIVE);
 				return Direction.NORTH;
 			}
-		}.getDirection(new BlockPos((int) x, (int) y, (int) z))) == Direction.NORTH) {
-			if (world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) z)).canOcclude() == false) {
-				if (world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z)).canOcclude() == false) {
-					if (world.getBlockState(new BlockPos((int) (x - 1), (int) (y + 1), (int) z)).canOcclude() == false) {
-						world.setBlock(new BlockPos((int) (x - 1), (int) y, (int) z),
-								ElecTronicsModBlocks.ENGINEERS_WORK_BENCH_SIDE.defaultBlockState(), 3);
+		}.getDirection(BlockPos.containing(x, y, z))) == Direction.NORTH) {
+			if (world.getBlockState(BlockPos.containing(x - 1, y, z)).canOcclude() == false) {
+				if (world.getBlockState(BlockPos.containing(x, y + 1, z)).canOcclude() == false) {
+					if (world.getBlockState(BlockPos.containing(x - 1, y + 1, z)).canOcclude() == false) {
+						world.setBlock(BlockPos.containing(x - 1, y, z), ElecTronicsModBlocks.ENGINEERS_WORK_BENCH_SIDE.get().defaultBlockState(), 3);
 						if (!world.isClientSide()) {
-							BlockPos _bp = new BlockPos((int) (x - 1), (int) y, (int) z);
+							BlockPos _bp = BlockPos.containing(x - 1, y, z);
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
 							if (_blockEntity != null)
-								_blockEntity.getTileData().putDouble("generatorID", random);
+								_blockEntity.getPersistentData().putDouble("generatorID", random);
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
-						world.setBlock(new BlockPos((int) (x - 1), (int) (y + 1), (int) z),
-								ElecTronicsModBlocks.ENGINEERS_WORK_BENCH_TOP_SIDE.defaultBlockState(), 3);
+						world.setBlock(BlockPos.containing(x - 1, y + 1, z), ElecTronicsModBlocks.ENGINEERS_WORK_BENCH_TOP_SIDE.get().defaultBlockState(), 3);
 						if (!world.isClientSide()) {
-							BlockPos _bp = new BlockPos((int) (x - 1), (int) (y + 1), (int) z);
+							BlockPos _bp = BlockPos.containing(x - 1, y + 1, z);
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
 							if (_blockEntity != null)
-								_blockEntity.getTileData().putDouble("generatorID", random);
+								_blockEntity.getPersistentData().putDouble("generatorID", random);
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
-						world.setBlock(new BlockPos((int) x, (int) (y + 1), (int) z),
-								ElecTronicsModBlocks.ENGINEERS_WORK_BENCH_TOP.defaultBlockState(), 3);
+						world.setBlock(BlockPos.containing(x, y + 1, z), ElecTronicsModBlocks.ENGINEERS_WORK_BENCH_TOP.get().defaultBlockState(), 3);
 						if (!world.isClientSide()) {
-							BlockPos _bp = new BlockPos((int) x, (int) (y + 1), (int) z);
+							BlockPos _bp = BlockPos.containing(x, y + 1, z);
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
 							if (_blockEntity != null)
-								_blockEntity.getTileData().putDouble("generatorID", random);
+								_blockEntity.getPersistentData().putDouble("generatorID", random);
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
 					} else {
-						if (world instanceof Level) {
-							Block.dropResources(world.getBlockState(new BlockPos((int) x, (int) y, (int) z)), (Level) world,
-									new BlockPos((int) x, (int) y, (int) z));
-							world.destroyBlock(new BlockPos((int) x, (int) y, (int) z), false);
+						{
+							BlockPos _pos = BlockPos.containing(x, y, z);
+							Block.dropResources(world.getBlockState(_pos), world, BlockPos.containing(x, y, z), null);
+							world.destroyBlock(_pos, false);
 						}
 					}
 				} else {
-					if (world instanceof Level) {
-						Block.dropResources(world.getBlockState(new BlockPos((int) x, (int) y, (int) z)), (Level) world,
-								new BlockPos((int) x, (int) y, (int) z));
-						world.destroyBlock(new BlockPos((int) x, (int) y, (int) z), false);
+					{
+						BlockPos _pos = BlockPos.containing(x, y, z);
+						Block.dropResources(world.getBlockState(_pos), world, BlockPos.containing(x, y, z), null);
+						world.destroyBlock(_pos, false);
 					}
 				}
 			} else {
-				if (world instanceof Level) {
-					Block.dropResources(world.getBlockState(new BlockPos((int) x, (int) y, (int) z)), (Level) world,
-							new BlockPos((int) x, (int) y, (int) z));
-					world.destroyBlock(new BlockPos((int) x, (int) y, (int) z), false);
+				{
+					BlockPos _pos = BlockPos.containing(x, y, z);
+					Block.dropResources(world.getBlockState(_pos), world, BlockPos.containing(x, y, z), null);
+					world.destroyBlock(_pos, false);
 				}
 			}
 		} else if ((new Object() {
 			public Direction getDirection(BlockPos pos) {
 				BlockState _bs = world.getBlockState(pos);
 				Property<?> property = _bs.getBlock().getStateDefinition().getProperty("facing");
-				if (property != null && _bs.getValue(property)instanceof Direction _dir)
+				if (property != null && _bs.getValue(property) instanceof Direction _dir)
 					return _dir;
-				property = _bs.getBlock().getStateDefinition().getProperty("axis");
-				if (property != null && _bs.getValue(property)instanceof Direction.Axis _axis)
-					return Direction.fromAxisAndDirection(_axis, Direction.AxisDirection.POSITIVE);
+				else if (_bs.hasProperty(BlockStateProperties.AXIS))
+					return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.AXIS), Direction.AxisDirection.POSITIVE);
+				else if (_bs.hasProperty(BlockStateProperties.HORIZONTAL_AXIS))
+					return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.HORIZONTAL_AXIS), Direction.AxisDirection.POSITIVE);
 				return Direction.NORTH;
 			}
-		}.getDirection(new BlockPos((int) x, (int) y, (int) z))) == Direction.WEST) {
-			if (world.getBlockState(new BlockPos((int) x, (int) y, (int) (z + 1))).canOcclude() == false) {
-				if (world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z)).canOcclude() == false) {
-					if (world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) (z + 1))).canOcclude() == false) {
-						world.setBlock(new BlockPos((int) x, (int) y, (int) (z + 1)),
-								ElecTronicsModBlocks.ENGINEERS_WORK_BENCH_SIDE.defaultBlockState(), 3);
+		}.getDirection(BlockPos.containing(x, y, z))) == Direction.WEST) {
+			if (world.getBlockState(BlockPos.containing(x, y, z + 1)).canOcclude() == false) {
+				if (world.getBlockState(BlockPos.containing(x, y + 1, z)).canOcclude() == false) {
+					if (world.getBlockState(BlockPos.containing(x, y + 1, z + 1)).canOcclude() == false) {
+						world.setBlock(BlockPos.containing(x, y, z + 1), ElecTronicsModBlocks.ENGINEERS_WORK_BENCH_SIDE.get().defaultBlockState(), 3);
 						{
 							Direction _dir = Direction.WEST;
-							BlockPos _pos = new BlockPos((int) x, (int) y, (int) (z + 1));
+							BlockPos _pos = BlockPos.containing(x, y, z + 1);
 							BlockState _bs = world.getBlockState(_pos);
 							Property<?> _property = _bs.getBlock().getStateDefinition().getProperty("facing");
 							if (_property instanceof DirectionProperty _dp && _dp.getPossibleValues().contains(_dir)) {
@@ -126,19 +125,18 @@ public class EngineersworkbenchBlockAddedProcedure {
 							}
 						}
 						if (!world.isClientSide()) {
-							BlockPos _bp = new BlockPos((int) x, (int) y, (int) (z + 1));
+							BlockPos _bp = BlockPos.containing(x, y, z + 1);
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
 							if (_blockEntity != null)
-								_blockEntity.getTileData().putDouble("generatorID", random);
+								_blockEntity.getPersistentData().putDouble("generatorID", random);
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
-						world.setBlock(new BlockPos((int) x, (int) (y + 1), (int) (z + 1)),
-								ElecTronicsModBlocks.ENGINEERS_WORK_BENCH_TOP_SIDE.defaultBlockState(), 3);
+						world.setBlock(BlockPos.containing(x, y + 1, z + 1), ElecTronicsModBlocks.ENGINEERS_WORK_BENCH_TOP_SIDE.get().defaultBlockState(), 3);
 						{
 							Direction _dir = Direction.WEST;
-							BlockPos _pos = new BlockPos((int) x, (int) (y + 1), (int) (z + 1));
+							BlockPos _pos = BlockPos.containing(x, y + 1, z + 1);
 							BlockState _bs = world.getBlockState(_pos);
 							Property<?> _property = _bs.getBlock().getStateDefinition().getProperty("facing");
 							if (_property instanceof DirectionProperty _dp && _dp.getPossibleValues().contains(_dir)) {
@@ -150,19 +148,18 @@ public class EngineersworkbenchBlockAddedProcedure {
 							}
 						}
 						if (!world.isClientSide()) {
-							BlockPos _bp = new BlockPos((int) x, (int) (y + 1), (int) (z + 1));
+							BlockPos _bp = BlockPos.containing(x, y + 1, z + 1);
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
 							if (_blockEntity != null)
-								_blockEntity.getTileData().putDouble("generatorID", random);
+								_blockEntity.getPersistentData().putDouble("generatorID", random);
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
-						world.setBlock(new BlockPos((int) x, (int) (y + 1), (int) z),
-								ElecTronicsModBlocks.ENGINEERS_WORK_BENCH_TOP.defaultBlockState(), 3);
+						world.setBlock(BlockPos.containing(x, y + 1, z), ElecTronicsModBlocks.ENGINEERS_WORK_BENCH_TOP.get().defaultBlockState(), 3);
 						{
 							Direction _dir = Direction.WEST;
-							BlockPos _pos = new BlockPos((int) x, (int) (y + 1), (int) z);
+							BlockPos _pos = BlockPos.containing(x, y + 1, z);
 							BlockState _bs = world.getBlockState(_pos);
 							Property<?> _property = _bs.getBlock().getStateDefinition().getProperty("facing");
 							if (_property instanceof DirectionProperty _dp && _dp.getPossibleValues().contains(_dir)) {
@@ -174,55 +171,55 @@ public class EngineersworkbenchBlockAddedProcedure {
 							}
 						}
 						if (!world.isClientSide()) {
-							BlockPos _bp = new BlockPos((int) x, (int) (y + 1), (int) z);
+							BlockPos _bp = BlockPos.containing(x, y + 1, z);
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
 							if (_blockEntity != null)
-								_blockEntity.getTileData().putDouble("generatorID", random);
+								_blockEntity.getPersistentData().putDouble("generatorID", random);
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
 					} else {
-						if (world instanceof Level) {
-							Block.dropResources(world.getBlockState(new BlockPos((int) x, (int) y, (int) z)), (Level) world,
-									new BlockPos((int) x, (int) y, (int) z));
-							world.destroyBlock(new BlockPos((int) x, (int) y, (int) z), false);
+						{
+							BlockPos _pos = BlockPos.containing(x, y, z);
+							Block.dropResources(world.getBlockState(_pos), world, BlockPos.containing(x, y, z), null);
+							world.destroyBlock(_pos, false);
 						}
 					}
 				} else {
-					if (world instanceof Level) {
-						Block.dropResources(world.getBlockState(new BlockPos((int) x, (int) y, (int) z)), (Level) world,
-								new BlockPos((int) x, (int) y, (int) z));
-						world.destroyBlock(new BlockPos((int) x, (int) y, (int) z), false);
+					{
+						BlockPos _pos = BlockPos.containing(x, y, z);
+						Block.dropResources(world.getBlockState(_pos), world, BlockPos.containing(x, y, z), null);
+						world.destroyBlock(_pos, false);
 					}
 				}
 			} else {
-				if (world instanceof Level) {
-					Block.dropResources(world.getBlockState(new BlockPos((int) x, (int) y, (int) z)), (Level) world,
-							new BlockPos((int) x, (int) y, (int) z));
-					world.destroyBlock(new BlockPos((int) x, (int) y, (int) z), false);
+				{
+					BlockPos _pos = BlockPos.containing(x, y, z);
+					Block.dropResources(world.getBlockState(_pos), world, BlockPos.containing(x, y, z), null);
+					world.destroyBlock(_pos, false);
 				}
 			}
 		} else if ((new Object() {
 			public Direction getDirection(BlockPos pos) {
 				BlockState _bs = world.getBlockState(pos);
 				Property<?> property = _bs.getBlock().getStateDefinition().getProperty("facing");
-				if (property != null && _bs.getValue(property)instanceof Direction _dir)
+				if (property != null && _bs.getValue(property) instanceof Direction _dir)
 					return _dir;
-				property = _bs.getBlock().getStateDefinition().getProperty("axis");
-				if (property != null && _bs.getValue(property)instanceof Direction.Axis _axis)
-					return Direction.fromAxisAndDirection(_axis, Direction.AxisDirection.POSITIVE);
+				else if (_bs.hasProperty(BlockStateProperties.AXIS))
+					return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.AXIS), Direction.AxisDirection.POSITIVE);
+				else if (_bs.hasProperty(BlockStateProperties.HORIZONTAL_AXIS))
+					return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.HORIZONTAL_AXIS), Direction.AxisDirection.POSITIVE);
 				return Direction.NORTH;
 			}
-		}.getDirection(new BlockPos((int) x, (int) y, (int) z))) == Direction.EAST) {
-			if (world.getBlockState(new BlockPos((int) x, (int) y, (int) (z - 1))).canOcclude() == false) {
-				if (world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z)).canOcclude() == false) {
-					if (world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) (z - 1))).canOcclude() == false) {
-						world.setBlock(new BlockPos((int) x, (int) y, (int) (z - 1)),
-								ElecTronicsModBlocks.ENGINEERS_WORK_BENCH_SIDE.defaultBlockState(), 3);
+		}.getDirection(BlockPos.containing(x, y, z))) == Direction.EAST) {
+			if (world.getBlockState(BlockPos.containing(x, y, z - 1)).canOcclude() == false) {
+				if (world.getBlockState(BlockPos.containing(x, y + 1, z)).canOcclude() == false) {
+					if (world.getBlockState(BlockPos.containing(x, y + 1, z - 1)).canOcclude() == false) {
+						world.setBlock(BlockPos.containing(x, y, z - 1), ElecTronicsModBlocks.ENGINEERS_WORK_BENCH_SIDE.get().defaultBlockState(), 3);
 						{
 							Direction _dir = Direction.EAST;
-							BlockPos _pos = new BlockPos((int) x, (int) y, (int) (z - 1));
+							BlockPos _pos = BlockPos.containing(x, y, z - 1);
 							BlockState _bs = world.getBlockState(_pos);
 							Property<?> _property = _bs.getBlock().getStateDefinition().getProperty("facing");
 							if (_property instanceof DirectionProperty _dp && _dp.getPossibleValues().contains(_dir)) {
@@ -234,19 +231,18 @@ public class EngineersworkbenchBlockAddedProcedure {
 							}
 						}
 						if (!world.isClientSide()) {
-							BlockPos _bp = new BlockPos((int) x, (int) y, (int) (z - 1));
+							BlockPos _bp = BlockPos.containing(x, y, z - 1);
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
 							if (_blockEntity != null)
-								_blockEntity.getTileData().putDouble("generatorID", random);
+								_blockEntity.getPersistentData().putDouble("generatorID", random);
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
-						world.setBlock(new BlockPos((int) x, (int) (y + 1), (int) (z - 1)),
-								ElecTronicsModBlocks.ENGINEERS_WORK_BENCH_TOP_SIDE.defaultBlockState(), 3);
+						world.setBlock(BlockPos.containing(x, y + 1, z - 1), ElecTronicsModBlocks.ENGINEERS_WORK_BENCH_TOP_SIDE.get().defaultBlockState(), 3);
 						{
 							Direction _dir = Direction.EAST;
-							BlockPos _pos = new BlockPos((int) x, (int) (y + 1), (int) (z - 1));
+							BlockPos _pos = BlockPos.containing(x, y + 1, z - 1);
 							BlockState _bs = world.getBlockState(_pos);
 							Property<?> _property = _bs.getBlock().getStateDefinition().getProperty("facing");
 							if (_property instanceof DirectionProperty _dp && _dp.getPossibleValues().contains(_dir)) {
@@ -258,19 +254,18 @@ public class EngineersworkbenchBlockAddedProcedure {
 							}
 						}
 						if (!world.isClientSide()) {
-							BlockPos _bp = new BlockPos((int) x, (int) (y + 1), (int) (z - 1));
+							BlockPos _bp = BlockPos.containing(x, y + 1, z - 1);
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
 							if (_blockEntity != null)
-								_blockEntity.getTileData().putDouble("generatorID", random);
+								_blockEntity.getPersistentData().putDouble("generatorID", random);
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
-						world.setBlock(new BlockPos((int) x, (int) (y + 1), (int) z),
-								ElecTronicsModBlocks.ENGINEERS_WORK_BENCH_TOP.defaultBlockState(), 3);
+						world.setBlock(BlockPos.containing(x, y + 1, z), ElecTronicsModBlocks.ENGINEERS_WORK_BENCH_TOP.get().defaultBlockState(), 3);
 						{
 							Direction _dir = Direction.EAST;
-							BlockPos _pos = new BlockPos((int) x, (int) (y + 1), (int) z);
+							BlockPos _pos = BlockPos.containing(x, y + 1, z);
 							BlockState _bs = world.getBlockState(_pos);
 							Property<?> _property = _bs.getBlock().getStateDefinition().getProperty("facing");
 							if (_property instanceof DirectionProperty _dp && _dp.getPossibleValues().contains(_dir)) {
@@ -282,55 +277,55 @@ public class EngineersworkbenchBlockAddedProcedure {
 							}
 						}
 						if (!world.isClientSide()) {
-							BlockPos _bp = new BlockPos((int) x, (int) (y + 1), (int) z);
+							BlockPos _bp = BlockPos.containing(x, y + 1, z);
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
 							if (_blockEntity != null)
-								_blockEntity.getTileData().putDouble("generatorID", random);
+								_blockEntity.getPersistentData().putDouble("generatorID", random);
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
 					} else {
-						if (world instanceof Level) {
-							Block.dropResources(world.getBlockState(new BlockPos((int) x, (int) y, (int) z)), (Level) world,
-									new BlockPos((int) x, (int) y, (int) z));
-							world.destroyBlock(new BlockPos((int) x, (int) y, (int) z), false);
+						{
+							BlockPos _pos = BlockPos.containing(x, y, z);
+							Block.dropResources(world.getBlockState(_pos), world, BlockPos.containing(x, y, z), null);
+							world.destroyBlock(_pos, false);
 						}
 					}
 				} else {
-					if (world instanceof Level) {
-						Block.dropResources(world.getBlockState(new BlockPos((int) x, (int) y, (int) z)), (Level) world,
-								new BlockPos((int) x, (int) y, (int) z));
-						world.destroyBlock(new BlockPos((int) x, (int) y, (int) z), false);
+					{
+						BlockPos _pos = BlockPos.containing(x, y, z);
+						Block.dropResources(world.getBlockState(_pos), world, BlockPos.containing(x, y, z), null);
+						world.destroyBlock(_pos, false);
 					}
 				}
 			} else {
-				if (world instanceof Level) {
-					Block.dropResources(world.getBlockState(new BlockPos((int) x, (int) y, (int) z)), (Level) world,
-							new BlockPos((int) x, (int) y, (int) z));
-					world.destroyBlock(new BlockPos((int) x, (int) y, (int) z), false);
+				{
+					BlockPos _pos = BlockPos.containing(x, y, z);
+					Block.dropResources(world.getBlockState(_pos), world, BlockPos.containing(x, y, z), null);
+					world.destroyBlock(_pos, false);
 				}
 			}
 		} else if ((new Object() {
 			public Direction getDirection(BlockPos pos) {
 				BlockState _bs = world.getBlockState(pos);
 				Property<?> property = _bs.getBlock().getStateDefinition().getProperty("facing");
-				if (property != null && _bs.getValue(property)instanceof Direction _dir)
+				if (property != null && _bs.getValue(property) instanceof Direction _dir)
 					return _dir;
-				property = _bs.getBlock().getStateDefinition().getProperty("axis");
-				if (property != null && _bs.getValue(property)instanceof Direction.Axis _axis)
-					return Direction.fromAxisAndDirection(_axis, Direction.AxisDirection.POSITIVE);
+				else if (_bs.hasProperty(BlockStateProperties.AXIS))
+					return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.AXIS), Direction.AxisDirection.POSITIVE);
+				else if (_bs.hasProperty(BlockStateProperties.HORIZONTAL_AXIS))
+					return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.HORIZONTAL_AXIS), Direction.AxisDirection.POSITIVE);
 				return Direction.NORTH;
 			}
-		}.getDirection(new BlockPos((int) x, (int) y, (int) z))) == Direction.SOUTH) {
-			if (world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) z)).canOcclude() == false) {
-				if (world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z)).canOcclude() == false) {
-					if (world.getBlockState(new BlockPos((int) (x + 1), (int) (y + 1), (int) z)).canOcclude() == false) {
-						world.setBlock(new BlockPos((int) (x + 1), (int) y, (int) z),
-								ElecTronicsModBlocks.ENGINEERS_WORK_BENCH_SIDE.defaultBlockState(), 3);
+		}.getDirection(BlockPos.containing(x, y, z))) == Direction.SOUTH) {
+			if (world.getBlockState(BlockPos.containing(x + 1, y, z)).canOcclude() == false) {
+				if (world.getBlockState(BlockPos.containing(x, y + 1, z)).canOcclude() == false) {
+					if (world.getBlockState(BlockPos.containing(x + 1, y + 1, z)).canOcclude() == false) {
+						world.setBlock(BlockPos.containing(x + 1, y, z), ElecTronicsModBlocks.ENGINEERS_WORK_BENCH_SIDE.get().defaultBlockState(), 3);
 						{
 							Direction _dir = Direction.SOUTH;
-							BlockPos _pos = new BlockPos((int) (x + 1), (int) y, (int) z);
+							BlockPos _pos = BlockPos.containing(x + 1, y, z);
 							BlockState _bs = world.getBlockState(_pos);
 							Property<?> _property = _bs.getBlock().getStateDefinition().getProperty("facing");
 							if (_property instanceof DirectionProperty _dp && _dp.getPossibleValues().contains(_dir)) {
@@ -342,19 +337,18 @@ public class EngineersworkbenchBlockAddedProcedure {
 							}
 						}
 						if (!world.isClientSide()) {
-							BlockPos _bp = new BlockPos((int) (x + 1), (int) y, (int) z);
+							BlockPos _bp = BlockPos.containing(x + 1, y, z);
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
 							if (_blockEntity != null)
-								_blockEntity.getTileData().putDouble("generatorID", random);
+								_blockEntity.getPersistentData().putDouble("generatorID", random);
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
-						world.setBlock(new BlockPos((int) (x + 1), (int) (y + 1), (int) z),
-								ElecTronicsModBlocks.ENGINEERS_WORK_BENCH_TOP_SIDE.defaultBlockState(), 3);
+						world.setBlock(BlockPos.containing(x + 1, y + 1, z), ElecTronicsModBlocks.ENGINEERS_WORK_BENCH_TOP_SIDE.get().defaultBlockState(), 3);
 						{
 							Direction _dir = Direction.SOUTH;
-							BlockPos _pos = new BlockPos((int) (x + 1), (int) (y + 1), (int) z);
+							BlockPos _pos = BlockPos.containing(x + 1, y + 1, z);
 							BlockState _bs = world.getBlockState(_pos);
 							Property<?> _property = _bs.getBlock().getStateDefinition().getProperty("facing");
 							if (_property instanceof DirectionProperty _dp && _dp.getPossibleValues().contains(_dir)) {
@@ -366,19 +360,18 @@ public class EngineersworkbenchBlockAddedProcedure {
 							}
 						}
 						if (!world.isClientSide()) {
-							BlockPos _bp = new BlockPos((int) (x + 1), (int) (y + 1), (int) z);
+							BlockPos _bp = BlockPos.containing(x + 1, y + 1, z);
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
 							if (_blockEntity != null)
-								_blockEntity.getTileData().putDouble("generatorID", random);
+								_blockEntity.getPersistentData().putDouble("generatorID", random);
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
-						world.setBlock(new BlockPos((int) x, (int) (y + 1), (int) z),
-								ElecTronicsModBlocks.ENGINEERS_WORK_BENCH_TOP.defaultBlockState(), 3);
+						world.setBlock(BlockPos.containing(x, y + 1, z), ElecTronicsModBlocks.ENGINEERS_WORK_BENCH_TOP.get().defaultBlockState(), 3);
 						{
 							Direction _dir = Direction.SOUTH;
-							BlockPos _pos = new BlockPos((int) x, (int) (y + 1), (int) z);
+							BlockPos _pos = BlockPos.containing(x, y + 1, z);
 							BlockState _bs = world.getBlockState(_pos);
 							Property<?> _property = _bs.getBlock().getStateDefinition().getProperty("facing");
 							if (_property instanceof DirectionProperty _dp && _dp.getPossibleValues().contains(_dir)) {
@@ -390,33 +383,33 @@ public class EngineersworkbenchBlockAddedProcedure {
 							}
 						}
 						if (!world.isClientSide()) {
-							BlockPos _bp = new BlockPos((int) x, (int) (y + 1), (int) z);
+							BlockPos _bp = BlockPos.containing(x, y + 1, z);
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
 							if (_blockEntity != null)
-								_blockEntity.getTileData().putDouble("generatorID", random);
+								_blockEntity.getPersistentData().putDouble("generatorID", random);
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
 					} else {
-						if (world instanceof Level) {
-							Block.dropResources(world.getBlockState(new BlockPos((int) x, (int) y, (int) z)), (Level) world,
-									new BlockPos((int) x, (int) y, (int) z));
-							world.destroyBlock(new BlockPos((int) x, (int) y, (int) z), false);
+						{
+							BlockPos _pos = BlockPos.containing(x, y, z);
+							Block.dropResources(world.getBlockState(_pos), world, BlockPos.containing(x, y, z), null);
+							world.destroyBlock(_pos, false);
 						}
 					}
 				} else {
-					if (world instanceof Level) {
-						Block.dropResources(world.getBlockState(new BlockPos((int) x, (int) y, (int) z)), (Level) world,
-								new BlockPos((int) x, (int) y, (int) z));
-						world.destroyBlock(new BlockPos((int) x, (int) y, (int) z), false);
+					{
+						BlockPos _pos = BlockPos.containing(x, y, z);
+						Block.dropResources(world.getBlockState(_pos), world, BlockPos.containing(x, y, z), null);
+						world.destroyBlock(_pos, false);
 					}
 				}
 			} else {
-				if (world instanceof Level) {
-					Block.dropResources(world.getBlockState(new BlockPos((int) x, (int) y, (int) z)), (Level) world,
-							new BlockPos((int) x, (int) y, (int) z));
-					world.destroyBlock(new BlockPos((int) x, (int) y, (int) z), false);
+				{
+					BlockPos _pos = BlockPos.containing(x, y, z);
+					Block.dropResources(world.getBlockState(_pos), world, BlockPos.containing(x, y, z), null);
+					world.destroyBlock(_pos, false);
 				}
 			}
 		}

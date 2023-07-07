@@ -1,11 +1,12 @@
 package net.elec_tronics.procedures;
 
 import net.minecraftforge.fluids.capability.IFluidHandler;
-import net.minecraftforge.fluids.capability.CapabilityFluidHandler;
 import net.minecraftforge.fluids.FluidStack;
+import net.minecraftforge.common.capabilities.ForgeCapabilities;
 
 import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.level.block.state.properties.Property;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.LiquidBlock;
@@ -26,13 +27,12 @@ public class ManualFluidPumpSendWaterProcedure {
 		double sz = 0;
 		sx = -6;
 		liquidNear = false;
-		for (int index0 = 0; index0 < (int) (12); index0++) {
+		for (int index0 = 0; index0 < 12; index0++) {
 			sy = -6;
-			for (int index1 = 0; index1 < (int) (12); index1++) {
+			for (int index1 = 0; index1 < 12; index1++) {
 				sz = -6;
-				for (int index2 = 0; index2 < (int) (12); index2++) {
-					if ((world.getBlockState(new BlockPos((int) (x + sx), (int) (y + sy), (int) (z + sz))))
-							.getBlock() instanceof LiquidBlock == true) {
+				for (int index2 = 0; index2 < 12; index2++) {
+					if ((world.getBlockState(BlockPos.containing(x + sx, y + sy, z + sz))).getBlock() instanceof LiquidBlock == true) {
 						liquidNear = true;
 					}
 					sz = sz + 1;
@@ -46,59 +46,57 @@ public class ManualFluidPumpSendWaterProcedure {
 				public Direction getDirection(BlockPos pos) {
 					BlockState _bs = world.getBlockState(pos);
 					Property<?> property = _bs.getBlock().getStateDefinition().getProperty("facing");
-					if (property != null && _bs.getValue(property)instanceof Direction _dir)
+					if (property != null && _bs.getValue(property) instanceof Direction _dir)
 						return _dir;
-					property = _bs.getBlock().getStateDefinition().getProperty("axis");
-					if (property != null && _bs.getValue(property)instanceof Direction.Axis _axis)
-						return Direction.fromAxisAndDirection(_axis, Direction.AxisDirection.POSITIVE);
+					else if (_bs.hasProperty(BlockStateProperties.AXIS))
+						return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.AXIS), Direction.AxisDirection.POSITIVE);
+					else if (_bs.hasProperty(BlockStateProperties.HORIZONTAL_AXIS))
+						return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.HORIZONTAL_AXIS), Direction.AxisDirection.POSITIVE);
 					return Direction.NORTH;
 				}
-			}.getDirection(new BlockPos((int) x, (int) y, (int) z))) == Direction.NORTH) {
-				if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z - 1))))
-						.getMaterial() == net.minecraft.world.level.material.Material.AIR) == false) {
+			}.getDirection(BlockPos.containing(x, y, z))) == Direction.NORTH) {
+				if (((world.getBlockState(BlockPos.containing(x, y, z - 1))).getMaterial() == net.minecraft.world.level.material.Material.AIR) == false) {
 					amount = new Object() {
 						public int fillTankSimulate(LevelAccessor level, BlockPos pos, int amount) {
 							AtomicInteger _retval = new AtomicInteger(0);
 							BlockEntity _ent = level.getBlockEntity(pos);
 							if (_ent != null)
-								_ent.getCapability(CapabilityFluidHandler.FLUID_HANDLER_CAPABILITY, null).ifPresent(capability -> _retval
-										.set(capability.fill(new FluidStack(Fluids.FLOWING_WATER, amount), IFluidHandler.FluidAction.SIMULATE)));
+								_ent.getCapability(ForgeCapabilities.FLUID_HANDLER, null).ifPresent(capability -> _retval.set(capability.fill(new FluidStack(Fluids.FLOWING_WATER, amount), IFluidHandler.FluidAction.SIMULATE)));
 							return _retval.get();
 						}
-					}.fillTankSimulate(world, new BlockPos((int) x, (int) y, (int) (z - 1)), 5);
+					}.fillTankSimulate(world, BlockPos.containing(x, y, z - 1), 5);
 					{
-						BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) y, (int) (z - 1)));
+						BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z - 1));
 						int _amount = (int) amount;
 						if (_ent != null)
-							_ent.getCapability(CapabilityFluidHandler.FLUID_HANDLER_CAPABILITY, null).ifPresent(
-									capability -> capability.fill(new FluidStack(Fluids.FLOWING_WATER, _amount), IFluidHandler.FluidAction.EXECUTE));
+							_ent.getCapability(ForgeCapabilities.FLUID_HANDLER, null).ifPresent(capability -> capability.fill(new FluidStack(Fluids.FLOWING_WATER, _amount), IFluidHandler.FluidAction.EXECUTE));
 					}
 				} else {
-					world.setBlock(new BlockPos((int) x, (int) y, (int) (z - 1)), Blocks.WATER.defaultBlockState(), 3);
+					world.setBlock(BlockPos.containing(x, y, z - 1), Blocks.WATER.defaultBlockState(), 3);
 				}
 				if (new Object() {
 					public double getValue(LevelAccessor world, BlockPos pos, String tag) {
 						BlockEntity blockEntity = world.getBlockEntity(pos);
 						if (blockEntity != null)
-							return blockEntity.getTileData().getDouble(tag);
+							return blockEntity.getPersistentData().getDouble(tag);
 						return -1;
 					}
-				}.getValue(world, new BlockPos((int) (x + sx), (int) (y + sy), (int) (z + sz)), "usedPercentage") == 1000) {
-					world.setBlock(new BlockPos((int) (x + sx), (int) (y + sy), (int) (z + sz)), Blocks.AIR.defaultBlockState(), 3);
+				}.getValue(world, BlockPos.containing(x + sx, y + sy, z + sz), "usedPercentage") == 1000) {
+					world.setBlock(BlockPos.containing(x + sx, y + sy, z + sz), Blocks.AIR.defaultBlockState(), 3);
 				} else {
 					if (!world.isClientSide()) {
-						BlockPos _bp = new BlockPos((int) (x + sx), (int) (y + sy), (int) (z + sz));
+						BlockPos _bp = BlockPos.containing(x + sx, y + sy, z + sz);
 						BlockEntity _blockEntity = world.getBlockEntity(_bp);
 						BlockState _bs = world.getBlockState(_bp);
 						if (_blockEntity != null)
-							_blockEntity.getTileData().putDouble("usedPercentage", (new Object() {
+							_blockEntity.getPersistentData().putDouble("usedPercentage", (new Object() {
 								public double getValue(LevelAccessor world, BlockPos pos, String tag) {
 									BlockEntity blockEntity = world.getBlockEntity(pos);
 									if (blockEntity != null)
-										return blockEntity.getTileData().getDouble(tag);
+										return blockEntity.getPersistentData().getDouble(tag);
 									return -1;
 								}
-							}.getValue(world, new BlockPos((int) (x + sx), (int) (y + sy), (int) (z + sz)), "usedPercentage") + 5));
+							}.getValue(world, BlockPos.containing(x + sx, y + sy, z + sz), "usedPercentage") + 5));
 						if (world instanceof Level _level)
 							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 					}
@@ -107,59 +105,57 @@ public class ManualFluidPumpSendWaterProcedure {
 				public Direction getDirection(BlockPos pos) {
 					BlockState _bs = world.getBlockState(pos);
 					Property<?> property = _bs.getBlock().getStateDefinition().getProperty("facing");
-					if (property != null && _bs.getValue(property)instanceof Direction _dir)
+					if (property != null && _bs.getValue(property) instanceof Direction _dir)
 						return _dir;
-					property = _bs.getBlock().getStateDefinition().getProperty("axis");
-					if (property != null && _bs.getValue(property)instanceof Direction.Axis _axis)
-						return Direction.fromAxisAndDirection(_axis, Direction.AxisDirection.POSITIVE);
+					else if (_bs.hasProperty(BlockStateProperties.AXIS))
+						return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.AXIS), Direction.AxisDirection.POSITIVE);
+					else if (_bs.hasProperty(BlockStateProperties.HORIZONTAL_AXIS))
+						return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.HORIZONTAL_AXIS), Direction.AxisDirection.POSITIVE);
 					return Direction.NORTH;
 				}
-			}.getDirection(new BlockPos((int) x, (int) y, (int) z))) == Direction.SOUTH) {
-				if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z + 1))))
-						.getMaterial() == net.minecraft.world.level.material.Material.AIR) == false) {
+			}.getDirection(BlockPos.containing(x, y, z))) == Direction.SOUTH) {
+				if (((world.getBlockState(BlockPos.containing(x, y, z + 1))).getMaterial() == net.minecraft.world.level.material.Material.AIR) == false) {
 					amount = new Object() {
 						public int fillTankSimulate(LevelAccessor level, BlockPos pos, int amount) {
 							AtomicInteger _retval = new AtomicInteger(0);
 							BlockEntity _ent = level.getBlockEntity(pos);
 							if (_ent != null)
-								_ent.getCapability(CapabilityFluidHandler.FLUID_HANDLER_CAPABILITY, null).ifPresent(capability -> _retval
-										.set(capability.fill(new FluidStack(Fluids.FLOWING_WATER, amount), IFluidHandler.FluidAction.SIMULATE)));
+								_ent.getCapability(ForgeCapabilities.FLUID_HANDLER, null).ifPresent(capability -> _retval.set(capability.fill(new FluidStack(Fluids.FLOWING_WATER, amount), IFluidHandler.FluidAction.SIMULATE)));
 							return _retval.get();
 						}
-					}.fillTankSimulate(world, new BlockPos((int) x, (int) y, (int) (z + 1)), 5);
+					}.fillTankSimulate(world, BlockPos.containing(x, y, z + 1), 5);
 					{
-						BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) y, (int) (z + 1)));
+						BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z + 1));
 						int _amount = (int) amount;
 						if (_ent != null)
-							_ent.getCapability(CapabilityFluidHandler.FLUID_HANDLER_CAPABILITY, null).ifPresent(
-									capability -> capability.fill(new FluidStack(Fluids.FLOWING_WATER, _amount), IFluidHandler.FluidAction.EXECUTE));
+							_ent.getCapability(ForgeCapabilities.FLUID_HANDLER, null).ifPresent(capability -> capability.fill(new FluidStack(Fluids.FLOWING_WATER, _amount), IFluidHandler.FluidAction.EXECUTE));
 					}
 				} else {
-					world.setBlock(new BlockPos((int) x, (int) y, (int) (z + 1)), Blocks.WATER.defaultBlockState(), 3);
+					world.setBlock(BlockPos.containing(x, y, z + 1), Blocks.WATER.defaultBlockState(), 3);
 				}
 				if (new Object() {
 					public double getValue(LevelAccessor world, BlockPos pos, String tag) {
 						BlockEntity blockEntity = world.getBlockEntity(pos);
 						if (blockEntity != null)
-							return blockEntity.getTileData().getDouble(tag);
+							return blockEntity.getPersistentData().getDouble(tag);
 						return -1;
 					}
-				}.getValue(world, new BlockPos((int) (x + sx), (int) (y + sy), (int) (z + sz)), "usedPercentage") == 1000) {
-					world.setBlock(new BlockPos((int) (x + sx), (int) (y + sy), (int) (z + sz)), Blocks.AIR.defaultBlockState(), 3);
+				}.getValue(world, BlockPos.containing(x + sx, y + sy, z + sz), "usedPercentage") == 1000) {
+					world.setBlock(BlockPos.containing(x + sx, y + sy, z + sz), Blocks.AIR.defaultBlockState(), 3);
 				} else {
 					if (!world.isClientSide()) {
-						BlockPos _bp = new BlockPos((int) (x + sx), (int) (y + sy), (int) (z + sz));
+						BlockPos _bp = BlockPos.containing(x + sx, y + sy, z + sz);
 						BlockEntity _blockEntity = world.getBlockEntity(_bp);
 						BlockState _bs = world.getBlockState(_bp);
 						if (_blockEntity != null)
-							_blockEntity.getTileData().putDouble("usedPercentage", (new Object() {
+							_blockEntity.getPersistentData().putDouble("usedPercentage", (new Object() {
 								public double getValue(LevelAccessor world, BlockPos pos, String tag) {
 									BlockEntity blockEntity = world.getBlockEntity(pos);
 									if (blockEntity != null)
-										return blockEntity.getTileData().getDouble(tag);
+										return blockEntity.getPersistentData().getDouble(tag);
 									return -1;
 								}
-							}.getValue(world, new BlockPos((int) (x + sx), (int) (y + sy), (int) (z + sz)), "usedPercentage") + 5));
+							}.getValue(world, BlockPos.containing(x + sx, y + sy, z + sz), "usedPercentage") + 5));
 						if (world instanceof Level _level)
 							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 					}
@@ -168,59 +164,57 @@ public class ManualFluidPumpSendWaterProcedure {
 				public Direction getDirection(BlockPos pos) {
 					BlockState _bs = world.getBlockState(pos);
 					Property<?> property = _bs.getBlock().getStateDefinition().getProperty("facing");
-					if (property != null && _bs.getValue(property)instanceof Direction _dir)
+					if (property != null && _bs.getValue(property) instanceof Direction _dir)
 						return _dir;
-					property = _bs.getBlock().getStateDefinition().getProperty("axis");
-					if (property != null && _bs.getValue(property)instanceof Direction.Axis _axis)
-						return Direction.fromAxisAndDirection(_axis, Direction.AxisDirection.POSITIVE);
+					else if (_bs.hasProperty(BlockStateProperties.AXIS))
+						return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.AXIS), Direction.AxisDirection.POSITIVE);
+					else if (_bs.hasProperty(BlockStateProperties.HORIZONTAL_AXIS))
+						return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.HORIZONTAL_AXIS), Direction.AxisDirection.POSITIVE);
 					return Direction.NORTH;
 				}
-			}.getDirection(new BlockPos((int) x, (int) y, (int) z))) == Direction.WEST) {
-				if (((world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) z)))
-						.getMaterial() == net.minecraft.world.level.material.Material.AIR) == false) {
+			}.getDirection(BlockPos.containing(x, y, z))) == Direction.WEST) {
+				if (((world.getBlockState(BlockPos.containing(x - 1, y, z))).getMaterial() == net.minecraft.world.level.material.Material.AIR) == false) {
 					amount = new Object() {
 						public int fillTankSimulate(LevelAccessor level, BlockPos pos, int amount) {
 							AtomicInteger _retval = new AtomicInteger(0);
 							BlockEntity _ent = level.getBlockEntity(pos);
 							if (_ent != null)
-								_ent.getCapability(CapabilityFluidHandler.FLUID_HANDLER_CAPABILITY, null).ifPresent(capability -> _retval
-										.set(capability.fill(new FluidStack(Fluids.FLOWING_WATER, amount), IFluidHandler.FluidAction.SIMULATE)));
+								_ent.getCapability(ForgeCapabilities.FLUID_HANDLER, null).ifPresent(capability -> _retval.set(capability.fill(new FluidStack(Fluids.FLOWING_WATER, amount), IFluidHandler.FluidAction.SIMULATE)));
 							return _retval.get();
 						}
-					}.fillTankSimulate(world, new BlockPos((int) (x - 1), (int) y, (int) z), 5);
+					}.fillTankSimulate(world, BlockPos.containing(x - 1, y, z), 5);
 					{
-						BlockEntity _ent = world.getBlockEntity(new BlockPos((int) (x - 1), (int) y, (int) z));
+						BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x - 1, y, z));
 						int _amount = (int) amount;
 						if (_ent != null)
-							_ent.getCapability(CapabilityFluidHandler.FLUID_HANDLER_CAPABILITY, null).ifPresent(
-									capability -> capability.fill(new FluidStack(Fluids.FLOWING_WATER, _amount), IFluidHandler.FluidAction.EXECUTE));
+							_ent.getCapability(ForgeCapabilities.FLUID_HANDLER, null).ifPresent(capability -> capability.fill(new FluidStack(Fluids.FLOWING_WATER, _amount), IFluidHandler.FluidAction.EXECUTE));
 					}
 				} else {
-					world.setBlock(new BlockPos((int) (x - 1), (int) y, (int) z), Blocks.WATER.defaultBlockState(), 3);
+					world.setBlock(BlockPos.containing(x - 1, y, z), Blocks.WATER.defaultBlockState(), 3);
 				}
 				if (new Object() {
 					public double getValue(LevelAccessor world, BlockPos pos, String tag) {
 						BlockEntity blockEntity = world.getBlockEntity(pos);
 						if (blockEntity != null)
-							return blockEntity.getTileData().getDouble(tag);
+							return blockEntity.getPersistentData().getDouble(tag);
 						return -1;
 					}
-				}.getValue(world, new BlockPos((int) (x + sx), (int) (y + sy), (int) (z + sz)), "usedPercentage") == 1000) {
-					world.setBlock(new BlockPos((int) (x + sx), (int) (y + sy), (int) (z + sz)), Blocks.AIR.defaultBlockState(), 3);
+				}.getValue(world, BlockPos.containing(x + sx, y + sy, z + sz), "usedPercentage") == 1000) {
+					world.setBlock(BlockPos.containing(x + sx, y + sy, z + sz), Blocks.AIR.defaultBlockState(), 3);
 				} else {
 					if (!world.isClientSide()) {
-						BlockPos _bp = new BlockPos((int) (x + sx), (int) (y + sy), (int) (z + sz));
+						BlockPos _bp = BlockPos.containing(x + sx, y + sy, z + sz);
 						BlockEntity _blockEntity = world.getBlockEntity(_bp);
 						BlockState _bs = world.getBlockState(_bp);
 						if (_blockEntity != null)
-							_blockEntity.getTileData().putDouble("usedPercentage", (new Object() {
+							_blockEntity.getPersistentData().putDouble("usedPercentage", (new Object() {
 								public double getValue(LevelAccessor world, BlockPos pos, String tag) {
 									BlockEntity blockEntity = world.getBlockEntity(pos);
 									if (blockEntity != null)
-										return blockEntity.getTileData().getDouble(tag);
+										return blockEntity.getPersistentData().getDouble(tag);
 									return -1;
 								}
-							}.getValue(world, new BlockPos((int) (x + sx), (int) (y + sy), (int) (z + sz)), "usedPercentage") + 5));
+							}.getValue(world, BlockPos.containing(x + sx, y + sy, z + sz), "usedPercentage") + 5));
 						if (world instanceof Level _level)
 							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 					}
@@ -229,59 +223,57 @@ public class ManualFluidPumpSendWaterProcedure {
 				public Direction getDirection(BlockPos pos) {
 					BlockState _bs = world.getBlockState(pos);
 					Property<?> property = _bs.getBlock().getStateDefinition().getProperty("facing");
-					if (property != null && _bs.getValue(property)instanceof Direction _dir)
+					if (property != null && _bs.getValue(property) instanceof Direction _dir)
 						return _dir;
-					property = _bs.getBlock().getStateDefinition().getProperty("axis");
-					if (property != null && _bs.getValue(property)instanceof Direction.Axis _axis)
-						return Direction.fromAxisAndDirection(_axis, Direction.AxisDirection.POSITIVE);
+					else if (_bs.hasProperty(BlockStateProperties.AXIS))
+						return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.AXIS), Direction.AxisDirection.POSITIVE);
+					else if (_bs.hasProperty(BlockStateProperties.HORIZONTAL_AXIS))
+						return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.HORIZONTAL_AXIS), Direction.AxisDirection.POSITIVE);
 					return Direction.NORTH;
 				}
-			}.getDirection(new BlockPos((int) x, (int) y, (int) z))) == Direction.EAST) {
-				if (((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) z)))
-						.getMaterial() == net.minecraft.world.level.material.Material.AIR) == false) {
+			}.getDirection(BlockPos.containing(x, y, z))) == Direction.EAST) {
+				if (((world.getBlockState(BlockPos.containing(x + 1, y, z))).getMaterial() == net.minecraft.world.level.material.Material.AIR) == false) {
 					amount = new Object() {
 						public int fillTankSimulate(LevelAccessor level, BlockPos pos, int amount) {
 							AtomicInteger _retval = new AtomicInteger(0);
 							BlockEntity _ent = level.getBlockEntity(pos);
 							if (_ent != null)
-								_ent.getCapability(CapabilityFluidHandler.FLUID_HANDLER_CAPABILITY, null).ifPresent(capability -> _retval
-										.set(capability.fill(new FluidStack(Fluids.FLOWING_WATER, amount), IFluidHandler.FluidAction.SIMULATE)));
+								_ent.getCapability(ForgeCapabilities.FLUID_HANDLER, null).ifPresent(capability -> _retval.set(capability.fill(new FluidStack(Fluids.FLOWING_WATER, amount), IFluidHandler.FluidAction.SIMULATE)));
 							return _retval.get();
 						}
-					}.fillTankSimulate(world, new BlockPos((int) (x + 1), (int) y, (int) z), 5);
+					}.fillTankSimulate(world, BlockPos.containing(x + 1, y, z), 5);
 					{
-						BlockEntity _ent = world.getBlockEntity(new BlockPos((int) (x + 1), (int) y, (int) z));
+						BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x + 1, y, z));
 						int _amount = (int) amount;
 						if (_ent != null)
-							_ent.getCapability(CapabilityFluidHandler.FLUID_HANDLER_CAPABILITY, null).ifPresent(
-									capability -> capability.fill(new FluidStack(Fluids.FLOWING_WATER, _amount), IFluidHandler.FluidAction.EXECUTE));
+							_ent.getCapability(ForgeCapabilities.FLUID_HANDLER, null).ifPresent(capability -> capability.fill(new FluidStack(Fluids.FLOWING_WATER, _amount), IFluidHandler.FluidAction.EXECUTE));
 					}
 				} else {
-					world.setBlock(new BlockPos((int) (x + 1), (int) y, (int) z), Blocks.WATER.defaultBlockState(), 3);
+					world.setBlock(BlockPos.containing(x + 1, y, z), Blocks.WATER.defaultBlockState(), 3);
 				}
 				if (new Object() {
 					public double getValue(LevelAccessor world, BlockPos pos, String tag) {
 						BlockEntity blockEntity = world.getBlockEntity(pos);
 						if (blockEntity != null)
-							return blockEntity.getTileData().getDouble(tag);
+							return blockEntity.getPersistentData().getDouble(tag);
 						return -1;
 					}
-				}.getValue(world, new BlockPos((int) (x + sx), (int) (y + sy), (int) (z + sz)), "usedPercentage") == 1000) {
-					world.setBlock(new BlockPos((int) (x + sx), (int) (y + sy), (int) (z + sz)), Blocks.AIR.defaultBlockState(), 3);
+				}.getValue(world, BlockPos.containing(x + sx, y + sy, z + sz), "usedPercentage") == 1000) {
+					world.setBlock(BlockPos.containing(x + sx, y + sy, z + sz), Blocks.AIR.defaultBlockState(), 3);
 				} else {
 					if (!world.isClientSide()) {
-						BlockPos _bp = new BlockPos((int) (x + sx), (int) (y + sy), (int) (z + sz));
+						BlockPos _bp = BlockPos.containing(x + sx, y + sy, z + sz);
 						BlockEntity _blockEntity = world.getBlockEntity(_bp);
 						BlockState _bs = world.getBlockState(_bp);
 						if (_blockEntity != null)
-							_blockEntity.getTileData().putDouble("usedPercentage", (new Object() {
+							_blockEntity.getPersistentData().putDouble("usedPercentage", (new Object() {
 								public double getValue(LevelAccessor world, BlockPos pos, String tag) {
 									BlockEntity blockEntity = world.getBlockEntity(pos);
 									if (blockEntity != null)
-										return blockEntity.getTileData().getDouble(tag);
+										return blockEntity.getPersistentData().getDouble(tag);
 									return -1;
 								}
-							}.getValue(world, new BlockPos((int) (x + sx), (int) (y + sy), (int) (z + sz)), "usedPercentage") + 5));
+							}.getValue(world, BlockPos.containing(x + sx, y + sy, z + sz), "usedPercentage") + 5));
 						if (world instanceof Level _level)
 							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 					}

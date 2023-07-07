@@ -1,12 +1,9 @@
 
 package net.elec_tronics.block;
 
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.api.distmarker.Dist;
-
 import net.minecraft.world.phys.shapes.VoxelShape;
+import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.CollisionContext;
-import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.level.storage.loot.LootContext;
 import net.minecraft.world.level.material.Material;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
@@ -26,32 +23,25 @@ import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.MenuProvider;
+import net.minecraft.util.RandomSource;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
-import net.minecraft.client.renderer.RenderType;
-import net.minecraft.client.renderer.ItemBlockRenderTypes;
 
 import net.elec_tronics.procedures.T1WireUpdateTickProcedure;
 import net.elec_tronics.procedures.T1WireBlockIsPlacedByProcedure;
 import net.elec_tronics.init.ElecTronicsModBlocks;
 import net.elec_tronics.block.entity.CablehalfT1BlockEntity;
 
-import java.util.Random;
 import java.util.List;
 import java.util.Collections;
 
-public class CablehalfT1Block extends Block
-		implements
-
-			EntityBlock {
+public class CablehalfT1Block extends Block implements EntityBlock {
 	public static final DirectionProperty FACING = DirectionalBlock.FACING;
 
 	public CablehalfT1Block() {
-		super(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.BONE_BLOCK).strength(1f, 10f).noOcclusion()
-				.isRedstoneConductor((bs, br, bp) -> false));
+		super(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.BONE_BLOCK).strength(1f, 10f).noOcclusion().isRedstoneConductor((bs, br, bp) -> false));
 		this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH));
-		setRegistryName("cablehalf_t_1");
 	}
 
 	@Override
@@ -65,28 +55,30 @@ public class CablehalfT1Block extends Block
 	}
 
 	@Override
+	public VoxelShape getVisualShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
+		return Shapes.empty();
+	}
+
+	@Override
 	public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
-		Vec3 offset = state.getOffset(world, pos);
-		switch ((Direction) state.getValue(FACING)) {
-			case SOUTH :
-			default :
-				return box(6, 6, 6, 10, 10, 16).move(offset.x, offset.y, offset.z);
-			case NORTH :
-				return box(6, 6, 0, 10, 10, 10).move(offset.x, offset.y, offset.z);
-			case EAST :
-				return box(6, 6, 6, 16, 10, 10).move(offset.x, offset.y, offset.z);
-			case WEST :
-				return box(0, 6, 6, 10, 10, 10).move(offset.x, offset.y, offset.z);
-			case UP :
-				return box(6, 6, 6, 10, 16, 10).move(offset.x, offset.y, offset.z);
-			case DOWN :
-				return box(6, 0, 6, 10, 10, 10).move(offset.x, offset.y, offset.z);
-		}
+		return switch (state.getValue(FACING)) {
+			default -> box(6, 6, 6, 10, 10, 16);
+			case NORTH -> box(6, 6, 0, 10, 10, 10);
+			case EAST -> box(6, 6, 6, 16, 10, 10);
+			case WEST -> box(0, 6, 6, 10, 10, 10);
+			case UP -> box(6, 6, 6, 10, 16, 10);
+			case DOWN -> box(6, 0, 6, 10, 10, 10);
+		};
 	}
 
 	@Override
 	protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
 		builder.add(FACING);
+	}
+
+	@Override
+	public BlockState getStateForPlacement(BlockPlaceContext context) {
+		return this.defaultBlockState().setValue(FACING, context.getNearestLookingDirection().getOpposite());
 	}
 
 	public BlockState rotate(BlockState state, Rotation rot) {
@@ -98,23 +90,17 @@ public class CablehalfT1Block extends Block
 	}
 
 	@Override
-	public BlockState getStateForPlacement(BlockPlaceContext context) {
-		;
-		return this.defaultBlockState().setValue(FACING, context.getNearestLookingDirection().getOpposite());
-	}
-
-	@Override
 	public List<ItemStack> getDrops(BlockState state, LootContext.Builder builder) {
 		List<ItemStack> dropsOriginal = super.getDrops(state, builder);
 		if (!dropsOriginal.isEmpty())
 			return dropsOriginal;
-		return Collections.singletonList(new ItemStack(ElecTronicsModBlocks.BASECABLE_T_1));
+		return Collections.singletonList(new ItemStack(ElecTronicsModBlocks.BASECABLE_T_1.get()));
 	}
 
 	@Override
 	public void onPlace(BlockState blockstate, Level world, BlockPos pos, BlockState oldState, boolean moving) {
 		super.onPlace(blockstate, world, pos, oldState, moving);
-		world.getBlockTicks().scheduleTick(pos, this, 1);
+		world.scheduleTick(pos, this, 1);
 	}
 
 	@Override
@@ -124,14 +110,13 @@ public class CablehalfT1Block extends Block
 	}
 
 	@Override
-	public void tick(BlockState blockstate, ServerLevel world, BlockPos pos, Random random) {
+	public void tick(BlockState blockstate, ServerLevel world, BlockPos pos, RandomSource random) {
 		super.tick(blockstate, world, pos, random);
 		int x = pos.getX();
 		int y = pos.getY();
 		int z = pos.getZ();
-
 		T1WireUpdateTickProcedure.execute(world, x, y, z);
-		world.getBlockTicks().scheduleTick(pos, this, 1);
+		world.scheduleTick(pos, this, 1);
 	}
 
 	@Override
@@ -156,10 +141,5 @@ public class CablehalfT1Block extends Block
 		super.triggerEvent(state, world, pos, eventID, eventParam);
 		BlockEntity blockEntity = world.getBlockEntity(pos);
 		return blockEntity == null ? false : blockEntity.triggerEvent(eventID, eventParam);
-	}
-
-	@OnlyIn(Dist.CLIENT)
-	public static void registerRenderLayer() {
-		ItemBlockRenderTypes.setRenderLayer(ElecTronicsModBlocks.CABLEHALF_T_1, renderType -> renderType == RenderType.cutout());
 	}
 }

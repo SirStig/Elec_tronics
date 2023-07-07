@@ -1,5 +1,5 @@
 {
-  "_fv": 24,
+  "_fv": 43,
   "_type": "gui",
   "definition": {
     "type": 1,
@@ -13,12 +13,14 @@
       {
         "type": "label",
         "data": {
-          "text": "Inventory",
+          "name": "label_inventory",
+          "text": {
+            "fixedValue": "Inventory"
+          },
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "Inventory",
           "x": 132,
           "y": 113
         }
@@ -26,12 +28,14 @@
       {
         "type": "label",
         "data": {
-          "text": "Coal Generator",
+          "name": "label_coal_generator",
+          "text": {
+            "fixedValue": "Coal Generator"
+          },
           "color": {
             "value": -13421773,
             "falpha": 0.0
           },
-          "name": "Coal Generator",
           "x": 130,
           "y": 36
         }
@@ -42,10 +46,14 @@
           "inputLimit": {
             "value": ""
           },
+          "disablePlacement": {
+            "fixedValue": false
+          },
           "id": 0,
-          "disableStackInteraction": false,
+          "disablePickup": {
+            "fixedValue": false
+          },
           "dropItemsWhenNotBound": false,
-          "name": "Slot #0",
           "x": 204,
           "y": 80
         }
@@ -58,7 +66,6 @@
           "displayCondition": {
             "name": "Fuelburning10"
           },
-          "name": "images_1_1.png",
           "x": 205,
           "y": 60
         }
@@ -71,7 +78,6 @@
           "displayCondition": {
             "name": "Fuelburning9"
           },
-          "name": "fuel2.png",
           "x": 205,
           "y": 60
         }
@@ -84,7 +90,6 @@
           "displayCondition": {
             "name": "Fuelburning8"
           },
-          "name": "fuel3.png",
           "x": 205,
           "y": 60
         }
@@ -97,7 +102,6 @@
           "displayCondition": {
             "name": "Fuelburning7"
           },
-          "name": "fuel4.png",
           "x": 205,
           "y": 60
         }
@@ -110,7 +114,6 @@
           "displayCondition": {
             "name": "Fuelburning6"
           },
-          "name": "fuel5.png",
           "x": 205,
           "y": 60
         }
@@ -123,7 +126,6 @@
           "displayCondition": {
             "name": "Fuelburning5"
           },
-          "name": "fuel6.png",
           "x": 205,
           "y": 60
         }
@@ -136,7 +138,6 @@
           "displayCondition": {
             "name": "Fuelburning4"
           },
-          "name": "fuel7.png",
           "x": 205,
           "y": 60
         }
@@ -149,7 +150,6 @@
           "displayCondition": {
             "name": "Fuelburning3"
           },
-          "name": "fuel8.png",
           "x": 205,
           "y": 60
         }
@@ -162,7 +162,6 @@
           "displayCondition": {
             "name": "Fuelburning2"
           },
-          "name": "fuel9.png",
           "x": 205,
           "y": 60
         }
@@ -175,7 +174,6 @@
           "displayCondition": {
             "name": "Fuelburning"
           },
-          "name": "burningfull.png",
           "x": 205,
           "y": 60
         }
@@ -184,9 +182,10 @@
         "type": "outputslot",
         "data": {
           "id": 1,
-          "disableStackInteraction": false,
+          "disablePickup": {
+            "fixedValue": false
+          },
           "dropItemsWhenNotBound": false,
-          "name": "Slot #1",
           "x": 251,
           "y": 80
         }
@@ -196,7 +195,6 @@
         "data": {
           "image": "furnace_gui_1.png",
           "use1Xscale": true,
-          "name": "furnace_gui_1.png",
           "x": 224,
           "y": 80
         }
@@ -204,12 +202,14 @@
       {
         "type": "label",
         "data": {
-          "text": "RF",
+          "name": "label_rf",
+          "text": {
+            "fixedValue": "RF"
+          },
           "color": {
             "value": -6750208,
             "falpha": 0.0
           },
-          "name": "RF",
           "x": 133,
           "y": 50
         }
@@ -222,7 +222,6 @@
           "displayCondition": {
             "name": "Powertick0"
           },
-          "name": "batterv1.png",
           "x": 133,
           "y": 59
         }
@@ -235,7 +234,6 @@
           "displayCondition": {
             "name": "Powertick1"
           },
-          "name": "battery5.png",
           "x": 133,
           "y": 59
         }
@@ -248,7 +246,6 @@
           "displayCondition": {
             "name": "Powertick2"
           },
-          "name": "battery10.png",
           "x": 133,
           "y": 59
         }
@@ -261,7 +258,6 @@
           "displayCondition": {
             "name": "Powertick3"
           },
-          "name": "battery20.png",
           "x": 133,
           "y": 59
         }
@@ -274,7 +270,6 @@
           "displayCondition": {
             "name": "Powertick4"
           },
-          "name": "battery30.png",
           "x": 133,
           "y": 59
         }
@@ -287,7 +282,6 @@
           "displayCondition": {
             "name": "Powertick5"
           },
-          "name": "battery40.png",
           "x": 133,
           "y": 59
         }
@@ -300,7 +294,6 @@
           "displayCondition": {
             "name": "Powertick6"
           },
-          "name": "battery50.png",
           "x": 133,
           "y": 59
         }
@@ -313,7 +306,6 @@
           "displayCondition": {
             "name": "Powertick7"
           },
-          "name": "battery60.png",
           "x": 133,
           "y": 59
         }
@@ -326,7 +318,6 @@
           "displayCondition": {
             "name": "Powertick8"
           },
-          "name": "battery70.png",
           "x": 133,
           "y": 59
         }
@@ -339,7 +330,6 @@
           "displayCondition": {
             "name": "Powertick8"
           },
-          "name": "battery80.png",
           "x": 133,
           "y": 59
         }
@@ -352,7 +342,6 @@
           "displayCondition": {
             "name": "Powertick9"
           },
-          "name": "battery92full.png",
           "x": 133,
           "y": 59
         }
@@ -362,7 +351,6 @@
         "data": {
           "image": "input.png",
           "use1Xscale": false,
-          "name": "input.png",
           "x": 200,
           "y": 76
         }
@@ -372,7 +360,6 @@
         "data": {
           "image": "output.png",
           "use1Xscale": false,
-          "name": "output.png",
           "x": 247,
           "y": 76
         }
@@ -382,7 +369,6 @@
         "data": {
           "image": "fuelgui.png",
           "use1Xscale": false,
-          "name": "fuelgui.png",
           "x": 184,
           "y": 81
         }
@@ -392,7 +378,6 @@
         "data": {
           "image": "dustgui.png",
           "use1Xscale": false,
-          "name": "dustgui.png",
           "x": 252,
           "y": 60
         }

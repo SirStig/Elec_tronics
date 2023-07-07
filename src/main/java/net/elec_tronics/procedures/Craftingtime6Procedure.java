@@ -10,10 +10,10 @@ public class Craftingtime6Procedure {
 			public double getValue(LevelAccessor world, BlockPos pos, String tag) {
 				BlockEntity blockEntity = world.getBlockEntity(pos);
 				if (blockEntity != null)
-					return blockEntity.getTileData().getDouble(tag);
+					return blockEntity.getPersistentData().getDouble(tag);
 				return -1;
 			}
-		}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "graphicsTimer") == 6) {
+		}.getValue(world, BlockPos.containing(x, y, z), "graphicsTimer") == 6) {
 			return true;
 		}
 		return false;

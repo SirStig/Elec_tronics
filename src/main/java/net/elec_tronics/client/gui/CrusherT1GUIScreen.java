@@ -1,4 +1,3 @@
-
 package net.elec_tronics.client.gui;
 
 import net.minecraft.world.level.Level;
@@ -7,7 +6,6 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
-import net.minecraft.client.Minecraft;
 
 import net.elec_tronics.world.inventory.CrusherT1GUIMenu;
 import net.elec_tronics.procedures.Powertick9Procedure;
@@ -21,10 +19,13 @@ import net.elec_tronics.procedures.Powertick2Procedure;
 import net.elec_tronics.procedures.Powertick1Procedure;
 import net.elec_tronics.procedures.Powertick0Procedure;
 
+import java.util.HashMap;
+
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.systems.RenderSystem;
 
 public class CrusherT1GUIScreen extends AbstractContainerScreen<CrusherT1GUIMenu> {
+	private final static HashMap<String, Object> guistate = CrusherT1GUIMenu.guistate;
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
@@ -40,7 +41,7 @@ public class CrusherT1GUIScreen extends AbstractContainerScreen<CrusherT1GUIMenu
 		this.imageHeight = 166;
 	}
 
-	private static final ResourceLocation texture = new ResourceLocation("elec_tronics:textures/crusher_t_1_gui.png");
+	private static final ResourceLocation texture = new ResourceLocation("elec_tronics:textures/screens/crusher_t_1_gui.png");
 
 	@Override
 	public void render(PoseStack ms, int mouseX, int mouseY, float partialTicks) {
@@ -57,47 +58,47 @@ public class CrusherT1GUIScreen extends AbstractContainerScreen<CrusherT1GUIMenu
 		RenderSystem.setShaderTexture(0, texture);
 		this.blit(ms, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
 		if (Powertick0Procedure.execute(world, x, y, z)) {
-			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/batterv1.png"));
+			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/screens/batterv1.png"));
 			this.blit(ms, this.leftPos + 6, this.topPos + 19, 0, 0, 10, 50, 10, 50);
 		}
 		if (Powertick1Procedure.execute(world, x, y, z)) {
-			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/battery5.png"));
+			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/screens/battery5.png"));
 			this.blit(ms, this.leftPos + 6, this.topPos + 19, 0, 0, 10, 50, 10, 50);
 		}
 		if (Powertick2Procedure.execute(world, x, y, z)) {
-			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/battery10.png"));
+			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/screens/battery10.png"));
 			this.blit(ms, this.leftPos + 6, this.topPos + 19, 0, 0, 10, 50, 10, 50);
 		}
 		if (Powertick3Procedure.execute(world, x, y, z)) {
-			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/battery20.png"));
+			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/screens/battery20.png"));
 			this.blit(ms, this.leftPos + 6, this.topPos + 19, 0, 0, 10, 50, 10, 50);
 		}
 		if (Powertick4Procedure.execute(world, x, y, z)) {
-			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/battery30.png"));
+			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/screens/battery30.png"));
 			this.blit(ms, this.leftPos + 6, this.topPos + 19, 0, 0, 10, 50, 10, 50);
 		}
 		if (Powertick5Procedure.execute(world, x, y, z)) {
-			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/battery40.png"));
+			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/screens/battery40.png"));
 			this.blit(ms, this.leftPos + 6, this.topPos + 19, 0, 0, 10, 50, 10, 50);
 		}
 		if (Powertick6Procedure.execute(world, x, y, z)) {
-			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/battery50.png"));
+			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/screens/battery50.png"));
 			this.blit(ms, this.leftPos + 6, this.topPos + 19, 0, 0, 10, 50, 10, 50);
 		}
 		if (Powertick7Procedure.execute(world, x, y, z)) {
-			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/battery60.png"));
+			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/screens/battery60.png"));
 			this.blit(ms, this.leftPos + 6, this.topPos + 19, 0, 0, 10, 50, 10, 50);
 		}
 		if (Powertick8Procedure.execute(world, x, y, z)) {
-			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/battery70.png"));
+			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/screens/battery70.png"));
 			this.blit(ms, this.leftPos + 6, this.topPos + 19, 0, 0, 10, 50, 10, 50);
 		}
 		if (Powertick8Procedure.execute(world, x, y, z)) {
-			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/battery80.png"));
+			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/screens/battery80.png"));
 			this.blit(ms, this.leftPos + 6, this.topPos + 19, 0, 0, 10, 50, 10, 50);
 		}
 		if (Powertick9Procedure.execute(world, x, y, z)) {
-			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/battery92full.png"));
+			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/screens/battery92full.png"));
 			this.blit(ms, this.leftPos + 6, this.topPos + 19, 0, 0, 10, 50, 10, 50);
 		}
 		RenderSystem.disableBlend();
@@ -119,19 +120,17 @@ public class CrusherT1GUIScreen extends AbstractContainerScreen<CrusherT1GUIMenu
 
 	@Override
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
-		this.font.draw(poseStack, "Inventory", 6, 72, -12829636);
-		this.font.draw(poseStack, "Crusher Tier 1", 95, 5, -16737895);
+		this.font.draw(poseStack, Component.translatable("gui.elec_tronics.crusher_t_1_gui.label_inventory"), 6, 72, -12829636);
+		this.font.draw(poseStack, Component.translatable("gui.elec_tronics.crusher_t_1_gui.label_crusher_tier_1"), 95, 5, -16737895);
 	}
 
 	@Override
 	public void onClose() {
 		super.onClose();
-		Minecraft.getInstance().keyboardHandler.setSendRepeatsToGui(false);
 	}
 
 	@Override
 	public void init() {
 		super.init();
-		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
 	}
 }

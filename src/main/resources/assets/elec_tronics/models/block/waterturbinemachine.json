@@ -1,7 +1,8 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "elec_tronics:blocks/waterturbinetemp",
-    "particle": "elec_tronics:blocks/waterturbinetemp"
-  }
+    "all": "elec_tronics:block/waterturbinetemp",
+    "particle": "elec_tronics:block/waterturbinetemp"
+  },
+  "render_type": "solid"
 }

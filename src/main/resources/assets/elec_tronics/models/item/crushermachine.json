@@ -1,6 +1,7 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "elec_tronics:items/crusheritem"
-  }
+    "layer0": "elec_tronics:item/crusheritem"
+  },
+  "render_type": "translucent"
 }

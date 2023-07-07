@@ -1,12 +1,13 @@
 {
   "parent": "block/cube",
   "textures": {
-    "down": "elec_tronics:blocks/coal_generator_sides",
-    "up": "elec_tronics:blocks/coal_generator_sides",
-    "north": "elec_tronics:blocks/coal_generator_front",
-    "east": "elec_tronics:blocks/coal_generator_sides",
-    "south": "elec_tronics:blocks/coal_generator_sides",
-    "west": "elec_tronics:blocks/coal_generator_sides",
-    "particle": "elec_tronics:blocks/coal_generator_sides"
-  }
+    "down": "elec_tronics:block/coal_generator_sides",
+    "up": "elec_tronics:block/coal_generator_sides",
+    "north": "elec_tronics:block/coal_generator_front",
+    "east": "elec_tronics:block/coal_generator_sides",
+    "south": "elec_tronics:block/coal_generator_sides",
+    "west": "elec_tronics:block/coal_generator_sides",
+    "particle": "elec_tronics:block/coal_generator_sides"
+  },
+  "render_type": "solid"
 }

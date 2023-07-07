@@ -15,23 +15,19 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.world.Containers;
+import net.minecraft.util.RandomSource;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.core.BlockPos;
 
 import net.elec_tronics.procedures.T1WireUpdateTickProcedure;
 import net.elec_tronics.block.entity.EnergyStorageT1BlockEntity;
 
-import java.util.Random;
 import java.util.List;
 import java.util.Collections;
 
-public class EnergyStorageT1Block extends Block
-		implements
-
-			EntityBlock {
+public class EnergyStorageT1Block extends Block implements EntityBlock {
 	public EnergyStorageT1Block() {
 		super(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.METAL).strength(4f, 10f));
-		setRegistryName("energy_storage_t_1");
 	}
 
 	@Override
@@ -50,18 +46,17 @@ public class EnergyStorageT1Block extends Block
 	@Override
 	public void onPlace(BlockState blockstate, Level world, BlockPos pos, BlockState oldState, boolean moving) {
 		super.onPlace(blockstate, world, pos, oldState, moving);
-		world.getBlockTicks().scheduleTick(pos, this, 1);
+		world.scheduleTick(pos, this, 1);
 	}
 
 	@Override
-	public void tick(BlockState blockstate, ServerLevel world, BlockPos pos, Random random) {
+	public void tick(BlockState blockstate, ServerLevel world, BlockPos pos, RandomSource random) {
 		super.tick(blockstate, world, pos, random);
 		int x = pos.getX();
 		int y = pos.getY();
 		int z = pos.getZ();
-
 		T1WireUpdateTickProcedure.execute(world, x, y, z);
-		world.getBlockTicks().scheduleTick(pos, this, 1);
+		world.scheduleTick(pos, this, 1);
 	}
 
 	@Override

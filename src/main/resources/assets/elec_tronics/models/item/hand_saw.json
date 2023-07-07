@@ -1,6 +1,6 @@
 {
   "parent": "item/handheld",
   "textures": {
-    "layer0": "elec_tronics:items/imgbin-minecraft-hand-saws-diamond-blade-minecraft-xqadwadfycy8dfv3yfych7zfy"
+    "layer0": "elec_tronics:item/imgbin-minecraft-hand-saws-diamond-blade-minecraft-xqadwadfycy8dfv3yfych7zfy"
   }
 }

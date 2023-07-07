@@ -1,6 +1,7 @@
 {
-  "group": "elec_tronics",
   "type": "minecraft:crafting_shapeless",
+  "group": "elec_tronics",
+  "category": "misc",
   "ingredients": [
     {
       "item": "elec_tronics:turbine"

@@ -12,10 +12,7 @@ import net.elec_tronics.init.ElecTronicsModFluids;
 
 public class HydrogenGasBlock extends LiquidBlock {
 	public HydrogenGasBlock() {
-		super(ElecTronicsModFluids.HYDROGEN_GAS, BlockBehaviour.Properties.of(Material.WATER).strength(100f)
-
-		);
-		setRegistryName("hydrogen_gas");
+		super(() -> ElecTronicsModFluids.HYDROGEN_GAS.get(), BlockBehaviour.Properties.of(Material.WATER).strength(100f).noCollission().noLootTable());
 	}
 
 	@Override

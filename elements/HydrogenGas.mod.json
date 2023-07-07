@@ -1,5 +1,5 @@
 {
-  "_fv": 24,
+  "_fv": 43,
   "_type": "fluid",
   "definition": {
     "name": "Hydrogen Gas",
@@ -19,7 +19,6 @@
     "luminosity": 0,
     "density": 1000,
     "viscosity": 1000,
-    "isGas": true,
     "temperature": 300,
     "type": "WATER",
     "generateBucket": false,
@@ -39,9 +38,6 @@
     "tickRate": 10,
     "flammability": 0,
     "fireSpreadSpeed": 0,
-    "colorOnMap": "DEFAULT",
-    "frequencyOnChunks": 5,
-    "spawnWorldTypes": [],
-    "restrictionBiomes": []
+    "colorOnMap": "DEFAULT"
   }
 }

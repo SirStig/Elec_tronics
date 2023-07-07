@@ -10,18 +10,17 @@ public class Powertick0Procedure {
 			public double getValue(LevelAccessor world, BlockPos pos, String tag) {
 				BlockEntity blockEntity = world.getBlockEntity(pos);
 				if (blockEntity != null)
-					return blockEntity.getTileData().getDouble(tag);
+					return blockEntity.getPersistentData().getDouble(tag);
 				return -1;
 			}
-		}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "energyPercentage") <= 0
-				|| (new java.text.DecimalFormat("##.##").format(new Object() {
-					public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-						BlockEntity blockEntity = world.getBlockEntity(pos);
-						if (blockEntity != null)
-							return blockEntity.getTileData().getDouble(tag);
-						return -1;
-					}
-				}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "energyPercentage"))).contains("NaN")) {
+		}.getValue(world, BlockPos.containing(x, y, z), "energyPercentage") <= 0 || (new java.text.DecimalFormat("##.##").format(new Object() {
+			public double getValue(LevelAccessor world, BlockPos pos, String tag) {
+				BlockEntity blockEntity = world.getBlockEntity(pos);
+				if (blockEntity != null)
+					return blockEntity.getPersistentData().getDouble(tag);
+				return -1;
+			}
+		}.getValue(world, BlockPos.containing(x, y, z), "energyPercentage"))).contains("NaN")) {
 			return true;
 		}
 		return false;

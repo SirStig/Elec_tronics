@@ -1,11 +1,12 @@
 {
   "parent": "elec_tronics:custom/cabletdown",
   "textures": {
-    "all": "elec_tronics:blocks/c3",
-    "particle": "elec_tronics:blocks/c3",
-    "1": "elec_tronics:blocks/elec_tronicst1cable_end",
-    "3": "elec_tronics:blocks/cable_particles",
-    "4": "elec_tronics:blocks/elec_tronicst1cable_side",
-    "7": "elec_tronics:blocks/cable_end_t"
-  }
+    "all": "elec_tronics:block/c3",
+    "particle": "elec_tronics:block/c3",
+    "1": "elec_tronics:block/elec_tronicst1cable_end",
+    "3": "elec_tronics:block/cable_particles",
+    "4": "elec_tronics:block/elec_tronicst1cable_side",
+    "7": "elec_tronics:block/cable_end_t"
+  },
+  "render_type": "solid"
 }

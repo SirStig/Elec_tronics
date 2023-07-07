@@ -1,5 +1,5 @@
 modLoader="javafml"
-loaderVersion="[37,)"
+loaderVersion="[45,)"
 license="MIT License"
 
 [[mods]]
@@ -11,14 +11,12 @@ displayURL="https://github.com/SirStig/Elec_tronics"
 updateJSONURL="https://raw.githubusercontent.com/SirStig/Elec_tronics/1.17.x(Prototype)/update.json"
 logoFile="logo.png"
 authors="SirJStig"
-description='''
-Elec Tronics is a mod based around your favorite mods with a bit of a touch of realism
-'''
+description="Elec Tronics is a mod based around your favorite mods with a bit of a touch of realism"
 
 [[dependencies.elec_tronics]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.17.1]"
+    versionRange="[1.19.4]"
     ordering="NONE"
     side="BOTH"
 

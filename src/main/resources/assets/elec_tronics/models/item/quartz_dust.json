@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "elec_tronics:items/quartzdust"
+    "layer0": "elec_tronics:item/quartzdust"
   }
 }

@@ -12,10 +12,7 @@ import net.elec_tronics.init.ElecTronicsModFluids;
 
 public class ChlorineGasBlock extends LiquidBlock {
 	public ChlorineGasBlock() {
-		super(ElecTronicsModFluids.CHLORINE_GAS, BlockBehaviour.Properties.of(Material.WATER).strength(100f)
-
-		);
-		setRegistryName("chlorine_gas");
+		super(() -> ElecTronicsModFluids.CHLORINE_GAS.get(), BlockBehaviour.Properties.of(Material.WATER).strength(100f).noCollission().noLootTable());
 	}
 
 	@Override

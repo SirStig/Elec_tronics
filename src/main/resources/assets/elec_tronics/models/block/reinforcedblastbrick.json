@@ -1,12 +1,13 @@
 {
   "parent": "block/cube",
   "textures": {
-    "down": "elec_tronics:blocks/reinforcedbrick",
-    "up": "elec_tronics:blocks/reinforcedbrick",
-    "north": "elec_tronics:blocks/reinforcedbrick",
-    "east": "elec_tronics:blocks/reinforcedbrick",
-    "south": "elec_tronics:blocks/reinforcedbrick",
-    "west": "elec_tronics:blocks/reinforcedbrick",
-    "particle": "elec_tronics:blocks/reinforcedbrick"
-  }
+    "down": "elec_tronics:block/reinforcedbrick",
+    "up": "elec_tronics:block/reinforcedbrick",
+    "north": "elec_tronics:block/reinforcedbrick",
+    "east": "elec_tronics:block/reinforcedbrick",
+    "south": "elec_tronics:block/reinforcedbrick",
+    "west": "elec_tronics:block/reinforcedbrick",
+    "particle": "elec_tronics:block/reinforcedbrick"
+  },
+  "render_type": "solid"
 }

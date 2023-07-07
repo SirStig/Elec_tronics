@@ -4,9 +4,9 @@
  */
 package net.elec_tronics.init;
 
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.registries.RegistryObject;
+import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.DeferredRegister;
 
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.Block;
@@ -93,178 +93,94 @@ import net.elec_tronics.block.entity.Basewirecon2angledownBlockEntity;
 import net.elec_tronics.block.entity.Basewirecon2angleBlockEntity;
 import net.elec_tronics.block.entity.BasepipeBlockEntity;
 import net.elec_tronics.block.entity.BasecableT1BlockEntity;
+import net.elec_tronics.ElecTronicsMod;
 
-import java.util.List;
-import java.util.ArrayList;
-
-@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class ElecTronicsModBlockEntities {
-	private static final List<BlockEntityType<?>> REGISTRY = new ArrayList<>();
-	public static final BlockEntityType<?> BLASTFURNANCEMACHINE = register("elec_tronics:blastfurnancemachine",
-			ElecTronicsModBlocks.BLASTFURNANCEMACHINE, BlastfurnancemachineBlockEntity::new);
-	public static final BlockEntityType<?> ENGINEERSWORKBENCH = register("elec_tronics:engineersworkbench", ElecTronicsModBlocks.ENGINEERSWORKBENCH,
-			EngineersworkbenchBlockEntity::new);
-	public static final BlockEntityType<?> COALGENERATORMACHINE = register("elec_tronics:coalgeneratormachine",
-			ElecTronicsModBlocks.COALGENERATORMACHINE, CoalgeneratormachineBlockEntity::new);
-	public static final BlockEntityType<?> CRUSHERMACHINE = register("elec_tronics:crushermachine", ElecTronicsModBlocks.CRUSHERMACHINE,
-			CrushermachineBlockEntity::new);
-	public static final BlockEntityType<?> T_1_WIRE = register("elec_tronics:t_1_wire", ElecTronicsModBlocks.T_1_WIRE, T1WireBlockEntity::new);
-	public static final BlockEntityType<?> CABLE_TT_1 = register("elec_tronics:cable_tt_1", ElecTronicsModBlocks.CABLE_TT_1,
-			CableTT1BlockEntity::new);
-	public static final BlockEntityType<?> CABLE_JUNCTION_T_1 = register("elec_tronics:cable_junction_t_1", ElecTronicsModBlocks.CABLE_JUNCTION_T_1,
-			CableJunctionT1BlockEntity::new);
-	public static final BlockEntityType<?> CABLE_ANGLE_T_1 = register("elec_tronics:cable_angle_t_1", ElecTronicsModBlocks.CABLE_ANGLE_T_1,
-			CableAngleT1BlockEntity::new);
-	public static final BlockEntityType<?> ENGINEERS_WORK_BENCH_SIDE = register("elec_tronics:engineers_work_bench_side",
-			ElecTronicsModBlocks.ENGINEERS_WORK_BENCH_SIDE, EngineersWorkBenchSideBlockEntity::new);
-	public static final BlockEntityType<?> ENGINEERS_WORK_BENCH_TOP = register("elec_tronics:engineers_work_bench_top",
-			ElecTronicsModBlocks.ENGINEERS_WORK_BENCH_TOP, EngineersWorkBenchTopBlockEntity::new);
-	public static final BlockEntityType<?> ENGINEERS_WORK_BENCH_TOP_SIDE = register("elec_tronics:engineers_work_bench_top_side",
-			ElecTronicsModBlocks.ENGINEERS_WORK_BENCH_TOP_SIDE, EngineersWorkBenchTopSideBlockEntity::new);
-	public static final BlockEntityType<?> CABLE_T_UP_T_1 = register("elec_tronics:cable_t_up_t_1", ElecTronicsModBlocks.CABLE_T_UP_T_1,
-			CableTUpT1BlockEntity::new);
-	public static final BlockEntityType<?> CABLE_T_DOWN_T_1 = register("elec_tronics:cable_t_down_t_1", ElecTronicsModBlocks.CABLE_T_DOWN_T_1,
-			CableTDownT1BlockEntity::new);
-	public static final BlockEntityType<?> CABLE_T_UPAND_DOWN_T_1 = register("elec_tronics:cable_t_upand_down_t_1",
-			ElecTronicsModBlocks.CABLE_T_UPAND_DOWN_T_1, CableTUpandDownT1BlockEntity::new);
-	public static final BlockEntityType<?> CABLE_JUNCTION_UP_T_1 = register("elec_tronics:cable_junction_up_t_1",
-			ElecTronicsModBlocks.CABLE_JUNCTION_UP_T_1, CableJunctionUpT1BlockEntity::new);
-	public static final BlockEntityType<?> CABLE_JUNCTION_DOWN_T_1 = register("elec_tronics:cable_junction_down_t_1",
-			ElecTronicsModBlocks.CABLE_JUNCTION_DOWN_T_1, CableJunctionDownT1BlockEntity::new);
-	public static final BlockEntityType<?> CABLE_JUNCTION_UPAND_DOWN_T_1 = register("elec_tronics:cable_junction_upand_down_t_1",
-			ElecTronicsModBlocks.CABLE_JUNCTION_UPAND_DOWN_T_1, CableJunctionUpandDownT1BlockEntity::new);
-	public static final BlockEntityType<?> BASECABLE_T_1 = register("elec_tronics:basecable_t_1", ElecTronicsModBlocks.BASECABLE_T_1,
-			BasecableT1BlockEntity::new);
-	public static final BlockEntityType<?> CABLEHALF_T_1 = register("elec_tronics:cablehalf_t_1", ElecTronicsModBlocks.CABLEHALF_T_1,
-			CablehalfT1BlockEntity::new);
-	public static final BlockEntityType<?> BASEWIRECON_2ANGLE = register("elec_tronics:basewirecon_2angle", ElecTronicsModBlocks.BASEWIRECON_2ANGLE,
-			Basewirecon2angleBlockEntity::new);
-	public static final BlockEntityType<?> BASEWIRECON_2ANGLEDOWN = register("elec_tronics:basewirecon_2angledown",
-			ElecTronicsModBlocks.BASEWIRECON_2ANGLEDOWN, Basewirecon2angledownBlockEntity::new);
-	public static final BlockEntityType<?> BASEWIRECON_2ANGLEUP = register("elec_tronics:basewirecon_2angleup",
-			ElecTronicsModBlocks.BASEWIRECON_2ANGLEUP, Basewirecon2angleupBlockEntity::new);
-	public static final BlockEntityType<?> BASEWIRECON_3 = register("elec_tronics:basewirecon_3", ElecTronicsModBlocks.BASEWIRECON_3,
-			Basewirecon3BlockEntity::new);
-	public static final BlockEntityType<?> BASEWIRECON_3DOWN = register("elec_tronics:basewirecon_3down", ElecTronicsModBlocks.BASEWIRECON_3DOWN,
-			Basewirecon3downBlockEntity::new);
-	public static final BlockEntityType<?> BASEWIRECON_3DOWNANDUP = register("elec_tronics:basewirecon_3downandup",
-			ElecTronicsModBlocks.BASEWIRECON_3DOWNANDUP, Basewirecon3downandupBlockEntity::new);
-	public static final BlockEntityType<?> BASEWIRECON_3DOWNANGLE = register("elec_tronics:basewirecon_3downangle",
-			ElecTronicsModBlocks.BASEWIRECON_3DOWNANGLE, Basewirecon3downangleBlockEntity::new);
-	public static final BlockEntityType<?> BASEWIRECON_3UP = register("elec_tronics:basewirecon_3up", ElecTronicsModBlocks.BASEWIRECON_3UP,
-			Basewirecon3upBlockEntity::new);
-	public static final BlockEntityType<?> BASEWIRECON_3UPANGLE = register("elec_tronics:basewirecon_3upangle",
-			ElecTronicsModBlocks.BASEWIRECON_3UPANGLE, Basewirecon3upangleBlockEntity::new);
-	public static final BlockEntityType<?> BASEWIRECON_4DOWN = register("elec_tronics:basewirecon_4down", ElecTronicsModBlocks.BASEWIRECON_4DOWN,
-			Basewirecon4downBlockEntity::new);
-	public static final BlockEntityType<?> BASEWIRECON_4UP = register("elec_tronics:basewirecon_4up", ElecTronicsModBlocks.BASEWIRECON_4UP,
-			Basewirecon4upBlockEntity::new);
-	public static final BlockEntityType<?> BASEWIRECON_4UPANDDOWN = register("elec_tronics:basewirecon_4upanddown",
-			ElecTronicsModBlocks.BASEWIRECON_4UPANDDOWN, Basewirecon4upanddownBlockEntity::new);
-	public static final BlockEntityType<?> BASEWIRECON_4UPANDDOWNSTRAIGHT = register("elec_tronics:basewirecon_4upanddownstraight",
-			ElecTronicsModBlocks.BASEWIRECON_4UPANDDOWNSTRAIGHT, Basewirecon4upanddownstraightBlockEntity::new);
-	public static final BlockEntityType<?> BASEWIRECON_5DOWN = register("elec_tronics:basewirecon_5down", ElecTronicsModBlocks.BASEWIRECON_5DOWN,
-			Basewirecon5downBlockEntity::new);
-	public static final BlockEntityType<?> BASEWIRECON_5MAIN = register("elec_tronics:basewirecon_5main", ElecTronicsModBlocks.BASEWIRECON_5MAIN,
-			Basewirecon5mainBlockEntity::new);
-	public static final BlockEntityType<?> SOLAR_PANEL_T_1 = register("elec_tronics:solar_panel_t_1", ElecTronicsModBlocks.SOLAR_PANEL_T_1,
-			SolarPanelT1BlockEntity::new);
-	public static final BlockEntityType<?> SOLAR_PANELR = register("elec_tronics:solar_panelr", ElecTronicsModBlocks.SOLAR_PANELR,
-			SolarPanelrBlockEntity::new);
-	public static final BlockEntityType<?> SOLARPANELTOP = register("elec_tronics:solarpaneltop", ElecTronicsModBlocks.SOLARPANELTOP,
-			SolarpaneltopBlockEntity::new);
-	public static final BlockEntityType<?> SOLARPANELTOPR = register("elec_tronics:solarpaneltopr", ElecTronicsModBlocks.SOLARPANELTOPR,
-			SolarpaneltoprBlockEntity::new);
-	public static final BlockEntityType<?> EXTRUSION_MACHINE = register("elec_tronics:extrusion_machine", ElecTronicsModBlocks.EXTRUSION_MACHINE,
-			ExtrusionMachineBlockEntity::new);
-	public static final BlockEntityType<?> ENERGY_STORAGE_T_1 = register("elec_tronics:energy_storage_t_1", ElecTronicsModBlocks.ENERGY_STORAGE_T_1,
-			EnergyStorageT1BlockEntity::new);
-	public static final BlockEntityType<?> BASEPIPE = register("elec_tronics:basepipe", ElecTronicsModBlocks.BASEPIPE, BasepipeBlockEntity::new);
-	public static final BlockEntityType<?> PIPEANGLE = register("elec_tronics:pipeangle", ElecTronicsModBlocks.PIPEANGLE, PipeangleBlockEntity::new);
-	public static final BlockEntityType<?> PIPEANGLEDOWN = register("elec_tronics:pipeangledown", ElecTronicsModBlocks.PIPEANGLEDOWN,
-			PipeangledownBlockEntity::new);
-	public static final BlockEntityType<?> PIPEANLGEUP = register("elec_tronics:pipeanlgeup", ElecTronicsModBlocks.PIPEANLGEUP,
-			PipeanlgeupBlockEntity::new);
-	public static final BlockEntityType<?> PIPEDOWNANGLE = register("elec_tronics:pipedownangle", ElecTronicsModBlocks.PIPEDOWNANGLE,
-			PipedownangleBlockEntity::new);
-	public static final BlockEntityType<?> PIPEHALF = register("elec_tronics:pipehalf", ElecTronicsModBlocks.PIPEHALF, PipehalfBlockEntity::new);
-	public static final BlockEntityType<?> PIPEJUNCTION = register("elec_tronics:pipejunction", ElecTronicsModBlocks.PIPEJUNCTION,
-			PipejunctionBlockEntity::new);
-	public static final BlockEntityType<?> PIPEJUNCTIONDOWN = register("elec_tronics:pipejunctiondown", ElecTronicsModBlocks.PIPEJUNCTIONDOWN,
-			PipejunctiondownBlockEntity::new);
-	public static final BlockEntityType<?> PIPEJUNCTIONDOWN_2 = register("elec_tronics:pipejunctiondown_2", ElecTronicsModBlocks.PIPEJUNCTIONDOWN_2,
-			Pipejunctiondown2BlockEntity::new);
-	public static final BlockEntityType<?> PIPEJUNCTIONMAIN = register("elec_tronics:pipejunctionmain", ElecTronicsModBlocks.PIPEJUNCTIONMAIN,
-			PipejunctionmainBlockEntity::new);
-	public static final BlockEntityType<?> PIPEJUNCTIONUP = register("elec_tronics:pipejunctionup", ElecTronicsModBlocks.PIPEJUNCTIONUP,
-			PipejunctionupBlockEntity::new);
-	public static final BlockEntityType<?> PIPEJUNCTIONUP_2 = register("elec_tronics:pipejunctionup_2", ElecTronicsModBlocks.PIPEJUNCTIONUP_2,
-			Pipejunctionup2BlockEntity::new);
-	public static final BlockEntityType<?> PIPEJUNCTIONUPANDDOWN = register("elec_tronics:pipejunctionupanddown",
-			ElecTronicsModBlocks.PIPEJUNCTIONUPANDDOWN, PipejunctionupanddownBlockEntity::new);
-	public static final BlockEntityType<?> PIPEJUNCTIONUPANDDOWN_2 = register("elec_tronics:pipejunctionupanddown_2",
-			ElecTronicsModBlocks.PIPEJUNCTIONUPANDDOWN_2, Pipejunctionupanddown2BlockEntity::new);
-	public static final BlockEntityType<?> PIPEJUNCTIONUPANDDOWNSTRAIGHT = register("elec_tronics:pipejunctionupanddownstraight",
-			ElecTronicsModBlocks.PIPEJUNCTIONUPANDDOWNSTRAIGHT, PipejunctionupanddownstraightBlockEntity::new);
-	public static final BlockEntityType<?> PIPESTRAIGHT = register("elec_tronics:pipestraight", ElecTronicsModBlocks.PIPESTRAIGHT,
-			PipestraightBlockEntity::new);
-	public static final BlockEntityType<?> PIPET = register("elec_tronics:pipet", ElecTronicsModBlocks.PIPET, PipetBlockEntity::new);
-	public static final BlockEntityType<?> PIPETDOWN = register("elec_tronics:pipetdown", ElecTronicsModBlocks.PIPETDOWN, PipetdownBlockEntity::new);
-	public static final BlockEntityType<?> PIPETDOWNANDUP = register("elec_tronics:pipetdownandup", ElecTronicsModBlocks.PIPETDOWNANDUP,
-			PipetdownandupBlockEntity::new);
-	public static final BlockEntityType<?> PIPEUP = register("elec_tronics:pipeup", ElecTronicsModBlocks.PIPEUP, PipeupBlockEntity::new);
-	public static final BlockEntityType<?> PIPEUPANGLE = register("elec_tronics:pipeupangle", ElecTronicsModBlocks.PIPEUPANGLE,
-			PipeupangleBlockEntity::new);
-	public static final BlockEntityType<?> TANK = register("elec_tronics:tank", ElecTronicsModBlocks.TANK, TankBlockEntity::new);
-	public static final BlockEntityType<?> TANKFULL_1 = register("elec_tronics:tankfull_1", ElecTronicsModBlocks.TANKFULL_1,
-			Tankfull1BlockEntity::new);
-	public static final BlockEntityType<?> TANKFULL_2 = register("elec_tronics:tankfull_2", ElecTronicsModBlocks.TANKFULL_2,
-			Tankfull2BlockEntity::new);
-	public static final BlockEntityType<?> TANKFULL_3 = register("elec_tronics:tankfull_3", ElecTronicsModBlocks.TANKFULL_3,
-			Tankfull3BlockEntity::new);
-	public static final BlockEntityType<?> TANKFULL_4 = register("elec_tronics:tankfull_4", ElecTronicsModBlocks.TANKFULL_4,
-			Tankfull4BlockEntity::new);
-	public static final BlockEntityType<?> TANKFULL_5 = register("elec_tronics:tankfull_5", ElecTronicsModBlocks.TANKFULL_5,
-			Tankfull5BlockEntity::new);
-	public static final BlockEntityType<?> TANKFULL_6 = register("elec_tronics:tankfull_6", ElecTronicsModBlocks.TANKFULL_6,
-			Tankfull6BlockEntity::new);
-	public static final BlockEntityType<?> TANKFULL_7 = register("elec_tronics:tankfull_7", ElecTronicsModBlocks.TANKFULL_7,
-			Tankfull7BlockEntity::new);
-	public static final BlockEntityType<?> TANKFULL_8 = register("elec_tronics:tankfull_8", ElecTronicsModBlocks.TANKFULL_8,
-			Tankfull8BlockEntity::new);
-	public static final BlockEntityType<?> TANKFULL_9 = register("elec_tronics:tankfull_9", ElecTronicsModBlocks.TANKFULL_9,
-			Tankfull9BlockEntity::new);
-	public static final BlockEntityType<?> TANKFULL_10 = register("elec_tronics:tankfull_10", ElecTronicsModBlocks.TANKFULL_10,
-			Tankfull10BlockEntity::new);
-	public static final BlockEntityType<?> TANKFULL_11 = register("elec_tronics:tankfull_11", ElecTronicsModBlocks.TANKFULL_11,
-			Tankfull11BlockEntity::new);
-	public static final BlockEntityType<?> TANKFULL_12 = register("elec_tronics:tankfull_12", ElecTronicsModBlocks.TANKFULL_12,
-			Tankfull12BlockEntity::new);
-	public static final BlockEntityType<?> TANKFULL_13 = register("elec_tronics:tankfull_13", ElecTronicsModBlocks.TANKFULL_13,
-			Tankfull13BlockEntity::new);
-	public static final BlockEntityType<?> TANKFULL_14 = register("elec_tronics:tankfull_14", ElecTronicsModBlocks.TANKFULL_14,
-			Tankfull14BlockEntity::new);
-	public static final BlockEntityType<?> MANUAL_FLUID_PUMP = register("elec_tronics:manual_fluid_pump", ElecTronicsModBlocks.MANUAL_FLUID_PUMP,
-			ManualFluidPumpBlockEntity::new);
-	public static final BlockEntityType<?> MANUAL_FLUID_PUMPDOWN_2 = register("elec_tronics:manual_fluid_pumpdown_2",
-			ElecTronicsModBlocks.MANUAL_FLUID_PUMPDOWN_2, ManualFluidPumpdown2BlockEntity::new);
-	public static final BlockEntityType<?> MANUAL_FLUID_PUMP_3 = register("elec_tronics:manual_fluid_pump_3",
-			ElecTronicsModBlocks.MANUAL_FLUID_PUMP_3, ManualFluidPump3BlockEntity::new);
-	public static final BlockEntityType<?> MANUAL_FLUID_PUMP_4 = register("elec_tronics:manual_fluid_pump_4",
-			ElecTronicsModBlocks.MANUAL_FLUID_PUMP_4, ManualFluidPump4BlockEntity::new);
-	public static final BlockEntityType<?> MANUAL_FLUID_PUMP_5 = register("elec_tronics:manual_fluid_pump_5",
-			ElecTronicsModBlocks.MANUAL_FLUID_PUMP_5, ManualFluidPump5BlockEntity::new);
-	public static final BlockEntityType<?> TANKFULLHALF_1 = register("elec_tronics:tankfullhalf_1", ElecTronicsModBlocks.TANKFULLHALF_1,
-			Tankfullhalf1BlockEntity::new);
+	public static final DeferredRegister<BlockEntityType<?>> REGISTRY = DeferredRegister.create(ForgeRegistries.BLOCK_ENTITY_TYPES, ElecTronicsMod.MODID);
+	public static final RegistryObject<BlockEntityType<?>> BLASTFURNANCEMACHINE = register("blastfurnancemachine", ElecTronicsModBlocks.BLASTFURNANCEMACHINE, BlastfurnancemachineBlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> ENGINEERSWORKBENCH = register("engineersworkbench", ElecTronicsModBlocks.ENGINEERSWORKBENCH, EngineersworkbenchBlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> COALGENERATORMACHINE = register("coalgeneratormachine", ElecTronicsModBlocks.COALGENERATORMACHINE, CoalgeneratormachineBlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> CRUSHERMACHINE = register("crushermachine", ElecTronicsModBlocks.CRUSHERMACHINE, CrushermachineBlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> T_1_WIRE = register("t_1_wire", ElecTronicsModBlocks.T_1_WIRE, T1WireBlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> CABLE_TT_1 = register("cable_tt_1", ElecTronicsModBlocks.CABLE_TT_1, CableTT1BlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> CABLE_JUNCTION_T_1 = register("cable_junction_t_1", ElecTronicsModBlocks.CABLE_JUNCTION_T_1, CableJunctionT1BlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> CABLE_ANGLE_T_1 = register("cable_angle_t_1", ElecTronicsModBlocks.CABLE_ANGLE_T_1, CableAngleT1BlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> ENGINEERS_WORK_BENCH_SIDE = register("engineers_work_bench_side", ElecTronicsModBlocks.ENGINEERS_WORK_BENCH_SIDE, EngineersWorkBenchSideBlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> ENGINEERS_WORK_BENCH_TOP = register("engineers_work_bench_top", ElecTronicsModBlocks.ENGINEERS_WORK_BENCH_TOP, EngineersWorkBenchTopBlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> ENGINEERS_WORK_BENCH_TOP_SIDE = register("engineers_work_bench_top_side", ElecTronicsModBlocks.ENGINEERS_WORK_BENCH_TOP_SIDE, EngineersWorkBenchTopSideBlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> CABLE_T_UP_T_1 = register("cable_t_up_t_1", ElecTronicsModBlocks.CABLE_T_UP_T_1, CableTUpT1BlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> CABLE_T_DOWN_T_1 = register("cable_t_down_t_1", ElecTronicsModBlocks.CABLE_T_DOWN_T_1, CableTDownT1BlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> CABLE_T_UPAND_DOWN_T_1 = register("cable_t_upand_down_t_1", ElecTronicsModBlocks.CABLE_T_UPAND_DOWN_T_1, CableTUpandDownT1BlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> CABLE_JUNCTION_UP_T_1 = register("cable_junction_up_t_1", ElecTronicsModBlocks.CABLE_JUNCTION_UP_T_1, CableJunctionUpT1BlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> CABLE_JUNCTION_DOWN_T_1 = register("cable_junction_down_t_1", ElecTronicsModBlocks.CABLE_JUNCTION_DOWN_T_1, CableJunctionDownT1BlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> CABLE_JUNCTION_UPAND_DOWN_T_1 = register("cable_junction_upand_down_t_1", ElecTronicsModBlocks.CABLE_JUNCTION_UPAND_DOWN_T_1, CableJunctionUpandDownT1BlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> BASECABLE_T_1 = register("basecable_t_1", ElecTronicsModBlocks.BASECABLE_T_1, BasecableT1BlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> CABLEHALF_T_1 = register("cablehalf_t_1", ElecTronicsModBlocks.CABLEHALF_T_1, CablehalfT1BlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> BASEWIRECON_2ANGLE = register("basewirecon_2angle", ElecTronicsModBlocks.BASEWIRECON_2ANGLE, Basewirecon2angleBlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> BASEWIRECON_2ANGLEDOWN = register("basewirecon_2angledown", ElecTronicsModBlocks.BASEWIRECON_2ANGLEDOWN, Basewirecon2angledownBlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> BASEWIRECON_2ANGLEUP = register("basewirecon_2angleup", ElecTronicsModBlocks.BASEWIRECON_2ANGLEUP, Basewirecon2angleupBlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> BASEWIRECON_3 = register("basewirecon_3", ElecTronicsModBlocks.BASEWIRECON_3, Basewirecon3BlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> BASEWIRECON_3DOWN = register("basewirecon_3down", ElecTronicsModBlocks.BASEWIRECON_3DOWN, Basewirecon3downBlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> BASEWIRECON_3DOWNANDUP = register("basewirecon_3downandup", ElecTronicsModBlocks.BASEWIRECON_3DOWNANDUP, Basewirecon3downandupBlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> BASEWIRECON_3DOWNANGLE = register("basewirecon_3downangle", ElecTronicsModBlocks.BASEWIRECON_3DOWNANGLE, Basewirecon3downangleBlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> BASEWIRECON_3UP = register("basewirecon_3up", ElecTronicsModBlocks.BASEWIRECON_3UP, Basewirecon3upBlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> BASEWIRECON_3UPANGLE = register("basewirecon_3upangle", ElecTronicsModBlocks.BASEWIRECON_3UPANGLE, Basewirecon3upangleBlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> BASEWIRECON_4DOWN = register("basewirecon_4down", ElecTronicsModBlocks.BASEWIRECON_4DOWN, Basewirecon4downBlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> BASEWIRECON_4UP = register("basewirecon_4up", ElecTronicsModBlocks.BASEWIRECON_4UP, Basewirecon4upBlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> BASEWIRECON_4UPANDDOWN = register("basewirecon_4upanddown", ElecTronicsModBlocks.BASEWIRECON_4UPANDDOWN, Basewirecon4upanddownBlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> BASEWIRECON_4UPANDDOWNSTRAIGHT = register("basewirecon_4upanddownstraight", ElecTronicsModBlocks.BASEWIRECON_4UPANDDOWNSTRAIGHT, Basewirecon4upanddownstraightBlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> BASEWIRECON_5DOWN = register("basewirecon_5down", ElecTronicsModBlocks.BASEWIRECON_5DOWN, Basewirecon5downBlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> BASEWIRECON_5MAIN = register("basewirecon_5main", ElecTronicsModBlocks.BASEWIRECON_5MAIN, Basewirecon5mainBlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> SOLAR_PANEL_T_1 = register("solar_panel_t_1", ElecTronicsModBlocks.SOLAR_PANEL_T_1, SolarPanelT1BlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> SOLAR_PANELR = register("solar_panelr", ElecTronicsModBlocks.SOLAR_PANELR, SolarPanelrBlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> SOLARPANELTOP = register("solarpaneltop", ElecTronicsModBlocks.SOLARPANELTOP, SolarpaneltopBlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> SOLARPANELTOPR = register("solarpaneltopr", ElecTronicsModBlocks.SOLARPANELTOPR, SolarpaneltoprBlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> EXTRUSION_MACHINE = register("extrusion_machine", ElecTronicsModBlocks.EXTRUSION_MACHINE, ExtrusionMachineBlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> ENERGY_STORAGE_T_1 = register("energy_storage_t_1", ElecTronicsModBlocks.ENERGY_STORAGE_T_1, EnergyStorageT1BlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> BASEPIPE = register("basepipe", ElecTronicsModBlocks.BASEPIPE, BasepipeBlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> PIPEANGLE = register("pipeangle", ElecTronicsModBlocks.PIPEANGLE, PipeangleBlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> PIPEANGLEDOWN = register("pipeangledown", ElecTronicsModBlocks.PIPEANGLEDOWN, PipeangledownBlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> PIPEANLGEUP = register("pipeanlgeup", ElecTronicsModBlocks.PIPEANLGEUP, PipeanlgeupBlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> PIPEDOWNANGLE = register("pipedownangle", ElecTronicsModBlocks.PIPEDOWNANGLE, PipedownangleBlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> PIPEHALF = register("pipehalf", ElecTronicsModBlocks.PIPEHALF, PipehalfBlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> PIPEJUNCTION = register("pipejunction", ElecTronicsModBlocks.PIPEJUNCTION, PipejunctionBlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> PIPEJUNCTIONDOWN = register("pipejunctiondown", ElecTronicsModBlocks.PIPEJUNCTIONDOWN, PipejunctiondownBlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> PIPEJUNCTIONDOWN_2 = register("pipejunctiondown_2", ElecTronicsModBlocks.PIPEJUNCTIONDOWN_2, Pipejunctiondown2BlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> PIPEJUNCTIONMAIN = register("pipejunctionmain", ElecTronicsModBlocks.PIPEJUNCTIONMAIN, PipejunctionmainBlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> PIPEJUNCTIONUP = register("pipejunctionup", ElecTronicsModBlocks.PIPEJUNCTIONUP, PipejunctionupBlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> PIPEJUNCTIONUP_2 = register("pipejunctionup_2", ElecTronicsModBlocks.PIPEJUNCTIONUP_2, Pipejunctionup2BlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> PIPEJUNCTIONUPANDDOWN = register("pipejunctionupanddown", ElecTronicsModBlocks.PIPEJUNCTIONUPANDDOWN, PipejunctionupanddownBlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> PIPEJUNCTIONUPANDDOWN_2 = register("pipejunctionupanddown_2", ElecTronicsModBlocks.PIPEJUNCTIONUPANDDOWN_2, Pipejunctionupanddown2BlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> PIPEJUNCTIONUPANDDOWNSTRAIGHT = register("pipejunctionupanddownstraight", ElecTronicsModBlocks.PIPEJUNCTIONUPANDDOWNSTRAIGHT, PipejunctionupanddownstraightBlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> PIPESTRAIGHT = register("pipestraight", ElecTronicsModBlocks.PIPESTRAIGHT, PipestraightBlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> PIPET = register("pipet", ElecTronicsModBlocks.PIPET, PipetBlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> PIPETDOWN = register("pipetdown", ElecTronicsModBlocks.PIPETDOWN, PipetdownBlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> PIPETDOWNANDUP = register("pipetdownandup", ElecTronicsModBlocks.PIPETDOWNANDUP, PipetdownandupBlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> PIPEUP = register("pipeup", ElecTronicsModBlocks.PIPEUP, PipeupBlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> PIPEUPANGLE = register("pipeupangle", ElecTronicsModBlocks.PIPEUPANGLE, PipeupangleBlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> TANK = register("tank", ElecTronicsModBlocks.TANK, TankBlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> TANKFULL_1 = register("tankfull_1", ElecTronicsModBlocks.TANKFULL_1, Tankfull1BlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> TANKFULL_2 = register("tankfull_2", ElecTronicsModBlocks.TANKFULL_2, Tankfull2BlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> TANKFULL_3 = register("tankfull_3", ElecTronicsModBlocks.TANKFULL_3, Tankfull3BlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> TANKFULL_4 = register("tankfull_4", ElecTronicsModBlocks.TANKFULL_4, Tankfull4BlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> TANKFULL_5 = register("tankfull_5", ElecTronicsModBlocks.TANKFULL_5, Tankfull5BlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> TANKFULL_6 = register("tankfull_6", ElecTronicsModBlocks.TANKFULL_6, Tankfull6BlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> TANKFULL_7 = register("tankfull_7", ElecTronicsModBlocks.TANKFULL_7, Tankfull7BlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> TANKFULL_8 = register("tankfull_8", ElecTronicsModBlocks.TANKFULL_8, Tankfull8BlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> TANKFULL_9 = register("tankfull_9", ElecTronicsModBlocks.TANKFULL_9, Tankfull9BlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> TANKFULL_10 = register("tankfull_10", ElecTronicsModBlocks.TANKFULL_10, Tankfull10BlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> TANKFULL_11 = register("tankfull_11", ElecTronicsModBlocks.TANKFULL_11, Tankfull11BlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> TANKFULL_12 = register("tankfull_12", ElecTronicsModBlocks.TANKFULL_12, Tankfull12BlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> TANKFULL_13 = register("tankfull_13", ElecTronicsModBlocks.TANKFULL_13, Tankfull13BlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> TANKFULL_14 = register("tankfull_14", ElecTronicsModBlocks.TANKFULL_14, Tankfull14BlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> MANUAL_FLUID_PUMP = register("manual_fluid_pump", ElecTronicsModBlocks.MANUAL_FLUID_PUMP, ManualFluidPumpBlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> MANUAL_FLUID_PUMPDOWN_2 = register("manual_fluid_pumpdown_2", ElecTronicsModBlocks.MANUAL_FLUID_PUMPDOWN_2, ManualFluidPumpdown2BlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> MANUAL_FLUID_PUMP_3 = register("manual_fluid_pump_3", ElecTronicsModBlocks.MANUAL_FLUID_PUMP_3, ManualFluidPump3BlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> MANUAL_FLUID_PUMP_4 = register("manual_fluid_pump_4", ElecTronicsModBlocks.MANUAL_FLUID_PUMP_4, ManualFluidPump4BlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> MANUAL_FLUID_PUMP_5 = register("manual_fluid_pump_5", ElecTronicsModBlocks.MANUAL_FLUID_PUMP_5, ManualFluidPump5BlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> TANKFULLHALF_1 = register("tankfullhalf_1", ElecTronicsModBlocks.TANKFULLHALF_1, Tankfullhalf1BlockEntity::new);
 
-	private static BlockEntityType<?> register(String registryname, Block block, BlockEntityType.BlockEntitySupplier<?> supplier) {
-		BlockEntityType<?> blockEntityType = BlockEntityType.Builder.of(supplier, block).build(null).setRegistryName(registryname);
-		REGISTRY.add(blockEntityType);
-		return blockEntityType;
-	}
-
-	@SubscribeEvent
-	public static void registerTileEntity(RegistryEvent.Register<BlockEntityType<?>> event) {
-		event.getRegistry().registerAll(REGISTRY.toArray(new BlockEntityType[0]));
+	private static RegistryObject<BlockEntityType<?>> register(String registryname, RegistryObject<Block> block, BlockEntityType.BlockEntitySupplier<?> supplier) {
+		return REGISTRY.register(registryname, () -> BlockEntityType.Builder.of(supplier, block.get()).build(null));
 	}
 }

@@ -1,9 +1,10 @@
 {
   "parent": "elec_tronics:custom/crusher",
   "textures": {
-    "all": "elec_tronics:blocks/crusher",
-    "particle": "elec_tronics:blocks/crusher",
-    "0": "elec_tronics:blocks/screen_shot_2022-02-26_at_3.03.29_am",
-    "2": "elec_tronics:blocks/screen_shot_2022-03-04_at_11.20.23_pm"
-  }
+    "all": "elec_tronics:block/crusher",
+    "particle": "elec_tronics:block/crusher",
+    "0": "elec_tronics:block/screen_shot_2022-02-26_at_3.03.29_am",
+    "2": "elec_tronics:block/screen_shot_2022-03-04_at_11.20.23_pm"
+  },
+  "render_type": "solid"
 }

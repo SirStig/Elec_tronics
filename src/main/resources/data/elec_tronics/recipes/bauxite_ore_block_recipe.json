@@ -1,12 +1,13 @@
 {
   "type": "minecraft:crafting_shaped",
+  "category": "misc",
   "pattern": [
-    "###",
-    "###",
-    "###"
+    "BBB",
+    "BBB",
+    "BBB"
   ],
   "key": {
-    "#": {
+    "B": {
       "item": "elec_tronics:bauxite_ingot"
     }
   },

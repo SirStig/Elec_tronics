@@ -1,6 +1,7 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "elec_tronics:items/basepipe"
-  }
+    "layer0": "elec_tronics:item/basepipe"
+  },
+  "render_type": "translucent"
 }

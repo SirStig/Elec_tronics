@@ -1,9 +1,10 @@
 {
   "parent": "elec_tronics:custom/solarpaneltoprnew",
   "textures": {
-    "all": "elec_tronics:blocks/solarpanelfinal",
-    "particle": "elec_tronics:blocks/solarpanelfinal",
-    "0": "elec_tronics:blocks/screen_shot_2022-02-26_at_3.03.29_am",
-    "1": "elec_tronics:blocks/solarpaneltexture"
-  }
+    "all": "elec_tronics:block/solarpanelfinal",
+    "particle": "elec_tronics:block/solarpanelfinal",
+    "0": "elec_tronics:block/screen_shot_2022-02-26_at_3.03.29_am",
+    "1": "elec_tronics:block/solarpaneltexture"
+  },
+  "render_type": "solid"
 }

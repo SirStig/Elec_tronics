@@ -1,10 +1,11 @@
 {
   "parent": "elec_tronics:custom/basecable",
   "textures": {
-    "all": "elec_tronics:blocks/basecablegu",
-    "particle": "elec_tronics:blocks/basecablegu",
-    "3": "elec_tronics:blocks/cable_junction-end",
-    "4": "elec_tronics:blocks/elec_tronicst1cable_end",
-    "5": "elec_tronics:blocks/elec_tronicst1cable_side"
-  }
+    "all": "elec_tronics:block/basecablegu",
+    "particle": "elec_tronics:block/basecablegu",
+    "3": "elec_tronics:block/cable_junction-end",
+    "4": "elec_tronics:block/elec_tronicst1cable_end",
+    "5": "elec_tronics:block/elec_tronicst1cable_side"
+  },
+  "render_type": "solid"
 }

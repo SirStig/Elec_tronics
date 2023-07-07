@@ -21,17 +21,15 @@ public class EngineersWorkBenchOnBlockRightClickedProcedure {
 		double sz = 0;
 		sx = -1;
 		found = false;
-		for (int index0 = 0; index0 < (int) (2); index0++) {
+		for (int index0 = 0; index0 < 2; index0++) {
 			sy = -1;
-			for (int index1 = 0; index1 < (int) (2); index1++) {
+			for (int index1 = 0; index1 < 2; index1++) {
 				sz = -1;
-				for (int index2 = 0; index2 < (int) (2); index2++) {
-					if ((world.getBlockState(new BlockPos((int) (x + sx), (int) (y + sy), (int) (z + sz))))
-							.getBlock() == ElecTronicsModBlocks.ENGINEERSWORKBENCH) {
+				for (int index2 = 0; index2 < 2; index2++) {
+					if ((world.getBlockState(BlockPos.containing(x + sx, y + sy, z + sz))).getBlock() == ElecTronicsModBlocks.ENGINEERSWORKBENCH.get()) {
 						if (entity instanceof Player _player) {
-							BlockPos _bp = new BlockPos((int) (x + sx), (int) (y + sy), (int) (z + sz));
-							_player.level.getBlockState(_bp).use(_player.level, _player, InteractionHand.MAIN_HAND,
-									BlockHitResult.miss(new Vec3(_bp.getX(), _bp.getY(), _bp.getZ()), Direction.UP, _bp));
+							BlockPos _bp = BlockPos.containing(x + sx, y + sy, z + sz);
+							_player.level.getBlockState(_bp).use(_player.level, _player, InteractionHand.MAIN_HAND, BlockHitResult.miss(new Vec3(_bp.getX(), _bp.getY(), _bp.getZ()), Direction.UP, _bp));
 						}
 					}
 					sz = sz + 1;

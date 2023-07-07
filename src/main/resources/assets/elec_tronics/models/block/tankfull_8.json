@@ -1,12 +1,13 @@
 {
   "parent": "elec_tronics:custom/tank_8_full",
   "textures": {
-    "all": "elec_tronics:blocks/tank",
-    "particle": "elec_tronics:blocks/tank",
-    "0": "elec_tronics:blocks/pipe_texture",
-    "1": "elec_tronics:blocks/13158264-minecraftglass_l",
-    "2": "elec_tronics:blocks/tankside",
-    "3": "elec_tronics:blocks/pipe_plug",
-    "4": "elec_tronics:blocks/water_still_tank"
-  }
+    "all": "elec_tronics:block/tank",
+    "particle": "elec_tronics:block/tank",
+    "0": "elec_tronics:block/pipe_texture",
+    "1": "elec_tronics:block/13158264-minecraftglass_l",
+    "2": "elec_tronics:block/tankside",
+    "3": "elec_tronics:block/pipe_plug",
+    "4": "elec_tronics:block/water_still_tank"
+  },
+  "render_type": "cutout"
 }

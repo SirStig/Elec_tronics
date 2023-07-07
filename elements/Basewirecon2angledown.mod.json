@@ -1,5 +1,5 @@
 {
-  "_fv": 24,
+  "_fv": 43,
   "_type": "block",
   "definition": {
     "texture": "basetemp",
@@ -11,6 +11,7 @@
     "renderType": 2,
     "customModelName": "base_wire_con_2_angle_down:default",
     "rotationMode": 2,
+    "enablePitch": false,
     "emissiveRendering": false,
     "displayFluidOverlay": false,
     "itemTexture": "",
@@ -65,6 +66,7 @@
     },
     "dropAmount": 1,
     "useLootTableForDrops": false,
+    "requiresCorrectTool": false,
     "enchantPowerBonus": 0.0,
     "plantsGrowOn": false,
     "canRedstoneConnect": false,
@@ -100,28 +102,22 @@
     "breakSound": {
       "value": ""
     },
-    "stepSound": {
-      "value": ""
-    },
-    "placeSound": {
+    "fallSound": {
       "value": ""
     },
     "hitSound": {
       "value": ""
     },
-    "fallSound": {
+    "placeSound": {
+      "value": ""
+    },
+    "stepSound": {
       "value": ""
     },
     "luminance": 0,
     "unbreakable": false,
     "breakHarvestLevel": 0,
-    "spawnParticles": false,
-    "particleToSpawn": {
-      "value": "EXPLOSION_NORMAL"
-    },
-    "particleSpawningShape": "Spread",
-    "particleSpawningRadious": 0.5,
-    "particleAmount": 4,
+    "isBonemealable": false,
     "hasInventory": true,
     "guiBoundTo": "<NONE>",
     "openGUIOnRightClick": false,
@@ -152,9 +148,19 @@
     "restrictionBiomes": [],
     "blocksToReplace": [
       {
-        "value": "Blocks.STONE"
+        "value": "Blocks.STONE#0"
+      },
+      {
+        "value": "Blocks.STONE#1"
+      },
+      {
+        "value": "Blocks.STONE#3"
+      },
+      {
+        "value": "Blocks.STONE#5"
       }
     ],
+    "generationShape": "UNIFORM",
     "frequencyPerChunks": 10,
     "frequencyOnChunk": 16,
     "minGenerateHeight": 0,

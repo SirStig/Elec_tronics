@@ -7,7 +7,6 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.HoeItem;
 
-import net.elec_tronics.init.ElecTronicsModTabs;
 import net.elec_tronics.init.ElecTronicsModItems;
 
 public class SteelhoeItem extends HoeItem {
@@ -34,9 +33,8 @@ public class SteelhoeItem extends HoeItem {
 			}
 
 			public Ingredient getRepairIngredient() {
-				return Ingredient.of(new ItemStack(ElecTronicsModItems.STEELINGOT));
+				return Ingredient.of(new ItemStack(ElecTronicsModItems.STEELINGOT.get()));
 			}
-		}, 0, -3f, new Item.Properties().tab(ElecTronicsModTabs.TAB_ELEC_TRONICS_MENU));
-		setRegistryName("steelhoe");
+		}, 0, -3f, new Item.Properties());
 	}
 }

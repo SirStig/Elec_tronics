@@ -10,17 +10,17 @@ public class Powertick8Procedure {
 			public double getValue(LevelAccessor world, BlockPos pos, String tag) {
 				BlockEntity blockEntity = world.getBlockEntity(pos);
 				if (blockEntity != null)
-					return blockEntity.getTileData().getDouble(tag);
+					return blockEntity.getPersistentData().getDouble(tag);
 				return -1;
 			}
-		}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "energyPercentage") == 8 || new Object() {
+		}.getValue(world, BlockPos.containing(x, y, z), "energyPercentage") == 8 || new Object() {
 			public double getValue(LevelAccessor world, BlockPos pos, String tag) {
 				BlockEntity blockEntity = world.getBlockEntity(pos);
 				if (blockEntity != null)
-					return blockEntity.getTileData().getDouble(tag);
+					return blockEntity.getPersistentData().getDouble(tag);
 				return -1;
 			}
-		}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "energyPercentage") == 9) {
+		}.getValue(world, BlockPos.containing(x, y, z), "energyPercentage") == 9) {
 			return true;
 		}
 		return false;

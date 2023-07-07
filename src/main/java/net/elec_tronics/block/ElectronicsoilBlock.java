@@ -14,10 +14,7 @@ import net.elec_tronics.init.ElecTronicsModFluids;
 
 public class ElectronicsoilBlock extends LiquidBlock {
 	public ElectronicsoilBlock() {
-		super(ElecTronicsModFluids.ELECTRONICSOIL, BlockBehaviour.Properties.of(Material.WATER, MaterialColor.COLOR_BLACK).strength(5f)
-
-		);
-		setRegistryName("electronicsoil");
+		super(() -> ElecTronicsModFluids.ELECTRONICSOIL.get(), BlockBehaviour.Properties.of(Material.WATER, MaterialColor.COLOR_BLACK).strength(5f).noCollission().noLootTable());
 	}
 
 	@Override

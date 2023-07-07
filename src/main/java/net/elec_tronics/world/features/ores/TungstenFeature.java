@@ -1,34 +1,17 @@
 
 package net.elec_tronics.world.features.ores;
 
-import net.minecraft.world.level.levelgen.structure.templatesystem.RuleTestType;
-import net.minecraft.world.level.levelgen.structure.templatesystem.RuleTest;
-import net.minecraft.world.level.levelgen.heightproviders.UniformHeight;
-import net.minecraft.world.level.levelgen.feature.configurations.RangeDecoratorConfiguration;
 import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration;
 import net.minecraft.world.level.levelgen.feature.OreFeature;
 import net.minecraft.world.level.levelgen.feature.FeaturePlaceContext;
-import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
-import net.minecraft.world.level.levelgen.VerticalAnchor;
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.WorldGenLevel;
 import net.minecraft.world.level.Level;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.core.Registry;
-
-import net.elec_tronics.init.ElecTronicsModBlocks;
 
 import java.util.Set;
-import java.util.Random;
 
 public class TungstenFeature extends OreFeature {
-	public static final TungstenFeature FEATURE = (TungstenFeature) new TungstenFeature().setRegistryName("elec_tronics:tungsten");
-	public static final ConfiguredFeature<?, ?> CONFIGURED_FEATURE = FEATURE
-			.configured(new OreConfiguration(TungstenFeatureRuleTest.INSTANCE, ElecTronicsModBlocks.TUNGSTEN.defaultBlockState(), 8))
-			.range(new RangeDecoratorConfiguration(UniformHeight.of(VerticalAnchor.absolute(0), VerticalAnchor.absolute(45)))).squared().count(3);
-	public static final Set<ResourceLocation> GENERATE_BIOMES = null;
+	private final Set<ResourceKey<Level>> generate_dimensions = Set.of(Level.OVERWORLD);
 
 	public TungstenFeature() {
 		super(OreConfiguration.CODEC);
@@ -36,30 +19,8 @@ public class TungstenFeature extends OreFeature {
 
 	public boolean place(FeaturePlaceContext<OreConfiguration> context) {
 		WorldGenLevel world = context.level();
-		ResourceKey<Level> dimensionType = world.getLevel().dimension();
-		boolean dimensionCriteria = false;
-		if (dimensionType == Level.OVERWORLD)
-			dimensionCriteria = true;
-		if (!dimensionCriteria)
+		if (!generate_dimensions.contains(world.getLevel().dimension()))
 			return false;
 		return super.place(context);
-	}
-
-	private static class TungstenFeatureRuleTest extends RuleTest {
-		static final TungstenFeatureRuleTest INSTANCE = new TungstenFeatureRuleTest();
-		static final com.mojang.serialization.Codec<TungstenFeatureRuleTest> codec = com.mojang.serialization.Codec.unit(() -> INSTANCE);
-		static final RuleTestType<TungstenFeatureRuleTest> CUSTOM_MATCH = Registry.register(Registry.RULE_TEST,
-				new ResourceLocation("elec_tronics:tungsten_match"), () -> codec);
-
-		public boolean test(BlockState blockAt, Random random) {
-			boolean blockCriteria = false;
-			if (blockAt.getBlock() == Blocks.STONE)
-				blockCriteria = true;
-			return blockCriteria;
-		}
-
-		protected RuleTestType<?> getType() {
-			return CUSTOM_MATCH;
-		}
 	}
 }

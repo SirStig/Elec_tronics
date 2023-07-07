@@ -1,8 +1,9 @@
 {
   "parent": "elec_tronics:custom/pipe_t_down_and_uo",
   "textures": {
-    "all": "elec_tronics:blocks/basepipe",
-    "particle": "elec_tronics:blocks/basepipe",
-    "0": "elec_tronics:blocks/pipe_texture"
-  }
+    "all": "elec_tronics:block/basepipe",
+    "particle": "elec_tronics:block/basepipe",
+    "0": "elec_tronics:block/pipe_texture"
+  },
+  "render_type": "solid"
 }

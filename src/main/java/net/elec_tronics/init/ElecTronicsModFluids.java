@@ -4,10 +4,12 @@
  */
 package net.elec_tronics.init;
 
+import net.minecraftforge.registries.RegistryObject;
+import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.level.material.Fluid;
@@ -19,44 +21,31 @@ import net.elec_tronics.fluid.HydrogenGasFluid;
 import net.elec_tronics.fluid.ElectronicsoilFluid;
 import net.elec_tronics.fluid.ChlorineGasFluid;
 import net.elec_tronics.fluid.BrineFluid;
+import net.elec_tronics.ElecTronicsMod;
 
-import java.util.List;
-import java.util.ArrayList;
-
-@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class ElecTronicsModFluids {
-	private static final List<Fluid> REGISTRY = new ArrayList<>();
-	public static final FlowingFluid ELECTRONICSOIL = register(new ElectronicsoilFluid.Source());
-	public static final FlowingFluid FLOWING_ELECTRONICSOIL = register(new ElectronicsoilFluid.Flowing());
-	public static final FlowingFluid BRINE = register(new BrineFluid.Source());
-	public static final FlowingFluid FLOWING_BRINE = register(new BrineFluid.Flowing());
-	public static final FlowingFluid CHLORINE_GAS = register(new ChlorineGasFluid.Source());
-	public static final FlowingFluid FLOWING_CHLORINE_GAS = register(new ChlorineGasFluid.Flowing());
-	public static final FlowingFluid HYDROGEN_GAS = register(new HydrogenGasFluid.Source());
-	public static final FlowingFluid FLOWING_HYDROGEN_GAS = register(new HydrogenGasFluid.Flowing());
-
-	private static FlowingFluid register(FlowingFluid fluid) {
-		REGISTRY.add(fluid);
-		return fluid;
-	}
-
-	@SubscribeEvent
-	public static void registerFluids(RegistryEvent.Register<Fluid> event) {
-		event.getRegistry().registerAll(REGISTRY.toArray(new Fluid[0]));
-	}
+	public static final DeferredRegister<Fluid> REGISTRY = DeferredRegister.create(ForgeRegistries.FLUIDS, ElecTronicsMod.MODID);
+	public static final RegistryObject<FlowingFluid> ELECTRONICSOIL = REGISTRY.register("electronicsoil", () -> new ElectronicsoilFluid.Source());
+	public static final RegistryObject<FlowingFluid> FLOWING_ELECTRONICSOIL = REGISTRY.register("flowing_electronicsoil", () -> new ElectronicsoilFluid.Flowing());
+	public static final RegistryObject<FlowingFluid> BRINE = REGISTRY.register("brine", () -> new BrineFluid.Source());
+	public static final RegistryObject<FlowingFluid> FLOWING_BRINE = REGISTRY.register("flowing_brine", () -> new BrineFluid.Flowing());
+	public static final RegistryObject<FlowingFluid> CHLORINE_GAS = REGISTRY.register("chlorine_gas", () -> new ChlorineGasFluid.Source());
+	public static final RegistryObject<FlowingFluid> FLOWING_CHLORINE_GAS = REGISTRY.register("flowing_chlorine_gas", () -> new ChlorineGasFluid.Flowing());
+	public static final RegistryObject<FlowingFluid> HYDROGEN_GAS = REGISTRY.register("hydrogen_gas", () -> new HydrogenGasFluid.Source());
+	public static final RegistryObject<FlowingFluid> FLOWING_HYDROGEN_GAS = REGISTRY.register("flowing_hydrogen_gas", () -> new HydrogenGasFluid.Flowing());
 
 	@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 	public static class ClientSideHandler {
 		@SubscribeEvent
 		public static void clientSetup(FMLClientSetupEvent event) {
-			ItemBlockRenderTypes.setRenderLayer(ELECTRONICSOIL, renderType -> renderType == RenderType.translucent());
-			ItemBlockRenderTypes.setRenderLayer(FLOWING_ELECTRONICSOIL, renderType -> renderType == RenderType.translucent());
-			ItemBlockRenderTypes.setRenderLayer(BRINE, renderType -> renderType == RenderType.translucent());
-			ItemBlockRenderTypes.setRenderLayer(FLOWING_BRINE, renderType -> renderType == RenderType.translucent());
-			ItemBlockRenderTypes.setRenderLayer(CHLORINE_GAS, renderType -> renderType == RenderType.translucent());
-			ItemBlockRenderTypes.setRenderLayer(FLOWING_CHLORINE_GAS, renderType -> renderType == RenderType.translucent());
-			ItemBlockRenderTypes.setRenderLayer(HYDROGEN_GAS, renderType -> renderType == RenderType.translucent());
-			ItemBlockRenderTypes.setRenderLayer(FLOWING_HYDROGEN_GAS, renderType -> renderType == RenderType.translucent());
+			ItemBlockRenderTypes.setRenderLayer(ELECTRONICSOIL.get(), RenderType.translucent());
+			ItemBlockRenderTypes.setRenderLayer(FLOWING_ELECTRONICSOIL.get(), RenderType.translucent());
+			ItemBlockRenderTypes.setRenderLayer(BRINE.get(), RenderType.translucent());
+			ItemBlockRenderTypes.setRenderLayer(FLOWING_BRINE.get(), RenderType.translucent());
+			ItemBlockRenderTypes.setRenderLayer(CHLORINE_GAS.get(), RenderType.translucent());
+			ItemBlockRenderTypes.setRenderLayer(FLOWING_CHLORINE_GAS.get(), RenderType.translucent());
+			ItemBlockRenderTypes.setRenderLayer(HYDROGEN_GAS.get(), RenderType.translucent());
+			ItemBlockRenderTypes.setRenderLayer(FLOWING_HYDROGEN_GAS.get(), RenderType.translucent());
 		}
 	}
 }

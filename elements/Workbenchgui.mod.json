@@ -1,5 +1,5 @@
 {
-  "_fv": 24,
+  "_fv": 43,
   "_type": "gui",
   "definition": {
     "type": 1,
@@ -16,10 +16,14 @@
           "inputLimit": {
             "value": ""
           },
+          "disablePlacement": {
+            "fixedValue": false
+          },
           "id": 0,
-          "disableStackInteraction": false,
+          "disablePickup": {
+            "fixedValue": false
+          },
           "dropItemsWhenNotBound": true,
-          "name": "Slot #0",
           "x": 159,
           "y": 99
         }
@@ -29,11 +33,15 @@
         "data": {
           "inputLimit": {
             "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": false
           },
           "id": 1,
-          "disableStackInteraction": false,
+          "disablePickup": {
+            "fixedValue": false
+          },
           "dropItemsWhenNotBound": true,
-          "name": "Slot #1",
           "x": 159,
           "y": 81
         }
@@ -43,11 +51,15 @@
         "data": {
           "inputLimit": {
             "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": false
           },
           "id": 2,
-          "disableStackInteraction": false,
+          "disablePickup": {
+            "fixedValue": false
+          },
           "dropItemsWhenNotBound": true,
-          "name": "Slot #2",
           "x": 159,
           "y": 63
         }
@@ -57,11 +69,15 @@
         "data": {
           "inputLimit": {
             "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": false
           },
           "id": 3,
-          "disableStackInteraction": false,
+          "disablePickup": {
+            "fixedValue": false
+          },
           "dropItemsWhenNotBound": true,
-          "name": "Slot #3",
           "x": 177,
           "y": 99
         }
@@ -71,11 +87,15 @@
         "data": {
           "inputLimit": {
             "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": false
           },
           "id": 4,
-          "disableStackInteraction": false,
+          "disablePickup": {
+            "fixedValue": false
+          },
           "dropItemsWhenNotBound": true,
-          "name": "Slot #4",
           "x": 177,
           "y": 81
         }
@@ -85,11 +105,15 @@
         "data": {
           "inputLimit": {
             "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": false
           },
           "id": 5,
-          "disableStackInteraction": false,
+          "disablePickup": {
+            "fixedValue": false
+          },
           "dropItemsWhenNotBound": true,
-          "name": "Slot #5",
           "x": 177,
           "y": 63
         }
@@ -100,10 +124,14 @@
           "inputLimit": {
             "value": ""
           },
+          "disablePlacement": {
+            "fixedValue": false
+          },
           "id": 6,
-          "disableStackInteraction": false,
+          "disablePickup": {
+            "fixedValue": false
+          },
           "dropItemsWhenNotBound": true,
-          "name": "Slot #6",
           "x": 195,
           "y": 99
         }
@@ -113,11 +141,15 @@
         "data": {
           "inputLimit": {
             "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": false
           },
           "id": 7,
-          "disableStackInteraction": false,
+          "disablePickup": {
+            "fixedValue": false
+          },
           "dropItemsWhenNotBound": true,
-          "name": "Slot #7",
           "x": 195,
           "y": 81
         }
@@ -128,10 +160,14 @@
           "inputLimit": {
             "value": ""
           },
+          "disablePlacement": {
+            "fixedValue": false
+          },
           "id": 8,
-          "disableStackInteraction": false,
+          "disablePickup": {
+            "fixedValue": false
+          },
           "dropItemsWhenNotBound": true,
-          "name": "Slot #8",
           "x": 195,
           "y": 63
         }
@@ -142,10 +178,14 @@
           "inputLimit": {
             "value": ""
           },
+          "disablePlacement": {
+            "fixedValue": false
+          },
           "id": 9,
-          "disableStackInteraction": false,
+          "disablePickup": {
+            "fixedValue": false
+          },
           "dropItemsWhenNotBound": true,
-          "name": "Slot #9",
           "x": 141,
           "y": 99
         }
@@ -156,10 +196,14 @@
           "inputLimit": {
             "value": ""
           },
+          "disablePlacement": {
+            "fixedValue": false
+          },
           "id": 10,
-          "disableStackInteraction": false,
+          "disablePickup": {
+            "fixedValue": false
+          },
           "dropItemsWhenNotBound": true,
-          "name": "Slot #10",
           "x": 141,
           "y": 81
         }
@@ -170,10 +214,14 @@
           "inputLimit": {
             "value": ""
           },
+          "disablePlacement": {
+            "fixedValue": false
+          },
           "id": 11,
-          "disableStackInteraction": false,
+          "disablePickup": {
+            "fixedValue": false
+          },
           "dropItemsWhenNotBound": true,
-          "name": "Slot #11",
           "x": 141,
           "y": 63
         }
@@ -184,10 +232,14 @@
           "inputLimit": {
             "value": ""
           },
+          "disablePlacement": {
+            "fixedValue": false
+          },
           "id": 12,
-          "disableStackInteraction": false,
+          "disablePickup": {
+            "fixedValue": false
+          },
           "dropItemsWhenNotBound": true,
-          "name": "Slot #12",
           "x": 141,
           "y": 45
         }
@@ -198,10 +250,14 @@
           "inputLimit": {
             "value": ""
           },
+          "disablePlacement": {
+            "fixedValue": false
+          },
           "id": 13,
-          "disableStackInteraction": false,
+          "disablePickup": {
+            "fixedValue": false
+          },
           "dropItemsWhenNotBound": true,
-          "name": "Slot #13",
           "x": 159,
           "y": 45
         }
@@ -212,10 +268,14 @@
           "inputLimit": {
             "value": ""
           },
+          "disablePlacement": {
+            "fixedValue": false
+          },
           "id": 14,
-          "disableStackInteraction": false,
+          "disablePickup": {
+            "fixedValue": false
+          },
           "dropItemsWhenNotBound": true,
-          "name": "Slot #14",
           "x": 177,
           "y": 45
         }
@@ -226,10 +286,14 @@
           "inputLimit": {
             "value": ""
           },
+          "disablePlacement": {
+            "fixedValue": false
+          },
           "id": 15,
-          "disableStackInteraction": false,
+          "disablePickup": {
+            "fixedValue": false
+          },
           "dropItemsWhenNotBound": true,
-          "name": "Slot #15",
           "x": 195,
           "y": 45
         }
@@ -238,9 +302,10 @@
         "type": "outputslot",
         "data": {
           "id": 17,
-          "disableStackInteraction": false,
+          "disablePickup": {
+            "fixedValue": false
+          },
           "dropItemsWhenNotBound": true,
-          "name": "Slot #17",
           "x": 252,
           "y": 73
         }
@@ -248,12 +313,14 @@
       {
         "type": "label",
         "data": {
-          "text": "Inventory",
+          "name": "label_inventory",
+          "text": {
+            "fixedValue": "Inventory"
+          },
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "Inventory",
           "x": 133,
           "y": 120
         }
@@ -261,12 +328,14 @@
       {
         "type": "label",
         "data": {
-          "text": "Engineer's Workbench",
+          "name": "label_engineers_workbench",
+          "text": {
+            "fixedValue": "Engineer's Workbench"
+          },
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "Engineer's Workbench",
           "x": 132,
           "y": 30
         }
@@ -276,7 +345,6 @@
         "data": {
           "image": "hammergui.png",
           "use1Xscale": false,
-          "name": "hammergui.png",
           "x": 224,
           "y": 73
         }
@@ -286,7 +354,6 @@
         "data": {
           "image": "output.png",
           "use1Xscale": false,
-          "name": "output.png",
           "x": 248,
           "y": 69
         }

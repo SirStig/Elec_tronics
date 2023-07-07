@@ -17,28 +17,23 @@ public class EngineersworkbenchBlockDestroyedByPlayerProcedure {
 		double sy = 0;
 		double sz = 0;
 		sx = -2;
-		for (int index0 = 0; index0 < (int) (4); index0++) {
+		for (int index0 = 0; index0 < 4; index0++) {
 			sy = -2;
-			for (int index1 = 0; index1 < (int) (4); index1++) {
+			for (int index1 = 0; index1 < 4; index1++) {
 				sz = -2;
-				for (int index2 = 0; index2 < (int) (4); index2++) {
+				for (int index2 = 0; index2 < 4; index2++) {
 					if (entity.getPersistentData().getDouble("generatorID") == new Object() {
 						public double getValue(LevelAccessor world, BlockPos pos, String tag) {
 							BlockEntity blockEntity = world.getBlockEntity(pos);
 							if (blockEntity != null)
-								return blockEntity.getTileData().getDouble(tag);
+								return blockEntity.getPersistentData().getDouble(tag);
 							return -1;
 						}
-					}.getValue(world, new BlockPos((int) (x + sx), (int) (y + sy), (int) (z + sz)), "generatorID")
-							&& ((world.getBlockState(new BlockPos((int) (x + sx), (int) (y + sy), (int) (z + sz))))
-									.getBlock() == ElecTronicsModBlocks.ENGINEERSWORKBENCH
-									|| (world.getBlockState(new BlockPos((int) (x + sx), (int) (y + sy), (int) (z + sz))))
-											.getBlock() == ElecTronicsModBlocks.ENGINEERS_WORK_BENCH_TOP_SIDE
-									|| (world.getBlockState(new BlockPos((int) (x + sx), (int) (y + sy), (int) (z + sz))))
-											.getBlock() == ElecTronicsModBlocks.ENGINEERS_WORK_BENCH_SIDE
-									|| (world.getBlockState(new BlockPos((int) (x + sx), (int) (y + sy), (int) (z + sz))))
-											.getBlock() == ElecTronicsModBlocks.ENGINEERS_WORK_BENCH_TOP)) {
-						world.setBlock(new BlockPos((int) (x + sx), (int) (y + sy), (int) (z + sz)), Blocks.AIR.defaultBlockState(), 3);
+					}.getValue(world, BlockPos.containing(x + sx, y + sy, z + sz), "generatorID") && ((world.getBlockState(BlockPos.containing(x + sx, y + sy, z + sz))).getBlock() == ElecTronicsModBlocks.ENGINEERSWORKBENCH.get()
+							|| (world.getBlockState(BlockPos.containing(x + sx, y + sy, z + sz))).getBlock() == ElecTronicsModBlocks.ENGINEERS_WORK_BENCH_TOP_SIDE.get()
+							|| (world.getBlockState(BlockPos.containing(x + sx, y + sy, z + sz))).getBlock() == ElecTronicsModBlocks.ENGINEERS_WORK_BENCH_SIDE.get()
+							|| (world.getBlockState(BlockPos.containing(x + sx, y + sy, z + sz))).getBlock() == ElecTronicsModBlocks.ENGINEERS_WORK_BENCH_TOP.get())) {
+						world.setBlock(BlockPos.containing(x + sx, y + sy, z + sz), Blocks.AIR.defaultBlockState(), 3);
 					}
 					sz = sz + 1;
 				}

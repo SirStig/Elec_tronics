@@ -1,6 +1,7 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "elec_tronics:items/wiret1"
-  }
+    "layer0": "elec_tronics:item/wiret1"
+  },
+  "render_type": "translucent"
 }

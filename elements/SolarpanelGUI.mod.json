@@ -1,5 +1,5 @@
 {
-  "_fv": 24,
+  "_fv": 43,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -13,12 +13,14 @@
       {
         "type": "label",
         "data": {
-          "text": "Solar Panel T1",
+          "name": "label_solar_panel_t1",
+          "text": {
+            "fixedValue": "Solar Panel T1"
+          },
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "Solar Panel T1",
           "x": 175,
           "y": 78
         }
@@ -31,7 +33,6 @@
           "displayCondition": {
             "name": "Dayornight"
           },
-          "name": "sun.png",
           "x": 218,
           "y": 104
         }
@@ -44,7 +45,6 @@
           "displayCondition": {
             "name": "NightorDay"
           },
-          "name": "sunoff.png",
           "x": 218,
           "y": 104
         }
@@ -52,12 +52,14 @@
       {
         "type": "label",
         "data": {
-          "text": "Time",
+          "name": "label_time",
+          "text": {
+            "fixedValue": "Time"
+          },
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "Time",
           "x": 224,
           "y": 98
         }
@@ -70,7 +72,6 @@
           "displayCondition": {
             "name": "Powertick0"
           },
-          "name": "batterv1.png",
           "x": 183,
           "y": 99
         }
@@ -83,7 +84,6 @@
           "displayCondition": {
             "name": "Powertick1"
           },
-          "name": "battery5.png",
           "x": 183,
           "y": 99
         }
@@ -96,7 +96,6 @@
           "displayCondition": {
             "name": "Powertick2"
           },
-          "name": "battery10.png",
           "x": 183,
           "y": 99
         }
@@ -109,7 +108,6 @@
           "displayCondition": {
             "name": "Powertick3"
           },
-          "name": "battery20.png",
           "x": 183,
           "y": 99
         }
@@ -122,7 +120,6 @@
           "displayCondition": {
             "name": "Powertick4"
           },
-          "name": "battery30.png",
           "x": 183,
           "y": 99
         }
@@ -135,7 +132,6 @@
           "displayCondition": {
             "name": "Powertick5"
           },
-          "name": "battery40.png",
           "x": 183,
           "y": 99
         }
@@ -148,7 +144,6 @@
           "displayCondition": {
             "name": "Powertick6"
           },
-          "name": "battery50.png",
           "x": 183,
           "y": 99
         }
@@ -161,7 +156,6 @@
           "displayCondition": {
             "name": "Powertick7"
           },
-          "name": "battery60.png",
           "x": 183,
           "y": 99
         }
@@ -174,7 +168,6 @@
           "displayCondition": {
             "name": "Powertick8"
           },
-          "name": "battery70.png",
           "x": 183,
           "y": 99
         }
@@ -187,7 +180,6 @@
           "displayCondition": {
             "name": "Powertick8"
           },
-          "name": "battery80.png",
           "x": 183,
           "y": 99
         }
@@ -200,7 +192,6 @@
           "displayCondition": {
             "name": "Powertick9"
           },
-          "name": "battery92full.png",
           "x": 183,
           "y": 99
         }

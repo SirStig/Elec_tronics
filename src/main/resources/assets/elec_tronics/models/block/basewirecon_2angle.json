@@ -1,11 +1,12 @@
 {
   "parent": "elec_tronics:custom/base_wire_con_2_angle",
   "textures": {
-    "all": "elec_tronics:blocks/basetemp",
-    "particle": "elec_tronics:blocks/basetemp",
-    "1": "elec_tronics:blocks/cable_particles",
-    "3": "elec_tronics:blocks/cable_junction-end",
-    "4": "elec_tronics:blocks/elec_tronicst1cable_end",
-    "5": "elec_tronics:blocks/elec_tronicst1cable_side"
-  }
+    "all": "elec_tronics:block/basetemp",
+    "particle": "elec_tronics:block/basetemp",
+    "1": "elec_tronics:block/cable_particles",
+    "3": "elec_tronics:block/cable_junction-end",
+    "4": "elec_tronics:block/elec_tronicst1cable_end",
+    "5": "elec_tronics:block/elec_tronicst1cable_side"
+  },
+  "render_type": "solid"
 }
