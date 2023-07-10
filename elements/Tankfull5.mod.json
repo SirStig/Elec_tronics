@@ -101,7 +101,7 @@
     "breakHarvestLevel": 1,
     "isBonemealable": false,
     "hasInventory": true,
-    "guiBoundTo": "TankT1Gui",
+    "guiBoundTo": "TankT1GUIMenu",
     "openGUIOnRightClick": true,
     "inventorySize": 9,
     "inventoryStackSize": 64,

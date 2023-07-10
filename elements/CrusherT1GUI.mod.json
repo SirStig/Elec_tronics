@@ -203,15 +203,6 @@
         }
       },
       {
-        "type": "image",
-        "data": {
-          "image": "dustgui.png",
-          "use1Xscale": false,
-          "x": 241,
-          "y": 83
-        }
-      },
-      {
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_output",
@@ -219,6 +210,15 @@
           "hoveredImage": "",
           "x": 218,
           "y": 78
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "dustgui.png",
+          "use1Xscale": false,
+          "x": 223,
+          "y": 83
         }
       },
       {
@@ -235,7 +235,7 @@
         "data": {
           "image": "oregui.png",
           "use1Xscale": true,
-          "x": 173,
+          "x": 194,
           "y": 59
         }
       },

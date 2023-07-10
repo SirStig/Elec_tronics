@@ -32,7 +32,7 @@ import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
-import net.elec_tronics.world.inventory.TankT1GuiMenu;
+import net.elec_tronics.world.inventory.TankT1GUIMenuMenu;
 import net.elec_tronics.procedures.TankUpdateTickProcedure;
 import net.elec_tronics.procedures.TankOnBlockRightClickedProcedure;
 import net.elec_tronics.block.entity.Tankfull1BlockEntity;
@@ -98,7 +98,7 @@ public class Tankfull1Block extends Block implements EntityBlock {
 
 				@Override
 				public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-					return new TankT1GuiMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(pos));
+					return new TankT1GUIMenuMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(pos));
 				}
 			}, pos);
 		}

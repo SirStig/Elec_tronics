@@ -126,9 +126,6 @@
     "onDestroyedByPlayer": {
       "name": "SolarPanelT1BlockDestroyedByPlayer"
     },
-    "onStartToDestroy": {
-      "name": "SolarPanelT1PlayerStartsToDestroy"
-    },
     "spawnWorldTypes": [],
     "restrictionBiomes": [],
     "blocksToReplace": [

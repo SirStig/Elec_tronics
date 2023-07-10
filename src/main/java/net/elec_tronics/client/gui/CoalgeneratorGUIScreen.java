@@ -163,10 +163,10 @@ public class CoalgeneratorGUIScreen extends AbstractContainerScreen<Coalgenerato
 		this.blit(ms, this.leftPos + 121, this.topPos + 44, 0, 0, 25, 25, 25, 25);
 
 		RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/screens/fuelgui.png"));
-		this.blit(ms, this.leftPos + 58, this.topPos + 49, 0, 0, 16, 16, 16, 16);
+		this.blit(ms, this.leftPos + 79, this.topPos + 49, 0, 0, 16, 16, 16, 16);
 
 		RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/screens/dustgui.png"));
-		this.blit(ms, this.leftPos + 126, this.topPos + 28, 0, 0, 16, 16, 16, 16);
+		this.blit(ms, this.leftPos + 126, this.topPos + 49, 0, 0, 16, 16, 16, 16);
 
 		RenderSystem.disableBlend();
 	}

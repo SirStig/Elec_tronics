@@ -24,7 +24,7 @@ import net.minecraft.core.NonNullList;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
-import net.elec_tronics.world.inventory.TankT1GuiMenu;
+import net.elec_tronics.world.inventory.TankT1GUIMenuMenu;
 import net.elec_tronics.init.ElecTronicsModBlockEntities;
 
 import javax.annotation.Nullable;
@@ -98,7 +98,7 @@ public class Tankfull13BlockEntity extends RandomizableContainerBlockEntity impl
 
 	@Override
 	public AbstractContainerMenu createMenu(int id, Inventory inventory) {
-		return new TankT1GuiMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(this.worldPosition));
+		return new TankT1GUIMenuMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(this.worldPosition));
 	}
 
 	@Override

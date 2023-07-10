@@ -114,13 +114,13 @@ public class CrusherT1GUIScreen extends AbstractContainerScreen<CrusherT1GUIMenu
 		}
 
 		RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/screens/dustgui.png"));
-		this.blit(ms, this.leftPos + 115, this.topPos + 46, 0, 0, 16, 16, 16, 16);
+		this.blit(ms, this.leftPos + 97, this.topPos + 46, 0, 0, 16, 16, 16, 16);
 
 		RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/screens/input.png"));
 		this.blit(ms, this.leftPos + 63, this.topPos + 17, 0, 0, 25, 25, 25, 25);
 
 		RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/screens/oregui.png"));
-		this.blit(ms, this.leftPos + 47, this.topPos + 22, 0, 0, 16, 16, 16, 16);
+		this.blit(ms, this.leftPos + 68, this.topPos + 22, 0, 0, 16, 16, 16, 16);
 
 		if (GearAnim0Procedure.execute(world, x, y, z)) {
 			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/screens/crushergeargui.png"));

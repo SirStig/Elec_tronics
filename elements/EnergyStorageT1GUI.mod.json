@@ -1,0 +1,169 @@
+{
+  "_fv": 43,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 129,
+    "height": 90,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "name": "label_energy_storage_tier_1",
+          "text": {
+            "fixedValue": "Energy Storage Tier 1"
+          },
+          "color": {
+            "value": -16737895,
+            "falpha": 0.0
+          },
+          "x": 159,
+          "y": 78
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "batterv1.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Powertick0"
+          },
+          "x": 208,
+          "y": 95
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "battery5.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Powertick1"
+          },
+          "x": 208,
+          "y": 95
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "battery10.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Powertick2"
+          },
+          "x": 208,
+          "y": 95
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "battery20.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Powertick3"
+          },
+          "x": 208,
+          "y": 96
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "battery30.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Powertick4"
+          },
+          "x": 208,
+          "y": 96
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "battery40.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Powertick5"
+          },
+          "x": 208,
+          "y": 96
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "battery50.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Powertick6"
+          },
+          "x": 208,
+          "y": 96
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "battery60.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Powertick7"
+          },
+          "x": 208,
+          "y": 96
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "battery70.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Powertick8"
+          },
+          "x": 208,
+          "y": 96
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "battery80.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Powertick8"
+          },
+          "x": 208,
+          "y": 96
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "battery92full.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Powertick9"
+          },
+          "x": 208,
+          "y": 96
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

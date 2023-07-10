@@ -12,9 +12,11 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraft.client.gui.screens.MenuScreens;
 
 import net.elec_tronics.client.gui.WorkbenchguiScreen;
-import net.elec_tronics.client.gui.TankT1GuiScreen;
+import net.elec_tronics.client.gui.TankT1GUIMenuScreen;
 import net.elec_tronics.client.gui.SolarpanelGUIScreen;
 import net.elec_tronics.client.gui.ExtrusinmachineGUIScreen;
+import net.elec_tronics.client.gui.EnergyStorageT1GUIScreen;
+import net.elec_tronics.client.gui.EnergStorageT2Screen;
 import net.elec_tronics.client.gui.CrusherT1GUIScreen;
 import net.elec_tronics.client.gui.CoalgeneratorGUIScreen;
 import net.elec_tronics.client.gui.BlastfurnaceScreen;
@@ -30,7 +32,9 @@ public class ElecTronicsModScreens {
 			MenuScreens.register(ElecTronicsModMenus.CRUSHER_T_1_GUI.get(), CrusherT1GUIScreen::new);
 			MenuScreens.register(ElecTronicsModMenus.SOLARPANEL_GUI.get(), SolarpanelGUIScreen::new);
 			MenuScreens.register(ElecTronicsModMenus.EXTRUSINMACHINE_GUI.get(), ExtrusinmachineGUIScreen::new);
-			MenuScreens.register(ElecTronicsModMenus.TANK_T_1_GUI.get(), TankT1GuiScreen::new);
+			MenuScreens.register(ElecTronicsModMenus.TANKT1GUIMENU.get(), TankT1GUIMenuScreen::new);
+			MenuScreens.register(ElecTronicsModMenus.ENERG_STORAGE_T_2.get(), EnergStorageT2Screen::new);
+			MenuScreens.register(ElecTronicsModMenus.ENERGY_STORAGE_T_1_GUI.get(), EnergyStorageT1GUIScreen::new);
 		});
 	}
 }

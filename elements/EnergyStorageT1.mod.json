@@ -101,8 +101,8 @@
     "breakHarvestLevel": 1,
     "isBonemealable": false,
     "hasInventory": true,
-    "guiBoundTo": "<NONE>",
-    "openGUIOnRightClick": false,
+    "guiBoundTo": "EnergyStorageT1GUI",
+    "openGUIOnRightClick": true,
     "inventorySize": 9,
     "inventoryStackSize": 64,
     "inventoryDropWhenDestroyed": true,
@@ -118,7 +118,7 @@
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
     "onTickUpdate": {
-      "name": "T1WireUpdateTick"
+      "name": "T1EnergyStorageTick"
     },
     "spawnWorldTypes": [],
     "restrictionBiomes": [],

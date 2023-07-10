@@ -36,7 +36,6 @@ import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
 import net.elec_tronics.procedures.SolarPanelrOnBlockRightClickedProcedure;
-import net.elec_tronics.procedures.SolarPanelT1PlayerStartsToDestroyProcedure;
 import net.elec_tronics.procedures.SolarPanelT1BlockDestroyedByPlayerProcedure;
 import net.elec_tronics.procedures.SolarPanelNoneUpdateTickProcedure;
 import net.elec_tronics.init.ElecTronicsModBlocks;
@@ -122,12 +121,6 @@ public class SolarpaneltopBlock extends Block implements EntityBlock {
 		boolean retval = super.onDestroyedByPlayer(blockstate, world, pos, entity, willHarvest, fluid);
 		SolarPanelT1BlockDestroyedByPlayerProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ(), entity);
 		return retval;
-	}
-
-	@Override
-	public void attack(BlockState blockstate, Level world, BlockPos pos, Player entity) {
-		super.attack(blockstate, world, pos, entity);
-		SolarPanelT1PlayerStartsToDestroyProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ(), entity);
 	}
 
 	@Override
