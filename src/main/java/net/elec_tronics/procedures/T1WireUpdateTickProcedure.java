@@ -6,6 +6,8 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.core.BlockPos;
 
+import net.elec_tronics.network.ElecTronicsModVariables;
+
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicBoolean;
 
@@ -268,7 +270,7 @@ public class T1WireUpdateTickProcedure {
 		if (send == true) {
 			{
 				BlockEntity _ent = world.getBlockEntity(BlockPos.containing(xsend, ysend, zsend));
-				int _amount = (int) energy1;
+				int _amount = (int) (energy1 * ElecTronicsModVariables.energy_multiplier);
 				if (_ent != null)
 					_ent.getCapability(ForgeCapabilities.ENERGY, null).ifPresent(capability -> capability.receiveEnergy(_amount, false));
 			}
@@ -282,7 +284,7 @@ public class T1WireUpdateTickProcedure {
 		if (send2 == true) {
 			{
 				BlockEntity _ent = world.getBlockEntity(BlockPos.containing(xsend2, ysend2, zsend2));
-				int _amount = (int) energy2;
+				int _amount = (int) (energy2 * ElecTronicsModVariables.energy_multiplier);
 				if (_ent != null)
 					_ent.getCapability(ForgeCapabilities.ENERGY, null).ifPresent(capability -> capability.receiveEnergy(_amount, false));
 			}
@@ -296,7 +298,7 @@ public class T1WireUpdateTickProcedure {
 		if (send3 == true) {
 			{
 				BlockEntity _ent = world.getBlockEntity(BlockPos.containing(xsend3, ysend3, zsend3));
-				int _amount = (int) energy3;
+				int _amount = (int) (energy3 * ElecTronicsModVariables.energy_multiplier);
 				if (_ent != null)
 					_ent.getCapability(ForgeCapabilities.ENERGY, null).ifPresent(capability -> capability.receiveEnergy(_amount, false));
 			}
@@ -310,7 +312,7 @@ public class T1WireUpdateTickProcedure {
 		if (send4 == true) {
 			{
 				BlockEntity _ent = world.getBlockEntity(BlockPos.containing(xsend4, ysend4, zsend4));
-				int _amount = (int) energy4;
+				int _amount = (int) (energy4 * ElecTronicsModVariables.energy_multiplier);
 				if (_ent != null)
 					_ent.getCapability(ForgeCapabilities.ENERGY, null).ifPresent(capability -> capability.receiveEnergy(_amount, false));
 			}
@@ -324,7 +326,7 @@ public class T1WireUpdateTickProcedure {
 		if (send5 == true) {
 			{
 				BlockEntity _ent = world.getBlockEntity(BlockPos.containing(xsend5, ysend5, zsend5));
-				int _amount = (int) energy5;
+				int _amount = (int) (energy5 * ElecTronicsModVariables.energy_multiplier);
 				if (_ent != null)
 					_ent.getCapability(ForgeCapabilities.ENERGY, null).ifPresent(capability -> capability.receiveEnergy(_amount, false));
 			}
@@ -338,7 +340,7 @@ public class T1WireUpdateTickProcedure {
 		if (send6 == true) {
 			{
 				BlockEntity _ent = world.getBlockEntity(BlockPos.containing(xsend6, ysend6, zsend6));
-				int _amount = (int) energy6;
+				int _amount = (int) (energy6 * ElecTronicsModVariables.energy_multiplier);
 				if (_ent != null)
 					_ent.getCapability(ForgeCapabilities.ENERGY, null).ifPresent(capability -> capability.receiveEnergy(_amount, false));
 			}

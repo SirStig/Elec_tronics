@@ -8,6 +8,8 @@ import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.core.BlockPos;
 
+import net.elec_tronics.network.ElecTronicsModVariables;
+
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicBoolean;
 
@@ -261,12 +263,12 @@ public class T1EnergyStorageTickProcedure {
 		} else {
 			send6 = false;
 		}
-		energy1 = energy1 / amountOfRecievers;
-		energy2 = energy2 / amountOfRecievers;
-		energy3 = energy3 / amountOfRecievers;
-		energy4 = energy4 / amountOfRecievers;
-		energy5 = energy5 / amountOfRecievers;
-		energy6 = energy6 / amountOfRecievers;
+		energy1 = (energy1 / amountOfRecievers) * ElecTronicsModVariables.energy_multiplier;
+		energy2 = (energy2 / amountOfRecievers) * ElecTronicsModVariables.energy_multiplier;
+		energy3 = (energy3 / amountOfRecievers) * ElecTronicsModVariables.energy_multiplier;
+		energy4 = (energy4 / amountOfRecievers) * ElecTronicsModVariables.energy_multiplier;
+		energy5 = (energy5 / amountOfRecievers) * ElecTronicsModVariables.energy_multiplier;
+		energy6 = (energy6 / amountOfRecievers) * ElecTronicsModVariables.energy_multiplier;
 		if (send == true) {
 			{
 				BlockEntity _ent = world.getBlockEntity(BlockPos.containing(xsend, ysend, zsend));

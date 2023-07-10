@@ -9,6 +9,8 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.core.BlockPos;
 
+import net.elec_tronics.network.ElecTronicsModVariables;
+
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class BasepipeUpdateTickProcedure {
@@ -309,12 +311,12 @@ public class BasepipeUpdateTickProcedure {
 		} else {
 			send6 = false;
 		}
-		energy1 = energy1 / amountOfRecievers;
-		energy2 = energy2 / amountOfRecievers;
-		energy3 = energy3 / amountOfRecievers;
-		energy4 = energy4 / amountOfRecievers;
-		energy5 = energy5 / amountOfRecievers;
-		energy6 = energy6 / amountOfRecievers;
+		energy1 = (energy1 / amountOfRecievers) * ElecTronicsModVariables.MapVariables.get(world).water_multiplier;
+		energy2 = (energy2 / amountOfRecievers) * ElecTronicsModVariables.MapVariables.get(world).water_multiplier;
+		energy3 = (energy3 / amountOfRecievers) * ElecTronicsModVariables.MapVariables.get(world).water_multiplier;
+		energy4 = (energy4 / amountOfRecievers) * ElecTronicsModVariables.MapVariables.get(world).water_multiplier;
+		energy5 = (energy5 / amountOfRecievers) * ElecTronicsModVariables.MapVariables.get(world).water_multiplier;
+		energy6 = (energy6 / amountOfRecievers) * ElecTronicsModVariables.MapVariables.get(world).water_multiplier;
 		if (send == true) {
 			{
 				BlockEntity _ent = world.getBlockEntity(BlockPos.containing(xsend, ysend, zsend));
