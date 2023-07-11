@@ -111,6 +111,10 @@ public class SolarpanelGUIScreen extends AbstractContainerScreen<SolarpanelGUIMe
 			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/screens/battery92full.png"));
 			this.blit(ms, this.leftPos + 19, this.topPos + 25, 0, 0, 10, 50, 10, 50);
 		}
+
+		RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/screens/batteryoverlay.png"));
+		this.blit(ms, this.leftPos + 19, this.topPos + 25, 0, 0, 10, 50, 10, 50);
+
 		RenderSystem.disableBlend();
 	}
 

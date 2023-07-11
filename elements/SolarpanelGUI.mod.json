@@ -195,6 +195,15 @@
           "x": 183,
           "y": 99
         }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "batteryoverlay.png",
+          "use1Xscale": true,
+          "x": 183,
+          "y": 99
+        }
       }
     ],
     "gridSettings": {

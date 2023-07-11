@@ -14,9 +14,8 @@ import net.elec_tronics.init.ElecTronicsModFluidTypes;
 import net.elec_tronics.init.ElecTronicsModBlocks;
 
 public abstract class ElectronicsoilFluid extends ForgeFlowingFluid {
-	public static final ForgeFlowingFluid.Properties PROPERTIES = new ForgeFlowingFluid.Properties(() -> ElecTronicsModFluidTypes.ELECTRONICSOIL_TYPE.get(), () -> ElecTronicsModFluids.ELECTRONICSOIL.get(),
-			() -> ElecTronicsModFluids.FLOWING_ELECTRONICSOIL.get()).explosionResistance(5f).tickRate(10).levelDecreasePerBlock(2).bucket(() -> ElecTronicsModItems.ELECTRONICSOIL_BUCKET.get())
-			.block(() -> (LiquidBlock) ElecTronicsModBlocks.ELECTRONICSOIL.get());
+	public static final ForgeFlowingFluid.Properties PROPERTIES = new ForgeFlowingFluid.Properties(() -> ElecTronicsModFluidTypes.OIL_TYPE.get(), () -> ElecTronicsModFluids.OIL.get(), () -> ElecTronicsModFluids.FLOWING_OIL.get())
+			.explosionResistance(5f).tickRate(10).levelDecreasePerBlock(2).bucket(() -> ElecTronicsModItems.OIL_BUCKET.get()).block(() -> (LiquidBlock) ElecTronicsModBlocks.OIL.get());
 
 	private ElectronicsoilFluid() {
 		super(PROPERTIES);

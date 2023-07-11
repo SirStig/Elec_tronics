@@ -32,6 +32,8 @@ import net.elec_tronics.block.entity.SolarpaneltoprBlockEntity;
 import net.elec_tronics.block.entity.SolarpaneltopBlockEntity;
 import net.elec_tronics.block.entity.SolarPanelrBlockEntity;
 import net.elec_tronics.block.entity.SolarPanelT1BlockEntity;
+import net.elec_tronics.block.entity.RefineryT1BlockEntity;
+import net.elec_tronics.block.entity.QuarryT1BlockEntity;
 import net.elec_tronics.block.entity.PipeupangleBlockEntity;
 import net.elec_tronics.block.entity.PipeupBlockEntity;
 import net.elec_tronics.block.entity.PipetdownandupBlockEntity;
@@ -179,6 +181,8 @@ public class ElecTronicsModBlockEntities {
 	public static final RegistryObject<BlockEntityType<?>> MANUAL_FLUID_PUMP_5 = register("manual_fluid_pump_5", ElecTronicsModBlocks.MANUAL_FLUID_PUMP_5, ManualFluidPump5BlockEntity::new);
 	public static final RegistryObject<BlockEntityType<?>> TANKFULLHALF_1 = register("tankfullhalf_1", ElecTronicsModBlocks.TANKFULLHALF_1, Tankfullhalf1BlockEntity::new);
 	public static final RegistryObject<BlockEntityType<?>> COAL_GENERATOR_MACHINE = register("coal_generator_machine", ElecTronicsModBlocks.COAL_GENERATOR_MACHINE, CoalGeneratorMachineBlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> QUARRY_T_1 = register("quarry_t_1", ElecTronicsModBlocks.QUARRY_T_1, QuarryT1BlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> REFINERY_T_1 = register("refinery_t_1", ElecTronicsModBlocks.REFINERY_T_1, RefineryT1BlockEntity::new);
 
 	private static RegistryObject<BlockEntityType<?>> register(String registryname, RegistryObject<Block> block, BlockEntityType.BlockEntitySupplier<?> supplier) {
 		return REGISTRY.register(registryname, () -> BlockEntityType.Builder.of(supplier, block.get()).build(null));

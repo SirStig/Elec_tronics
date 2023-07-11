@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "elec_tronics:block/craftingtableblock_1",
+    "particle": "elec_tronics:block/craftingtableblock_1"
+  },
+  "render_type": "solid"
+}

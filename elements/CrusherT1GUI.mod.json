@@ -346,6 +346,15 @@
           "x": 190,
           "y": 79
         }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "batteryoverlay.png",
+          "use1Xscale": true,
+          "x": 132,
+          "y": 56
+        }
       }
     ],
     "gridSettings": {

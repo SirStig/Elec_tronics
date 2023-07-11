@@ -4,7 +4,7 @@
     "fluid": {
       "type": "minecraft:simple_state_provider",
       "state": {
-        "Name": "elec_tronics:electronicsoil",
+        "Name": "elec_tronics:oil",
         "Properties": {
           "level": "0"
         }

@@ -10,6 +10,6 @@ import net.elec_tronics.init.ElecTronicsModFluids;
 
 public class ElectronicsoilItem extends BucketItem {
 	public ElectronicsoilItem() {
-		super(ElecTronicsModFluids.ELECTRONICSOIL, new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1).rarity(Rarity.UNCOMMON));
+		super(ElecTronicsModFluids.OIL, new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1).rarity(Rarity.UNCOMMON));
 	}
 }

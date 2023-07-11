@@ -1,0 +1,102 @@
+{
+  "_fv": 43,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 183,
+    "height": 60,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": false,
+    "doesPauseGame": true,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "name": "label_update",
+          "text": {
+            "fixedValue": "Update"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 240,
+          "y": 119
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_ignore",
+          "text": {
+            "fixedValue": "Ignore"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 158,
+          "y": 119
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_elec_tronics_is_out_of_date",
+          "text": {
+            "fixedValue": "Elec_tronics is out of date!"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 140,
+          "y": 94
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "updatemenubackground.png",
+          "use1Xscale": false,
+          "x": 123,
+          "y": 90
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_button",
+          "image": "button.png",
+          "hoveredImage": "buttonpressed.png",
+          "onClick": {
+            "name": "UpdateMenuIgnore"
+          },
+          "x": 149,
+          "y": 114
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_button1",
+          "image": "button.png",
+          "hoveredImage": "buttonpressed.png",
+          "onClick": {
+            "name": "UpdateMenuUpdate"
+          },
+          "x": 232,
+          "y": 114
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

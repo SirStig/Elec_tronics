@@ -2,6 +2,7 @@ package net.elec_tronics.block.entity;
 
 import net.minecraftforge.items.wrapper.SidedInvWrapper;
 import net.minecraftforge.items.IItemHandler;
+import net.minecraftforge.fluids.capability.templates.FluidTank;
 import net.minecraftforge.energy.EnergyStorage;
 import net.minecraftforge.common.util.LazyOptional;
 import net.minecraftforge.common.capabilities.ForgeCapabilities;
@@ -10,34 +11,31 @@ import net.minecraftforge.common.capabilities.Capability;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.entity.RandomizableContainerBlockEntity;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.inventory.ChestMenu;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.WorldlyContainer;
 import net.minecraft.world.ContainerHelper;
 import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.nbt.IntTag;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.NonNullList;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
-import net.elec_tronics.world.inventory.CoalgeneratorGUIMenu;
 import net.elec_tronics.init.ElecTronicsModBlockEntities;
 
 import javax.annotation.Nullable;
 
 import java.util.stream.IntStream;
 
-import io.netty.buffer.Unpooled;
-
-public class CoalgeneratormachineBlockEntity extends RandomizableContainerBlockEntity implements WorldlyContainer {
+public class RefineryT1BlockEntity extends RandomizableContainerBlockEntity implements WorldlyContainer {
 	private NonNullList<ItemStack> stacks = NonNullList.<ItemStack>withSize(9, ItemStack.EMPTY);
 	private final LazyOptional<? extends IItemHandler>[] handlers = SidedInvWrapper.create(this, Direction.values());
 
-	public CoalgeneratormachineBlockEntity(BlockPos position, BlockState state) {
-		super(ElecTronicsModBlockEntities.COALGENERATORMACHINE.get(), position, state);
+	public RefineryT1BlockEntity(BlockPos position, BlockState state) {
+		super(ElecTronicsModBlockEntities.REFINERY_T_1.get(), position, state);
 	}
 
 	@Override
@@ -48,6 +46,8 @@ public class CoalgeneratormachineBlockEntity extends RandomizableContainerBlockE
 		ContainerHelper.loadAllItems(compound, this.stacks);
 		if (compound.get("energyStorage") instanceof IntTag intTag)
 			energyStorage.deserializeNBT(intTag);
+		if (compound.get("fluidTank") instanceof CompoundTag compoundTag)
+			fluidTank.readFromNBT(compoundTag);
 	}
 
 	@Override
@@ -57,6 +57,7 @@ public class CoalgeneratormachineBlockEntity extends RandomizableContainerBlockE
 			ContainerHelper.saveAllItems(compound, this.stacks);
 		}
 		compound.put("energyStorage", energyStorage.serializeNBT());
+		compound.put("fluidTank", fluidTank.writeToNBT(new CompoundTag()));
 	}
 
 	@Override
@@ -84,7 +85,7 @@ public class CoalgeneratormachineBlockEntity extends RandomizableContainerBlockE
 
 	@Override
 	public Component getDefaultName() {
-		return Component.literal("coalgeneratormachine");
+		return Component.literal("refinery_t_1");
 	}
 
 	@Override
@@ -94,12 +95,12 @@ public class CoalgeneratormachineBlockEntity extends RandomizableContainerBlockE
 
 	@Override
 	public AbstractContainerMenu createMenu(int id, Inventory inventory) {
-		return new CoalgeneratorGUIMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(this.worldPosition));
+		return ChestMenu.threeRows(id, inventory);
 	}
 
 	@Override
 	public Component getDisplayName() {
-		return Component.literal("Coal Generator");
+		return Component.literal("Refinery T 1");
 	}
 
 	@Override
@@ -114,8 +115,6 @@ public class CoalgeneratormachineBlockEntity extends RandomizableContainerBlockE
 
 	@Override
 	public boolean canPlaceItem(int index, ItemStack stack) {
-		if (index == 1)
-			return false;
 		return true;
 	}
 
@@ -131,12 +130,10 @@ public class CoalgeneratormachineBlockEntity extends RandomizableContainerBlockE
 
 	@Override
 	public boolean canTakeItemThroughFace(int index, ItemStack stack, Direction direction) {
-		if (index == 0)
-			return false;
 		return true;
 	}
 
-	private final EnergyStorage energyStorage = new EnergyStorage(0, 200, 200, 0) {
+	private final EnergyStorage energyStorage = new EnergyStorage(400000, 200, 200, 0) {
 		@Override
 		public int receiveEnergy(int maxReceive, boolean simulate) {
 			int retval = super.receiveEnergy(maxReceive, simulate);
@@ -157,6 +154,14 @@ public class CoalgeneratormachineBlockEntity extends RandomizableContainerBlockE
 			return retval;
 		}
 	};
+	private final FluidTank fluidTank = new FluidTank(8000) {
+		@Override
+		protected void onContentsChanged() {
+			super.onContentsChanged();
+			setChanged();
+			level.sendBlockUpdated(worldPosition, level.getBlockState(worldPosition), level.getBlockState(worldPosition), 2);
+		}
+	};
 
 	@Override
 	public <T> LazyOptional<T> getCapability(Capability<T> capability, @Nullable Direction facing) {
@@ -164,6 +169,8 @@ public class CoalgeneratormachineBlockEntity extends RandomizableContainerBlockE
 			return handlers[facing.ordinal()].cast();
 		if (!this.remove && capability == ForgeCapabilities.ENERGY)
 			return LazyOptional.of(() -> energyStorage).cast();
+		if (!this.remove && capability == ForgeCapabilities.FLUID_HANDLER)
+			return LazyOptional.of(() -> fluidTank).cast();
 		return super.getCapability(capability, facing);
 	}
 

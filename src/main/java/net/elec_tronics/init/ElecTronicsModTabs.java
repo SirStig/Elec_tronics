@@ -25,7 +25,7 @@ public class ElecTronicsModTabs {
 	@SubscribeEvent
 	public static void buildTabContentsModded(CreativeModeTabEvent.Register event) {
 		event.registerCreativeModeTab(new ResourceLocation("elec_tronics", "elec_tronics_menu"),
-				builder -> builder.title(Component.translatable("item_group.elec_tronics.elec_tronics_menu")).icon(() -> new ItemStack(ElecTronicsModItems.URANIUM_INGOT.get())).displayItems((parameters, tabData) -> {
+				builder -> builder.title(Component.translatable("item_group.elec_tronics.elec_tronics_menu")).icon(() -> new ItemStack(ElecTronicsModItems.HAND_SAW.get())).displayItems((parameters, tabData) -> {
 					tabData.accept(ElecTronicsModItems.URANIUM_INGOT.get());
 					tabData.accept(ElecTronicsModItems.URANIUM_DUST.get());
 					tabData.accept(ElecTronicsModItems.TUNGSTEN_ORE.get());
@@ -53,7 +53,6 @@ public class ElecTronicsModTabs {
 					tabData.accept(ElecTronicsModItems.QUARTZ_DUST.get());
 					tabData.accept(ElecTronicsModItems.RUBBER.get());
 					tabData.accept(ElecTronicsModItems.COPPERWIRE.get());
-					tabData.accept(ElecTronicsModBlocks.EXTRUSION_MACHINE.get().asItem());
 					tabData.accept(ElecTronicsModItems.RUBBERSLEEVE.get());
 					tabData.accept(ElecTronicsModItems.TURBINE.get());
 					tabData.accept(ElecTronicsModItems.CONDENSOR.get());
@@ -67,7 +66,7 @@ public class ElecTronicsModTabs {
 					tabData.accept(ElecTronicsModItems.COPPER_SHEET.get());
 					tabData.accept(ElecTronicsModItems.WIRE_ROLLER.get());
 					tabData.accept(ElecTronicsModBlocks.BASEPIPE.get().asItem());
-					tabData.accept(ElecTronicsModItems.ELECTRONICSOIL_BUCKET.get());
+					tabData.accept(ElecTronicsModItems.OIL_BUCKET.get());
 					tabData.accept(ElecTronicsModItems.CREATIVEFLUIDDROPPER.get());
 					tabData.accept(ElecTronicsModItems.BAUXITE_INGOT.get());
 					tabData.accept(ElecTronicsModItems.STEEL_ARMOR_HELMET.get());
@@ -77,9 +76,12 @@ public class ElecTronicsModTabs {
 					tabData.accept(ElecTronicsModItems.BRINE_BUCKET.get());
 					tabData.accept(ElecTronicsModItems.ROCKSALTDUST.get());
 					tabData.accept(ElecTronicsModItems.IRON_WRENCH.get());
+					tabData.accept(ElecTronicsModItems.COOLANTT_1_BUCKET.get());
+					tabData.accept(ElecTronicsModItems.REFINED_OIL_BUCKET.get());
+					tabData.accept(ElecTronicsModBlocks.REFINERY_T_1.get().asItem());
 				}).withSearchBar());
 		event.registerCreativeModeTab(new ResourceLocation("elec_tronics", "electronicsmachines"),
-				builder -> builder.title(Component.translatable("item_group.elec_tronics.electronicsmachines")).icon(() -> new ItemStack(ElecTronicsModBlocks.ENGINEERSWORKBENCH.get())).displayItems((parameters, tabData) -> {
+				builder -> builder.title(Component.translatable("item_group.elec_tronics.electronicsmachines")).icon(() -> new ItemStack(ElecTronicsModBlocks.T_1_WIRE.get())).displayItems((parameters, tabData) -> {
 					tabData.accept(ElecTronicsModBlocks.URANIUMORE.get().asItem());
 					tabData.accept(ElecTronicsModBlocks.TUNGSTEN.get().asItem());
 					tabData.accept(ElecTronicsModBlocks.REINFORCEDBLASTBRICK.get().asItem());
@@ -88,6 +90,7 @@ public class ElecTronicsModTabs {
 					tabData.accept(ElecTronicsModBlocks.WATERTURBINEMACHINE.get().asItem());
 					tabData.accept(ElecTronicsModBlocks.CRUSHERMACHINE.get().asItem());
 					tabData.accept(ElecTronicsModBlocks.SOLAR_PANEL_T_1.get().asItem());
+					tabData.accept(ElecTronicsModBlocks.EXTRUSION_MACHINE.get().asItem());
 					tabData.accept(ElecTronicsModBlocks.ENERGY_STORAGE_T_1.get().asItem());
 					tabData.accept(ElecTronicsModBlocks.TANK.get().asItem());
 					tabData.accept(ElecTronicsModBlocks.MANUAL_FLUID_PUMP.get().asItem());
@@ -95,6 +98,7 @@ public class ElecTronicsModTabs {
 					tabData.accept(ElecTronicsModBlocks.BAUXITE_BLOCK.get().asItem());
 					tabData.accept(ElecTronicsModBlocks.ROCK_SALT.get().asItem());
 					tabData.accept(ElecTronicsModBlocks.COAL_GENERATOR_MACHINE.get().asItem());
+					tabData.accept(ElecTronicsModBlocks.QUARRY_T_1.get().asItem());
 				}).withSearchBar());
 	}
 }

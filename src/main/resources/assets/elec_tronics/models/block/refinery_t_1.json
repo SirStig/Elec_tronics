@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "elec_tronics:block/13158264-minecraftglass_l",
+    "particle": "elec_tronics:block/13158264-minecraftglass_l"
+  },
+  "render_type": "translucent"
+}

@@ -158,6 +158,10 @@ public class CrusherT1GUIScreen extends AbstractContainerScreen<CrusherT1GUIMenu
 			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/screens/crushergeargui9.png"));
 			this.blit(ms, this.leftPos + 64, this.topPos + 42, 0, 0, 24, 24, 24, 24);
 		}
+
+		RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/screens/batteryoverlay.png"));
+		this.blit(ms, this.leftPos + 6, this.topPos + 19, 0, 0, 10, 50, 10, 50);
+
 		RenderSystem.disableBlend();
 	}
 

@@ -4,7 +4,7 @@
   "definition": {
     "name": "Elec Tronics Blocks",
     "icon": {
-      "value": "CUSTOM:Engineersworkbench"
+      "value": "CUSTOM:T1Wire"
     },
     "showSearch": true
   }

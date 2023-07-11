@@ -36,6 +36,9 @@ import net.elec_tronics.block.SolarPanelrBlock;
 import net.elec_tronics.block.SolarPanelT1Block;
 import net.elec_tronics.block.RockSaltBlock;
 import net.elec_tronics.block.ReinforcedblastbrickBlock;
+import net.elec_tronics.block.RefineryT1Block;
+import net.elec_tronics.block.RefinedOilBlock;
+import net.elec_tronics.block.QuarryT1Block;
 import net.elec_tronics.block.PipeupangleBlock;
 import net.elec_tronics.block.PipeupBlock;
 import net.elec_tronics.block.PipetdownandupBlock;
@@ -70,6 +73,7 @@ import net.elec_tronics.block.EngineersWorkBenchSideBlock;
 import net.elec_tronics.block.EnergyStorageT1Block;
 import net.elec_tronics.block.ElectronicsoilBlock;
 import net.elec_tronics.block.CrushermachineBlock;
+import net.elec_tronics.block.Coolantt1Block;
 import net.elec_tronics.block.CoalGeneratorMachineBlock;
 import net.elec_tronics.block.ChlorineGasBlock;
 import net.elec_tronics.block.CablehalfT1Block;
@@ -186,7 +190,7 @@ public class ElecTronicsModBlocks {
 	public static final RegistryObject<Block> TANKFULL_12 = REGISTRY.register("tankfull_12", () -> new Tankfull12Block());
 	public static final RegistryObject<Block> TANKFULL_13 = REGISTRY.register("tankfull_13", () -> new Tankfull13Block());
 	public static final RegistryObject<Block> TANKFULL_14 = REGISTRY.register("tankfull_14", () -> new Tankfull14Block());
-	public static final RegistryObject<Block> ELECTRONICSOIL = REGISTRY.register("electronicsoil", () -> new ElectronicsoilBlock());
+	public static final RegistryObject<Block> OIL = REGISTRY.register("oil", () -> new ElectronicsoilBlock());
 	public static final RegistryObject<Block> MANUAL_FLUID_PUMP = REGISTRY.register("manual_fluid_pump", () -> new ManualFluidPumpBlock());
 	public static final RegistryObject<Block> MANUAL_FLUID_PUMPDOWN_2 = REGISTRY.register("manual_fluid_pumpdown_2", () -> new ManualFluidPumpdown2Block());
 	public static final RegistryObject<Block> MANUAL_FLUID_PUMP_3 = REGISTRY.register("manual_fluid_pump_3", () -> new ManualFluidPump3Block());
@@ -200,4 +204,8 @@ public class ElecTronicsModBlocks {
 	public static final RegistryObject<Block> CHLORINE_GAS = REGISTRY.register("chlorine_gas", () -> new ChlorineGasBlock());
 	public static final RegistryObject<Block> HYDROGEN_GAS = REGISTRY.register("hydrogen_gas", () -> new HydrogenGasBlock());
 	public static final RegistryObject<Block> COAL_GENERATOR_MACHINE = REGISTRY.register("coal_generator_machine", () -> new CoalGeneratorMachineBlock());
+	public static final RegistryObject<Block> QUARRY_T_1 = REGISTRY.register("quarry_t_1", () -> new QuarryT1Block());
+	public static final RegistryObject<Block> COOLANTT_1 = REGISTRY.register("coolantt_1", () -> new Coolantt1Block());
+	public static final RegistryObject<Block> REFINED_OIL = REGISTRY.register("refined_oil", () -> new RefinedOilBlock());
+	public static final RegistryObject<Block> REFINERY_T_1 = REGISTRY.register("refinery_t_1", () -> new RefineryT1Block());
 }

@@ -33,6 +33,7 @@ public class ElecTronicsModVariables {
 	public static double energy_multiplier = 0;
 	public static double quarry_speed = 0;
 	public static boolean debug_mode = false;
+	public static boolean update_checker = false;
 
 	@SubscribeEvent
 	public static void init(FMLCommonSetupEvent event) {

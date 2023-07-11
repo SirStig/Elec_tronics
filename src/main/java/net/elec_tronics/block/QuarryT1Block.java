@@ -1,12 +1,8 @@
 
 package net.elec_tronics.block;
 
-import net.minecraftforge.network.NetworkHooks;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.api.distmarker.Dist;
-
-import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.level.storage.loot.LootContext;
+import net.minecraft.world.level.material.MaterialColor;
 import net.minecraft.world.level.material.Material;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.level.block.state.StateDefinition;
@@ -26,35 +22,24 @@ import net.minecraft.world.item.PickaxeItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.MenuProvider;
-import net.minecraft.world.InteractionResult;
-import net.minecraft.world.InteractionHand;
 import net.minecraft.world.Containers;
 import net.minecraft.util.RandomSource;
-import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.network.chat.Component;
-import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
-import net.minecraft.client.Minecraft;
 
-import net.elec_tronics.world.inventory.CoalgeneratorGUIMenu;
-import net.elec_tronics.procedures.CoalgeneratorelectricitygenerationProcedure;
-import net.elec_tronics.procedures.BlastdisplayProcedure;
-import net.elec_tronics.block.entity.CoalgeneratormachineBlockEntity;
+import net.elec_tronics.procedures.QuarryT1UpdateTickProcedure;
+import net.elec_tronics.block.entity.QuarryT1BlockEntity;
 
 import java.util.List;
 import java.util.Collections;
 
-import io.netty.buffer.Unpooled;
-
-public class CoalgeneratormachineBlock extends Block implements EntityBlock {
+public class QuarryT1Block extends Block implements EntityBlock {
 	public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
 
-	public CoalgeneratormachineBlock() {
-		super(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.METAL).strength(4f, 10f).requiresCorrectToolForDrops());
+	public QuarryT1Block() {
+		super(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.METAL).sound(SoundType.METAL).strength(4f, 10f).requiresCorrectToolForDrops());
 		this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH));
 	}
 
@@ -108,38 +93,8 @@ public class CoalgeneratormachineBlock extends Block implements EntityBlock {
 		int x = pos.getX();
 		int y = pos.getY();
 		int z = pos.getZ();
-		CoalgeneratorelectricitygenerationProcedure.execute(world, x, y, z);
+		QuarryT1UpdateTickProcedure.execute();
 		world.scheduleTick(pos, this, 10);
-	}
-
-	@OnlyIn(Dist.CLIENT)
-	@Override
-	public void animateTick(BlockState blockstate, Level world, BlockPos pos, RandomSource random) {
-		super.animateTick(blockstate, world, pos, random);
-		Player entity = Minecraft.getInstance().player;
-		int x = pos.getX();
-		int y = pos.getY();
-		int z = pos.getZ();
-		BlastdisplayProcedure.execute(world, x, y, z);
-	}
-
-	@Override
-	public InteractionResult use(BlockState blockstate, Level world, BlockPos pos, Player entity, InteractionHand hand, BlockHitResult hit) {
-		super.use(blockstate, world, pos, entity, hand, hit);
-		if (entity instanceof ServerPlayer player) {
-			NetworkHooks.openScreen(player, new MenuProvider() {
-				@Override
-				public Component getDisplayName() {
-					return Component.literal("Coal Generator");
-				}
-
-				@Override
-				public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-					return new CoalgeneratorGUIMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(pos));
-				}
-			}, pos);
-		}
-		return InteractionResult.SUCCESS;
 	}
 
 	@Override
@@ -150,7 +105,7 @@ public class CoalgeneratormachineBlock extends Block implements EntityBlock {
 
 	@Override
 	public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
-		return new CoalgeneratormachineBlockEntity(pos, state);
+		return new QuarryT1BlockEntity(pos, state);
 	}
 
 	@Override
@@ -164,7 +119,7 @@ public class CoalgeneratormachineBlock extends Block implements EntityBlock {
 	public void onRemove(BlockState state, Level world, BlockPos pos, BlockState newState, boolean isMoving) {
 		if (state.getBlock() != newState.getBlock()) {
 			BlockEntity blockEntity = world.getBlockEntity(pos);
-			if (blockEntity instanceof CoalgeneratormachineBlockEntity be) {
+			if (blockEntity instanceof QuarryT1BlockEntity be) {
 				Containers.dropContents(world, pos, be);
 				world.updateNeighbourForOutputSignal(pos, this);
 			}
@@ -180,7 +135,7 @@ public class CoalgeneratormachineBlock extends Block implements EntityBlock {
 	@Override
 	public int getAnalogOutputSignal(BlockState blockState, Level world, BlockPos pos) {
 		BlockEntity tileentity = world.getBlockEntity(pos);
-		if (tileentity instanceof CoalgeneratormachineBlockEntity be)
+		if (tileentity instanceof QuarryT1BlockEntity be)
 			return AbstractContainerMenu.getRedstoneSignalFromContainer(be);
 		else
 			return 0;
