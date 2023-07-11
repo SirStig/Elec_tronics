@@ -83,7 +83,6 @@ public class ElecTronicsModItems {
 	public static final RegistryObject<Item> HAMMER = REGISTRY.register("hammer", () -> new HammerItem());
 	public static final RegistryObject<Item> SHARPENEDIRON = REGISTRY.register("sharpenediron", () -> new SharpenedironItem());
 	public static final RegistryObject<Item> WATERTURBINEMACHINE = block(ElecTronicsModBlocks.WATERTURBINEMACHINE);
-	public static final RegistryObject<Item> COALGENERATORMACHINE = block(ElecTronicsModBlocks.COALGENERATORMACHINE);
 	public static final RegistryObject<Item> ASH = REGISTRY.register("ash", () -> new AshItem());
 	public static final RegistryObject<Item> CRUSHERMACHINE = block(ElecTronicsModBlocks.CRUSHERMACHINE);
 	public static final RegistryObject<Item> IRONDUST = REGISTRY.register("irondust", () -> new IrondustItem());
@@ -198,6 +197,7 @@ public class ElecTronicsModItems {
 	public static final RegistryObject<Item> ROCK_SALT = block(ElecTronicsModBlocks.ROCK_SALT);
 	public static final RegistryObject<Item> ROCKSALTDUST = REGISTRY.register("rocksaltdust", () -> new RocksaltdustItem());
 	public static final RegistryObject<Item> IRON_WRENCH = REGISTRY.register("iron_wrench", () -> new IronWrenchItem());
+	public static final RegistryObject<Item> COAL_GENERATOR_MACHINE = block(ElecTronicsModBlocks.COAL_GENERATOR_MACHINE);
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));

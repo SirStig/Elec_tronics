@@ -70,7 +70,7 @@ import net.elec_tronics.block.EngineersWorkBenchSideBlock;
 import net.elec_tronics.block.EnergyStorageT1Block;
 import net.elec_tronics.block.ElectronicsoilBlock;
 import net.elec_tronics.block.CrushermachineBlock;
-import net.elec_tronics.block.CoalgeneratormachineBlock;
+import net.elec_tronics.block.CoalGeneratorMachineBlock;
 import net.elec_tronics.block.ChlorineGasBlock;
 import net.elec_tronics.block.CablehalfT1Block;
 import net.elec_tronics.block.CableTUpandDownT1Block;
@@ -113,7 +113,6 @@ public class ElecTronicsModBlocks {
 	public static final RegistryObject<Block> BLASTFURNANCEMACHINE = REGISTRY.register("blastfurnancemachine", () -> new BlastfurnancemachineBlock());
 	public static final RegistryObject<Block> ENGINEERSWORKBENCH = REGISTRY.register("engineersworkbench", () -> new EngineersworkbenchBlock());
 	public static final RegistryObject<Block> WATERTURBINEMACHINE = REGISTRY.register("waterturbinemachine", () -> new WaterturbinemachineBlock());
-	public static final RegistryObject<Block> COALGENERATORMACHINE = REGISTRY.register("coalgeneratormachine", () -> new CoalgeneratormachineBlock());
 	public static final RegistryObject<Block> CRUSHERMACHINE = REGISTRY.register("crushermachine", () -> new CrushermachineBlock());
 	public static final RegistryObject<Block> T_1_WIRE = REGISTRY.register("t_1_wire", () -> new T1WireBlock());
 	public static final RegistryObject<Block> CABLE_TT_1 = REGISTRY.register("cable_tt_1", () -> new CableTT1Block());
@@ -200,4 +199,5 @@ public class ElecTronicsModBlocks {
 	public static final RegistryObject<Block> ROCK_SALT = REGISTRY.register("rock_salt", () -> new RockSaltBlock());
 	public static final RegistryObject<Block> CHLORINE_GAS = REGISTRY.register("chlorine_gas", () -> new ChlorineGasBlock());
 	public static final RegistryObject<Block> HYDROGEN_GAS = REGISTRY.register("hydrogen_gas", () -> new HydrogenGasBlock());
+	public static final RegistryObject<Block> COAL_GENERATOR_MACHINE = REGISTRY.register("coal_generator_machine", () -> new CoalGeneratorMachineBlock());
 }

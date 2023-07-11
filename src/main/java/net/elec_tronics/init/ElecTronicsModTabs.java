@@ -86,7 +86,6 @@ public class ElecTronicsModTabs {
 					tabData.accept(ElecTronicsModBlocks.BLASTFURNANCEMACHINE.get().asItem());
 					tabData.accept(ElecTronicsModBlocks.ENGINEERSWORKBENCH.get().asItem());
 					tabData.accept(ElecTronicsModBlocks.WATERTURBINEMACHINE.get().asItem());
-					tabData.accept(ElecTronicsModBlocks.COALGENERATORMACHINE.get().asItem());
 					tabData.accept(ElecTronicsModBlocks.CRUSHERMACHINE.get().asItem());
 					tabData.accept(ElecTronicsModBlocks.SOLAR_PANEL_T_1.get().asItem());
 					tabData.accept(ElecTronicsModBlocks.ENERGY_STORAGE_T_1.get().asItem());
@@ -95,6 +94,7 @@ public class ElecTronicsModTabs {
 					tabData.accept(ElecTronicsModBlocks.BAUXITE_ORE.get().asItem());
 					tabData.accept(ElecTronicsModBlocks.BAUXITE_BLOCK.get().asItem());
 					tabData.accept(ElecTronicsModBlocks.ROCK_SALT.get().asItem());
+					tabData.accept(ElecTronicsModBlocks.COAL_GENERATOR_MACHINE.get().asItem());
 				}).withSearchBar());
 	}
 }

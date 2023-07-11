@@ -64,7 +64,7 @@ import net.elec_tronics.block.entity.EngineersWorkBenchTopBlockEntity;
 import net.elec_tronics.block.entity.EngineersWorkBenchSideBlockEntity;
 import net.elec_tronics.block.entity.EnergyStorageT1BlockEntity;
 import net.elec_tronics.block.entity.CrushermachineBlockEntity;
-import net.elec_tronics.block.entity.CoalgeneratormachineBlockEntity;
+import net.elec_tronics.block.entity.CoalGeneratorMachineBlockEntity;
 import net.elec_tronics.block.entity.CablehalfT1BlockEntity;
 import net.elec_tronics.block.entity.CableTUpandDownT1BlockEntity;
 import net.elec_tronics.block.entity.CableTUpT1BlockEntity;
@@ -99,7 +99,6 @@ public class ElecTronicsModBlockEntities {
 	public static final DeferredRegister<BlockEntityType<?>> REGISTRY = DeferredRegister.create(ForgeRegistries.BLOCK_ENTITY_TYPES, ElecTronicsMod.MODID);
 	public static final RegistryObject<BlockEntityType<?>> BLASTFURNANCEMACHINE = register("blastfurnancemachine", ElecTronicsModBlocks.BLASTFURNANCEMACHINE, BlastfurnancemachineBlockEntity::new);
 	public static final RegistryObject<BlockEntityType<?>> ENGINEERSWORKBENCH = register("engineersworkbench", ElecTronicsModBlocks.ENGINEERSWORKBENCH, EngineersworkbenchBlockEntity::new);
-	public static final RegistryObject<BlockEntityType<?>> COALGENERATORMACHINE = register("coalgeneratormachine", ElecTronicsModBlocks.COALGENERATORMACHINE, CoalgeneratormachineBlockEntity::new);
 	public static final RegistryObject<BlockEntityType<?>> CRUSHERMACHINE = register("crushermachine", ElecTronicsModBlocks.CRUSHERMACHINE, CrushermachineBlockEntity::new);
 	public static final RegistryObject<BlockEntityType<?>> T_1_WIRE = register("t_1_wire", ElecTronicsModBlocks.T_1_WIRE, T1WireBlockEntity::new);
 	public static final RegistryObject<BlockEntityType<?>> CABLE_TT_1 = register("cable_tt_1", ElecTronicsModBlocks.CABLE_TT_1, CableTT1BlockEntity::new);
@@ -179,6 +178,7 @@ public class ElecTronicsModBlockEntities {
 	public static final RegistryObject<BlockEntityType<?>> MANUAL_FLUID_PUMP_4 = register("manual_fluid_pump_4", ElecTronicsModBlocks.MANUAL_FLUID_PUMP_4, ManualFluidPump4BlockEntity::new);
 	public static final RegistryObject<BlockEntityType<?>> MANUAL_FLUID_PUMP_5 = register("manual_fluid_pump_5", ElecTronicsModBlocks.MANUAL_FLUID_PUMP_5, ManualFluidPump5BlockEntity::new);
 	public static final RegistryObject<BlockEntityType<?>> TANKFULLHALF_1 = register("tankfullhalf_1", ElecTronicsModBlocks.TANKFULLHALF_1, Tankfullhalf1BlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> COAL_GENERATOR_MACHINE = register("coal_generator_machine", ElecTronicsModBlocks.COAL_GENERATOR_MACHINE, CoalGeneratorMachineBlockEntity::new);
 
 	private static RegistryObject<BlockEntityType<?>> register(String registryname, RegistryObject<Block> block, BlockEntityType.BlockEntitySupplier<?> supplier) {
 		return REGISTRY.register(registryname, () -> BlockEntityType.Builder.of(supplier, block.get()).build(null));

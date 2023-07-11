@@ -1401,24 +1401,6 @@
       "path": "~/WaterTurbine"
     },
     {
-      "name": "Coalgeneratormachine",
-      "type": "block",
-      "sortid": 65,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "coalgeneratormachine",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/elec_tronics/models/item/coalgeneratormachine.json",
-          "src/main/java/net/elec_tronics/block/entity/CoalgeneratormachineBlockEntity.java",
-          "src/main/java/net/elec_tronics/block/CoalgeneratormachineBlock.java",
-          "src/main/resources/assets/elec_tronics/models/block/coalgeneratormachine.json",
-          "src/main/resources/assets/elec_tronics/blockstates/coalgeneratormachine.json"
-        ]
-      },
-      "path": "~/Coal Generator"
-    },
-    {
       "name": "CoalgeneratorGUI",
       "type": "gui",
       "sortid": 66,
@@ -1429,38 +1411,6 @@
         "files": [
           "src/main/java/net/elec_tronics/client/gui/CoalgeneratorGUIScreen.java",
           "src/main/java/net/elec_tronics/world/inventory/CoalgeneratorGUIMenu.java"
-        ]
-      },
-      "path": "~/Coal Generator"
-    },
-    {
-      "name": "Coalgeneratorelectricitygeneration",
-      "type": "procedure",
-      "sortid": 67,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "coalgeneratorelectricitygeneration",
-      "metadata": {
-        "files": [
-          "src/main/java/net/elec_tronics/procedures/CoalgeneratorelectricitygenerationProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
         ]
       },
       "path": "~/Coal Generator"
@@ -5571,6 +5521,56 @@
         ]
       },
       "path": "~/ModInit"
+    },
+    {
+      "name": "CoalgeneratormachineUpdateTick",
+      "type": "procedure",
+      "sortid": 284,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "coalgeneratormachine_update_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/elec_tronics/procedures/CoalgeneratormachineUpdateTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Coal Generator"
+    },
+    {
+      "name": "CoalGeneratorMachine",
+      "type": "block",
+      "sortid": 286,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "coal_generator_machine",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/elec_tronics/blockstates/coal_generator_machine.json",
+          "src/main/java/net/elec_tronics/block/CoalGeneratorMachineBlock.java",
+          "src/main/resources/assets/elec_tronics/models/item/coal_generator_machine.json",
+          "src/main/java/net/elec_tronics/block/entity/CoalGeneratorMachineBlockEntity.java",
+          "src/main/resources/assets/elec_tronics/models/block/coal_generator_machine.json"
+        ]
+      },
+      "path": "~/Coal Generator"
     }
   ],
   "variable_elements": [
@@ -5622,8 +5622,8 @@
     "en_us": {
       "item.elec_tronics.insulation": "Insulation",
       "item.elec_tronics.hand_saw": "Hand Saw",
-      "item.elec_tronics.hammer": "Hammer",
       "item.elec_tronics.steelhoe": "Steel Hoe",
+      "item.elec_tronics.hammer": "Hammer",
       "block.elec_tronics.pipejunctionupanddownstraight": "Pipe",
       "gui.elec_tronics.workbenchgui.label_inventory": "Inventory",
       "fluid.elec_tronics.hydrogen_gas": "Hydrogen Gas",
@@ -5703,7 +5703,6 @@
       "block.elec_tronics.basewirecon_3upangle": "Cable Angle T1",
       "item.elec_tronics.steel_armor_helmet": "Steel Helmet",
       "block.elec_tronics.waterturbinemachine": "Water Turbine",
-      "block.elec_tronics.coalgeneratormachine": "Coal Generator",
       "block.elec_tronics.pipeupangle": "Pipe",
       "fluid.elec_tronics.electronicsoil": "Oil",
       "block.elec_tronics.cable_t_down_t_1": "Cable Junction T1",
@@ -5768,6 +5767,7 @@
       "block.elec_tronics.basewirecon_4up": "Cable Angle T1",
       "block.elec_tronics.pipeangle": "Pipe",
       "block.elec_tronics.basewirecon_4down": "Cable Angle T1",
+      "block.elec_tronics.coal_generator_machine": "Coal Generator",
       "block.elec_tronics.basewirecon_3downandup": "Cable Angle T1",
       "block.elec_tronics.cablehalf_t_1": "Cable Angle T1",
       "item_group.elec_tronics.electronicsmachines": "Elec Tronics Blocks",

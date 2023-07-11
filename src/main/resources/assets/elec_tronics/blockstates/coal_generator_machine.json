@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "elec_tronics:block/coal_generator_machine"
+    },
+    "facing=east": {
+      "model": "elec_tronics:block/coal_generator_machine",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "elec_tronics:block/coal_generator_machine",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "elec_tronics:block/coal_generator_machine",
+      "y": 270
+    }
+  }
+}

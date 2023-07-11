@@ -98,12 +98,12 @@
     },
     "luminance": 0,
     "unbreakable": false,
-    "breakHarvestLevel": 2,
+    "breakHarvestLevel": 1,
     "isBonemealable": false,
     "hasInventory": true,
     "guiBoundTo": "CoalgeneratorGUI",
     "openGUIOnRightClick": true,
-    "inventorySize": 9,
+    "inventorySize": 2,
     "inventoryStackSize": 64,
     "inventoryDropWhenDestroyed": true,
     "inventoryComparatorPower": true,
@@ -115,14 +115,14 @@
     ],
     "hasEnergyStorage": true,
     "energyInitial": 0,
-    "energyCapacity": 0,
+    "energyCapacity": 1000,
     "energyMaxReceive": 200,
     "energyMaxExtract": 200,
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
     "onTickUpdate": {
-      "name": "Coalgeneratorelectricitygeneration"
+      "name": "CoalgeneratormachineUpdateTick"
     },
     "onRandomUpdateEvent": {
       "name": "Blastdisplay"

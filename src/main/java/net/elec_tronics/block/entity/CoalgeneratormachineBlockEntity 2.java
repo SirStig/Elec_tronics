@@ -32,12 +32,12 @@ import java.util.stream.IntStream;
 
 import io.netty.buffer.Unpooled;
 
-public class CoalGeneratorMachineBlockEntity extends RandomizableContainerBlockEntity implements WorldlyContainer {
-	private NonNullList<ItemStack> stacks = NonNullList.<ItemStack>withSize(2, ItemStack.EMPTY);
+public class CoalgeneratormachineBlockEntity extends RandomizableContainerBlockEntity implements WorldlyContainer {
+	private NonNullList<ItemStack> stacks = NonNullList.<ItemStack>withSize(9, ItemStack.EMPTY);
 	private final LazyOptional<? extends IItemHandler>[] handlers = SidedInvWrapper.create(this, Direction.values());
 
-	public CoalGeneratorMachineBlockEntity(BlockPos position, BlockState state) {
-		super(ElecTronicsModBlockEntities.COAL_GENERATOR_MACHINE.get(), position, state);
+	public CoalgeneratormachineBlockEntity(BlockPos position, BlockState state) {
+		super(ElecTronicsModBlockEntities.COALGENERATORMACHINE.get(), position, state);
 	}
 
 	@Override
@@ -84,7 +84,7 @@ public class CoalGeneratorMachineBlockEntity extends RandomizableContainerBlockE
 
 	@Override
 	public Component getDefaultName() {
-		return Component.literal("coal_generator_machine");
+		return Component.literal("coalgeneratormachine");
 	}
 
 	@Override
@@ -136,7 +136,7 @@ public class CoalGeneratorMachineBlockEntity extends RandomizableContainerBlockE
 		return true;
 	}
 
-	private final EnergyStorage energyStorage = new EnergyStorage(1000, 200, 200, 0) {
+	private final EnergyStorage energyStorage = new EnergyStorage(0, 200, 200, 0) {
 		@Override
 		public int receiveEnergy(int maxReceive, boolean simulate) {
 			int retval = super.receiveEnergy(maxReceive, simulate);

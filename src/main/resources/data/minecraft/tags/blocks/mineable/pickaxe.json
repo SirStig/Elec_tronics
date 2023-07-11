@@ -5,7 +5,6 @@
     "elec_tronics:tungsten",
     "elec_tronics:blastfurnancemachine",
     "elec_tronics:waterturbinemachine",
-    "elec_tronics:coalgeneratormachine",
     "elec_tronics:crushermachine",
     "elec_tronics:solar_panel_t_1",
     "elec_tronics:solar_panelr",
@@ -41,6 +40,7 @@
     "elec_tronics:manual_fluid_pump_5",
     "elec_tronics:bauxite_ore",
     "elec_tronics:bauxite_block",
-    "elec_tronics:rock_salt"
+    "elec_tronics:rock_salt",
+    "elec_tronics:coal_generator_machine"
   ]
 }

@@ -41,19 +41,19 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.client.Minecraft;
 
 import net.elec_tronics.world.inventory.CoalgeneratorGUIMenu;
-import net.elec_tronics.procedures.CoalgeneratormachineUpdateTickProcedure;
+import net.elec_tronics.procedures.CoalgeneratorelectricitygenerationProcedure;
 import net.elec_tronics.procedures.BlastdisplayProcedure;
-import net.elec_tronics.block.entity.CoalGeneratorMachineBlockEntity;
+import net.elec_tronics.block.entity.CoalgeneratormachineBlockEntity;
 
 import java.util.List;
 import java.util.Collections;
 
 import io.netty.buffer.Unpooled;
 
-public class CoalGeneratorMachineBlock extends Block implements EntityBlock {
+public class CoalgeneratormachineBlock extends Block implements EntityBlock {
 	public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
 
-	public CoalGeneratorMachineBlock() {
+	public CoalgeneratormachineBlock() {
 		super(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.METAL).strength(4f, 10f).requiresCorrectToolForDrops());
 		this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH));
 	}
@@ -84,7 +84,7 @@ public class CoalGeneratorMachineBlock extends Block implements EntityBlock {
 	@Override
 	public boolean canHarvestBlock(BlockState state, BlockGetter world, BlockPos pos, Player player) {
 		if (player.getInventory().getSelected().getItem() instanceof PickaxeItem tieredItem)
-			return tieredItem.getTier().getLevel() >= 1;
+			return tieredItem.getTier().getLevel() >= 2;
 		return false;
 	}
 
@@ -108,7 +108,7 @@ public class CoalGeneratorMachineBlock extends Block implements EntityBlock {
 		int x = pos.getX();
 		int y = pos.getY();
 		int z = pos.getZ();
-		CoalgeneratormachineUpdateTickProcedure.execute(world, x, y, z);
+		CoalgeneratorelectricitygenerationProcedure.execute(world, x, y, z);
 		world.scheduleTick(pos, this, 10);
 	}
 
@@ -150,7 +150,7 @@ public class CoalGeneratorMachineBlock extends Block implements EntityBlock {
 
 	@Override
 	public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
-		return new CoalGeneratorMachineBlockEntity(pos, state);
+		return new CoalgeneratormachineBlockEntity(pos, state);
 	}
 
 	@Override
@@ -164,7 +164,7 @@ public class CoalGeneratorMachineBlock extends Block implements EntityBlock {
 	public void onRemove(BlockState state, Level world, BlockPos pos, BlockState newState, boolean isMoving) {
 		if (state.getBlock() != newState.getBlock()) {
 			BlockEntity blockEntity = world.getBlockEntity(pos);
-			if (blockEntity instanceof CoalGeneratorMachineBlockEntity be) {
+			if (blockEntity instanceof CoalgeneratormachineBlockEntity be) {
 				Containers.dropContents(world, pos, be);
 				world.updateNeighbourForOutputSignal(pos, this);
 			}
@@ -180,7 +180,7 @@ public class CoalGeneratorMachineBlock extends Block implements EntityBlock {
 	@Override
 	public int getAnalogOutputSignal(BlockState blockState, Level world, BlockPos pos) {
 		BlockEntity tileentity = world.getBlockEntity(pos);
-		if (tileentity instanceof CoalGeneratorMachineBlockEntity be)
+		if (tileentity instanceof CoalgeneratormachineBlockEntity be)
 			return AbstractContainerMenu.getRedstoneSignalFromContainer(be);
 		else
 			return 0;

@@ -9,7 +9,6 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
 import net.elec_tronics.network.ElecTronicsModVariables;
@@ -19,41 +18,40 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicBoolean;
 
-public class CoalgeneratorelectricitygenerationProcedure {
+public class CoalgeneratormachineUpdateTickProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
-		Direction direction = Direction.NORTH;
-		double xsend = 0;
-		double ysend = 0;
-		double zsend = 0;
-		double amountOfRecievers = 0;
-		double amountToSend = 0;
-		double energy1 = 0;
-		double energy2 = 0;
-		double energy3 = 0;
-		double energy4 = 0;
-		double energy5 = 0;
-		double energy6 = 0;
-		double xsend2 = 0;
-		double xsend3 = 0;
-		double xsend4 = 0;
-		double xsend5 = 0;
-		double xsend6 = 0;
-		double ysend2 = 0;
-		double ysend3 = 0;
-		double ysend4 = 0;
-		double ysend5 = 0;
-		double ysend6 = 0;
-		double zsend2 = 0;
-		double zsend3 = 0;
-		double zsend4 = 0;
-		double zsend5 = 0;
-		double zsend6 = 0;
-		boolean send = false;
-		boolean send2 = false;
-		boolean send3 = false;
 		boolean send4 = false;
 		boolean send5 = false;
 		boolean send6 = false;
+		boolean send2 = false;
+		boolean send3 = false;
+		boolean send = false;
+		double zsend5 = 0;
+		double zsend4 = 0;
+		double zsend3 = 0;
+		double zsend2 = 0;
+		double zsend6 = 0;
+		double xsend = 0;
+		double amountOfRecievers = 0;
+		double ysend = 0;
+		double energy6 = 0;
+		double energy5 = 0;
+		double energy4 = 0;
+		double energy3 = 0;
+		double energy2 = 0;
+		double amountToSend = 0;
+		double energy1 = 0;
+		double ysend5 = 0;
+		double ysend6 = 0;
+		double ysend3 = 0;
+		double ysend4 = 0;
+		double zsend = 0;
+		double ysend2 = 0;
+		double xsend3 = 0;
+		double xsend2 = 0;
+		double xsend5 = 0;
+		double xsend4 = 0;
+		double xsend6 = 0;
 		amountOfRecievers = 0;
 		amountToSend = 0;
 		energy1 = 0;
@@ -218,7 +216,6 @@ public class CoalgeneratorelectricitygenerationProcedure {
 		} else {
 			send6 = false;
 		}
-		amountToSend = (energy1 + energy2 + energy3 + energy4 + energy5 + energy6) / amountOfRecievers;
 		if (ForgeHooks.getBurnTime((new Object() {
 			public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 				AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
@@ -443,15 +440,7 @@ public class CoalgeneratorelectricitygenerationProcedure {
 							_ent.getCapability(ForgeCapabilities.ENERGY, null).ifPresent(capability -> _retval.set(capability.receiveEnergy(_amount, true)));
 						return _retval.get();
 					}
-				}.receiveEnergySimulate(world, BlockPos.containing(x, y, z), (int) (new Object() {
-					public int getEnergyStored(LevelAccessor level, BlockPos pos) {
-						AtomicInteger _retval = new AtomicInteger(0);
-						BlockEntity _ent = level.getBlockEntity(pos);
-						if (_ent != null)
-							_ent.getCapability(ForgeCapabilities.ENERGY, null).ifPresent(capability -> _retval.set(capability.getEnergyStored()));
-						return _retval.get();
-					}
-				}.getEnergyStored(world, BlockPos.containing(x, y, z)) / amountOfRecievers));
+				}.receiveEnergySimulate(world, BlockPos.containing(x, y, z), (int) amountToSend);
 				{
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(xsend, ysend, zsend));
 					int _amount = (int) (energy1 * ElecTronicsModVariables.energy_multiplier);
@@ -474,15 +463,7 @@ public class CoalgeneratorelectricitygenerationProcedure {
 							_ent.getCapability(ForgeCapabilities.ENERGY, null).ifPresent(capability -> _retval.set(capability.receiveEnergy(_amount, true)));
 						return _retval.get();
 					}
-				}.receiveEnergySimulate(world, BlockPos.containing(x, y, z), (int) (new Object() {
-					public int getEnergyStored(LevelAccessor level, BlockPos pos) {
-						AtomicInteger _retval = new AtomicInteger(0);
-						BlockEntity _ent = level.getBlockEntity(pos);
-						if (_ent != null)
-							_ent.getCapability(ForgeCapabilities.ENERGY, null).ifPresent(capability -> _retval.set(capability.getEnergyStored()));
-						return _retval.get();
-					}
-				}.getEnergyStored(world, BlockPos.containing(x, y, z)) / amountOfRecievers));
+				}.receiveEnergySimulate(world, BlockPos.containing(x, y, z), (int) amountToSend);
 				{
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(xsend2, ysend2, zsend2));
 					int _amount = (int) (energy2 * ElecTronicsModVariables.energy_multiplier);
@@ -505,15 +486,7 @@ public class CoalgeneratorelectricitygenerationProcedure {
 							_ent.getCapability(ForgeCapabilities.ENERGY, null).ifPresent(capability -> _retval.set(capability.receiveEnergy(_amount, true)));
 						return _retval.get();
 					}
-				}.receiveEnergySimulate(world, BlockPos.containing(x, y, z), (int) (new Object() {
-					public int getEnergyStored(LevelAccessor level, BlockPos pos) {
-						AtomicInteger _retval = new AtomicInteger(0);
-						BlockEntity _ent = level.getBlockEntity(pos);
-						if (_ent != null)
-							_ent.getCapability(ForgeCapabilities.ENERGY, null).ifPresent(capability -> _retval.set(capability.getEnergyStored()));
-						return _retval.get();
-					}
-				}.getEnergyStored(world, BlockPos.containing(x, y, z)) / amountOfRecievers));
+				}.receiveEnergySimulate(world, BlockPos.containing(x, y, z), (int) amountToSend);
 				{
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(xsend3, ysend3, zsend3));
 					int _amount = (int) (energy3 * ElecTronicsModVariables.energy_multiplier);
@@ -536,15 +509,7 @@ public class CoalgeneratorelectricitygenerationProcedure {
 							_ent.getCapability(ForgeCapabilities.ENERGY, null).ifPresent(capability -> _retval.set(capability.receiveEnergy(_amount, true)));
 						return _retval.get();
 					}
-				}.receiveEnergySimulate(world, BlockPos.containing(x, y, z), (int) (new Object() {
-					public int getEnergyStored(LevelAccessor level, BlockPos pos) {
-						AtomicInteger _retval = new AtomicInteger(0);
-						BlockEntity _ent = level.getBlockEntity(pos);
-						if (_ent != null)
-							_ent.getCapability(ForgeCapabilities.ENERGY, null).ifPresent(capability -> _retval.set(capability.getEnergyStored()));
-						return _retval.get();
-					}
-				}.getEnergyStored(world, BlockPos.containing(x, y, z)) / amountOfRecievers));
+				}.receiveEnergySimulate(world, BlockPos.containing(x, y, z), (int) amountToSend);
 				{
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(xsend4, ysend4, zsend4));
 					int _amount = (int) (energy4 * ElecTronicsModVariables.energy_multiplier);
@@ -567,15 +532,7 @@ public class CoalgeneratorelectricitygenerationProcedure {
 							_ent.getCapability(ForgeCapabilities.ENERGY, null).ifPresent(capability -> _retval.set(capability.receiveEnergy(_amount, true)));
 						return _retval.get();
 					}
-				}.receiveEnergySimulate(world, BlockPos.containing(x, y, z), (int) (new Object() {
-					public int getEnergyStored(LevelAccessor level, BlockPos pos) {
-						AtomicInteger _retval = new AtomicInteger(0);
-						BlockEntity _ent = level.getBlockEntity(pos);
-						if (_ent != null)
-							_ent.getCapability(ForgeCapabilities.ENERGY, null).ifPresent(capability -> _retval.set(capability.getEnergyStored()));
-						return _retval.get();
-					}
-				}.getEnergyStored(world, BlockPos.containing(x, y, z)) / amountOfRecievers));
+				}.receiveEnergySimulate(world, BlockPos.containing(x, y, z), (int) amountToSend);
 				{
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(xsend5, ysend5, zsend5));
 					int _amount = (int) (energy5 * ElecTronicsModVariables.energy_multiplier);
@@ -598,15 +555,7 @@ public class CoalgeneratorelectricitygenerationProcedure {
 							_ent.getCapability(ForgeCapabilities.ENERGY, null).ifPresent(capability -> _retval.set(capability.receiveEnergy(_amount, true)));
 						return _retval.get();
 					}
-				}.receiveEnergySimulate(world, BlockPos.containing(x, y, z), (int) (new Object() {
-					public int getEnergyStored(LevelAccessor level, BlockPos pos) {
-						AtomicInteger _retval = new AtomicInteger(0);
-						BlockEntity _ent = level.getBlockEntity(pos);
-						if (_ent != null)
-							_ent.getCapability(ForgeCapabilities.ENERGY, null).ifPresent(capability -> _retval.set(capability.getEnergyStored()));
-						return _retval.get();
-					}
-				}.getEnergyStored(world, BlockPos.containing(x, y, z)) / amountOfRecievers));
+				}.receiveEnergySimulate(world, BlockPos.containing(x, y, z), (int) amountToSend);
 				{
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(xsend6, ysend6, zsend6));
 					int _amount = (int) (energy6 * ElecTronicsModVariables.energy_multiplier);
@@ -657,7 +606,7 @@ public class CoalgeneratorelectricitygenerationProcedure {
 							_ent.getCapability(ForgeCapabilities.ENERGY, null).ifPresent(capability -> _retval.set(capability.getEnergyStored()));
 						return _retval.get();
 					}
-				}.getEnergyStored(world, BlockPos.containing(x, y, z)) / 20));
+				}.getEnergyStored(world, BlockPos.containing(x, y, z)) / 100));
 			if (world instanceof Level _level)
 				_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 		}
