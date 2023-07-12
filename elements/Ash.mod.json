@@ -5,6 +5,8 @@
     "renderType": 0,
     "texture": "ashnew",
     "customModelName": "Normal",
+    "customProperties": {},
+    "states": [],
     "name": "Ash",
     "rarity": "COMMON",
     "creativeTab": {

@@ -5,6 +5,8 @@
     "renderType": 0,
     "texture": "quartzdust",
     "customModelName": "Normal",
+    "customProperties": {},
+    "states": [],
     "name": "Quartz Dust",
     "rarity": "EPIC",
     "creativeTab": {

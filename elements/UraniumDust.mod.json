@@ -5,6 +5,8 @@
     "renderType": 0,
     "texture": "uraniumpowder",
     "customModelName": "Normal",
+    "customProperties": {},
+    "states": [],
     "name": "Uranium Dust",
     "rarity": "EPIC",
     "creativeTab": {

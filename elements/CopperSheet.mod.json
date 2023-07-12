@@ -5,6 +5,8 @@
     "renderType": 0,
     "texture": "coppersheet",
     "customModelName": "Normal",
+    "customProperties": {},
+    "states": [],
     "name": "Copper Sheet",
     "rarity": "COMMON",
     "creativeTab": {

@@ -18,6 +18,7 @@ import net.elec_tronics.procedures.Powertick3Procedure;
 import net.elec_tronics.procedures.Powertick2Procedure;
 import net.elec_tronics.procedures.Powertick1Procedure;
 import net.elec_tronics.procedures.Powertick0Procedure;
+import net.elec_tronics.procedures.PowerSendingAmountProcedure;
 import net.elec_tronics.procedures.NightorDayProcedure;
 import net.elec_tronics.procedures.DayornightProcedure;
 
@@ -50,6 +51,10 @@ public class SolarpanelGUIScreen extends AbstractContainerScreen<SolarpanelGUIMe
 		this.renderBackground(ms);
 		super.render(ms, mouseX, mouseY, partialTicks);
 		this.renderTooltip(ms, mouseX, mouseY);
+		if (mouseX > leftPos + 19 && mouseX < leftPos + 29 && mouseY > topPos + 26 && mouseY < topPos + 50)
+			this.renderTooltip(ms, Component.literal(PowerSendingAmountProcedure.execute(world, x, y, z)), mouseX, mouseY);
+		if (mouseX > leftPos + 19 && mouseX < leftPos + 29 && mouseY > topPos + 50 && mouseY < topPos + 74)
+			this.renderTooltip(ms, Component.literal(PowerSendingAmountProcedure.execute(world, x, y, z)), mouseX, mouseY);
 	}
 
 	@Override

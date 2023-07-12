@@ -76,38 +76,56 @@ public class WorkbenchguiMenu extends AbstractContainerMenu implements Supplier<
 			}
 		}
 		this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 34, 74) {
+			private final int slot = 0;
 		}));
 		this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 34, 56) {
+			private final int slot = 1;
 		}));
 		this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 34, 38) {
+			private final int slot = 2;
 		}));
 		this.customSlots.put(3, this.addSlot(new SlotItemHandler(internal, 3, 52, 74) {
+			private final int slot = 3;
 		}));
 		this.customSlots.put(4, this.addSlot(new SlotItemHandler(internal, 4, 52, 56) {
+			private final int slot = 4;
 		}));
 		this.customSlots.put(5, this.addSlot(new SlotItemHandler(internal, 5, 52, 38) {
+			private final int slot = 5;
 		}));
 		this.customSlots.put(6, this.addSlot(new SlotItemHandler(internal, 6, 70, 74) {
+			private final int slot = 6;
 		}));
 		this.customSlots.put(7, this.addSlot(new SlotItemHandler(internal, 7, 70, 56) {
+			private final int slot = 7;
 		}));
 		this.customSlots.put(8, this.addSlot(new SlotItemHandler(internal, 8, 70, 38) {
+			private final int slot = 8;
 		}));
 		this.customSlots.put(9, this.addSlot(new SlotItemHandler(internal, 9, 16, 74) {
+			private final int slot = 9;
 		}));
 		this.customSlots.put(10, this.addSlot(new SlotItemHandler(internal, 10, 16, 56) {
+			private final int slot = 10;
 		}));
 		this.customSlots.put(11, this.addSlot(new SlotItemHandler(internal, 11, 16, 38) {
+			private final int slot = 11;
 		}));
 		this.customSlots.put(12, this.addSlot(new SlotItemHandler(internal, 12, 16, 20) {
+			private final int slot = 12;
 		}));
 		this.customSlots.put(13, this.addSlot(new SlotItemHandler(internal, 13, 34, 20) {
+			private final int slot = 13;
 		}));
 		this.customSlots.put(14, this.addSlot(new SlotItemHandler(internal, 14, 52, 20) {
+			private final int slot = 14;
 		}));
 		this.customSlots.put(15, this.addSlot(new SlotItemHandler(internal, 15, 70, 20) {
+			private final int slot = 15;
 		}));
 		this.customSlots.put(17, this.addSlot(new SlotItemHandler(internal, 17, 127, 48) {
+			private final int slot = 17;
+
 			@Override
 			public boolean mayPlace(ItemStack stack) {
 				return false;

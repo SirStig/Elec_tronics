@@ -219,7 +219,7 @@
           "src/main/resources/data/elec_tronics/recipes/blastbrickrecipe.json"
         ]
       },
-      "path": "~/Blocks/Machines/Machines Recipes"
+      "path": "~/Blocks/Machines Recipes"
     },
     {
       "name": "Blastfurnace",
@@ -1275,7 +1275,7 @@
           "src/main/resources/data/elec_tronics/recipes/engineersworkbenchrecipe.json"
         ]
       },
-      "path": "~/Blocks/Machines/Machines Recipes"
+      "path": "~/Blocks/Machines Recipes"
     },
     {
       "name": "Screwdriverrecipe",
@@ -1399,7 +1399,7 @@
           "src/main/java/net/elec_tronics/block/WaterturbinemachineBlock.java"
         ]
       },
-      "path": "~/Blocks/Machines/WaterTurbine"
+      "path": "~/Blocks/WaterTurbine"
     },
     {
       "name": "CoalgeneratorGUI",
@@ -3095,7 +3095,7 @@
           "src/main/resources/assets/elec_tronics/blockstates/extrusion_machine.json"
         ]
       },
-      "path": "~/Blocks/Machines/ExtrusionMachine"
+      "path": "~/Blocks/ExtrusionMachine"
     },
     {
       "name": "ExtrusinmachineGUI",
@@ -3110,7 +3110,7 @@
           "src/main/java/net/elec_tronics/world/inventory/ExtrusinmachineGUIMenu.java"
         ]
       },
-      "path": "~/Blocks/Machines/ExtrusionMachine"
+      "path": "~/Blocks/ExtrusionMachine"
     },
     {
       "name": "ExtrusionMachineUpdateTick",
@@ -3142,7 +3142,7 @@
           }
         ]
       },
-      "path": "~/Blocks/Machines/ExtrusionMachine"
+      "path": "~/Blocks/ExtrusionMachine"
     },
     {
       "name": "Rubbersleeve",
@@ -3259,7 +3259,7 @@
           "src/main/resources/data/elec_tronics/recipes/coalgeneratorrecipe.json"
         ]
       },
-      "path": "~/Blocks/Machines/Machines Recipes"
+      "path": "~/Blocks/Machines Recipes"
     },
     {
       "name": "Condensorrecipe",
@@ -3464,7 +3464,7 @@
           "src/main/resources/data/elec_tronics/recipes/crusherrecipe.json"
         ]
       },
-      "path": "~/Blocks/Machines/Machines Recipes"
+      "path": "~/Blocks/Machines Recipes"
     },
     {
       "name": "IronGearRecipe",
@@ -3545,7 +3545,7 @@
           "src/main/resources/data/elec_tronics/recipes/extrusion_machine_recipe.json"
         ]
       },
-      "path": "~/Blocks/Machines/ExtrusionMachine"
+      "path": "~/Blocks/ExtrusionMachine"
     },
     {
       "name": "EngineersworkbenchPlayerStartsToDestroy",
@@ -5593,9 +5593,26 @@
         "files": [
           "src/main/java/net/elec_tronics/procedures/QuarryT1UpdateTickProcedure.java"
         ],
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
       },
-      "path": "~/Blocks/Procedures"
+      "path": "~/Blocks/Quarry"
     },
     {
       "name": "QuarryT1",
@@ -5613,7 +5630,7 @@
           "src/main/resources/assets/elec_tronics/blockstates/quarry_t_1.json"
         ]
       },
-      "path": "~/Blocks/Machines/Quarry"
+      "path": "~/Blocks/Quarry"
     },
     {
       "name": "Coolantt1",
@@ -5629,8 +5646,7 @@
           "src/main/java/net/elec_tronics/fluid/Coolantt1Fluid.java",
           "src/main/resources/assets/elec_tronics/models/item/coolantt_1_bucket.json",
           "src/main/resources/assets/elec_tronics/blockstates/coolantt_1.json",
-          "src/main/java/net/elec_tronics/fluid/types/Coolantt1FluidType.java",
-          "src/main/java/net/elec_tronics/item/Coolantt1Item.java"
+          "src/main/java/net/elec_tronics/fluid/types/Coolantt1FluidType.java"
         ]
       },
       "path": "~/Fluids-Gases"
@@ -5649,7 +5665,6 @@
           "src/main/resources/assets/elec_tronics/blockstates/refined_oil.json",
           "src/main/java/net/elec_tronics/fluid/RefinedOilFluid.java",
           "src/main/resources/assets/elec_tronics/models/block/refined_oil.json",
-          "src/main/java/net/elec_tronics/item/RefinedOilItem.java",
           "src/main/resources/assets/elec_tronics/models/item/refined_oil_bucket.json"
         ]
       },
@@ -5664,11 +5679,13 @@
       "registry_name": "quarry_t_1_gui",
       "metadata": {
         "files": [
+          "src/main/java/net/elec_tronics/network/QuarryT1GUIButtonMessage.java",
           "src/main/java/net/elec_tronics/client/gui/QuarryT1GUIScreen.java",
+          "src/main/java/net/elec_tronics/network/QuarryT1GUISlotMessage.java",
           "src/main/java/net/elec_tronics/world/inventory/QuarryT1GUIMenu.java"
         ]
       },
-      "path": "~/Blocks/Machines/Quarry"
+      "path": "~/Blocks/Quarry"
     },
     {
       "name": "RefineryT1",
@@ -5686,7 +5703,7 @@
           "src/main/java/net/elec_tronics/block/entity/RefineryT1BlockEntity.java"
         ]
       },
-      "path": "~/Blocks/Machines/Refinery"
+      "path": "~/Blocks/Refinery"
     },
     {
       "name": "UpdateMenu",
@@ -5738,6 +5755,634 @@
         "dependencies": []
       },
       "path": "~/Mod Init"
+    },
+    {
+      "name": "InfoLogShow",
+      "type": "procedure",
+      "sortid": 297,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "info_log_show",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/elec_tronics/procedures/InfoLogShowProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Quarry"
+    },
+    {
+      "name": "InfoLogButtonPushed",
+      "type": "procedure",
+      "sortid": 298,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "info_log_button_pushed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/elec_tronics/procedures/InfoLogButtonPushedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Quarry"
+    },
+    {
+      "name": "QuarryOnoff",
+      "type": "procedure",
+      "sortid": 299,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "quarry_onoff",
+      "metadata": {
+        "files": [
+          "src/main/java/net/elec_tronics/procedures/QuarryOnoffProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Quarry"
+    },
+    {
+      "name": "InfoLogText",
+      "type": "procedure",
+      "sortid": 302,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "info_log_text",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/elec_tronics/procedures/InfoLogTextProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Quarry"
+    },
+    {
+      "name": "PowerAmount",
+      "type": "procedure",
+      "sortid": 303,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "power_amount",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/elec_tronics/procedures/PowerAmountProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Universal Procedures"
+    },
+    {
+      "name": "Tank1Amount",
+      "type": "procedure",
+      "sortid": 304,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tank_1_amount",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/elec_tronics/procedures/Tank1AmountProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Universal Procedures"
+    },
+    {
+      "name": "QuarryOnOffButton",
+      "type": "procedure",
+      "sortid": 308,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "quarry_on_off_button",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/elec_tronics/procedures/QuarryOnOffButtonProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Quarry"
+    },
+    {
+      "name": "QuarryOnOffButtonOff",
+      "type": "procedure",
+      "sortid": 309,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "quarry_on_off_button_off",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/elec_tronics/procedures/QuarryOnOffButtonOffProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Quarry"
+    },
+    {
+      "name": "InfoLogType",
+      "type": "procedure",
+      "sortid": 310,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "info_log_type",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/elec_tronics/procedures/InfoLogTypeProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Quarry"
+    },
+    {
+      "name": "InfoLogText2",
+      "type": "procedure",
+      "sortid": 311,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "info_log_text_2",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/elec_tronics/procedures/InfoLogText2Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Quarry"
+    },
+    {
+      "name": "InfoLogText3",
+      "type": "procedure",
+      "sortid": 312,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "info_log_text_3",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/elec_tronics/procedures/InfoLogText3Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Quarry"
+    },
+    {
+      "name": "InfoLogBlocksBroken",
+      "type": "procedure",
+      "sortid": 313,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "info_log_blocks_broken",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/elec_tronics/procedures/InfoLogBlocksBrokenProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Quarry"
+    },
+    {
+      "name": "InfoLogOreBroken",
+      "type": "procedure",
+      "sortid": 314,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "info_log_ore_broken",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/elec_tronics/procedures/InfoLogOreBrokenProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Quarry"
+    },
+    {
+      "name": "RefinedOilItem",
+      "type": "item",
+      "sortid": 315,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "refined_oil_item",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/elec_tronics/models/item/refined_oil_item.json",
+          "src/main/java/net/elec_tronics/item/RefinedOilItemItem.java"
+        ]
+      },
+      "path": "~/Fluids-Gases"
+    },
+    {
+      "name": "CoolantItem",
+      "type": "item",
+      "sortid": 316,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "coolant_item",
+      "metadata": {
+        "files": [
+          "src/main/java/net/elec_tronics/item/CoolantItemItem.java",
+          "src/main/resources/assets/elec_tronics/models/item/coolant_item.json"
+        ]
+      },
+      "path": "~/Fluids-Gases"
+    },
+    {
+      "name": "TankOilAmount",
+      "type": "procedure",
+      "sortid": 317,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tank_oil_amount",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/elec_tronics/procedures/TankOilAmountProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Universal Procedures"
+    },
+    {
+      "name": "TankCoolantAmount",
+      "type": "procedure",
+      "sortid": 318,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tank_coolant_amount",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/elec_tronics/procedures/TankCoolantAmountProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Universal Procedures"
+    },
+    {
+      "name": "AddOilToBlock",
+      "type": "procedure",
+      "sortid": 319,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "add_oil_to_block",
+      "metadata": {
+        "files": [
+          "src/main/java/net/elec_tronics/procedures/AddOilToBlockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Universal Procedures"
+    },
+    {
+      "name": "AddCoolantToBlock",
+      "type": "procedure",
+      "sortid": 320,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "add_coolant_to_block",
+      "metadata": {
+        "files": [
+          "src/main/java/net/elec_tronics/procedures/AddCoolantToBlockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Universal Procedures"
+    },
+    {
+      "name": "PowerSendingAmount",
+      "type": "procedure",
+      "sortid": 321,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "power_sending_amount",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/elec_tronics/procedures/PowerSendingAmountProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Universal Procedures"
     }
   ],
   "variable_elements": [
@@ -5788,6 +6433,18 @@
       "type": "logic",
       "scope": "global",
       "value": "false"
+    },
+    {
+      "name": "QuarryOnOffT1",
+      "type": "string",
+      "scope": "world",
+      "value": "\"\""
+    },
+    {
+      "name": "quarry_multiplier",
+      "type": "number",
+      "scope": "global",
+      "value": "0"
     }
   ],
   "sound_elements": [],
@@ -5825,6 +6482,7 @@
       "item.elec_tronics.ore_funnel": "Ore Funnel",
       "item.elec_tronics.condensor": "Condensor",
       "block.elec_tronics.tankfullhalf_1": "Tank 1",
+      "gui.elec_tronics.quarry_t_1_gui.button_empty": "Off",
       "block.elec_tronics.pipejunctiondown_2": "Pipe",
       "block.elec_tronics.pipeup": "Pipe",
       "fluid.elec_tronics.brine": "Brine",
@@ -5886,9 +6544,10 @@
       "gui.elec_tronics.coalgenerator_gui.label_coal_generator": "Coal Generator",
       "block.elec_tronics.basepipe": "Pipe",
       "block.elec_tronics.crushermachine": "Crusher T1",
+      "item.elec_tronics.coolant_item": "Coolant",
       "item.elec_tronics.turbine": "Turbine",
       "item.elec_tronics.rocksaltdust": "Salt Dust",
-      "item.elec_tronics.refined_oil_bucket": "Refined Oil Bucket",
+      "item.elec_tronics.refined_oil_item": "Refined Oil ",
       "gui.elec_tronics.update_menu.label_update": "Update",
       "block.elec_tronics.tankfull_11": "Tank",
       "block.elec_tronics.tankfull_10": "Tank",
@@ -5901,6 +6560,7 @@
       "block.elec_tronics.extrusion_machine": "Extrusion Machine",
       "item.elec_tronics.rubbersleeve": "Rubber Sleeve",
       "block.elec_tronics.tankfull_14": "Tank",
+      "gui.elec_tronics.quarry_t_1_gui.label_quarry_tier_1": "Quarry Tier 1",
       "block.elec_tronics.tankfull_13": "Tank",
       "block.elec_tronics.tankfull_12": "Tank",
       "fluid.elec_tronics.oil": "Oil",
@@ -5920,9 +6580,11 @@
       "block.elec_tronics.cable_junction_up_t_1": "Cable Junction T1",
       "block.elec_tronics.rock_salt": "Rock Salt",
       "gui.elec_tronics.update_menu.label_elec_tronics_is_out_of_date": "Elec_tronics is out of date!",
+      "gui.elec_tronics.quarry_t_1_gui.label_empty": "Empty...",
       "block.elec_tronics.tungsten": "Tungsten Ore Block",
       "item.elec_tronics.creativefluiddropper": "Creative Fluid Dropper",
       "block.elec_tronics.pipejunctiondown": "Pipe",
+      "gui.elec_tronics.quarry_t_1_gui.button_on": "On",
       "block.elec_tronics.basewirecon_3": "Cable Angle T1",
       "gui.elec_tronics.crusher_t_1_gui.label_crusher_tier_1": "Crusher Tier 1",
       "gui.elec_tronics.blastfurnace.label_inventory": "Inventory",
@@ -5932,6 +6594,7 @@
       "block.elec_tronics.manual_fluid_pumpdown_2": "Manual Fluid Pump",
       "block.elec_tronics.bauxite_ore": "Bauxite Ore",
       "block.elec_tronics.solarpaneltop": "Solar Panel T1",
+      "gui.elec_tronics.coalgenerator_gui.tooltip_empty": "100/500",
       "block.elec_tronics.pipetdownandup": "Pipe",
       "item.elec_tronics.electricmotor": "Electric Motor",
       "item.elec_tronics.steel_armor_boots": "Steel Boots",
@@ -5946,7 +6609,6 @@
       "block.elec_tronics.pipejunctionup": "Pipe",
       "item.elec_tronics.iron_wrench": "Iron Wrench",
       "item.elec_tronics.steelaxe": "Steel Axe",
-      "item.elec_tronics.coolantt_1_bucket": "Coolant bucket",
       "block.elec_tronics.bauxite_block": "Block of Bauxite",
       "item.elec_tronics.emerald_dust": "Emerald Dust",
       "block.elec_tronics.basewirecon_4up": "Cable Angle T1",
@@ -6042,40 +6704,35 @@
             "children": []
           },
           {
-            "name": "Machines",
-            "children": [
-              {
-                "name": "Quarry",
-                "children": []
-              },
-              {
-                "name": "Refinery",
-                "children": []
-              },
-              {
-                "name": "Coolant_Coolers",
-                "children": []
-              },
-              {
-                "name": "ExtrusionMachine",
-                "children": []
-              },
-              {
-                "name": "Machines Recipes",
-                "children": []
-              },
-              {
-                "name": "WaterTurbine",
-                "children": []
-              }
-            ]
-          },
-          {
             "name": "Procedures",
             "children": []
           },
           {
             "name": "GUI Menus",
+            "children": []
+          },
+          {
+            "name": "Quarry",
+            "children": []
+          },
+          {
+            "name": "Refinery",
+            "children": []
+          },
+          {
+            "name": "Coolant_Coolers",
+            "children": []
+          },
+          {
+            "name": "ExtrusionMachine",
+            "children": []
+          },
+          {
+            "name": "Machines Recipes",
+            "children": []
+          },
+          {
+            "name": "WaterTurbine",
             "children": []
           }
         ]
@@ -6112,6 +6769,14 @@
       {
         "name": "CreativeMenus",
         "children": []
+      },
+      {
+        "name": "Custom Code",
+        "children": []
+      },
+      {
+        "name": "Universal Procedures",
+        "children": []
       }
     ]
   },
@@ -6136,5 +6801,5 @@
     "modElementsPackage": "net.elec_tronics",
     "lockBaseModFiles": false
   },
-  "mcreatorVersion": 202300224119
+  "mcreatorVersion": 202300326610
 }

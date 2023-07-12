@@ -8,6 +8,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 
 import net.elec_tronics.world.inventory.TankT1GUIMenuMenu;
+import net.elec_tronics.procedures.Tank1AmountProcedure;
 
 import java.util.HashMap;
 
@@ -38,6 +39,10 @@ public class TankT1GUIMenuScreen extends AbstractContainerScreen<TankT1GUIMenuMe
 		this.renderBackground(ms);
 		super.render(ms, mouseX, mouseY, partialTicks);
 		this.renderTooltip(ms, mouseX, mouseY);
+		if (mouseX > leftPos + 58 && mouseX < leftPos + 68 && mouseY > topPos + 35 && mouseY < topPos + 59)
+			this.renderTooltip(ms, Component.literal(Tank1AmountProcedure.execute(world, x, y, z)), mouseX, mouseY);
+		if (mouseX > leftPos + 58 && mouseX < leftPos + 68 && mouseY > topPos + 59 && mouseY < topPos + 83)
+			this.renderTooltip(ms, Component.literal(Tank1AmountProcedure.execute(world, x, y, z)), mouseX, mouseY);
 	}
 
 	@Override
@@ -47,6 +52,10 @@ public class TankT1GUIMenuScreen extends AbstractContainerScreen<TankT1GUIMenuMe
 		RenderSystem.defaultBlendFunc();
 		RenderSystem.setShaderTexture(0, texture);
 		this.blit(ms, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
+
+		RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/screens/13158264-minecraftglass_l.png"));
+		this.blit(ms, this.leftPos + 58, this.topPos + 35, 0, 0, 10, 50, 10, 50);
+
 		RenderSystem.disableBlend();
 	}
 

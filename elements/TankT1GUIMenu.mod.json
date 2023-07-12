@@ -24,6 +24,43 @@
           "x": 185,
           "y": 66
         }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "13158264-minecraftglass_l.png",
+          "use1Xscale": true,
+          "x": 207,
+          "y": 96
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_proc_tank_1_amount",
+          "text": {
+            "fixedValue": "",
+            "name": "Tank1Amount"
+          },
+          "width": 10,
+          "height": 24,
+          "x": 207,
+          "y": 96
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_proc_tank_1_amount1",
+          "text": {
+            "fixedValue": "",
+            "name": "Tank1Amount"
+          },
+          "width": 10,
+          "height": 24,
+          "x": 207,
+          "y": 120
+        }
       }
     ],
     "gridSettings": {

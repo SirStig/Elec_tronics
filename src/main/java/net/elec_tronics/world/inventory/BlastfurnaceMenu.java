@@ -76,20 +76,27 @@ public class BlastfurnaceMenu extends AbstractContainerMenu implements Supplier<
 			}
 		}
 		this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 79, 72) {
+			private final int slot = 0;
 		}));
 		this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 61, 72) {
+			private final int slot = 1;
 		}));
 		this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 43, 72) {
+			private final int slot = 2;
 		}));
 		this.customSlots.put(3, this.addSlot(new SlotItemHandler(internal, 3, 51, 28) {
+			private final int slot = 3;
 		}));
 		this.customSlots.put(4, this.addSlot(new SlotItemHandler(internal, 4, 133, 52) {
+			private final int slot = 4;
+
 			@Override
 			public boolean mayPlace(ItemStack stack) {
 				return false;
 			}
 		}));
 		this.customSlots.put(5, this.addSlot(new SlotItemHandler(internal, 5, 70, 28) {
+			private final int slot = 5;
 		}));
 		for (int si = 0; si < 3; ++si)
 			for (int sj = 0; sj < 9; ++sj)

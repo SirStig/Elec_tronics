@@ -5,6 +5,8 @@
     "renderType": 0,
     "texture": "fiberglassdust",
     "customModelName": "Normal",
+    "customProperties": {},
+    "states": [],
     "name": "Fibger Glass Dust",
     "rarity": "COMMON",
     "creativeTab": {

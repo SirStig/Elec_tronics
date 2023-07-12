@@ -18,6 +18,7 @@ import net.elec_tronics.procedures.Powertick3Procedure;
 import net.elec_tronics.procedures.Powertick2Procedure;
 import net.elec_tronics.procedures.Powertick1Procedure;
 import net.elec_tronics.procedures.Powertick0Procedure;
+import net.elec_tronics.procedures.PowerAmountProcedure;
 
 import java.util.HashMap;
 
@@ -48,6 +49,10 @@ public class EnergyStorageT1GUIScreen extends AbstractContainerScreen<EnergyStor
 		this.renderBackground(ms);
 		super.render(ms, mouseX, mouseY, partialTicks);
 		this.renderTooltip(ms, mouseX, mouseY);
+		if (mouseX > leftPos + 59 && mouseX < leftPos + 69 && mouseY > topPos + 22 && mouseY < topPos + 46)
+			this.renderTooltip(ms, Component.literal(PowerAmountProcedure.execute(world, x, y, z)), mouseX, mouseY);
+		if (mouseX > leftPos + 59 && mouseX < leftPos + 69 && mouseY > topPos + 46 && mouseY < topPos + 70)
+			this.renderTooltip(ms, Component.literal(PowerAmountProcedure.execute(world, x, y, z)), mouseX, mouseY);
 	}
 
 	@Override

@@ -5,6 +5,8 @@
     "renderType": 0,
     "texture": "tungstenoregem",
     "customModelName": "Normal",
+    "customProperties": {},
+    "states": [],
     "name": "Tungsten Ore",
     "rarity": "RARE",
     "creativeTab": {

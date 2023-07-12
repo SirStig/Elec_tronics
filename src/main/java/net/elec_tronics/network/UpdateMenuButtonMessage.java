@@ -12,7 +12,6 @@ import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
 import net.elec_tronics.world.inventory.UpdateMenuMenu;
-import net.elec_tronics.procedures.UpdateMenuUpdateProcedure;
 import net.elec_tronics.procedures.UpdateMenuIgnoreProcedure;
 import net.elec_tronics.ElecTronicsMod;
 
@@ -66,10 +65,6 @@ public class UpdateMenuButtonMessage {
 		if (buttonID == 0) {
 
 			UpdateMenuIgnoreProcedure.execute(entity);
-		}
-		if (buttonID == 1) {
-
-			UpdateMenuUpdateProcedure.execute();
 		}
 	}
 

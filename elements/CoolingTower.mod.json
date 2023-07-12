@@ -5,6 +5,8 @@
     "renderType": 0,
     "texture": "coolingtower",
     "customModelName": "Normal",
+    "customProperties": {},
+    "states": [],
     "name": "Cooling Tower",
     "rarity": "COMMON",
     "creativeTab": {

@@ -32,7 +32,7 @@ import net.elec_tronics.item.ScrewdriverItem;
 import net.elec_tronics.item.RubbersleeveItem;
 import net.elec_tronics.item.RubberItem;
 import net.elec_tronics.item.RocksaltdustItem;
-import net.elec_tronics.item.RefinedOilItem;
+import net.elec_tronics.item.RefinedOilItemItem;
 import net.elec_tronics.item.QuartzDustItem;
 import net.elec_tronics.item.OreFunnelItem;
 import net.elec_tronics.item.IrongearItem;
@@ -54,7 +54,7 @@ import net.elec_tronics.item.CopperwireItem;
 import net.elec_tronics.item.CopperSheetItem;
 import net.elec_tronics.item.CopperDustItem;
 import net.elec_tronics.item.CoolingTowerItem;
-import net.elec_tronics.item.Coolantt1Item;
+import net.elec_tronics.item.CoolantItemItem;
 import net.elec_tronics.item.CondensorItem;
 import net.elec_tronics.item.BrineItem;
 import net.elec_tronics.item.BauxiteIngotItem;
@@ -201,9 +201,9 @@ public class ElecTronicsModItems {
 	public static final RegistryObject<Item> IRON_WRENCH = REGISTRY.register("iron_wrench", () -> new IronWrenchItem());
 	public static final RegistryObject<Item> COAL_GENERATOR_MACHINE = block(ElecTronicsModBlocks.COAL_GENERATOR_MACHINE);
 	public static final RegistryObject<Item> QUARRY_T_1 = block(ElecTronicsModBlocks.QUARRY_T_1);
-	public static final RegistryObject<Item> COOLANTT_1_BUCKET = REGISTRY.register("coolantt_1_bucket", () -> new Coolantt1Item());
-	public static final RegistryObject<Item> REFINED_OIL_BUCKET = REGISTRY.register("refined_oil_bucket", () -> new RefinedOilItem());
 	public static final RegistryObject<Item> REFINERY_T_1 = block(ElecTronicsModBlocks.REFINERY_T_1);
+	public static final RegistryObject<Item> REFINED_OIL_ITEM = REGISTRY.register("refined_oil_item", () -> new RefinedOilItemItem());
+	public static final RegistryObject<Item> COOLANT_ITEM = REGISTRY.register("coolant_item", () -> new CoolantItemItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));

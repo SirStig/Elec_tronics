@@ -5,6 +5,8 @@
     "renderType": 0,
     "texture": "copperdust",
     "customModelName": "Normal",
+    "customProperties": {},
+    "states": [],
     "name": "Copper Dust",
     "rarity": "EPIC",
     "creativeTab": {

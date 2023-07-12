@@ -2,14 +2,401 @@
   "_fv": 43,
   "_type": "gui",
   "definition": {
-    "type": 0,
+    "type": 1,
     "width": 176,
     "height": 166,
     "inventoryOffsetX": 0,
     "inventoryOffsetY": 0,
-    "renderBgLayer": true,
+    "renderBgLayer": false,
     "doesPauseGame": false,
-    "components": [],
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "quarryback.png",
+          "use1Xscale": false,
+          "x": 124,
+          "y": 37
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "quarry_t_1_gui.png",
+          "use1Xscale": false,
+          "x": 125,
+          "y": 36
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "13158264-minecraftglass_l.png",
+          "use1Xscale": true,
+          "x": 147,
+          "y": 67
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "batterv1.png",
+          "use1Xscale": true,
+          "x": 135,
+          "y": 67
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "batteryoverlay.png",
+          "use1Xscale": true,
+          "x": 135,
+          "y": 67
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "13158264-minecraftglass_l.png",
+          "use1Xscale": true,
+          "x": 200,
+          "y": 67
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": "CUSTOM:CoolantItem"
+          },
+          "disablePlacement": {
+            "fixedValue": false
+          },
+          "id": 0,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "onSlotChanged": {
+            "name": "AddCoolantToBlock"
+          },
+          "x": 157,
+          "y": 99
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": "CUSTOM:RefinedOilItem"
+          },
+          "disablePlacement": {
+            "fixedValue": false
+          },
+          "id": 1,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "onSlotChanged": {
+            "name": "AddOilToBlock"
+          },
+          "x": 183,
+          "y": 99
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_quarry_tier_1",
+          "text": {
+            "fixedValue": "Quarry Tier 1"
+          },
+          "color": {
+            "value": -16737895,
+            "falpha": 0.0
+          },
+          "x": 230,
+          "y": 41
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_empty",
+          "text": "Off",
+          "onClick": {
+            "name": "QuarryOnoff"
+          },
+          "displayCondition": {
+            "name": "QuarryOnOffButtonOff"
+          },
+          "width": 19,
+          "height": 20,
+          "x": 275,
+          "y": 97
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_1171173571_logscommentsicon",
+          "image": "117-1173571_logs-comments-icon.png",
+          "hoveredImage": "117-1173571_logs-comments-icon.png",
+          "onClick": {
+            "name": "InfoLogButtonPushed"
+          },
+          "x": 107,
+          "y": 100
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "guibackground.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "InfoLogShow"
+          },
+          "x": 35,
+          "y": 117
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_info_log_text",
+          "text": {
+            "fixedValue": "",
+            "name": "InfoLogText"
+          },
+          "color": {
+            "value": -3355444,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "InfoLogShow"
+          },
+          "x": 38,
+          "y": 133
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_empty",
+          "text": {
+            "fixedValue": "Empty...",
+            "name": "InfoLogType"
+          },
+          "color": {
+            "value": -3355444,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "InfoLogShow"
+          },
+          "x": 38,
+          "y": 120
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_proc_power_amount",
+          "text": {
+            "fixedValue": "",
+            "name": "PowerAmount"
+          },
+          "width": 8,
+          "height": 24,
+          "x": 136,
+          "y": 67
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_proc_power_amount1",
+          "text": {
+            "fixedValue": "",
+            "name": "PowerAmount"
+          },
+          "width": 10,
+          "height": 24,
+          "x": 135,
+          "y": 91
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_proc_tank_1_amount",
+          "text": {
+            "fixedValue": "",
+            "name": "TankCoolantAmount"
+          },
+          "width": 10,
+          "height": 24,
+          "x": 147,
+          "y": 68
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_proc_tank_1_amount1",
+          "text": {
+            "fixedValue": "",
+            "name": "TankCoolantAmount"
+          },
+          "width": 10,
+          "height": 24,
+          "x": 147,
+          "y": 92
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_proc_tank_2_amount",
+          "text": {
+            "fixedValue": "",
+            "name": "TankOilAmount"
+          },
+          "width": 10,
+          "height": 24,
+          "x": 200,
+          "y": 67
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_proc_tank_2_amount1",
+          "text": {
+            "fixedValue": "",
+            "name": "TankOilAmount"
+          },
+          "width": 10,
+          "height": 24,
+          "x": 200,
+          "y": 91
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_on",
+          "text": "On",
+          "onClick": {
+            "name": "QuarryOnoff"
+          },
+          "displayCondition": {
+            "name": "QuarryOnOffButton"
+          },
+          "width": 19,
+          "height": 20,
+          "x": 275,
+          "y": 97
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "coolantcontainer.png",
+          "use1Xscale": true,
+          "x": 158,
+          "y": 100
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "oilcontainer.png",
+          "use1Xscale": true,
+          "x": 183,
+          "y": 100
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_info_log_text_2",
+          "text": {
+            "fixedValue": "",
+            "name": "InfoLogText2"
+          },
+          "color": {
+            "value": -3355444,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "InfoLogShow"
+          },
+          "x": 38,
+          "y": 146
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_info_log_text_3",
+          "text": {
+            "fixedValue": "",
+            "name": "InfoLogText3"
+          },
+          "color": {
+            "value": -3355444,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "InfoLogShow"
+          },
+          "x": 38,
+          "y": 159
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_info_log_blocks_broken",
+          "text": {
+            "fixedValue": "",
+            "name": "InfoLogBlocksBroken"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "InfoLogShow"
+          },
+          "x": 38,
+          "y": 187
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_info_log_ore_broken",
+          "text": {
+            "fixedValue": "",
+            "name": "InfoLogOreBroken"
+          },
+          "color": {
+            "value": -16737895,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "InfoLogShow"
+          },
+          "x": 38,
+          "y": 176
+        }
+      }
+    ],
     "gridSettings": {
       "sx": 18,
       "sy": 18,

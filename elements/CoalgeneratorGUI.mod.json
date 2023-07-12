@@ -210,8 +210,8 @@
             "value": -6750208,
             "falpha": 0.0
           },
-          "x": 133,
-          "y": 50
+          "x": 134,
+          "y": 49
         }
       },
       {
@@ -223,7 +223,7 @@
             "name": "Powertick0"
           },
           "x": 133,
-          "y": 59
+          "y": 60
         }
       },
       {
@@ -235,7 +235,7 @@
             "name": "Powertick1"
           },
           "x": 133,
-          "y": 59
+          "y": 58
         }
       },
       {
@@ -380,6 +380,43 @@
           "use1Xscale": false,
           "x": 252,
           "y": 81
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_empty",
+          "text": {
+            "fixedValue": "100/500",
+            "name": "PowerAmount"
+          },
+          "width": 10,
+          "height": 24,
+          "x": 133,
+          "y": 60
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "batteryoverlay.png",
+          "use1Xscale": true,
+          "x": 133,
+          "y": 60
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_proc_power_amount",
+          "text": {
+            "fixedValue": "",
+            "name": "PowerAmount"
+          },
+          "width": 10,
+          "height": 24,
+          "x": 133,
+          "y": 84
         }
       }
     ],

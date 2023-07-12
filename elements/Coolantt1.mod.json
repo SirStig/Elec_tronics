@@ -21,7 +21,7 @@
     "viscosity": 1000,
     "temperature": 300,
     "type": "WATER",
-    "generateBucket": true,
+    "generateBucket": false,
     "textureBucket": "coolantcontainer",
     "creativeTab": {
       "value": "CUSTOM:LovieeesTechyMod"
@@ -33,7 +33,7 @@
     "specialInfo": [],
     "resistance": 100.0,
     "luminance": 0,
-    "lightOpacity": 1,
+    "lightOpacity": 0,
     "emissiveRendering": false,
     "tickRate": 10,
     "flammability": 20,

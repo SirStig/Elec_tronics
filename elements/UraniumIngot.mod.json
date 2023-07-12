@@ -5,6 +5,8 @@
     "renderType": 0,
     "texture": "uraniumingot",
     "customModelName": "Normal",
+    "customProperties": {},
+    "states": [],
     "name": "Uranium Ingot",
     "rarity": "EPIC",
     "creativeTab": {

@@ -34,6 +34,7 @@ public class ElecTronicsModVariables {
 	public static double quarry_speed = 0;
 	public static boolean debug_mode = false;
 	public static boolean update_checker = false;
+	public static double quarry_multiplier = 0;
 
 	@SubscribeEvent
 	public static void init(FMLCommonSetupEvent event) {
@@ -66,6 +67,7 @@ public class ElecTronicsModVariables {
 
 	public static class WorldVariables extends SavedData {
 		public static final String DATA_NAME = "elec_tronics_worldvars";
+		public String QuarryOnOffT1 = "\"\"";
 
 		public static WorldVariables load(CompoundTag tag) {
 			WorldVariables data = new WorldVariables();
@@ -74,10 +76,12 @@ public class ElecTronicsModVariables {
 		}
 
 		public void read(CompoundTag nbt) {
+			QuarryOnOffT1 = nbt.getString("QuarryOnOffT1");
 		}
 
 		@Override
 		public CompoundTag save(CompoundTag nbt) {
+			nbt.putString("QuarryOnOffT1", QuarryOnOffT1);
 			return nbt;
 		}
 

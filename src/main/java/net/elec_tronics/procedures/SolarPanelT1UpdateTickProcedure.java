@@ -45,6 +45,15 @@ public class SolarPanelT1UpdateTickProcedure {
 		double xsend5 = 0;
 		double xsend4 = 0;
 		double xsend6 = 0;
+		if (!world.isClientSide()) {
+			BlockPos _bp = BlockPos.containing(x, y, z);
+			BlockEntity _blockEntity = world.getBlockEntity(_bp);
+			BlockState _bs = world.getBlockState(_bp);
+			if (_blockEntity != null)
+				_blockEntity.getPersistentData().putDouble("sendCapacity", 50);
+			if (world instanceof Level _level)
+				_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+		}
 		if ((new Object() {
 			public boolean canReceiveEnergy(LevelAccessor level, BlockPos pos) {
 				AtomicBoolean _retval = new AtomicBoolean(false);
@@ -202,7 +211,16 @@ public class SolarPanelT1UpdateTickProcedure {
 			send6 = false;
 		}
 		amountToSend = (energy1 + energy2 + energy3 + energy4 + energy5 + energy6) / amountOfRecievers;
-		if (world instanceof Level _lvl12 && _lvl12.isDay()) {
+		if (!world.isClientSide()) {
+			BlockPos _bp = BlockPos.containing(x, y, z);
+			BlockEntity _blockEntity = world.getBlockEntity(_bp);
+			BlockState _bs = world.getBlockState(_bp);
+			if (_blockEntity != null)
+				_blockEntity.getPersistentData().putDouble("sending", amountToSend);
+			if (world instanceof Level _level)
+				_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+		}
+		if (world instanceof Level _lvl14 && _lvl14.isDay()) {
 			if (send == true) {
 				{
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(xsend, ysend, zsend));

@@ -204,6 +204,34 @@
           "x": 183,
           "y": 99
         }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_proc_power_amount",
+          "text": {
+            "fixedValue": "",
+            "name": "PowerSendingAmount"
+          },
+          "width": 10,
+          "height": 24,
+          "x": 183,
+          "y": 100
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_proc_power_amount1",
+          "text": {
+            "fixedValue": "",
+            "name": "PowerSendingAmount"
+          },
+          "width": 10,
+          "height": 24,
+          "x": 183,
+          "y": 124
+        }
       }
     ],
     "gridSettings": {

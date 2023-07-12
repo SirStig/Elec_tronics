@@ -18,6 +18,7 @@ import net.elec_tronics.procedures.Powertick3Procedure;
 import net.elec_tronics.procedures.Powertick2Procedure;
 import net.elec_tronics.procedures.Powertick1Procedure;
 import net.elec_tronics.procedures.Powertick0Procedure;
+import net.elec_tronics.procedures.PowerAmountProcedure;
 
 import java.util.HashMap;
 
@@ -48,6 +49,10 @@ public class ExtrusinmachineGUIScreen extends AbstractContainerScreen<Extrusinma
 		this.renderBackground(ms);
 		super.render(ms, mouseX, mouseY, partialTicks);
 		this.renderTooltip(ms, mouseX, mouseY);
+		if (mouseX > leftPos + 8 && mouseX < leftPos + 18 && mouseY > topPos + 23 && mouseY < topPos + 47)
+			this.renderTooltip(ms, Component.literal(PowerAmountProcedure.execute(world, x, y, z)), mouseX, mouseY);
+		if (mouseX > leftPos + 8 && mouseX < leftPos + 18 && mouseY > topPos + 47 && mouseY < topPos + 71)
+			this.renderTooltip(ms, Component.literal(PowerAmountProcedure.execute(world, x, y, z)), mouseX, mouseY);
 	}
 
 	@Override
@@ -113,6 +118,9 @@ public class ExtrusinmachineGUIScreen extends AbstractContainerScreen<Extrusinma
 
 		RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/screens/extrusion0.png"));
 		this.blit(ms, this.leftPos + 72, this.topPos + 43, 0, 0, 0, 0, 0, 0);
+
+		RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/screens/batteryoverlay.png"));
+		this.blit(ms, this.leftPos + 8, this.topPos + 22, 0, 0, 10, 50, 10, 50);
 
 		RenderSystem.disableBlend();
 	}

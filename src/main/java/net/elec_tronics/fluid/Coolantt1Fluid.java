@@ -10,14 +10,13 @@ import net.minecraft.world.level.block.LiquidBlock;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.particles.ParticleOptions;
 
-import net.elec_tronics.init.ElecTronicsModItems;
 import net.elec_tronics.init.ElecTronicsModFluids;
 import net.elec_tronics.init.ElecTronicsModFluidTypes;
 import net.elec_tronics.init.ElecTronicsModBlocks;
 
 public abstract class Coolantt1Fluid extends ForgeFlowingFluid {
 	public static final ForgeFlowingFluid.Properties PROPERTIES = new ForgeFlowingFluid.Properties(() -> ElecTronicsModFluidTypes.COOLANTT_1_TYPE.get(), () -> ElecTronicsModFluids.COOLANTT_1.get(), () -> ElecTronicsModFluids.FLOWING_COOLANTT_1.get())
-			.explosionResistance(100f).bucket(() -> ElecTronicsModItems.COOLANTT_1_BUCKET.get()).block(() -> (LiquidBlock) ElecTronicsModBlocks.COOLANTT_1.get());
+			.explosionResistance(100f).block(() -> (LiquidBlock) ElecTronicsModBlocks.COOLANTT_1.get());
 
 	private Coolantt1Fluid() {
 		super(PROPERTIES);

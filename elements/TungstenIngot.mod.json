@@ -5,6 +5,8 @@
     "renderType": 0,
     "texture": "tungsteningot",
     "customModelName": "Normal",
+    "customProperties": {},
+    "states": [],
     "name": "Tungsten Ingot",
     "rarity": "RARE",
     "creativeTab": {

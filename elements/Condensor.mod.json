@@ -5,6 +5,8 @@
     "renderType": 0,
     "texture": "condesor",
     "customModelName": "Normal",
+    "customProperties": {},
+    "states": [],
     "name": "Condensor",
     "rarity": "COMMON",
     "creativeTab": {

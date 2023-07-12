@@ -5,6 +5,8 @@
     "renderType": 0,
     "texture": "orefunnel",
     "customModelName": "Normal",
+    "customProperties": {},
+    "states": [],
     "name": "Ore Funnel",
     "rarity": "COMMON",
     "creativeTab": {

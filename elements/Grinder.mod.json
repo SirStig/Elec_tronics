@@ -5,6 +5,8 @@
     "renderType": 0,
     "texture": "grinder",
     "customModelName": "Normal",
+    "customProperties": {},
+    "states": [],
     "name": "Grinder",
     "rarity": "COMMON",
     "creativeTab": {

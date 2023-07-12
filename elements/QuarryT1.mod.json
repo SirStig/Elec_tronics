@@ -101,8 +101,8 @@
     "breakHarvestLevel": 2,
     "isBonemealable": false,
     "hasInventory": true,
-    "guiBoundTo": "<NONE>",
-    "openGUIOnRightClick": false,
+    "guiBoundTo": "QuarryT1GUI",
+    "openGUIOnRightClick": true,
     "inventorySize": 9,
     "inventoryStackSize": 64,
     "inventoryDropWhenDestroyed": true,
@@ -111,11 +111,11 @@
     "inventoryInSlotIDs": [],
     "hasEnergyStorage": true,
     "energyInitial": 0,
-    "energyCapacity": 400000,
+    "energyCapacity": 5000,
     "energyMaxReceive": 200,
     "energyMaxExtract": 200,
     "isFluidTank": true,
-    "fluidCapacity": 10000,
+    "fluidCapacity": 1000,
     "fluidRestrictions": [
       {
         "value": "CUSTOM:Coolantt1"

@@ -5,6 +5,8 @@
     "renderType": 0,
     "texture": "wireroller",
     "customModelName": "Normal",
+    "customProperties": {},
+    "states": [],
     "name": "Wire Roller",
     "rarity": "COMMON",
     "creativeTab": {

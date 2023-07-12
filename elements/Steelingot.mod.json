@@ -5,6 +5,8 @@
     "renderType": 0,
     "texture": "steelingot",
     "customModelName": "Normal",
+    "customProperties": {},
+    "states": [],
     "name": "Steel Ingot",
     "rarity": "UNCOMMON",
     "creativeTab": {

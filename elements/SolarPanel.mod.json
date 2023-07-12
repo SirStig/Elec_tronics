@@ -5,6 +5,8 @@
     "renderType": 0,
     "texture": "solarpanel",
     "customModelName": "Normal",
+    "customProperties": {},
+    "states": [],
     "name": "Solar Panel",
     "rarity": "COMMON",
     "creativeTab": {

@@ -5,6 +5,8 @@
     "renderType": 0,
     "texture": "dropper",
     "customModelName": "Normal",
+    "customProperties": {},
+    "states": [],
     "name": "Creative Fluid Dropper",
     "rarity": "EPIC",
     "creativeTab": {

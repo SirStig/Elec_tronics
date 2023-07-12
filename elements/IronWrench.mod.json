@@ -5,6 +5,8 @@
     "renderType": 0,
     "texture": "wrench",
     "customModelName": "Tool",
+    "customProperties": {},
+    "states": [],
     "name": "Iron Wrench",
     "rarity": "COMMON",
     "creativeTab": {

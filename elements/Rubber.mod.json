@@ -5,6 +5,8 @@
     "renderType": 0,
     "texture": "rubber",
     "customModelName": "Normal",
+    "customProperties": {},
+    "states": [],
     "name": "Rubber",
     "rarity": "COMMON",
     "creativeTab": {

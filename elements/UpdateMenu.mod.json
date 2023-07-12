@@ -83,9 +83,6 @@
           "name": "imagebutton_button1",
           "image": "button.png",
           "hoveredImage": "buttonpressed.png",
-          "onClick": {
-            "name": "UpdateMenuUpdate"
-          },
           "x": 232,
           "y": 114
         }

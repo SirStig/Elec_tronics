@@ -5,6 +5,8 @@
     "renderType": 0,
     "texture": "steamturbine",
     "customModelName": "Normal",
+    "customProperties": {},
+    "states": [],
     "name": "Turbine",
     "rarity": "COMMON",
     "creativeTab": {

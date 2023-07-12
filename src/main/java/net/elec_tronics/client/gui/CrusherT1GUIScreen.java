@@ -19,6 +19,7 @@ import net.elec_tronics.procedures.Powertick3Procedure;
 import net.elec_tronics.procedures.Powertick2Procedure;
 import net.elec_tronics.procedures.Powertick1Procedure;
 import net.elec_tronics.procedures.Powertick0Procedure;
+import net.elec_tronics.procedures.PowerAmountProcedure;
 import net.elec_tronics.procedures.GearAnim8Procedure;
 import net.elec_tronics.procedures.GearAnim7Procedure;
 import net.elec_tronics.procedures.GearAnim6Procedure;
@@ -59,6 +60,10 @@ public class CrusherT1GUIScreen extends AbstractContainerScreen<CrusherT1GUIMenu
 		this.renderBackground(ms);
 		super.render(ms, mouseX, mouseY, partialTicks);
 		this.renderTooltip(ms, mouseX, mouseY);
+		if (mouseX > leftPos + 6 && mouseX < leftPos + 16 && mouseY > topPos + 20 && mouseY < topPos + 44)
+			this.renderTooltip(ms, Component.literal(PowerAmountProcedure.execute(world, x, y, z)), mouseX, mouseY);
+		if (mouseX > leftPos + 6 && mouseX < leftPos + 16 && mouseY > topPos + 44 && mouseY < topPos + 68)
+			this.renderTooltip(ms, Component.literal(PowerAmountProcedure.execute(world, x, y, z)), mouseX, mouseY);
 	}
 
 	@Override

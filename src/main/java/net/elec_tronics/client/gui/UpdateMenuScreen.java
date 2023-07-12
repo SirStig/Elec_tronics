@@ -98,10 +98,6 @@ public class UpdateMenuScreen extends AbstractContainerScreen<UpdateMenuMenu> {
 		guistate.put("button:imagebutton_button", imagebutton_button);
 		this.addRenderableWidget(imagebutton_button);
 		imagebutton_button1 = new ImageButton(this.leftPos + 110, this.topPos + 24, 50, 20, 0, 0, 20, new ResourceLocation("elec_tronics:textures/screens/atlas/imagebutton_button1.png"), 50, 40, e -> {
-			if (true) {
-				ElecTronicsMod.PACKET_HANDLER.sendToServer(new UpdateMenuButtonMessage(1, x, y, z));
-				UpdateMenuButtonMessage.handleButtonAction(entity, 1, x, y, z);
-			}
 		});
 		guistate.put("button:imagebutton_button1", imagebutton_button1);
 		this.addRenderableWidget(imagebutton_button1);

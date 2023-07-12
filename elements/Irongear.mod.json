@@ -5,6 +5,8 @@
     "renderType": 0,
     "texture": "irongear",
     "customModelName": "Normal",
+    "customProperties": {},
+    "states": [],
     "name": "Iron Gear",
     "rarity": "COMMON",
     "creativeTab": {

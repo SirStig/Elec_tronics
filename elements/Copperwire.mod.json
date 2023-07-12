@@ -5,6 +5,8 @@
     "renderType": 0,
     "texture": "copperwire",
     "customModelName": "Normal",
+    "customProperties": {},
+    "states": [],
     "name": "Copperwire",
     "rarity": "COMMON",
     "creativeTab": {

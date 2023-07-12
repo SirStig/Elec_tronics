@@ -5,6 +5,8 @@
     "renderType": 0,
     "texture": "diamonddust",
     "customModelName": "Normal",
+    "customProperties": {},
+    "states": [],
     "name": "Diamond Dust",
     "rarity": "EPIC",
     "creativeTab": {

@@ -5,6 +5,8 @@
     "renderType": 0,
     "texture": "irondust",
     "customModelName": "Normal",
+    "customProperties": {},
+    "states": [],
     "name": "Iron Dust",
     "rarity": "COMMON",
     "creativeTab": {

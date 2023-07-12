@@ -9,19 +9,11 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.CreativeModeTabEvent;
 
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class ElecTronicsModTabs {
-	@SubscribeEvent
-	public static void buildTabContentsVanilla(CreativeModeTabEvent.BuildContents tabData) {
-
-		if (tabData.getTab() == CreativeModeTabs.SPAWN_EGGS) {
-		}
-	}
-
 	@SubscribeEvent
 	public static void buildTabContentsModded(CreativeModeTabEvent.Register event) {
 		event.registerCreativeModeTab(new ResourceLocation("elec_tronics", "elec_tronics_menu"),
@@ -76,9 +68,9 @@ public class ElecTronicsModTabs {
 					tabData.accept(ElecTronicsModItems.BRINE_BUCKET.get());
 					tabData.accept(ElecTronicsModItems.ROCKSALTDUST.get());
 					tabData.accept(ElecTronicsModItems.IRON_WRENCH.get());
-					tabData.accept(ElecTronicsModItems.COOLANTT_1_BUCKET.get());
-					tabData.accept(ElecTronicsModItems.REFINED_OIL_BUCKET.get());
 					tabData.accept(ElecTronicsModBlocks.REFINERY_T_1.get().asItem());
+					tabData.accept(ElecTronicsModItems.REFINED_OIL_ITEM.get());
+					tabData.accept(ElecTronicsModItems.COOLANT_ITEM.get());
 				}).withSearchBar());
 		event.registerCreativeModeTab(new ResourceLocation("elec_tronics", "electronicsmachines"),
 				builder -> builder.title(Component.translatable("item_group.elec_tronics.electronicsmachines")).icon(() -> new ItemStack(ElecTronicsModBlocks.T_1_WIRE.get())).displayItems((parameters, tabData) -> {

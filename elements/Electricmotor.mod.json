@@ -5,6 +5,8 @@
     "renderType": 0,
     "texture": "electricmotor",
     "customModelName": "Normal",
+    "customProperties": {},
+    "states": [],
     "name": "Electric Motor",
     "rarity": "COMMON",
     "creativeTab": {
