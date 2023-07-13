@@ -1,0 +1,40 @@
+# Changelog
+
+## 0.0.1 (2023-07-13)
+
+
+### Features
+
+* Added Bauxite Ore, Ingot, Dust, Block ([66919a8](https://github.com/SirStig/Elec_tronics/commit/66919a8a570fcb95bef2a40e789207d41e152bd0))
+* Added Blast Furnace ([66919a8](https://github.com/SirStig/Elec_tronics/commit/66919a8a570fcb95bef2a40e789207d41e152bd0))
+* Added Brine ([66919a8](https://github.com/SirStig/Elec_tronics/commit/66919a8a570fcb95bef2a40e789207d41e152bd0))
+* Added cables tier 1 & tier 2 (Energy values will change (WIP)) ([66919a8](https://github.com/SirStig/Elec_tronics/commit/66919a8a570fcb95bef2a40e789207d41e152bd0))
+* Added Chlorine Gas ([66919a8](https://github.com/SirStig/Elec_tronics/commit/66919a8a570fcb95bef2a40e789207d41e152bd0))
+* Added Coal Generator (Energy Values will change) ([66919a8](https://github.com/SirStig/Elec_tronics/commit/66919a8a570fcb95bef2a40e789207d41e152bd0))
+* Added Coolant ([66919a8](https://github.com/SirStig/Elec_tronics/commit/66919a8a570fcb95bef2a40e789207d41e152bd0))
+* Added Crude Oil ([66919a8](https://github.com/SirStig/Elec_tronics/commit/66919a8a570fcb95bef2a40e789207d41e152bd0))
+* Added Crusher Tier 1 ([66919a8](https://github.com/SirStig/Elec_tronics/commit/66919a8a570fcb95bef2a40e789207d41e152bd0))
+* Added Energy Storage tier1 ([66919a8](https://github.com/SirStig/Elec_tronics/commit/66919a8a570fcb95bef2a40e789207d41e152bd0))
+* Added Engineers Workbench (WIP) ([66919a8](https://github.com/SirStig/Elec_tronics/commit/66919a8a570fcb95bef2a40e789207d41e152bd0))
+* Added Extrusion Machine (Disabled WIP) ([66919a8](https://github.com/SirStig/Elec_tronics/commit/66919a8a570fcb95bef2a40e789207d41e152bd0))
+* Added fluid pipes ([66919a8](https://github.com/SirStig/Elec_tronics/commit/66919a8a570fcb95bef2a40e789207d41e152bd0))
+* Added Fluid Pump ([66919a8](https://github.com/SirStig/Elec_tronics/commit/66919a8a570fcb95bef2a40e789207d41e152bd0))
+* Added fluid tanks ([66919a8](https://github.com/SirStig/Elec_tronics/commit/66919a8a570fcb95bef2a40e789207d41e152bd0))
+* Added Hammer (WIP) ([66919a8](https://github.com/SirStig/Elec_tronics/commit/66919a8a570fcb95bef2a40e789207d41e152bd0))
+* Added Hand Saw ([66919a8](https://github.com/SirStig/Elec_tronics/commit/66919a8a570fcb95bef2a40e789207d41e152bd0))
+* Added Hydrogen Gas ([66919a8](https://github.com/SirStig/Elec_tronics/commit/66919a8a570fcb95bef2a40e789207d41e152bd0))
+* Added Insulation, Sharpend Iron, Rubber, Copper Wire, Rubber Sleeve, Turbine, Condensor,Cooling Tower, Generator, Electric Motor, Ore Funnel, Grinder, Iron Gear, Copper Sheet, and Wire roller items. ([66919a8](https://github.com/SirStig/Elec_tronics/commit/66919a8a570fcb95bef2a40e789207d41e152bd0))
+* Added Iron Wrench (WIP) ([66919a8](https://github.com/SirStig/Elec_tronics/commit/66919a8a570fcb95bef2a40e789207d41e152bd0))
+* Added Quarry Tier 1 (WIP) ([66919a8](https://github.com/SirStig/Elec_tronics/commit/66919a8a570fcb95bef2a40e789207d41e152bd0))
+* Added Refined Oil ([66919a8](https://github.com/SirStig/Elec_tronics/commit/66919a8a570fcb95bef2a40e789207d41e152bd0))
+* Added Rock Salt Block, Dust ([66919a8](https://github.com/SirStig/Elec_tronics/commit/66919a8a570fcb95bef2a40e789207d41e152bd0))
+* Added Screwdriver (WIP) ([66919a8](https://github.com/SirStig/Elec_tronics/commit/66919a8a570fcb95bef2a40e789207d41e152bd0))
+* Added Solar Panels (WIP) ([66919a8](https://github.com/SirStig/Elec_tronics/commit/66919a8a570fcb95bef2a40e789207d41e152bd0))
+* Added Steel Ingot ([66919a8](https://github.com/SirStig/Elec_tronics/commit/66919a8a570fcb95bef2a40e789207d41e152bd0))
+* Added Steel Pickaxe, Sword, Axe, and Hoe ([66919a8](https://github.com/SirStig/Elec_tronics/commit/66919a8a570fcb95bef2a40e789207d41e152bd0))
+* Added Tungsten Ore, Ingot, Dust ([66919a8](https://github.com/SirStig/Elec_tronics/commit/66919a8a570fcb95bef2a40e789207d41e152bd0))
+* Added Uranium Ore, Ingot, Dust ([66919a8](https://github.com/SirStig/Elec_tronics/commit/66919a8a570fcb95bef2a40e789207d41e152bd0))
+* Added Vanilla Ore Dusts, Fiber Glass Dust, and Ash ([66919a8](https://github.com/SirStig/Elec_tronics/commit/66919a8a570fcb95bef2a40e789207d41e152bd0))
+* Added Water Turbine (Disabled WIP) ([66919a8](https://github.com/SirStig/Elec_tronics/commit/66919a8a570fcb95bef2a40e789207d41e152bd0))
+* Alpha version release 0.0.1 ([66919a8](https://github.com/SirStig/Elec_tronics/commit/66919a8a570fcb95bef2a40e789207d41e152bd0))
+
