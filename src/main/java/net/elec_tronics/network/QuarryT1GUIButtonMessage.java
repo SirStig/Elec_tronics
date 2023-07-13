@@ -12,6 +12,7 @@ import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
 import net.elec_tronics.world.inventory.QuarryT1GUIMenu;
+import net.elec_tronics.procedures.SettingsButtonPushedProcedure;
 import net.elec_tronics.procedures.QuarryOnoffProcedure;
 import net.elec_tronics.procedures.InfoLogButtonPushedProcedure;
 import net.elec_tronics.ElecTronicsMod;
@@ -74,6 +75,10 @@ public class QuarryT1GUIButtonMessage {
 		if (buttonID == 2) {
 
 			InfoLogButtonPushedProcedure.execute(world, x, y, z);
+		}
+		if (buttonID == 3) {
+
+			SettingsButtonPushedProcedure.execute(world, x, y, z);
 		}
 	}
 

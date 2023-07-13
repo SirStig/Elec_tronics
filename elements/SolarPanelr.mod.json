@@ -56,7 +56,7 @@
     "material": {
       "value": "GLASS"
     },
-    "tickRate": 1,
+    "tickRate": 10,
     "tickRandomly": false,
     "isReplaceable": false,
     "canProvidePower": false,
@@ -111,9 +111,9 @@
     "inventoryInSlotIDs": [],
     "hasEnergyStorage": true,
     "energyInitial": 0,
-    "energyCapacity": 50,
-    "energyMaxReceive": 50,
-    "energyMaxExtract": 50,
+    "energyCapacity": 0,
+    "energyMaxReceive": 0,
+    "energyMaxExtract": 0,
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],

@@ -1574,21 +1574,7 @@
           "src/main/java/net/elec_tronics/block/T1WireBlock.java"
         ]
       },
-      "path": "~/Blocks/Wires-Pipes"
-    },
-    {
-      "name": "Variableenergyblocks",
-      "type": "tag",
-      "sortid": 78,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "variableenergyblocks",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/forge/tags/blocks/variable_energy_blocks.json"
-        ]
-      },
-      "path": "~/Tags"
+      "path": "~/Blocks/Wires-Pipes/WiresT1"
     },
     {
       "name": "Powertick1",
@@ -1936,7 +1922,7 @@
           "src/main/resources/assets/elec_tronics/models/item/cable_angle_t_1.json"
         ]
       },
-      "path": "~/Blocks/Wires-Pipes"
+      "path": "~/Blocks/Wires-Pipes/WiresT1"
     },
     {
       "name": "CableTT1",
@@ -1954,7 +1940,7 @@
           "src/main/java/net/elec_tronics/block/CableTT1Block.java"
         ]
       },
-      "path": "~/Blocks/Wires-Pipes"
+      "path": "~/Blocks/Wires-Pipes/WiresT1"
     },
     {
       "name": "EngineersworkbenchBlockDestroyedByPlayer",
@@ -2040,7 +2026,7 @@
           "src/main/java/net/elec_tronics/block/CableJunctionT1Block.java"
         ]
       },
-      "path": "~/Blocks/Wires-Pipes"
+      "path": "~/Blocks/Wires-Pipes/WiresT1"
     },
     {
       "name": "EngineersWorkBenchTopSide",
@@ -2126,7 +2112,7 @@
           "src/main/java/net/elec_tronics/block/CableTUpT1Block.java"
         ]
       },
-      "path": "~/Blocks/Wires-Pipes"
+      "path": "~/Blocks/Wires-Pipes/WiresT1"
     },
     {
       "name": "CableTDownT1",
@@ -2144,7 +2130,7 @@
           "src/main/java/net/elec_tronics/block/entity/CableTDownT1BlockEntity.java"
         ]
       },
-      "path": "~/Blocks/Wires-Pipes"
+      "path": "~/Blocks/Wires-Pipes/WiresT1"
     },
     {
       "name": "CableTUpandDownT1",
@@ -2162,7 +2148,7 @@
           "src/main/resources/assets/elec_tronics/models/block/cable_t_upand_down_t_1.json"
         ]
       },
-      "path": "~/Blocks/Wires-Pipes"
+      "path": "~/Blocks/Wires-Pipes/WiresT1"
     },
     {
       "name": "CableJunctionUpT1",
@@ -2180,7 +2166,7 @@
           "src/main/resources/assets/elec_tronics/models/item/cable_junction_up_t_1.json"
         ]
       },
-      "path": "~/Blocks/Wires-Pipes"
+      "path": "~/Blocks/Wires-Pipes/WiresT1"
     },
     {
       "name": "CableJunctionDownT1",
@@ -2198,7 +2184,7 @@
           "src/main/java/net/elec_tronics/block/entity/CableJunctionDownT1BlockEntity.java"
         ]
       },
-      "path": "~/Blocks/Wires-Pipes"
+      "path": "~/Blocks/Wires-Pipes/WiresT1"
     },
     {
       "name": "CableJunctionUpandDownT1",
@@ -2216,7 +2202,7 @@
           "src/main/resources/assets/elec_tronics/models/block/cable_junction_upand_down_t_1.json"
         ]
       },
-      "path": "~/Blocks/Wires-Pipes"
+      "path": "~/Blocks/Wires-Pipes/WiresT1"
     },
     {
       "name": "Basewirecon5main",
@@ -2234,7 +2220,7 @@
           "src/main/java/net/elec_tronics/block/entity/Basewirecon5mainBlockEntity.java"
         ]
       },
-      "path": "~/Blocks/Wires-Pipes"
+      "path": "~/Blocks/Wires-Pipes/WiresT1"
     },
     {
       "name": "Basewirecon4down",
@@ -2252,7 +2238,7 @@
           "src/main/resources/assets/elec_tronics/blockstates/basewirecon_4down.json"
         ]
       },
-      "path": "~/Blocks/Wires-Pipes"
+      "path": "~/Blocks/Wires-Pipes/WiresT1"
     },
     {
       "name": "Basewirecon2angleup",
@@ -2270,7 +2256,7 @@
           "src/main/java/net/elec_tronics/block/Basewirecon2angleupBlock.java"
         ]
       },
-      "path": "~/Blocks/Wires-Pipes"
+      "path": "~/Blocks/Wires-Pipes/WiresT1"
     },
     {
       "name": "Basewirecon3down",
@@ -2288,7 +2274,7 @@
           "src/main/java/net/elec_tronics/block/entity/Basewirecon3downBlockEntity.java"
         ]
       },
-      "path": "~/Blocks/Wires-Pipes"
+      "path": "~/Blocks/Wires-Pipes/WiresT1"
     },
     {
       "name": "Basewirecon3up",
@@ -2306,7 +2292,7 @@
           "src/main/java/net/elec_tronics/block/entity/Basewirecon3upBlockEntity.java"
         ]
       },
-      "path": "~/Blocks/Wires-Pipes"
+      "path": "~/Blocks/Wires-Pipes/WiresT1"
     },
     {
       "name": "Basewirecon4up",
@@ -2324,7 +2310,7 @@
           "src/main/resources/assets/elec_tronics/models/item/basewirecon_4up.json"
         ]
       },
-      "path": "~/Blocks/Wires-Pipes"
+      "path": "~/Blocks/Wires-Pipes/WiresT1"
     },
     {
       "name": "BasecableT1",
@@ -2342,7 +2328,7 @@
           "src/main/resources/assets/elec_tronics/models/item/basecable_t_1.json"
         ]
       },
-      "path": "~/Blocks/Wires-Pipes"
+      "path": "~/Blocks/Wires-Pipes/WiresT1"
     },
     {
       "name": "Basewirecon2angledown",
@@ -2360,7 +2346,7 @@
           "src/main/resources/assets/elec_tronics/blockstates/basewirecon_2angledown.json"
         ]
       },
-      "path": "~/Blocks/Wires-Pipes"
+      "path": "~/Blocks/Wires-Pipes/WiresT1"
     },
     {
       "name": "Basewirecon4upanddown",
@@ -2378,7 +2364,7 @@
           "src/main/java/net/elec_tronics/block/Basewirecon4upanddownBlock.java"
         ]
       },
-      "path": "~/Blocks/Wires-Pipes"
+      "path": "~/Blocks/Wires-Pipes/WiresT1"
     },
     {
       "name": "Basewirecon3upangle",
@@ -2396,7 +2382,7 @@
           "src/main/java/net/elec_tronics/block/entity/Basewirecon3upangleBlockEntity.java"
         ]
       },
-      "path": "~/Blocks/Wires-Pipes"
+      "path": "~/Blocks/Wires-Pipes/WiresT1"
     },
     {
       "name": "Basewirecon3",
@@ -2414,7 +2400,7 @@
           "src/main/java/net/elec_tronics/block/Basewirecon3Block.java"
         ]
       },
-      "path": "~/Blocks/Wires-Pipes"
+      "path": "~/Blocks/Wires-Pipes/WiresT1"
     },
     {
       "name": "Basewirecon5down",
@@ -2432,7 +2418,7 @@
           "src/main/resources/assets/elec_tronics/models/block/basewirecon_5down.json"
         ]
       },
-      "path": "~/Blocks/Wires-Pipes"
+      "path": "~/Blocks/Wires-Pipes/WiresT1"
     },
     {
       "name": "Basewirecon2angle",
@@ -2450,7 +2436,7 @@
           "src/main/java/net/elec_tronics/block/entity/Basewirecon2angleBlockEntity.java"
         ]
       },
-      "path": "~/Blocks/Wires-Pipes"
+      "path": "~/Blocks/Wires-Pipes/WiresT1"
     },
     {
       "name": "Basewirecon4upanddownstraight",
@@ -2468,7 +2454,7 @@
           "src/main/resources/assets/elec_tronics/models/item/basewirecon_4upanddownstraight.json"
         ]
       },
-      "path": "~/Blocks/Wires-Pipes"
+      "path": "~/Blocks/Wires-Pipes/WiresT1"
     },
     {
       "name": "CablehalfT1",
@@ -2486,7 +2472,7 @@
           "src/main/resources/assets/elec_tronics/models/block/cablehalf_t_1.json"
         ]
       },
-      "path": "~/Blocks/Wires-Pipes"
+      "path": "~/Blocks/Wires-Pipes/WiresT1"
     },
     {
       "name": "Basewirecon3downandup",
@@ -2504,7 +2490,7 @@
           "src/main/resources/assets/elec_tronics/models/block/basewirecon_3downandup.json"
         ]
       },
-      "path": "~/Blocks/Wires-Pipes"
+      "path": "~/Blocks/Wires-Pipes/WiresT1"
     },
     {
       "name": "Basewirecon3downangle",
@@ -2522,7 +2508,7 @@
           "src/main/resources/assets/elec_tronics/models/item/basewirecon_3downangle.json"
         ]
       },
-      "path": "~/Blocks/Wires-Pipes"
+      "path": "~/Blocks/Wires-Pipes/WiresT1"
     },
     {
       "name": "SolarPanelT1",
@@ -3599,7 +3585,7 @@
           "src/main/java/net/elec_tronics/block/BasepipeBlock.java"
         ]
       },
-      "path": "~/Blocks/Wires-Pipes"
+      "path": "~/Blocks/Wires-Pipes/Pipes"
     },
     {
       "name": "Pipeangle",
@@ -3617,7 +3603,7 @@
           "src/main/resources/assets/elec_tronics/models/block/pipeangle.json"
         ]
       },
-      "path": "~/Blocks/Wires-Pipes"
+      "path": "~/Blocks/Wires-Pipes/Pipes"
     },
     {
       "name": "Pipeangledown",
@@ -3635,7 +3621,7 @@
           "src/main/resources/assets/elec_tronics/blockstates/pipeangledown.json"
         ]
       },
-      "path": "~/Blocks/Wires-Pipes"
+      "path": "~/Blocks/Wires-Pipes/Pipes"
     },
     {
       "name": "Pipeanlgeup",
@@ -3653,7 +3639,7 @@
           "src/main/resources/assets/elec_tronics/models/block/pipeanlgeup.json"
         ]
       },
-      "path": "~/Blocks/Wires-Pipes"
+      "path": "~/Blocks/Wires-Pipes/Pipes"
     },
     {
       "name": "Pipedownangle",
@@ -3671,7 +3657,7 @@
           "src/main/resources/assets/elec_tronics/blockstates/pipedownangle.json"
         ]
       },
-      "path": "~/Blocks/Wires-Pipes"
+      "path": "~/Blocks/Wires-Pipes/Pipes"
     },
     {
       "name": "Pipehalf",
@@ -3689,7 +3675,7 @@
           "src/main/resources/assets/elec_tronics/models/block/pipehalf.json"
         ]
       },
-      "path": "~/Blocks/Wires-Pipes"
+      "path": "~/Blocks/Wires-Pipes/Pipes"
     },
     {
       "name": "Pipejunction",
@@ -3707,7 +3693,7 @@
           "src/main/resources/assets/elec_tronics/blockstates/pipejunction.json"
         ]
       },
-      "path": "~/Blocks/Wires-Pipes"
+      "path": "~/Blocks/Wires-Pipes/Pipes"
     },
     {
       "name": "Pipejunctiondown",
@@ -3725,7 +3711,7 @@
           "src/main/resources/assets/elec_tronics/models/item/pipejunctiondown.json"
         ]
       },
-      "path": "~/Blocks/Wires-Pipes"
+      "path": "~/Blocks/Wires-Pipes/Pipes"
     },
     {
       "name": "Pipejunctiondown2",
@@ -3743,7 +3729,7 @@
           "src/main/resources/assets/elec_tronics/models/item/pipejunctiondown_2.json"
         ]
       },
-      "path": "~/Blocks/Wires-Pipes"
+      "path": "~/Blocks/Wires-Pipes/Pipes"
     },
     {
       "name": "Pipejunctionmain",
@@ -3761,7 +3747,7 @@
           "src/main/resources/assets/elec_tronics/blockstates/pipejunctionmain.json"
         ]
       },
-      "path": "~/Blocks/Wires-Pipes"
+      "path": "~/Blocks/Wires-Pipes/Pipes"
     },
     {
       "name": "Pipejunctionup",
@@ -3779,7 +3765,7 @@
           "src/main/java/net/elec_tronics/block/entity/PipejunctionupBlockEntity.java"
         ]
       },
-      "path": "~/Blocks/Wires-Pipes"
+      "path": "~/Blocks/Wires-Pipes/Pipes"
     },
     {
       "name": "Pipejunctionup2",
@@ -3797,7 +3783,7 @@
           "src/main/java/net/elec_tronics/block/entity/Pipejunctionup2BlockEntity.java"
         ]
       },
-      "path": "~/Blocks/Wires-Pipes"
+      "path": "~/Blocks/Wires-Pipes/Pipes"
     },
     {
       "name": "Pipejunctionupanddown",
@@ -3815,7 +3801,7 @@
           "src/main/resources/assets/elec_tronics/blockstates/pipejunctionupanddown.json"
         ]
       },
-      "path": "~/Blocks/Wires-Pipes"
+      "path": "~/Blocks/Wires-Pipes/Pipes"
     },
     {
       "name": "Pipejunctionupanddown2",
@@ -3833,7 +3819,7 @@
           "src/main/java/net/elec_tronics/block/Pipejunctionupanddown2Block.java"
         ]
       },
-      "path": "~/Blocks/Wires-Pipes"
+      "path": "~/Blocks/Wires-Pipes/Pipes"
     },
     {
       "name": "Pipejunctionupanddownstraight",
@@ -3851,7 +3837,7 @@
           "src/main/resources/assets/elec_tronics/blockstates/pipejunctionupanddownstraight.json"
         ]
       },
-      "path": "~/Blocks/Wires-Pipes"
+      "path": "~/Blocks/Wires-Pipes/Pipes"
     },
     {
       "name": "Pipestraight",
@@ -3869,7 +3855,7 @@
           "src/main/resources/assets/elec_tronics/models/block/pipestraight.json"
         ]
       },
-      "path": "~/Blocks/Wires-Pipes"
+      "path": "~/Blocks/Wires-Pipes/Pipes"
     },
     {
       "name": "Pipet",
@@ -3887,7 +3873,7 @@
           "src/main/resources/assets/elec_tronics/blockstates/pipet.json"
         ]
       },
-      "path": "~/Blocks/Wires-Pipes"
+      "path": "~/Blocks/Wires-Pipes/Pipes"
     },
     {
       "name": "Pipetdown",
@@ -3905,7 +3891,7 @@
           "src/main/resources/assets/elec_tronics/models/block/pipetdown.json"
         ]
       },
-      "path": "~/Blocks/Wires-Pipes"
+      "path": "~/Blocks/Wires-Pipes/Pipes"
     },
     {
       "name": "Pipetdownandup",
@@ -3923,7 +3909,7 @@
           "src/main/resources/assets/elec_tronics/models/block/pipetdownandup.json"
         ]
       },
-      "path": "~/Blocks/Wires-Pipes"
+      "path": "~/Blocks/Wires-Pipes/Pipes"
     },
     {
       "name": "Pipeup",
@@ -3941,7 +3927,7 @@
           "src/main/resources/assets/elec_tronics/models/item/pipeup.json"
         ]
       },
-      "path": "~/Blocks/Wires-Pipes"
+      "path": "~/Blocks/Wires-Pipes/Pipes"
     },
     {
       "name": "Pipeupangle",
@@ -3959,7 +3945,7 @@
           "src/main/java/net/elec_tronics/block/PipeupangleBlock.java"
         ]
       },
-      "path": "~/Blocks/Wires-Pipes"
+      "path": "~/Blocks/Wires-Pipes/Pipes"
     },
     {
       "name": "Electronicsmachines",
@@ -4962,21 +4948,6 @@
       "path": "~/Tags"
     },
     {
-      "name": "Worldini",
-      "type": "procedure",
-      "sortid": 263,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "worldini",
-      "metadata": {
-        "files": [
-          "src/main/java/net/elec_tronics/procedures/WorldiniProcedure.java"
-        ],
-        "dependencies": []
-      },
-      "path": "~/Mod Init"
-    },
-    {
       "name": "ElectronicsoilFeature",
       "type": "feature",
       "sortid": 265,
@@ -5016,7 +4987,7 @@
       "sortid": 266,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "t_1_wire_update_tick",
+      "registry_name": "wire_update_tick",
       "metadata": {
         "files": [
           "src/main/java/net/elec_tronics/procedures/T1WireUpdateTickProcedure.java"
@@ -5681,7 +5652,6 @@
         "files": [
           "src/main/java/net/elec_tronics/network/QuarryT1GUIButtonMessage.java",
           "src/main/java/net/elec_tronics/client/gui/QuarryT1GUIScreen.java",
-          "src/main/java/net/elec_tronics/network/QuarryT1GUISlotMessage.java",
           "src/main/java/net/elec_tronics/world/inventory/QuarryT1GUIMenu.java"
         ]
       },
@@ -6383,6 +6353,705 @@
         ]
       },
       "path": "~/Universal Procedures"
+    },
+    {
+      "name": "SettingsShow",
+      "type": "procedure",
+      "sortid": 322,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "settings_show",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/elec_tronics/procedures/SettingsShowProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Quarry"
+    },
+    {
+      "name": "SettingsButtonPushed",
+      "type": "procedure",
+      "sortid": 323,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "settings_button_pushed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/elec_tronics/procedures/SettingsButtonPushedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Quarry"
+    },
+    {
+      "name": "QuarryT1BlockAdded",
+      "type": "procedure",
+      "sortid": 324,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "quarry_t_1_block_added",
+      "metadata": {
+        "files": [
+          "src/main/java/net/elec_tronics/procedures/QuarryT1BlockAddedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Quarry"
+    },
+    {
+      "name": "WireT2",
+      "type": "block",
+      "sortid": 325,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wire_t_2",
+      "metadata": {
+        "files": [
+          "src/main/java/net/elec_tronics/block/WireT2Block.java",
+          "src/main/java/net/elec_tronics/block/entity/WireT2BlockEntity.java",
+          "src/main/resources/assets/elec_tronics/models/item/wire_t_2.json",
+          "src/main/resources/assets/elec_tronics/blockstates/wire_t_2.json",
+          "src/main/resources/assets/elec_tronics/models/block/wire_t_2.json"
+        ]
+      },
+      "path": "~/Blocks/Wires-Pipes/WiresT2"
+    },
+    {
+      "name": "T2Wire",
+      "type": "block",
+      "sortid": 326,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "t_2_wire",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/elec_tronics/models/block/t_2_wire.json",
+          "src/main/resources/assets/elec_tronics/models/item/t_2_wire.json",
+          "src/main/java/net/elec_tronics/block/T2WireBlock.java",
+          "src/main/java/net/elec_tronics/block/entity/T2WireBlockEntity.java",
+          "src/main/resources/assets/elec_tronics/blockstates/t_2_wire.json"
+        ]
+      },
+      "path": "~/Blocks/Wires-Pipes/WiresT2"
+    },
+    {
+      "name": "CableAngleT2",
+      "type": "block",
+      "sortid": 327,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cable_angle_t_2",
+      "metadata": {
+        "files": [
+          "src/main/java/net/elec_tronics/block/CableAngleT2Block.java",
+          "src/main/resources/assets/elec_tronics/models/block/cable_angle_t_2.json",
+          "src/main/resources/assets/elec_tronics/models/item/cable_angle_t_2.json",
+          "src/main/java/net/elec_tronics/block/entity/CableAngleT2BlockEntity.java",
+          "src/main/resources/assets/elec_tronics/blockstates/cable_angle_t_2.json"
+        ]
+      },
+      "path": "~/Blocks/Wires-Pipes/WiresT2"
+    },
+    {
+      "name": "CableTT2",
+      "type": "block",
+      "sortid": 328,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cable_tt_2",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/elec_tronics/models/block/cable_tt_2.json",
+          "src/main/java/net/elec_tronics/block/CableTT2Block.java",
+          "src/main/java/net/elec_tronics/block/entity/CableTT2BlockEntity.java",
+          "src/main/resources/assets/elec_tronics/models/item/cable_tt_2.json",
+          "src/main/resources/assets/elec_tronics/blockstates/cable_tt_2.json"
+        ]
+      },
+      "path": "~/Blocks/Wires-Pipes/WiresT2"
+    },
+    {
+      "name": "CableJunctionT2",
+      "type": "block",
+      "sortid": 329,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cable_junction_t_2",
+      "metadata": {
+        "files": [
+          "src/main/java/net/elec_tronics/block/CableJunctionT2Block.java",
+          "src/main/resources/assets/elec_tronics/blockstates/cable_junction_t_2.json",
+          "src/main/resources/assets/elec_tronics/models/item/cable_junction_t_2.json",
+          "src/main/resources/assets/elec_tronics/models/block/cable_junction_t_2.json",
+          "src/main/java/net/elec_tronics/block/entity/CableJunctionT2BlockEntity.java"
+        ]
+      },
+      "path": "~/Blocks/Wires-Pipes/WiresT2"
+    },
+    {
+      "name": "CableTUpT2",
+      "type": "block",
+      "sortid": 330,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cable_t_up_t_2",
+      "metadata": {
+        "files": [
+          "src/main/java/net/elec_tronics/block/CableTUpT2Block.java",
+          "src/main/resources/assets/elec_tronics/models/block/cable_t_up_t_2.json",
+          "src/main/resources/assets/elec_tronics/blockstates/cable_t_up_t_2.json",
+          "src/main/resources/assets/elec_tronics/models/item/cable_t_up_t_2.json",
+          "src/main/java/net/elec_tronics/block/entity/CableTUpT2BlockEntity.java"
+        ]
+      },
+      "path": "~/Blocks/Wires-Pipes/WiresT2"
+    },
+    {
+      "name": "CableTDownT2",
+      "type": "block",
+      "sortid": 331,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cable_t_down_t_2",
+      "metadata": {
+        "files": [
+          "src/main/java/net/elec_tronics/block/CableTDownT2Block.java",
+          "src/main/java/net/elec_tronics/block/entity/CableTDownT2BlockEntity.java",
+          "src/main/resources/assets/elec_tronics/blockstates/cable_t_down_t_2.json",
+          "src/main/resources/assets/elec_tronics/models/item/cable_t_down_t_2.json",
+          "src/main/resources/assets/elec_tronics/models/block/cable_t_down_t_2.json"
+        ]
+      },
+      "path": "~/Blocks/Wires-Pipes/WiresT2"
+    },
+    {
+      "name": "CableTUpandDownT2",
+      "type": "block",
+      "sortid": 332,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cable_t_upand_down_t_2",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/elec_tronics/models/item/cable_t_upand_down_t_2.json",
+          "src/main/java/net/elec_tronics/block/entity/CableTUpandDownT2BlockEntity.java",
+          "src/main/resources/assets/elec_tronics/blockstates/cable_t_upand_down_t_2.json",
+          "src/main/resources/assets/elec_tronics/models/block/cable_t_upand_down_t_2.json",
+          "src/main/java/net/elec_tronics/block/CableTUpandDownT2Block.java"
+        ]
+      },
+      "path": "~/Blocks/Wires-Pipes/WiresT2"
+    },
+    {
+      "name": "CableJunctionUpT2",
+      "type": "block",
+      "sortid": 333,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cable_junction_up_t_2",
+      "metadata": {
+        "files": [
+          "src/main/java/net/elec_tronics/block/CableJunctionUpT2Block.java",
+          "src/main/java/net/elec_tronics/block/entity/CableJunctionUpT2BlockEntity.java",
+          "src/main/resources/assets/elec_tronics/models/block/cable_junction_up_t_2.json",
+          "src/main/resources/assets/elec_tronics/blockstates/cable_junction_up_t_2.json",
+          "src/main/resources/assets/elec_tronics/models/item/cable_junction_up_t_2.json"
+        ]
+      },
+      "path": "~/Blocks/Wires-Pipes/WiresT2"
+    },
+    {
+      "name": "CableJunctionDownT2",
+      "type": "block",
+      "sortid": 334,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cable_junction_down_t_2",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/elec_tronics/models/block/cable_junction_down_t_2.json",
+          "src/main/java/net/elec_tronics/block/CableJunctionDownT2Block.java",
+          "src/main/java/net/elec_tronics/block/entity/CableJunctionDownT2BlockEntity.java",
+          "src/main/resources/assets/elec_tronics/blockstates/cable_junction_down_t_2.json",
+          "src/main/resources/assets/elec_tronics/models/item/cable_junction_down_t_2.json"
+        ]
+      },
+      "path": "~/Blocks/Wires-Pipes/WiresT2"
+    },
+    {
+      "name": "CableJunctionUpandDownT2",
+      "type": "block",
+      "sortid": 335,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cable_junction_upand_down_t_2",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/elec_tronics/models/item/cable_junction_upand_down_t_2.json",
+          "src/main/java/net/elec_tronics/block/CableJunctionUpandDownT2Block.java",
+          "src/main/resources/assets/elec_tronics/models/block/cable_junction_upand_down_t_2.json",
+          "src/main/java/net/elec_tronics/block/entity/CableJunctionUpandDownT2BlockEntity.java",
+          "src/main/resources/assets/elec_tronics/blockstates/cable_junction_upand_down_t_2.json"
+        ]
+      },
+      "path": "~/Blocks/Wires-Pipes/WiresT2"
+    },
+    {
+      "name": "Basewirecon5mainT2",
+      "type": "block",
+      "sortid": 336,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "basewirecon_5main_t_2",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/elec_tronics/models/block/basewirecon_5main_t_2.json",
+          "src/main/resources/assets/elec_tronics/models/item/basewirecon_5main_t_2.json",
+          "src/main/resources/assets/elec_tronics/blockstates/basewirecon_5main_t_2.json",
+          "src/main/java/net/elec_tronics/block/entity/Basewirecon5mainT2BlockEntity.java",
+          "src/main/java/net/elec_tronics/block/Basewirecon5mainT2Block.java"
+        ]
+      },
+      "path": "~/Blocks/Wires-Pipes/WiresT2"
+    },
+    {
+      "name": "Basewirecon4downT2",
+      "type": "block",
+      "sortid": 337,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "basewirecon_4down_t_2",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/elec_tronics/blockstates/basewirecon_4down_t_2.json",
+          "src/main/java/net/elec_tronics/block/entity/Basewirecon4downT2BlockEntity.java",
+          "src/main/java/net/elec_tronics/block/Basewirecon4downT2Block.java",
+          "src/main/resources/assets/elec_tronics/models/block/basewirecon_4down_t_2.json",
+          "src/main/resources/assets/elec_tronics/models/item/basewirecon_4down_t_2.json"
+        ]
+      },
+      "path": "~/Blocks/Wires-Pipes/WiresT2"
+    },
+    {
+      "name": "Basewirecon2angleupT2",
+      "type": "block",
+      "sortid": 338,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "basewirecon_2angleup_t_2",
+      "metadata": {
+        "files": [
+          "src/main/java/net/elec_tronics/block/Basewirecon2angleupT2Block.java",
+          "src/main/java/net/elec_tronics/block/entity/Basewirecon2angleupT2BlockEntity.java",
+          "src/main/resources/assets/elec_tronics/models/item/basewirecon_2angleup_t_2.json",
+          "src/main/resources/assets/elec_tronics/blockstates/basewirecon_2angleup_t_2.json",
+          "src/main/resources/assets/elec_tronics/models/block/basewirecon_2angleup_t_2.json"
+        ]
+      },
+      "path": "~/Blocks/Wires-Pipes/WiresT2"
+    },
+    {
+      "name": "Basewirecon3downT2",
+      "type": "block",
+      "sortid": 339,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "basewirecon_3down_t_2",
+      "metadata": {
+        "files": [
+          "src/main/java/net/elec_tronics/block/Basewirecon3downT2Block.java",
+          "src/main/resources/assets/elec_tronics/blockstates/basewirecon_3down_t_2.json",
+          "src/main/java/net/elec_tronics/block/entity/Basewirecon3downT2BlockEntity.java",
+          "src/main/resources/assets/elec_tronics/models/block/basewirecon_3down_t_2.json",
+          "src/main/resources/assets/elec_tronics/models/item/basewirecon_3down_t_2.json"
+        ]
+      },
+      "path": "~/Blocks/Wires-Pipes/WiresT2"
+    },
+    {
+      "name": "Basewirecon3upT2",
+      "type": "block",
+      "sortid": 340,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "basewirecon_3up_t_2",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/elec_tronics/blockstates/basewirecon_3up_t_2.json",
+          "src/main/resources/assets/elec_tronics/models/block/basewirecon_3up_t_2.json",
+          "src/main/java/net/elec_tronics/block/entity/Basewirecon3upT2BlockEntity.java",
+          "src/main/java/net/elec_tronics/block/Basewirecon3upT2Block.java",
+          "src/main/resources/assets/elec_tronics/models/item/basewirecon_3up_t_2.json"
+        ]
+      },
+      "path": "~/Blocks/Wires-Pipes/WiresT2"
+    },
+    {
+      "name": "Basewirecon4upT2",
+      "type": "block",
+      "sortid": 341,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "basewirecon_4up_t_2",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/elec_tronics/models/item/basewirecon_4up_t_2.json",
+          "src/main/resources/assets/elec_tronics/blockstates/basewirecon_4up_t_2.json",
+          "src/main/resources/assets/elec_tronics/models/block/basewirecon_4up_t_2.json",
+          "src/main/java/net/elec_tronics/block/entity/Basewirecon4upT2BlockEntity.java",
+          "src/main/java/net/elec_tronics/block/Basewirecon4upT2Block.java"
+        ]
+      },
+      "path": "~/Blocks/Wires-Pipes/WiresT2"
+    },
+    {
+      "name": "Basewirecon2angledownT2",
+      "type": "block",
+      "sortid": 342,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "basewirecon_2angledown_t_2",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/elec_tronics/models/item/basewirecon_2angledown_t_2.json",
+          "src/main/resources/assets/elec_tronics/blockstates/basewirecon_2angledown_t_2.json",
+          "src/main/java/net/elec_tronics/block/Basewirecon2angledownT2Block.java",
+          "src/main/java/net/elec_tronics/block/entity/Basewirecon2angledownT2BlockEntity.java",
+          "src/main/resources/assets/elec_tronics/models/block/basewirecon_2angledown_t_2.json"
+        ]
+      },
+      "path": "~/Blocks/Wires-Pipes/WiresT2"
+    },
+    {
+      "name": "Basewirecon4upanddownT2",
+      "type": "block",
+      "sortid": 343,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "basewirecon_4upanddown_t_2",
+      "metadata": {
+        "files": [
+          "src/main/java/net/elec_tronics/block/Basewirecon4upanddownT2Block.java",
+          "src/main/java/net/elec_tronics/block/entity/Basewirecon4upanddownT2BlockEntity.java",
+          "src/main/resources/assets/elec_tronics/models/item/basewirecon_4upanddown_t_2.json",
+          "src/main/resources/assets/elec_tronics/blockstates/basewirecon_4upanddown_t_2.json",
+          "src/main/resources/assets/elec_tronics/models/block/basewirecon_4upanddown_t_2.json"
+        ]
+      },
+      "path": "~/Blocks/Wires-Pipes/WiresT2"
+    },
+    {
+      "name": "Basewirecon3upangleT2",
+      "type": "block",
+      "sortid": 344,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "basewirecon_3upangle_t_2",
+      "metadata": {
+        "files": [
+          "src/main/java/net/elec_tronics/block/Basewirecon3upangleT2Block.java",
+          "src/main/java/net/elec_tronics/block/entity/Basewirecon3upangleT2BlockEntity.java",
+          "src/main/resources/assets/elec_tronics/models/block/basewirecon_3upangle_t_2.json",
+          "src/main/resources/assets/elec_tronics/models/item/basewirecon_3upangle_t_2.json",
+          "src/main/resources/assets/elec_tronics/blockstates/basewirecon_3upangle_t_2.json"
+        ]
+      },
+      "path": "~/Blocks/Wires-Pipes/WiresT2"
+    },
+    {
+      "name": "Basewirecon3t2",
+      "type": "block",
+      "sortid": 345,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "basewirecon_3t_2",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/elec_tronics/models/block/basewirecon_3t_2.json",
+          "src/main/resources/assets/elec_tronics/models/item/basewirecon_3t_2.json",
+          "src/main/java/net/elec_tronics/block/Basewirecon3t2Block.java",
+          "src/main/resources/assets/elec_tronics/blockstates/basewirecon_3t_2.json",
+          "src/main/java/net/elec_tronics/block/entity/Basewirecon3t2BlockEntity.java"
+        ]
+      },
+      "path": "~/Blocks/Wires-Pipes/WiresT2"
+    },
+    {
+      "name": "Basewirecon5downT2",
+      "type": "block",
+      "sortid": 346,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "basewirecon_5down_t_2",
+      "metadata": {
+        "files": [
+          "src/main/java/net/elec_tronics/block/Basewirecon5downT2Block.java",
+          "src/main/resources/assets/elec_tronics/blockstates/basewirecon_5down_t_2.json",
+          "src/main/resources/assets/elec_tronics/models/item/basewirecon_5down_t_2.json",
+          "src/main/java/net/elec_tronics/block/entity/Basewirecon5downT2BlockEntity.java",
+          "src/main/resources/assets/elec_tronics/models/block/basewirecon_5down_t_2.json"
+        ]
+      },
+      "path": "~/Blocks/Wires-Pipes/WiresT2"
+    },
+    {
+      "name": "Basewirecon2angleT2",
+      "type": "block",
+      "sortid": 347,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "basewirecon_2angle_t_2",
+      "metadata": {
+        "files": [
+          "src/main/java/net/elec_tronics/block/entity/Basewirecon2angleT2BlockEntity.java",
+          "src/main/resources/assets/elec_tronics/models/item/basewirecon_2angle_t_2.json",
+          "src/main/resources/assets/elec_tronics/models/block/basewirecon_2angle_t_2.json",
+          "src/main/resources/assets/elec_tronics/blockstates/basewirecon_2angle_t_2.json",
+          "src/main/java/net/elec_tronics/block/Basewirecon2angleT2Block.java"
+        ]
+      },
+      "path": "~/Blocks/Wires-Pipes/WiresT2"
+    },
+    {
+      "name": "Basewirecon4upanddownstraightT2",
+      "type": "block",
+      "sortid": 348,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "basewirecon_4upanddownstraight_t_2",
+      "metadata": {
+        "files": [
+          "src/main/java/net/elec_tronics/block/Basewirecon4upanddownstraightT2Block.java",
+          "src/main/resources/assets/elec_tronics/models/block/basewirecon_4upanddownstraight_t_2.json",
+          "src/main/resources/assets/elec_tronics/blockstates/basewirecon_4upanddownstraight_t_2.json",
+          "src/main/resources/assets/elec_tronics/models/item/basewirecon_4upanddownstraight_t_2.json",
+          "src/main/java/net/elec_tronics/block/entity/Basewirecon4upanddownstraightT2BlockEntity.java"
+        ]
+      },
+      "path": "~/Blocks/Wires-Pipes/WiresT2"
+    },
+    {
+      "name": "CablehalfT2",
+      "type": "block",
+      "sortid": 349,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cablehalf_t_2",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/elec_tronics/models/block/cablehalf_t_2.json",
+          "src/main/resources/assets/elec_tronics/blockstates/cablehalf_t_2.json",
+          "src/main/resources/assets/elec_tronics/models/item/cablehalf_t_2.json",
+          "src/main/java/net/elec_tronics/block/entity/CablehalfT2BlockEntity.java",
+          "src/main/java/net/elec_tronics/block/CablehalfT2Block.java"
+        ]
+      },
+      "path": "~/Blocks/Wires-Pipes/WiresT2"
+    },
+    {
+      "name": "Basewirecon3downandupT2",
+      "type": "block",
+      "sortid": 350,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "basewirecon_3downandup_t_2",
+      "metadata": {
+        "files": [
+          "src/main/java/net/elec_tronics/block/Basewirecon3downandupT2Block.java",
+          "src/main/resources/assets/elec_tronics/blockstates/basewirecon_3downandup_t_2.json",
+          "src/main/resources/assets/elec_tronics/models/item/basewirecon_3downandup_t_2.json",
+          "src/main/java/net/elec_tronics/block/entity/Basewirecon3downandupT2BlockEntity.java",
+          "src/main/resources/assets/elec_tronics/models/block/basewirecon_3downandup_t_2.json"
+        ]
+      },
+      "path": "~/Blocks/Wires-Pipes/WiresT2"
+    },
+    {
+      "name": "Basewirecon3downangleT2",
+      "type": "block",
+      "sortid": 351,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "basewirecon_3downangle_t_2",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/elec_tronics/models/block/basewirecon_3downangle_t_2.json",
+          "src/main/java/net/elec_tronics/block/entity/Basewirecon3downangleT2BlockEntity.java",
+          "src/main/resources/assets/elec_tronics/blockstates/basewirecon_3downangle_t_2.json",
+          "src/main/java/net/elec_tronics/block/Basewirecon3downangleT2Block.java",
+          "src/main/resources/assets/elec_tronics/models/item/basewirecon_3downangle_t_2.json"
+        ]
+      },
+      "path": "~/Blocks/Wires-Pipes/WiresT2"
+    },
+    {
+      "name": "T2WireBlockIsPlacedBy",
+      "type": "procedure",
+      "sortid": 352,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "t_2_wire_block_is_placed_by",
+      "metadata": {
+        "files": [
+          "src/main/java/net/elec_tronics/procedures/T2WireBlockIsPlacedByProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Procedures"
+    },
+    {
+      "name": "Generators",
+      "type": "tag",
+      "sortid": 353,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "generators",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/electronics/tags/blocks/generators.json"
+        ]
+      },
+      "path": "~/Tags"
+    },
+    {
+      "name": "Blocks",
+      "type": "tag",
+      "sortid": 354,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blocks",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/electronics/tags/blocks/blocks.json"
+        ]
+      },
+      "path": "~/Tags"
+    },
+    {
+      "name": "Items",
+      "type": "tag",
+      "sortid": 355,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "items",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/electronics/tags/items/items.json"
+        ]
+      },
+      "path": "~/Tags"
+    },
+    {
+      "name": "TimeOfDay",
+      "type": "procedure",
+      "sortid": 356,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "time_of_day",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/elec_tronics/procedures/TimeOfDayProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Universal Procedures"
+    },
+    {
+      "name": "ReturnTimeOfDay",
+      "type": "procedure",
+      "sortid": 357,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_time_of_day",
+      "metadata": {
+        "return_type": "number",
+        "files": [
+          "src/main/java/net/elec_tronics/procedures/ReturnTimeOfDayProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Universal Procedures"
     }
   ],
   "variable_elements": [
@@ -6402,25 +7071,25 @@
       "name": "version",
       "type": "string",
       "scope": "global",
-      "value": "\"\""
+      "value": "\"0.0.1\""
     },
     {
       "name": "energy_multiplier",
       "type": "number",
       "scope": "global",
-      "value": "0"
+      "value": "1.0"
     },
     {
       "name": "water_multiplier",
       "type": "number",
       "scope": "map",
-      "value": "0"
+      "value": "1.0"
     },
     {
       "name": "quarry_speed",
       "type": "number",
       "scope": "global",
-      "value": "0"
+      "value": "1.0"
     },
     {
       "name": "debug_mode",
@@ -6432,27 +7101,110 @@
       "name": "update_checker",
       "type": "logic",
       "scope": "global",
-      "value": "false"
-    },
-    {
-      "name": "QuarryOnOffT1",
-      "type": "string",
-      "scope": "world",
-      "value": "\"\""
+      "value": "true"
     },
     {
       "name": "quarry_multiplier",
       "type": "number",
       "scope": "global",
-      "value": "0"
+      "value": "1.0"
     }
   ],
   "sound_elements": [],
   "language_map": {
     "en_us": {
+      "item.elec_tronics.hammer": "Hammer",
+      "block.elec_tronics.basewirecon_3up_t_2": "Cable Angle T2",
+      "block.elec_tronics.pipet": "Pipe",
+      "block.elec_tronics.oil": "Oil",
+      "block.elec_tronics.pipeangledown": "Pipe",
+      "item.elec_tronics.tungsten_ore": "Tungsten Ore",
+      "gui.elec_tronics.solarpanel_gui.label_solar_panel_t1": "Solar Panel T1",
+      "block.elec_tronics.refined_oil": "Refined Oil",
+      "block.elec_tronics.basewirecon_5main": "Cable Angle T1",
+      "item.elec_tronics.copper_sheet": "Copper Sheet",
+      "item.elec_tronics.ore_funnel": "Ore Funnel",
+      "gui.elec_tronics.quarry_t_1_gui.button_empty": "Off",
+      "fluid.elec_tronics.brine": "Brine",
+      "block.elec_tronics.brine": "Brine",
+      "block.elec_tronics.engineersworkbench": "Engineers Workbench",
+      "block.elec_tronics.pipejunctionupanddown": "Pipe",
+      "item.elec_tronics.irongear": "Iron Gear",
+      "item.elec_tronics.steel_armor_chestplate": "Steel Chestplate",
+      "block.elec_tronics.basewirecon_5main_t_2": "Cable Angle T2",
+      "item.elec_tronics.copper_dust": "Copper Dust",
+      "block.elec_tronics.cable_angle_t_1": "Cable Angle T1",
+      "block.elec_tronics.solar_panelr": "Solar Panel T1",
+      "block.elec_tronics.cable_angle_t_2": "Cable Angle T2",
+      "gui.elec_tronics.extrusinmachine_gui.label_inventory": "Inventory",
+      "fluid.elec_tronics.coolantt_1": "Coolant",
+      "block.elec_tronics.basewirecon_4upanddown_t_2": "Cable Angle T2",
+      "block.elec_tronics.basewirecon_3downandup_t_2": "Cable Angle T2",
+      "item.elec_tronics.steelsword": "Steel Sword",
+      "block.elec_tronics.refinery_t_1": "Refinery T 1",
+      "block.elec_tronics.manual_fluid_pump": "Manual Fluid Pump",
+      "item.elec_tronics.brine_bucket": "Brine Bucket",
+      "fluid.elec_tronics.chlorine_gas": "Chlorine Gas",
+      "block.elec_tronics.energy_storage_t_1": "Energy Storage T1",
+      "block.elec_tronics.engineers_work_bench_top": "Engineers Workbench Top",
+      "block.elec_tronics.basewirecon_4upanddownstraight_t_2": "Cable Angle T2",
+      "item.elec_tronics.extrusion_die": "Extrusion Die",
+      "gui.elec_tronics.crusher_t_1_gui.label_inventory": "Inventory",
+      "block.elec_tronics.basewirecon_3down": "Cable Angle T1",
+      "block.elec_tronics.tank": "Tank",
+      "block.elec_tronics.basepipe": "Pipe",
+      "block.elec_tronics.crushermachine": "Crusher T1",
+      "item.elec_tronics.coolant_item": "Coolant",
+      "item.elec_tronics.rocksaltdust": "Salt Dust",
+      "item.elec_tronics.rubbersleeve": "Rubber Sleeve",
+      "block.elec_tronics.extrusion_machine": "Extrusion Machine",
+      "item.elec_tronics.sharpenediron": "Iron Blade",
+      "gui.elec_tronics.quarry_t_1_gui.label_quarry_tier_1": "Quarry Tier 1",
+      "block.elec_tronics.pipestraight": "Pipe",
+      "gui.elec_tronics.extrusinmachine_gui.label_extrusion_machine": "Extrusion Machine",
+      "gui.elec_tronics.coalgenerator_gui.label_inventory": "Inventory",
+      "block.elec_tronics.coolantt_1": "Coolant",
+      "block.elec_tronics.basewirecon_3up": "Cable Angle T1",
+      "gui.elec_tronics.blastfurnace.label_blast_furnace": "Blast Furnace",
+      "block.elec_tronics.quarry_t_1": "Quarry",
+      "block.elec_tronics.cable_junction_up_t_2": "Cable Junction T2",
+      "block.elec_tronics.cable_junction_up_t_1": "Cable Junction T1",
+      "gui.elec_tronics.quarry_t_1_gui.label_empty": "Empty...",
+      "block.elec_tronics.tungsten": "Tungsten Ore Block",
+      "block.elec_tronics.pipejunctiondown": "Pipe",
+      "gui.elec_tronics.quarry_t_1_gui.button_on": "On",
+      "gui.elec_tronics.crusher_t_1_gui.label_crusher_tier_1": "Crusher Tier 1",
+      "block.elec_tronics.basewirecon_2angle": "Cable Angle T1",
+      "block.elec_tronics.solarpaneltop": "Solar Panel T1",
+      "block.elec_tronics.pipetdownandup": "Pipe",
+      "item.elec_tronics.steel_armor_boots": "Steel Boots",
+      "gui.elec_tronics.quarry_t_1_gui.label_conditions": "Settings:",
+      "block.elec_tronics.basewirecon_3downangle": "Cable Angle T1",
+      "block.elec_tronics.cable_tt_1": "Cable T T1",
+      "block.elec_tronics.pipejunctionup": "Pipe",
+      "item.elec_tronics.iron_wrench": "Iron Wrench",
+      "item.elec_tronics.steelaxe": "Steel Axe",
+      "item.elec_tronics.emerald_dust": "Emerald Dust",
+      "block.elec_tronics.wire_t_2": "Cable T2",
+      "block.elec_tronics.basewirecon_4up": "Cable Angle T1",
+      "block.elec_tronics.pipeangle": "Pipe",
+      "block.elec_tronics.basewirecon_4down": "Cable Angle T1",
+      "block.elec_tronics.basewirecon_4up_t_2": "Cable Angle T2",
+      "block.elec_tronics.basewirecon_3downandup": "Cable Angle T1",
+      "block.elec_tronics.t_2_wire": "Cable T2",
+      "item_group.elec_tronics.electronicsmachines": "Elec Tronics Blocks",
+      "item.elec_tronics.tungsten_ingot": "Tungsten Ingot",
+      "gui.elec_tronics.workbenchgui.label_engineers_workbench": "Engineer\u0027s Workbench",
+      "block.elec_tronics.cable_junction_upand_down_t_2": "Cable Junction T2",
+      "block.elec_tronics.cable_junction_upand_down_t_1": "Cable Junction T1",
+      "block.elec_tronics.cable_junction_down_t_2": "Cable Junction T2",
+      "block.elec_tronics.cable_tt_2": "Cable T T2",
+      "item.elec_tronics.rubber": "Rubber",
+      "block.elec_tronics.basewirecon_4down_t_2": "Cable Angle T2",
+      "block.elec_tronics.pipeanlgeup": "Pipe",
+      "block.elec_tronics.cable_junction_down_t_1": "Cable Junction T1",
       "item.elec_tronics.insulation": "Insulation",
       "item.elec_tronics.hand_saw": "Hand Saw",
-      "item.elec_tronics.hammer": "Hammer",
       "item.elec_tronics.steelhoe": "Steel Hoe",
       "block.elec_tronics.pipejunctionupanddownstraight": "Pipe",
       "gui.elec_tronics.workbenchgui.label_inventory": "Inventory",
@@ -6461,176 +7213,116 @@
       "item.elec_tronics.uranium_dust": "Uranium Dust",
       "gui.elec_tronics.update_menu.label_ignore": "Ignore",
       "fluid.elec_tronics.refined_oil": "Refined Oil",
-      "block.elec_tronics.pipet": "Pipe",
       "gui.elec_tronics.solarpanel_gui.label_time": "Time",
-      "block.elec_tronics.oil": "Oil",
-      "block.elec_tronics.pipeangledown": "Pipe",
       "item.elec_tronics.irondust": "Iron Dust",
-      "item.elec_tronics.tungsten_ore": "Tungsten Ore",
       "item.elec_tronics.wire_roller": "Wire Roller",
       "block.elec_tronics.basecable_t_1": "Cable T1",
       "block.elec_tronics.pipetdown": "Pipe",
       "item.elec_tronics.bauxite_ingot": "Bauxite",
-      "gui.elec_tronics.solarpanel_gui.label_solar_panel_t1": "Solar Panel T1",
       "block.elec_tronics.manual_fluid_pump_4": "Manual Fluid Pump",
       "block.elec_tronics.manual_fluid_pump_5": "Manual Fluid Pump",
       "item.elec_tronics.tungsten_dust": "Tungsten Dust",
-      "block.elec_tronics.refined_oil": "Refined Oil",
       "block.elec_tronics.engineers_work_bench_side": "Engineers Workbench Side",
-      "block.elec_tronics.basewirecon_5main": "Cable Angle T1",
-      "item.elec_tronics.copper_sheet": "Copper Sheet",
-      "item.elec_tronics.ore_funnel": "Ore Funnel",
+      "block.elec_tronics.basewirecon_3downangle_t_2": "Cable Angle T2",
       "item.elec_tronics.condensor": "Condensor",
       "block.elec_tronics.tankfullhalf_1": "Tank 1",
-      "gui.elec_tronics.quarry_t_1_gui.button_empty": "Off",
       "block.elec_tronics.pipejunctiondown_2": "Pipe",
       "block.elec_tronics.pipeup": "Pipe",
-      "fluid.elec_tronics.brine": "Brine",
       "itemGroup.tabelec_tronics_menu": "Elec Tronics Items",
-      "block.elec_tronics.brine": "Brine",
-      "block.elec_tronics.engineersworkbench": "Engineers Workbench",
-      "block.elec_tronics.pipejunctionupanddown": "Pipe",
       "block.elec_tronics.pipehalf": "Pipe",
       "gui.elec_tronics.tankt1guimenu.label_tank_tier_1": "Tank Tier 1",
-      "item.elec_tronics.irongear": "Iron Gear",
       "item.elec_tronics.cooling_tower": "Cooling Tower",
       "block.elec_tronics.blastfurnancemachine": "Blast Furnance",
-      "item.elec_tronics.steel_armor_chestplate": "Steel Chestplate",
       "block.elec_tronics.solar_panel_t_1": "Solar Panel T1",
-      "item.elec_tronics.copper_dust": "Copper Dust",
-      "block.elec_tronics.cable_angle_t_1": "Cable Angle T1",
-      "block.elec_tronics.solar_panelr": "Solar Panel T1",
-      "item.elec_tronics.screwdriver": "Screwdriver",
       "item.elec_tronics.steel_armor_leggings": "Steel Leggings",
-      "gui.elec_tronics.extrusinmachine_gui.label_inventory": "Inventory",
-      "fluid.elec_tronics.coolantt_1": "Coolant",
+      "item.elec_tronics.screwdriver": "Screwdriver",
       "gui.elec_tronics.energy_storage_t_1_gui.label_energy_storage_tier_1": "Energy Storage Tier 1",
-      "item.elec_tronics.steelsword": "Steel Sword",
-      "block.elec_tronics.refinery_t_1": "Refinery T 1",
-      "block.elec_tronics.manual_fluid_pump": "Manual Fluid Pump",
+      "block.elec_tronics.basewirecon_5down_t_2": "Cable Angle T2",
+      "block.elec_tronics.basewirecon_2angledown_t_2": "Cable Angle T2",
       "item.elec_tronics.ash": "Ash",
-      "item.elec_tronics.brine_bucket": "Brine Bucket",
       "block.elec_tronics.engineers_work_bench_top_side": "Engineers Workbench Top Side",
       "block.elec_tronics.basewirecon_5down": "Cable Angle T1",
       "block.elec_tronics.pipedownangle": "Pipe",
-      "fluid.elec_tronics.chlorine_gas": "Chlorine Gas",
       "block.elec_tronics.hydrogen_gas": "Hydrogen Gas",
       "block.elec_tronics.pipejunctionup_2": "Pipe",
       "block.elec_tronics.tankfull_2": "Tank 2",
-      "block.elec_tronics.energy_storage_t_1": "Energy Storage T1",
       "block.elec_tronics.tankfull_1": "Tank 1",
-      "block.elec_tronics.engineers_work_bench_top": "Engineers Workbench Top",
       "block.elec_tronics.tankfull_8": "Tank",
       "block.elec_tronics.tankfull_7": "Tank",
       "block.elec_tronics.tankfull_9": "Tank",
-      "item.elec_tronics.extrusion_die": "Extrusion Die",
       "block.elec_tronics.cable_junction_t_1": "Cable Junction T1",
       "block.elec_tronics.tankfull_4": "Tank",
       "gui.elec_tronics.coalgenerator_gui.label_rf": "RF",
       "block.elec_tronics.tankfull_3": "Tank 3",
+      "block.elec_tronics.cable_junction_t_2": "Cable Junction T2",
       "item.elec_tronics.generator": "Generator",
       "block.elec_tronics.tankfull_6": "Tank",
       "block.elec_tronics.t_1_wire": "Cable T1",
       "block.elec_tronics.tankfull_5": "Tank",
-      "gui.elec_tronics.crusher_t_1_gui.label_inventory": "Inventory",
-      "block.elec_tronics.basewirecon_3down": "Cable Angle T1",
-      "block.elec_tronics.tank": "Tank",
       "block.elec_tronics.manual_fluid_pump_3": "Manual Fluid Pump",
       "block.elec_tronics.basewirecon_3upangle": "Cable Angle T1",
       "item.elec_tronics.steel_armor_helmet": "Steel Helmet",
+      "block.elec_tronics.basewirecon_3upangle_t_2": "Cable Angle T2",
       "block.elec_tronics.waterturbinemachine": "Water Turbine",
       "block.elec_tronics.pipeupangle": "Pipe",
       "block.elec_tronics.cable_t_down_t_1": "Cable Junction T1",
       "gui.elec_tronics.coalgenerator_gui.label_coal_generator": "Coal Generator",
-      "block.elec_tronics.basepipe": "Pipe",
-      "block.elec_tronics.crushermachine": "Crusher T1",
-      "item.elec_tronics.coolant_item": "Coolant",
+      "block.elec_tronics.cable_t_down_t_2": "Cable Junction T2",
       "item.elec_tronics.turbine": "Turbine",
-      "item.elec_tronics.rocksaltdust": "Salt Dust",
       "item.elec_tronics.refined_oil_item": "Refined Oil ",
       "gui.elec_tronics.update_menu.label_update": "Update",
       "block.elec_tronics.tankfull_11": "Tank",
+      "block.elec_tronics.basewirecon_2angleup_t_2": "Cable Angle T2",
+      "block.elec_tronics.basewirecon_2angle_t_2": "Cable Angle T2",
       "block.elec_tronics.tankfull_10": "Tank",
       "item.elec_tronics.steelpickaxe": "Steel Pickaxe",
       "itemGroup.tabelectronicsmachines": "Elec Tronics Blocks",
+      "block.elec_tronics.cable_t_upand_down_t_2": "Cable Junction T2",
       "block.elec_tronics.cable_t_upand_down_t_1": "Cable Junction T1",
       "block.elec_tronics.pipejunctionmain": "Pipe",
       "block.elec_tronics.pipejunction": "Pipe",
-      "item.elec_tronics.sharpenediron": "Iron Blade",
-      "block.elec_tronics.extrusion_machine": "Extrusion Machine",
-      "item.elec_tronics.rubbersleeve": "Rubber Sleeve",
       "block.elec_tronics.tankfull_14": "Tank",
-      "gui.elec_tronics.quarry_t_1_gui.label_quarry_tier_1": "Quarry Tier 1",
       "block.elec_tronics.tankfull_13": "Tank",
       "block.elec_tronics.tankfull_12": "Tank",
       "fluid.elec_tronics.oil": "Oil",
-      "block.elec_tronics.pipestraight": "Pipe",
+      "block.elec_tronics.basewirecon_3down_t_2": "Cable Angle T2",
       "block.elec_tronics.chlorine_gas": "Chlorine Gas",
-      "gui.elec_tronics.extrusinmachine_gui.label_extrusion_machine": "Extrusion Machine",
+      "gui.elec_tronics.quarry_t_1_gui.label_wip": "WIP",
       "item.elec_tronics.solar_panel": "Solar Panel",
-      "gui.elec_tronics.coalgenerator_gui.label_inventory": "Inventory",
-      "block.elec_tronics.coolantt_1": "Coolant",
       "block.elec_tronics.solarpaneltopr": "Solar Panel T1",
-      "block.elec_tronics.basewirecon_3up": "Cable Angle T1",
       "item.elec_tronics.quartz_dust": "Quartz Dust",
       "item.elec_tronics.oil_bucket": "Oil Bucket",
-      "gui.elec_tronics.blastfurnace.label_blast_furnace": "Blast Furnace",
       "item.elec_tronics.fibger_glass_dust": "Fibger Glass Dust",
-      "block.elec_tronics.quarry_t_1": "Quarry",
-      "block.elec_tronics.cable_junction_up_t_1": "Cable Junction T1",
       "block.elec_tronics.rock_salt": "Rock Salt",
       "gui.elec_tronics.update_menu.label_elec_tronics_is_out_of_date": "Elec_tronics is out of date!",
-      "gui.elec_tronics.quarry_t_1_gui.label_empty": "Empty...",
-      "block.elec_tronics.tungsten": "Tungsten Ore Block",
       "item.elec_tronics.creativefluiddropper": "Creative Fluid Dropper",
-      "block.elec_tronics.pipejunctiondown": "Pipe",
-      "gui.elec_tronics.quarry_t_1_gui.button_on": "On",
       "block.elec_tronics.basewirecon_3": "Cable Angle T1",
-      "gui.elec_tronics.crusher_t_1_gui.label_crusher_tier_1": "Crusher Tier 1",
       "gui.elec_tronics.blastfurnace.label_inventory": "Inventory",
-      "block.elec_tronics.basewirecon_2angle": "Cable Angle T1",
       "item.elec_tronics.uranium_ingot": "Uranium Ingot",
+      "block.elec_tronics.cable_t_up_t_2": "Cable Junction T2",
       "block.elec_tronics.cable_t_up_t_1": "Cable Junction T1",
       "block.elec_tronics.manual_fluid_pumpdown_2": "Manual Fluid Pump",
       "block.elec_tronics.bauxite_ore": "Bauxite Ore",
-      "block.elec_tronics.solarpaneltop": "Solar Panel T1",
       "gui.elec_tronics.coalgenerator_gui.tooltip_empty": "100/500",
-      "block.elec_tronics.pipetdownandup": "Pipe",
       "item.elec_tronics.electricmotor": "Electric Motor",
-      "item.elec_tronics.steel_armor_boots": "Steel Boots",
       "block.elec_tronics.reinforcedblastbrick": "Reinforced Blast Brick",
-      "block.elec_tronics.basewirecon_3downangle": "Cable Angle T1",
+      "block.elec_tronics.basewirecon_3t_2": "Cable Angle T2",
       "block.elec_tronics.basewirecon_2angledown": "Cable Angle T1",
       "item.elec_tronics.diamond_dust": "Diamond Dust",
       "block.elec_tronics.pipejunctionupanddown_2": "Pipe",
       "block.elec_tronics.uraniumore": "Uranium Ore",
-      "block.elec_tronics.cable_tt_1": "Cable T T1",
       "item.elec_tronics.grinder": "Grinder",
-      "block.elec_tronics.pipejunctionup": "Pipe",
-      "item.elec_tronics.iron_wrench": "Iron Wrench",
-      "item.elec_tronics.steelaxe": "Steel Axe",
       "block.elec_tronics.bauxite_block": "Block of Bauxite",
-      "item.elec_tronics.emerald_dust": "Emerald Dust",
-      "block.elec_tronics.basewirecon_4up": "Cable Angle T1",
-      "block.elec_tronics.pipeangle": "Pipe",
-      "block.elec_tronics.basewirecon_4down": "Cable Angle T1",
       "block.elec_tronics.coal_generator_machine": "Coal Generator",
-      "block.elec_tronics.basewirecon_3downandup": "Cable Angle T1",
+      "block.elec_tronics.cablehalf_t_2": "Cable Angle T2",
       "block.elec_tronics.cablehalf_t_1": "Cable Angle T1",
-      "item_group.elec_tronics.electronicsmachines": "Elec Tronics Blocks",
-      "item.elec_tronics.tungsten_ingot": "Tungsten Ingot",
       "block.elec_tronics.basewirecon_4upanddown": "Cable Angle T1",
       "item.elec_tronics.copperwire": "Copperwire",
-      "gui.elec_tronics.workbenchgui.label_engineers_workbench": "Engineer\u0027s Workbench",
-      "block.elec_tronics.cable_junction_upand_down_t_1": "Cable Junction T1",
-      "item.elec_tronics.rubber": "Rubber",
       "item.elec_tronics.steelingot": "Steel Ingot",
       "block.elec_tronics.basewirecon_4upanddownstraight": "Cable Angle T1",
       "item_group.elec_tronics.elec_tronics_menu": "Elec Tronics Items",
       "item.elec_tronics.gold_dust": "Gold Dust",
-      "item.elec_tronics.steelshovel": "Steel Shovel",
-      "block.elec_tronics.pipeanlgeup": "Pipe",
-      "block.elec_tronics.cable_junction_down_t_1": "Cable Junction T1"
+      "item.elec_tronics.steelshovel": "Steel Shovel"
     }
   },
   "foldersRoot": {
@@ -6685,7 +7377,20 @@
           },
           {
             "name": "Wires-Pipes",
-            "children": []
+            "children": [
+              {
+                "name": "WiresT1",
+                "children": []
+              },
+              {
+                "name": "WiresT2",
+                "children": []
+              },
+              {
+                "name": "Pipes",
+                "children": []
+              }
+            ]
           },
           {
             "name": "Fluid_Tanks",
@@ -6733,6 +7438,10 @@
           },
           {
             "name": "WaterTurbine",
+            "children": []
+          },
+          {
+            "name": "LiquidPumps",
             "children": []
           }
         ]
@@ -6783,7 +7492,7 @@
   "workspaceSettings": {
     "modid": "elec_tronics",
     "modName": "Elec Tronics",
-    "version": "0.0.0.9",
+    "version": "0.0.1",
     "description": "Elec Tronics is a mod based around your favorite mods with a bit of a touch of realism",
     "author": "SirJStig",
     "websiteURL": "https://github.com/SirStig/Elec_tronics",

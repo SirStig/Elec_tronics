@@ -56,7 +56,7 @@
     "material": {
       "value": "GLASS"
     },
-    "tickRate": 200,
+    "tickRate": 10,
     "tickRandomly": false,
     "isReplaceable": false,
     "canProvidePower": false,
@@ -112,7 +112,7 @@
     "hasEnergyStorage": true,
     "energyInitial": 0,
     "energyCapacity": 0,
-    "energyMaxReceive": 50,
+    "energyMaxReceive": 0,
     "energyMaxExtract": 50,
     "isFluidTank": false,
     "fluidCapacity": 8000,

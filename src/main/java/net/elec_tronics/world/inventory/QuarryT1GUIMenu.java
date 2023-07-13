@@ -18,10 +18,8 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
-import net.elec_tronics.network.QuarryT1GUISlotMessage;
 import net.elec_tronics.init.ElecTronicsModMenus;
 import net.elec_tronics.init.ElecTronicsModItems;
-import net.elec_tronics.ElecTronicsMod;
 
 import java.util.function.Supplier;
 import java.util.Map;
@@ -82,24 +80,12 @@ public class QuarryT1GUIMenu extends AbstractContainerMenu implements Supplier<M
 			private final int slot = 0;
 
 			@Override
-			public void setChanged() {
-				super.setChanged();
-				slotChanged(0, 0, 0);
-			}
-
-			@Override
 			public boolean mayPlace(ItemStack stack) {
 				return ElecTronicsModItems.COOLANT_ITEM.get() == stack.getItem();
 			}
 		}));
 		this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 58, 63) {
 			private final int slot = 1;
-
-			@Override
-			public void setChanged() {
-				super.setChanged();
-				slotChanged(1, 0, 0);
-			}
 
 			@Override
 			public boolean mayPlace(ItemStack stack) {
@@ -239,13 +225,6 @@ public class QuarryT1GUIMenu extends AbstractContainerMenu implements Supplier<M
 					playerIn.getInventory().placeItemBackInInventory(internal.extractItem(i, internal.getStackInSlot(i).getCount(), false));
 				}
 			}
-		}
-	}
-
-	private void slotChanged(int slotid, int ctype, int meta) {
-		if (this.world != null && this.world.isClientSide()) {
-			ElecTronicsMod.PACKET_HANDLER.sendToServer(new QuarryT1GUISlotMessage(slotid, x, y, z, ctype, meta));
-			QuarryT1GUISlotMessage.handleSlotAction(entity, slotid, ctype, meta, x, y, z);
 		}
 	}
 

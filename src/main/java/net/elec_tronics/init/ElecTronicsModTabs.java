@@ -71,6 +71,7 @@ public class ElecTronicsModTabs {
 					tabData.accept(ElecTronicsModBlocks.REFINERY_T_1.get().asItem());
 					tabData.accept(ElecTronicsModItems.REFINED_OIL_ITEM.get());
 					tabData.accept(ElecTronicsModItems.COOLANT_ITEM.get());
+					tabData.accept(ElecTronicsModBlocks.WIRE_T_2.get().asItem());
 				}).withSearchBar());
 		event.registerCreativeModeTab(new ResourceLocation("elec_tronics", "electronicsmachines"),
 				builder -> builder.title(Component.translatable("item_group.elec_tronics.electronicsmachines")).icon(() -> new ItemStack(ElecTronicsModBlocks.T_1_WIRE.get())).displayItems((parameters, tabData) -> {

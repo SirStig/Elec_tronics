@@ -110,7 +110,7 @@ public class SolarPanelT1Block extends Block implements EntityBlock {
 	@Override
 	public void onPlace(BlockState blockstate, Level world, BlockPos pos, BlockState oldState, boolean moving) {
 		super.onPlace(blockstate, world, pos, oldState, moving);
-		world.scheduleTick(pos, this, 200);
+		world.scheduleTick(pos, this, 10);
 		SolarPanelT1BlockAddedProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
 	}
 
@@ -121,7 +121,7 @@ public class SolarPanelT1Block extends Block implements EntityBlock {
 		int y = pos.getY();
 		int z = pos.getZ();
 		SolarPanelT1UpdateTickProcedure.execute(world, x, y, z);
-		world.scheduleTick(pos, this, 200);
+		world.scheduleTick(pos, this, 10);
 	}
 
 	@Override

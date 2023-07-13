@@ -8,6 +8,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 
 import net.elec_tronics.world.inventory.SolarpanelGUIMenu;
+import net.elec_tronics.procedures.TimeOfDayProcedure;
 import net.elec_tronics.procedures.Powertick9Procedure;
 import net.elec_tronics.procedures.Powertick8Procedure;
 import net.elec_tronics.procedures.Powertick7Procedure;
@@ -66,11 +67,11 @@ public class SolarpanelGUIScreen extends AbstractContainerScreen<SolarpanelGUIMe
 		this.blit(ms, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
 		if (DayornightProcedure.execute(world)) {
 			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/screens/sun.png"));
-			this.blit(ms, this.leftPos + 54, this.topPos + 30, 0, 0, 32, 32, 32, 32);
+			this.blit(ms, this.leftPos + 48, this.topPos + 30, 0, 0, 32, 32, 32, 32);
 		}
 		if (NightorDayProcedure.execute(world)) {
 			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/screens/sunoff.png"));
-			this.blit(ms, this.leftPos + 54, this.topPos + 30, 0, 0, 32, 32, 32, 32);
+			this.blit(ms, this.leftPos + 48, this.topPos + 30, 0, 0, 32, 32, 32, 32);
 		}
 		if (Powertick0Procedure.execute(world, x, y, z)) {
 			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/screens/batterv1.png"));
@@ -140,7 +141,9 @@ public class SolarpanelGUIScreen extends AbstractContainerScreen<SolarpanelGUIMe
 	@Override
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
 		this.font.draw(poseStack, Component.translatable("gui.elec_tronics.solarpanel_gui.label_solar_panel_t1"), 11, 4, -16737895);
-		this.font.draw(poseStack, Component.translatable("gui.elec_tronics.solarpanel_gui.label_time"), 60, 24, -12829636);
+		this.font.draw(poseStack,
+
+				TimeOfDayProcedure.execute(world), 41, 60, -12829636);
 	}
 
 	@Override

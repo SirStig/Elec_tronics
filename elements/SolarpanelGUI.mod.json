@@ -33,7 +33,7 @@
           "displayCondition": {
             "name": "Dayornight"
           },
-          "x": 218,
+          "x": 212,
           "y": 104
         }
       },
@@ -45,7 +45,7 @@
           "displayCondition": {
             "name": "NightorDay"
           },
-          "x": 218,
+          "x": 212,
           "y": 104
         }
       },
@@ -54,14 +54,15 @@
         "data": {
           "name": "label_time",
           "text": {
-            "fixedValue": "Time"
+            "fixedValue": "Time",
+            "name": "TimeOfDay"
           },
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "x": 224,
-          "y": 98
+          "x": 205,
+          "y": 134
         }
       },
       {

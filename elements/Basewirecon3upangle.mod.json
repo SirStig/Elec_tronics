@@ -2,7 +2,7 @@
   "_fv": 43,
   "_type": "block",
   "definition": {
-    "texture": "basetemp",
+    "texture": "c4",
     "textureTop": "cable_end",
     "textureLeft": "cable_side",
     "textureFront": "cable_front_output",
@@ -13,7 +13,7 @@
     "rotationMode": 2,
     "enablePitch": false,
     "emissiveRendering": false,
-    "displayFluidOverlay": false,
+    "displayFluidOverlay": true,
     "itemTexture": "",
     "particleTexture": "",
     "tintType": "No tint",

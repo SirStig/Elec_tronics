@@ -78,9 +78,6 @@
             "fixedValue": false
           },
           "dropItemsWhenNotBound": true,
-          "onSlotChanged": {
-            "name": "AddCoolantToBlock"
-          },
           "x": 157,
           "y": 99
         }
@@ -99,9 +96,6 @@
             "fixedValue": false
           },
           "dropItemsWhenNotBound": true,
-          "onSlotChanged": {
-            "name": "AddOilToBlock"
-          },
           "x": 183,
           "y": 99
         }
@@ -394,6 +388,67 @@
           },
           "x": 38,
           "y": 176
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "guibackground.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "SettingsShow"
+          },
+          "x": 35,
+          "y": 117
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_gearbutton",
+          "image": "gearbutton.png",
+          "hoveredImage": "gearbutton.png",
+          "onClick": {
+            "name": "SettingsButtonPushed"
+          },
+          "x": 107,
+          "y": 82
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_conditions",
+          "text": {
+            "fixedValue": "Settings:"
+          },
+          "color": {
+            "value": -3355444,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "SettingsShow"
+          },
+          "x": 37,
+          "y": 119
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_wip",
+          "text": {
+            "fixedValue": "WIP"
+          },
+          "color": {
+            "value": -10092544,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "SettingsShow"
+          },
+          "x": 75,
+          "y": 150
         }
       }
     ],

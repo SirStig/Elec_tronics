@@ -85,10 +85,92 @@
       },
       {
         "value": "CUSTOM:Basewirecon3downangle"
+      },
+      {
+        "value": "CUSTOM:WireT2"
+      },
+      {
+        "value": "CUSTOM:T2Wire"
+      },
+      {
+        "value": "CUSTOM:CableAngleT2"
+      },
+      {
+        "value": "CUSTOM:CableTT2"
+      },
+      {
+        "value": "CUSTOM:CableJunctionT2"
+      },
+      {
+        "value": "CUSTOM:CableTUpT2"
+      },
+      {
+        "value": "CUSTOM:CableTDownT2"
+      },
+      {
+        "value": "CUSTOM:CableTUpandDownT2"
+      },
+      {
+        "value": "CUSTOM:CableJunctionUpT2"
+      },
+      {
+        "value": "CUSTOM:CableJunctionDownT2"
+      },
+      {
+        "value": "CUSTOM:CableJunctionUpandDownT2"
+      },
+      {
+        "value": "CUSTOM:Basewirecon5mainT2"
+      },
+      {
+        "value": "CUSTOM:Basewirecon4downT2"
+      },
+      {
+        "value": "CUSTOM:Basewirecon2angleupT2"
+      },
+      {
+        "value": "CUSTOM:Basewirecon3downT2"
+      },
+      {
+        "value": "CUSTOM:Basewirecon3upT2"
+      },
+      {
+        "value": "CUSTOM:Basewirecon4upT2"
+      },
+      {
+        "value": "CUSTOM:Basewirecon2angledownT2"
+      },
+      {
+        "value": "CUSTOM:Basewirecon4upanddownT2"
+      },
+      {
+        "value": "CUSTOM:Basewirecon3upangleT2"
+      },
+      {
+        "value": "CUSTOM:Basewirecon3t2"
+      },
+      {
+        "value": "CUSTOM:Basewirecon5downT2"
+      },
+      {
+        "value": "CUSTOM:Basewirecon2angleT2"
+      },
+      {
+        "value": "CUSTOM:Basewirecon4upanddownstraightT2"
+      },
+      {
+        "value": "CUSTOM:CablehalfT2"
+      },
+      {
+        "value": "CUSTOM:Basewirecon3downandupT2"
+      },
+      {
+        "value": "CUSTOM:Basewirecon3downangleT2"
       }
     ],
     "functions": [],
     "entities": [],
+    "biomes": [],
     "name": "wires",
     "namespace": "forge"
   }

@@ -71,6 +71,7 @@
     ],
     "functions": [],
     "entities": [],
+    "biomes": [],
     "name": "pipes",
     "namespace": "forge"
   }

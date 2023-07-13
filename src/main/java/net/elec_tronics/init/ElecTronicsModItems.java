@@ -204,6 +204,33 @@ public class ElecTronicsModItems {
 	public static final RegistryObject<Item> REFINERY_T_1 = block(ElecTronicsModBlocks.REFINERY_T_1);
 	public static final RegistryObject<Item> REFINED_OIL_ITEM = REGISTRY.register("refined_oil_item", () -> new RefinedOilItemItem());
 	public static final RegistryObject<Item> COOLANT_ITEM = REGISTRY.register("coolant_item", () -> new CoolantItemItem());
+	public static final RegistryObject<Item> WIRE_T_2 = block(ElecTronicsModBlocks.WIRE_T_2);
+	public static final RegistryObject<Item> T_2_WIRE = block(ElecTronicsModBlocks.T_2_WIRE);
+	public static final RegistryObject<Item> CABLE_ANGLE_T_2 = block(ElecTronicsModBlocks.CABLE_ANGLE_T_2);
+	public static final RegistryObject<Item> CABLE_TT_2 = block(ElecTronicsModBlocks.CABLE_TT_2);
+	public static final RegistryObject<Item> CABLE_JUNCTION_T_2 = block(ElecTronicsModBlocks.CABLE_JUNCTION_T_2);
+	public static final RegistryObject<Item> CABLE_T_UP_T_2 = block(ElecTronicsModBlocks.CABLE_T_UP_T_2);
+	public static final RegistryObject<Item> CABLE_T_DOWN_T_2 = block(ElecTronicsModBlocks.CABLE_T_DOWN_T_2);
+	public static final RegistryObject<Item> CABLE_T_UPAND_DOWN_T_2 = block(ElecTronicsModBlocks.CABLE_T_UPAND_DOWN_T_2);
+	public static final RegistryObject<Item> CABLE_JUNCTION_UP_T_2 = block(ElecTronicsModBlocks.CABLE_JUNCTION_UP_T_2);
+	public static final RegistryObject<Item> CABLE_JUNCTION_DOWN_T_2 = block(ElecTronicsModBlocks.CABLE_JUNCTION_DOWN_T_2);
+	public static final RegistryObject<Item> CABLE_JUNCTION_UPAND_DOWN_T_2 = block(ElecTronicsModBlocks.CABLE_JUNCTION_UPAND_DOWN_T_2);
+	public static final RegistryObject<Item> BASEWIRECON_5MAIN_T_2 = block(ElecTronicsModBlocks.BASEWIRECON_5MAIN_T_2);
+	public static final RegistryObject<Item> BASEWIRECON_4DOWN_T_2 = block(ElecTronicsModBlocks.BASEWIRECON_4DOWN_T_2);
+	public static final RegistryObject<Item> BASEWIRECON_2ANGLEUP_T_2 = block(ElecTronicsModBlocks.BASEWIRECON_2ANGLEUP_T_2);
+	public static final RegistryObject<Item> BASEWIRECON_3DOWN_T_2 = block(ElecTronicsModBlocks.BASEWIRECON_3DOWN_T_2);
+	public static final RegistryObject<Item> BASEWIRECON_3UP_T_2 = block(ElecTronicsModBlocks.BASEWIRECON_3UP_T_2);
+	public static final RegistryObject<Item> BASEWIRECON_4UP_T_2 = block(ElecTronicsModBlocks.BASEWIRECON_4UP_T_2);
+	public static final RegistryObject<Item> BASEWIRECON_2ANGLEDOWN_T_2 = block(ElecTronicsModBlocks.BASEWIRECON_2ANGLEDOWN_T_2);
+	public static final RegistryObject<Item> BASEWIRECON_4UPANDDOWN_T_2 = block(ElecTronicsModBlocks.BASEWIRECON_4UPANDDOWN_T_2);
+	public static final RegistryObject<Item> BASEWIRECON_3UPANGLE_T_2 = block(ElecTronicsModBlocks.BASEWIRECON_3UPANGLE_T_2);
+	public static final RegistryObject<Item> BASEWIRECON_3T_2 = block(ElecTronicsModBlocks.BASEWIRECON_3T_2);
+	public static final RegistryObject<Item> BASEWIRECON_5DOWN_T_2 = block(ElecTronicsModBlocks.BASEWIRECON_5DOWN_T_2);
+	public static final RegistryObject<Item> BASEWIRECON_2ANGLE_T_2 = block(ElecTronicsModBlocks.BASEWIRECON_2ANGLE_T_2);
+	public static final RegistryObject<Item> BASEWIRECON_4UPANDDOWNSTRAIGHT_T_2 = block(ElecTronicsModBlocks.BASEWIRECON_4UPANDDOWNSTRAIGHT_T_2);
+	public static final RegistryObject<Item> CABLEHALF_T_2 = block(ElecTronicsModBlocks.CABLEHALF_T_2);
+	public static final RegistryObject<Item> BASEWIRECON_3DOWNANDUP_T_2 = block(ElecTronicsModBlocks.BASEWIRECON_3DOWNANDUP_T_2);
+	public static final RegistryObject<Item> BASEWIRECON_3DOWNANGLE_T_2 = block(ElecTronicsModBlocks.BASEWIRECON_3DOWNANGLE_T_2);
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));

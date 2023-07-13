@@ -1,0 +1,7 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "elec_tronics:item/wire_t_2_full"
+  },
+  "render_type": "translucent"
+}

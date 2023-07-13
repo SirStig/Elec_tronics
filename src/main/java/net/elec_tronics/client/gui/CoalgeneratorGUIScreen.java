@@ -122,7 +122,7 @@ public class CoalgeneratorGUIScreen extends AbstractContainerScreen<Coalgenerato
 		}
 		if (Powertick1Procedure.execute(world, x, y, z)) {
 			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/screens/battery5.png"));
-			this.blit(ms, this.leftPos + 7, this.topPos + 26, 0, 0, 10, 50, 10, 50);
+			this.blit(ms, this.leftPos + 7, this.topPos + 27, 0, 0, 10, 50, 10, 50);
 		}
 		if (Powertick2Procedure.execute(world, x, y, z)) {
 			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/screens/battery10.png"));
@@ -197,7 +197,7 @@ public class CoalgeneratorGUIScreen extends AbstractContainerScreen<Coalgenerato
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
 		this.font.draw(poseStack, Component.translatable("gui.elec_tronics.coalgenerator_gui.label_inventory"), 6, 81, -12829636);
 		this.font.draw(poseStack, Component.translatable("gui.elec_tronics.coalgenerator_gui.label_coal_generator"), 4, 4, -13421773);
-		this.font.draw(poseStack, Component.translatable("gui.elec_tronics.coalgenerator_gui.label_rf"), 8, 17, -6750208);
+		this.font.draw(poseStack, Component.translatable("gui.elec_tronics.coalgenerator_gui.label_rf"), 7, 17, -6750208);
 	}
 
 	@Override

@@ -132,7 +132,7 @@ public class SolarPanelT1BlockEntity extends RandomizableContainerBlockEntity im
 		return true;
 	}
 
-	private final EnergyStorage energyStorage = new EnergyStorage(0, 50, 50, 0) {
+	private final EnergyStorage energyStorage = new EnergyStorage(0, 0, 50, 0) {
 		@Override
 		public int receiveEnergy(int maxReceive, boolean simulate) {
 			int retval = super.receiveEnergy(maxReceive, simulate);

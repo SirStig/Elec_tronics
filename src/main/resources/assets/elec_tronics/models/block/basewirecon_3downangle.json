@@ -1,8 +1,8 @@
 {
   "parent": "elec_tronics:custom/base_wire_con_3_down_angle",
   "textures": {
-    "all": "elec_tronics:block/basetemp",
-    "particle": "elec_tronics:block/basetemp",
+    "all": "elec_tronics:block/halfcablet1",
+    "particle": "elec_tronics:block/halfcablet1",
     "1": "elec_tronics:block/cable_particles",
     "3": "elec_tronics:block/cable_junction-end",
     "4": "elec_tronics:block/elec_tronicst1cable_end",

@@ -1,0 +1,30 @@
+{
+  "_fv": 43,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:SolarPanelT1"
+      },
+      {
+        "value": "CUSTOM:SolarPanelr"
+      },
+      {
+        "value": "CUSTOM:Solarpaneltop"
+      },
+      {
+        "value": "CUSTOM:Solarpaneltopr"
+      },
+      {
+        "value": "CUSTOM:CoalGeneratorMachine"
+      }
+    ],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "name": "generators",
+    "namespace": "electronics"
+  }
+}

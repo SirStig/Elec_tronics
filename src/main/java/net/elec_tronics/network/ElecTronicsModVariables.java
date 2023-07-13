@@ -8,7 +8,6 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.entity.player.PlayerEvent;
 
 import net.minecraft.world.level.saveddata.SavedData;
-import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
@@ -20,21 +19,18 @@ import net.minecraft.nbt.CompoundTag;
 import net.elec_tronics.ElecTronicsMod;
 
 import java.util.function.Supplier;
-import java.util.List;
-import java.util.ArrayList;
 
 import java.io.File;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class ElecTronicsModVariables {
-	public static List<Block> list_pipes = new ArrayList<Block>();
 	public static File electronicsconfig = new File("");
-	public static String version = "\"\"";
-	public static double energy_multiplier = 0;
-	public static double quarry_speed = 0;
+	public static String version = "\"0.0.1\"";
+	public static double energy_multiplier = 1.0;
+	public static double quarry_speed = 1.0;
 	public static boolean debug_mode = false;
-	public static boolean update_checker = false;
-	public static double quarry_multiplier = 0;
+	public static boolean update_checker = true;
+	public static double quarry_multiplier = 1.0;
 
 	@SubscribeEvent
 	public static void init(FMLCommonSetupEvent event) {
@@ -67,7 +63,6 @@ public class ElecTronicsModVariables {
 
 	public static class WorldVariables extends SavedData {
 		public static final String DATA_NAME = "elec_tronics_worldvars";
-		public String QuarryOnOffT1 = "\"\"";
 
 		public static WorldVariables load(CompoundTag tag) {
 			WorldVariables data = new WorldVariables();
@@ -76,12 +71,10 @@ public class ElecTronicsModVariables {
 		}
 
 		public void read(CompoundTag nbt) {
-			QuarryOnOffT1 = nbt.getString("QuarryOnOffT1");
 		}
 
 		@Override
 		public CompoundTag save(CompoundTag nbt) {
-			nbt.putString("QuarryOnOffT1", QuarryOnOffT1);
 			return nbt;
 		}
 
@@ -104,7 +97,7 @@ public class ElecTronicsModVariables {
 
 	public static class MapVariables extends SavedData {
 		public static final String DATA_NAME = "elec_tronics_mapvars";
-		public double water_multiplier = 0;
+		public double water_multiplier = 1.0;
 
 		public static MapVariables load(CompoundTag tag) {
 			MapVariables data = new MapVariables();

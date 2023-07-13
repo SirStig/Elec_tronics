@@ -12,6 +12,7 @@ import net.minecraft.client.gui.components.Button;
 import net.elec_tronics.world.inventory.QuarryT1GUIMenu;
 import net.elec_tronics.procedures.TankOilAmountProcedure;
 import net.elec_tronics.procedures.TankCoolantAmountProcedure;
+import net.elec_tronics.procedures.SettingsShowProcedure;
 import net.elec_tronics.procedures.QuarryOnOffButtonProcedure;
 import net.elec_tronics.procedures.QuarryOnOffButtonOffProcedure;
 import net.elec_tronics.procedures.PowerAmountProcedure;
@@ -38,6 +39,7 @@ public class QuarryT1GUIScreen extends AbstractContainerScreen<QuarryT1GUIMenu> 
 	Button button_empty;
 	Button button_on;
 	ImageButton imagebutton_1171173571_logscommentsicon;
+	ImageButton imagebutton_gearbutton;
 
 	public QuarryT1GUIScreen(QuarryT1GUIMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -104,6 +106,10 @@ public class QuarryT1GUIScreen extends AbstractContainerScreen<QuarryT1GUIMenu> 
 		RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/screens/oilcontainer.png"));
 		this.blit(ms, this.leftPos + 57, this.topPos + 63, 0, 0, 16, 16, 16, 16);
 
+		if (SettingsShowProcedure.execute(world, x, y, z)) {
+			RenderSystem.setShaderTexture(0, new ResourceLocation("elec_tronics:textures/screens/guibackground.png"));
+			this.blit(ms, this.leftPos + -90, this.topPos + 80, 0, 0, 88, 83, 88, 83);
+		}
 		RenderSystem.disableBlend();
 	}
 
@@ -148,6 +154,10 @@ public class QuarryT1GUIScreen extends AbstractContainerScreen<QuarryT1GUIMenu> 
 			this.font.draw(poseStack,
 
 					InfoLogOreBrokenProcedure.execute(world, x, y, z), -87, 139, -16737895);
+		if (SettingsShowProcedure.execute(world, x, y, z))
+			this.font.draw(poseStack, Component.translatable("gui.elec_tronics.quarry_t_1_gui.label_conditions"), -88, 82, -3355444);
+		if (SettingsShowProcedure.execute(world, x, y, z))
+			this.font.draw(poseStack, Component.translatable("gui.elec_tronics.quarry_t_1_gui.label_wip"), -50, 113, -10092544);
 	}
 
 	@Override
@@ -194,5 +204,13 @@ public class QuarryT1GUIScreen extends AbstractContainerScreen<QuarryT1GUIMenu> 
 		});
 		guistate.put("button:imagebutton_1171173571_logscommentsicon", imagebutton_1171173571_logscommentsicon);
 		this.addRenderableWidget(imagebutton_1171173571_logscommentsicon);
+		imagebutton_gearbutton = new ImageButton(this.leftPos + -18, this.topPos + 45, 16, 16, 0, 0, 16, new ResourceLocation("elec_tronics:textures/screens/atlas/imagebutton_gearbutton.png"), 16, 32, e -> {
+			if (true) {
+				ElecTronicsMod.PACKET_HANDLER.sendToServer(new QuarryT1GUIButtonMessage(3, x, y, z));
+				QuarryT1GUIButtonMessage.handleButtonAction(entity, 3, x, y, z);
+			}
+		});
+		guistate.put("button:imagebutton_gearbutton", imagebutton_gearbutton);
+		this.addRenderableWidget(imagebutton_gearbutton);
 	}
 }

@@ -1,0 +1,12 @@
+{
+  "parent": "elec_tronics:custom/wire_t_2_junction",
+  "textures": {
+    "all": "elec_tronics:block/wire_t_2_full",
+    "particle": "elec_tronics:block/wire_t_2_full",
+    "1": "elec_tronics:block/elec_tronicst2cable_end",
+    "3": "elec_tronics:block/cable_portt2",
+    "4": "elec_tronics:block/elec_tronicst1cable_sidet2",
+    "5": "elec_tronics:block/cable_junction-endt2"
+  },
+  "render_type": "solid"
+}

@@ -317,7 +317,7 @@ public class CoalgeneratormachineUpdateTickProcedure {
 					return blockEntity.getPersistentData().getDouble(tag);
 				return -1;
 			}
-		}.getValue(world, BlockPos.containing(x, y, z), "fuelUsed") == 10) {
+		}.getValue(world, BlockPos.containing(x, y, z), "fuelUsed") >= 2) {
 			if (new Object() {
 				public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 					AtomicInteger _retval = new AtomicInteger(0);
@@ -329,7 +329,15 @@ public class CoalgeneratormachineUpdateTickProcedure {
 			}.getAmount(world, BlockPos.containing(x, y, z), 1) != 64) {
 				{
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
-					int _amount = 25;
+					int _amount = new Object() {
+						public int receiveEnergySimulate(LevelAccessor level, BlockPos pos, int _amount) {
+							AtomicInteger _retval = new AtomicInteger(0);
+							BlockEntity _ent = level.getBlockEntity(pos);
+							if (_ent != null)
+								_ent.getCapability(ForgeCapabilities.ENERGY, null).ifPresent(capability -> _retval.set(capability.receiveEnergy(_amount, true)));
+							return _retval.get();
+						}
+					}.receiveEnergySimulate(world, BlockPos.containing(x, y, z), 5);
 					if (_ent != null)
 						_ent.getCapability(ForgeCapabilities.ENERGY, null).ifPresent(capability -> capability.receiveEnergy(_amount, false));
 				}
@@ -408,7 +416,7 @@ public class CoalgeneratormachineUpdateTickProcedure {
 								return blockEntity.getPersistentData().getDouble(tag);
 							return -1;
 						}
-					}.getValue(world, BlockPos.containing(x, y, z), "fuel")) - 10));
+					}.getValue(world, BlockPos.containing(x, y, z), "fuel")) - 2));
 				if (world instanceof Level _level)
 					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}

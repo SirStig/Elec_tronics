@@ -1,8 +1,8 @@
 {
   "parent": "elec_tronics:custom/base_wire_con_3_up_angle",
   "textures": {
-    "all": "elec_tronics:block/basetemp",
-    "particle": "elec_tronics:block/basetemp",
+    "all": "elec_tronics:block/c4",
+    "particle": "elec_tronics:block/c4",
     "1": "elec_tronics:block/cable_angle_end",
     "2": "elec_tronics:block/cable_particles",
     "3": "elec_tronics:block/cable_particles",

@@ -1,0 +1,14 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "cable_portt2",
+        "2": "cable_portt2",
+        "3": "cable_end_tt2",
+        "5": "elec_tronicst2cable_end",
+        "6": "elec_tronicst1cable_sidet2"
+      },
+      "name": "default"
+    }
+  }
+}

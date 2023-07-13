@@ -13,7 +13,7 @@
     "rotationMode": 2,
     "enablePitch": false,
     "emissiveRendering": false,
-    "displayFluidOverlay": false,
+    "displayFluidOverlay": true,
     "itemTexture": "c9",
     "particleTexture": "",
     "tintType": "No tint",

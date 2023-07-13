@@ -17,7 +17,7 @@ jobs:
         with:
           version-file: version.txt
           release-type: java
-          release-as: 0.0.0.9
+          release-as: 0.0.1
           package-name: release-please-action
           bump-minor-pre-major: true
           bump-patch-for-minor-pre-major: true
