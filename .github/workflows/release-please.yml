@@ -15,7 +15,11 @@ jobs:
     steps:
       - uses: google-github-actions/release-please-action@v3
         with:
-          version-file: https://github.com/SirStig/Elec_tronics/blob/dev-1.19.4/version.txt
+          {
+              "extra-files": [
+             "version.txt"
+                             ]
+          }
           release-type: java
           package-name: release-please-action
           bump-minor-pre-major: true
