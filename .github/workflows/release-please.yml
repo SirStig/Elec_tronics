@@ -16,7 +16,7 @@ jobs:
       - uses: google-github-actions/release-please-action@v3
         with:
           release-type: java
-          --extra-files: version.txt
+          extra-files: version.txt
           package-name: release-please-action
           bump-minor-pre-major: true
           bump-patch-for-minor-pre-major: true
