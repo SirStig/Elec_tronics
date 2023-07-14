@@ -76,6 +76,7 @@ import net.elec_tronics.block.EnergyStorageT1Block;
 import net.elec_tronics.block.ElectronicsoilBlock;
 import net.elec_tronics.block.CrushermachineBlock;
 import net.elec_tronics.block.Coolantt1Block;
+import net.elec_tronics.block.Conveyort1Block;
 import net.elec_tronics.block.CoalGeneratorMachineBlock;
 import net.elec_tronics.block.ChlorineGasBlock;
 import net.elec_tronics.block.CablehalfT2Block;
@@ -262,4 +263,5 @@ public class ElecTronicsModBlocks {
 	public static final RegistryObject<Block> CABLEHALF_T_2 = REGISTRY.register("cablehalf_t_2", () -> new CablehalfT2Block());
 	public static final RegistryObject<Block> BASEWIRECON_3DOWNANDUP_T_2 = REGISTRY.register("basewirecon_3downandup_t_2", () -> new Basewirecon3downandupT2Block());
 	public static final RegistryObject<Block> BASEWIRECON_3DOWNANGLE_T_2 = REGISTRY.register("basewirecon_3downangle_t_2", () -> new Basewirecon3downangleT2Block());
+	public static final RegistryObject<Block> CONVEYORT_1 = REGISTRY.register("conveyort_1", () -> new Conveyort1Block());
 }

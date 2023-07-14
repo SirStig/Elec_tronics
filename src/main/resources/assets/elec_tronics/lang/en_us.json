@@ -125,6 +125,7 @@
   "gui.elec_tronics.energy_storage_t_1_gui.label_energy_storage_tier_1": "Energy Storage Tier 1",
   "block.elec_tronics.basewirecon_5down_t_2": "Cable Angle T2",
   "block.elec_tronics.basewirecon_2angledown_t_2": "Cable Angle T2",
+  "block.elec_tronics.conveyort_1": "Conveyor Tier 1",
   "item.elec_tronics.ash": "Ash",
   "block.elec_tronics.engineers_work_bench_top_side": "Engineers Workbench Top Side",
   "block.elec_tronics.basewirecon_5down": "Cable Angle T1",

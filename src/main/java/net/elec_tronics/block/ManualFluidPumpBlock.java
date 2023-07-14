@@ -60,6 +60,20 @@ public class ManualFluidPumpBlock extends Block implements EntityBlock {
 	}
 
 	@Override
+	public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
+		return switch (state.getValue(FACING)) {
+			default -> Shapes.or(box(7, 8, 13, 9, 9, 16), box(7, 0, 13, 9, 6, 14), box(9, 0, 11, 10, 9, 13), box(7, 0, 10, 9, 9, 11), box(6, 0, 11, 7, 9, 13), box(7, 9, 11, 9, 10, 13), box(9, 6, 13, 10, 8, 16), box(6, 6, 13, 7, 8, 16),
+					box(7, 5, 14, 9, 6, 16), box(7.5, -2, 4, 8.5, 7, 5), box(6.5, 13, 11.5, 9, 13.5, 12), box(7.8, 9.5, 11.5, 8.3, 13, 12), box(9, 9, 11, 10, 14, 13), box(6, 9, 11, 7, 14, 13));
+			case NORTH -> Shapes.or(box(7, 8, 0, 9, 9, 3), box(7, 0, 2, 9, 6, 3), box(6, 0, 3, 7, 9, 5), box(7, 0, 5, 9, 9, 6), box(9, 0, 3, 10, 9, 5), box(7, 9, 3, 9, 10, 5), box(6, 6, 0, 7, 8, 3), box(9, 6, 0, 10, 8, 3), box(7, 5, 0, 9, 6, 2),
+					box(7.5, -2, 11, 8.5, 7, 12), box(7, 13, 4, 9.5, 13.5, 4.5), box(7.7, 9.5, 4, 8.2, 13, 4.5), box(6, 9, 3, 7, 14, 5), box(9, 9, 3, 10, 14, 5));
+			case EAST -> Shapes.or(box(13, 8, 7, 16, 9, 9), box(13, 0, 7, 14, 6, 9), box(11, 0, 6, 13, 9, 7), box(10, 0, 7, 11, 9, 9), box(11, 0, 9, 13, 9, 10), box(11, 9, 7, 13, 10, 9), box(13, 6, 6, 16, 8, 7), box(13, 6, 9, 16, 8, 10),
+					box(14, 5, 7, 16, 6, 9), box(4, -2, 7.5, 5, 7, 8.5), box(11.5, 13, 7, 12, 13.5, 9.5), box(11.5, 9.5, 7.7, 12, 13, 8.2), box(11, 9, 6, 13, 14, 7), box(11, 9, 9, 13, 14, 10));
+			case WEST -> Shapes.or(box(0, 8, 7, 3, 9, 9), box(2, 0, 7, 3, 6, 9), box(3, 0, 9, 5, 9, 10), box(5, 0, 7, 6, 9, 9), box(3, 0, 6, 5, 9, 7), box(3, 9, 7, 5, 10, 9), box(0, 6, 9, 3, 8, 10), box(0, 6, 6, 3, 8, 7), box(0, 5, 7, 2, 6, 9),
+					box(11, -2, 7.5, 12, 7, 8.5), box(4, 13, 6.5, 4.5, 13.5, 9), box(4, 9.5, 7.8, 4.5, 13, 8.3), box(3, 9, 9, 5, 14, 10), box(3, 9, 6, 5, 14, 7));
+		};
+	}
+
+	@Override
 	protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
 		builder.add(FACING);
 	}

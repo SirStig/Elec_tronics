@@ -43,7 +43,6 @@ import net.minecraft.core.BlockPos;
 
 import net.elec_tronics.world.inventory.WorkbenchguiMenu;
 import net.elec_tronics.procedures.EngineersworkbenchcodeProcedure;
-import net.elec_tronics.procedures.EngineersworkbenchPlayerStartsToDestroyProcedure;
 import net.elec_tronics.procedures.EngineersworkbenchBlockDestroyedByPlayerProcedure;
 import net.elec_tronics.procedures.EngineersworkbenchBlockAddedProcedure;
 import net.elec_tronics.block.entity.EngineersworkbenchBlockEntity;
@@ -74,6 +73,28 @@ public class EngineersworkbenchBlock extends Block implements EntityBlock {
 	@Override
 	public VoxelShape getVisualShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
 		return Shapes.empty();
+	}
+
+	@Override
+	public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
+		return switch (state.getValue(FACING)) {
+			default -> Shapes.or(box(0, 12, 0, 1, 14, 1), box(0, 3, 0, 1, 11, 1), box(0, 0, 0, 1, 2, 1), box(0, 12, 15, 1, 14, 16), box(0, 3, 15, 1, 11, 16), box(0, 0, 15, 1, 2, 16), box(0, 2, 0, 16, 3, 16), box(0, 11, 0, 16, 12, 16),
+					box(0, 14, 0, 16, 15, 16), box(1, 11, 0, 16, 14, 1), box(1, 12, 14, 16, 14, 15), box(1, 12, 1, 2, 14, 14), box(6, 12.75, 14.75, 6.5, 13.25, 15.5), box(6, 12.75, 15.2, 10, 13.25, 15.5), box(9.5, 12.75, 14.75, 10, 13.25, 15.5),
+					box(11, 15, 6, 16, 15.5, 6.5), box(11, 15, 10, 16, 15.5, 10.5), box(11, 15, 8, 16, 15.5, 8.5), box(11, 15, 4, 12, 15.5, 13), box(15.5, 15, 4, 16, 15.5, 13), box(11, 15, 12, 15.5, 15.5, 13), box(11, 15, 3.5, 16, 15.5, 4.5),
+					box(13.5, 15, 4, 14, 15.5, 13), box(2, 14.25, 4, 9, 15.25, 11));
+			case NORTH -> Shapes.or(box(15, 12, 15, 16, 14, 16), box(15, 3, 15, 16, 11, 16), box(15, 0, 15, 16, 2, 16), box(15, 12, 0, 16, 14, 1), box(15, 3, 0, 16, 11, 1), box(15, 0, 0, 16, 2, 1), box(0, 2, 0, 16, 3, 16), box(0, 11, 0, 16, 12, 16),
+					box(0, 14, 0, 16, 15, 16), box(0, 11, 15, 15, 14, 16), box(0, 12, 1, 15, 14, 2), box(14, 12, 2, 15, 14, 15), box(9.5, 12.75, 0.5, 10, 13.25, 1.25), box(6, 12.75, 0.5, 10, 13.25, 0.8), box(6, 12.75, 0.5, 6.5, 13.25, 1.25),
+					box(0, 15, 9.5, 5, 15.5, 10), box(0, 15, 5.5, 5, 15.5, 6), box(0, 15, 7.5, 5, 15.5, 8), box(4, 15, 3, 5, 15.5, 12), box(0, 15, 3, 0.5, 15.5, 12), box(0.5, 15, 3, 5, 15.5, 4), box(0, 15, 11.5, 5, 15.5, 12.5),
+					box(2, 15, 3, 2.5, 15.5, 12), box(7, 14.25, 5, 14, 15.25, 12));
+			case EAST -> Shapes.or(box(0, 12, 15, 1, 14, 16), box(0, 3, 15, 1, 11, 16), box(0, 0, 15, 1, 2, 16), box(15, 12, 15, 16, 14, 16), box(15, 3, 15, 16, 11, 16), box(15, 0, 15, 16, 2, 16), box(0, 2, 0, 16, 3, 16), box(0, 11, 0, 16, 12, 16),
+					box(0, 14, 0, 16, 15, 16), box(0, 11, 0, 1, 14, 15), box(14, 12, 0, 15, 14, 15), box(1, 12, 14, 14, 14, 15), box(14.75, 12.75, 9.5, 15.5, 13.25, 10), box(15.2, 12.75, 6, 15.5, 13.25, 10), box(14.75, 12.75, 6, 15.5, 13.25, 6.5),
+					box(6, 15, 0, 6.5, 15.5, 5), box(10, 15, 0, 10.5, 15.5, 5), box(8, 15, 0, 8.5, 15.5, 5), box(4, 15, 4, 13, 15.5, 5), box(4, 15, 0, 13, 15.5, 0.5), box(12, 15, 0.5, 13, 15.5, 5), box(3.5, 15, 0, 4.5, 15.5, 5),
+					box(4, 15, 2, 13, 15.5, 2.5), box(4, 14.25, 7, 11, 15.25, 14));
+			case WEST -> Shapes.or(box(15, 12, 0, 16, 14, 1), box(15, 3, 0, 16, 11, 1), box(15, 0, 0, 16, 2, 1), box(0, 12, 0, 1, 14, 1), box(0, 3, 0, 1, 11, 1), box(0, 0, 0, 1, 2, 1), box(0, 2, 0, 16, 3, 16), box(0, 11, 0, 16, 12, 16),
+					box(0, 14, 0, 16, 15, 16), box(15, 11, 1, 16, 14, 16), box(1, 12, 1, 2, 14, 16), box(2, 12, 1, 15, 14, 2), box(0.5, 12.75, 6, 1.25, 13.25, 6.5), box(0.5, 12.75, 6, 0.8, 13.25, 10), box(0.5, 12.75, 9.5, 1.25, 13.25, 10),
+					box(9.5, 15, 11, 10, 15.5, 16), box(5.5, 15, 11, 6, 15.5, 16), box(7.5, 15, 11, 8, 15.5, 16), box(3, 15, 11, 12, 15.5, 12), box(3, 15, 15.5, 12, 15.5, 16), box(3, 15, 11, 4, 15.5, 15.5), box(11.5, 15, 11, 12.5, 15.5, 16),
+					box(3, 15, 13.5, 12, 15.5, 14), box(5, 14.25, 2, 12, 15.25, 9));
+		};
 	}
 
 	@Override
@@ -131,12 +152,6 @@ public class EngineersworkbenchBlock extends Block implements EntityBlock {
 		boolean retval = super.onDestroyedByPlayer(blockstate, world, pos, entity, willHarvest, fluid);
 		EngineersworkbenchBlockDestroyedByPlayerProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ(), entity);
 		return retval;
-	}
-
-	@Override
-	public void attack(BlockState blockstate, Level world, BlockPos pos, Player entity) {
-		super.attack(blockstate, world, pos, entity);
-		EngineersworkbenchPlayerStartsToDestroyProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ(), entity);
 	}
 
 	@Override

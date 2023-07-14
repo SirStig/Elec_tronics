@@ -68,6 +68,7 @@ import net.elec_tronics.block.entity.EngineersWorkBenchTopBlockEntity;
 import net.elec_tronics.block.entity.EngineersWorkBenchSideBlockEntity;
 import net.elec_tronics.block.entity.EnergyStorageT1BlockEntity;
 import net.elec_tronics.block.entity.CrushermachineBlockEntity;
+import net.elec_tronics.block.entity.Conveyort1BlockEntity;
 import net.elec_tronics.block.entity.CoalGeneratorMachineBlockEntity;
 import net.elec_tronics.block.entity.CablehalfT2BlockEntity;
 import net.elec_tronics.block.entity.CablehalfT1BlockEntity;
@@ -237,6 +238,7 @@ public class ElecTronicsModBlockEntities {
 	public static final RegistryObject<BlockEntityType<?>> CABLEHALF_T_2 = register("cablehalf_t_2", ElecTronicsModBlocks.CABLEHALF_T_2, CablehalfT2BlockEntity::new);
 	public static final RegistryObject<BlockEntityType<?>> BASEWIRECON_3DOWNANDUP_T_2 = register("basewirecon_3downandup_t_2", ElecTronicsModBlocks.BASEWIRECON_3DOWNANDUP_T_2, Basewirecon3downandupT2BlockEntity::new);
 	public static final RegistryObject<BlockEntityType<?>> BASEWIRECON_3DOWNANGLE_T_2 = register("basewirecon_3downangle_t_2", ElecTronicsModBlocks.BASEWIRECON_3DOWNANGLE_T_2, Basewirecon3downangleT2BlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> CONVEYORT_1 = register("conveyort_1", ElecTronicsModBlocks.CONVEYORT_1, Conveyort1BlockEntity::new);
 
 	private static RegistryObject<BlockEntityType<?>> register(String registryname, RegistryObject<Block> block, BlockEntityType.BlockEntitySupplier<?> supplier) {
 		return REGISTRY.register(registryname, () -> BlockEntityType.Builder.of(supplier, block.get()).build(null));

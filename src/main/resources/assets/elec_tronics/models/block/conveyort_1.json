@@ -1,0 +1,10 @@
+{
+  "parent": "elec_tronics:custom/conveyor_main",
+  "textures": {
+    "all": "elec_tronics:block/conveyor_main",
+    "particle": "elec_tronics:block/conveyor_main",
+    "0": "elec_tronics:block/",
+    "1": "elec_tronics:block/conveyor"
+  },
+  "render_type": "solid"
+}

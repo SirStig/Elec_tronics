@@ -25,11 +25,38 @@
     "boundingBoxes": [
       {
         "mx": 0.0,
-        "my": 0.0,
-        "mz": 0.0,
+        "my": 1.0,
+        "mz": 6.5,
         "Mx": 16.0,
-        "My": 16.0,
-        "Mz": 16.0,
+        "My": 15.5,
+        "Mz": 8.0,
+        "subtract": false
+      },
+      {
+        "mx": 0.0,
+        "my": -1.6,
+        "mz": 6.5,
+        "Mx": 0.5,
+        "My": 13.4,
+        "Mz": 7.0,
+        "subtract": false
+      },
+      {
+        "mx": 0.0,
+        "my": 13.0,
+        "mz": 6.5,
+        "Mx": 16.0,
+        "My": 13.5,
+        "Mz": 7.0,
+        "subtract": false
+      },
+      {
+        "mx": 15.5,
+        "my": -1.5,
+        "mz": 6.5,
+        "Mx": 16.0,
+        "My": 13.5,
+        "Mz": 7.0,
         "subtract": false
       }
     ],
@@ -111,9 +138,9 @@
     "inventoryInSlotIDs": [],
     "hasEnergyStorage": true,
     "energyInitial": 0,
-    "energyCapacity": 0,
-    "energyMaxReceive": 0,
-    "energyMaxExtract": 0,
+    "energyCapacity": 50,
+    "energyMaxReceive": 50,
+    "energyMaxExtract": 50,
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],

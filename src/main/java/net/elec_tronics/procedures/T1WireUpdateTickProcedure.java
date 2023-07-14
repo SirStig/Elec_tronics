@@ -12,6 +12,7 @@ import net.elec_tronics.network.ElecTronicsModVariables;
 
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicBoolean;
+import java.util.List;
 import java.util.ArrayList;
 
 public class T1WireUpdateTickProcedure {
@@ -47,10 +48,10 @@ public class T1WireUpdateTickProcedure {
 		double xsend5 = 0;
 		double xsend4 = 0;
 		double xsend6 = 0;
-		ArrayList xsendArray = new ArrayList();
-		ArrayList ySendArray = new ArrayList();
-		ArrayList zSendArray = new ArrayList();
-		ArrayList amountToSendArray = new ArrayList();
+		List<Object> xsendArray = new ArrayList<>();
+		List<Object> ySendArray = new ArrayList<>();
+		List<Object> zSendArray = new ArrayList<>();
+		List<Object> amountToSendArray = new ArrayList<>();
 		amountOfRecievers = 0;
 		energy1 = 0;
 		energy2 = 0;

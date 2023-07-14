@@ -335,7 +335,7 @@ public class SolarPanelT1UpdateTickProcedure {
 					BlockEntity _blockEntity = world.getBlockEntity(_bp);
 					BlockState _bs = world.getBlockState(_bp);
 					if (_blockEntity != null)
-						_blockEntity.getPersistentData().putDouble("sending", amountToSend);
+						_blockEntity.getPersistentData().putDouble("sending", (amountToSend * totalReceivers));
 					if (world instanceof Level _level)
 						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 				}
@@ -344,7 +344,7 @@ public class SolarPanelT1UpdateTickProcedure {
 					BlockEntity _blockEntity = world.getBlockEntity(_bp);
 					BlockState _bs = world.getBlockState(_bp);
 					if (_blockEntity != null)
-						_blockEntity.getPersistentData().putDouble("energyPercentage", Math.ceil(amountToSend / 5.01));
+						_blockEntity.getPersistentData().putDouble("energyPercentage", Math.ceil((amountToSend * totalReceivers) / 5.01));
 					if (world instanceof Level _level)
 						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 				}

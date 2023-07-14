@@ -24,12 +24,219 @@
     "disableOffset": false,
     "boundingBoxes": [
       {
-        "mx": 0.0,
+        "mx": 15.0,
+        "my": 12.0,
+        "mz": 15.0,
+        "Mx": 16.0,
+        "My": 14.0,
+        "Mz": 16.0,
+        "subtract": false
+      },
+      {
+        "mx": 15.0,
+        "my": 3.0,
+        "mz": 15.0,
+        "Mx": 16.0,
+        "My": 11.0,
+        "Mz": 16.0,
+        "subtract": false
+      },
+      {
+        "mx": 15.0,
+        "my": 0.0,
+        "mz": 15.0,
+        "Mx": 16.0,
+        "My": 2.0,
+        "Mz": 16.0,
+        "subtract": false
+      },
+      {
+        "mx": 15.0,
+        "my": 12.0,
+        "mz": 0.0,
+        "Mx": 16.0,
+        "My": 14.0,
+        "Mz": 1.0,
+        "subtract": false
+      },
+      {
+        "mx": 15.0,
+        "my": 3.0,
+        "mz": 0.0,
+        "Mx": 16.0,
+        "My": 11.0,
+        "Mz": 1.0,
+        "subtract": false
+      },
+      {
+        "mx": 15.0,
         "my": 0.0,
         "mz": 0.0,
         "Mx": 16.0,
-        "My": 16.0,
+        "My": 2.0,
+        "Mz": 1.0,
+        "subtract": false
+      },
+      {
+        "mx": 0.0,
+        "my": 2.0,
+        "mz": 0.0,
+        "Mx": 16.0,
+        "My": 3.0,
         "Mz": 16.0,
+        "subtract": false
+      },
+      {
+        "mx": 0.0,
+        "my": 11.0,
+        "mz": 0.0,
+        "Mx": 16.0,
+        "My": 12.0,
+        "Mz": 16.0,
+        "subtract": false
+      },
+      {
+        "mx": 0.0,
+        "my": 14.0,
+        "mz": 0.0,
+        "Mx": 16.0,
+        "My": 15.0,
+        "Mz": 16.0,
+        "subtract": false
+      },
+      {
+        "mx": 0.0,
+        "my": 11.0,
+        "mz": 15.0,
+        "Mx": 15.0,
+        "My": 14.0,
+        "Mz": 16.0,
+        "subtract": false
+      },
+      {
+        "mx": 0.0,
+        "my": 12.0,
+        "mz": 1.0,
+        "Mx": 15.0,
+        "My": 14.0,
+        "Mz": 2.0,
+        "subtract": false
+      },
+      {
+        "mx": 14.0,
+        "my": 12.0,
+        "mz": 2.0,
+        "Mx": 15.0,
+        "My": 14.0,
+        "Mz": 15.0,
+        "subtract": false
+      },
+      {
+        "mx": 9.5,
+        "my": 12.75,
+        "mz": 0.5,
+        "Mx": 10.0,
+        "My": 13.25,
+        "Mz": 1.25,
+        "subtract": false
+      },
+      {
+        "mx": 6.0,
+        "my": 12.75,
+        "mz": 0.5,
+        "Mx": 10.0,
+        "My": 13.25,
+        "Mz": 0.8,
+        "subtract": false
+      },
+      {
+        "mx": 6.0,
+        "my": 12.75,
+        "mz": 0.5,
+        "Mx": 6.5,
+        "My": 13.25,
+        "Mz": 1.25,
+        "subtract": false
+      },
+      {
+        "mx": 0.0,
+        "my": 15.0,
+        "mz": 9.5,
+        "Mx": 5.0,
+        "My": 15.5,
+        "Mz": 10.0,
+        "subtract": false
+      },
+      {
+        "mx": 0.0,
+        "my": 15.0,
+        "mz": 5.5,
+        "Mx": 5.0,
+        "My": 15.5,
+        "Mz": 6.0,
+        "subtract": false
+      },
+      {
+        "mx": 0.0,
+        "my": 15.0,
+        "mz": 7.5,
+        "Mx": 5.0,
+        "My": 15.5,
+        "Mz": 8.0,
+        "subtract": false
+      },
+      {
+        "mx": 4.0,
+        "my": 15.0,
+        "mz": 3.0,
+        "Mx": 5.0,
+        "My": 15.5,
+        "Mz": 12.0,
+        "subtract": false
+      },
+      {
+        "mx": 0.0,
+        "my": 15.0,
+        "mz": 3.0,
+        "Mx": 0.5,
+        "My": 15.5,
+        "Mz": 12.0,
+        "subtract": false
+      },
+      {
+        "mx": 0.5,
+        "my": 15.0,
+        "mz": 3.0,
+        "Mx": 5.0,
+        "My": 15.5,
+        "Mz": 4.0,
+        "subtract": false
+      },
+      {
+        "mx": 0.0,
+        "my": 15.0,
+        "mz": 11.5,
+        "Mx": 5.0,
+        "My": 15.5,
+        "Mz": 12.5,
+        "subtract": false
+      },
+      {
+        "mx": 2.0,
+        "my": 15.0,
+        "mz": 3.0,
+        "Mx": 2.5,
+        "My": 15.5,
+        "Mz": 12.0,
+        "subtract": false
+      },
+      {
+        "mx": 7.0,
+        "my": 14.25,
+        "mz": 5.0,
+        "Mx": 14.0,
+        "My": 15.25,
+        "Mz": 12.0,
         "subtract": false
       }
     ],
@@ -144,9 +351,6 @@
     },
     "onDestroyedByPlayer": {
       "name": "EngineersworkbenchBlockDestroyedByPlayer"
-    },
-    "onStartToDestroy": {
-      "name": "EngineersworkbenchPlayerStartsToDestroy"
     },
     "spawnWorldTypes": [],
     "restrictionBiomes": [],

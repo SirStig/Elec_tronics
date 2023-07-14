@@ -231,6 +231,7 @@ public class ElecTronicsModItems {
 	public static final RegistryObject<Item> CABLEHALF_T_2 = block(ElecTronicsModBlocks.CABLEHALF_T_2);
 	public static final RegistryObject<Item> BASEWIRECON_3DOWNANDUP_T_2 = block(ElecTronicsModBlocks.BASEWIRECON_3DOWNANDUP_T_2);
 	public static final RegistryObject<Item> BASEWIRECON_3DOWNANGLE_T_2 = block(ElecTronicsModBlocks.BASEWIRECON_3DOWNANGLE_T_2);
+	public static final RegistryObject<Item> CONVEYORT_1 = block(ElecTronicsModBlocks.CONVEYORT_1);
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));

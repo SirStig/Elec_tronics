@@ -68,6 +68,16 @@ public class SolarpaneltopBlock extends Block implements EntityBlock {
 	}
 
 	@Override
+	public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
+		return switch (state.getValue(FACING)) {
+			default -> Shapes.or(box(0, 1, 8, 16, 15.5, 9.5), box(15.5, -1.6, 9, 16, 13.4, 9.5), box(0, 13, 9, 16, 13.5, 9.5), box(0, -1.5, 9, 0.5, 13.5, 9.5));
+			case NORTH -> Shapes.or(box(0, 1, 6.5, 16, 15.5, 8), box(0, -1.6, 6.5, 0.5, 13.4, 7), box(0, 13, 6.5, 16, 13.5, 7), box(15.5, -1.5, 6.5, 16, 13.5, 7));
+			case EAST -> Shapes.or(box(8, 1, 0, 9.5, 15.5, 16), box(9, -1.6, 0, 9.5, 13.4, 0.5), box(9, 13, 0, 9.5, 13.5, 16), box(9, -1.5, 15.5, 9.5, 13.5, 16));
+			case WEST -> Shapes.or(box(6.5, 1, 0, 8, 15.5, 16), box(6.5, -1.6, 15.5, 7, 13.4, 16), box(6.5, 13, 0, 7, 13.5, 16), box(6.5, -1.5, 0, 7, 13.5, 0.5));
+		};
+	}
+
+	@Override
 	protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
 		builder.add(FACING);
 	}

@@ -16,12 +16,14 @@ import net.elec_tronics.init.ElecTronicsModBlocks;
 
 public class SolarPanelT1BlockAddedProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
+		double ID = 0;
+		ID = Math.random() * 100000.1;
 		if (!world.isClientSide()) {
 			BlockPos _bp = BlockPos.containing(x, y, z);
 			BlockEntity _blockEntity = world.getBlockEntity(_bp);
 			BlockState _bs = world.getBlockState(_bp);
 			if (_blockEntity != null)
-				_blockEntity.getPersistentData().putDouble("generatorID", Math.random());
+				_blockEntity.getPersistentData().putDouble("generatorID", ID);
 			if (world instanceof Level _level)
 				_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 		}
@@ -38,23 +40,16 @@ public class SolarPanelT1BlockAddedProcedure {
 				return Direction.NORTH;
 			}
 		}.getDirection(BlockPos.containing(x, y, z))) == Direction.NORTH) {
-			if (world.getBlockState(BlockPos.containing(x - 1, y, z)).canOcclude() == false) {
-				if (world.getBlockState(BlockPos.containing(x, y + 1, z)).canOcclude() == false) {
-					if (world.getBlockState(BlockPos.containing(x - 1, y + 1, z)).canOcclude() == false) {
+			if (world.isEmptyBlock(BlockPos.containing(x, y + 1, z))) {
+				if (world.isEmptyBlock(BlockPos.containing(x - 1, y + 1, z))) {
+					if (world.isEmptyBlock(BlockPos.containing(x - 1, y, z))) {
 						world.setBlock(BlockPos.containing(x - 1, y, z), ElecTronicsModBlocks.SOLAR_PANELR.get().defaultBlockState(), 3);
 						if (!world.isClientSide()) {
 							BlockPos _bp = BlockPos.containing(x - 1, y, z);
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
 							if (_blockEntity != null)
-								_blockEntity.getPersistentData().putDouble("generatorID", (new Object() {
-									public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-										BlockEntity blockEntity = world.getBlockEntity(pos);
-										if (blockEntity != null)
-											return blockEntity.getPersistentData().getDouble(tag);
-										return -1;
-									}
-								}.getValue(world, BlockPos.containing(x, y, z), "generatorID")));
+								_blockEntity.getPersistentData().putDouble("generatorID", ID);
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
@@ -64,14 +59,7 @@ public class SolarPanelT1BlockAddedProcedure {
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
 							if (_blockEntity != null)
-								_blockEntity.getPersistentData().putDouble("generatorID", (new Object() {
-									public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-										BlockEntity blockEntity = world.getBlockEntity(pos);
-										if (blockEntity != null)
-											return blockEntity.getPersistentData().getDouble(tag);
-										return -1;
-									}
-								}.getValue(world, BlockPos.containing(x, y, z), "generatorID")));
+								_blockEntity.getPersistentData().putDouble("generatorID", ID);
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
@@ -81,14 +69,7 @@ public class SolarPanelT1BlockAddedProcedure {
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
 							if (_blockEntity != null)
-								_blockEntity.getPersistentData().putDouble("generatorID", (new Object() {
-									public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-										BlockEntity blockEntity = world.getBlockEntity(pos);
-										if (blockEntity != null)
-											return blockEntity.getPersistentData().getDouble(tag);
-										return -1;
-									}
-								}.getValue(world, BlockPos.containing(x, y, z), "generatorID")));
+								_blockEntity.getPersistentData().putDouble("generatorID", ID);
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
@@ -126,9 +107,9 @@ public class SolarPanelT1BlockAddedProcedure {
 				return Direction.NORTH;
 			}
 		}.getDirection(BlockPos.containing(x, y, z))) == Direction.WEST) {
-			if (world.getBlockState(BlockPos.containing(x, y, z + 1)).canOcclude() == false) {
-				if (world.getBlockState(BlockPos.containing(x, y + 1, z)).canOcclude() == false) {
-					if (world.getBlockState(BlockPos.containing(x, y + 1, z + 1)).canOcclude() == false) {
+			if (world.isEmptyBlock(BlockPos.containing(x, y, z + 1))) {
+				if (world.isEmptyBlock(BlockPos.containing(x, y + 1, z))) {
+					if (world.isEmptyBlock(BlockPos.containing(x, y + 1, z + 1))) {
 						world.setBlock(BlockPos.containing(x, y, z + 1), ElecTronicsModBlocks.SOLAR_PANELR.get().defaultBlockState(), 3);
 						{
 							Direction _dir = Direction.WEST;
@@ -148,14 +129,7 @@ public class SolarPanelT1BlockAddedProcedure {
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
 							if (_blockEntity != null)
-								_blockEntity.getPersistentData().putDouble("generatorID", (new Object() {
-									public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-										BlockEntity blockEntity = world.getBlockEntity(pos);
-										if (blockEntity != null)
-											return blockEntity.getPersistentData().getDouble(tag);
-										return -1;
-									}
-								}.getValue(world, BlockPos.containing(x, y, z), "generatorID")));
+								_blockEntity.getPersistentData().putDouble("generatorID", ID);
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
@@ -178,14 +152,7 @@ public class SolarPanelT1BlockAddedProcedure {
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
 							if (_blockEntity != null)
-								_blockEntity.getPersistentData().putDouble("generatorID", (new Object() {
-									public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-										BlockEntity blockEntity = world.getBlockEntity(pos);
-										if (blockEntity != null)
-											return blockEntity.getPersistentData().getDouble(tag);
-										return -1;
-									}
-								}.getValue(world, BlockPos.containing(x, y, z), "generatorID")));
+								_blockEntity.getPersistentData().putDouble("generatorID", ID);
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
@@ -208,14 +175,7 @@ public class SolarPanelT1BlockAddedProcedure {
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
 							if (_blockEntity != null)
-								_blockEntity.getPersistentData().putDouble("generatorID", (new Object() {
-									public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-										BlockEntity blockEntity = world.getBlockEntity(pos);
-										if (blockEntity != null)
-											return blockEntity.getPersistentData().getDouble(tag);
-										return -1;
-									}
-								}.getValue(world, BlockPos.containing(x, y, z), "generatorID")));
+								_blockEntity.getPersistentData().putDouble("generatorID", ID);
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
@@ -253,9 +213,9 @@ public class SolarPanelT1BlockAddedProcedure {
 				return Direction.NORTH;
 			}
 		}.getDirection(BlockPos.containing(x, y, z))) == Direction.EAST) {
-			if (world.getBlockState(BlockPos.containing(x, y, z - 1)).canOcclude() == false) {
-				if (world.getBlockState(BlockPos.containing(x, y + 1, z)).canOcclude() == false) {
-					if (world.getBlockState(BlockPos.containing(x, y + 1, z - 1)).canOcclude() == false) {
+			if (world.isEmptyBlock(BlockPos.containing(x, y, z - 1))) {
+				if (world.isEmptyBlock(BlockPos.containing(x, y + 1, z))) {
+					if (world.isEmptyBlock(BlockPos.containing(x, y + 1, z - 1))) {
 						world.setBlock(BlockPos.containing(x, y, z - 1), ElecTronicsModBlocks.SOLAR_PANELR.get().defaultBlockState(), 3);
 						{
 							Direction _dir = Direction.EAST;
@@ -275,14 +235,7 @@ public class SolarPanelT1BlockAddedProcedure {
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
 							if (_blockEntity != null)
-								_blockEntity.getPersistentData().putDouble("generatorID", (new Object() {
-									public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-										BlockEntity blockEntity = world.getBlockEntity(pos);
-										if (blockEntity != null)
-											return blockEntity.getPersistentData().getDouble(tag);
-										return -1;
-									}
-								}.getValue(world, BlockPos.containing(x, y, z), "generatorID")));
+								_blockEntity.getPersistentData().putDouble("generatorID", ID);
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
@@ -305,14 +258,7 @@ public class SolarPanelT1BlockAddedProcedure {
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
 							if (_blockEntity != null)
-								_blockEntity.getPersistentData().putDouble("generatorID", (new Object() {
-									public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-										BlockEntity blockEntity = world.getBlockEntity(pos);
-										if (blockEntity != null)
-											return blockEntity.getPersistentData().getDouble(tag);
-										return -1;
-									}
-								}.getValue(world, BlockPos.containing(x, y, z), "generatorID")));
+								_blockEntity.getPersistentData().putDouble("generatorID", ID);
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
@@ -335,14 +281,7 @@ public class SolarPanelT1BlockAddedProcedure {
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
 							if (_blockEntity != null)
-								_blockEntity.getPersistentData().putDouble("generatorID", (new Object() {
-									public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-										BlockEntity blockEntity = world.getBlockEntity(pos);
-										if (blockEntity != null)
-											return blockEntity.getPersistentData().getDouble(tag);
-										return -1;
-									}
-								}.getValue(world, BlockPos.containing(x, y, z), "generatorID")));
+								_blockEntity.getPersistentData().putDouble("generatorID", ID);
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
@@ -380,9 +319,9 @@ public class SolarPanelT1BlockAddedProcedure {
 				return Direction.NORTH;
 			}
 		}.getDirection(BlockPos.containing(x, y, z))) == Direction.SOUTH) {
-			if (world.getBlockState(BlockPos.containing(x + 1, y, z)).canOcclude() == false) {
-				if (world.getBlockState(BlockPos.containing(x, y + 1, z)).canOcclude() == false) {
-					if (world.getBlockState(BlockPos.containing(x + 1, y + 1, z)).canOcclude() == false) {
+			if (world.isEmptyBlock(BlockPos.containing(x + 1, y, z))) {
+				if (world.isEmptyBlock(BlockPos.containing(x, y + 1, z))) {
+					if (world.isEmptyBlock(BlockPos.containing(x + 1, y + 1, z))) {
 						world.setBlock(BlockPos.containing(x + 1, y, z), ElecTronicsModBlocks.SOLAR_PANELR.get().defaultBlockState(), 3);
 						{
 							Direction _dir = Direction.SOUTH;
@@ -402,14 +341,7 @@ public class SolarPanelT1BlockAddedProcedure {
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
 							if (_blockEntity != null)
-								_blockEntity.getPersistentData().putDouble("generatorID", (new Object() {
-									public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-										BlockEntity blockEntity = world.getBlockEntity(pos);
-										if (blockEntity != null)
-											return blockEntity.getPersistentData().getDouble(tag);
-										return -1;
-									}
-								}.getValue(world, BlockPos.containing(x, y, z), "generatorID")));
+								_blockEntity.getPersistentData().putDouble("generatorID", ID);
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
@@ -432,14 +364,7 @@ public class SolarPanelT1BlockAddedProcedure {
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
 							if (_blockEntity != null)
-								_blockEntity.getPersistentData().putDouble("generatorID", (new Object() {
-									public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-										BlockEntity blockEntity = world.getBlockEntity(pos);
-										if (blockEntity != null)
-											return blockEntity.getPersistentData().getDouble(tag);
-										return -1;
-									}
-								}.getValue(world, BlockPos.containing(x, y, z), "generatorID")));
+								_blockEntity.getPersistentData().putDouble("generatorID", ID);
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
@@ -462,14 +387,7 @@ public class SolarPanelT1BlockAddedProcedure {
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
 							if (_blockEntity != null)
-								_blockEntity.getPersistentData().putDouble("generatorID", (new Object() {
-									public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-										BlockEntity blockEntity = world.getBlockEntity(pos);
-										if (blockEntity != null)
-											return blockEntity.getPersistentData().getDouble(tag);
-										return -1;
-									}
-								}.getValue(world, BlockPos.containing(x, y, z), "generatorID")));
+								_blockEntity.getPersistentData().putDouble("generatorID", ID);
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}

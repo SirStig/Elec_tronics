@@ -92,6 +92,7 @@ public class ElecTronicsModTabs {
 					tabData.accept(ElecTronicsModBlocks.ROCK_SALT.get().asItem());
 					tabData.accept(ElecTronicsModBlocks.COAL_GENERATOR_MACHINE.get().asItem());
 					tabData.accept(ElecTronicsModBlocks.QUARRY_T_1.get().asItem());
+					tabData.accept(ElecTronicsModBlocks.CONVEYORT_1.get().asItem());
 				}).withSearchBar());
 	}
 }

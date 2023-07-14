@@ -31,7 +31,6 @@ import net.minecraft.world.InteractionHand;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
-import net.elec_tronics.procedures.EngineersworkbenchPlayerStartsToDestroyProcedure;
 import net.elec_tronics.procedures.EngineersworkbenchBlockDestroyedByPlayerProcedure;
 import net.elec_tronics.procedures.EngineersWorkBenchOnBlockRightClickedProcedure;
 import net.elec_tronics.init.ElecTronicsModBlocks;
@@ -66,10 +65,10 @@ public class EngineersWorkBenchTopSideBlock extends Block implements EntityBlock
 	@Override
 	public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
 		return switch (state.getValue(FACING)) {
-			default -> box(0, 0, 0, 16, 16, 2);
-			case NORTH -> box(0, 0, 14, 16, 16, 16);
-			case EAST -> box(0, 0, 0, 2, 16, 16);
-			case WEST -> box(14, 0, 0, 16, 16, 16);
+			default -> Shapes.or(box(0, 0, 0, 15, 15, 1), box(15, 0, 0, 16, 16, 3), box(0, 3, 1, 15, 4, 2), box(0, 15, 0, 15, 16, 3), box(0, 10, 1, 15, 11, 2), box(3, 2, 0.25, 12, 12, 1.25));
+			case NORTH -> Shapes.or(box(1, 0, 15, 16, 15, 16), box(0, 0, 13, 1, 16, 16), box(1, 3, 14, 16, 4, 15), box(1, 15, 13, 16, 16, 16), box(1, 10, 14, 16, 11, 15), box(4, 2, 14.75, 13, 12, 15.75));
+			case EAST -> Shapes.or(box(0, 0, 1, 1, 15, 16), box(0, 0, 0, 3, 16, 1), box(1, 3, 1, 2, 4, 16), box(0, 15, 1, 3, 16, 16), box(1, 10, 1, 2, 11, 16), box(0.25, 2, 4, 1.25, 12, 13));
+			case WEST -> Shapes.or(box(15, 0, 0, 16, 15, 15), box(13, 0, 15, 16, 16, 16), box(14, 3, 0, 15, 4, 15), box(13, 15, 0, 16, 16, 15), box(14, 10, 0, 15, 11, 15), box(14.75, 2, 3, 15.75, 12, 12));
 		};
 	}
 
@@ -111,12 +110,6 @@ public class EngineersWorkBenchTopSideBlock extends Block implements EntityBlock
 		boolean retval = super.onDestroyedByPlayer(blockstate, world, pos, entity, willHarvest, fluid);
 		EngineersworkbenchBlockDestroyedByPlayerProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ(), entity);
 		return retval;
-	}
-
-	@Override
-	public void attack(BlockState blockstate, Level world, BlockPos pos, Player entity) {
-		super.attack(blockstate, world, pos, entity);
-		EngineersworkbenchPlayerStartsToDestroyProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ(), entity);
 	}
 
 	@Override

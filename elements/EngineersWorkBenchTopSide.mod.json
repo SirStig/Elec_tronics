@@ -24,12 +24,57 @@
     "disableOffset": false,
     "boundingBoxes": [
       {
+        "mx": 1.0,
+        "my": 0.0,
+        "mz": 15.0,
+        "Mx": 16.0,
+        "My": 15.0,
+        "Mz": 16.0,
+        "subtract": false
+      },
+      {
         "mx": 0.0,
         "my": 0.0,
+        "mz": 13.0,
+        "Mx": 1.0,
+        "My": 16.0,
+        "Mz": 16.0,
+        "subtract": false
+      },
+      {
+        "mx": 1.0,
+        "my": 3.0,
         "mz": 14.0,
+        "Mx": 16.0,
+        "My": 4.0,
+        "Mz": 15.0,
+        "subtract": false
+      },
+      {
+        "mx": 1.0,
+        "my": 15.0,
+        "mz": 13.0,
         "Mx": 16.0,
         "My": 16.0,
         "Mz": 16.0,
+        "subtract": false
+      },
+      {
+        "mx": 1.0,
+        "my": 10.0,
+        "mz": 14.0,
+        "Mx": 16.0,
+        "My": 11.0,
+        "Mz": 15.0,
+        "subtract": false
+      },
+      {
+        "mx": 4.0,
+        "my": 2.0,
+        "mz": 14.75,
+        "Mx": 13.0,
+        "My": 12.0,
+        "Mz": 15.75,
         "subtract": false
       }
     ],
@@ -141,9 +186,6 @@
     },
     "onDestroyedByPlayer": {
       "name": "EngineersworkbenchBlockDestroyedByPlayer"
-    },
-    "onStartToDestroy": {
-      "name": "EngineersworkbenchPlayerStartsToDestroy"
     },
     "spawnWorldTypes": [],
     "restrictionBiomes": [],

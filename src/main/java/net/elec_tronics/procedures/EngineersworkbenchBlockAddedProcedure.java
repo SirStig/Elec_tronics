@@ -17,13 +17,14 @@ import net.elec_tronics.init.ElecTronicsModBlocks;
 public class EngineersworkbenchBlockAddedProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
 		double random = 0;
-		random = Math.round(Math.random() * 100000.1);
+		double ID = 0;
+		ID = Math.random() * 100000.1;
 		if (!world.isClientSide()) {
 			BlockPos _bp = BlockPos.containing(x, y, z);
 			BlockEntity _blockEntity = world.getBlockEntity(_bp);
 			BlockState _bs = world.getBlockState(_bp);
 			if (_blockEntity != null)
-				_blockEntity.getPersistentData().putDouble("generatorID", random);
+				_blockEntity.getPersistentData().putDouble("generatorID", ID);
 			if (world instanceof Level _level)
 				_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 		}
@@ -49,7 +50,7 @@ public class EngineersworkbenchBlockAddedProcedure {
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
 							if (_blockEntity != null)
-								_blockEntity.getPersistentData().putDouble("generatorID", random);
+								_blockEntity.getPersistentData().putDouble("generatorID", ID);
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
@@ -59,7 +60,7 @@ public class EngineersworkbenchBlockAddedProcedure {
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
 							if (_blockEntity != null)
-								_blockEntity.getPersistentData().putDouble("generatorID", random);
+								_blockEntity.getPersistentData().putDouble("generatorID", ID);
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
@@ -69,7 +70,7 @@ public class EngineersworkbenchBlockAddedProcedure {
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
 							if (_blockEntity != null)
-								_blockEntity.getPersistentData().putDouble("generatorID", random);
+								_blockEntity.getPersistentData().putDouble("generatorID", ID);
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
@@ -129,7 +130,7 @@ public class EngineersworkbenchBlockAddedProcedure {
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
 							if (_blockEntity != null)
-								_blockEntity.getPersistentData().putDouble("generatorID", random);
+								_blockEntity.getPersistentData().putDouble("generatorID", ID);
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
@@ -152,7 +153,7 @@ public class EngineersworkbenchBlockAddedProcedure {
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
 							if (_blockEntity != null)
-								_blockEntity.getPersistentData().putDouble("generatorID", random);
+								_blockEntity.getPersistentData().putDouble("generatorID", ID);
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
@@ -175,7 +176,7 @@ public class EngineersworkbenchBlockAddedProcedure {
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
 							if (_blockEntity != null)
-								_blockEntity.getPersistentData().putDouble("generatorID", random);
+								_blockEntity.getPersistentData().putDouble("generatorID", ID);
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
@@ -235,7 +236,7 @@ public class EngineersworkbenchBlockAddedProcedure {
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
 							if (_blockEntity != null)
-								_blockEntity.getPersistentData().putDouble("generatorID", random);
+								_blockEntity.getPersistentData().putDouble("generatorID", ID);
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
@@ -258,7 +259,7 @@ public class EngineersworkbenchBlockAddedProcedure {
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
 							if (_blockEntity != null)
-								_blockEntity.getPersistentData().putDouble("generatorID", random);
+								_blockEntity.getPersistentData().putDouble("generatorID", ID);
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
@@ -281,7 +282,7 @@ public class EngineersworkbenchBlockAddedProcedure {
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
 							if (_blockEntity != null)
-								_blockEntity.getPersistentData().putDouble("generatorID", random);
+								_blockEntity.getPersistentData().putDouble("generatorID", ID);
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
@@ -341,7 +342,7 @@ public class EngineersworkbenchBlockAddedProcedure {
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
 							if (_blockEntity != null)
-								_blockEntity.getPersistentData().putDouble("generatorID", random);
+								_blockEntity.getPersistentData().putDouble("generatorID", ID);
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
@@ -364,7 +365,7 @@ public class EngineersworkbenchBlockAddedProcedure {
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
 							if (_blockEntity != null)
-								_blockEntity.getPersistentData().putDouble("generatorID", random);
+								_blockEntity.getPersistentData().putDouble("generatorID", ID);
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
@@ -387,7 +388,7 @@ public class EngineersworkbenchBlockAddedProcedure {
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
 							if (_blockEntity != null)
-								_blockEntity.getPersistentData().putDouble("generatorID", random);
+								_blockEntity.getPersistentData().putDouble("generatorID", ID);
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
