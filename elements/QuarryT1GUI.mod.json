@@ -136,8 +136,8 @@
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_1171173571_logscommentsicon",
-          "image": "117-1173571_logs-comments-icon.png",
-          "hoveredImage": "117-1173571_logs-comments-icon.png",
+          "image": "logbutton.png",
+          "hoveredImage": "",
           "onClick": {
             "name": "InfoLogButtonPushed"
           },
@@ -406,13 +406,13 @@
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_gearbutton",
-          "image": "gearbutton.png",
-          "hoveredImage": "gearbutton.png",
+          "image": "settingsbutton.png",
+          "hoveredImage": "",
           "onClick": {
             "name": "SettingsButtonPushed"
           },
           "x": 107,
-          "y": 82
+          "y": 83
         }
       },
       {

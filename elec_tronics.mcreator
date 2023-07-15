@@ -7162,6 +7162,19 @@
         "dependencies": []
       },
       "path": "~/Blocks/Conveyors/Conveyor-T1/Procedures"
+    },
+    {
+      "name": "ConfigButtonPauseMenu",
+      "type": "code",
+      "sortid": 365,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "config_button_pause_menu",
+      "metadata": {
+        "files": [
+          "src/main/java/net/elec_tronics/ConfigButtonPauseMenu.java"
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -7231,8 +7244,8 @@
       "item.elec_tronics.tungsten_ore": "Tungsten Ore",
       "gui.elec_tronics.solarpanel_gui.label_solar_panel_t1": "Solar Panel T1",
       "block.elec_tronics.refined_oil": "Refined Oil",
-      "block.elec_tronics.basewirecon_5main": "Cable Angle T1",
       "item.elec_tronics.copper_sheet": "Copper Sheet",
+      "block.elec_tronics.basewirecon_5main": "Cable Angle T1",
       "item.elec_tronics.ore_funnel": "Ore Funnel",
       "gui.elec_tronics.quarry_t_1_gui.button_empty": "Off",
       "fluid.elec_tronics.brine": "Brine",
@@ -7240,10 +7253,10 @@
       "block.elec_tronics.engineersworkbench": "Engineers Workbench",
       "block.elec_tronics.pipejunctionupanddown": "Pipe",
       "item.elec_tronics.irongear": "Iron Gear",
-      "item.elec_tronics.steel_armor_chestplate": "Steel Chestplate",
       "block.elec_tronics.basewirecon_5main_t_2": "Cable Angle T2",
-      "item.elec_tronics.copper_dust": "Copper Dust",
+      "item.elec_tronics.steel_armor_chestplate": "Steel Chestplate",
       "block.elec_tronics.cable_angle_t_1": "Cable Angle T1",
+      "item.elec_tronics.copper_dust": "Copper Dust",
       "block.elec_tronics.solar_panelr": "Solar Panel T1",
       "block.elec_tronics.cable_angle_t_2": "Cable Angle T2",
       "gui.elec_tronics.extrusinmachine_gui.label_inventory": "Inventory",
@@ -7263,8 +7276,8 @@
       "block.elec_tronics.basewirecon_3down": "Cable Angle T1",
       "block.elec_tronics.tank": "Tank",
       "block.elec_tronics.basepipe": "Pipe",
-      "block.elec_tronics.crushermachine": "Crusher T1",
       "item.elec_tronics.coolant_item": "Coolant",
+      "block.elec_tronics.crushermachine": "Crusher T1",
       "item.elec_tronics.rocksaltdust": "Salt Dust",
       "item.elec_tronics.rubbersleeve": "Rubber Sleeve",
       "block.elec_tronics.extrusion_machine": "Extrusion Machine",
@@ -7610,6 +7623,10 @@
       },
       {
         "name": "Universal Procedures",
+        "children": []
+      },
+      {
+        "name": "Config Menus",
         "children": []
       }
     ]

@@ -2,9 +2,9 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [64, 64],
 	"textures": {
-		"0": "elec_tronics:block/",
-		"1": "conveyor",
-		"particle": "elec_tronics:block/"
+		"0": "elec_tronics:block/pipe_texture",
+		"1": "elec_tronics:block/conveyoranim",
+		"particle": "elec_tronics:block/pipe_texture"
 	},
 	"elements": [
 		{
@@ -23,12 +23,12 @@
 			"from": [2, 1.2, 0],
 			"to": [14, 2.2, 16],
 			"faces": {
-				"north": {"uv": [0, 14, 16, 16], "texture": "#1"},
-				"east": {"uv": [0, 0, 16, 16], "texture": "#1"},
-				"south": {"uv": [0, 0, 16, 2], "texture": "#1"},
-				"west": {"uv": [0, 0, 16, 16], "texture": "#1"},
-				"up": {"uv": [0, 0, 16, 16], "texture": "#1"},
-				"down": {"uv": [0, 0, 16, 16], "texture": "#1"}
+				"north": {"uv": [0, 16, 16, 14], "texture": "#1"},
+				"east": {"uv": [16, 16, 0, 0], "texture": "#1"},
+				"south": {"uv": [0, 2, 16, 0], "texture": "#1"},
+				"west": {"uv": [0, 16, 16, 0], "texture": "#1"},
+				"up": {"uv": [0, 16, 16, 0], "texture": "#1"},
+				"down": {"uv": [0, 16, 16, 0], "texture": "#1"}
 			}
 		},
 		{
@@ -80,7 +80,6 @@
 			}
 		}
 	],
-	"display": {},
 	"groups": [
 		0,
 		1,

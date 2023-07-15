@@ -204,7 +204,7 @@ public class QuarryT1GUIScreen extends AbstractContainerScreen<QuarryT1GUIMenu> 
 		});
 		guistate.put("button:imagebutton_1171173571_logscommentsicon", imagebutton_1171173571_logscommentsicon);
 		this.addRenderableWidget(imagebutton_1171173571_logscommentsicon);
-		imagebutton_gearbutton = new ImageButton(this.leftPos + -18, this.topPos + 45, 16, 16, 0, 0, 16, new ResourceLocation("elec_tronics:textures/screens/atlas/imagebutton_gearbutton.png"), 16, 32, e -> {
+		imagebutton_gearbutton = new ImageButton(this.leftPos + -18, this.topPos + 46, 16, 16, 0, 0, 16, new ResourceLocation("elec_tronics:textures/screens/atlas/imagebutton_gearbutton.png"), 16, 32, e -> {
 			if (true) {
 				ElecTronicsMod.PACKET_HANDLER.sendToServer(new QuarryT1GUIButtonMessage(3, x, y, z));
 				QuarryT1GUIButtonMessage.handleButtonAction(entity, 3, x, y, z);
