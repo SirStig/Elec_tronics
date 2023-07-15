@@ -5,13 +5,16 @@ import org.checkerframework.checker.units.qual.s;
 import net.minecraftforge.items.IItemHandlerModifiable;
 import net.minecraftforge.common.capabilities.ForgeCapabilities;
 
+import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.item.ItemEntity;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
@@ -39,6 +42,7 @@ public class QuarryT1UpdateTickProcedure {
 		boolean targetFound = false;
 		boolean condition = false;
 		boolean conveyerFound = false;
+		Entity lastSpawnedItem = null;
 		if ((new Object() {
 			public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 				AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
@@ -827,7 +831,7 @@ public class QuarryT1UpdateTickProcedure {
 					}
 				}
 				if (world instanceof ServerLevel _level) {
-					ItemEntity entityToSpawn = new ItemEntity(_level, x, y, (z + 1), (new ItemStack((world.getBlockState(BlockPos.containing(new Object() {
+					ItemEntity entityToSpawn = new ItemEntity(_level, (x + 0.3), (y + 0.5), (z + 1.5), (new ItemStack((world.getBlockState(BlockPos.containing(new Object() {
 						public double getValue(LevelAccessor world, BlockPos pos, String tag) {
 							BlockEntity blockEntity = world.getBlockEntity(pos);
 							if (blockEntity != null)
@@ -860,7 +864,16 @@ public class QuarryT1UpdateTickProcedure {
 					}.convert(new java.text.DecimalFormat("##").format(1e+31)));
 					entityToSpawn.setUnlimitedLifetime();
 					_level.addFreshEntity(entityToSpawn);
+					lastSpawnedItem = entityToSpawn;
 				}
+				lastSpawnedItem.setDeltaMovement(new Vec3(0, 0, 0));
+				{
+					Entity _ent = lastSpawnedItem;
+					_ent.teleportTo((x + 0.5), (y + 0.5), (z + 1.2));
+					if (_ent instanceof ServerPlayer _serverPlayer)
+						_serverPlayer.connection.teleport((x + 0.5), (y + 0.5), (z + 1.2), _ent.getYRot(), _ent.getXRot());
+				}
+				lastSpawnedItem.getPersistentData().putBoolean("quarry", true);
 				world.destroyBlock(BlockPos.containing(new Object() {
 					public double getValue(LevelAccessor world, BlockPos pos, String tag) {
 						BlockEntity blockEntity = world.getBlockEntity(pos);

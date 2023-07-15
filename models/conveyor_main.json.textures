@@ -2,8 +2,8 @@
   "mappings": {
     "default": {
       "map": {
-        "0": "",
-        "1": "conveyor"
+        "0": "pipe_texture",
+        "1": "conveyoranim"
       },
       "name": "default"
     }

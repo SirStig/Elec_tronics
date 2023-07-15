@@ -20,7 +20,7 @@
     "isItemTinted": false,
     "hasTransparency": true,
     "connectedSides": false,
-    "transparencyType": "SOLID",
+    "transparencyType": "CUTOUT",
     "disableOffset": false,
     "boundingBoxes": [
       {
@@ -162,8 +162,17 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
-    "onEntityWalksOn": {
-      "name": "Conveyort1EntityWalksOnTheBlock"
+    "onTickUpdate": {
+      "name": "Conveyort1UpdateTick"
+    },
+    "onDestroyedByPlayer": {
+      "name": "Conveyort1BlockDestroyed"
+    },
+    "onDestroyedByExplosion": {
+      "name": "Conveyort1BlockDestroyed"
+    },
+    "onEntityCollides": {
+      "name": "Conveyort1EntityCollidesInTheBlock"
     },
     "spawnWorldTypes": [],
     "restrictionBiomes": [],

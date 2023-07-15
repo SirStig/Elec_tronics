@@ -21,8 +21,8 @@
       "registry_name": "uranium_ingot",
       "metadata": {
         "files": [
-          "src/main/resources/assets/elec_tronics/models/item/uranium_ingot.json",
-          "src/main/java/net/elec_tronics/item/UraniumIngotItem.java"
+          "src/main/java/net/elec_tronics/item/UraniumIngotItem.java",
+          "src/main/resources/assets/elec_tronics/models/item/uranium_ingot.json"
         ]
       },
       "path": "~/Items/Ores-Ingots-Dusts"
@@ -36,14 +36,14 @@
       "registry_name": "uraniumore",
       "metadata": {
         "files": [
-          "src/main/resources/data/elec_tronics/forge/biome_modifier/uraniumore_biome_modifier.json",
           "src/main/resources/assets/elec_tronics/models/item/uraniumore.json",
           "src/main/resources/assets/elec_tronics/models/block/uraniumore.json",
-          "src/main/java/net/elec_tronics/world/features/ores/UraniumoreFeature.java",
-          "src/main/resources/data/elec_tronics/worldgen/configured_feature/uraniumore.json",
-          "src/main/resources/data/elec_tronics/worldgen/placed_feature/uraniumore.json",
           "src/main/java/net/elec_tronics/block/UraniumoreBlock.java",
-          "src/main/resources/assets/elec_tronics/blockstates/uraniumore.json"
+          "src/main/resources/data/elec_tronics/worldgen/placed_feature/uraniumore.json",
+          "src/main/resources/data/elec_tronics/forge/biome_modifier/uraniumore_biome_modifier.json",
+          "src/main/resources/data/elec_tronics/worldgen/configured_feature/uraniumore.json",
+          "src/main/resources/assets/elec_tronics/blockstates/uraniumore.json",
+          "src/main/java/net/elec_tronics/world/features/ores/UraniumoreFeature.java"
         ]
       },
       "path": "~/Items/Ores-Ingots-Dusts"
@@ -72,14 +72,14 @@
       "registry_name": "tungsten",
       "metadata": {
         "files": [
-          "src/main/resources/data/elec_tronics/worldgen/configured_feature/tungsten.json",
-          "src/main/java/net/elec_tronics/block/TungstenBlock.java",
-          "src/main/resources/data/elec_tronics/worldgen/placed_feature/tungsten.json",
-          "src/main/resources/assets/elec_tronics/models/item/tungsten.json",
           "src/main/resources/assets/elec_tronics/models/block/tungsten.json",
-          "src/main/resources/assets/elec_tronics/blockstates/tungsten.json",
+          "src/main/resources/data/elec_tronics/worldgen/configured_feature/tungsten.json",
           "src/main/resources/data/elec_tronics/forge/biome_modifier/tungsten_biome_modifier.json",
-          "src/main/java/net/elec_tronics/world/features/ores/TungstenFeature.java"
+          "src/main/resources/assets/elec_tronics/blockstates/tungsten.json",
+          "src/main/java/net/elec_tronics/block/TungstenBlock.java",
+          "src/main/java/net/elec_tronics/world/features/ores/TungstenFeature.java",
+          "src/main/resources/data/elec_tronics/worldgen/placed_feature/tungsten.json",
+          "src/main/resources/assets/elec_tronics/models/item/tungsten.json"
         ]
       },
       "path": "~/Items/Ores-Ingots-Dusts"
@@ -108,8 +108,8 @@
       "registry_name": "tungsten_ingot",
       "metadata": {
         "files": [
-          "src/main/resources/assets/elec_tronics/models/item/tungsten_ingot.json",
-          "src/main/java/net/elec_tronics/item/TungstenIngotItem.java"
+          "src/main/java/net/elec_tronics/item/TungstenIngotItem.java",
+          "src/main/resources/assets/elec_tronics/models/item/tungsten_ingot.json"
         ]
       },
       "path": "~/Items/Ores-Ingots-Dusts"
@@ -123,9 +123,9 @@
       "registry_name": "reinforcedblastbrick",
       "metadata": {
         "files": [
-          "src/main/resources/assets/elec_tronics/models/item/reinforcedblastbrick.json",
           "src/main/java/net/elec_tronics/block/ReinforcedblastbrickBlock.java",
           "src/main/resources/assets/elec_tronics/blockstates/reinforcedblastbrick.json",
+          "src/main/resources/assets/elec_tronics/models/item/reinforcedblastbrick.json",
           "src/main/resources/assets/elec_tronics/models/block/reinforcedblastbrick.json"
         ]
       },
@@ -156,10 +156,10 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/elec_tronics/models/item/blastfurnancemachine.json",
-          "src/main/resources/assets/elec_tronics/blockstates/blastfurnancemachine.json",
-          "src/main/resources/assets/elec_tronics/models/block/blastfurnancemachine.json",
           "src/main/java/net/elec_tronics/block/BlastfurnancemachineBlock.java",
-          "src/main/java/net/elec_tronics/block/entity/BlastfurnancemachineBlockEntity.java"
+          "src/main/java/net/elec_tronics/block/entity/BlastfurnancemachineBlockEntity.java",
+          "src/main/resources/assets/elec_tronics/blockstates/blastfurnancemachine.json",
+          "src/main/resources/assets/elec_tronics/models/block/blastfurnancemachine.json"
         ]
       },
       "path": "~/Blocks/BlastFurnace"
@@ -1002,8 +1002,8 @@
       "registry_name": "steelingot",
       "metadata": {
         "files": [
-          "src/main/resources/assets/elec_tronics/models/item/steelingot.json",
-          "src/main/java/net/elec_tronics/item/SteelingotItem.java"
+          "src/main/java/net/elec_tronics/item/SteelingotItem.java",
+          "src/main/resources/assets/elec_tronics/models/item/steelingot.json"
         ]
       },
       "path": "~/Items/Ores-Ingots-Dusts"
@@ -1017,8 +1017,8 @@
       "registry_name": "workbenchgui",
       "metadata": {
         "files": [
-          "src/main/java/net/elec_tronics/client/gui/WorkbenchguiScreen.java",
-          "src/main/java/net/elec_tronics/world/inventory/WorkbenchguiMenu.java"
+          "src/main/java/net/elec_tronics/world/inventory/WorkbenchguiMenu.java",
+          "src/main/java/net/elec_tronics/client/gui/WorkbenchguiScreen.java"
         ]
       },
       "path": "~/Blocks/GUI Menus"
@@ -1064,11 +1064,11 @@
       "registry_name": "engineersworkbench",
       "metadata": {
         "files": [
-          "src/main/resources/assets/elec_tronics/models/block/engineersworkbench.json",
-          "src/main/java/net/elec_tronics/block/entity/EngineersworkbenchBlockEntity.java",
           "src/main/resources/assets/elec_tronics/blockstates/engineersworkbench.json",
-          "src/main/java/net/elec_tronics/block/EngineersworkbenchBlock.java",
-          "src/main/resources/assets/elec_tronics/models/item/engineersworkbench.json"
+          "src/main/resources/assets/elec_tronics/models/block/engineersworkbench.json",
+          "src/main/resources/assets/elec_tronics/models/item/engineersworkbench.json",
+          "src/main/java/net/elec_tronics/block/entity/EngineersworkbenchBlockEntity.java",
+          "src/main/java/net/elec_tronics/block/EngineersworkbenchBlock.java"
         ]
       },
       "path": "~/Blocks/Engineers Workbench"
@@ -1097,8 +1097,8 @@
       "registry_name": "steelsword",
       "metadata": {
         "files": [
-          "src/main/resources/assets/elec_tronics/models/item/steelsword.json",
-          "src/main/java/net/elec_tronics/item/SteelswordItem.java"
+          "src/main/java/net/elec_tronics/item/SteelswordItem.java",
+          "src/main/resources/assets/elec_tronics/models/item/steelsword.json"
         ]
       },
       "path": "~/Items/Tools-Armor"
@@ -1127,8 +1127,8 @@
       "registry_name": "steelaxe",
       "metadata": {
         "files": [
-          "src/main/resources/assets/elec_tronics/models/item/steelaxe.json",
-          "src/main/java/net/elec_tronics/item/SteelaxeItem.java"
+          "src/main/java/net/elec_tronics/item/SteelaxeItem.java",
+          "src/main/resources/assets/elec_tronics/models/item/steelaxe.json"
         ]
       },
       "path": "~/Items/Tools-Armor"
@@ -1142,8 +1142,8 @@
       "registry_name": "steelhoe",
       "metadata": {
         "files": [
-          "src/main/resources/assets/elec_tronics/models/item/steelhoe.json",
-          "src/main/java/net/elec_tronics/item/SteelhoeItem.java"
+          "src/main/java/net/elec_tronics/item/SteelhoeItem.java",
+          "src/main/resources/assets/elec_tronics/models/item/steelhoe.json"
         ]
       },
       "path": "~/Items/Tools-Armor"
@@ -1227,8 +1227,8 @@
       "registry_name": "hand_saw",
       "metadata": {
         "files": [
-          "src/main/resources/assets/elec_tronics/models/item/hand_saw.json",
-          "src/main/java/net/elec_tronics/item/HandSawItem.java"
+          "src/main/java/net/elec_tronics/item/HandSawItem.java",
+          "src/main/resources/assets/elec_tronics/models/item/hand_saw.json"
         ]
       },
       "path": "~/Items/Tools-Armor"
@@ -1257,8 +1257,8 @@
       "registry_name": "hammer",
       "metadata": {
         "files": [
-          "src/main/java/net/elec_tronics/item/HammerItem.java",
-          "src/main/resources/assets/elec_tronics/models/item/hammer.json"
+          "src/main/resources/assets/elec_tronics/models/item/hammer.json",
+          "src/main/java/net/elec_tronics/item/HammerItem.java"
         ]
       },
       "path": "~/Items/Tools-Armor"
@@ -1328,8 +1328,8 @@
       "registry_name": "sharpenediron",
       "metadata": {
         "files": [
-          "src/main/java/net/elec_tronics/item/SharpenedironItem.java",
-          "src/main/resources/assets/elec_tronics/models/item/sharpenediron.json"
+          "src/main/resources/assets/elec_tronics/models/item/sharpenediron.json",
+          "src/main/java/net/elec_tronics/item/SharpenedironItem.java"
         ]
       },
       "path": "~/Items/Components"
@@ -1393,10 +1393,10 @@
       "registry_name": "waterturbinemachine",
       "metadata": {
         "files": [
-          "src/main/resources/assets/elec_tronics/blockstates/waterturbinemachine.json",
-          "src/main/resources/assets/elec_tronics/models/block/waterturbinemachine.json",
           "src/main/resources/assets/elec_tronics/models/item/waterturbinemachine.json",
-          "src/main/java/net/elec_tronics/block/WaterturbinemachineBlock.java"
+          "src/main/java/net/elec_tronics/block/WaterturbinemachineBlock.java",
+          "src/main/resources/assets/elec_tronics/models/block/waterturbinemachine.json",
+          "src/main/resources/assets/elec_tronics/blockstates/waterturbinemachine.json"
         ]
       },
       "path": "~/Blocks/WaterTurbine"
@@ -1425,8 +1425,8 @@
       "registry_name": "ash",
       "metadata": {
         "files": [
-          "src/main/java/net/elec_tronics/item/AshItem.java",
-          "src/main/resources/assets/elec_tronics/models/item/ash.json"
+          "src/main/resources/assets/elec_tronics/models/item/ash.json",
+          "src/main/java/net/elec_tronics/item/AshItem.java"
         ]
       },
       "path": "~/Items/Ores-Ingots-Dusts"
@@ -1440,11 +1440,11 @@
       "registry_name": "crushermachine",
       "metadata": {
         "files": [
+          "src/main/resources/assets/elec_tronics/blockstates/crushermachine.json",
+          "src/main/java/net/elec_tronics/block/entity/CrushermachineBlockEntity.java",
           "src/main/resources/assets/elec_tronics/models/block/crushermachine.json",
           "src/main/java/net/elec_tronics/block/CrushermachineBlock.java",
-          "src/main/resources/assets/elec_tronics/models/item/crushermachine.json",
-          "src/main/resources/assets/elec_tronics/blockstates/crushermachine.json",
-          "src/main/java/net/elec_tronics/block/entity/CrushermachineBlockEntity.java"
+          "src/main/resources/assets/elec_tronics/models/item/crushermachine.json"
         ]
       },
       "path": "~/Blocks/CrusherT1-T4"
@@ -1458,8 +1458,8 @@
       "registry_name": "crusher_t_1_gui",
       "metadata": {
         "files": [
-          "src/main/java/net/elec_tronics/world/inventory/CrusherT1GUIMenu.java",
-          "src/main/java/net/elec_tronics/client/gui/CrusherT1GUIScreen.java"
+          "src/main/java/net/elec_tronics/client/gui/CrusherT1GUIScreen.java",
+          "src/main/java/net/elec_tronics/world/inventory/CrusherT1GUIMenu.java"
         ]
       },
       "path": "~/Blocks/GUI Menus"
@@ -1506,8 +1506,8 @@
       "registry_name": "irondust",
       "metadata": {
         "files": [
-          "src/main/java/net/elec_tronics/item/IrondustItem.java",
-          "src/main/resources/assets/elec_tronics/models/item/irondust.json"
+          "src/main/resources/assets/elec_tronics/models/item/irondust.json",
+          "src/main/java/net/elec_tronics/item/IrondustItem.java"
         ]
       },
       "path": "~/Items/Ores-Ingots-Dusts"
@@ -1567,11 +1567,11 @@
       "registry_name": "t_1_wire",
       "metadata": {
         "files": [
-          "src/main/resources/assets/elec_tronics/models/block/t_1_wire.json",
           "src/main/resources/assets/elec_tronics/blockstates/t_1_wire.json",
-          "src/main/resources/assets/elec_tronics/models/item/t_1_wire.json",
           "src/main/java/net/elec_tronics/block/entity/T1WireBlockEntity.java",
-          "src/main/java/net/elec_tronics/block/T1WireBlock.java"
+          "src/main/resources/assets/elec_tronics/models/item/t_1_wire.json",
+          "src/main/java/net/elec_tronics/block/T1WireBlock.java",
+          "src/main/resources/assets/elec_tronics/models/block/t_1_wire.json"
         ]
       },
       "path": "~/Blocks/Wires-Pipes/WiresT1"
@@ -1915,11 +1915,11 @@
       "registry_name": "cable_angle_t_1",
       "metadata": {
         "files": [
-          "src/main/resources/assets/elec_tronics/blockstates/cable_angle_t_1.json",
+          "src/main/resources/assets/elec_tronics/models/item/cable_angle_t_1.json",
           "src/main/java/net/elec_tronics/block/CableAngleT1Block.java",
-          "src/main/java/net/elec_tronics/block/entity/CableAngleT1BlockEntity.java",
           "src/main/resources/assets/elec_tronics/models/block/cable_angle_t_1.json",
-          "src/main/resources/assets/elec_tronics/models/item/cable_angle_t_1.json"
+          "src/main/resources/assets/elec_tronics/blockstates/cable_angle_t_1.json",
+          "src/main/java/net/elec_tronics/block/entity/CableAngleT1BlockEntity.java"
         ]
       },
       "path": "~/Blocks/Wires-Pipes/WiresT1"
@@ -1933,10 +1933,10 @@
       "registry_name": "cable_tt_1",
       "metadata": {
         "files": [
-          "src/main/resources/assets/elec_tronics/models/item/cable_tt_1.json",
-          "src/main/resources/assets/elec_tronics/blockstates/cable_tt_1.json",
           "src/main/java/net/elec_tronics/block/entity/CableTT1BlockEntity.java",
           "src/main/resources/assets/elec_tronics/models/block/cable_tt_1.json",
+          "src/main/resources/assets/elec_tronics/models/item/cable_tt_1.json",
+          "src/main/resources/assets/elec_tronics/blockstates/cable_tt_1.json",
           "src/main/java/net/elec_tronics/block/CableTT1Block.java"
         ]
       },
@@ -2019,11 +2019,11 @@
       "registry_name": "cable_junction_t_1",
       "metadata": {
         "files": [
-          "src/main/java/net/elec_tronics/block/entity/CableJunctionT1BlockEntity.java",
-          "src/main/resources/assets/elec_tronics/models/item/cable_junction_t_1.json",
+          "src/main/java/net/elec_tronics/block/CableJunctionT1Block.java",
           "src/main/resources/assets/elec_tronics/blockstates/cable_junction_t_1.json",
-          "src/main/resources/assets/elec_tronics/models/block/cable_junction_t_1.json",
-          "src/main/java/net/elec_tronics/block/CableJunctionT1Block.java"
+          "src/main/resources/assets/elec_tronics/models/item/cable_junction_t_1.json",
+          "src/main/java/net/elec_tronics/block/entity/CableJunctionT1BlockEntity.java",
+          "src/main/resources/assets/elec_tronics/models/block/cable_junction_t_1.json"
         ]
       },
       "path": "~/Blocks/Wires-Pipes/WiresT1"
@@ -2037,11 +2037,11 @@
       "registry_name": "engineers_work_bench_top_side",
       "metadata": {
         "files": [
-          "src/main/resources/assets/elec_tronics/blockstates/engineers_work_bench_top_side.json",
           "src/main/java/net/elec_tronics/block/EngineersWorkBenchTopSideBlock.java",
-          "src/main/java/net/elec_tronics/block/entity/EngineersWorkBenchTopSideBlockEntity.java",
           "src/main/resources/assets/elec_tronics/models/item/engineers_work_bench_top_side.json",
-          "src/main/resources/assets/elec_tronics/models/block/engineers_work_bench_top_side.json"
+          "src/main/resources/assets/elec_tronics/models/block/engineers_work_bench_top_side.json",
+          "src/main/java/net/elec_tronics/block/entity/EngineersWorkBenchTopSideBlockEntity.java",
+          "src/main/resources/assets/elec_tronics/blockstates/engineers_work_bench_top_side.json"
         ]
       },
       "path": "~/Blocks/Engineers Workbench"
@@ -2055,11 +2055,11 @@
       "registry_name": "engineers_work_bench_side",
       "metadata": {
         "files": [
-          "src/main/java/net/elec_tronics/block/entity/EngineersWorkBenchSideBlockEntity.java",
-          "src/main/resources/assets/elec_tronics/blockstates/engineers_work_bench_side.json",
-          "src/main/java/net/elec_tronics/block/EngineersWorkBenchSideBlock.java",
           "src/main/resources/assets/elec_tronics/models/block/engineers_work_bench_side.json",
-          "src/main/resources/assets/elec_tronics/models/item/engineers_work_bench_side.json"
+          "src/main/resources/assets/elec_tronics/blockstates/engineers_work_bench_side.json",
+          "src/main/resources/assets/elec_tronics/models/item/engineers_work_bench_side.json",
+          "src/main/java/net/elec_tronics/block/entity/EngineersWorkBenchSideBlockEntity.java",
+          "src/main/java/net/elec_tronics/block/EngineersWorkBenchSideBlock.java"
         ]
       },
       "path": "~/Blocks/Engineers Workbench"
@@ -2073,11 +2073,11 @@
       "registry_name": "engineers_work_bench_top",
       "metadata": {
         "files": [
-          "src/main/java/net/elec_tronics/block/entity/EngineersWorkBenchTopBlockEntity.java",
           "src/main/resources/assets/elec_tronics/blockstates/engineers_work_bench_top.json",
           "src/main/resources/assets/elec_tronics/models/block/engineers_work_bench_top.json",
-          "src/main/java/net/elec_tronics/block/EngineersWorkBenchTopBlock.java",
-          "src/main/resources/assets/elec_tronics/models/item/engineers_work_bench_top.json"
+          "src/main/java/net/elec_tronics/block/entity/EngineersWorkBenchTopBlockEntity.java",
+          "src/main/resources/assets/elec_tronics/models/item/engineers_work_bench_top.json",
+          "src/main/java/net/elec_tronics/block/EngineersWorkBenchTopBlock.java"
         ]
       },
       "path": "~/Blocks/Engineers Workbench"
@@ -2106,10 +2106,10 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/elec_tronics/models/item/cable_t_up_t_1.json",
-          "src/main/java/net/elec_tronics/block/entity/CableTUpT1BlockEntity.java",
-          "src/main/resources/assets/elec_tronics/blockstates/cable_t_up_t_1.json",
           "src/main/resources/assets/elec_tronics/models/block/cable_t_up_t_1.json",
-          "src/main/java/net/elec_tronics/block/CableTUpT1Block.java"
+          "src/main/java/net/elec_tronics/block/entity/CableTUpT1BlockEntity.java",
+          "src/main/java/net/elec_tronics/block/CableTUpT1Block.java",
+          "src/main/resources/assets/elec_tronics/blockstates/cable_t_up_t_1.json"
         ]
       },
       "path": "~/Blocks/Wires-Pipes/WiresT1"
@@ -2124,10 +2124,10 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/elec_tronics/models/block/cable_t_down_t_1.json",
-          "src/main/resources/assets/elec_tronics/models/item/cable_t_down_t_1.json",
           "src/main/java/net/elec_tronics/block/CableTDownT1Block.java",
-          "src/main/resources/assets/elec_tronics/blockstates/cable_t_down_t_1.json",
-          "src/main/java/net/elec_tronics/block/entity/CableTDownT1BlockEntity.java"
+          "src/main/java/net/elec_tronics/block/entity/CableTDownT1BlockEntity.java",
+          "src/main/resources/assets/elec_tronics/models/item/cable_t_down_t_1.json",
+          "src/main/resources/assets/elec_tronics/blockstates/cable_t_down_t_1.json"
         ]
       },
       "path": "~/Blocks/Wires-Pipes/WiresT1"
@@ -2141,10 +2141,10 @@
       "registry_name": "cable_t_upand_down_t_1",
       "metadata": {
         "files": [
-          "src/main/resources/assets/elec_tronics/blockstates/cable_t_upand_down_t_1.json",
-          "src/main/resources/assets/elec_tronics/models/item/cable_t_upand_down_t_1.json",
           "src/main/java/net/elec_tronics/block/CableTUpandDownT1Block.java",
+          "src/main/resources/assets/elec_tronics/blockstates/cable_t_upand_down_t_1.json",
           "src/main/java/net/elec_tronics/block/entity/CableTUpandDownT1BlockEntity.java",
+          "src/main/resources/assets/elec_tronics/models/item/cable_t_upand_down_t_1.json",
           "src/main/resources/assets/elec_tronics/models/block/cable_t_upand_down_t_1.json"
         ]
       },
@@ -2159,11 +2159,11 @@
       "registry_name": "cable_junction_up_t_1",
       "metadata": {
         "files": [
-          "src/main/java/net/elec_tronics/block/entity/CableJunctionUpT1BlockEntity.java",
-          "src/main/resources/assets/elec_tronics/blockstates/cable_junction_up_t_1.json",
           "src/main/java/net/elec_tronics/block/CableJunctionUpT1Block.java",
           "src/main/resources/assets/elec_tronics/models/block/cable_junction_up_t_1.json",
-          "src/main/resources/assets/elec_tronics/models/item/cable_junction_up_t_1.json"
+          "src/main/resources/assets/elec_tronics/models/item/cable_junction_up_t_1.json",
+          "src/main/resources/assets/elec_tronics/blockstates/cable_junction_up_t_1.json",
+          "src/main/java/net/elec_tronics/block/entity/CableJunctionUpT1BlockEntity.java"
         ]
       },
       "path": "~/Blocks/Wires-Pipes/WiresT1"
@@ -2177,11 +2177,11 @@
       "registry_name": "cable_junction_down_t_1",
       "metadata": {
         "files": [
-          "src/main/resources/assets/elec_tronics/blockstates/cable_junction_down_t_1.json",
           "src/main/java/net/elec_tronics/block/CableJunctionDownT1Block.java",
           "src/main/resources/assets/elec_tronics/models/item/cable_junction_down_t_1.json",
           "src/main/resources/assets/elec_tronics/models/block/cable_junction_down_t_1.json",
-          "src/main/java/net/elec_tronics/block/entity/CableJunctionDownT1BlockEntity.java"
+          "src/main/java/net/elec_tronics/block/entity/CableJunctionDownT1BlockEntity.java",
+          "src/main/resources/assets/elec_tronics/blockstates/cable_junction_down_t_1.json"
         ]
       },
       "path": "~/Blocks/Wires-Pipes/WiresT1"
@@ -2195,11 +2195,11 @@
       "registry_name": "cable_junction_upand_down_t_1",
       "metadata": {
         "files": [
+          "src/main/resources/assets/elec_tronics/models/item/cable_junction_upand_down_t_1.json",
+          "src/main/resources/assets/elec_tronics/models/block/cable_junction_upand_down_t_1.json",
           "src/main/java/net/elec_tronics/block/CableJunctionUpandDownT1Block.java",
           "src/main/resources/assets/elec_tronics/blockstates/cable_junction_upand_down_t_1.json",
-          "src/main/java/net/elec_tronics/block/entity/CableJunctionUpandDownT1BlockEntity.java",
-          "src/main/resources/assets/elec_tronics/models/item/cable_junction_upand_down_t_1.json",
-          "src/main/resources/assets/elec_tronics/models/block/cable_junction_upand_down_t_1.json"
+          "src/main/java/net/elec_tronics/block/entity/CableJunctionUpandDownT1BlockEntity.java"
         ]
       },
       "path": "~/Blocks/Wires-Pipes/WiresT1"
@@ -2213,9 +2213,9 @@
       "registry_name": "basewirecon_5main",
       "metadata": {
         "files": [
+          "src/main/resources/assets/elec_tronics/models/block/basewirecon_5main.json",
           "src/main/java/net/elec_tronics/block/Basewirecon5mainBlock.java",
           "src/main/resources/assets/elec_tronics/models/item/basewirecon_5main.json",
-          "src/main/resources/assets/elec_tronics/models/block/basewirecon_5main.json",
           "src/main/resources/assets/elec_tronics/blockstates/basewirecon_5main.json",
           "src/main/java/net/elec_tronics/block/entity/Basewirecon5mainBlockEntity.java"
         ]
@@ -2231,11 +2231,11 @@
       "registry_name": "basewirecon_4down",
       "metadata": {
         "files": [
-          "src/main/java/net/elec_tronics/block/Basewirecon4downBlock.java",
           "src/main/java/net/elec_tronics/block/entity/Basewirecon4downBlockEntity.java",
-          "src/main/resources/assets/elec_tronics/models/item/basewirecon_4down.json",
+          "src/main/java/net/elec_tronics/block/Basewirecon4downBlock.java",
           "src/main/resources/assets/elec_tronics/models/block/basewirecon_4down.json",
-          "src/main/resources/assets/elec_tronics/blockstates/basewirecon_4down.json"
+          "src/main/resources/assets/elec_tronics/blockstates/basewirecon_4down.json",
+          "src/main/resources/assets/elec_tronics/models/item/basewirecon_4down.json"
         ]
       },
       "path": "~/Blocks/Wires-Pipes/WiresT1"
@@ -2249,11 +2249,11 @@
       "registry_name": "basewirecon_2angleup",
       "metadata": {
         "files": [
-          "src/main/java/net/elec_tronics/block/entity/Basewirecon2angleupBlockEntity.java",
-          "src/main/resources/assets/elec_tronics/models/item/basewirecon_2angleup.json",
           "src/main/resources/assets/elec_tronics/blockstates/basewirecon_2angleup.json",
-          "src/main/resources/assets/elec_tronics/models/block/basewirecon_2angleup.json",
-          "src/main/java/net/elec_tronics/block/Basewirecon2angleupBlock.java"
+          "src/main/java/net/elec_tronics/block/Basewirecon2angleupBlock.java",
+          "src/main/resources/assets/elec_tronics/models/item/basewirecon_2angleup.json",
+          "src/main/java/net/elec_tronics/block/entity/Basewirecon2angleupBlockEntity.java",
+          "src/main/resources/assets/elec_tronics/models/block/basewirecon_2angleup.json"
         ]
       },
       "path": "~/Blocks/Wires-Pipes/WiresT1"
@@ -2268,10 +2268,10 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/elec_tronics/models/block/basewirecon_3down.json",
-          "src/main/resources/assets/elec_tronics/blockstates/basewirecon_3down.json",
           "src/main/resources/assets/elec_tronics/models/item/basewirecon_3down.json",
-          "src/main/java/net/elec_tronics/block/Basewirecon3downBlock.java",
-          "src/main/java/net/elec_tronics/block/entity/Basewirecon3downBlockEntity.java"
+          "src/main/resources/assets/elec_tronics/blockstates/basewirecon_3down.json",
+          "src/main/java/net/elec_tronics/block/entity/Basewirecon3downBlockEntity.java",
+          "src/main/java/net/elec_tronics/block/Basewirecon3downBlock.java"
         ]
       },
       "path": "~/Blocks/Wires-Pipes/WiresT1"
@@ -2285,11 +2285,11 @@
       "registry_name": "basewirecon_3up",
       "metadata": {
         "files": [
+          "src/main/resources/assets/elec_tronics/models/block/basewirecon_3up.json",
+          "src/main/java/net/elec_tronics/block/entity/Basewirecon3upBlockEntity.java",
           "src/main/java/net/elec_tronics/block/Basewirecon3upBlock.java",
           "src/main/resources/assets/elec_tronics/models/item/basewirecon_3up.json",
-          "src/main/resources/assets/elec_tronics/blockstates/basewirecon_3up.json",
-          "src/main/resources/assets/elec_tronics/models/block/basewirecon_3up.json",
-          "src/main/java/net/elec_tronics/block/entity/Basewirecon3upBlockEntity.java"
+          "src/main/resources/assets/elec_tronics/blockstates/basewirecon_3up.json"
         ]
       },
       "path": "~/Blocks/Wires-Pipes/WiresT1"
@@ -2303,11 +2303,11 @@
       "registry_name": "basewirecon_4up",
       "metadata": {
         "files": [
-          "src/main/java/net/elec_tronics/block/Basewirecon4upBlock.java",
-          "src/main/java/net/elec_tronics/block/entity/Basewirecon4upBlockEntity.java",
-          "src/main/resources/assets/elec_tronics/blockstates/basewirecon_4up.json",
           "src/main/resources/assets/elec_tronics/models/block/basewirecon_4up.json",
-          "src/main/resources/assets/elec_tronics/models/item/basewirecon_4up.json"
+          "src/main/java/net/elec_tronics/block/Basewirecon4upBlock.java",
+          "src/main/resources/assets/elec_tronics/models/item/basewirecon_4up.json",
+          "src/main/resources/assets/elec_tronics/blockstates/basewirecon_4up.json",
+          "src/main/java/net/elec_tronics/block/entity/Basewirecon4upBlockEntity.java"
         ]
       },
       "path": "~/Blocks/Wires-Pipes/WiresT1"
@@ -2321,11 +2321,11 @@
       "registry_name": "basecable_t_1",
       "metadata": {
         "files": [
-          "src/main/java/net/elec_tronics/block/entity/BasecableT1BlockEntity.java",
-          "src/main/resources/assets/elec_tronics/models/block/basecable_t_1.json",
-          "src/main/resources/assets/elec_tronics/blockstates/basecable_t_1.json",
           "src/main/java/net/elec_tronics/block/BasecableT1Block.java",
-          "src/main/resources/assets/elec_tronics/models/item/basecable_t_1.json"
+          "src/main/java/net/elec_tronics/block/entity/BasecableT1BlockEntity.java",
+          "src/main/resources/assets/elec_tronics/blockstates/basecable_t_1.json",
+          "src/main/resources/assets/elec_tronics/models/item/basecable_t_1.json",
+          "src/main/resources/assets/elec_tronics/models/block/basecable_t_1.json"
         ]
       },
       "path": "~/Blocks/Wires-Pipes/WiresT1"
@@ -2340,10 +2340,10 @@
       "metadata": {
         "files": [
           "src/main/java/net/elec_tronics/block/Basewirecon2angledownBlock.java",
-          "src/main/resources/assets/elec_tronics/models/block/basewirecon_2angledown.json",
+          "src/main/resources/assets/elec_tronics/blockstates/basewirecon_2angledown.json",
           "src/main/java/net/elec_tronics/block/entity/Basewirecon2angledownBlockEntity.java",
-          "src/main/resources/assets/elec_tronics/models/item/basewirecon_2angledown.json",
-          "src/main/resources/assets/elec_tronics/blockstates/basewirecon_2angledown.json"
+          "src/main/resources/assets/elec_tronics/models/block/basewirecon_2angledown.json",
+          "src/main/resources/assets/elec_tronics/models/item/basewirecon_2angledown.json"
         ]
       },
       "path": "~/Blocks/Wires-Pipes/WiresT1"
@@ -2357,10 +2357,10 @@
       "registry_name": "basewirecon_4upanddown",
       "metadata": {
         "files": [
-          "src/main/java/net/elec_tronics/block/entity/Basewirecon4upanddownBlockEntity.java",
-          "src/main/resources/assets/elec_tronics/models/item/basewirecon_4upanddown.json",
-          "src/main/resources/assets/elec_tronics/models/block/basewirecon_4upanddown.json",
           "src/main/resources/assets/elec_tronics/blockstates/basewirecon_4upanddown.json",
+          "src/main/resources/assets/elec_tronics/models/block/basewirecon_4upanddown.json",
+          "src/main/resources/assets/elec_tronics/models/item/basewirecon_4upanddown.json",
+          "src/main/java/net/elec_tronics/block/entity/Basewirecon4upanddownBlockEntity.java",
           "src/main/java/net/elec_tronics/block/Basewirecon4upanddownBlock.java"
         ]
       },
@@ -2375,11 +2375,11 @@
       "registry_name": "basewirecon_3upangle",
       "metadata": {
         "files": [
-          "src/main/java/net/elec_tronics/block/Basewirecon3upangleBlock.java",
           "src/main/resources/assets/elec_tronics/blockstates/basewirecon_3upangle.json",
-          "src/main/resources/assets/elec_tronics/models/block/basewirecon_3upangle.json",
+          "src/main/java/net/elec_tronics/block/entity/Basewirecon3upangleBlockEntity.java",
           "src/main/resources/assets/elec_tronics/models/item/basewirecon_3upangle.json",
-          "src/main/java/net/elec_tronics/block/entity/Basewirecon3upangleBlockEntity.java"
+          "src/main/java/net/elec_tronics/block/Basewirecon3upangleBlock.java",
+          "src/main/resources/assets/elec_tronics/models/block/basewirecon_3upangle.json"
         ]
       },
       "path": "~/Blocks/Wires-Pipes/WiresT1"
@@ -2393,11 +2393,11 @@
       "registry_name": "basewirecon_3",
       "metadata": {
         "files": [
-          "src/main/resources/assets/elec_tronics/blockstates/basewirecon_3.json",
-          "src/main/resources/assets/elec_tronics/models/block/basewirecon_3.json",
-          "src/main/java/net/elec_tronics/block/entity/Basewirecon3BlockEntity.java",
           "src/main/resources/assets/elec_tronics/models/item/basewirecon_3.json",
-          "src/main/java/net/elec_tronics/block/Basewirecon3Block.java"
+          "src/main/java/net/elec_tronics/block/Basewirecon3Block.java",
+          "src/main/java/net/elec_tronics/block/entity/Basewirecon3BlockEntity.java",
+          "src/main/resources/assets/elec_tronics/blockstates/basewirecon_3.json",
+          "src/main/resources/assets/elec_tronics/models/block/basewirecon_3.json"
         ]
       },
       "path": "~/Blocks/Wires-Pipes/WiresT1"
@@ -2411,11 +2411,11 @@
       "registry_name": "basewirecon_5down",
       "metadata": {
         "files": [
-          "src/main/resources/assets/elec_tronics/blockstates/basewirecon_5down.json",
           "src/main/resources/assets/elec_tronics/models/item/basewirecon_5down.json",
+          "src/main/resources/assets/elec_tronics/blockstates/basewirecon_5down.json",
           "src/main/java/net/elec_tronics/block/entity/Basewirecon5downBlockEntity.java",
-          "src/main/java/net/elec_tronics/block/Basewirecon5downBlock.java",
-          "src/main/resources/assets/elec_tronics/models/block/basewirecon_5down.json"
+          "src/main/resources/assets/elec_tronics/models/block/basewirecon_5down.json",
+          "src/main/java/net/elec_tronics/block/Basewirecon5downBlock.java"
         ]
       },
       "path": "~/Blocks/Wires-Pipes/WiresT1"
@@ -2429,10 +2429,10 @@
       "registry_name": "basewirecon_2angle",
       "metadata": {
         "files": [
-          "src/main/resources/assets/elec_tronics/models/block/basewirecon_2angle.json",
           "src/main/resources/assets/elec_tronics/models/item/basewirecon_2angle.json",
-          "src/main/java/net/elec_tronics/block/Basewirecon2angleBlock.java",
           "src/main/resources/assets/elec_tronics/blockstates/basewirecon_2angle.json",
+          "src/main/java/net/elec_tronics/block/Basewirecon2angleBlock.java",
+          "src/main/resources/assets/elec_tronics/models/block/basewirecon_2angle.json",
           "src/main/java/net/elec_tronics/block/entity/Basewirecon2angleBlockEntity.java"
         ]
       },
@@ -2447,10 +2447,10 @@
       "registry_name": "basewirecon_4upanddownstraight",
       "metadata": {
         "files": [
-          "src/main/java/net/elec_tronics/block/entity/Basewirecon4upanddownstraightBlockEntity.java",
-          "src/main/resources/assets/elec_tronics/blockstates/basewirecon_4upanddownstraight.json",
-          "src/main/resources/assets/elec_tronics/models/block/basewirecon_4upanddownstraight.json",
           "src/main/java/net/elec_tronics/block/Basewirecon4upanddownstraightBlock.java",
+          "src/main/resources/assets/elec_tronics/models/block/basewirecon_4upanddownstraight.json",
+          "src/main/resources/assets/elec_tronics/blockstates/basewirecon_4upanddownstraight.json",
+          "src/main/java/net/elec_tronics/block/entity/Basewirecon4upanddownstraightBlockEntity.java",
           "src/main/resources/assets/elec_tronics/models/item/basewirecon_4upanddownstraight.json"
         ]
       },
@@ -2467,9 +2467,9 @@
         "files": [
           "src/main/java/net/elec_tronics/block/entity/CablehalfT1BlockEntity.java",
           "src/main/resources/assets/elec_tronics/blockstates/cablehalf_t_1.json",
-          "src/main/java/net/elec_tronics/block/CablehalfT1Block.java",
+          "src/main/resources/assets/elec_tronics/models/block/cablehalf_t_1.json",
           "src/main/resources/assets/elec_tronics/models/item/cablehalf_t_1.json",
-          "src/main/resources/assets/elec_tronics/models/block/cablehalf_t_1.json"
+          "src/main/java/net/elec_tronics/block/CablehalfT1Block.java"
         ]
       },
       "path": "~/Blocks/Wires-Pipes/WiresT1"
@@ -2483,11 +2483,11 @@
       "registry_name": "basewirecon_3downandup",
       "metadata": {
         "files": [
-          "src/main/resources/assets/elec_tronics/blockstates/basewirecon_3downandup.json",
           "src/main/java/net/elec_tronics/block/entity/Basewirecon3downandupBlockEntity.java",
+          "src/main/resources/assets/elec_tronics/blockstates/basewirecon_3downandup.json",
+          "src/main/resources/assets/elec_tronics/models/block/basewirecon_3downandup.json",
           "src/main/java/net/elec_tronics/block/Basewirecon3downandupBlock.java",
-          "src/main/resources/assets/elec_tronics/models/item/basewirecon_3downandup.json",
-          "src/main/resources/assets/elec_tronics/models/block/basewirecon_3downandup.json"
+          "src/main/resources/assets/elec_tronics/models/item/basewirecon_3downandup.json"
         ]
       },
       "path": "~/Blocks/Wires-Pipes/WiresT1"
@@ -2501,11 +2501,11 @@
       "registry_name": "basewirecon_3downangle",
       "metadata": {
         "files": [
-          "src/main/resources/assets/elec_tronics/models/block/basewirecon_3downangle.json",
-          "src/main/java/net/elec_tronics/block/Basewirecon3downangleBlock.java",
+          "src/main/resources/assets/elec_tronics/models/item/basewirecon_3downangle.json",
           "src/main/java/net/elec_tronics/block/entity/Basewirecon3downangleBlockEntity.java",
-          "src/main/resources/assets/elec_tronics/blockstates/basewirecon_3downangle.json",
-          "src/main/resources/assets/elec_tronics/models/item/basewirecon_3downangle.json"
+          "src/main/java/net/elec_tronics/block/Basewirecon3downangleBlock.java",
+          "src/main/resources/assets/elec_tronics/models/block/basewirecon_3downangle.json",
+          "src/main/resources/assets/elec_tronics/blockstates/basewirecon_3downangle.json"
         ]
       },
       "path": "~/Blocks/Wires-Pipes/WiresT1"
@@ -2519,11 +2519,11 @@
       "registry_name": "solar_panel_t_1",
       "metadata": {
         "files": [
-          "src/main/resources/assets/elec_tronics/models/block/solar_panel_t_1.json",
-          "src/main/java/net/elec_tronics/block/SolarPanelT1Block.java",
-          "src/main/resources/assets/elec_tronics/models/item/solar_panel_t_1.json",
           "src/main/resources/assets/elec_tronics/blockstates/solar_panel_t_1.json",
-          "src/main/java/net/elec_tronics/block/entity/SolarPanelT1BlockEntity.java"
+          "src/main/resources/assets/elec_tronics/models/block/solar_panel_t_1.json",
+          "src/main/java/net/elec_tronics/block/entity/SolarPanelT1BlockEntity.java",
+          "src/main/java/net/elec_tronics/block/SolarPanelT1Block.java",
+          "src/main/resources/assets/elec_tronics/models/item/solar_panel_t_1.json"
         ]
       },
       "path": "~/Blocks/Solar Panels"
@@ -2637,10 +2637,10 @@
       "registry_name": "solar_panelr",
       "metadata": {
         "files": [
+          "src/main/resources/assets/elec_tronics/blockstates/solar_panelr.json",
           "src/main/resources/assets/elec_tronics/models/item/solar_panelr.json",
           "src/main/java/net/elec_tronics/block/entity/SolarPanelrBlockEntity.java",
           "src/main/java/net/elec_tronics/block/SolarPanelrBlock.java",
-          "src/main/resources/assets/elec_tronics/blockstates/solar_panelr.json",
           "src/main/resources/assets/elec_tronics/models/block/solar_panelr.json"
         ]
       },
@@ -2656,10 +2656,10 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/elec_tronics/models/block/solarpaneltop.json",
-          "src/main/resources/assets/elec_tronics/models/item/solarpaneltop.json",
-          "src/main/java/net/elec_tronics/block/SolarpaneltopBlock.java",
+          "src/main/java/net/elec_tronics/block/entity/SolarpaneltopBlockEntity.java",
           "src/main/resources/assets/elec_tronics/blockstates/solarpaneltop.json",
-          "src/main/java/net/elec_tronics/block/entity/SolarpaneltopBlockEntity.java"
+          "src/main/resources/assets/elec_tronics/models/item/solarpaneltop.json",
+          "src/main/java/net/elec_tronics/block/SolarpaneltopBlock.java"
         ]
       },
       "path": "~/Blocks/Solar Panels"
@@ -2675,9 +2675,9 @@
         "files": [
           "src/main/java/net/elec_tronics/block/entity/SolarpaneltoprBlockEntity.java",
           "src/main/resources/assets/elec_tronics/models/block/solarpaneltopr.json",
-          "src/main/resources/assets/elec_tronics/models/item/solarpaneltopr.json",
           "src/main/resources/assets/elec_tronics/blockstates/solarpaneltopr.json",
-          "src/main/java/net/elec_tronics/block/SolarpaneltoprBlock.java"
+          "src/main/java/net/elec_tronics/block/SolarpaneltoprBlock.java",
+          "src/main/resources/assets/elec_tronics/models/item/solarpaneltopr.json"
         ]
       },
       "path": "~/Blocks/Solar Panels"
@@ -2759,8 +2759,8 @@
       "registry_name": "solarpanel_gui",
       "metadata": {
         "files": [
-          "src/main/java/net/elec_tronics/world/inventory/SolarpanelGUIMenu.java",
-          "src/main/java/net/elec_tronics/client/gui/SolarpanelGUIScreen.java"
+          "src/main/java/net/elec_tronics/client/gui/SolarpanelGUIScreen.java",
+          "src/main/java/net/elec_tronics/world/inventory/SolarpanelGUIMenu.java"
         ]
       },
       "path": "~/Blocks/GUI Menus"
@@ -2914,8 +2914,8 @@
       "registry_name": "gold_dust",
       "metadata": {
         "files": [
-          "src/main/java/net/elec_tronics/item/GoldDustItem.java",
-          "src/main/resources/assets/elec_tronics/models/item/gold_dust.json"
+          "src/main/resources/assets/elec_tronics/models/item/gold_dust.json",
+          "src/main/java/net/elec_tronics/item/GoldDustItem.java"
         ]
       },
       "path": "~/Items/Ores-Ingots-Dusts"
@@ -2929,8 +2929,8 @@
       "registry_name": "emerald_dust",
       "metadata": {
         "files": [
-          "src/main/resources/assets/elec_tronics/models/item/emerald_dust.json",
-          "src/main/java/net/elec_tronics/item/EmeraldDustItem.java"
+          "src/main/java/net/elec_tronics/item/EmeraldDustItem.java",
+          "src/main/resources/assets/elec_tronics/models/item/emerald_dust.json"
         ]
       },
       "path": "~/Items/Ores-Ingots-Dusts"
@@ -3059,8 +3059,8 @@
       "registry_name": "copperwire",
       "metadata": {
         "files": [
-          "src/main/resources/assets/elec_tronics/models/item/copperwire.json",
-          "src/main/java/net/elec_tronics/item/CopperwireItem.java"
+          "src/main/java/net/elec_tronics/item/CopperwireItem.java",
+          "src/main/resources/assets/elec_tronics/models/item/copperwire.json"
         ]
       },
       "path": "~/Items/Components"
@@ -3074,11 +3074,11 @@
       "registry_name": "extrusion_machine",
       "metadata": {
         "files": [
-          "src/main/resources/assets/elec_tronics/models/block/extrusion_machine.json",
-          "src/main/java/net/elec_tronics/block/entity/ExtrusionMachineBlockEntity.java",
-          "src/main/java/net/elec_tronics/block/ExtrusionMachineBlock.java",
           "src/main/resources/assets/elec_tronics/models/item/extrusion_machine.json",
-          "src/main/resources/assets/elec_tronics/blockstates/extrusion_machine.json"
+          "src/main/resources/assets/elec_tronics/models/block/extrusion_machine.json",
+          "src/main/resources/assets/elec_tronics/blockstates/extrusion_machine.json",
+          "src/main/java/net/elec_tronics/block/ExtrusionMachineBlock.java",
+          "src/main/java/net/elec_tronics/block/entity/ExtrusionMachineBlockEntity.java"
         ]
       },
       "path": "~/Blocks/ExtrusionMachine"
@@ -3092,8 +3092,8 @@
       "registry_name": "extrusinmachine_gui",
       "metadata": {
         "files": [
-          "src/main/java/net/elec_tronics/client/gui/ExtrusinmachineGUIScreen.java",
-          "src/main/java/net/elec_tronics/world/inventory/ExtrusinmachineGUIMenu.java"
+          "src/main/java/net/elec_tronics/world/inventory/ExtrusinmachineGUIMenu.java",
+          "src/main/java/net/elec_tronics/client/gui/ExtrusinmachineGUIScreen.java"
         ]
       },
       "path": "~/Blocks/ExtrusionMachine"
@@ -3139,8 +3139,8 @@
       "registry_name": "rubbersleeve",
       "metadata": {
         "files": [
-          "src/main/resources/assets/elec_tronics/models/item/rubbersleeve.json",
-          "src/main/java/net/elec_tronics/item/RubbersleeveItem.java"
+          "src/main/java/net/elec_tronics/item/RubbersleeveItem.java",
+          "src/main/resources/assets/elec_tronics/models/item/rubbersleeve.json"
         ]
       },
       "path": "~/Items/Components"
@@ -3182,8 +3182,8 @@
       "registry_name": "turbine",
       "metadata": {
         "files": [
-          "src/main/java/net/elec_tronics/item/TurbineItem.java",
-          "src/main/resources/assets/elec_tronics/models/item/turbine.json"
+          "src/main/resources/assets/elec_tronics/models/item/turbine.json",
+          "src/main/java/net/elec_tronics/item/TurbineItem.java"
         ]
       },
       "path": "~/Items/Components"
@@ -3212,8 +3212,8 @@
       "registry_name": "cooling_tower",
       "metadata": {
         "files": [
-          "src/main/resources/assets/elec_tronics/models/item/cooling_tower.json",
-          "src/main/java/net/elec_tronics/item/CoolingTowerItem.java"
+          "src/main/java/net/elec_tronics/item/CoolingTowerItem.java",
+          "src/main/resources/assets/elec_tronics/models/item/cooling_tower.json"
         ]
       },
       "path": "~/Items/Components"
@@ -3313,11 +3313,11 @@
       "registry_name": "energy_storage_t_1",
       "metadata": {
         "files": [
-          "src/main/resources/assets/elec_tronics/models/item/energy_storage_t_1.json",
-          "src/main/resources/assets/elec_tronics/models/block/energy_storage_t_1.json",
           "src/main/resources/assets/elec_tronics/blockstates/energy_storage_t_1.json",
           "src/main/java/net/elec_tronics/block/EnergyStorageT1Block.java",
-          "src/main/java/net/elec_tronics/block/entity/EnergyStorageT1BlockEntity.java"
+          "src/main/java/net/elec_tronics/block/entity/EnergyStorageT1BlockEntity.java",
+          "src/main/resources/assets/elec_tronics/models/block/energy_storage_t_1.json",
+          "src/main/resources/assets/elec_tronics/models/item/energy_storage_t_1.json"
         ]
       },
       "path": "~/Blocks/EnergyStorages"
@@ -3345,8 +3345,8 @@
       "registry_name": "electricmotor",
       "metadata": {
         "files": [
-          "src/main/java/net/elec_tronics/item/ElectricmotorItem.java",
-          "src/main/resources/assets/elec_tronics/models/item/electricmotor.json"
+          "src/main/resources/assets/elec_tronics/models/item/electricmotor.json",
+          "src/main/java/net/elec_tronics/item/ElectricmotorItem.java"
         ]
       },
       "path": "~/Items/Components"
@@ -3390,8 +3390,8 @@
       "registry_name": "irongear",
       "metadata": {
         "files": [
-          "src/main/resources/assets/elec_tronics/models/item/irongear.json",
-          "src/main/java/net/elec_tronics/item/IrongearItem.java"
+          "src/main/java/net/elec_tronics/item/IrongearItem.java",
+          "src/main/resources/assets/elec_tronics/models/item/irongear.json"
         ]
       },
       "path": "~/Items/Components"
@@ -3475,8 +3475,8 @@
       "registry_name": "copper_sheet",
       "metadata": {
         "files": [
-          "src/main/java/net/elec_tronics/item/CopperSheetItem.java",
-          "src/main/resources/assets/elec_tronics/models/item/copper_sheet.json"
+          "src/main/resources/assets/elec_tronics/models/item/copper_sheet.json",
+          "src/main/java/net/elec_tronics/item/CopperSheetItem.java"
         ]
       },
       "path": "~/Items/Components"
@@ -3513,8 +3513,8 @@
       "registry_name": "wire_roller",
       "metadata": {
         "files": [
-          "src/main/resources/assets/elec_tronics/models/item/wire_roller.json",
-          "src/main/java/net/elec_tronics/item/WireRollerItem.java"
+          "src/main/java/net/elec_tronics/item/WireRollerItem.java",
+          "src/main/resources/assets/elec_tronics/models/item/wire_roller.json"
         ]
       },
       "path": "~/Items/Components"
@@ -3543,10 +3543,10 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/elec_tronics/blockstates/basepipe.json",
+          "src/main/java/net/elec_tronics/block/BasepipeBlock.java",
           "src/main/resources/assets/elec_tronics/models/block/basepipe.json",
-          "src/main/resources/assets/elec_tronics/models/item/basepipe.json",
           "src/main/java/net/elec_tronics/block/entity/BasepipeBlockEntity.java",
-          "src/main/java/net/elec_tronics/block/BasepipeBlock.java"
+          "src/main/resources/assets/elec_tronics/models/item/basepipe.json"
         ]
       },
       "path": "~/Blocks/Wires-Pipes/Pipes"
@@ -3561,10 +3561,10 @@
       "metadata": {
         "files": [
           "src/main/java/net/elec_tronics/block/PipeangleBlock.java",
-          "src/main/resources/assets/elec_tronics/models/item/pipeangle.json",
           "src/main/resources/assets/elec_tronics/blockstates/pipeangle.json",
           "src/main/java/net/elec_tronics/block/entity/PipeangleBlockEntity.java",
-          "src/main/resources/assets/elec_tronics/models/block/pipeangle.json"
+          "src/main/resources/assets/elec_tronics/models/block/pipeangle.json",
+          "src/main/resources/assets/elec_tronics/models/item/pipeangle.json"
         ]
       },
       "path": "~/Blocks/Wires-Pipes/Pipes"
@@ -3580,9 +3580,9 @@
         "files": [
           "src/main/java/net/elec_tronics/block/PipeangledownBlock.java",
           "src/main/java/net/elec_tronics/block/entity/PipeangledownBlockEntity.java",
-          "src/main/resources/assets/elec_tronics/models/block/pipeangledown.json",
           "src/main/resources/assets/elec_tronics/models/item/pipeangledown.json",
-          "src/main/resources/assets/elec_tronics/blockstates/pipeangledown.json"
+          "src/main/resources/assets/elec_tronics/blockstates/pipeangledown.json",
+          "src/main/resources/assets/elec_tronics/models/block/pipeangledown.json"
         ]
       },
       "path": "~/Blocks/Wires-Pipes/Pipes"
@@ -3596,11 +3596,11 @@
       "registry_name": "pipeanlgeup",
       "metadata": {
         "files": [
-          "src/main/java/net/elec_tronics/block/entity/PipeanlgeupBlockEntity.java",
           "src/main/resources/assets/elec_tronics/blockstates/pipeanlgeup.json",
           "src/main/java/net/elec_tronics/block/PipeanlgeupBlock.java",
-          "src/main/resources/assets/elec_tronics/models/item/pipeanlgeup.json",
-          "src/main/resources/assets/elec_tronics/models/block/pipeanlgeup.json"
+          "src/main/resources/assets/elec_tronics/models/block/pipeanlgeup.json",
+          "src/main/java/net/elec_tronics/block/entity/PipeanlgeupBlockEntity.java",
+          "src/main/resources/assets/elec_tronics/models/item/pipeanlgeup.json"
         ]
       },
       "path": "~/Blocks/Wires-Pipes/Pipes"
@@ -3614,11 +3614,11 @@
       "registry_name": "pipedownangle",
       "metadata": {
         "files": [
+          "src/main/resources/assets/elec_tronics/blockstates/pipedownangle.json",
           "src/main/java/net/elec_tronics/block/PipedownangleBlock.java",
           "src/main/resources/assets/elec_tronics/models/item/pipedownangle.json",
-          "src/main/resources/assets/elec_tronics/models/block/pipedownangle.json",
           "src/main/java/net/elec_tronics/block/entity/PipedownangleBlockEntity.java",
-          "src/main/resources/assets/elec_tronics/blockstates/pipedownangle.json"
+          "src/main/resources/assets/elec_tronics/models/block/pipedownangle.json"
         ]
       },
       "path": "~/Blocks/Wires-Pipes/Pipes"
@@ -3633,10 +3633,10 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/elec_tronics/models/item/pipehalf.json",
-          "src/main/java/net/elec_tronics/block/PipehalfBlock.java",
-          "src/main/resources/assets/elec_tronics/blockstates/pipehalf.json",
+          "src/main/resources/assets/elec_tronics/models/block/pipehalf.json",
           "src/main/java/net/elec_tronics/block/entity/PipehalfBlockEntity.java",
-          "src/main/resources/assets/elec_tronics/models/block/pipehalf.json"
+          "src/main/java/net/elec_tronics/block/PipehalfBlock.java",
+          "src/main/resources/assets/elec_tronics/blockstates/pipehalf.json"
         ]
       },
       "path": "~/Blocks/Wires-Pipes/Pipes"
@@ -3650,11 +3650,11 @@
       "registry_name": "pipejunction",
       "metadata": {
         "files": [
-          "src/main/java/net/elec_tronics/block/PipejunctionBlock.java",
-          "src/main/java/net/elec_tronics/block/entity/PipejunctionBlockEntity.java",
+          "src/main/resources/assets/elec_tronics/blockstates/pipejunction.json",
           "src/main/resources/assets/elec_tronics/models/item/pipejunction.json",
+          "src/main/java/net/elec_tronics/block/entity/PipejunctionBlockEntity.java",
           "src/main/resources/assets/elec_tronics/models/block/pipejunction.json",
-          "src/main/resources/assets/elec_tronics/blockstates/pipejunction.json"
+          "src/main/java/net/elec_tronics/block/PipejunctionBlock.java"
         ]
       },
       "path": "~/Blocks/Wires-Pipes/Pipes"
@@ -3669,10 +3669,10 @@
       "metadata": {
         "files": [
           "src/main/java/net/elec_tronics/block/entity/PipejunctiondownBlockEntity.java",
-          "src/main/resources/assets/elec_tronics/blockstates/pipejunctiondown.json",
-          "src/main/resources/assets/elec_tronics/models/block/pipejunctiondown.json",
+          "src/main/resources/assets/elec_tronics/models/item/pipejunctiondown.json",
           "src/main/java/net/elec_tronics/block/PipejunctiondownBlock.java",
-          "src/main/resources/assets/elec_tronics/models/item/pipejunctiondown.json"
+          "src/main/resources/assets/elec_tronics/blockstates/pipejunctiondown.json",
+          "src/main/resources/assets/elec_tronics/models/block/pipejunctiondown.json"
         ]
       },
       "path": "~/Blocks/Wires-Pipes/Pipes"
@@ -3686,11 +3686,11 @@
       "registry_name": "pipejunctiondown_2",
       "metadata": {
         "files": [
+          "src/main/resources/assets/elec_tronics/blockstates/pipejunctiondown_2.json",
           "src/main/java/net/elec_tronics/block/Pipejunctiondown2Block.java",
           "src/main/resources/assets/elec_tronics/models/block/pipejunctiondown_2.json",
-          "src/main/java/net/elec_tronics/block/entity/Pipejunctiondown2BlockEntity.java",
-          "src/main/resources/assets/elec_tronics/blockstates/pipejunctiondown_2.json",
-          "src/main/resources/assets/elec_tronics/models/item/pipejunctiondown_2.json"
+          "src/main/resources/assets/elec_tronics/models/item/pipejunctiondown_2.json",
+          "src/main/java/net/elec_tronics/block/entity/Pipejunctiondown2BlockEntity.java"
         ]
       },
       "path": "~/Blocks/Wires-Pipes/Pipes"
@@ -3705,10 +3705,10 @@
       "metadata": {
         "files": [
           "src/main/java/net/elec_tronics/block/entity/PipejunctionmainBlockEntity.java",
-          "src/main/resources/assets/elec_tronics/models/item/pipejunctionmain.json",
           "src/main/java/net/elec_tronics/block/PipejunctionmainBlock.java",
           "src/main/resources/assets/elec_tronics/models/block/pipejunctionmain.json",
-          "src/main/resources/assets/elec_tronics/blockstates/pipejunctionmain.json"
+          "src/main/resources/assets/elec_tronics/blockstates/pipejunctionmain.json",
+          "src/main/resources/assets/elec_tronics/models/item/pipejunctionmain.json"
         ]
       },
       "path": "~/Blocks/Wires-Pipes/Pipes"
@@ -3723,10 +3723,10 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/elec_tronics/models/item/pipejunctionup.json",
-          "src/main/resources/assets/elec_tronics/blockstates/pipejunctionup.json",
-          "src/main/resources/assets/elec_tronics/models/block/pipejunctionup.json",
+          "src/main/java/net/elec_tronics/block/entity/PipejunctionupBlockEntity.java",
           "src/main/java/net/elec_tronics/block/PipejunctionupBlock.java",
-          "src/main/java/net/elec_tronics/block/entity/PipejunctionupBlockEntity.java"
+          "src/main/resources/assets/elec_tronics/blockstates/pipejunctionup.json",
+          "src/main/resources/assets/elec_tronics/models/block/pipejunctionup.json"
         ]
       },
       "path": "~/Blocks/Wires-Pipes/Pipes"
@@ -3741,10 +3741,10 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/elec_tronics/models/block/pipejunctionup_2.json",
-          "src/main/resources/assets/elec_tronics/models/item/pipejunctionup_2.json",
-          "src/main/java/net/elec_tronics/block/Pipejunctionup2Block.java",
           "src/main/resources/assets/elec_tronics/blockstates/pipejunctionup_2.json",
-          "src/main/java/net/elec_tronics/block/entity/Pipejunctionup2BlockEntity.java"
+          "src/main/java/net/elec_tronics/block/Pipejunctionup2Block.java",
+          "src/main/java/net/elec_tronics/block/entity/Pipejunctionup2BlockEntity.java",
+          "src/main/resources/assets/elec_tronics/models/item/pipejunctionup_2.json"
         ]
       },
       "path": "~/Blocks/Wires-Pipes/Pipes"
@@ -3758,11 +3758,11 @@
       "registry_name": "pipejunctionupanddown",
       "metadata": {
         "files": [
-          "src/main/java/net/elec_tronics/block/PipejunctionupanddownBlock.java",
-          "src/main/java/net/elec_tronics/block/entity/PipejunctionupanddownBlockEntity.java",
-          "src/main/resources/assets/elec_tronics/models/block/pipejunctionupanddown.json",
           "src/main/resources/assets/elec_tronics/models/item/pipejunctionupanddown.json",
-          "src/main/resources/assets/elec_tronics/blockstates/pipejunctionupanddown.json"
+          "src/main/resources/assets/elec_tronics/models/block/pipejunctionupanddown.json",
+          "src/main/java/net/elec_tronics/block/PipejunctionupanddownBlock.java",
+          "src/main/resources/assets/elec_tronics/blockstates/pipejunctionupanddown.json",
+          "src/main/java/net/elec_tronics/block/entity/PipejunctionupanddownBlockEntity.java"
         ]
       },
       "path": "~/Blocks/Wires-Pipes/Pipes"
@@ -3776,10 +3776,10 @@
       "registry_name": "pipejunctionupanddown_2",
       "metadata": {
         "files": [
-          "src/main/resources/assets/elec_tronics/models/block/pipejunctionupanddown_2.json",
           "src/main/resources/assets/elec_tronics/models/item/pipejunctionupanddown_2.json",
-          "src/main/resources/assets/elec_tronics/blockstates/pipejunctionupanddown_2.json",
           "src/main/java/net/elec_tronics/block/entity/Pipejunctionupanddown2BlockEntity.java",
+          "src/main/resources/assets/elec_tronics/blockstates/pipejunctionupanddown_2.json",
+          "src/main/resources/assets/elec_tronics/models/block/pipejunctionupanddown_2.json",
           "src/main/java/net/elec_tronics/block/Pipejunctionupanddown2Block.java"
         ]
       },
@@ -3794,11 +3794,11 @@
       "registry_name": "pipejunctionupanddownstraight",
       "metadata": {
         "files": [
-          "src/main/resources/assets/elec_tronics/models/item/pipejunctionupanddownstraight.json",
-          "src/main/resources/assets/elec_tronics/models/block/pipejunctionupanddownstraight.json",
-          "src/main/java/net/elec_tronics/block/entity/PipejunctionupanddownstraightBlockEntity.java",
+          "src/main/resources/assets/elec_tronics/blockstates/pipejunctionupanddownstraight.json",
           "src/main/java/net/elec_tronics/block/PipejunctionupanddownstraightBlock.java",
-          "src/main/resources/assets/elec_tronics/blockstates/pipejunctionupanddownstraight.json"
+          "src/main/resources/assets/elec_tronics/models/item/pipejunctionupanddownstraight.json",
+          "src/main/java/net/elec_tronics/block/entity/PipejunctionupanddownstraightBlockEntity.java",
+          "src/main/resources/assets/elec_tronics/models/block/pipejunctionupanddownstraight.json"
         ]
       },
       "path": "~/Blocks/Wires-Pipes/Pipes"
@@ -3812,11 +3812,11 @@
       "registry_name": "pipestraight",
       "metadata": {
         "files": [
+          "src/main/resources/assets/elec_tronics/blockstates/pipestraight.json",
           "src/main/resources/assets/elec_tronics/models/item/pipestraight.json",
           "src/main/java/net/elec_tronics/block/entity/PipestraightBlockEntity.java",
-          "src/main/java/net/elec_tronics/block/PipestraightBlock.java",
-          "src/main/resources/assets/elec_tronics/blockstates/pipestraight.json",
-          "src/main/resources/assets/elec_tronics/models/block/pipestraight.json"
+          "src/main/resources/assets/elec_tronics/models/block/pipestraight.json",
+          "src/main/java/net/elec_tronics/block/PipestraightBlock.java"
         ]
       },
       "path": "~/Blocks/Wires-Pipes/Pipes"
@@ -3830,11 +3830,11 @@
       "registry_name": "pipet",
       "metadata": {
         "files": [
-          "src/main/java/net/elec_tronics/block/entity/PipetBlockEntity.java",
-          "src/main/resources/assets/elec_tronics/models/block/pipet.json",
           "src/main/resources/assets/elec_tronics/models/item/pipet.json",
           "src/main/java/net/elec_tronics/block/PipetBlock.java",
-          "src/main/resources/assets/elec_tronics/blockstates/pipet.json"
+          "src/main/resources/assets/elec_tronics/models/block/pipet.json",
+          "src/main/resources/assets/elec_tronics/blockstates/pipet.json",
+          "src/main/java/net/elec_tronics/block/entity/PipetBlockEntity.java"
         ]
       },
       "path": "~/Blocks/Wires-Pipes/Pipes"
@@ -3849,8 +3849,8 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/elec_tronics/blockstates/pipetdown.json",
-          "src/main/java/net/elec_tronics/block/PipetdownBlock.java",
           "src/main/resources/assets/elec_tronics/models/item/pipetdown.json",
+          "src/main/java/net/elec_tronics/block/PipetdownBlock.java",
           "src/main/java/net/elec_tronics/block/entity/PipetdownBlockEntity.java",
           "src/main/resources/assets/elec_tronics/models/block/pipetdown.json"
         ]
@@ -3866,11 +3866,11 @@
       "registry_name": "pipetdownandup",
       "metadata": {
         "files": [
-          "src/main/resources/assets/elec_tronics/blockstates/pipetdownandup.json",
+          "src/main/resources/assets/elec_tronics/models/item/pipetdownandup.json",
           "src/main/java/net/elec_tronics/block/PipetdownandupBlock.java",
           "src/main/java/net/elec_tronics/block/entity/PipetdownandupBlockEntity.java",
-          "src/main/resources/assets/elec_tronics/models/item/pipetdownandup.json",
-          "src/main/resources/assets/elec_tronics/models/block/pipetdownandup.json"
+          "src/main/resources/assets/elec_tronics/models/block/pipetdownandup.json",
+          "src/main/resources/assets/elec_tronics/blockstates/pipetdownandup.json"
         ]
       },
       "path": "~/Blocks/Wires-Pipes/Pipes"
@@ -3884,11 +3884,11 @@
       "registry_name": "pipeup",
       "metadata": {
         "files": [
-          "src/main/resources/assets/elec_tronics/models/block/pipeup.json",
-          "src/main/java/net/elec_tronics/block/entity/PipeupBlockEntity.java",
           "src/main/resources/assets/elec_tronics/blockstates/pipeup.json",
           "src/main/java/net/elec_tronics/block/PipeupBlock.java",
-          "src/main/resources/assets/elec_tronics/models/item/pipeup.json"
+          "src/main/java/net/elec_tronics/block/entity/PipeupBlockEntity.java",
+          "src/main/resources/assets/elec_tronics/models/item/pipeup.json",
+          "src/main/resources/assets/elec_tronics/models/block/pipeup.json"
         ]
       },
       "path": "~/Blocks/Wires-Pipes/Pipes"
@@ -3902,11 +3902,11 @@
       "registry_name": "pipeupangle",
       "metadata": {
         "files": [
-          "src/main/resources/assets/elec_tronics/models/item/pipeupangle.json",
+          "src/main/java/net/elec_tronics/block/PipeupangleBlock.java",
+          "src/main/resources/assets/elec_tronics/models/block/pipeupangle.json",
           "src/main/resources/assets/elec_tronics/blockstates/pipeupangle.json",
           "src/main/java/net/elec_tronics/block/entity/PipeupangleBlockEntity.java",
-          "src/main/resources/assets/elec_tronics/models/block/pipeupangle.json",
-          "src/main/java/net/elec_tronics/block/PipeupangleBlock.java"
+          "src/main/resources/assets/elec_tronics/models/item/pipeupangle.json"
         ]
       },
       "path": "~/Blocks/Wires-Pipes/Pipes"
@@ -3932,11 +3932,11 @@
       "registry_name": "tank",
       "metadata": {
         "files": [
-          "src/main/java/net/elec_tronics/block/TankBlock.java",
-          "src/main/resources/assets/elec_tronics/blockstates/tank.json",
           "src/main/java/net/elec_tronics/block/entity/TankBlockEntity.java",
-          "src/main/resources/assets/elec_tronics/models/block/tank.json",
-          "src/main/resources/assets/elec_tronics/models/item/tank.json"
+          "src/main/resources/assets/elec_tronics/models/item/tank.json",
+          "src/main/resources/assets/elec_tronics/blockstates/tank.json",
+          "src/main/java/net/elec_tronics/block/TankBlock.java",
+          "src/main/resources/assets/elec_tronics/models/block/tank.json"
         ]
       },
       "path": "~/Blocks/Fluid_Tanks"
@@ -3982,10 +3982,10 @@
       "registry_name": "tankfull_1",
       "metadata": {
         "files": [
-          "src/main/resources/assets/elec_tronics/blockstates/tankfull_1.json",
           "src/main/resources/assets/elec_tronics/models/block/tankfull_1.json",
-          "src/main/resources/assets/elec_tronics/models/item/tankfull_1.json",
           "src/main/java/net/elec_tronics/block/Tankfull1Block.java",
+          "src/main/resources/assets/elec_tronics/models/item/tankfull_1.json",
+          "src/main/resources/assets/elec_tronics/blockstates/tankfull_1.json",
           "src/main/java/net/elec_tronics/block/entity/Tankfull1BlockEntity.java"
         ]
       },
@@ -4000,11 +4000,11 @@
       "registry_name": "tankfull_2",
       "metadata": {
         "files": [
-          "src/main/resources/assets/elec_tronics/models/block/tankfull_2.json",
-          "src/main/resources/assets/elec_tronics/blockstates/tankfull_2.json",
           "src/main/java/net/elec_tronics/block/entity/Tankfull2BlockEntity.java",
+          "src/main/resources/assets/elec_tronics/blockstates/tankfull_2.json",
           "src/main/java/net/elec_tronics/block/Tankfull2Block.java",
-          "src/main/resources/assets/elec_tronics/models/item/tankfull_2.json"
+          "src/main/resources/assets/elec_tronics/models/item/tankfull_2.json",
+          "src/main/resources/assets/elec_tronics/models/block/tankfull_2.json"
         ]
       },
       "path": "~/Blocks/Fluid_Tanks"
@@ -4018,11 +4018,11 @@
       "registry_name": "tankfull_3",
       "metadata": {
         "files": [
-          "src/main/resources/assets/elec_tronics/blockstates/tankfull_3.json",
           "src/main/java/net/elec_tronics/block/Tankfull3Block.java",
-          "src/main/resources/assets/elec_tronics/models/item/tankfull_3.json",
+          "src/main/resources/assets/elec_tronics/blockstates/tankfull_3.json",
           "src/main/java/net/elec_tronics/block/entity/Tankfull3BlockEntity.java",
-          "src/main/resources/assets/elec_tronics/models/block/tankfull_3.json"
+          "src/main/resources/assets/elec_tronics/models/block/tankfull_3.json",
+          "src/main/resources/assets/elec_tronics/models/item/tankfull_3.json"
         ]
       },
       "path": "~/Blocks/Fluid_Tanks"
@@ -4036,11 +4036,11 @@
       "registry_name": "tankfull_4",
       "metadata": {
         "files": [
-          "src/main/resources/assets/elec_tronics/models/item/tankfull_4.json",
-          "src/main/resources/assets/elec_tronics/models/block/tankfull_4.json",
+          "src/main/resources/assets/elec_tronics/blockstates/tankfull_4.json",
           "src/main/java/net/elec_tronics/block/Tankfull4Block.java",
           "src/main/java/net/elec_tronics/block/entity/Tankfull4BlockEntity.java",
-          "src/main/resources/assets/elec_tronics/blockstates/tankfull_4.json"
+          "src/main/resources/assets/elec_tronics/models/block/tankfull_4.json",
+          "src/main/resources/assets/elec_tronics/models/item/tankfull_4.json"
         ]
       },
       "path": "~/Blocks/Fluid_Tanks"
@@ -4054,11 +4054,11 @@
       "registry_name": "tankfull_5",
       "metadata": {
         "files": [
-          "src/main/java/net/elec_tronics/block/Tankfull5Block.java",
+          "src/main/resources/assets/elec_tronics/models/item/tankfull_5.json",
           "src/main/resources/assets/elec_tronics/models/block/tankfull_5.json",
-          "src/main/resources/assets/elec_tronics/blockstates/tankfull_5.json",
           "src/main/java/net/elec_tronics/block/entity/Tankfull5BlockEntity.java",
-          "src/main/resources/assets/elec_tronics/models/item/tankfull_5.json"
+          "src/main/resources/assets/elec_tronics/blockstates/tankfull_5.json",
+          "src/main/java/net/elec_tronics/block/Tankfull5Block.java"
         ]
       },
       "path": "~/Blocks/Fluid_Tanks"
@@ -4073,10 +4073,10 @@
       "metadata": {
         "files": [
           "src/main/java/net/elec_tronics/block/entity/Tankfull6BlockEntity.java",
-          "src/main/resources/assets/elec_tronics/models/item/tankfull_6.json",
           "src/main/resources/assets/elec_tronics/blockstates/tankfull_6.json",
           "src/main/java/net/elec_tronics/block/Tankfull6Block.java",
-          "src/main/resources/assets/elec_tronics/models/block/tankfull_6.json"
+          "src/main/resources/assets/elec_tronics/models/block/tankfull_6.json",
+          "src/main/resources/assets/elec_tronics/models/item/tankfull_6.json"
         ]
       },
       "path": "~/Blocks/Fluid_Tanks"
@@ -4090,11 +4090,11 @@
       "registry_name": "tankfull_7",
       "metadata": {
         "files": [
-          "src/main/resources/assets/elec_tronics/models/item/tankfull_7.json",
+          "src/main/resources/assets/elec_tronics/models/block/tankfull_7.json",
           "src/main/resources/assets/elec_tronics/blockstates/tankfull_7.json",
-          "src/main/java/net/elec_tronics/block/Tankfull7Block.java",
           "src/main/java/net/elec_tronics/block/entity/Tankfull7BlockEntity.java",
-          "src/main/resources/assets/elec_tronics/models/block/tankfull_7.json"
+          "src/main/java/net/elec_tronics/block/Tankfull7Block.java",
+          "src/main/resources/assets/elec_tronics/models/item/tankfull_7.json"
         ]
       },
       "path": "~/Blocks/Fluid_Tanks"
@@ -4108,10 +4108,10 @@
       "registry_name": "tankfull_8",
       "metadata": {
         "files": [
-          "src/main/java/net/elec_tronics/block/entity/Tankfull8BlockEntity.java",
-          "src/main/resources/assets/elec_tronics/models/block/tankfull_8.json",
           "src/main/java/net/elec_tronics/block/Tankfull8Block.java",
           "src/main/resources/assets/elec_tronics/models/item/tankfull_8.json",
+          "src/main/resources/assets/elec_tronics/models/block/tankfull_8.json",
+          "src/main/java/net/elec_tronics/block/entity/Tankfull8BlockEntity.java",
           "src/main/resources/assets/elec_tronics/blockstates/tankfull_8.json"
         ]
       },
@@ -4126,11 +4126,11 @@
       "registry_name": "tankfull_9",
       "metadata": {
         "files": [
-          "src/main/resources/assets/elec_tronics/blockstates/tankfull_9.json",
-          "src/main/resources/assets/elec_tronics/models/item/tankfull_9.json",
           "src/main/java/net/elec_tronics/block/Tankfull9Block.java",
           "src/main/java/net/elec_tronics/block/entity/Tankfull9BlockEntity.java",
-          "src/main/resources/assets/elec_tronics/models/block/tankfull_9.json"
+          "src/main/resources/assets/elec_tronics/models/block/tankfull_9.json",
+          "src/main/resources/assets/elec_tronics/models/item/tankfull_9.json",
+          "src/main/resources/assets/elec_tronics/blockstates/tankfull_9.json"
         ]
       },
       "path": "~/Blocks/Fluid_Tanks"
@@ -4144,11 +4144,11 @@
       "registry_name": "tankfull_10",
       "metadata": {
         "files": [
-          "src/main/resources/assets/elec_tronics/blockstates/tankfull_10.json",
-          "src/main/java/net/elec_tronics/block/Tankfull10Block.java",
-          "src/main/resources/assets/elec_tronics/models/block/tankfull_10.json",
           "src/main/java/net/elec_tronics/block/entity/Tankfull10BlockEntity.java",
-          "src/main/resources/assets/elec_tronics/models/item/tankfull_10.json"
+          "src/main/resources/assets/elec_tronics/models/block/tankfull_10.json",
+          "src/main/java/net/elec_tronics/block/Tankfull10Block.java",
+          "src/main/resources/assets/elec_tronics/models/item/tankfull_10.json",
+          "src/main/resources/assets/elec_tronics/blockstates/tankfull_10.json"
         ]
       },
       "path": "~/Blocks/Fluid_Tanks"
@@ -4162,10 +4162,10 @@
       "registry_name": "tankfull_11",
       "metadata": {
         "files": [
-          "src/main/java/net/elec_tronics/block/entity/Tankfull11BlockEntity.java",
+          "src/main/resources/assets/elec_tronics/models/item/tankfull_11.json",
           "src/main/resources/assets/elec_tronics/models/block/tankfull_11.json",
           "src/main/java/net/elec_tronics/block/Tankfull11Block.java",
-          "src/main/resources/assets/elec_tronics/models/item/tankfull_11.json",
+          "src/main/java/net/elec_tronics/block/entity/Tankfull11BlockEntity.java",
           "src/main/resources/assets/elec_tronics/blockstates/tankfull_11.json"
         ]
       },
@@ -4180,11 +4180,11 @@
       "registry_name": "tankfull_12",
       "metadata": {
         "files": [
-          "src/main/resources/assets/elec_tronics/models/item/tankfull_12.json",
-          "src/main/java/net/elec_tronics/block/entity/Tankfull12BlockEntity.java",
-          "src/main/resources/assets/elec_tronics/models/block/tankfull_12.json",
           "src/main/java/net/elec_tronics/block/Tankfull12Block.java",
-          "src/main/resources/assets/elec_tronics/blockstates/tankfull_12.json"
+          "src/main/java/net/elec_tronics/block/entity/Tankfull12BlockEntity.java",
+          "src/main/resources/assets/elec_tronics/models/item/tankfull_12.json",
+          "src/main/resources/assets/elec_tronics/blockstates/tankfull_12.json",
+          "src/main/resources/assets/elec_tronics/models/block/tankfull_12.json"
         ]
       },
       "path": "~/Blocks/Fluid_Tanks"
@@ -4198,11 +4198,11 @@
       "registry_name": "tankfull_13",
       "metadata": {
         "files": [
-          "src/main/resources/assets/elec_tronics/blockstates/tankfull_13.json",
           "src/main/java/net/elec_tronics/block/entity/Tankfull13BlockEntity.java",
+          "src/main/resources/assets/elec_tronics/blockstates/tankfull_13.json",
           "src/main/java/net/elec_tronics/block/Tankfull13Block.java",
-          "src/main/resources/assets/elec_tronics/models/item/tankfull_13.json",
-          "src/main/resources/assets/elec_tronics/models/block/tankfull_13.json"
+          "src/main/resources/assets/elec_tronics/models/block/tankfull_13.json",
+          "src/main/resources/assets/elec_tronics/models/item/tankfull_13.json"
         ]
       },
       "path": "~/Blocks/Fluid_Tanks"
@@ -4216,11 +4216,11 @@
       "registry_name": "tankfull_14",
       "metadata": {
         "files": [
-          "src/main/java/net/elec_tronics/block/Tankfull14Block.java",
           "src/main/java/net/elec_tronics/block/entity/Tankfull14BlockEntity.java",
           "src/main/resources/assets/elec_tronics/models/block/tankfull_14.json",
-          "src/main/resources/assets/elec_tronics/blockstates/tankfull_14.json",
-          "src/main/resources/assets/elec_tronics/models/item/tankfull_14.json"
+          "src/main/java/net/elec_tronics/block/Tankfull14Block.java",
+          "src/main/resources/assets/elec_tronics/models/item/tankfull_14.json",
+          "src/main/resources/assets/elec_tronics/blockstates/tankfull_14.json"
         ]
       },
       "path": "~/Blocks/Fluid_Tanks"
@@ -4235,13 +4235,13 @@
       "metadata": {
         "gb": true,
         "files": [
-          "src/main/java/net/elec_tronics/item/ElectronicsoilItem.java",
           "src/main/java/net/elec_tronics/fluid/ElectronicsoilFluid.java",
-          "src/main/java/net/elec_tronics/block/ElectronicsoilBlock.java",
+          "src/main/resources/assets/elec_tronics/models/item/oil_bucket.json",
           "src/main/java/net/elec_tronics/fluid/types/ElectronicsoilFluidType.java",
-          "src/main/resources/assets/elec_tronics/models/block/oil.json",
           "src/main/resources/assets/elec_tronics/blockstates/oil.json",
-          "src/main/resources/assets/elec_tronics/models/item/oil_bucket.json"
+          "src/main/resources/assets/elec_tronics/models/block/oil.json",
+          "src/main/java/net/elec_tronics/block/ElectronicsoilBlock.java",
+          "src/main/java/net/elec_tronics/item/ElectronicsoilItem.java"
         ]
       },
       "path": "~/Fluids-Gases"
@@ -4343,10 +4343,10 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/elec_tronics/models/block/manual_fluid_pump.json",
+          "src/main/java/net/elec_tronics/block/ManualFluidPumpBlock.java",
           "src/main/java/net/elec_tronics/block/entity/ManualFluidPumpBlockEntity.java",
           "src/main/resources/assets/elec_tronics/models/item/manual_fluid_pump.json",
-          "src/main/resources/assets/elec_tronics/blockstates/manual_fluid_pump.json",
-          "src/main/java/net/elec_tronics/block/ManualFluidPumpBlock.java"
+          "src/main/resources/assets/elec_tronics/blockstates/manual_fluid_pump.json"
         ]
       },
       "path": "~/Blocks/Fluid_Pumps"
@@ -4362,9 +4362,9 @@
         "files": [
           "src/main/resources/assets/elec_tronics/models/item/manual_fluid_pumpdown_2.json",
           "src/main/resources/assets/elec_tronics/blockstates/manual_fluid_pumpdown_2.json",
-          "src/main/java/net/elec_tronics/block/ManualFluidPumpdown2Block.java",
+          "src/main/resources/assets/elec_tronics/models/block/manual_fluid_pumpdown_2.json",
           "src/main/java/net/elec_tronics/block/entity/ManualFluidPumpdown2BlockEntity.java",
-          "src/main/resources/assets/elec_tronics/models/block/manual_fluid_pumpdown_2.json"
+          "src/main/java/net/elec_tronics/block/ManualFluidPumpdown2Block.java"
         ]
       },
       "path": "~/Blocks/Fluid_Pumps"
@@ -4378,11 +4378,11 @@
       "registry_name": "manual_fluid_pump_3",
       "metadata": {
         "files": [
-          "src/main/resources/assets/elec_tronics/models/item/manual_fluid_pump_3.json",
           "src/main/resources/assets/elec_tronics/blockstates/manual_fluid_pump_3.json",
-          "src/main/resources/assets/elec_tronics/models/block/manual_fluid_pump_3.json",
+          "src/main/java/net/elec_tronics/block/entity/ManualFluidPump3BlockEntity.java",
+          "src/main/resources/assets/elec_tronics/models/item/manual_fluid_pump_3.json",
           "src/main/java/net/elec_tronics/block/ManualFluidPump3Block.java",
-          "src/main/java/net/elec_tronics/block/entity/ManualFluidPump3BlockEntity.java"
+          "src/main/resources/assets/elec_tronics/models/block/manual_fluid_pump_3.json"
         ]
       },
       "path": "~/Blocks/Fluid_Pumps"
@@ -4396,10 +4396,10 @@
       "registry_name": "manual_fluid_pump_4",
       "metadata": {
         "files": [
-          "src/main/java/net/elec_tronics/block/ManualFluidPump4Block.java",
           "src/main/resources/assets/elec_tronics/models/item/manual_fluid_pump_4.json",
           "src/main/java/net/elec_tronics/block/entity/ManualFluidPump4BlockEntity.java",
           "src/main/resources/assets/elec_tronics/blockstates/manual_fluid_pump_4.json",
+          "src/main/java/net/elec_tronics/block/ManualFluidPump4Block.java",
           "src/main/resources/assets/elec_tronics/models/block/manual_fluid_pump_4.json"
         ]
       },
@@ -4415,10 +4415,10 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/elec_tronics/models/item/manual_fluid_pump_5.json",
-          "src/main/java/net/elec_tronics/block/entity/ManualFluidPump5BlockEntity.java",
           "src/main/java/net/elec_tronics/block/ManualFluidPump5Block.java",
           "src/main/resources/assets/elec_tronics/blockstates/manual_fluid_pump_5.json",
-          "src/main/resources/assets/elec_tronics/models/block/manual_fluid_pump_5.json"
+          "src/main/resources/assets/elec_tronics/models/block/manual_fluid_pump_5.json",
+          "src/main/java/net/elec_tronics/block/entity/ManualFluidPump5BlockEntity.java"
         ]
       },
       "path": "~/Blocks/Fluid_Pumps"
@@ -4496,11 +4496,11 @@
       "registry_name": "tankfullhalf_1",
       "metadata": {
         "files": [
-          "src/main/java/net/elec_tronics/block/Tankfullhalf1Block.java",
-          "src/main/java/net/elec_tronics/block/entity/Tankfullhalf1BlockEntity.java",
-          "src/main/resources/assets/elec_tronics/blockstates/tankfullhalf_1.json",
           "src/main/resources/assets/elec_tronics/models/block/tankfullhalf_1.json",
-          "src/main/resources/assets/elec_tronics/models/item/tankfullhalf_1.json"
+          "src/main/java/net/elec_tronics/block/Tankfullhalf1Block.java",
+          "src/main/resources/assets/elec_tronics/models/item/tankfullhalf_1.json",
+          "src/main/java/net/elec_tronics/block/entity/Tankfullhalf1BlockEntity.java",
+          "src/main/resources/assets/elec_tronics/blockstates/tankfullhalf_1.json"
         ]
       },
       "path": "~/Blocks/Fluid_Tanks"
@@ -4529,13 +4529,13 @@
       "registry_name": "bauxite_ore",
       "metadata": {
         "files": [
-          "src/main/resources/data/elec_tronics/worldgen/configured_feature/bauxite_ore.json",
-          "src/main/resources/data/elec_tronics/worldgen/placed_feature/bauxite_ore.json",
           "src/main/resources/data/elec_tronics/forge/biome_modifier/bauxite_ore_biome_modifier.json",
           "src/main/resources/assets/elec_tronics/blockstates/bauxite_ore.json",
+          "src/main/resources/data/elec_tronics/worldgen/configured_feature/bauxite_ore.json",
+          "src/main/resources/data/elec_tronics/worldgen/placed_feature/bauxite_ore.json",
           "src/main/java/net/elec_tronics/block/BauxiteOreBlock.java",
-          "src/main/resources/assets/elec_tronics/models/block/bauxite_ore.json",
           "src/main/java/net/elec_tronics/world/features/ores/BauxiteOreFeature.java",
+          "src/main/resources/assets/elec_tronics/models/block/bauxite_ore.json",
           "src/main/resources/assets/elec_tronics/models/item/bauxite_ore.json"
         ]
       },
@@ -4550,10 +4550,10 @@
       "registry_name": "bauxite_block",
       "metadata": {
         "files": [
-          "src/main/resources/assets/elec_tronics/blockstates/bauxite_block.json",
-          "src/main/java/net/elec_tronics/block/BauxiteBlockBlock.java",
+          "src/main/resources/assets/elec_tronics/models/block/bauxite_block.json",
           "src/main/resources/assets/elec_tronics/models/item/bauxite_block.json",
-          "src/main/resources/assets/elec_tronics/models/block/bauxite_block.json"
+          "src/main/java/net/elec_tronics/block/BauxiteBlockBlock.java",
+          "src/main/resources/assets/elec_tronics/blockstates/bauxite_block.json"
         ]
       },
       "path": "~/Items/Ores-Ingots-Dusts"
@@ -4613,11 +4613,11 @@
         "eb": true,
         "ec": true,
         "files": [
+          "src/main/resources/assets/elec_tronics/models/item/steel_armor_helmet.json",
           "src/main/resources/assets/elec_tronics/models/item/steel_armor_leggings.json",
           "src/main/java/net/elec_tronics/item/SteelArmorItem.java",
-          "src/main/resources/assets/elec_tronics/models/item/steel_armor_chestplate.json",
-          "src/main/resources/assets/elec_tronics/models/item/steel_armor_helmet.json",
-          "src/main/resources/assets/elec_tronics/models/item/steel_armor_boots.json"
+          "src/main/resources/assets/elec_tronics/models/item/steel_armor_boots.json",
+          "src/main/resources/assets/elec_tronics/models/item/steel_armor_chestplate.json"
         ]
       },
       "path": "~/Items/Tools-Armor"
@@ -4690,9 +4690,9 @@
         "files": [
           "src/main/java/net/elec_tronics/item/BrineItem.java",
           "src/main/java/net/elec_tronics/fluid/BrineFluid.java",
+          "src/main/resources/assets/elec_tronics/models/item/brine_bucket.json",
           "src/main/resources/assets/elec_tronics/models/block/brine.json",
           "src/main/java/net/elec_tronics/fluid/types/BrineFluidType.java",
-          "src/main/resources/assets/elec_tronics/models/item/brine_bucket.json",
           "src/main/java/net/elec_tronics/block/BrineBlock.java",
           "src/main/resources/assets/elec_tronics/blockstates/brine.json"
         ]
@@ -4729,14 +4729,14 @@
       "registry_name": "rock_salt",
       "metadata": {
         "files": [
-          "src/main/java/net/elec_tronics/world/features/ores/RockSaltFeature.java",
-          "src/main/resources/assets/elec_tronics/blockstates/rock_salt.json",
-          "src/main/java/net/elec_tronics/block/RockSaltBlock.java",
           "src/main/resources/data/elec_tronics/worldgen/configured_feature/rock_salt.json",
           "src/main/resources/assets/elec_tronics/models/item/rock_salt.json",
+          "src/main/resources/assets/elec_tronics/blockstates/rock_salt.json",
+          "src/main/java/net/elec_tronics/block/RockSaltBlock.java",
           "src/main/resources/data/elec_tronics/worldgen/placed_feature/rock_salt.json",
-          "src/main/resources/assets/elec_tronics/models/block/rock_salt.json",
-          "src/main/resources/data/elec_tronics/forge/biome_modifier/rock_salt_biome_modifier.json"
+          "src/main/java/net/elec_tronics/world/features/ores/RockSaltFeature.java",
+          "src/main/resources/data/elec_tronics/forge/biome_modifier/rock_salt_biome_modifier.json",
+          "src/main/resources/assets/elec_tronics/models/block/rock_salt.json"
         ]
       },
       "path": "~/Items/Ores-Ingots-Dusts"
@@ -4804,8 +4804,8 @@
       "registry_name": "rocksaltdust",
       "metadata": {
         "files": [
-          "src/main/resources/assets/elec_tronics/models/item/rocksaltdust.json",
-          "src/main/java/net/elec_tronics/item/RocksaltdustItem.java"
+          "src/main/java/net/elec_tronics/item/RocksaltdustItem.java",
+          "src/main/resources/assets/elec_tronics/models/item/rocksaltdust.json"
         ]
       },
       "path": "~/Items/Ores-Ingots-Dusts"
@@ -4821,9 +4821,9 @@
         "gb": false,
         "files": [
           "src/main/resources/assets/elec_tronics/blockstates/chlorine_gas.json",
+          "src/main/java/net/elec_tronics/fluid/ChlorineGasFluid.java",
           "src/main/resources/assets/elec_tronics/models/item/chlorine_gas_bucket.json",
           "src/main/java/net/elec_tronics/block/ChlorineGasBlock.java",
-          "src/main/java/net/elec_tronics/fluid/ChlorineGasFluid.java",
           "src/main/java/net/elec_tronics/fluid/types/ChlorineGasFluidType.java",
           "src/main/resources/assets/elec_tronics/models/block/chlorine_gas.json"
         ]
@@ -4840,12 +4840,12 @@
       "metadata": {
         "gb": false,
         "files": [
-          "src/main/java/net/elec_tronics/fluid/HydrogenGasFluid.java",
-          "src/main/resources/assets/elec_tronics/blockstates/hydrogen_gas.json",
           "src/main/resources/assets/elec_tronics/models/block/hydrogen_gas.json",
           "src/main/java/net/elec_tronics/block/HydrogenGasBlock.java",
-          "src/main/java/net/elec_tronics/fluid/types/HydrogenGasFluidType.java",
-          "src/main/resources/assets/elec_tronics/models/item/hydrogen_gas_bucket.json"
+          "src/main/resources/assets/elec_tronics/blockstates/hydrogen_gas.json",
+          "src/main/resources/assets/elec_tronics/models/item/hydrogen_gas_bucket.json",
+          "src/main/java/net/elec_tronics/fluid/HydrogenGasFluid.java",
+          "src/main/java/net/elec_tronics/fluid/types/HydrogenGasFluidType.java"
         ]
       },
       "path": "~/Fluids-Gases"
@@ -4859,8 +4859,8 @@
       "registry_name": "iron_wrench",
       "metadata": {
         "files": [
-          "src/main/java/net/elec_tronics/item/IronWrenchItem.java",
-          "src/main/resources/assets/elec_tronics/models/item/iron_wrench.json"
+          "src/main/resources/assets/elec_tronics/models/item/iron_wrench.json",
+          "src/main/java/net/elec_tronics/item/IronWrenchItem.java"
         ]
       },
       "path": "~/Items/Tools-Armor"
@@ -4920,10 +4920,10 @@
       "registry_name": "electronicsoil_feature",
       "metadata": {
         "files": [
+          "src/main/resources/data/elec_tronics/forge/biome_modifier/electronicsoil_feature_biome_modifier.json",
           "src/main/resources/data/elec_tronics/worldgen/placed_feature/electronicsoil_feature.json",
-          "src/main/resources/data/elec_tronics/worldgen/configured_feature/electronicsoil_feature.json",
           "src/main/java/net/elec_tronics/world/features/ElectronicsoilFeatureFeature.java",
-          "src/main/resources/data/elec_tronics/forge/biome_modifier/electronicsoil_feature_biome_modifier.json"
+          "src/main/resources/data/elec_tronics/worldgen/configured_feature/electronicsoil_feature.json"
         ]
       },
       "path": "~/Fluids-Gases"
@@ -4937,10 +4937,10 @@
       "registry_name": "brine_feature",
       "metadata": {
         "files": [
-          "src/main/java/net/elec_tronics/world/features/BrineFeatureFeature.java",
-          "src/main/resources/data/elec_tronics/worldgen/placed_feature/brine_feature.json",
           "src/main/resources/data/elec_tronics/worldgen/configured_feature/brine_feature.json",
-          "src/main/resources/data/elec_tronics/forge/biome_modifier/brine_feature_biome_modifier.json"
+          "src/main/resources/data/elec_tronics/forge/biome_modifier/brine_feature_biome_modifier.json",
+          "src/main/java/net/elec_tronics/world/features/BrineFeatureFeature.java",
+          "src/main/resources/data/elec_tronics/worldgen/placed_feature/brine_feature.json"
         ]
       },
       "path": "~/Fluids-Gases"
@@ -5394,8 +5394,8 @@
       "registry_name": "energ_storage_t_2",
       "metadata": {
         "files": [
-          "src/main/java/net/elec_tronics/world/inventory/EnergStorageT2Menu.java",
-          "src/main/java/net/elec_tronics/client/gui/EnergStorageT2Screen.java"
+          "src/main/java/net/elec_tronics/client/gui/EnergStorageT2Screen.java",
+          "src/main/java/net/elec_tronics/world/inventory/EnergStorageT2Menu.java"
         ]
       },
       "path": "~/Blocks/GUI Menus"
@@ -5409,8 +5409,8 @@
       "registry_name": "energy_storage_t_1_gui",
       "metadata": {
         "files": [
-          "src/main/java/net/elec_tronics/client/gui/EnergyStorageT1GUIScreen.java",
-          "src/main/java/net/elec_tronics/world/inventory/EnergyStorageT1GUIMenu.java"
+          "src/main/java/net/elec_tronics/world/inventory/EnergyStorageT1GUIMenu.java",
+          "src/main/java/net/elec_tronics/client/gui/EnergyStorageT1GUIScreen.java"
         ]
       },
       "path": "~/Blocks/GUI Menus"
@@ -5458,12 +5458,7 @@
         "files": [
           "src/main/java/net/elec_tronics/procedures/ModIniProcedure.java"
         ],
-        "dependencies": [
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
+        "dependencies": []
       },
       "path": "~/Mod Init"
     },
@@ -5508,10 +5503,10 @@
       "registry_name": "coal_generator_machine",
       "metadata": {
         "files": [
-          "src/main/java/net/elec_tronics/block/entity/CoalGeneratorMachineBlockEntity.java",
           "src/main/resources/assets/elec_tronics/blockstates/coal_generator_machine.json",
-          "src/main/resources/assets/elec_tronics/models/item/coal_generator_machine.json",
           "src/main/java/net/elec_tronics/block/CoalGeneratorMachineBlock.java",
+          "src/main/resources/assets/elec_tronics/models/item/coal_generator_machine.json",
+          "src/main/java/net/elec_tronics/block/entity/CoalGeneratorMachineBlockEntity.java",
           "src/main/resources/assets/elec_tronics/models/block/coal_generator_machine.json"
         ]
       },
@@ -5558,11 +5553,11 @@
       "registry_name": "quarry_t_1",
       "metadata": {
         "files": [
-          "src/main/java/net/elec_tronics/block/entity/QuarryT1BlockEntity.java",
-          "src/main/resources/assets/elec_tronics/models/item/quarry_t_1.json",
           "src/main/resources/assets/elec_tronics/models/block/quarry_t_1.json",
-          "src/main/java/net/elec_tronics/block/QuarryT1Block.java",
-          "src/main/resources/assets/elec_tronics/blockstates/quarry_t_1.json"
+          "src/main/resources/assets/elec_tronics/models/item/quarry_t_1.json",
+          "src/main/resources/assets/elec_tronics/blockstates/quarry_t_1.json",
+          "src/main/java/net/elec_tronics/block/entity/QuarryT1BlockEntity.java",
+          "src/main/java/net/elec_tronics/block/QuarryT1Block.java"
         ]
       },
       "path": "~/Blocks/Quarry"
@@ -5576,12 +5571,12 @@
       "registry_name": "coolantt_1",
       "metadata": {
         "files": [
+          "src/main/java/net/elec_tronics/fluid/types/Coolantt1FluidType.java",
           "src/main/resources/assets/elec_tronics/models/block/coolantt_1.json",
-          "src/main/java/net/elec_tronics/block/Coolantt1Block.java",
-          "src/main/java/net/elec_tronics/fluid/Coolantt1Fluid.java",
-          "src/main/resources/assets/elec_tronics/models/item/coolantt_1_bucket.json",
           "src/main/resources/assets/elec_tronics/blockstates/coolantt_1.json",
-          "src/main/java/net/elec_tronics/fluid/types/Coolantt1FluidType.java"
+          "src/main/resources/assets/elec_tronics/models/item/coolantt_1_bucket.json",
+          "src/main/java/net/elec_tronics/fluid/Coolantt1Fluid.java",
+          "src/main/java/net/elec_tronics/block/Coolantt1Block.java"
         ]
       },
       "path": "~/Fluids-Gases"
@@ -5595,11 +5590,11 @@
       "registry_name": "refined_oil",
       "metadata": {
         "files": [
-          "src/main/java/net/elec_tronics/fluid/types/RefinedOilFluidType.java",
+          "src/main/resources/assets/elec_tronics/models/block/refined_oil.json",
           "src/main/java/net/elec_tronics/block/RefinedOilBlock.java",
           "src/main/resources/assets/elec_tronics/blockstates/refined_oil.json",
+          "src/main/java/net/elec_tronics/fluid/types/RefinedOilFluidType.java",
           "src/main/java/net/elec_tronics/fluid/RefinedOilFluid.java",
-          "src/main/resources/assets/elec_tronics/models/block/refined_oil.json",
           "src/main/resources/assets/elec_tronics/models/item/refined_oil_bucket.json"
         ]
       },
@@ -5614,9 +5609,9 @@
       "registry_name": "quarry_t_1_gui",
       "metadata": {
         "files": [
-          "src/main/java/net/elec_tronics/network/QuarryT1GUIButtonMessage.java",
+          "src/main/java/net/elec_tronics/world/inventory/QuarryT1GUIMenu.java",
           "src/main/java/net/elec_tronics/client/gui/QuarryT1GUIScreen.java",
-          "src/main/java/net/elec_tronics/world/inventory/QuarryT1GUIMenu.java"
+          "src/main/java/net/elec_tronics/network/QuarryT1GUIButtonMessage.java"
         ]
       },
       "path": "~/Blocks/Quarry"
@@ -5630,11 +5625,11 @@
       "registry_name": "refinery_t_1",
       "metadata": {
         "files": [
-          "src/main/java/net/elec_tronics/block/RefineryT1Block.java",
-          "src/main/resources/assets/elec_tronics/models/item/refinery_t_1.json",
           "src/main/resources/assets/elec_tronics/blockstates/refinery_t_1.json",
+          "src/main/java/net/elec_tronics/block/RefineryT1Block.java",
+          "src/main/java/net/elec_tronics/block/entity/RefineryT1BlockEntity.java",
           "src/main/resources/assets/elec_tronics/models/block/refinery_t_1.json",
-          "src/main/java/net/elec_tronics/block/entity/RefineryT1BlockEntity.java"
+          "src/main/resources/assets/elec_tronics/models/item/refinery_t_1.json"
         ]
       },
       "path": "~/Blocks/Refinery"
@@ -5648,9 +5643,9 @@
       "registry_name": "update_menu",
       "metadata": {
         "files": [
-          "src/main/java/net/elec_tronics/client/gui/UpdateMenuScreen.java",
+          "src/main/java/net/elec_tronics/network/UpdateMenuButtonMessage.java",
           "src/main/java/net/elec_tronics/world/inventory/UpdateMenuMenu.java",
-          "src/main/java/net/elec_tronics/network/UpdateMenuButtonMessage.java"
+          "src/main/java/net/elec_tronics/client/gui/UpdateMenuScreen.java"
         ]
       },
       "path": "~/Mod Init"
@@ -6424,11 +6419,11 @@
       "registry_name": "wire_t_2",
       "metadata": {
         "files": [
-          "src/main/java/net/elec_tronics/block/WireT2Block.java",
           "src/main/java/net/elec_tronics/block/entity/WireT2BlockEntity.java",
           "src/main/resources/assets/elec_tronics/models/item/wire_t_2.json",
+          "src/main/resources/assets/elec_tronics/models/block/wire_t_2.json",
           "src/main/resources/assets/elec_tronics/blockstates/wire_t_2.json",
-          "src/main/resources/assets/elec_tronics/models/block/wire_t_2.json"
+          "src/main/java/net/elec_tronics/block/WireT2Block.java"
         ]
       },
       "path": "~/Blocks/Wires-Pipes/WiresT2"
@@ -6442,10 +6437,10 @@
       "registry_name": "t_2_wire",
       "metadata": {
         "files": [
-          "src/main/resources/assets/elec_tronics/models/block/t_2_wire.json",
-          "src/main/resources/assets/elec_tronics/models/item/t_2_wire.json",
-          "src/main/java/net/elec_tronics/block/T2WireBlock.java",
           "src/main/java/net/elec_tronics/block/entity/T2WireBlockEntity.java",
+          "src/main/resources/assets/elec_tronics/models/item/t_2_wire.json",
+          "src/main/resources/assets/elec_tronics/models/block/t_2_wire.json",
+          "src/main/java/net/elec_tronics/block/T2WireBlock.java",
           "src/main/resources/assets/elec_tronics/blockstates/t_2_wire.json"
         ]
       },
@@ -6463,8 +6458,8 @@
           "src/main/java/net/elec_tronics/block/CableAngleT2Block.java",
           "src/main/resources/assets/elec_tronics/models/block/cable_angle_t_2.json",
           "src/main/resources/assets/elec_tronics/models/item/cable_angle_t_2.json",
-          "src/main/java/net/elec_tronics/block/entity/CableAngleT2BlockEntity.java",
-          "src/main/resources/assets/elec_tronics/blockstates/cable_angle_t_2.json"
+          "src/main/resources/assets/elec_tronics/blockstates/cable_angle_t_2.json",
+          "src/main/java/net/elec_tronics/block/entity/CableAngleT2BlockEntity.java"
         ]
       },
       "path": "~/Blocks/Wires-Pipes/WiresT2"
@@ -6479,9 +6474,9 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/elec_tronics/models/block/cable_tt_2.json",
-          "src/main/java/net/elec_tronics/block/CableTT2Block.java",
-          "src/main/java/net/elec_tronics/block/entity/CableTT2BlockEntity.java",
           "src/main/resources/assets/elec_tronics/models/item/cable_tt_2.json",
+          "src/main/java/net/elec_tronics/block/entity/CableTT2BlockEntity.java",
+          "src/main/java/net/elec_tronics/block/CableTT2Block.java",
           "src/main/resources/assets/elec_tronics/blockstates/cable_tt_2.json"
         ]
       },
@@ -6496,11 +6491,11 @@
       "registry_name": "cable_junction_t_2",
       "metadata": {
         "files": [
-          "src/main/java/net/elec_tronics/block/CableJunctionT2Block.java",
-          "src/main/resources/assets/elec_tronics/blockstates/cable_junction_t_2.json",
+          "src/main/java/net/elec_tronics/block/entity/CableJunctionT2BlockEntity.java",
           "src/main/resources/assets/elec_tronics/models/item/cable_junction_t_2.json",
           "src/main/resources/assets/elec_tronics/models/block/cable_junction_t_2.json",
-          "src/main/java/net/elec_tronics/block/entity/CableJunctionT2BlockEntity.java"
+          "src/main/java/net/elec_tronics/block/CableJunctionT2Block.java",
+          "src/main/resources/assets/elec_tronics/blockstates/cable_junction_t_2.json"
         ]
       },
       "path": "~/Blocks/Wires-Pipes/WiresT2"
@@ -6514,11 +6509,11 @@
       "registry_name": "cable_t_up_t_2",
       "metadata": {
         "files": [
-          "src/main/java/net/elec_tronics/block/CableTUpT2Block.java",
-          "src/main/resources/assets/elec_tronics/models/block/cable_t_up_t_2.json",
-          "src/main/resources/assets/elec_tronics/blockstates/cable_t_up_t_2.json",
           "src/main/resources/assets/elec_tronics/models/item/cable_t_up_t_2.json",
-          "src/main/java/net/elec_tronics/block/entity/CableTUpT2BlockEntity.java"
+          "src/main/resources/assets/elec_tronics/blockstates/cable_t_up_t_2.json",
+          "src/main/java/net/elec_tronics/block/entity/CableTUpT2BlockEntity.java",
+          "src/main/java/net/elec_tronics/block/CableTUpT2Block.java",
+          "src/main/resources/assets/elec_tronics/models/block/cable_t_up_t_2.json"
         ]
       },
       "path": "~/Blocks/Wires-Pipes/WiresT2"
@@ -6532,11 +6527,11 @@
       "registry_name": "cable_t_down_t_2",
       "metadata": {
         "files": [
-          "src/main/java/net/elec_tronics/block/CableTDownT2Block.java",
           "src/main/java/net/elec_tronics/block/entity/CableTDownT2BlockEntity.java",
           "src/main/resources/assets/elec_tronics/blockstates/cable_t_down_t_2.json",
           "src/main/resources/assets/elec_tronics/models/item/cable_t_down_t_2.json",
-          "src/main/resources/assets/elec_tronics/models/block/cable_t_down_t_2.json"
+          "src/main/resources/assets/elec_tronics/models/block/cable_t_down_t_2.json",
+          "src/main/java/net/elec_tronics/block/CableTDownT2Block.java"
         ]
       },
       "path": "~/Blocks/Wires-Pipes/WiresT2"
@@ -6550,11 +6545,11 @@
       "registry_name": "cable_t_upand_down_t_2",
       "metadata": {
         "files": [
-          "src/main/resources/assets/elec_tronics/models/item/cable_t_upand_down_t_2.json",
-          "src/main/java/net/elec_tronics/block/entity/CableTUpandDownT2BlockEntity.java",
+          "src/main/java/net/elec_tronics/block/CableTUpandDownT2Block.java",
           "src/main/resources/assets/elec_tronics/blockstates/cable_t_upand_down_t_2.json",
           "src/main/resources/assets/elec_tronics/models/block/cable_t_upand_down_t_2.json",
-          "src/main/java/net/elec_tronics/block/CableTUpandDownT2Block.java"
+          "src/main/java/net/elec_tronics/block/entity/CableTUpandDownT2BlockEntity.java",
+          "src/main/resources/assets/elec_tronics/models/item/cable_t_upand_down_t_2.json"
         ]
       },
       "path": "~/Blocks/Wires-Pipes/WiresT2"
@@ -6568,11 +6563,11 @@
       "registry_name": "cable_junction_up_t_2",
       "metadata": {
         "files": [
-          "src/main/java/net/elec_tronics/block/CableJunctionUpT2Block.java",
           "src/main/java/net/elec_tronics/block/entity/CableJunctionUpT2BlockEntity.java",
-          "src/main/resources/assets/elec_tronics/models/block/cable_junction_up_t_2.json",
           "src/main/resources/assets/elec_tronics/blockstates/cable_junction_up_t_2.json",
-          "src/main/resources/assets/elec_tronics/models/item/cable_junction_up_t_2.json"
+          "src/main/java/net/elec_tronics/block/CableJunctionUpT2Block.java",
+          "src/main/resources/assets/elec_tronics/models/item/cable_junction_up_t_2.json",
+          "src/main/resources/assets/elec_tronics/models/block/cable_junction_up_t_2.json"
         ]
       },
       "path": "~/Blocks/Wires-Pipes/WiresT2"
@@ -6586,10 +6581,10 @@
       "registry_name": "cable_junction_down_t_2",
       "metadata": {
         "files": [
-          "src/main/resources/assets/elec_tronics/models/block/cable_junction_down_t_2.json",
-          "src/main/java/net/elec_tronics/block/CableJunctionDownT2Block.java",
           "src/main/java/net/elec_tronics/block/entity/CableJunctionDownT2BlockEntity.java",
           "src/main/resources/assets/elec_tronics/blockstates/cable_junction_down_t_2.json",
+          "src/main/resources/assets/elec_tronics/models/block/cable_junction_down_t_2.json",
+          "src/main/java/net/elec_tronics/block/CableJunctionDownT2Block.java",
           "src/main/resources/assets/elec_tronics/models/item/cable_junction_down_t_2.json"
         ]
       },
@@ -6604,11 +6599,11 @@
       "registry_name": "cable_junction_upand_down_t_2",
       "metadata": {
         "files": [
-          "src/main/resources/assets/elec_tronics/models/item/cable_junction_upand_down_t_2.json",
+          "src/main/resources/assets/elec_tronics/blockstates/cable_junction_upand_down_t_2.json",
           "src/main/java/net/elec_tronics/block/CableJunctionUpandDownT2Block.java",
-          "src/main/resources/assets/elec_tronics/models/block/cable_junction_upand_down_t_2.json",
           "src/main/java/net/elec_tronics/block/entity/CableJunctionUpandDownT2BlockEntity.java",
-          "src/main/resources/assets/elec_tronics/blockstates/cable_junction_upand_down_t_2.json"
+          "src/main/resources/assets/elec_tronics/models/item/cable_junction_upand_down_t_2.json",
+          "src/main/resources/assets/elec_tronics/models/block/cable_junction_upand_down_t_2.json"
         ]
       },
       "path": "~/Blocks/Wires-Pipes/WiresT2"
@@ -6622,11 +6617,11 @@
       "registry_name": "basewirecon_5main_t_2",
       "metadata": {
         "files": [
-          "src/main/resources/assets/elec_tronics/models/block/basewirecon_5main_t_2.json",
-          "src/main/resources/assets/elec_tronics/models/item/basewirecon_5main_t_2.json",
           "src/main/resources/assets/elec_tronics/blockstates/basewirecon_5main_t_2.json",
+          "src/main/java/net/elec_tronics/block/Basewirecon5mainT2Block.java",
           "src/main/java/net/elec_tronics/block/entity/Basewirecon5mainT2BlockEntity.java",
-          "src/main/java/net/elec_tronics/block/Basewirecon5mainT2Block.java"
+          "src/main/resources/assets/elec_tronics/models/item/basewirecon_5main_t_2.json",
+          "src/main/resources/assets/elec_tronics/models/block/basewirecon_5main_t_2.json"
         ]
       },
       "path": "~/Blocks/Wires-Pipes/WiresT2"
@@ -6640,11 +6635,11 @@
       "registry_name": "basewirecon_4down_t_2",
       "metadata": {
         "files": [
-          "src/main/resources/assets/elec_tronics/blockstates/basewirecon_4down_t_2.json",
-          "src/main/java/net/elec_tronics/block/entity/Basewirecon4downT2BlockEntity.java",
           "src/main/java/net/elec_tronics/block/Basewirecon4downT2Block.java",
+          "src/main/resources/assets/elec_tronics/models/item/basewirecon_4down_t_2.json",
           "src/main/resources/assets/elec_tronics/models/block/basewirecon_4down_t_2.json",
-          "src/main/resources/assets/elec_tronics/models/item/basewirecon_4down_t_2.json"
+          "src/main/resources/assets/elec_tronics/blockstates/basewirecon_4down_t_2.json",
+          "src/main/java/net/elec_tronics/block/entity/Basewirecon4downT2BlockEntity.java"
         ]
       },
       "path": "~/Blocks/Wires-Pipes/WiresT2"
@@ -6676,11 +6671,11 @@
       "registry_name": "basewirecon_3down_t_2",
       "metadata": {
         "files": [
-          "src/main/java/net/elec_tronics/block/Basewirecon3downT2Block.java",
+          "src/main/resources/assets/elec_tronics/models/item/basewirecon_3down_t_2.json",
           "src/main/resources/assets/elec_tronics/blockstates/basewirecon_3down_t_2.json",
           "src/main/java/net/elec_tronics/block/entity/Basewirecon3downT2BlockEntity.java",
-          "src/main/resources/assets/elec_tronics/models/block/basewirecon_3down_t_2.json",
-          "src/main/resources/assets/elec_tronics/models/item/basewirecon_3down_t_2.json"
+          "src/main/java/net/elec_tronics/block/Basewirecon3downT2Block.java",
+          "src/main/resources/assets/elec_tronics/models/block/basewirecon_3down_t_2.json"
         ]
       },
       "path": "~/Blocks/Wires-Pipes/WiresT2"
@@ -6694,11 +6689,11 @@
       "registry_name": "basewirecon_3up_t_2",
       "metadata": {
         "files": [
-          "src/main/resources/assets/elec_tronics/blockstates/basewirecon_3up_t_2.json",
-          "src/main/resources/assets/elec_tronics/models/block/basewirecon_3up_t_2.json",
-          "src/main/java/net/elec_tronics/block/entity/Basewirecon3upT2BlockEntity.java",
+          "src/main/resources/assets/elec_tronics/models/item/basewirecon_3up_t_2.json",
           "src/main/java/net/elec_tronics/block/Basewirecon3upT2Block.java",
-          "src/main/resources/assets/elec_tronics/models/item/basewirecon_3up_t_2.json"
+          "src/main/resources/assets/elec_tronics/models/block/basewirecon_3up_t_2.json",
+          "src/main/resources/assets/elec_tronics/blockstates/basewirecon_3up_t_2.json",
+          "src/main/java/net/elec_tronics/block/entity/Basewirecon3upT2BlockEntity.java"
         ]
       },
       "path": "~/Blocks/Wires-Pipes/WiresT2"
@@ -6712,11 +6707,11 @@
       "registry_name": "basewirecon_4up_t_2",
       "metadata": {
         "files": [
-          "src/main/resources/assets/elec_tronics/models/item/basewirecon_4up_t_2.json",
-          "src/main/resources/assets/elec_tronics/blockstates/basewirecon_4up_t_2.json",
-          "src/main/resources/assets/elec_tronics/models/block/basewirecon_4up_t_2.json",
+          "src/main/java/net/elec_tronics/block/Basewirecon4upT2Block.java",
           "src/main/java/net/elec_tronics/block/entity/Basewirecon4upT2BlockEntity.java",
-          "src/main/java/net/elec_tronics/block/Basewirecon4upT2Block.java"
+          "src/main/resources/assets/elec_tronics/models/block/basewirecon_4up_t_2.json",
+          "src/main/resources/assets/elec_tronics/blockstates/basewirecon_4up_t_2.json",
+          "src/main/resources/assets/elec_tronics/models/item/basewirecon_4up_t_2.json"
         ]
       },
       "path": "~/Blocks/Wires-Pipes/WiresT2"
@@ -6730,11 +6725,11 @@
       "registry_name": "basewirecon_2angledown_t_2",
       "metadata": {
         "files": [
-          "src/main/resources/assets/elec_tronics/models/item/basewirecon_2angledown_t_2.json",
-          "src/main/resources/assets/elec_tronics/blockstates/basewirecon_2angledown_t_2.json",
           "src/main/java/net/elec_tronics/block/Basewirecon2angledownT2Block.java",
-          "src/main/java/net/elec_tronics/block/entity/Basewirecon2angledownT2BlockEntity.java",
-          "src/main/resources/assets/elec_tronics/models/block/basewirecon_2angledown_t_2.json"
+          "src/main/resources/assets/elec_tronics/models/item/basewirecon_2angledown_t_2.json",
+          "src/main/resources/assets/elec_tronics/models/block/basewirecon_2angledown_t_2.json",
+          "src/main/resources/assets/elec_tronics/blockstates/basewirecon_2angledown_t_2.json",
+          "src/main/java/net/elec_tronics/block/entity/Basewirecon2angledownT2BlockEntity.java"
         ]
       },
       "path": "~/Blocks/Wires-Pipes/WiresT2"
@@ -6748,11 +6743,11 @@
       "registry_name": "basewirecon_4upanddown_t_2",
       "metadata": {
         "files": [
+          "src/main/resources/assets/elec_tronics/models/block/basewirecon_4upanddown_t_2.json",
           "src/main/java/net/elec_tronics/block/Basewirecon4upanddownT2Block.java",
-          "src/main/java/net/elec_tronics/block/entity/Basewirecon4upanddownT2BlockEntity.java",
           "src/main/resources/assets/elec_tronics/models/item/basewirecon_4upanddown_t_2.json",
           "src/main/resources/assets/elec_tronics/blockstates/basewirecon_4upanddown_t_2.json",
-          "src/main/resources/assets/elec_tronics/models/block/basewirecon_4upanddown_t_2.json"
+          "src/main/java/net/elec_tronics/block/entity/Basewirecon4upanddownT2BlockEntity.java"
         ]
       },
       "path": "~/Blocks/Wires-Pipes/WiresT2"
@@ -6767,10 +6762,10 @@
       "metadata": {
         "files": [
           "src/main/java/net/elec_tronics/block/Basewirecon3upangleT2Block.java",
-          "src/main/java/net/elec_tronics/block/entity/Basewirecon3upangleT2BlockEntity.java",
-          "src/main/resources/assets/elec_tronics/models/block/basewirecon_3upangle_t_2.json",
           "src/main/resources/assets/elec_tronics/models/item/basewirecon_3upangle_t_2.json",
-          "src/main/resources/assets/elec_tronics/blockstates/basewirecon_3upangle_t_2.json"
+          "src/main/java/net/elec_tronics/block/entity/Basewirecon3upangleT2BlockEntity.java",
+          "src/main/resources/assets/elec_tronics/blockstates/basewirecon_3upangle_t_2.json",
+          "src/main/resources/assets/elec_tronics/models/block/basewirecon_3upangle_t_2.json"
         ]
       },
       "path": "~/Blocks/Wires-Pipes/WiresT2"
@@ -6784,11 +6779,11 @@
       "registry_name": "basewirecon_3t_2",
       "metadata": {
         "files": [
-          "src/main/resources/assets/elec_tronics/models/block/basewirecon_3t_2.json",
-          "src/main/resources/assets/elec_tronics/models/item/basewirecon_3t_2.json",
           "src/main/java/net/elec_tronics/block/Basewirecon3t2Block.java",
+          "src/main/java/net/elec_tronics/block/entity/Basewirecon3t2BlockEntity.java",
+          "src/main/resources/assets/elec_tronics/models/block/basewirecon_3t_2.json",
           "src/main/resources/assets/elec_tronics/blockstates/basewirecon_3t_2.json",
-          "src/main/java/net/elec_tronics/block/entity/Basewirecon3t2BlockEntity.java"
+          "src/main/resources/assets/elec_tronics/models/item/basewirecon_3t_2.json"
         ]
       },
       "path": "~/Blocks/Wires-Pipes/WiresT2"
@@ -6802,11 +6797,11 @@
       "registry_name": "basewirecon_5down_t_2",
       "metadata": {
         "files": [
-          "src/main/java/net/elec_tronics/block/Basewirecon5downT2Block.java",
-          "src/main/resources/assets/elec_tronics/blockstates/basewirecon_5down_t_2.json",
+          "src/main/resources/assets/elec_tronics/models/block/basewirecon_5down_t_2.json",
           "src/main/resources/assets/elec_tronics/models/item/basewirecon_5down_t_2.json",
+          "src/main/java/net/elec_tronics/block/Basewirecon5downT2Block.java",
           "src/main/java/net/elec_tronics/block/entity/Basewirecon5downT2BlockEntity.java",
-          "src/main/resources/assets/elec_tronics/models/block/basewirecon_5down_t_2.json"
+          "src/main/resources/assets/elec_tronics/blockstates/basewirecon_5down_t_2.json"
         ]
       },
       "path": "~/Blocks/Wires-Pipes/WiresT2"
@@ -6820,11 +6815,11 @@
       "registry_name": "basewirecon_2angle_t_2",
       "metadata": {
         "files": [
-          "src/main/java/net/elec_tronics/block/entity/Basewirecon2angleT2BlockEntity.java",
-          "src/main/resources/assets/elec_tronics/models/item/basewirecon_2angle_t_2.json",
           "src/main/resources/assets/elec_tronics/models/block/basewirecon_2angle_t_2.json",
           "src/main/resources/assets/elec_tronics/blockstates/basewirecon_2angle_t_2.json",
-          "src/main/java/net/elec_tronics/block/Basewirecon2angleT2Block.java"
+          "src/main/resources/assets/elec_tronics/models/item/basewirecon_2angle_t_2.json",
+          "src/main/java/net/elec_tronics/block/Basewirecon2angleT2Block.java",
+          "src/main/java/net/elec_tronics/block/entity/Basewirecon2angleT2BlockEntity.java"
         ]
       },
       "path": "~/Blocks/Wires-Pipes/WiresT2"
@@ -6838,11 +6833,11 @@
       "registry_name": "basewirecon_4upanddownstraight_t_2",
       "metadata": {
         "files": [
-          "src/main/java/net/elec_tronics/block/Basewirecon4upanddownstraightT2Block.java",
-          "src/main/resources/assets/elec_tronics/models/block/basewirecon_4upanddownstraight_t_2.json",
-          "src/main/resources/assets/elec_tronics/blockstates/basewirecon_4upanddownstraight_t_2.json",
+          "src/main/java/net/elec_tronics/block/entity/Basewirecon4upanddownstraightT2BlockEntity.java",
           "src/main/resources/assets/elec_tronics/models/item/basewirecon_4upanddownstraight_t_2.json",
-          "src/main/java/net/elec_tronics/block/entity/Basewirecon4upanddownstraightT2BlockEntity.java"
+          "src/main/resources/assets/elec_tronics/blockstates/basewirecon_4upanddownstraight_t_2.json",
+          "src/main/resources/assets/elec_tronics/models/block/basewirecon_4upanddownstraight_t_2.json",
+          "src/main/java/net/elec_tronics/block/Basewirecon4upanddownstraightT2Block.java"
         ]
       },
       "path": "~/Blocks/Wires-Pipes/WiresT2"
@@ -6856,11 +6851,11 @@
       "registry_name": "cablehalf_t_2",
       "metadata": {
         "files": [
-          "src/main/resources/assets/elec_tronics/models/block/cablehalf_t_2.json",
+          "src/main/java/net/elec_tronics/block/CablehalfT2Block.java",
           "src/main/resources/assets/elec_tronics/blockstates/cablehalf_t_2.json",
-          "src/main/resources/assets/elec_tronics/models/item/cablehalf_t_2.json",
+          "src/main/resources/assets/elec_tronics/models/block/cablehalf_t_2.json",
           "src/main/java/net/elec_tronics/block/entity/CablehalfT2BlockEntity.java",
-          "src/main/java/net/elec_tronics/block/CablehalfT2Block.java"
+          "src/main/resources/assets/elec_tronics/models/item/cablehalf_t_2.json"
         ]
       },
       "path": "~/Blocks/Wires-Pipes/WiresT2"
@@ -6874,11 +6869,11 @@
       "registry_name": "basewirecon_3downandup_t_2",
       "metadata": {
         "files": [
-          "src/main/java/net/elec_tronics/block/Basewirecon3downandupT2Block.java",
-          "src/main/resources/assets/elec_tronics/blockstates/basewirecon_3downandup_t_2.json",
           "src/main/resources/assets/elec_tronics/models/item/basewirecon_3downandup_t_2.json",
-          "src/main/java/net/elec_tronics/block/entity/Basewirecon3downandupT2BlockEntity.java",
-          "src/main/resources/assets/elec_tronics/models/block/basewirecon_3downandup_t_2.json"
+          "src/main/resources/assets/elec_tronics/blockstates/basewirecon_3downandup_t_2.json",
+          "src/main/java/net/elec_tronics/block/Basewirecon3downandupT2Block.java",
+          "src/main/resources/assets/elec_tronics/models/block/basewirecon_3downandup_t_2.json",
+          "src/main/java/net/elec_tronics/block/entity/Basewirecon3downandupT2BlockEntity.java"
         ]
       },
       "path": "~/Blocks/Wires-Pipes/WiresT2"
@@ -6892,11 +6887,11 @@
       "registry_name": "basewirecon_3downangle_t_2",
       "metadata": {
         "files": [
-          "src/main/resources/assets/elec_tronics/models/block/basewirecon_3downangle_t_2.json",
-          "src/main/java/net/elec_tronics/block/entity/Basewirecon3downangleT2BlockEntity.java",
           "src/main/resources/assets/elec_tronics/blockstates/basewirecon_3downangle_t_2.json",
+          "src/main/java/net/elec_tronics/block/entity/Basewirecon3downangleT2BlockEntity.java",
           "src/main/java/net/elec_tronics/block/Basewirecon3downangleT2Block.java",
-          "src/main/resources/assets/elec_tronics/models/item/basewirecon_3downangle_t_2.json"
+          "src/main/resources/assets/elec_tronics/models/item/basewirecon_3downangle_t_2.json",
+          "src/main/resources/assets/elec_tronics/models/block/basewirecon_3downangle_t_2.json"
         ]
       },
       "path": "~/Blocks/Wires-Pipes/WiresT2"
@@ -7062,25 +7057,39 @@
       "registry_name": "conveyort_1",
       "metadata": {
         "files": [
-          "src/main/resources/assets/elec_tronics/blockstates/conveyort_1.json",
           "src/main/java/net/elec_tronics/block/entity/Conveyort1BlockEntity.java",
-          "src/main/resources/assets/elec_tronics/models/block/conveyort_1.json",
+          "src/main/java/net/elec_tronics/block/Conveyort1Block.java",
           "src/main/resources/assets/elec_tronics/models/item/conveyort_1.json",
-          "src/main/java/net/elec_tronics/block/Conveyort1Block.java"
+          "src/main/resources/assets/elec_tronics/blockstates/conveyort_1.json",
+          "src/main/resources/assets/elec_tronics/models/block/conveyort_1.json"
         ]
       },
       "path": "~/Blocks/Conveyors/Conveyor-T1"
     },
     {
-      "name": "Conveyort1EntityWalksOnTheBlock",
-      "type": "procedure",
-      "sortid": 360,
+      "name": "Conveyors",
+      "type": "tag",
+      "sortid": 361,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "conveyort_1_entity_walks_on_the_block",
+      "registry_name": "conveyors",
       "metadata": {
         "files": [
-          "src/main/java/net/elec_tronics/procedures/Conveyort1EntityWalksOnTheBlockProcedure.java"
+          "src/main/resources/data/electronics/tags/blocks/conveyors.json"
+        ]
+      },
+      "path": "~/Tags"
+    },
+    {
+      "name": "Conveyort1EntityCollidesInTheBlock",
+      "type": "procedure",
+      "sortid": 362,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "conveyort_1_entity_collides_in_the_block",
+      "metadata": {
+        "files": [
+          "src/main/java/net/elec_tronics/procedures/Conveyort1EntityCollidesInTheBlockProcedure.java"
         ],
         "dependencies": [
           {
@@ -7108,18 +7117,51 @@
       "path": "~/Blocks/Conveyors/Conveyor-T1/Procedures"
     },
     {
-      "name": "Conveyors",
-      "type": "tag",
-      "sortid": 361,
+      "name": "Conveyort1BlockDestroyed",
+      "type": "procedure",
+      "sortid": 363,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "conveyors",
+      "registry_name": "conveyort_1_block_destroyed",
       "metadata": {
         "files": [
-          "src/main/resources/data/electronics/tags/blocks/conveyors.json"
+          "src/main/java/net/elec_tronics/procedures/Conveyort1BlockDestroyedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
         ]
       },
-      "path": "~/Tags"
+      "path": "~/Blocks/Conveyors/Conveyor-T1/Procedures"
+    },
+    {
+      "name": "Conveyort1UpdateTick",
+      "type": "procedure",
+      "sortid": 364,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "conveyort_1_update_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/elec_tronics/procedures/Conveyort1UpdateTickProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Blocks/Conveyors/Conveyor-T1/Procedures"
     }
   ],
   "variable_elements": [
@@ -7574,7 +7616,7 @@
   },
   "workspaceSettings": {
     "modid": "elec_tronics",
-    "modName": "Elec Tronics",
+    "modName": "Electronics",
     "version": "0.0.1",
     "description": "Elec Tronics is a mod based around your favorite mods with a bit of a touch of realism",
     "author": "SirJStig",

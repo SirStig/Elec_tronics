@@ -3,8 +3,8 @@
   "textures": {
     "all": "elec_tronics:block/conveyor_main",
     "particle": "elec_tronics:block/conveyor_main",
-    "0": "elec_tronics:block/pipe_texture",
-    "1": "elec_tronics:block/conveyoranim"
+    "0": "elec_tronics:block/",
+    "1": "elec_tronics:block/conveyor"
   },
-  "render_type": "cutout"
+  "render_type": "solid"
 }
