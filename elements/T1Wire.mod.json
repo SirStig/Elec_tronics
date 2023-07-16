@@ -10,7 +10,7 @@
     "textureBack": "cable_back_input",
     "renderType": 2,
     "customModelName": "wiret1:default",
-    "rotationMode": 1,
+    "rotationMode": 2,
     "enablePitch": false,
     "emissiveRendering": false,
     "displayFluidOverlay": true,

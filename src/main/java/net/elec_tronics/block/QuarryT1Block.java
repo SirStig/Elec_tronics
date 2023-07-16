@@ -40,6 +40,7 @@ import net.minecraft.core.BlockPos;
 
 import net.elec_tronics.world.inventory.QuarryT1GUIMenu;
 import net.elec_tronics.procedures.QuarryT1UpdateTickProcedure;
+import net.elec_tronics.procedures.QuarryT1BlockAddedProcedure;
 import net.elec_tronics.block.entity.QuarryT1BlockEntity;
 
 import java.util.List;
@@ -97,6 +98,7 @@ public class QuarryT1Block extends Block implements EntityBlock {
 	public void onPlace(BlockState blockstate, Level world, BlockPos pos, BlockState oldState, boolean moving) {
 		super.onPlace(blockstate, world, pos, oldState, moving);
 		world.scheduleTick(pos, this, 10);
+		QuarryT1BlockAddedProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
 	}
 
 	@Override

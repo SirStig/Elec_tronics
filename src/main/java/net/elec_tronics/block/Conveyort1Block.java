@@ -120,7 +120,7 @@ public class Conveyort1Block extends Block implements EntityBlock {
 		int x = pos.getX();
 		int y = pos.getY();
 		int z = pos.getZ();
-		Conveyort1UpdateTickProcedure.execute();
+		Conveyort1UpdateTickProcedure.execute(world, x, y, z);
 		world.scheduleTick(pos, this, 10);
 	}
 

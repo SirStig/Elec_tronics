@@ -15,8 +15,8 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.Rotation;
 import net.minecraft.world.level.block.Mirror;
-import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.minecraft.world.level.block.EntityBlock;
+import net.minecraft.world.level.block.DirectionalBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.BlockGetter;
@@ -39,7 +39,7 @@ import java.util.List;
 import java.util.Collections;
 
 public class T2WireBlock extends Block implements EntityBlock {
-	public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
+	public static final DirectionProperty FACING = DirectionalBlock.FACING;
 
 	public T2WireBlock() {
 		super(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.BONE_BLOCK).strength(1f, 10f).noOcclusion().isRedstoneConductor((bs, br, bp) -> false));
@@ -73,6 +73,8 @@ public class T2WireBlock extends Block implements EntityBlock {
 			case NORTH -> box(6, 6, 0, 10, 10, 16);
 			case EAST -> box(0, 6, 6, 16, 10, 10);
 			case WEST -> box(0, 6, 6, 16, 10, 10);
+			case UP -> box(6, 0, 6, 10, 16, 10);
+			case DOWN -> box(6, 0, 6, 10, 16, 10);
 		};
 	}
 
@@ -83,7 +85,7 @@ public class T2WireBlock extends Block implements EntityBlock {
 
 	@Override
 	public BlockState getStateForPlacement(BlockPlaceContext context) {
-		return this.defaultBlockState().setValue(FACING, context.getHorizontalDirection().getOpposite());
+		return this.defaultBlockState().setValue(FACING, context.getNearestLookingDirection().getOpposite());
 	}
 
 	public BlockState rotate(BlockState state, Rotation rot) {

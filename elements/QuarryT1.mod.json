@@ -124,6 +124,9 @@
         "value": "CUSTOM:RefinedOil"
       }
     ],
+    "onBlockAdded": {
+      "name": "QuarryT1BlockAdded"
+    },
     "onTickUpdate": {
       "name": "QuarryT1UpdateTick"
     },
